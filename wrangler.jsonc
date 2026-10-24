@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers 静态资源部署配置。
+  // 只有在 Workers 流程（npx wrangler deploy）里才用得上；
+  // 如果走的是 Pages，这个文件会被忽略，留着无害。
+  "name": "kaixinguor",
+  "compatibility_date": "2026-10-24",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}
