@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>下载 · 课堂字幕</title>
+<meta name="description" content="下载课堂字幕 Mac 版：macOS 26+，Apple Silicon，本地识别，音频不上传。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="snipread/index.html">摘读</a>
+      <a href="hark/index.html">课堂字幕</a>
+      <a href="https://github.com/kaixinguor" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero" style="padding-bottom:40px">
+    <p class="eyebrow">macOS 26+ · Apple Silicon</p>
+    <h1>下载课堂字幕</h1>
+    <p class="lead">一个 dmg，拖进「应用程序」就能用。不用注册账号，不联网也能跑。</p>
+  </div>
+
+  <!--
+    发布时把下面这块换成：
+
+    <p>
+      <a class="btn btn-primary" href="download/Hark-1.0.dmg" download>
+        下载 macOS 版 · 12 MB
+      </a>
+    </p>
+    <p class="faint">版本 1.0 · 2026-10-24 · SHA-256: xxxx</p>
+
+    文件放 site/download/Hark-1.0.dmg，然后删掉 notice 那段。
+  -->
+  <div class="notice">
+    <strong>还在内测。</strong>
+    安装包还没发出来——现在给你一个装不了的按钮，只会浪费你的时间。
+    留下邮箱，装好了我第一时间发给你：<a href="mailto:linr.w@163.com?subject=%E6%83%B3%E8%AF%95%E7%94%A8%E8%AF%BE%E5%A0%82%E5%AD%97%E5%B9%95&body=%E6%88%91%E7%94%A8%E7%9A%84%20Mac%20%E6%98%AF%EF%BC%9A%EF%BC%88%E5%9E%8B%E5%8F%B7%EF%BC%89%0A%E6%88%91%E5%B8%B8%E7%9C%8B%E7%9A%84%E7%BD%91%E8%AF%BE%EF%BC%9A">linr.w@163.com</a>
+  </div>
+
+  <section>
+    <h2>装好之后</h2>
+
+    <h3 class="sub">第 1 步 · 拖进应用程序</h3>
+    <p class="muted">打开 dmg，把「课堂字幕」拖进右边的「应用程序」文件夹。</p>
+
+    <h3 class="sub">第 2 步 · 第一次打开</h3>
+    <p class="muted">
+      会看到三步引导：先看它能做什么，再打开「屏幕与系统录音」权限，最后听一段 11 秒的示范课。
+      示范用的是真实的离线识别，不是录好的动画。
+    </p>
+
+    <h3 class="sub">第 3 步 · 授权后要重开一次</h3>
+    <p class="muted">
+      macOS 会把权限状态缓存在进程启动时。打开开关之后，需要退出 App 再打开一次才生效。
+      引导里有「重新启动」按钮，点一下就行。
+    </p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>系统要求</h2>
+    <ul>
+      <li>macOS <strong>26</strong> 或更新（Apple Speech 的新接口只在 26 以上有）</li>
+      <li>Apple Silicon（M1 及以后）</li>
+      <li>约 80 MB 的识别语言资源，首次使用时自动下载一次</li>
+      <li>需要「屏幕与系统录音」权限 —— macOS 把电脑播放的声音归在这里</li>
+    </ul>
+    <p class="faint">Intel Mac 暂不支持。Windows 版没有计划。</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>装不上怎么办</h2>
+
+    <details>
+      <summary>提示「无法打开，因为无法验证开发者」</summary>
+      <p>
+        说明这个包还没做公证。正常情况下不该出现——如果出现了，请把系统版本和报错截图发我，
+        不要自己去系统设置里强行放行。
+      </p>
+    </details>
+
+    <details>
+      <summary>授权开关是开的，但还是提示没权限</summary>
+      <p>
+        退出 App 再打开一次。macOS 的权限状态在进程启动时就固定了，改完开关必须重启进程。
+      </p>
+    </details>
+
+    <details>
+      <summary>字幕不出来，但声音在播</summary>
+      <p>
+        检查三件事：网课没有静音、系统音量不是 0、声音是从这台 Mac 出来的（不是从手机或另一台设备）。
+        另外确认「语音识别」权限也开了。
+      </p>
+    </details>
+
+    <details>
+      <summary>识别结果里术语老是错</summary>
+      <p>
+        这是苹果识别对专业词的已知弱点。配一个大模型接口，点「整理」，它会把这些词改回来。
+        免费版不配也能用全部基础功能。
+      </p>
+    </details>
+  </section>
+
+  <section>
+    <h2>版本</h2>
+    <p class="muted">当前内测版本号 <code>1.0 (1)</code>。完整改动见 <a href="changelog.html">更新日志</a>。</p>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 kaixinguor</span>
+    <a href="index.html">首页</a>
+    <a href="hark/index.html">课堂字幕</a>
+    <a href="privacy.html">隐私政策</a>
+    <a href="mailto:linr.w@163.com">linr.w@163.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
