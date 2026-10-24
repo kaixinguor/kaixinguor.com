@@ -6,7 +6,7 @@
 <title>许愿 · kaixinguor</title>
 <meta name="description" content="告诉我你想要什么工具。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=4">
 <script>
 /* 在渲染前就定好语言，避免先闪中文再变英文 */
 (function () {
@@ -23,6 +23,7 @@
   } catch (e) {}
 })();
 </script>
+<style>html[data-pending] body{visibility:hidden!important}</style>
 </head>
 <body>
 
@@ -93,7 +94,7 @@
 
     <label>
       <span data-i18n="wish.q6">怎么联系你（可选）</span>
-      <input name="contact" placeholder="邮箱或微信">
+      <input name="contact" data-i18n-ph="wish.q6.ph" placeholder="邮箱或微信">
     </label>
 
     <div class="wish-actions">

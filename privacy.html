@@ -6,7 +6,7 @@
 <title>隐私 · kaixinguor</title>
 <meta name="description" content="这个网站本身收集什么，不收集什么。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=4">
 <script>
 /* 在渲染前就定好语言，避免先闪中文再变英文 */
 (function () {
@@ -23,6 +23,7 @@
   } catch (e) {}
 })();
 </script>
+<style>html[data-pending] body{visibility:hidden!important}</style>
 </head>
 <body>
 
@@ -41,7 +42,7 @@
 
   <div class="poster" style="min-height:auto;padding:64px 0 20px">
     <h1 style="font-size:clamp(26px,4vw,36px)" data-i18n="site.privacy.title">隐私</h1>
-    <p class="sub" style="margin-bottom:0">这是<strong>这个网站</strong>的隐私说明，不是某个 App 的。</p>
+    <p class="sub" style="margin-bottom:0" data-i18n="site.privacy.sub">这是<strong>这个网站</strong>的隐私说明，不是某个 App 的。</p>
   </div>
 
   <section style="padding-top:8px;max-width:620px">
@@ -50,7 +51,7 @@
       <li data-i18n="site.privacy.p2">不用 cookie。浏览器里只存一样东西：你选的界面语言。清掉浏览器数据就没了。</li>
       <li data-i18n="site.privacy.p3">许愿表单不会自己发送任何东西。它只是打开你的邮件客户端并把内容填好，发不发由你决定。</li>
       <li data-i18n="site.privacy.p4">站点由 Cloudflare 托管，它会为安全与防滥用保留标准访问日志。</li>
-      <li>每个工具的隐私政策，看那个工具自己的页面：
+      <li data-i18n="site.privacy.apps">每个工具的隐私政策，看那个工具自己的页面：
         <a href="hark/privacy.html">课堂字幕</a> ·
         <a href="snipread/privacy.html">摘读</a>
       </li>

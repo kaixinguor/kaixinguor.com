@@ -22,6 +22,7 @@
   } catch (e) {}
 })();
 </script>
+<style>html[data-pending] body{visibility:hidden!important}</style>
 </head>
 <body>
 
@@ -39,9 +40,9 @@
 <main class="wrap">
   <div class="hero">
     <p class="eyebrow">404</p>
-    <h1>这页不存在。</h1>
-    <p class="lead">可能是链接变了，也可能是我写错了。</p>
-    <p><a class="btn btn-ghost" href="/">回首页</a></p>
+    <h1 data-i18n="e404.title">这页不存在。</h1>
+    <p class="lead" data-i18n="e404.lead">可能是链接变了，也可能是我写错了。</p>
+    <p><a class="btn btn-ghost" href="/" data-i18n="e404.home">回首页</a></p>
   </div>
 </main>
 

@@ -32,6 +32,7 @@ const I18N = {
     "wish.q4": "If it already existed, what would you pay?",
     "wish.q5": "Which device?",
     "wish.q6": "How to reach you (optional)",
+    "wish.q6.ph": "Email or WeChat",
     "wish.send": "Send",
     "wish.note": "Opens your mail app, already filled in.",
     "wish.f1": "Daily",
@@ -48,12 +49,17 @@ const I18N = {
     "wish.d4": "Mostly Windows",
 
     "site.privacy.title": "Privacy",
+    "site.privacy.sub": "This is the privacy note for <strong>this website</strong>, not for an app.",
+    "site.privacy.apps": "For each app's privacy policy, see that app's page:",
     "site.privacy.p1": "This site is a set of static pages. It has no account, no analytics, no ads, and no tracking scripts.",
     "site.privacy.p2": "No cookies. The only thing stored in your browser is your language choice (localStorage). Clear your browser data and it's gone.",
     "site.privacy.p3": "The wish form does not send anything by itself. It opens your mail app with the text filled in — you decide whether to send it.",
     "site.privacy.p4": "The site is served by Cloudflare, which keeps standard access logs for security and abuse prevention.",
     "site.privacy.p5": "For privacy of each app, see the page of that app.",
 
+    "e404.title": "Page not found.",
+    "e404.lead": "The link may have changed, or I typed it wrong.",
+    "e404.home": "Back home",
     "zhonly": "This page is in Chinese for now."
   }
 };
