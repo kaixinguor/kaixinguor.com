@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>许愿 · kaixinguor</title>
-<meta name="description" content="想要一个什么样的工具？说清楚你现在的麻烦，我来判断值不值得做。">
+<meta name="description" content="告诉我你想要什么工具。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,98 +14,89 @@
   <div class="wrap">
     <a class="brand" href="index.html">kaixinguor</a>
     <nav class="top">
-      <a href="index.html">工具</a>
-      <a href="wish.html">许愿</a>
-      <a href="https://github.com/kaixinguor" target="_blank" rel="noopener">GitHub</a>
+      <a href="tools.html" data-i18n="nav.tools">工具</a>
+      <a href="wish.html" data-i18n="nav.wish">许愿</a>
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
 
-  <div class="hero" style="padding-bottom:24px">
-    <p class="eyebrow">许愿池</p>
-    <h1>你想要个什么工具？</h1>
-    <p class="lead">
-      这里的东西都是先有人提需求、才做出来的。把下面几个问题答清楚，比写十句"很好用"有用得多。
-    </p>
+  <div class="poster" style="min-height:auto;padding:64px 0 28px">
+    <h1 style="font-size:clamp(28px,4.6vw,42px)" data-i18n="wish.title">你想让它干什么？</h1>
   </div>
 
   <form class="wish-form" id="wish">
+
     <label>
-      <span>1 · 你想让它帮你干什么？</span>
-      <textarea name="what" rows="3" required
+      <span data-i18n="wish.q1">你想让它帮你干什么？</span>
+      <textarea name="what" rows="3" required data-i18n-ph="wish.q1.ph"
         placeholder="例：把网课里老师说的重点自动挑出来，做成一张知识点清单。"></textarea>
     </label>
 
     <label>
-      <span>2 · 你现在是怎么应付这件事的？</span>
-      <textarea name="now" rows="2" required
-        placeholder="例：一边听一边手打，一节课要记四五页，还经常漏。"></textarea>
-      <em>没有替代方案的需求，多半不是真需求。</em>
+      <span data-i18n="wish.q2">你现在是怎么应付这件事的？</span>
+      <textarea name="now" rows="2" required data-i18n-ph="wish.q2.ph"
+        placeholder="例：一边听一边手打，一节课记四五页，还经常漏。"></textarea>
+      <em data-i18n="wish.q2.note">没有替代方案的需求，多半不是真需求。</em>
     </label>
 
-    <label>
-      <span>3 · 多久会碰到一次？</span>
-      <select name="freq">
-        <option>每天</option>
-        <option>每周</option>
-        <option>每月</option>
-        <option>一年几次</option>
-      </select>
-    </label>
+    <div class="row2">
+      <label>
+        <span data-i18n="wish.q3">多久会碰到一次？</span>
+        <select name="freq">
+          <option data-i18n="wish.f1">每天</option>
+          <option data-i18n="wish.f2">每周</option>
+          <option data-i18n="wish.f3">每月</option>
+          <option data-i18n="wish.f4">一年几次</option>
+        </select>
+      </label>
+
+      <label>
+        <span data-i18n="wish.q5">主要在哪台设备上用？</span>
+        <select name="platform">
+          <option>Mac</option>
+          <option data-i18n="wish.d2">Mac + iPhone</option>
+          <option data-i18n="wish.d3">iPad</option>
+          <option data-i18n="wish.d4">主要用 Windows</option>
+        </select>
+      </label>
+    </div>
 
     <label>
-      <span>4 · 如果已经有人做好了，你愿意付多少？</span>
+      <span data-i18n="wish.q4">如果已经有人做好了，你愿意付多少？</span>
       <select name="price">
-        <option>不想付钱，免费才用</option>
-        <option>¥50 以内</option>
-        <option>¥50 – ¥200</option>
-        <option>¥200 – ¥1000</option>
-        <option>¥1000 以上，愿意单独定制</option>
+        <option data-i18n="wish.p0">不想付钱，免费才用</option>
+        <option data-i18n="wish.p1">¥50 以内</option>
+        <option data-i18n="wish.p2">¥50 – ¥200</option>
+        <option data-i18n="wish.p3">¥200 – ¥1000</option>
+        <option data-i18n="wish.p4">¥1000 以上，愿意单独定制</option>
       </select>
     </label>
 
     <label>
-      <span>5 · 你主要在哪台设备上用？</span>
-      <select name="platform">
-        <option>Mac</option>
-        <option>Mac + iPhone</option>
-        <option>iPad</option>
-        <option>主要用 Windows</option>
-      </select>
-    </label>
-
-    <label>
-      <span>6 · 怎么联系你？（可选）</span>
+      <span data-i18n="wish.q6">怎么联系你（可选）</span>
       <input name="contact" placeholder="邮箱或微信">
     </label>
 
     <div class="wish-actions">
-      <button class="btn btn-primary" type="submit">发送</button>
-      <span class="faint">会打开你的邮件客户端，内容已经填好。</span>
+      <button class="btn btn-primary" type="submit" data-i18n="wish.send">发送</button>
+      <span class="faint" data-i18n="wish.note">会打开你的邮件客户端，内容已经填好。</span>
     </div>
-  </form>
 
-  <section>
-    <h2>然后呢</h2>
-    <ul>
-      <li><strong>同一个需求出现三次</strong>，我才考虑做成产品——第一次是巧合，第三次才是需求。</li>
-      <li><strong>只对你有用</strong>的，可以做定制：一次买断，价格按工作量算。</li>
-      <li><strong>系统已经能做</strong>的，我会直接告诉你别做，省你一笔钱。</li>
-    </ul>
-  </section>
+  </form>
 
 </main>
 
 <footer class="site">
   <div class="wrap">
     <span>© 2026 kaixinguor</span>
-    <a href="index.html">工具</a>
-    <a href="mailto:linr.w@163.com">linr.w@163.com</a>
+    <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
   </div>
 </footer>
 
+<script src="lang.js"></script>
 <script>
 document.getElementById('wish').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -114,12 +105,11 @@ document.getElementById('wish').addEventListener('submit', function (e) {
   const body = [
     '1. 想让它干什么：', v('what'), '',
     '2. 现在怎么应付：', v('now'), '',
-    '3. 多久碰到一次：', v('freq'), '',
-    '4. 愿意付多少：', v('price'), '',
-    '5. 主要设备：', v('platform'), '',
+    '3. 多久碰到一次：', f.elements.freq.selectedOptions[0].text, '',
+    '4. 愿意付多少：', f.elements.price.selectedOptions[0].text, '',
+    '5. 主要设备：', f.elements.platform.selectedOptions[0].text, '',
     '6. 联系方式：', v('contact') || '(没填)'
   ].join('\n');
-
   const subject = '许愿：' + (v('what').slice(0, 40) || '一个新工具');
   location.href = 'mailto:linr.w@163.com?subject=' + encodeURIComponent(subject)
                 + '&body=' + encodeURIComponent(body);

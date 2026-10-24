@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>kaixinguor · 给学习的人、教书的人做的工具</title>
-<meta name="description" content="只做苹果平台。给学习的人、教书的人，做省事的工具：课堂字幕、摘读。全部本地运行，不上传你的东西。">
-<meta property="og:title" content="kaixinguor · 给学习的人、教书的人做的工具">
-<meta property="og:description" content="只做苹果平台。本地优先，不上传，不要账号。">
+<title>kaixinguor</title>
+<meta name="description" content="一个人做的小工具。从许愿到交付。">
+<meta property="og:title" content="kaixinguor">
+<meta property="og:description" content="一个人做的小工具。从许愿到交付。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -16,91 +16,33 @@
   <div class="wrap">
     <a class="brand" href="index.html">kaixinguor</a>
     <nav class="top">
-      <a href="index.html">工具</a>
-      <a href="wish.html">许愿</a>
-      <a href="https://github.com/kaixinguor" target="_blank" rel="noopener">GitHub</a>
+      <a href="tools.html" data-i18n="nav.tools">工具</a>
+      <a href="wish.html" data-i18n="nav.wish">许愿</a>
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
 
-  <div class="hero">
-    <p class="eyebrow">独立开发 · 只做苹果平台</p>
-    <h1>给学习的人、教书的人，<br>做省事的工具。</h1>
-    <p class="lead">
-      不追求功能多，只解决几件具体的事：听课时漏掉的那几句，扫描书抄不动的那些字。
-      全部在本机运行，不上传，不要账号。
-    </p>
-  </div>
-
-  <section style="padding-top:8px">
-    <div class="toollist">
-
-      <a class="tool" href="hark/index.html">
-        <div class="tool-main">
-          <h3>课堂字幕 <span class="en">Hark</span></h3>
-          <p>网课边听边出字幕，下课自动成稿</p>
-        </div>
-        <div class="tool-meta">
-          <span class="tag">macOS 26+</span>
-          <span class="tag state">内测</span>
-        </div>
-      </a>
-
-      <a class="tool" href="snipread/index.html">
-        <div class="tool-main">
-          <h3>摘读 <span class="en">SnipRead</span></h3>
-          <p>扫描版 PDF 框选识字，批注、笔记、书架</p>
-        </div>
-        <div class="tool-meta">
-          <span class="tag">macOS 12+</span>
-          <span class="tag state">TestFlight</span>
-        </div>
-      </a>
-
-      <a class="tool tool-wish" href="wish.html">
-        <div class="tool-main">
-          <h3>下一个工具</h3>
-          <p>还没想好做什么。你说了算。</p>
-        </div>
-        <div class="tool-meta">
-          <span class="tag">许愿</span>
-        </div>
-      </a>
-
+  <div class="poster">
+    <h1>做你想用的<br>那个工具。</h1>
+    <p class="sub" data-i18n="home.sub">一个人的开发。你说想要什么，我把它做出来。</p>
+    <div class="links">
+      <a href="tools.html" data-i18n="home.link.tools">已经做好的 →</a>
+      <a href="wish.html" data-i18n="home.link.wish">说说你想要什么 →</a>
     </div>
-  </section>
-
-  <section>
-    <h2>三条规矩</h2>
-    <ul>
-      <li><strong>只做苹果平台。</strong>Mac、iPad、iPhone。不做 Windows，也不做网页版。</li>
-      <li><strong>本地优先。</strong>能在这台机器上算完的，就不传到服务器上。</li>
-      <li><strong>做不到就直接说。</strong>系统已经能做的不重复做，也不做只为了听起来厉害的功能。</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>想要一个工具？</h2>
-    <p class="muted">
-      这里的东西都是先有人提需求、才做出来的。你说清楚要解决什么，我来判断值不值得做。
-      如果它只对你有用，我也可以单独给你做一个。
-    </p>
-    <p><a class="btn btn-primary" href="wish.html">说说你想要什么</a></p>
-  </section>
+  </div>
 
 </main>
 
 <footer class="site">
   <div class="wrap">
     <span>© 2026 kaixinguor</span>
-    <a href="hark/index.html">课堂字幕</a>
-    <a href="snipread/index.html">摘读</a>
-    <a href="wish.html">许愿</a>
-    <a href="mailto:linr.w@163.com">linr.w@163.com</a>
+    <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
   </div>
 </footer>
 
+<script src="lang.js"></script>
 </body>
 </html>

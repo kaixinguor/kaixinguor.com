@@ -8,8 +8,8 @@ rm -rf "$OUT"
 mkdir -p "$OUT"
 
 zip -q -r "$OUT/kaixinguor-site.zip" \
-  index.html wish.html 404.html \
-  style.css favicon.svg \
+  index.html tools.html wish.html 404.html \
+  style.css favicon.svg lang.js \
   hark snipread assets \
   _headers robots.txt sitemap.xml \
   -x "*.DS_Store"
