@@ -7,6 +7,22 @@
 <meta name="description" content="告诉我你想要什么工具。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css?v=2">
+<script>
+/* 在渲染前就定好语言，避免先闪中文再变英文 */
+(function () {
+  try {
+    var l = localStorage.getItem("kaixinguor.lang") || "zh";
+    var en = l === "en";
+    document.documentElement.lang = en ? "en" : "zh-CN";
+    if (en) {
+      document.documentElement.setAttribute("data-pending", "1");
+      setTimeout(function () {
+        document.documentElement.removeAttribute("data-pending");
+      }, 800);
+    }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 

@@ -752,3 +752,46 @@ main.wrap { width: 100%; }
   margin: 0;
   text-align: center;
 }
+
+/* 语言切换前先隐藏，避免中文闪一下 */
+html[data-pending] body { visibility: hidden; }
+
+/* ---------- 首页两个大入口 ---------- */
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 44px;
+  max-width: 640px;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 26px 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg-soft);
+  color: var(--fg);
+  font-size: 16px;
+  font-weight: 500;
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.panel:hover {
+  text-decoration: none;
+  border-color: var(--fg-faint);
+  transform: translateY(-2px);
+}
+
+.panel-arrow {
+  color: var(--fg-faint);
+  font-weight: 400;
+}
+
+@media (max-width: 560px) {
+  .panels { grid-template-columns: 1fr; }
+}

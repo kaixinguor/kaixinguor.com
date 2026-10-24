@@ -6,7 +6,23 @@
 <title>工具 · kaixinguor</title>
 <meta name="description" content="已经做好的工具。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
+<script>
+/* 在渲染前就定好语言，避免先闪中文再变英文 */
+(function () {
+  try {
+    var l = localStorage.getItem("kaixinguor.lang") || "zh";
+    var en = l === "en";
+    document.documentElement.lang = en ? "en" : "zh-CN";
+    if (en) {
+      document.documentElement.setAttribute("data-pending", "1");
+      setTimeout(function () {
+        document.documentElement.removeAttribute("data-pending");
+      }, 800);
+    }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 
@@ -24,7 +40,7 @@
 <main class="wrap">
 
   <div class="poster" style="min-height:auto;padding:64px 0 36px">
-    <h1 style="font-size:clamp(28px,4.6vw,42px)" data-i18n="tools.title">做好的</h1>
+    <h1 style="font-size:clamp(28px,4.6vw,42px)" data-i18n="tools.title">已经做好</h1>
   </div>
 
   <div class="cards">

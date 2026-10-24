@@ -9,11 +9,10 @@ const I18N = {
     "footer.privacy": "Privacy",
 
     "home.h1": "I build the tool<br>you wish existed.",
-    "home.sub": "One person, making tools. You say what you want, I build it.",
-    "home.link.tools": "What's been made →",
-    "home.link.wish": "Tell me what you want →",
+    "home.panel.tools": "Ready to use",
+    "home.panel.wish": "Tell me what you want",
 
-    "tools.title": "Made",
+    "tools.title": "Ready to use",
     "tools.hark.name": "Hark",
     "tools.hark": "Live captions for online lectures, transcript when class ends.",
     "tools.snipread.name": "SnipRead",
@@ -84,6 +83,8 @@ const I18N = {
 
     const btn = document.getElementById("lang-toggle");
     if (btn) btn.textContent = en ? "中文" : "EN";
+
+    document.documentElement.removeAttribute("data-pending");
   }
 
   window.toggleLang = function () {
