@@ -1,0 +1,6 @@
+# 这些不进部署产物（Workers Static Assets 会跳过）
+docs/
+preview.sh
+.assetsignore
+wrangler.jsonc
+.gitignore
