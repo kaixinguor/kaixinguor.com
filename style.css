@@ -733,3 +733,22 @@ footer.site { margin-top: auto; }
 
 /* flex 布局下 auto margin 会把 main 收缩成内容宽度，这里强制撑满 */
 main.wrap { width: 100%; }
+
+.card.ghost {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.card.ghost .ghost-plus {
+  font-size: 34px;
+  font-weight: 200;
+  color: var(--fg-faint);
+  line-height: 1;
+}
+
+.card.ghost .name {
+  margin: 0;
+  text-align: center;
+}

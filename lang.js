@@ -8,12 +8,15 @@ const I18N = {
     "nav.wish": "Wish",
     "footer.privacy": "Privacy",
 
+    "home.h1": "I build the tool<br>you wish existed.",
     "home.sub": "One person, making tools. You say what you want, I build it.",
     "home.link.tools": "What's been made →",
     "home.link.wish": "Tell me what you want →",
 
     "tools.title": "Made",
+    "tools.hark.name": "Hark",
     "tools.hark": "Live captions for online lectures, transcript when class ends.",
+    "tools.snipread.name": "SnipRead",
     "tools.snipread": "Box text on a scanned PDF. Annotate, note, shelve.",
     "tools.wish": "Nothing yet. You decide →",
 
@@ -44,6 +47,13 @@ const I18N = {
     "wish.d2": "Mac + iPhone",
     "wish.d3": "iPad",
     "wish.d4": "Mostly Windows",
+
+    "site.privacy.title": "Privacy",
+    "site.privacy.p1": "This site is a set of static pages. It has no account, no analytics, no ads, and no tracking scripts.",
+    "site.privacy.p2": "No cookies. The only thing stored in your browser is your language choice (localStorage). Clear your browser data and it's gone.",
+    "site.privacy.p3": "The wish form does not send anything by itself. It opens your mail app with the text filled in — you decide whether to send it.",
+    "site.privacy.p4": "The site is served by Cloudflare, which keeps standard access logs for security and abuse prevention.",
+    "site.privacy.p5": "For privacy of each app, see the page of that app.",
 
     "zhonly": "This page is in Chinese for now."
   }
