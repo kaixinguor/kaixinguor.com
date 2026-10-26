@@ -317,12 +317,14 @@ export function parseIssue(file) {
   ].filter(Boolean).join(""));
 
   const finalFooter = footerHtml || (isEn ? [
-    `<p>This issue covers reports published between ${escapeHtml(metaWindow)} (UTC+8): ${count} items.</p>`,
-    `<p>Every item links to the original report; facts and figures follow the original. Headlines and commentary are edited.</p>`,
+    `<p class="disclaimer"><b>Disclaimer</b> This issue covers reports published between ${escapeHtml(metaWindow)} (UTC+8): ${count} items. It was researched, compiled and summarized by an AI agent.</p>`,
+    `<p>Every item links to the original report; facts and figures follow the original and are for reference only.</p>`,
+    `<p>Headlines and commentary are edited and do not represent the views of any source.</p>`,
     `<p class="sig">AI Daily · Issue ${issueNo || "—"} · 24h window · Generated ${escapeHtml(generatedAt || dateDisplay)}</p>`
   ].join("\n    ") : [
-    `<p>本期收录 ${escapeHtml(metaWindow)}（北京时间）之间发布的报道，共 ${count} 条。</p>`,
-    `<p>所有条目均链接原文，事实与数字以原文为准。标题与点评为编辑加工。</p>`,
+    `<p class="disclaimer"><b>声明</b> 本期收录 ${escapeHtml(metaWindow)}（北京时间）之间发布的报道，共 ${count} 条。本期内容由 AI Agent 搜索、整理并总结。</p>`,
+    `<p>所有条目均链接原文，事实与数字以原文为准，仅供参考。</p>`,
+    `<p>标题与点评为编辑加工，不代表任何来源立场。</p>`,
     `<p class="sig">AI Daily · Issue ${issueNo || "—"} · 24h window · Generated ${escapeHtml(generatedAt || dateDisplay)}</p>`
   ].join("\n    "));
 
@@ -399,7 +401,6 @@ const LOCALES = {
     htmlLang: "zh-CN",
     navDaily: "日报",
     navTools: "工具",
-    navArchive: "归档",
     navWish: "许愿",
     themeToggle: "切换深浅色",
     skip: "跳到正文",
@@ -413,7 +414,7 @@ const LOCALES = {
     itemsLabel: (n) => `${n} 条`,
     readLabel: (n) => `约 ${n} 分钟`,
     archiveEmpty: "还没有往期。",
-    footTagline: "一个人做的小工具。从许愿到交付。",
+    footTagline: "源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class=\"foot-src\">——《孟子·离娄下》</span>",
     footPrivacy: "隐私",
     footDaily: "AI 日报 · 每天更新",
     switchLabel: "EN",
@@ -426,7 +427,6 @@ const LOCALES = {
     htmlLang: "en",
     navDaily: "Daily",
     navTools: "Tools",
-    navArchive: "Archive",
     navWish: "Wish",
     themeToggle: "Toggle theme",
     skip: "Skip to content",
@@ -440,7 +440,7 @@ const LOCALES = {
     itemsLabel: (n) => `${n} items`,
     readLabel: (n) => `${n} min read`,
     archiveEmpty: "No English editions yet.",
-    footTagline: "Small tools, made by one person.",
+    footTagline: "A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class=\"foot-src\">— Mencius, Li Lou II</span>",
     footPrivacy: "Privacy",
     footDaily: "AI Daily · updated whenever there is news",
     switchLabel: "中文",
@@ -496,7 +496,6 @@ export function renderIssuePage(issue, opts = {}) {
     RSS_HREF: lang === "en" ? "../feed-en.xml" : "../feed.xml",
     NAV_DAILY: loc.navDaily,
     NAV_TOOLS: loc.navTools,
-    NAV_ARCHIVE: loc.navArchive,
     NAV_WISH: loc.navWish,
     THEME_LABEL: loc.themeToggle,
     SKIP: loc.skip,

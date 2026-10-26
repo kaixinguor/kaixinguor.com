@@ -18,7 +18,6 @@
 <script>
 /* 在渲染前定好深浅色和语言，避免闪 */
 (function () {
-  document.documentElement.classList.add("js");
   try {
     var t = localStorage.getItem("kaixinguor.theme");
     if (t !== "dark" && t !== "light") {
@@ -51,7 +50,6 @@
     <nav class="top">
       <a href="index.html" aria-current="page" data-i18n="nav.daily">日报</a>
       <a href="tools.html" data-i18n="nav.tools">工具</a>
-      <a href="#archive" data-i18n="nav.archive">归档</a>
       <a href="wish.html" data-i18n="nav.wish">许愿</a>
       <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
       <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
@@ -267,7 +265,7 @@
     <footer class="issue-footer">
       <div class="wrap">
         <p>本期收录 2026 年 10 月 25 日 11:56 至 2026 年 10 月 26 日 11:56（北京时间）之间发布的报道，共 9 条，全部落在 24 小时窗口内，窗口之外的旧闻一律不收。检索时间 10/26 11:58。</p>
-    <p>所有条目均链接原文，事实与数字以原文为准；标注“据…报道”“未核实”的内容未经独立核实。标题与点评为编辑加工，不代表任何来源立场。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标注“据…报道”“未核实”的内容未经独立核实；标题与点评为编辑加工，不代表任何来源立场。</p>
     <p class="sig">AI Daily · Issue 001 · 24h window · Generated 2026-10-26 11:58</p>
       </div>
     </footer>
@@ -479,7 +477,7 @@
     <footer class="issue-footer">
       <div class="wrap">
         <p>This issue covers reports published between 11:56 on October 25, 2026 and 11:56 on October 26, 2026 (UTC+8): 9 items, all inside the 24-hour window. Older items outside the window are excluded. Search time: 10/26 11:58.</p>
-    <p>Every item links to the original report; facts and figures follow the original. Items marked “according to…” or “unverified” have not been independently confirmed. Headlines and commentary are edited and do not represent the views of any source.</p>
+    <p class="disclaimer"><b>Disclaimer</b> This issue was researched, compiled and summarized by an AI agent. Every item links to the original report; facts and figures follow the original and are for reference only. Items marked “according to…” or “unverified” have not been independently confirmed. Headlines and commentary are edited and do not represent the views of any source.</p>
     <p class="sig">AI Daily · Issue 001 · 24h window · Generated 2026-10-26 11:58</p>
       </div>
     </footer>
@@ -491,6 +489,7 @@
 <details class="archive-drawer" id="archive" data-archive-drawer>
   <summary class="archive-handle" aria-label="往期">
     <span class="ah-label"><span class="ah-en">ARCHIVE</span><span class="ah-zh" data-i18n="archive.label">往期</span></span>
+    <span class="ah-mobile" aria-hidden="true">›</span>
     <span class="ah-close" aria-hidden="true">×</span>
   </summary>
   <div class="archive-panel" role="dialog" aria-label="往期 / Archive">
@@ -533,12 +532,11 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">kaixinguor</div>
-        <p data-i18n="footer.tagline">一个人做的小工具。从许愿到交付。</p>
+        <p data-i18n="footer.tagline">源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
       </div>
       <div class="foot-links">
         <a href="index.html" data-i18n="nav.daily">日报</a>
         <a href="tools.html" data-i18n="nav.tools">工具</a>
-        <a href="#archive" data-i18n="nav.archive">归档</a>
         <a href="wish.html" data-i18n="nav.wish">许愿</a>
         <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
         <a href="feed.xml" data-lang="zh">RSS</a>

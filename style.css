@@ -271,6 +271,20 @@ footer.site .foot-brand {
   color: var(--ink);
   margin-bottom: 4px;
 }
+footer.site .foot-grid > div:first-child > p {
+  color: var(--ink-2);
+  font-family: var(--serif);
+  font-size: .98rem;
+  line-height: 1.7;
+}
+.foot-src {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: .08em;
+}
 footer.site p { margin: 0; }
 footer.site a { color: var(--muted); }
 footer.site a:hover { color: var(--ink); }
@@ -631,6 +645,15 @@ a.card:hover { text-decoration: none; }
   text-transform: uppercase;
   opacity: .85;
 }
+.issue-footer .disclaimer b {
+  margin-right: .55em;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
 
 /* ---------- 07 首页：整份日报 + 左侧往期抽屉 ---------- */
 .today { position: relative; z-index: 1; }
@@ -689,6 +712,7 @@ a.card:hover { text-decoration: none; }
   font-size: 10px;
   letter-spacing: .2em;
 }
+.ah-mobile { display: none; color: var(--accent); font-family: var(--mono); font-size: 14px; line-height: 1; }
 .ah-close { display: none; font-family: var(--mono); font-size: 18px; line-height: 1; }
 
 .archive-panel {
@@ -1282,7 +1306,13 @@ html[lang^="zh"] [data-lang="en"] { display: none !important; }
 
 /* 桌面才有贴边把手；窄屏从导航「归档」打开 */
 @media (max-width: 1120px) {
-  html.js .archive-drawer:not([open]) .archive-handle { display: none; }
+  .archive-drawer:not([open]) .archive-handle {
+    width: 18px;
+    height: 96px;
+    border-radius: 0 2px 2px 0;
+  }
+  .archive-drawer:not([open]) .archive-handle .ah-label { display: none; }
+  .archive-drawer:not([open]) .archive-handle .ah-mobile { display: block; }
 }
 
 @media (max-width: 760px) {
