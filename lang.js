@@ -129,6 +129,11 @@ const I18N = {
     if (btn) btn.textContent = en ? "中文" : "EN";
 
     document.documentElement.removeAttribute("data-pending");
+
+    // 通知 site.js：主题按钮的英文/中文 aria-label 也要跟着切
+    try {
+      document.dispatchEvent(new CustomEvent("kaixinguor:lang", { detail: { lang: document.documentElement.lang } }));
+    } catch (e) {}
   }
 
   window.toggleLang = function () {

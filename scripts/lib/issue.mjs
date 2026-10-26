@@ -7,6 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const WEEKDAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+const MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const NAMED_ENTITIES = {
   amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ",
   ldquo: "“", rdquo: "”", lsquo: "‘", rsquo: "’",
@@ -62,7 +63,11 @@ export function escapeHtml(str = "") {
 export function truncate(str = "", max = 160) {
   const text = String(str).replace(/\s+/g, " ").trim();
   if (text.length <= max) return text;
-  return text.slice(0, max).replace(/[，。；：、,.;:\s]+$/, "") + "…";
+  let cut = text.slice(0, max);
+  // 英文尽量在空格处断，别把单词切成 "mem..."
+  const lastSpace = cut.lastIndexOf(" ");
+  if (lastSpace > max * 0.6) cut = cut.slice(0, lastSpace);
+  return cut.replace(/[，。；：、,.;:\s]+$/, "") + "…";
 }
 
 function firstMatch(re, str) {
@@ -87,6 +92,11 @@ function displayDate(iso) {
   return `${y} 年 ${m} 月 ${d} 日`;
 }
 
+function displayDateEn(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${MONTHS_EN[m - 1]} ${d}, ${y}`;
+}
+
 function dotDate(iso) {
   return iso.replace(/-/g, ".");
 }
@@ -94,6 +104,11 @@ function dotDate(iso) {
 function monthLabel(iso) {
   const [y, m] = iso.split("-").map(Number);
   return `${y} 年 ${m} 月`;
+}
+
+function monthLabelEn(iso) {
+  const [y, m] = iso.split("-").map(Number);
+  return `${MONTHS_EN[m - 1]} ${y}`;
 }
 
 function isoFromFilename(file) {
@@ -112,8 +127,16 @@ function extractPillText(metabar) {
 }
 
 function parseIssueNumber(text, iso) {
-  const m = String(text).match(/第\s*0*(\d+)\s*期/);
-  if (m) return { issueNo: String(Number(m[1])).padStart(3, "0"), issueLabel: `第 ${String(Number(m[1])).padStart(3, "0")} 期` };
+  const zh = String(text).match(/第\s*0*(\d+)\s*期/);
+  if (zh) {
+    const no = String(Number(zh[1])).padStart(3, "0");
+    return { issueNo: no, issueLabel: `第 ${no} 期` };
+  }
+  const en = String(text).match(/\bIssue\s*#?\s*0*(\d+)/i);
+  if (en) {
+    const no = String(Number(en[1])).padStart(3, "0");
+    return { issueNo: no, issueLabel: `Issue ${no}` };
+  }
   return { issueNo: null, issueLabel: "" };
 }
 
@@ -220,7 +243,12 @@ export function parseIssue(file) {
   const iso = isoFromFilename(file);
   if (!iso) throw new Error(`${file}: 文件名里找不到 YYYY-MM-DD 日期`);
 
-  const title = stripTags(firstMatch(/<title>([\s\S]*?)<\/title>/i, html)) || `AI 日报 · ${displayDate(iso)}`;
+  const htmlLang = firstMatch(/<html[^>]*\blang="([^"]+)"/i, html);
+  const lang = /^en\b/i.test(htmlLang) || /-en\.html$/i.test(file) ? "en" : "zh";
+  const isEn = lang === "en";
+
+  const title = stripTags(firstMatch(/<title>([\s\S]*?)<\/title>/i, html)) ||
+    (isEn ? `AI Daily · ${displayDateEn(iso)}` : `AI 日报 · ${displayDate(iso)}`);
   const description = decodeEntities(firstMatch(/<meta name="description" content="([^"]*)"/i, html));
 
   const masthead = firstMatch(/<header class="masthead"[^>]*>([\s\S]*?)<\/header>/i, html);
@@ -228,7 +256,7 @@ export function parseIssue(file) {
   const dateHtml = firstMatch(/<h1 class="date">([\s\S]*?)<\/h1>/i, masthead);
   const weekday = stripTags(firstMatch(/<span class="weekday">([\s\S]*?)<\/span>/i, dateHtml)).toUpperCase();
   const sourceDateDisplay = stripTags(dateHtml.replace(/<span class="weekday">[\s\S]*?<\/span>/i, ""));
-  const dateDisplay = sourceDateDisplay || displayDate(iso);
+  const dateDisplay = sourceDateDisplay || (isEn ? displayDateEn(iso) : displayDate(iso));
   const deckHtml = cleanInline(firstMatch(/<p class="deck">([\s\S]*?)<\/p>/i, masthead)).trim();
   const deckText = stripTags(deckHtml);
   const metabarHtml = cleanInline(firstMatch(/<div class="metabar">([\s\S]*?)<\/div>/i, masthead)).trim();
@@ -238,9 +266,10 @@ export function parseIssue(file) {
   const issueNo = parsedNo.issueNo;
   const issueLabel = parsedNo.issueLabel;
 
-  const window = stripTags(firstMatch(/<span>窗口\s*([\s\S]*?)<\/span>/i, metabarHtml)) ||
-    stripTags(firstMatch(/窗口\s*([^<]+)/i, metabarHtml));
-  const readMinutes = Number(firstMatch(/阅读约\s*(\d+)\s*分钟/i, metabarHtml)) || 0;
+  const window = stripTags(firstMatch(/<span>(?:窗口|Window)\s*([\s\S]*?)<\/span>/i, metabarHtml)) ||
+    stripTags(firstMatch(/(?:窗口|Window)\s*([^<]+)/i, metabarHtml));
+  const readMinutesMatch = metabarHtml.match(/阅读约\s*(\d+)\s*分钟|(\d+)\s*min(?:ute)?s?\s+read/i);
+  const readMinutes = readMinutesMatch ? Number(readMinutesMatch[1] || readMinutesMatch[2]) : 0;
 
   let tldr = parseTldr(html);
   const chapters = parseChapters(html);
@@ -249,9 +278,10 @@ export function parseIssue(file) {
   if (!cards.length) throw new Error(`${file}: 没有解析到任何 <article class="card">，是不是版式变了？`);
 
   if (!tldr.length) {
+    const period = isEn ? "." : "。";
     tldr = cards.slice(0, 3).map((card, i) => ({
       idx: String(i + 1).padStart(2, "0"),
-      html: `<b>${escapeHtml(card.titleText)}。</b>${escapeHtml(truncate(card.summary, 96))}`
+      html: `<b>${escapeHtml(card.titleText)}${period}</b>${escapeHtml(truncate(card.summary, isEn ? 120 : 96))}`
     }));
   }
 
@@ -267,8 +297,16 @@ export function parseIssue(file) {
   const fallbackRead = Math.max(1, Math.round(count * 0.7));
   const finalRead = readMinutes || fallbackRead;
 
-  const metaWindow = window || `${dateDisplay} 前后 24 小时`;
-  const finalMetabar = metabarHtml || [
+  const metaWindow = window || (isEn ? `${dateDisplay} ± 24 hours` : `${dateDisplay} 前后 24 小时`);
+  const finalMetabar = metabarHtml || (isEn ? [
+    issueLabel ? `<span class="pill">${escapeHtml(issueLabel)}</span>` : "",
+    issueLabel ? `<span class="dot"></span>` : "",
+    `<span>Window ${escapeHtml(metaWindow)}</span>`,
+    `<span class="dot"></span>`,
+    `<span>${count} items</span>`,
+    `<span class="dot"></span>`,
+    `<span>${finalRead} min read</span>`
+  ].filter(Boolean).join("") : [
     issueLabel ? `<span class="pill">${escapeHtml(issueLabel)}</span>` : "",
     issueLabel ? `<span class="dot"></span>` : "",
     `<span>窗口 ${escapeHtml(metaWindow)}</span>`,
@@ -276,20 +314,26 @@ export function parseIssue(file) {
     `<span>${count} 条</span>`,
     `<span class="dot"></span>`,
     `<span>阅读约 ${finalRead} 分钟</span>`
-  ].filter(Boolean).join("");
+  ].filter(Boolean).join(""));
 
-  const finalFooter = footerHtml || [
+  const finalFooter = footerHtml || (isEn ? [
+    `<p>This issue covers reports published between ${escapeHtml(metaWindow)} (UTC+8): ${count} items.</p>`,
+    `<p>Every item links to the original report; facts and figures follow the original. Headlines and commentary are edited.</p>`,
+    `<p class="sig">AI Daily · Issue ${issueNo || "—"} · 24h window · Generated ${escapeHtml(generatedAt || dateDisplay)}</p>`
+  ].join("\n    ") : [
     `<p>本期收录 ${escapeHtml(metaWindow)}（北京时间）之间发布的报道，共 ${count} 条。</p>`,
     `<p>所有条目均链接原文，事实与数字以原文为准。标题与点评为编辑加工。</p>`,
     `<p class="sig">AI Daily · Issue ${issueNo || "—"} · 24h window · Generated ${escapeHtml(generatedAt || dateDisplay)}</p>`
-  ].join("\n    ");
+  ].join("\n    "));
 
   return {
     file,
+    lang,
     dateISO: iso,
     dateDisplay,
     dateDot: dotDate(iso),
     monthLabel: monthLabel(iso),
+    monthLabelEn: monthLabelEn(iso),
     weekday: weekday || weekdayFor(iso),
     title,
     description: description || deckText,
@@ -349,8 +393,66 @@ ${chapter.cards.map(renderCard).join("\n\n")}
   </section>`).join("\n\n");
 }
 
+const LOCALES = {
+  zh: {
+    htmlLang: "zh-CN",
+    navDaily: "日报",
+    navTools: "工具",
+    navArchive: "归档",
+    navWish: "许愿",
+    themeToggle: "切换深浅色",
+    skip: "跳到正文",
+    kicker: "AI 日报",
+    kickerEn: "Daily AI Brief",
+    tocLabel: "栏目",
+    tldr: "速览",
+    lead: "今日头条",
+    leadEn: "Today's Lead",
+    readFull: "读完整份日报",
+    itemsLabel: (n) => `${n} 条`,
+    readLabel: (n) => `约 ${n} 分钟`,
+    archiveEmpty: "还没有往期。",
+    footTagline: "一个人做的小工具。从许愿到交付。",
+    footPrivacy: "隐私",
+    footDaily: "AI 日报 · 每天更新",
+    switchLabel: "EN",
+    switchLang: "en",
+    switchHreflang: "en",
+    rssZh: "AI 日报（中文）",
+    rssEn: "AI Daily (English)"
+  },
+  en: {
+    htmlLang: "en",
+    navDaily: "Daily",
+    navTools: "Tools",
+    navArchive: "Archive",
+    navWish: "Wish",
+    themeToggle: "Toggle theme",
+    skip: "Skip to content",
+    kicker: "AI DAILY",
+    kickerEn: "Daily AI Brief",
+    tocLabel: "Sections",
+    tldr: "At a glance",
+    lead: "Today's lead",
+    leadEn: "Today's Lead",
+    readFull: "Read the full issue",
+    itemsLabel: (n) => `${n} items`,
+    readLabel: (n) => `${n} min read`,
+    archiveEmpty: "No English editions yet.",
+    footTagline: "Small tools, made by one person.",
+    footPrivacy: "Privacy",
+    footDaily: "AI Daily · updated whenever there is news",
+    switchLabel: "中文",
+    switchLang: "zh",
+    switchHreflang: "zh-CN",
+    rssZh: "AI Daily (Chinese)",
+    rssEn: "AI Daily (English)"
+  }
+};
+
 export function renderToc(issue) {
-  const tldr = `<a href="#tldr"><span class="n">00</span>速览</a>`;
+  const loc = LOCALES[issue.lang] || LOCALES.zh;
+  const tldr = `<a href="#tldr"><span class="n">00</span>${loc.tldr}</a>`;
   const chapters = issue.chapters.map((chapter) =>
     `<a href="#${escapeHtml(chapter.id)}"><span class="n">${escapeHtml(chapter.cnum)}</span>${escapeHtml(chapter.name)}</a>`
   );
@@ -373,9 +475,32 @@ function getIssueTemplate(templatePath) {
 export function renderIssuePage(issue, opts = {}) {
   const templatePath = opts.templatePath;
   const template = getIssueTemplate(templatePath);
+  const lang = issue.lang || "zh";
+  const loc = LOCALES[lang] || LOCALES.zh;
+  const suffix = lang === "en" ? "-en" : "";
+  const stem = `daily/${issue.dateISO}${suffix}.html`;
+  const canonical = `https://kaixinguor.com/${stem}`;
+  const switchHref = `${issue.dateISO}${lang === "en" ? "" : "-en"}.html`;
+  const langKey = lang === "en" ? "en" : "zh";
   const values = {
+    HTML_LANG: loc.htmlLang,
     TITLE: escapeHtml(issue.title),
     DESCRIPTION: escapeHtml(issue.description),
+    CANONICAL: canonical,
+    ALT_ZH: `https://kaixinguor.com/daily/${issue.dateISO}.html`,
+    ALT_EN: `https://kaixinguor.com/daily/${issue.dateISO}-en.html`,
+    RSS_ZH_TITLE: escapeHtml(loc.rssZh),
+    RSS_EN_TITLE: escapeHtml(loc.rssEn),
+    RSS_HREF: lang === "en" ? "../feed-en.xml" : "../feed.xml",
+    NAV_DAILY: loc.navDaily,
+    NAV_TOOLS: loc.navTools,
+    NAV_ARCHIVE: loc.navArchive,
+    NAV_WISH: loc.navWish,
+    THEME_LABEL: loc.themeToggle,
+    SKIP: loc.skip,
+    KICKER: loc.kicker,
+    KICKER_EN: loc.kickerEn,
+    TOC_LABEL: loc.tocLabel,
     ISSUE_LABEL: escapeHtml(issue.issueLabel),
     DATE_DISPLAY: escapeHtml(issue.dateDisplay),
     WEEKDAY: escapeHtml(issue.weekday),
@@ -384,20 +509,29 @@ export function renderIssuePage(issue, opts = {}) {
     TOC: renderToc(issue),
     TLDR: renderTldr(issue),
     CHAPTERS: renderChapters(issue),
-    FOOTER: issue.footerHtml
+    FOOTER: issue.footerHtml,
+    SWITCH_HREF: switchHref,
+    SWITCH_LABEL: loc.switchLabel,
+    SWITCH_HREFLANG: loc.switchHreflang,
+    FOOT_TAGLINE: loc.footTagline,
+    FOOT_PRIVACY: loc.footPrivacy,
+    FOOT_DAILY: loc.footDaily,
+    LANG_SCRIPT: `try { localStorage.setItem("kaixinguor.lang", "${langKey}"); } catch (e) {}`
   };
   return template.replace(/\{\{([A-Z_]+)\}\}/g, (m, key) =>
     Object.prototype.hasOwnProperty.call(values, key) ? values[key] : m
   );
 }
 
-/* 首页今日区：报头 + 3 条速览 + 3 条头条 + 读全文 */
-export function renderHomeToday(issue) {
+/* 首页今日区：报头 + 3 条速览 + 3 条头条 + 读全文。
+   lang 决定文案和链接（中文页 / 英文页），内容本身也来自对应语言的 issue。 */
+export function renderHomeToday(issue, lang = "zh") {
+  const loc = LOCALES[lang] || LOCALES.zh;
   const flat = issue.chapters.flatMap((chapter) =>
     chapter.cards.map((card) => ({ ...card, chapter }))
   );
   const picks = flat.slice(0, 3);
-  const href = `daily/${issue.dateISO}.html`;
+  const href = `daily/${issue.dateISO}${lang === "en" ? "-en" : ""}.html`;
 
   const headCards = picks.map((card, i) => {
     const lead = i === 0;
@@ -415,7 +549,7 @@ export function renderHomeToday(issue) {
         <h3>${card.titleHtml}</h3>
         <p>${escapeHtml(summary)}</p>${why}
         <div class="head-foot">
-          <span>${escapeHtml(issue.issueLabel || "AI 日报")}</span>
+          <span>${escapeHtml(issue.issueLabel || (lang === "en" ? "AI Daily" : "AI 日报"))}</span>
           <span class="arrow" aria-hidden="true">→</span>
         </div>
       </a>`;
@@ -423,9 +557,9 @@ export function renderHomeToday(issue) {
 
   return `    <header class="masthead">
       <div class="kicker">
-        <span class="zh">AI 日报</span>
+        <span class="zh">${escapeHtml(loc.kicker)}</span>
         <span class="sep"></span>
-        <span>Daily AI Brief</span>
+        <span>${escapeHtml(loc.kickerEn)}</span>
         ${issue.issueLabel ? `<span class="issue-tag">${escapeHtml(issue.issueLabel)}</span>` : ""}
       </div>
       <h1 class="date">${escapeHtml(issue.dateDisplay)}<span class="weekday">${escapeHtml(issue.weekday)}</span></h1>
@@ -433,46 +567,53 @@ export function renderHomeToday(issue) {
       <div class="metabar">${issue.metabarHtml}</div>
     </header>
 
-    <ol class="tldr" id="tldr">
+    <ol class="tldr" id="tldr-${lang}">
 ${renderTldr(issue)}
     </ol>
 
-    <section class="headlines" aria-labelledby="headlines-title">
+    <section class="headlines" aria-label="${escapeHtml(loc.lead)}">
       <div class="chead">
         <span class="cnum">00</span>
-        <h2 id="headlines-title" data-i18n="home.lead">今日头条</h2>
-        <span class="cen">Today's Lead</span>
+        <h2>${escapeHtml(loc.lead)}</h2>
+        <span class="cen">${escapeHtml(loc.leadEn)}</span>
         <span class="crule"></span>
       </div>
       <div class="head-grid">
 ${headCards}
       </div>
       <div class="read-all">
-        <a class="read-all-link" href="${href}"><span data-i18n="home.readall">读完整份日报</span><span class="arrow" aria-hidden="true">→</span></a>
-        <span class="read-all-meta">${issue.count} 条 · 约 ${issue.readMinutes} 分钟</span>
+        <a class="read-all-link" href="${href}"><span>${escapeHtml(loc.readFull)}</span><span class="arrow" aria-hidden="true">→</span></a>
+        <span class="read-all-meta">${escapeHtml(loc.itemsLabel(issue.count))} · ${escapeHtml(loc.readLabel(issue.readMinutes))}</span>
       </div>
     </section>`;
 }
 
-export function renderArchiveSidebar(issues) {
-  if (!issues.length) {
-    return `      <p class="archive-empty" data-i18n="archive.empty">还没有往期。</p>`;
+export function renderArchiveSidebar(issues, lang = "zh") {
+  const loc = LOCALES[lang] || LOCALES.zh;
+  const entries = issues
+    .map((issue) => ({ issue, view: lang === "en" ? issue.en : issue }))
+    .filter((entry) => entry.view);
+
+  if (!entries.length) {
+    return `      <p class="archive-empty">${escapeHtml(loc.archiveEmpty)}</p>`;
   }
+
   const groups = [];
   let current = null;
-  for (const issue of issues) {
-    if (!current || current.label !== issue.monthLabel) {
-      current = { label: issue.monthLabel, items: [] };
+  for (const entry of entries) {
+    const label = lang === "en" ? entry.view.monthLabelEn : entry.view.monthLabel;
+    if (!current || current.label !== label) {
+      current = { label, items: [] };
       groups.push(current);
     }
-    current.items.push(issue);
+    current.items.push(entry);
   }
 
   return groups.map((group, gi) => {
     const open = gi === 0 ? " open" : "";
-    const links = group.items.map((issue, i) => `        <a class="archive-link${gi === 0 && i === 0 ? " is-current" : ""}" href="daily/${issue.dateISO}.html" title="${escapeHtml(issue.headline)}">
-          <span class="a-date">${escapeHtml(issue.dateDot)} <em>${escapeHtml(issue.weekday)}</em></span>
-          <span class="a-head">${escapeHtml(issue.headline)}</span>
+    const links = group.items.map((entry, i) => `        <a class="archive-link${gi === 0 && i === 0 ? " is-current" : ""}" href="daily/${entry.issue.dateISO}${lang === "en" ? "-en" : ""}.html" title="${escapeHtml(entry.view.headline)}">
+          <span class="a-date">${escapeHtml(entry.view.dateDot)} <em>${escapeHtml(entry.view.weekday)}</em></span>
+          <span class="a-head">${escapeHtml(entry.view.headline)}</span>
         </a>`).join("\n");
     return `      <details class="archive-month"${open}>
         <summary><span>${escapeHtml(group.label)}</span><span class="am-count">${String(group.items.length).padStart(2, "0")}</span></summary>
@@ -481,9 +622,11 @@ ${links}
   }).join("\n");
 }
 
-export function renderFeed(issues, siteUrl = "https://kaixinguor.com") {
-  const items = issues.slice(0, 20).map((issue) => {
-    const link = `${siteUrl}/daily/${issue.dateISO}.html`;
+export function renderFeed(issues, lang = "zh", siteUrl = "https://kaixinguor.com") {
+  const isEn = lang === "en";
+  const views = isEn ? issues.filter((issue) => issue.en).map((issue) => issue.en) : issues;
+  const items = views.slice(0, 20).map((issue) => {
+    const link = `${siteUrl}/daily/${issue.dateISO}${isEn ? "-en" : ""}.html`;
     const pub = new Date(`${issue.dateISO}T09:00:00+08:00`).toUTCString();
     const desc = [issue.deckText, issue.headline].filter(Boolean).join(" ");
     return `    <item>
@@ -495,16 +638,21 @@ export function renderFeed(issues, siteUrl = "https://kaixinguor.com") {
     </item>`;
   }).join("\n");
 
-  const latestDate = issues[0] ? new Date(`${issues[0].dateISO}T09:00:00+08:00`).toUTCString() : new Date().toUTCString();
+  const latestDate = views[0] ? new Date(`${views[0].dateISO}T09:00:00+08:00`).toUTCString() : new Date().toUTCString();
+  const feedName = isEn ? "feed-en.xml" : "feed.xml";
+  const channelTitle = isEn ? "AI Daily · kaixinguor" : "AI 日报 · kaixinguor";
+  const channelDesc = isEn
+    ? "A strict 24-hour AI daily. Updated whenever there is news."
+    : "严格 24 小时窗口的 AI 日报，每天更新。";
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AI 日报 · kaixinguor</title>
+    <title>${channelTitle}</title>
     <link>${siteUrl}/</link>
-    <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
-    <language>zh-CN</language>
-    <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>${channelDesc}</description>
+    <language>${isEn ? "en" : "zh-CN"}</language>
+    <atom:link href="${siteUrl}/${feedName}" rel="self" type="application/rss+xml"/>
     <lastBuildDate>${latestDate}</lastBuildDate>
 ${items}
   </channel>
@@ -527,7 +675,11 @@ export function renderSitemap(issues, siteUrl = "https://kaixinguor.com") {
     ["/snipread/support.html", "0.2", "2026-10-24"],
     ["/snipread/privacy.html", "0.2", "2026-10-24"]
   ];
-  const daily = issues.map((issue) => [`/daily/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+  const daily = [];
+  for (const issue of issues) {
+    daily.push([`/daily/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+  }
   const rows = [...staticPages, ...daily].map(([loc, priority, lastmod]) => `  <url>
     <loc>${siteUrl}${loc}</loc>
     <lastmod>${lastmod}</lastmod>
@@ -562,7 +714,18 @@ export function readIssues(dir) {
   const files = fs.readdirSync(dir)
     .filter((name) => /^\d{4}-\d{2}-\d{2}\.html$/.test(name))
     .sort();
-  const issues = files.map((name) => parseIssue(path.join(dir, name)));
+
+  const issues = files.map((name) => {
+    const issue = parseIssue(path.join(dir, name));
+    const enPath = path.join(dir, name.replace(/\.html$/, "-en.html"));
+    issue.en = fs.existsSync(enPath) ? parseIssue(enPath) : null;
+    if (issue.en) {
+      issue.en.dateISO = issue.dateISO;
+      issue.en.en = null;
+    }
+    return issue;
+  });
+
   issues.sort((a, b) => (a.dateISO < b.dateISO ? -1 : 1));
   let seq = 0;
   for (const issue of issues) {
@@ -570,6 +733,10 @@ export function readIssues(dir) {
     if (!issue.issueNo) {
       issue.issueNo = String(seq).padStart(3, "0");
       issue.issueLabel = `第 ${issue.issueNo} 期`;
+    }
+    if (issue.en) {
+      issue.en.issueNo = issue.en.issueNo || issue.issueNo;
+      issue.en.issueLabel = issue.en.issueLabel || `Issue ${issue.en.issueNo}`;
     }
   }
   issues.sort((a, b) => (a.dateISO < b.dateISO ? 1 : -1));

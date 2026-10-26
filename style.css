@@ -208,6 +208,8 @@ nav.top a[aria-current="page"] {
 
 .lang-btn {
   flex: none;
+  display: inline-flex;
+  align-items: center;
   padding: .25rem .55rem;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -216,10 +218,11 @@ nav.top a[aria-current="page"] {
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: .12em;
+  text-decoration: none;
   cursor: pointer;
   transition: color .18s, border-color .18s;
 }
-.lang-btn:hover { color: var(--ink); border-color: var(--muted); }
+.lang-btn:hover { color: var(--ink); border-color: var(--muted); text-decoration: none; }
 
 .icon-btn {
   flex: none;
@@ -1303,6 +1306,10 @@ a.card:hover { text-decoration: none; }
 }
 
 html[data-pending] body { visibility: hidden; }
+
+/* 首页中英文日报区：由 <html lang> 决定显示哪一版 */
+html[lang="en"] [data-lang="zh"],
+html[lang^="zh"] [data-lang="en"] { display: none !important; }
 
 @media (max-width: 1120px) {
   .home-layout {

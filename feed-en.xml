@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Daily · kaixinguor</title>
+    <link>https://kaixinguor.com/</link>
+    <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
+    <language>en</language>
+    <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 26 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · October 26, 2026</title>
+      <link>https://kaixinguor.com/daily/2026-10-26-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-26-en.html</guid>
+      <pubDate>Mon, 26 Oct 2026 01:00:00 GMT</pubDate>
+      <description>The biggest story of the past 24 hours: Google open-sourced Harness², which leaves model weights untouched and lets agents rewrite their own prompts and tools. In China, Kimi apologized for K3.1 Pro throttling, and AgiBot open-sourced an embodied-reasoning dataset. Google open-sources Harness²: leave the weights alone and let agents rewrite their own “shell”</description>
+    </item>
+  </channel>
+</rss>

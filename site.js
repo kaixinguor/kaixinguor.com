@@ -29,10 +29,15 @@
     var btn = document.querySelector("[data-theme-toggle]");
     if (btn) {
       var dark = mode === "dark";
+      var en = /^en\b/i.test(root.lang || "");
       btn.textContent = dark ? "◑" : "◐";
       btn.setAttribute("aria-pressed", dark ? "true" : "false");
-      btn.setAttribute("aria-label", dark ? "切换到日间模式" : "切换到夜间模式");
-      btn.setAttribute("title", dark ? "日间模式" : "夜间模式");
+      btn.setAttribute("aria-label", en
+        ? (dark ? "Switch to light mode" : "Switch to dark mode")
+        : (dark ? "切换到日间模式" : "切换到夜间模式"));
+      btn.setAttribute("title", en
+        ? (dark ? "Light mode" : "Dark mode")
+        : (dark ? "日间模式" : "夜间模式"));
     }
 
     var meta = document.querySelector('meta[name="theme-color"]');
@@ -66,6 +71,11 @@
 
   window.addEventListener("storage", function (e) {
     if (e.key === THEME_KEY) paintTheme(e.newValue === "dark" ? "dark" : "light");
+  });
+
+  // lang.js 切换语言后，把主题按钮的 aria-label / title 也跟着换掉
+  document.addEventListener("kaixinguor:lang", function () {
+    paintTheme(root.getAttribute("data-theme") === "dark" ? "dark" : "light");
   });
 
   /* ---------- 2. 阅读进度条 ---------- */

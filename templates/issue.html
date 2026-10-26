@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{{HTML_LANG}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESCRIPTION}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{CANONICAL}}">
 <meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="{{CANONICAL}}">
+<link rel="alternate" hreflang="zh-CN" href="{{ALT_ZH}}">
+<link rel="alternate" hreflang="en" href="{{ALT_EN}}">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="{{RSS_ZH_TITLE}}" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="{{RSS_EN_TITLE}}" hreflang="en" href="../feed-en.xml">
 <link rel="stylesheet" href="../style.css?v=5">
 <script>
 /* 在渲染前定好深浅色，避免闪白 */
@@ -21,20 +29,25 @@
   } catch (e) {}
 })();
 </script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+{{LANG_SCRIPT}}
+</script>
 </head>
 <body class="daily-page">
-<a class="skip" href="#main">跳到正文</a>
+<a class="skip" href="#main">{{SKIP}}</a>
 <div class="progress" id="progress"></div>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="../index.html">kaixinguor</a>
     <nav class="top">
-      <a href="../index.html" aria-current="page">日报</a>
-      <a href="../tools.html">工具</a>
-      <a href="../index.html#archive">归档</a>
-      <a href="../wish.html">许愿</a>
-      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+      <a href="../index.html" aria-current="page">{{NAV_DAILY}}</a>
+      <a href="../tools.html">{{NAV_TOOLS}}</a>
+      <a href="../index.html#archive">{{NAV_ARCHIVE}}</a>
+      <a href="../wish.html">{{NAV_WISH}}</a>
+      <a class="lang-btn" href="{{SWITCH_HREF}}" hreflang="{{SWITCH_HREFLANG}}">{{SWITCH_LABEL}}</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="{{THEME_LABEL}}">◐</button>
     </nav>
   </div>
 </header>
@@ -42,9 +55,9 @@
 <header class="masthead">
   <div class="wrap">
     <div class="kicker">
-      <span class="zh">AI 日报</span>
+      <span class="zh">{{KICKER}}</span>
       <span class="sep"></span>
-      <span>Daily AI Brief</span>
+      <span>{{KICKER_EN}}</span>
       <span class="issue-tag">{{ISSUE_LABEL}}</span>
     </div>
     <h1 class="date">{{DATE_DISPLAY}}<span class="weekday">{{WEEKDAY}}</span></h1>
@@ -53,7 +66,7 @@
   </div>
 </header>
 
-<nav class="toc" aria-label="栏目">
+<nav class="toc" aria-label="{{TOC_LABEL}}">
   <div class="wrap">
     <div class="toc-inner">
       {{TOC}}
@@ -82,16 +95,17 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">kaixinguor</div>
-        <p>一个人做的小工具。从许愿到交付。</p>
+        <p>{{FOOT_TAGLINE}}</p>
       </div>
       <div class="foot-links">
-        <a href="../index.html">日报</a>
-        <a href="../tools.html">工具</a>
-        <a href="../index.html#archive">归档</a>
-        <a href="../wish.html">许愿</a>
-        <a href="../privacy.html">隐私</a>
+        <a href="../index.html">{{NAV_DAILY}}</a>
+        <a href="../tools.html">{{NAV_TOOLS}}</a>
+        <a href="../index.html#archive">{{NAV_ARCHIVE}}</a>
+        <a href="../wish.html">{{NAV_WISH}}</a>
+        <a href="../privacy.html">{{FOOT_PRIVACY}}</a>
+        <a href="{{RSS_HREF}}">RSS</a>
       </div>
-      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · 每天更新</div>
+      <div class="foot-meta">© 2026 kaixinguor<br>{{FOOT_DAILY}}</div>
     </div>
   </div>
 </footer>

@@ -29,7 +29,7 @@ const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
 function dailyFiles() {
   return fs.readdirSync(DAILY_DIR)
-    .filter((name) => /^\d{4}-\d{2}-\d{2}\.html$/.test(name))
+    .filter((name) => /^\d{4}-\d{2}-\d{2}(-en)?\.html$/.test(name))
     .sort()
     .map((name) => path.join(DAILY_DIR, name));
 }
@@ -48,7 +48,8 @@ if (fileArg) {
     console.error("✗ daily/ 里还没有日报");
     process.exit(1);
   }
-  files = [allFiles[allFiles.length - 1]];
+  const latestDate = path.basename(allFiles[allFiles.length - 1]).slice(0, 10);
+  files = allFiles.filter((file) => path.basename(file).startsWith(latestDate));
 } else if (all) {
   files = dailyFiles();
 } else {
@@ -63,6 +64,8 @@ for (const file of files) {
   let m;
   while ((m = re.exec(html)) !== null) {
     const url = m[1].replace(/&amp;/g, "&");
+    // 生成页里还有 canonical / hreflang 指向本站，不当作外链检查
+    if (/^https?:\/\/(www\.)?kaixinguor\.com\//i.test(url)) continue;
     if (!links.includes(url)) links.push(url);
   }
 }

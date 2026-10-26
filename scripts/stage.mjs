@@ -25,6 +25,7 @@ const files = [
   "robots.txt",
   "sitemap.xml",
   "feed.xml",
+  "feed-en.xml",
   "_headers"
 ];
 

@@ -4,15 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI 日报 · kaixinguor</title>
-<meta name="description" content="每天一份严格 24 小时窗口的 AI 日报。往期在首页侧栏，工具在导航里。">
+<meta name="description" content="每天一份严格 24 小时窗口的中英双语 AI 日报。往期在首页侧栏，工具在导航里。">
 <meta property="og:title" content="AI 日报 · kaixinguor">
-<meta property="og:description" content="每天一份严格 24 小时窗口的 AI 日报。往期在首页侧栏，工具在导航里。">
+<meta property="og:description" content="每天一份严格 24 小时窗口的中英双语 AI 日报。往期在首页侧栏，工具在导航里。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kaixinguor.com/">
 <meta name="theme-color" content="#f7f3ed">
 <link rel="canonical" href="https://kaixinguor.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" href="feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报（中文）" hreflang="zh-CN" href="feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily (English)" hreflang="en" href="feed-en.xml">
 <link rel="stylesheet" href="style.css?v=5">
 <script>
 /* 在渲染前定好深浅色和语言，避免闪 */
@@ -72,7 +73,8 @@
           <span class="archive-chev" aria-hidden="true"></span>
         </summary>
         <div class="archive-rail-body">
-          <!-- ARCHIVE_SIDEBAR:START -->
+          <!-- ARCHIVE_SIDEBAR_ZH:START -->
+      <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
         <summary><span>2026 年 10 月</span><span class="am-count">01</span></summary>
         <a class="archive-link is-current" href="daily/2026-10-26.html" title="谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”">
@@ -80,13 +82,25 @@
           <span class="a-head">谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”</span>
         </a>
       </details>
-<!-- ARCHIVE_SIDEBAR:END -->
+      </div>
+<!-- ARCHIVE_SIDEBAR_ZH:END -->
+          <!-- ARCHIVE_SIDEBAR_EN:START -->
+      <div class="archive-lang" data-lang="en">
+      <details class="archive-month" open>
+        <summary><span>October 2026</span><span class="am-count">01</span></summary>
+        <a class="archive-link is-current" href="daily/2026-10-26-en.html" title="Google open-sources Harness²: leave the weights alone and let agents rewrite their own “shell”">
+          <span class="a-date">2026.10.26 <em>MON</em></span>
+          <span class="a-head">Google open-sources Harness²: leave the weights alone and let agents rewrite their own “shell”</span>
+        </a>
+      </details>
+      </div>
+<!-- ARCHIVE_SIDEBAR_EN:END -->
         </div>
       </details>
 
       <div class="home-main">
-        <p class="faint" data-zh-only hidden style="padding-top:18px;margin:0">The daily brief is in Chinese for now.</p>
-        <!-- TODAY:START -->
+        <!-- TODAY_ZH:START -->
+      <div class="today-lang" data-lang="zh">
     <header class="masthead">
       <div class="kicker">
         <span class="zh">AI 日报</span>
@@ -106,7 +120,7 @@
       <span>阅读约 6 分钟</span></div>
     </header>
 
-    <ol class="tldr" id="tldr">
+    <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
       <p><b>谷歌开源 Harness²：不改权重，改“外壳”。</b>让智能体自己改写提示词、护栏、工具、子智能体等八个组件，单步优化就把 WorkBuddy-Bench 拉高 11.5 分、LAB 提升 11.8 个百分点。</p>
@@ -121,11 +135,11 @@
     </li>
     </ol>
 
-    <section class="headlines" aria-labelledby="headlines-title">
+    <section class="headlines" aria-label="今日头条">
       <div class="chead">
         <span class="cnum">00</span>
-        <h2 id="headlines-title" data-i18n="home.lead">今日头条</h2>
-        <span class="cen">Today's Lead</span>
+        <h2>今日头条</h2>
+        <span class="cen">Today&#39;s Lead</span>
         <span class="crule"></span>
       </div>
       <div class="head-grid">
@@ -171,11 +185,104 @@
       </a>
       </div>
       <div class="read-all">
-        <a class="read-all-link" href="daily/2026-10-26.html"><span data-i18n="home.readall">读完整份日报</span><span class="arrow" aria-hidden="true">→</span></a>
+        <a class="read-all-link" href="daily/2026-10-26.html"><span>读完整份日报</span><span class="arrow" aria-hidden="true">→</span></a>
         <span class="read-all-meta">9 条 · 约 6 分钟</span>
       </div>
     </section>
-<!-- TODAY:END -->
+      </div>
+<!-- TODAY_ZH:END -->
+        <!-- TODAY_EN:START -->
+      <div class="today-lang" data-lang="en">
+    <header class="masthead">
+      <div class="kicker">
+        <span class="zh">AI DAILY</span>
+        <span class="sep"></span>
+        <span>Daily AI Brief</span>
+        <span class="issue-tag">Issue 001</span>
+      </div>
+      <h1 class="date">October 26, 2026<span class="weekday">MON</span></h1>
+      <p class="deck">The biggest story of the past 24 hours: Google open-sourced <em>Harness²</em>, which leaves model weights untouched and lets agents rewrite their own prompts and tools.
+      In China, <em>Kimi</em> apologized for K3.1 Pro throttling, and AgiBot open-sourced an embodied-reasoning dataset.</p>
+      <div class="metabar"><span class="pill">Issue 001</span>
+      <span class="dot"></span>
+      <span>Window Oct 25, 11:56 – Oct 26, 11:56 (UTC+8)</span>
+      <span class="dot"></span>
+      <span>9 items · all inside the window</span>
+      <span class="dot"></span>
+      <span>6 min read</span></div>
+    </header>
+
+    <ol class="tldr" id="tldr-en">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Google open-sources Harness²: change the shell, not the weights.</b> It lets an agent rewrite eight components—system prompt, guardrails, tools, sub-agents and more. One optimization step lifts WorkBuddy-Bench by 11.5 points and LAB by 11.8 percentage points.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Kimi apologizes in the early hours.</b> K3.1 Pro ran into throttling and “unnecessary quota consumption.” Kimi is giving every paid subscription tier 25% of its monthly quota—about a week of usage—and has changed how sub-agents are called.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Claude goes resident in the background for the first time.</b> Anthropic has launched a research preview of Claude Duet, which runs continuously in the background, spots needs on its own and executes tasks. It is opening first to Pro and Max waitlist users in the U.S.</p>
+    </li>
+    </ol>
+
+    <section class="headlines" aria-label="Today&#39;s lead">
+      <div class="chead">
+        <span class="cnum">00</span>
+        <h2>Today&#39;s lead</h2>
+        <span class="cen">Today&#39;s Lead</span>
+        <span class="crule"></span>
+      </div>
+      <div class="head-grid">
+      <a class="card head-card head-lead" data-c="model" href="daily/2026-10-26-en.html">
+        <div class="cmeta">
+          <span class="d">10/25 19:37</span>
+          <span class="src">Xinzhiyuan</span>
+        </div>
+        <span class="head-cat">01 Models &amp; Capabilities</span>
+        <h3>Google open-sources Harness²: leave the weights alone and let agents rewrite their own “shell”</h3>
+        <p>Google has open-sourced Harness² (github.com/google-research/harness2; paper arXiv 2610.14224). Rather than change model parameters, it lets an agent rewrite the layer around the model—the “harness”: system prompt, guardrails…</p>
+        <p class="why head-why"><b>Why it matters</b>When the weights are out of reach—closed APIs, expensive compute, catastrophic forgetting—rewriting the shell is almost the only path left. The numbers are worth remembering: after a single optimization step, WorkBuddy-Bench +11.5, JobBench +4.5 and LAB +11.8. The model did not change; the score did. That has a bigger impact on the very idea of “model capability” than on any single benchmark.</p>
+        <div class="head-foot">
+          <span>Issue 001</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+      <a class="card head-card" data-c="model" href="daily/2026-10-26-en.html">
+        <div class="cmeta">
+          <span class="d">10/25 17:37</span>
+          <span class="src">Synced</span>
+        </div>
+        <span class="head-cat">01 Models &amp; Capabilities</span>
+        <h3>Google open-sources TorchTPU: TPUs become native PyTorch devices</h3>
+        <p>Synced reports that Google has open-sourced TorchTPU, making TPUs usable as native PyTorch devices—a move the report…</p>
+        <div class="head-foot">
+          <span>Issue 001</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+      <a class="card head-card" data-c="product" href="daily/2026-10-26-en.html">
+        <div class="cmeta">
+          <span class="d">10/26 07:48</span>
+          <span class="src">National Business Daily</span>
+        </div>
+        <span class="head-cat">02 Products &amp; Agents</span>
+        <h3>Anthropic pushes Claude into “always on” mode with Duet agent research preview</h3>
+        <p>Claude Duet is designed to run continuously in the background, identify user needs on its own and execute tasks…</p>
+        <div class="head-foot">
+          <span>Issue 001</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+      </div>
+      <div class="read-all">
+        <a class="read-all-link" href="daily/2026-10-26-en.html"><span>Read the full issue</span><span class="arrow" aria-hidden="true">→</span></a>
+        <span class="read-all-meta">9 items · 6 min read</span>
+      </div>
+    </section>
+      </div>
+<!-- TODAY_EN:END -->
       </div>
 
     </div>
@@ -196,7 +303,8 @@
         <a href="#archive" data-i18n="nav.archive">归档</a>
         <a href="wish.html" data-i18n="nav.wish">许愿</a>
         <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
-        <a href="feed.xml">RSS</a>
+        <a href="feed.xml" data-lang="zh">RSS</a>
+        <a href="feed-en.xml" data-lang="en">RSS</a>
       </div>
       <div class="foot-meta">© 2026 kaixinguor<br><span data-i18n="footer.daily">AI 日报 · 每天更新</span></div>
     </div>

@@ -10,7 +10,7 @@
 
 ```bash
 cd site
-npm run build     # 首页 / 往期侧栏 / RSS / sitemap
+npm run build     # 首页双语区 / 往期侧栏 / 两份 RSS / sitemap
 npm run stage     # 生成 dist/site/
 ./pack.sh         # 或者生成 dist/kaixinguor-site.zip
 ```
@@ -21,9 +21,9 @@ npm run stage     # 生成 dist/site/
 
 ```
 index.html  archive.html  tools.html  wish.html  privacy.html  404.html
-daily/      hark/         snipread/   assets/
+daily/（中文 + -en 英文）  hark/  snipread/  assets/
 style.css   site.js       lang.js     favicon.svg
-feed.xml    sitemap.xml   robots.txt  _headers
+feed.xml    feed-en.xml  sitemap.xml  robots.txt  _headers
 ```
 
 ---
@@ -68,7 +68,7 @@ server {
     }
 
     # RSS 也别缓存太久
-    location = /feed.xml {
+    location ~ ^/feed(-en)?\.xml$ {
         expires -1;
         add_header Cache-Control "no-cache";
     }
@@ -127,6 +127,7 @@ curl -I https://tools.mathster.cn/            # 200
 curl -I https://tools.mathster.cn/hark/       # 200，不能是 403
 curl -I https://tools.mathster.cn/daily/2026-10-26.html   # 200
 curl -I https://tools.mathster.cn/feed.xml    # 200，Content-Type: application/rss+xml 或 xml
+curl -I https://tools.mathster.cn/feed-en.xml # 同上，英文 RSS
 curl -I https://tools.mathster.cn/nope        # 404，且返回你自己的 404 页
 ```
 
