@@ -109,34 +109,53 @@
     });
   });
 
-  /* ---------- 3b. 首页往期侧栏 ---------- */
-  var rail = document.querySelector("[data-archive-rail]");
-  if (rail) {
-    var railMq = window.matchMedia ? window.matchMedia("(max-width: 1120px)") : null;
-    var openArchive = function () { rail.setAttribute("open", ""); };
-    var syncRail = function (e) {
-      if (e.matches) {
-        if (location.hash !== "#archive") rail.removeAttribute("open");
-      } else {
-        openArchive();
+  /* ---------- 3b. 首页左侧往期抽屉 ---------- */
+  var drawer = document.querySelector("[data-archive-drawer]");
+  if (drawer) {
+    var drawerSummary = drawer.querySelector("summary");
+    var syncDrawer = function () {
+      var open = drawer.open;
+      document.documentElement.classList.toggle("archive-open", open);
+      if (drawerSummary) {
+        var en = /^en\b/i.test(document.documentElement.lang || "");
+        drawerSummary.setAttribute("aria-expanded", open ? "true" : "false");
+        drawerSummary.setAttribute("aria-label", en
+          ? (open ? "Close archive" : "Open archive")
+          : (open ? "关闭往期" : "打开往期"));
       }
     };
+    var openDrawer = function () {
+      drawer.open = true;
+      syncDrawer();
+      if (drawerSummary) drawerSummary.focus();
+    };
+    var closeDrawer = function () {
+      drawer.open = false;
+      syncDrawer();
+      if (drawerSummary) drawerSummary.focus();
+    };
 
-    // 桌面默认展开，手机默认收起；带 #archive 进来时始终展开。
-    if (railMq && railMq.matches && location.hash !== "#archive") {
-      rail.removeAttribute("open");
-    }
-    if (location.hash === "#archive") openArchive();
+    drawer.addEventListener("toggle", syncDrawer);
+    document.addEventListener("kaixinguor:lang", syncDrawer);
+    syncDrawer();
 
-    if (railMq) {
-      if (railMq.addEventListener) railMq.addEventListener("change", syncRail);
-      else if (railMq.addListener) railMq.addListener(syncRail);
-    }
+    if (location.hash === "#archive") openDrawer();
     window.addEventListener("hashchange", function () {
-      if (location.hash === "#archive") openArchive();
+      if (location.hash === "#archive") openDrawer();
     });
     document.querySelectorAll('a[href="#archive"]').forEach(function (a) {
-      a.addEventListener("click", openArchive);
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openDrawer();
+        if (history.replaceState) history.replaceState(null, "", "#archive");
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && drawer.open) closeDrawer();
+    });
+    document.addEventListener("click", function (e) {
+      if (drawer.open && !drawer.contains(e.target)) closeDrawer();
     });
   }
 

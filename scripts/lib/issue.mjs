@@ -377,8 +377,9 @@ ${paras}${why}
       </article>`;
 }
 
-export function renderChapters(issue) {
-  return issue.chapters.map((chapter) => `  <section class="chapter" id="${escapeHtml(chapter.id)}" data-c="${escapeHtml(chapter.cat)}">
+export function renderChapters(issue, suffix = "") {
+  const idSuffix = escapeHtml(suffix);
+  return issue.chapters.map((chapter) => `  <section class="chapter" id="${escapeHtml(chapter.id)}${idSuffix}" data-c="${escapeHtml(chapter.cat)}">
     <div class="chead">
       <span class="cnum">${escapeHtml(chapter.cnum)}</span>
       <h2>${escapeHtml(chapter.name)}</h2>
@@ -450,11 +451,12 @@ const LOCALES = {
   }
 };
 
-export function renderToc(issue) {
+export function renderToc(issue, tldrId = "tldr", suffix = "") {
   const loc = LOCALES[issue.lang] || LOCALES.zh;
-  const tldr = `<a href="#tldr"><span class="n">00</span>${loc.tldr}</a>`;
+  const idSuffix = escapeHtml(suffix);
+  const tldr = `<a href="#${escapeHtml(tldrId)}"><span class="n">00</span>${loc.tldr}</a>`;
   const chapters = issue.chapters.map((chapter) =>
-    `<a href="#${escapeHtml(chapter.id)}"><span class="n">${escapeHtml(chapter.cnum)}</span>${escapeHtml(chapter.name)}</a>`
+    `<a href="#${escapeHtml(chapter.id)}${idSuffix}"><span class="n">${escapeHtml(chapter.cnum)}</span>${escapeHtml(chapter.name)}</a>`
   );
   return [tldr, ...chapters].join("\n        ");
 }
@@ -523,69 +525,47 @@ export function renderIssuePage(issue, opts = {}) {
   );
 }
 
-/* 首页今日区：报头 + 3 条速览 + 3 条头条 + 读全文。
-   lang 决定文案和链接（中文页 / 英文页），内容本身也来自对应语言的 issue。 */
-export function renderHomeToday(issue, lang = "zh") {
+/* 首页直接放整份日报：报头 + 目录 + 速览 + 全部栏目 + 期脚注。
+   不再区分「摘要」和「读完整份日报」。 */
+export function renderHomeIssue(issue, lang = "zh") {
   const loc = LOCALES[lang] || LOCALES.zh;
-  const flat = issue.chapters.flatMap((chapter) =>
-    chapter.cards.map((card) => ({ ...card, chapter }))
-  );
-  const picks = flat.slice(0, 3);
-  const href = `daily/${issue.dateISO}${lang === "en" ? "-en" : ""}.html`;
-
-  const headCards = picks.map((card, i) => {
-    const lead = i === 0;
-    const summary = truncate(card.summary, lead ? 230 : 118);
-    const why = lead && card.why
-      ? `
-        <p class="why head-why"><b>${escapeHtml(card.why.label)}</b>${card.why.html}</p>`
-      : "";
-    return `      <a class="card head-card${lead ? " head-lead" : ""}" data-c="${escapeHtml(card.cat)}" href="${href}">
-        <div class="cmeta">
-          <span class="d">${escapeHtml(card.time)}</span>
-          <span class="src">${escapeHtml(card.sourceName || card.chapter.name)}</span>
-        </div>
-        <span class="head-cat">${escapeHtml(card.chapter.cnum)} ${escapeHtml(card.chapter.name)}</span>
-        <h3>${card.titleHtml}</h3>
-        <p>${escapeHtml(summary)}</p>${why}
-        <div class="head-foot">
-          <span>${escapeHtml(issue.issueLabel || (lang === "en" ? "AI Daily" : "AI 日报"))}</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </div>
-      </a>`;
-  }).join("\n");
+  const suffix = `-${lang}`;
 
   return `    <header class="masthead">
-      <div class="kicker">
-        <span class="zh">${escapeHtml(loc.kicker)}</span>
-        <span class="sep"></span>
-        <span>${escapeHtml(loc.kickerEn)}</span>
-        ${issue.issueLabel ? `<span class="issue-tag">${escapeHtml(issue.issueLabel)}</span>` : ""}
+      <div class="wrap">
+        <div class="kicker">
+          <span class="zh">${escapeHtml(loc.kicker)}</span>
+          <span class="sep"></span>
+          <span>${escapeHtml(loc.kickerEn)}</span>
+          ${issue.issueLabel ? `<span class="issue-tag">${escapeHtml(issue.issueLabel)}</span>` : ""}
+        </div>
+        <h1 class="date">${escapeHtml(issue.dateDisplay)}<span class="weekday">${escapeHtml(issue.weekday)}</span></h1>
+        <p class="deck">${issue.deckHtml}</p>
+        <div class="metabar">${issue.metabarHtml}</div>
       </div>
-      <h1 class="date">${escapeHtml(issue.dateDisplay)}<span class="weekday">${escapeHtml(issue.weekday)}</span></h1>
-      <p class="deck">${issue.deckHtml}</p>
-      <div class="metabar">${issue.metabarHtml}</div>
     </header>
 
-    <ol class="tldr" id="tldr-${lang}">
-${renderTldr(issue)}
-    </ol>
+    <nav class="toc" aria-label="${escapeHtml(loc.tocLabel)}">
+      <div class="wrap">
+        <div class="toc-inner">
+          ${renderToc(issue, `tldr${suffix}`, suffix)}
+        </div>
+      </div>
+    </nav>
 
-    <section class="headlines" aria-label="${escapeHtml(loc.lead)}">
-      <div class="chead">
-        <span class="cnum">00</span>
-        <h2>${escapeHtml(loc.lead)}</h2>
-        <span class="cen">${escapeHtml(loc.leadEn)}</span>
-        <span class="crule"></span>
+    <div class="wrap today-body">
+      <ol class="tldr" id="tldr${suffix}">
+${renderTldr(issue)}
+      </ol>
+
+${renderChapters(issue, suffix)}
+    </div>
+
+    <footer class="issue-footer">
+      <div class="wrap">
+        ${issue.footerHtml}
       </div>
-      <div class="head-grid">
-${headCards}
-      </div>
-      <div class="read-all">
-        <a class="read-all-link" href="${href}"><span>${escapeHtml(loc.readFull)}</span><span class="arrow" aria-hidden="true">→</span></a>
-        <span class="read-all-meta">${escapeHtml(loc.itemsLabel(issue.count))} · ${escapeHtml(loc.readLabel(issue.readMinutes))}</span>
-      </div>
-    </section>`;
+    </footer>`;
 }
 
 export function renderArchiveSidebar(issues, lang = "zh") {

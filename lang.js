@@ -125,6 +125,11 @@ const I18N = {
       el.hidden = !en;
     });
 
+    // 首页中文/英文整份日报、侧栏和 RSS 链接：语言切换时彻底隐藏另一版
+    document.querySelectorAll("[data-lang]").forEach(function (el) {
+      el.hidden = (el.getAttribute("data-lang") === "en") !== en;
+    });
+
     const btn = document.getElementById("lang-toggle");
     if (btn) btn.textContent = en ? "中文" : "EN";
 

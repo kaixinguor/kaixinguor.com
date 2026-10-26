@@ -15,7 +15,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   readIssues,
-  renderHomeToday,
+  renderHomeIssue,
   renderArchiveSidebar,
   renderFeed,
   renderSitemap,
@@ -75,17 +75,14 @@ if (!latest.en) {
   fail(`最新一期 ${latest.dateISO} 缺少英文版 daily/${latest.dateISO}-en.html；先运行 publish-daily 并带 --en。`);
 }
 
-const langBlock = (lang, inner) => `      <div class="today-lang" data-lang="${lang}">
-${inner}
-      </div>`;
-const sideBlock = (lang, inner) => `      <div class="archive-lang" data-lang="${lang}">
+const block = (cls, lang, inner, hidden = false) => `      <div class="${cls}" data-lang="${lang}"${hidden ? " hidden" : ""}>
 ${inner}
       </div>`;
 
-const todayZh = langBlock("zh", renderHomeToday(latest, "zh"));
-const todayEn = langBlock("en", renderHomeToday(latest.en, "en"));
-const sidebarZh = sideBlock("zh", renderArchiveSidebar(issues, "zh"));
-const sidebarEn = sideBlock("en", renderArchiveSidebar(issues, "en"));
+const todayZh = block("today-lang", "zh", renderHomeIssue(latest, "zh"));
+const todayEn = block("today-lang", "en", renderHomeIssue(latest.en, "en"), true);
+const sidebarZh = block("archive-lang", "zh", renderArchiveSidebar(issues, "zh"));
+const sidebarEn = block("archive-lang", "en", renderArchiveSidebar(issues, "en"), true);
 const feed = renderFeed(issues, "zh");
 const feedEn = renderFeed(issues, "en");
 const sitemap = renderSitemap(issues);

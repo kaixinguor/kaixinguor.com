@@ -10,7 +10,7 @@
 
 ```bash
 cd site
-npm run build     # 首页双语区 / 往期侧栏 / 两份 RSS / sitemap
+npm run build     # 首页双语全文 / 往期抽屉 / 两份 RSS / sitemap
 npm run stage     # 生成 dist/site/
 ./pack.sh         # 或者生成 dist/kaixinguor-site.zip
 ```
