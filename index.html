@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-title-en="AI Daily · kaixinguor">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>kaixinguor</title>
-<meta name="description" content="一个人做的小工具。从许愿到交付。">
-<meta property="og:title" content="kaixinguor">
-<meta property="og:description" content="一个人做的小工具。从许愿到交付。">
+<title>AI 日报 · kaixinguor</title>
+<meta name="description" content="每天一份严格 24 小时窗口的 AI 日报，外加两个 macOS 小工具。">
+<meta property="og:title" content="AI 日报 · kaixinguor">
+<meta property="og:description" content="每天一份严格 24 小时窗口的 AI 日报，外加两个 macOS 小工具。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kaixinguor.com/">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" href="feed.xml">
+<link rel="stylesheet" href="style.css?v=5">
 <script>
-/* 在渲染前就定好语言，避免先闪中文再变英文 */
+/* 在渲染前定好深浅色和语言，避免闪 */
 (function () {
   try {
-    var l = localStorage.getItem("kaixinguor.lang") || "zh";
-    var en = l === "en";
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+(function () {
+  try {
+    var en = (localStorage.getItem("kaixinguor.lang") || "zh") === "en";
     document.documentElement.lang = en ? "en" : "zh-CN";
     if (en) {
       document.documentElement.setAttribute("data-pending", "1");
@@ -28,44 +41,195 @@
 <style>html[data-pending] body{visibility:hidden!important}</style>
 </head>
 <body>
+<a class="skip" href="#main">跳到正文</a>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html">kaixinguor</a>
     <nav class="top">
+      <a href="index.html" aria-current="page" data-i18n="nav.daily">日报</a>
       <a href="tools.html" data-i18n="nav.tools">工具</a>
+      <a href="archive.html" data-i18n="nav.archive">归档</a>
       <a href="wish.html" data-i18n="nav.wish">许愿</a>
       <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main id="main">
 
-  <div class="poster">
-    <h1 data-i18n="home.h1">做你想用的<br>那个工具。</h1>
+  <section class="today">
+    <div class="wrap">
+      <p class="faint" data-zh-only hidden style="padding-top:18px;margin:0">The daily brief is in Chinese for now.</p>
+      <!-- TODAY:START -->
+    <header class="masthead">
+      <div class="kicker">
+        <span class="zh">AI 日报</span>
+        <span class="sep"></span>
+        <span>Daily AI Brief</span>
+        <span class="issue-tag">第 001 期</span>
+      </div>
+      <h1 class="date">2026 年 10 月 26 日<span class="weekday">MON</span></h1>
+      <p class="deck">24 小时里最硬的一条：谷歌开源 <em>Harness²</em>，不动模型权重，让智能体自己改自己的提示词和工具。
+      国内这边，<em>Kimi</em> 为 K3.1 Pro 的限流道歉，智元把具身推理数据集开了源。</p>
+      <div class="metabar"><span class="pill">第 001 期</span>
+      <span class="dot"></span>
+      <span>窗口 10/25 11:56 – 10/26 11:56</span>
+      <span class="dot"></span>
+      <span>9 条 · 全部在窗口内</span>
+      <span class="dot"></span>
+      <span>阅读约 6 分钟</span></div>
+    </header>
 
-    <div class="panels">
-      <a class="panel" href="tools.html">
-        <span class="panel-label" data-i18n="home.panel.tools">已经做好</span>
-        <span class="panel-arrow">→</span>
+    <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>谷歌开源 Harness²：不改权重，改“外壳”。</b>让智能体自己改写提示词、护栏、工具、子智能体等八个组件，单步优化就把 WorkBuddy-Bench 拉高 11.5 分、LAB 提升 11.8 个百分点。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Kimi 凌晨致歉。</b>K3.1 Pro 出现限流和“不必要的额度消耗”，官方给所有档位会员补月度额度 25%，约等于一周用量，并调整了子 Agent 调用策略。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Claude 第一次“后台常驻”。</b>Anthropic 上线 Claude Duet 研究预览，能在后台持续运行、主动识别需求并执行任务，先对美国 Pro / Max 候补用户开放。</p>
+    </li>
+    </ol>
+
+    <section class="headlines" aria-labelledby="headlines-title">
+      <div class="chead">
+        <span class="cnum">00</span>
+        <h2 id="headlines-title" data-i18n="home.lead">今日头条</h2>
+        <span class="cen">Today's Lead</span>
+        <span class="crule"></span>
+      </div>
+      <div class="head-grid">
+      <a class="card head-card head-lead" data-c="model" href="daily/2026-10-26.html">
+        <div class="cmeta">
+          <span class="d">10/25 19:37</span>
+          <span class="src">新智元</span>
+        </div>
+        <span class="head-cat">01 模型与能力</span>
+        <h3>谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”</h3>
+        <p>谷歌开源了框架 Harness²（github.com/google-research/harness2，论文 arXiv 2610.14224），思路是不改模型参数，而是让智能体自己改写包在模型外面的那层“马具”——系统提示词、护栏、记忆、工具指导、子智能体、技能、脚本、插件共八个可编辑组件。它做双层递归：任务级用“提议–探测–组合”挑出对当前任务最有效的改法，元级把成功的改法和执行轨迹沉淀下来，指导下一个陌生任务。</p>
+        <p class="why head-why"><b>看点</b>权重改不动的时候（闭源 API、算力贵、还会灾难性遗忘），“改外壳”几乎是唯一还能落地的路径。更值得记的是数字：单步优化后 WorkBuddy-Bench +11.5、JobBench +4.5、LAB +11.8。模型没变、成绩变了——这对“模型能力”这个概念本身的冲击，比分数更大。</p>
+        <div class="head-foot">
+          <span>第 001 期</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
       </a>
-      <a class="panel" href="wish.html">
-        <span class="panel-label" data-i18n="home.panel.wish">说说你想要什么</span>
-        <span class="panel-arrow">→</span>
+      <a class="card head-card" data-c="model" href="daily/2026-10-26.html">
+        <div class="cmeta">
+          <span class="d">10/25 17:37</span>
+          <span class="src">机器之心</span>
+        </div>
+        <span class="head-cat">01 模型与能力</span>
+        <h3>谷歌开源 TorchTPU：TPU 成了 PyTorch 的原生设备</h3>
+        <p>据机器之心报道，谷歌开源 TorchTPU，让 TPU 可以作为 PyTorch 的原生设备使用，报道称这意味着“CUDA 最深的护城河开始松动”。</p>
+        <div class="head-foot">
+          <span>第 001 期</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+      <a class="card head-card" data-c="product" href="daily/2026-10-26.html">
+        <div class="cmeta">
+          <span class="d">10/26 07:48</span>
+          <span class="src">每日经济新闻</span>
+        </div>
+        <span class="head-cat">02 产品与智能体</span>
+        <h3>Anthropic 把 Claude 推进“后台常驻”：Duet 智能体研究预览上线</h3>
+        <p>Claude Duet 定位是能在后台持续运行、主动识别用户需求并直接执行任务，而不是等你提问，面向工作任务繁重的专业人士与小企业主。目前仅通过候补名单向美国地区的 Claude Pro 与 Max 订阅用户开放。</p>
+        <div class="head-foot">
+          <span>第 001 期</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+      </div>
+      <div class="read-all">
+        <a class="read-all-link" href="daily/2026-10-26.html"><span data-i18n="home.readall">读完整份日报</span><span class="arrow" aria-hidden="true">→</span></a>
+        <span class="read-all-meta">9 条 · 约 6 分钟</span>
+      </div>
+    </section>
+<!-- TODAY:END -->
+    </div>
+  </section>
+
+  <section class="latest wrap" aria-labelledby="latest-title">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2 id="latest-title" data-i18n="home.latest">最新三期</h2>
+      <span class="cen">Latest</span>
+      <span class="crule"></span>
+      <a class="chead-link" href="archive.html" data-i18n="home.archive">全部归档 →</a>
+    </div>
+    <ol class="issue-list">
+      <!-- LATEST:START -->
+      <li>
+        <a class="issue-row" href="daily/2026-10-26.html">
+          <span class="issue-no">第 001 期</span>
+          <span class="issue-date">2026.10.26 <em>MON</em></span>
+          <span class="issue-head">谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”</span>
+          <span class="issue-meta">9 条</span>
+          <span class="issue-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+<!-- LATEST:END -->
+    </ol>
+  </section>
+
+  <section class="tools-teaser wrap" aria-labelledby="tools-title">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2 id="tools-title" data-i18n="home.tools">已经做好的工具</h2>
+      <span class="cen">Tools</span>
+      <span class="crule"></span>
+      <a class="chead-link" href="tools.html" data-i18n="home.tools.all">全部工具 →</a>
+    </div>
+    <p class="faint" style="margin:-6px 0 18px" data-i18n="home.tools.deck">两个 macOS 小工具，都先在本机把事办完。</p>
+    <div class="teaser-grid">
+      <a class="teaser-card" data-c="listen" href="hark/index.html">
+        <img src="assets/hark-icon.png" alt="课堂字幕">
+        <div>
+          <div class="t-name" data-i18n="tools.hark.name">课堂字幕</div>
+          <div class="t-line" data-i18n="tools.hark">网课边听边出字幕，下课自动成稿。</div>
+        </div>
+        <span class="t-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="teaser-card" data-c="read" href="snipread/index.html">
+        <img src="assets/snipread-icon.png" alt="摘读">
+        <div>
+          <div class="t-name" data-i18n="tools.snipread.name">摘读</div>
+          <div class="t-line" data-i18n="tools.snipread">扫描版 PDF 框选识字，批注、笔记、书架。</div>
+        </div>
+        <span class="t-arrow" aria-hidden="true">→</span>
       </a>
     </div>
-  </div>
+  </section>
 
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 kaixinguor</span>
-    <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p data-i18n="footer.tagline">一个人做的小工具。从许愿到交付。</p>
+      </div>
+      <div class="foot-links">
+        <a href="index.html" data-i18n="nav.daily">日报</a>
+        <a href="tools.html" data-i18n="nav.tools">工具</a>
+        <a href="archive.html" data-i18n="nav.archive">归档</a>
+        <a href="wish.html" data-i18n="nav.wish">许愿</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+        <a href="feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br><span data-i18n="footer.daily">AI 日报 · 每天更新</span></div>
+    </div>
   </div>
 </footer>
 
 <script src="lang.js"></script>
+<script src="site.js?v=5"></script>
 </body>
 </html>

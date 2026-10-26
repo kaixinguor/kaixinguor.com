@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI 日报 · kaixinguor</title>
+    <link>https://kaixinguor.com/</link>
+    <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
+    <language>zh-CN</language>
+    <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 26 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 10 月 26 日</title>
+      <link>https://kaixinguor.com/daily/2026-10-26.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-26.html</guid>
+      <pubDate>Mon, 26 Oct 2026 01:00:00 GMT</pubDate>
+      <description>24 小时里最硬的一条：谷歌开源 Harness²，不动模型权重，让智能体自己改自己的提示词和工具。 国内这边，Kimi 为 K3.1 Pro 的限流道歉，智元把具身推理数据集开了源。 谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”</description>
+    </item>
+  </channel>
+</rss>

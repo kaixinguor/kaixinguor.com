@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-title-en="Download · Hark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f3ed">
 <title>下载 · 课堂字幕</title>
 <meta name="description" content="下载课堂字幕 Mac 版：macOS 26+，Apple Silicon，本地识别，音频不上传。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" href="feed.xml">
+<link rel="stylesheet" href="style.css?v=5">
 <script>
 /* 在渲染前就定好语言，避免先闪中文再变英文 */
 (function () {
@@ -23,22 +25,38 @@
   } catch (e) {}
 })();
 </script>
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
 <style>html[data-pending] body{visibility:hidden!important}</style>
 </head>
-<body>
+<body class="product-page">
+<a class="skip" href="#main">跳到正文</a>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html">kaixinguor</a>
     <nav class="top">
-      <a href="tools.html" data-i18n="nav.tools">工具</a>
+      <a href="index.html" data-i18n="nav.daily">日报</a>
+      <a href="tools.html" aria-current="page" data-i18n="nav.tools">工具</a>
+      <a href="archive.html" data-i18n="nav.archive">归档</a>
       <a href="wish.html" data-i18n="nav.wish">许愿</a>
       <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main" style="max-width:860px">
   <p class="faint" data-zh-only hidden style="padding:14px 0 0">
     This page is in Chinese for now.
   </p>
@@ -146,11 +164,25 @@
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 kaixinguor</span>
-    <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p data-i18n="footer.tagline">一个人做的小工具。从许愿到交付。</p>
+      </div>
+      <div class="foot-links">
+        <a href="index.html" data-i18n="nav.daily">日报</a>
+        <a href="tools.html" data-i18n="nav.tools">工具</a>
+        <a href="archive.html" data-i18n="nav.archive">归档</a>
+        <a href="wish.html" data-i18n="nav.wish">许愿</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+        <a href="feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br><span data-i18n="footer.daily">AI 日报 · 每天更新</span></div>
+    </div>
   </div>
 </footer>
 
 <script src="lang.js"></script>
+<script src="site.js?v=5"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 {
-  // Cloudflare Workers 静态资源部署配置。
-  // 只有在 Workers 流程（npx wrangler deploy）里才用得上；
-  // 如果走的是 Pages，这个文件会被忽略，留着无害。
+  // Cloudflare Workers 静态资源部署配置（npx wrangler deploy）。
+  // 如果走 Cloudflare Pages（推荐），用 dist/site/ 作为输出目录，
+  // 这个文件会被忽略，留着无害。见 docs/自动化与部署.md。
   "name": "kaixinguor",
   "compatibility_date": "2026-10-24",
   "assets": {

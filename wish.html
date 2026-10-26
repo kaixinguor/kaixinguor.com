@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-title-en="Wish · kaixinguor">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>许愿 · kaixinguor</title>
-<meta name="description" content="告诉我你想要什么工具。">
+<meta name="description" content="告诉我你想要什么工具。会打开你的邮件客户端，内容已经填好。">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/wish.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" href="feed.xml">
+<link rel="stylesheet" href="style.css?v=5">
 <script>
-/* 在渲染前就定好语言，避免先闪中文再变英文 */
 (function () {
   try {
-    var l = localStorage.getItem("kaixinguor.lang") || "zh";
-    var en = l === "en";
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+(function () {
+  try {
+    var en = (localStorage.getItem("kaixinguor.lang") || "zh") === "en";
     document.documentElement.lang = en ? "en" : "zh-CN";
     if (en) {
       document.documentElement.setAttribute("data-pending", "1");
@@ -26,94 +36,120 @@
 <style>html[data-pending] body{visibility:hidden!important}</style>
 </head>
 <body>
+<a class="skip" href="#main">跳到正文</a>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html">kaixinguor</a>
     <nav class="top">
+      <a href="index.html" data-i18n="nav.daily">日报</a>
       <a href="tools.html" data-i18n="nav.tools">工具</a>
-      <a href="wish.html" data-i18n="nav.wish">许愿</a>
+      <a href="archive.html" data-i18n="nav.archive">归档</a>
+      <a href="wish.html" aria-current="page" data-i18n="nav.wish">许愿</a>
       <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <div class="kicker">
+        <span class="zh">WISH</span>
+        <span class="sep"></span>
+        <span>One concrete annoyance</span>
+      </div>
+      <h1 data-i18n="wish.title">你想让它干什么？</h1>
+      <p class="deck" data-i18n="wish.deck">一个工具，往往是从一件具体的小麻烦开始的。说说你那一件。</p>
+    </div>
+  </header>
 
-  <div class="poster" style="min-height:auto;padding:64px 0 28px">
-    <h1 style="font-size:clamp(28px,4.6vw,42px)" data-i18n="wish.title">你想让它干什么？</h1>
+  <div class="wrap" style="padding-top:30px">
+    <form class="wish-form" id="wish">
+
+      <label>
+        <span data-i18n="wish.q1">你想让它帮你干什么？</span>
+        <textarea name="what" rows="3" required data-i18n-ph="wish.q1.ph"
+          placeholder="例：把网课里老师说的重点自动挑出来，做成一张知识点清单。"></textarea>
+      </label>
+
+      <label>
+        <span data-i18n="wish.q2">你现在是怎么应付这件事的？</span>
+        <textarea name="now" rows="2" required data-i18n-ph="wish.q2.ph"
+          placeholder="例：一边听一边手打，一节课记四五页，还经常漏。"></textarea>
+        <em data-i18n="wish.q2.note">没有替代方案的需求，多半不是真需求。</em>
+      </label>
+
+      <div class="row2">
+        <label>
+          <span data-i18n="wish.q3">多久会碰到一次？</span>
+          <select name="freq">
+            <option data-i18n="wish.f1">每天</option>
+            <option data-i18n="wish.f2">每周</option>
+            <option data-i18n="wish.f3">每月</option>
+            <option data-i18n="wish.f4">一年几次</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="wish.q5">主要在哪台设备上用？</span>
+          <select name="platform">
+            <option>Mac</option>
+            <option data-i18n="wish.d2">Mac + iPhone</option>
+            <option data-i18n="wish.d3">iPad</option>
+            <option data-i18n="wish.d4">主要用 Windows</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        <span data-i18n="wish.q4">如果已经有人做好了，你愿意付多少？</span>
+        <select name="price">
+          <option data-i18n="wish.p0">不想付钱，免费才用</option>
+          <option data-i18n="wish.p1">¥50 以内</option>
+          <option data-i18n="wish.p2">¥50 – ¥200</option>
+          <option data-i18n="wish.p3">¥200 – ¥1000</option>
+          <option data-i18n="wish.p4">¥1000 以上，愿意单独定制</option>
+        </select>
+      </label>
+
+      <label>
+        <span data-i18n="wish.q6">怎么联系你（可选）</span>
+        <input name="contact" data-i18n-ph="wish.q6.ph" placeholder="邮箱或微信">
+      </label>
+
+      <div class="wish-actions">
+        <button class="btn btn-primary" type="submit" data-i18n="wish.send">发送</button>
+        <span class="faint" data-i18n="wish.note">会打开你的邮件客户端，内容已经填好。</span>
+      </div>
+
+    </form>
   </div>
-
-  <form class="wish-form" id="wish">
-
-    <label>
-      <span data-i18n="wish.q1">你想让它帮你干什么？</span>
-      <textarea name="what" rows="3" required data-i18n-ph="wish.q1.ph"
-        placeholder="例：把网课里老师说的重点自动挑出来，做成一张知识点清单。"></textarea>
-    </label>
-
-    <label>
-      <span data-i18n="wish.q2">你现在是怎么应付这件事的？</span>
-      <textarea name="now" rows="2" required data-i18n-ph="wish.q2.ph"
-        placeholder="例：一边听一边手打，一节课记四五页，还经常漏。"></textarea>
-      <em data-i18n="wish.q2.note">没有替代方案的需求，多半不是真需求。</em>
-    </label>
-
-    <div class="row2">
-      <label>
-        <span data-i18n="wish.q3">多久会碰到一次？</span>
-        <select name="freq">
-          <option data-i18n="wish.f1">每天</option>
-          <option data-i18n="wish.f2">每周</option>
-          <option data-i18n="wish.f3">每月</option>
-          <option data-i18n="wish.f4">一年几次</option>
-        </select>
-      </label>
-
-      <label>
-        <span data-i18n="wish.q5">主要在哪台设备上用？</span>
-        <select name="platform">
-          <option>Mac</option>
-          <option data-i18n="wish.d2">Mac + iPhone</option>
-          <option data-i18n="wish.d3">iPad</option>
-          <option data-i18n="wish.d4">主要用 Windows</option>
-        </select>
-      </label>
-    </div>
-
-    <label>
-      <span data-i18n="wish.q4">如果已经有人做好了，你愿意付多少？</span>
-      <select name="price">
-        <option data-i18n="wish.p0">不想付钱，免费才用</option>
-        <option data-i18n="wish.p1">¥50 以内</option>
-        <option data-i18n="wish.p2">¥50 – ¥200</option>
-        <option data-i18n="wish.p3">¥200 – ¥1000</option>
-        <option data-i18n="wish.p4">¥1000 以上，愿意单独定制</option>
-      </select>
-    </label>
-
-    <label>
-      <span data-i18n="wish.q6">怎么联系你（可选）</span>
-      <input name="contact" data-i18n-ph="wish.q6.ph" placeholder="邮箱或微信">
-    </label>
-
-    <div class="wish-actions">
-      <button class="btn btn-primary" type="submit" data-i18n="wish.send">发送</button>
-      <span class="faint" data-i18n="wish.note">会打开你的邮件客户端，内容已经填好。</span>
-    </div>
-
-  </form>
-
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 kaixinguor</span>
-    <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p data-i18n="footer.tagline">一个人做的小工具。从许愿到交付。</p>
+      </div>
+      <div class="foot-links">
+        <a href="index.html" data-i18n="nav.daily">日报</a>
+        <a href="tools.html" data-i18n="nav.tools">工具</a>
+        <a href="archive.html" data-i18n="nav.archive">归档</a>
+        <a href="wish.html" data-i18n="nav.wish">许愿</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+        <a href="feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br><span data-i18n="footer.daily">AI 日报 · 每天更新</span></div>
+    </div>
   </div>
 </footer>
 
 <script src="lang.js"></script>
+<script src="site.js?v=5"></script>
 <script>
 document.getElementById('wish').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -132,6 +168,5 @@ document.getElementById('wish').addEventListener('submit', function (e) {
                 + '&body=' + encodeURIComponent(body);
 });
 </script>
-
 </body>
 </html>

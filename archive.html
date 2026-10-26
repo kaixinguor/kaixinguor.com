@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-title-en="Archive · AI Daily · kaixinguor">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>往期 · AI 日报 · kaixinguor</title>
+<meta name="description" content="AI 日报往期归档，按日期倒序。每一期都严格限定 24 小时窗口。">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/archive.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" href="feed.xml">
+<link rel="stylesheet" href="style.css?v=5">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+(function () {
+  try {
+    var en = (localStorage.getItem("kaixinguor.lang") || "zh") === "en";
+    document.documentElement.lang = en ? "en" : "zh-CN";
+    if (en) {
+      document.documentElement.setAttribute("data-pending", "1");
+      setTimeout(function () {
+        document.documentElement.removeAttribute("data-pending");
+      }, 800);
+    }
+  } catch (e) {}
+})();
+</script>
+<style>html[data-pending] body{visibility:hidden!important}</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="index.html" data-i18n="nav.daily">日报</a>
+      <a href="tools.html" data-i18n="nav.tools">工具</a>
+      <a href="archive.html" aria-current="page" data-i18n="nav.archive">归档</a>
+      <a href="wish.html" data-i18n="nav.wish">许愿</a>
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <div class="kicker">
+        <span class="zh">ARCHIVE</span>
+        <span class="sep"></span>
+        <span>AI Daily · all issues</span>
+      </div>
+      <h1 data-i18n="archive.title">往期</h1>
+      <p class="deck" data-i18n="archive.deck">每一期 AI 日报，按日期倒序。每期只收 24 小时窗口内的报道。</p>
+    </div>
+  </header>
+
+  <div class="wrap archive-body">
+    <div class="archive-list">
+      <!-- ARCHIVE:START -->
+      <div class="archive-month">2026 年 10 月</div>
+      <a class="issue-row" href="daily/2026-10-26.html">
+        <span class="issue-no">第 001 期</span>
+        <span class="issue-date">2026.10.26 <em>MON</em></span>
+        <span class="issue-head">谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”</span>
+        <span class="issue-meta">9 条 · 6 分钟</span>
+        <span class="issue-arrow" aria-hidden="true">→</span>
+      </a>
+<!-- ARCHIVE:END -->
+    </div>
+    <p class="faint" style="margin-top:22px">
+      订阅：<a href="feed.xml">RSS</a> · 每期更新的第一时间就能看到。
+    </p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p data-i18n="footer.tagline">一个人做的小工具。从许愿到交付。</p>
+      </div>
+      <div class="foot-links">
+        <a href="index.html" data-i18n="nav.daily">日报</a>
+        <a href="tools.html" data-i18n="nav.tools">工具</a>
+        <a href="archive.html" data-i18n="nav.archive">归档</a>
+        <a href="wish.html" data-i18n="nav.wish">许愿</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+        <a href="feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br><span data-i18n="footer.daily">AI 日报 · 每天更新</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+<script src="site.js?v=5"></script>
+</body>
+</html>

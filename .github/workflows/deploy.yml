@@ -1,0 +1,68 @@
+name: build-and-deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: kaixinguor-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: build & check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check generated files are up to date
+        run: node scripts/build.mjs --check
+
+      - name: Stage public files
+        run: node scripts/stage.mjs
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: dist/site
+          if-no-files-found: error
+          retention-days: 7
+
+  # 默认不跑：如果你已经把 Cloudflare Pages 连到 GitHub（推荐），
+  # Pages 会自己构建，这个 job 会重复部署。
+  # 只有在「不用 Pages Git 集成、改用 Actions 部署」时，
+  # 在仓库 Settings → Variables 里加 CF_PAGES_DEPLOY=true，
+  # 再加两个 Secrets：CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID。
+  deploy:
+    name: deploy to Cloudflare Pages
+    needs: build
+    if: ${{ vars.CF_PAGES_DEPLOY == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download dist
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: dist/site
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist/site --project-name=kaixinguor --branch=main --commit-dirty=true

@@ -1,6 +1,15 @@
-# 这些不进部署产物（Workers Static Assets 会跳过）
+# 这些不进部署产物（Workers Static Assets / Pages 打包时都会跳过）
 docs/
+deploy/
+scripts/
+templates/
+.github/
+dist/
 preview.sh
+pack.sh
 .assetsignore
 wrangler.jsonc
 .gitignore
+package.json
+README.md
+.DS_Store

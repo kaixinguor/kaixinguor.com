@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" href="../feed.xml">
+<link rel="stylesheet" href="../style.css?v=5">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../archive.html">归档</a>
+      <a href="../wish.html">许愿</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">{{ISSUE_LABEL}}</span>
+    </div>
+    <h1 class="date">{{DATE_DISPLAY}}<span class="weekday">{{WEEKDAY}}</span></h1>
+    <p class="deck">{{DECK}}</p>
+    <div class="metabar">{{METABAR}}</div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      {{TOC}}
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+{{TLDR}}
+  </ol>
+
+{{CHAPTERS}}
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    {{FOOTER}}
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>一个人做的小工具。从许愿到交付。</p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../archive.html">归档</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=5"></script>
+</body>
+</html>

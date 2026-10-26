@@ -1,0 +1,19 @@
+{
+  "name": "kaixinguor-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "kaixinguor.com · AI 日报 + 工具站",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "check:links": "node scripts/check-links.mjs --latest",
+    "publish": "node scripts/publish-daily.mjs",
+    "stage": "node scripts/stage.mjs",
+    "preview": "python3 -m http.server 8899",
+    "deploy:cf": "node scripts/build.mjs && node scripts/stage.mjs && npx wrangler pages deploy dist/site --project-name=kaixinguor"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

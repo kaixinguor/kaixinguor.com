@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-title-en="Privacy · kaixinguor">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>隐私 · kaixinguor</title>
 <meta name="description" content="这个网站本身收集什么，不收集什么。">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/privacy.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <script>
-/* 在渲染前就定好语言，避免先闪中文再变英文 */
 (function () {
   try {
-    var l = localStorage.getItem("kaixinguor.lang") || "zh";
-    var en = l === "en";
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+(function () {
+  try {
+    var en = (localStorage.getItem("kaixinguor.lang") || "zh") === "en";
     document.documentElement.lang = en ? "en" : "zh-CN";
     if (en) {
       document.documentElement.setAttribute("data-pending", "1");
@@ -25,48 +34,73 @@
 </script>
 <style>html[data-pending] body{visibility:hidden!important}</style>
 </head>
-<body>
+<body class="product-page">
+<a class="skip" href="#main">跳到正文</a>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html">kaixinguor</a>
     <nav class="top">
+      <a href="index.html" data-i18n="nav.daily">日报</a>
       <a href="tools.html" data-i18n="nav.tools">工具</a>
+      <a href="archive.html" data-i18n="nav.archive">归档</a>
       <a href="wish.html" data-i18n="nav.wish">许愿</a>
       <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <div class="kicker">
+        <span class="zh">PRIVACY</span>
+        <span class="sep"></span>
+        <span>This website, not an app</span>
+      </div>
+      <h1 data-i18n="site.privacy.title">隐私</h1>
+      <p class="deck" data-i18n="site.privacy.sub">这是<strong>这个网站</strong>的隐私说明，不是某个 App 的。</p>
+    </div>
+  </header>
 
-  <div class="poster" style="min-height:auto;padding:64px 0 20px">
-    <h1 style="font-size:clamp(26px,4vw,36px)" data-i18n="site.privacy.title">隐私</h1>
-    <p class="sub" style="margin-bottom:0" data-i18n="site.privacy.sub">这是<strong>这个网站</strong>的隐私说明，不是某个 App 的。</p>
+  <div class="wrap">
+    <section style="max-width:760px;padding-top:34px">
+      <ul>
+        <li data-i18n="site.privacy.p1">这个网站是几页静态页面。没有账号、没有统计、没有广告、没有埋点。</li>
+        <li data-i18n="site.privacy.p2">不用 cookie。浏览器里只存两样东西：你选的界面语言和深浅色。清掉浏览器数据就没了。</li>
+        <li data-i18n="site.privacy.p3">许愿表单不会自己发送任何东西。它只是打开你的邮件客户端并把内容填好，发不发由你决定。</li>
+        <li data-i18n="site.privacy.p4">站点由 Cloudflare 托管，它会为安全与防滥用保留标准访问日志。</li>
+        <li data-i18n="site.privacy.apps">每个工具的隐私政策，看那个工具自己的页面：
+          <a href="hark/privacy.html">课堂字幕</a> ·
+          <a href="snipread/privacy.html">摘读</a>
+        </li>
+      </ul>
+    </section>
   </div>
-
-  <section style="padding-top:8px;max-width:620px">
-    <ul>
-      <li data-i18n="site.privacy.p1">这个网站是几页静态页面。没有账号、没有统计、没有广告、没有埋点。</li>
-      <li data-i18n="site.privacy.p2">不用 cookie。浏览器里只存一样东西：你选的界面语言。清掉浏览器数据就没了。</li>
-      <li data-i18n="site.privacy.p3">许愿表单不会自己发送任何东西。它只是打开你的邮件客户端并把内容填好，发不发由你决定。</li>
-      <li data-i18n="site.privacy.p4">站点由 Cloudflare 托管，它会为安全与防滥用保留标准访问日志。</li>
-      <li data-i18n="site.privacy.apps">每个工具的隐私政策，看那个工具自己的页面：
-        <a href="hark/privacy.html">课堂字幕</a> ·
-        <a href="snipread/privacy.html">摘读</a>
-      </li>
-    </ul>
-  </section>
-
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 kaixinguor</span>
-    <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p data-i18n="footer.tagline">一个人做的小工具。从许愿到交付。</p>
+      </div>
+      <div class="foot-links">
+        <a href="index.html" data-i18n="nav.daily">日报</a>
+        <a href="tools.html" data-i18n="nav.tools">工具</a>
+        <a href="archive.html" data-i18n="nav.archive">归档</a>
+        <a href="wish.html" data-i18n="nav.wish">许愿</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+        <a href="feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br><span data-i18n="footer.daily">AI 日报 · 每天更新</span></div>
+    </div>
   </div>
 </footer>
 
 <script src="lang.js"></script>
+<script src="site.js?v=5"></script>
 </body>
 </html>

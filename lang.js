@@ -1,28 +1,62 @@
 // 极简双语：中文写在 HTML 里，英文放这张表。
 // <span data-i18n="key">中文</span> → 切换时替换成英文。
 // 表里缺的键会保持中文（说明那段还没翻）。
+// 日报正文只做中文：首页/归档里的日报内容不参与切换，页面外壳参与。
 
 const I18N = {
   en: {
+    "nav.daily": "Daily",
     "nav.tools": "Tools",
+    "nav.archive": "Archive",
     "nav.wish": "Wish",
+    "nav.theme": "Theme",
     "footer.privacy": "Privacy",
+    "footer.tagline": "Small tools, made by one person.",
+    "footer.daily": "AI Daily · updated whenever there is news",
+    "footer.built": "Static site · built with DeepSeek Harness",
 
-    "home.h1": "I build the tool<br>you wish existed.",
-    "home.panel.tools": "Ready to use",
-    "home.panel.wish": "Tell me what you want",
+    "home.lead": "Today's lead",
+    "home.readall": "Read the full issue",
+    "home.latest": "Latest issues",
+    "home.archive": "All issues",
+    "home.tools": "Tools already built",
+    "home.tools.all": "All tools",
+    "home.tools.deck": "Two small macOS tools. Both work locally first.",
+    "home.zhonly": "The daily brief is in Chinese for now.",
 
-    "tools.title": "Ready to use",
+    "tools.title": "Tools",
+    "tools.deck": "A small, growing shelf. Tabs are for the categories that already have something in them.",
+    "tools.tab.all": "All",
+    "tools.tab.listen": "Listening",
+    "tools.tab.read": "Reading",
+    "tools.tab.wish": "Wish",
+    "tools.empty": "Nothing in this tab yet.",
+    "tools.count": "items",
     "tools.hark.name": "Hark",
-    "tools.hark": "Live captions for online lectures, transcript when class ends.",
+    "tools.hark": "Live captions for online lectures. A timestamped transcript when class ends.",
+    "tools.hark.cat": "Listening",
     "tools.snipread.name": "SnipRead",
-    "tools.snipread": "Box text on a scanned PDF. Annotate, note, shelve.",
-    "tools.wish": "Nothing yet. You decide →",
+    "tools.snipread": "Box text on a scanned PDF. Highlight, annotate, note, shelve.",
+    "tools.snipread.cat": "Reading",
+    "tools.wish": "Nothing yet. You decide",
+    "tools.wish.sub": "Tell me what to build next",
+    "tools.wish.cta": "Not here yet? Say the word",
+    "tools.wish.note": "No account, and nothing is sent until you send it.",
+    "tools.view": "Open",
 
     "meta.internal": "Testing",
     "meta.testflight": "TestFlight",
+    "meta.macos": "macOS",
+    "meta.free": "Free",
+    "meta.beta": "Beta",
+
+    "archive.title": "Archive",
+    "archive.deck": "Every issue of the AI Daily, newest first. Each one covers a strict 24-hour window.",
+    "archive.empty": "No issues yet.",
+    "archive.read": "Read",
 
     "wish.title": "What should it do?",
+    "wish.deck": "A tool starts with one concrete annoyance. Tell me yours.",
     "wish.q1": "What should it do for you?",
     "wish.q1.ph": "e.g. pull the key points out of a lecture and turn them into a list.",
     "wish.q2": "How do you cope today?",
@@ -52,7 +86,7 @@ const I18N = {
     "site.privacy.sub": "This is the privacy note for <strong>this website</strong>, not for an app.",
     "site.privacy.apps": "For each app's privacy policy, see that app's page:",
     "site.privacy.p1": "This site is a set of static pages. It has no account, no analytics, no ads, and no tracking scripts.",
-    "site.privacy.p2": "No cookies. The only thing stored in your browser is your language choice (localStorage). Clear your browser data and it's gone.",
+    "site.privacy.p2": "No cookies. The only things stored in your browser are your language and theme choices (localStorage). Clear your browser data and they're gone.",
     "site.privacy.p3": "The wish form does not send anything by itself. It opens your mail app with the text filled in — you decide whether to send it.",
     "site.privacy.p4": "The site is served by Cloudflare, which keeps standard access logs for security and abuse prevention.",
     "site.privacy.p5": "For privacy of each app, see the page of that app.",
@@ -66,10 +100,13 @@ const I18N = {
 
 (function () {
   const KEY = "kaixinguor.lang";
+  const titleZh = document.title;
+  const titleEn = document.documentElement.getAttribute("data-title-en") || "";
 
   function apply(lang) {
     const en = lang === "en";
     document.documentElement.lang = en ? "en" : "zh-CN";
+    if (titleEn) document.title = en ? titleEn : titleZh;
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       if (!el.dataset.zh) el.dataset.zh = el.innerHTML;

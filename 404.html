@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-title-en="Page not found · kaixinguor">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>页面不存在 · kaixinguor</title>
+<meta name="description" content="这页不存在。">
+<meta name="theme-color" content="#f7f3ed">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v=5">
 <script>
-/* 在渲染前就定好语言，避免先闪中文再变英文 */
 (function () {
   try {
-    var l = localStorage.getItem("kaixinguor.lang") || "zh";
-    var en = l === "en";
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+(function () {
+  try {
+    var en = (localStorage.getItem("kaixinguor.lang") || "zh") === "en";
     document.documentElement.lang = en ? "en" : "zh-CN";
     if (en) {
       document.documentElement.setAttribute("data-pending", "1");
@@ -24,20 +33,24 @@
 </script>
 <style>html[data-pending] body{visibility:hidden!important}</style>
 </head>
-<body>
+<body class="product-page">
+<a class="skip" href="#main">跳到正文</a>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/">kaixinguor</a>
     <nav class="top">
+      <a href="/" data-i18n="nav.daily">日报</a>
       <a href="/tools.html" data-i18n="nav.tools">工具</a>
+      <a href="/archive.html" data-i18n="nav.archive">归档</a>
       <a href="/wish.html" data-i18n="nav.wish">许愿</a>
       <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main id="main" class="wrap">
   <div class="hero">
     <p class="eyebrow">404</p>
     <h1 data-i18n="e404.title">这页不存在。</h1>
@@ -48,11 +61,25 @@
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 kaixinguor</span>
-    <a href="/privacy.html" data-i18n="footer.privacy">隐私</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p data-i18n="footer.tagline">一个人做的小工具。从许愿到交付。</p>
+      </div>
+      <div class="foot-links">
+        <a href="/" data-i18n="nav.daily">日报</a>
+        <a href="/tools.html" data-i18n="nav.tools">工具</a>
+        <a href="/archive.html" data-i18n="nav.archive">归档</a>
+        <a href="/wish.html" data-i18n="nav.wish">许愿</a>
+        <a href="/privacy.html" data-i18n="footer.privacy">隐私</a>
+        <a href="/feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br><span data-i18n="footer.daily">AI 日报 · 每天更新</span></div>
+    </div>
   </div>
 </footer>
 
 <script src="/lang.js"></script>
+<script src="/site.js?v=5"></script>
 </body>
 </html>
