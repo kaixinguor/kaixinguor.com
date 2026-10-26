@@ -51,6 +51,7 @@ const I18N = {
     "meta.beta": "Beta",
 
     "archive.title": "Archive",
+    "archive.label": "Issues",
     "archive.deck": "Every issue of the AI Daily, newest first. Each one covers a strict 24-hour window.",
     "archive.empty": "No issues yet.",
     "archive.read": "Read",

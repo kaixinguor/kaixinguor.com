@@ -454,23 +454,7 @@ ${headCards}
     </section>`;
 }
 
-function issueRow(issue) {
-  return `      <li>
-        <a class="issue-row" href="daily/${issue.dateISO}.html">
-          <span class="issue-no">${escapeHtml(issue.issueLabel || "AI 日报")}</span>
-          <span class="issue-date">${escapeHtml(issue.dateDot)} <em>${escapeHtml(issue.weekday)}</em></span>
-          <span class="issue-head">${escapeHtml(issue.headline)}</span>
-          <span class="issue-meta">${issue.count} 条</span>
-          <span class="issue-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>`;
-}
-
-export function renderLatest(issues, limit = 3) {
-  return issues.slice(0, limit).map(issueRow).join("\n");
-}
-
-export function renderArchive(issues) {
+export function renderArchiveSidebar(issues) {
   if (!issues.length) {
     return `      <p class="archive-empty" data-i18n="archive.empty">还没有往期。</p>`;
   }
@@ -483,17 +467,19 @@ export function renderArchive(issues) {
     }
     current.items.push(issue);
   }
-  return groups.map((group) => `      <div class="archive-month">${escapeHtml(group.label)}</div>
-${group.items.map((issue) => `      <a class="issue-row" href="daily/${issue.dateISO}.html">
-        <span class="issue-no">${escapeHtml(issue.issueLabel || "AI 日报")}</span>
-        <span class="issue-date">${escapeHtml(issue.dateDot)} <em>${escapeHtml(issue.weekday)}</em></span>
-        <span class="issue-head">${escapeHtml(issue.headline)}</span>
-        <span class="issue-meta">${issue.count} 条 · ${issue.readMinutes} 分钟</span>
-        <span class="issue-arrow" aria-hidden="true">→</span>
-      </a>`).join("\n")}`).join("\n");
-}
 
-/* 归档页的行是 <a>，不能套在 <li> 里；上面的 issueRow 只给首页用。 */
+  return groups.map((group, gi) => {
+    const open = gi === 0 ? " open" : "";
+    const links = group.items.map((issue, i) => `        <a class="archive-link${gi === 0 && i === 0 ? " is-current" : ""}" href="daily/${issue.dateISO}.html" title="${escapeHtml(issue.headline)}">
+          <span class="a-date">${escapeHtml(issue.dateDot)} <em>${escapeHtml(issue.weekday)}</em></span>
+          <span class="a-head">${escapeHtml(issue.headline)}</span>
+        </a>`).join("\n");
+    return `      <details class="archive-month"${open}>
+        <summary><span>${escapeHtml(group.label)}</span><span class="am-count">${String(group.items.length).padStart(2, "0")}</span></summary>
+${links}
+      </details>`;
+  }).join("\n");
+}
 
 export function renderFeed(issues, siteUrl = "https://kaixinguor.com") {
   const items = issues.slice(0, 20).map((issue) => {
@@ -530,7 +516,6 @@ export function renderSitemap(issues, siteUrl = "https://kaixinguor.com") {
   const latest = issues[0] ? issues[0].dateISO : "2026-10-26";
   const staticPages = [
     ["/", "1.0", latest],
-    ["/archive.html", "0.9", latest],
     ["/tools.html", "0.9", latest],
     ["/hark/", "0.8", "2026-10-24"],
     ["/snipread/", "0.8", "2026-10-24"],

@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI 日报 · kaixinguor</title>
-<meta name="description" content="每天一份严格 24 小时窗口的 AI 日报，外加两个 macOS 小工具。">
+<meta name="description" content="每天一份严格 24 小时窗口的 AI 日报。往期在首页侧栏，工具在导航里。">
 <meta property="og:title" content="AI 日报 · kaixinguor">
-<meta property="og:description" content="每天一份严格 24 小时窗口的 AI 日报，外加两个 macOS 小工具。">
+<meta property="og:description" content="每天一份严格 24 小时窗口的 AI 日报。往期在首页侧栏，工具在导航里。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kaixinguor.com/">
 <meta name="theme-color" content="#f7f3ed">
@@ -49,7 +49,7 @@
     <nav class="top">
       <a href="index.html" aria-current="page" data-i18n="nav.daily">日报</a>
       <a href="tools.html" data-i18n="nav.tools">工具</a>
-      <a href="archive.html" data-i18n="nav.archive">归档</a>
+      <a href="#archive" data-i18n="nav.archive">归档</a>
       <a href="wish.html" data-i18n="nav.wish">许愿</a>
       <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
       <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
@@ -60,9 +60,33 @@
 <main id="main">
 
   <section class="today">
-    <div class="wrap">
-      <p class="faint" data-zh-only hidden style="padding-top:18px;margin:0">The daily brief is in Chinese for now.</p>
-      <!-- TODAY:START -->
+    <div class="wrap home-layout">
+
+      <details class="archive-rail" id="archive" data-archive-rail open>
+        <summary class="archive-rail-head">
+          <span class="kicker">
+            <span class="zh">ARCHIVE</span>
+            <span class="sep"></span>
+            <span data-i18n="archive.label">往期</span>
+          </span>
+          <span class="archive-chev" aria-hidden="true"></span>
+        </summary>
+        <div class="archive-rail-body">
+          <!-- ARCHIVE_SIDEBAR:START -->
+      <details class="archive-month" open>
+        <summary><span>2026 年 10 月</span><span class="am-count">01</span></summary>
+        <a class="archive-link is-current" href="daily/2026-10-26.html" title="谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”">
+          <span class="a-date">2026.10.26 <em>MON</em></span>
+          <span class="a-head">谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”</span>
+        </a>
+      </details>
+<!-- ARCHIVE_SIDEBAR:END -->
+        </div>
+      </details>
+
+      <div class="home-main">
+        <p class="faint" data-zh-only hidden style="padding-top:18px;margin:0">The daily brief is in Chinese for now.</p>
+        <!-- TODAY:START -->
     <header class="masthead">
       <div class="kicker">
         <span class="zh">AI 日报</span>
@@ -152,58 +176,8 @@
       </div>
     </section>
 <!-- TODAY:END -->
-    </div>
-  </section>
+      </div>
 
-  <section class="latest wrap" aria-labelledby="latest-title">
-    <div class="chead">
-      <span class="cnum">01</span>
-      <h2 id="latest-title" data-i18n="home.latest">最新三期</h2>
-      <span class="cen">Latest</span>
-      <span class="crule"></span>
-      <a class="chead-link" href="archive.html" data-i18n="home.archive">全部归档 →</a>
-    </div>
-    <ol class="issue-list">
-      <!-- LATEST:START -->
-      <li>
-        <a class="issue-row" href="daily/2026-10-26.html">
-          <span class="issue-no">第 001 期</span>
-          <span class="issue-date">2026.10.26 <em>MON</em></span>
-          <span class="issue-head">谷歌开源 Harness²：不动权重，让智能体自己改自己的“外壳”</span>
-          <span class="issue-meta">9 条</span>
-          <span class="issue-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-<!-- LATEST:END -->
-    </ol>
-  </section>
-
-  <section class="tools-teaser wrap" aria-labelledby="tools-title">
-    <div class="chead">
-      <span class="cnum">02</span>
-      <h2 id="tools-title" data-i18n="home.tools">已经做好的工具</h2>
-      <span class="cen">Tools</span>
-      <span class="crule"></span>
-      <a class="chead-link" href="tools.html" data-i18n="home.tools.all">全部工具 →</a>
-    </div>
-    <p class="faint" style="margin:-6px 0 18px" data-i18n="home.tools.deck">两个 macOS 小工具，都先在本机把事办完。</p>
-    <div class="teaser-grid">
-      <a class="teaser-card" data-c="listen" href="hark/index.html">
-        <img src="assets/hark-icon.png" alt="课堂字幕">
-        <div>
-          <div class="t-name" data-i18n="tools.hark.name">课堂字幕</div>
-          <div class="t-line" data-i18n="tools.hark">网课边听边出字幕，下课自动成稿。</div>
-        </div>
-        <span class="t-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="teaser-card" data-c="read" href="snipread/index.html">
-        <img src="assets/snipread-icon.png" alt="摘读">
-        <div>
-          <div class="t-name" data-i18n="tools.snipread.name">摘读</div>
-          <div class="t-line" data-i18n="tools.snipread">扫描版 PDF 框选识字，批注、笔记、书架。</div>
-        </div>
-        <span class="t-arrow" aria-hidden="true">→</span>
-      </a>
     </div>
   </section>
 
@@ -219,7 +193,7 @@
       <div class="foot-links">
         <a href="index.html" data-i18n="nav.daily">日报</a>
         <a href="tools.html" data-i18n="nav.tools">工具</a>
-        <a href="archive.html" data-i18n="nav.archive">归档</a>
+        <a href="#archive" data-i18n="nav.archive">归档</a>
         <a href="wish.html" data-i18n="nav.wish">许愿</a>
         <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
         <a href="feed.xml">RSS</a>

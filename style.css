@@ -630,6 +630,14 @@ a.card:hover { text-decoration: none; }
 }
 
 /* ---------- 07 首页 ---------- */
+.home-layout {
+  display: grid;
+  grid-template-columns: 216px minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+.home-main { min-width: 0; }
+
 .today { position: relative; z-index: 1; }
 .today .masthead { border-bottom: 0; }
 
@@ -732,161 +740,114 @@ a.card:hover { text-decoration: none; }
   margin: 0;
 }
 
-.latest {
-  position: relative;
-  z-index: 1;
-  margin-top: clamp(46px, 6vw, 66px);
-  padding-top: clamp(26px, 3.5vw, 34px);
+/* 首页左侧的往期侧栏：像目录，可折叠 */
+.archive-rail {
+  position: sticky;
+  top: 74px;
+  align-self: start;
+  margin-top: clamp(30px, 5vw, 52px);
+  padding-top: 13px;
   border-top: 1px solid var(--line);
+  max-height: calc(100vh - 92px);
 }
-
-.issue-list {
-  margin: 0;
-  padding: 0;
+.archive-rail[open] {
+  display: flex;
+  flex-direction: column;
+}
+.archive-rail-head {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
   list-style: none;
-  border-top: 1px solid var(--line);
+  cursor: pointer;
 }
-.issue-row {
-  display: grid;
-  grid-template-columns: auto auto minmax(0, 1fr) auto auto;
+.archive-rail-head::-webkit-details-marker { display: none; }
+.archive-rail-head::marker { content: ""; }
+.archive-rail-head .kicker { font-size: 10px; letter-spacing: .16em; }
+.archive-rail-head .kicker .zh { color: var(--accent); }
+.archive-chev {
+  margin-left: auto;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1;
+}
+.archive-chev::before { content: "−"; }
+.archive-rail:not([open]) .archive-chev::before { content: "＋"; }
+
+.archive-rail-body {
+  min-height: 0;
+  padding-top: 2px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.archive-month { margin: 0; }
+.archive-month > summary {
+  display: flex;
   align-items: baseline;
-  gap: 8px clamp(12px, 2.4vw, 24px);
-  padding: 16px 4px;
-  border-bottom: 1px solid var(--line-soft);
-  color: inherit;
-  transition: background .16s ease, padding-left .16s ease;
-}
-.issue-row:hover {
-  padding-left: 10px;
-  background: var(--tint);
-  text-decoration: none;
-}
-.issue-no {
-  color: var(--accent);
+  gap: .4rem;
+  padding: 10px 0 6px;
+  list-style: none;
+  cursor: pointer;
+  color: var(--muted);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: .1em;
-  white-space: nowrap;
 }
-.issue-date {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.02rem;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
+.archive-month > summary::-webkit-details-marker { display: none; }
+.archive-month > summary::marker { content: ""; }
+.archive-month > summary::before {
+  content: "›";
+  display: inline-block;
+  color: var(--muted);
+  transition: transform .18s ease;
 }
-.issue-date em {
-  margin-left: .42em;
+.archive-month[open] > summary::before { transform: rotate(90deg); }
+.archive-month .am-count {
+  margin-left: auto;
+  color: var(--accent);
+  font-size: 9.5px;
+}
+.archive-link {
+  display: block;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line-soft);
+  color: inherit;
+}
+.archive-link:hover { text-decoration: none; }
+.archive-link .a-date {
+  display: block;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: .68em;
-  font-style: normal;
-  letter-spacing: .14em;
+  font-size: 9.5px;
+  letter-spacing: .06em;
 }
-.issue-head {
-  min-width: 0;
+.archive-link .a-date em {
+  margin-left: .3em;
+  color: var(--muted);
+  font-style: normal;
+  letter-spacing: .12em;
+}
+.archive-link .a-head {
+  display: -webkit-box;
+  margin-top: 3px;
   overflow: hidden;
   color: var(--ink-2);
   font-family: var(--serif);
-  font-size: .98rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: .92rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
-.issue-meta {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: .08em;
-  white-space: nowrap;
-}
-.issue-arrow { color: var(--muted); font-size: 14px; }
-.issue-row:hover .issue-arrow { color: var(--accent); }
-
-.tools-teaser {
-  position: relative;
-  z-index: 1;
-  margin-top: clamp(46px, 6vw, 66px);
-  padding-top: clamp(26px, 3.5vw, 34px);
-  border-top: 1px solid var(--line);
-}
-.tools-teaser .chead { margin-bottom: 18px; }
-.teaser-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-.teaser-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 18px 20px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper-2);
-  color: inherit;
-  transition: transform .2s ease, border-color .2s ease;
-}
-.teaser-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--c);
-  opacity: .55;
-}
-.teaser-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--line-soft);
-  text-decoration: none;
-}
-.teaser-card img {
-  width: 44px;
-  height: 44px;
-  flex: none;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-}
-.teaser-card .t-name {
-  font-family: var(--serif);
-  font-size: 1.08rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-.teaser-card .t-line {
+.archive-link:hover .a-head { color: var(--ink); }
+.archive-link.is-current .a-date { color: var(--accent); }
+.archive-link.is-current .a-date em { color: var(--accent); }
+.archive-empty {
+  padding: 14px 0;
   color: var(--muted);
   font-size: .86rem;
-  line-height: 1.55;
-}
-.teaser-card .t-arrow { margin-left: auto; color: var(--accent); }
-
-/* ---------- 08 归档 ---------- */
-.archive-body { padding-top: 26px; padding-bottom: 8px; }
-.archive-list { border-top: 1px solid var(--line); }
-.archive-month {
-  display: flex;
-  align-items: baseline;
-  gap: .8rem;
-  margin: 30px 0 0;
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-}
-.archive-month::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, var(--line), transparent);
-}
-.archive-empty {
-  padding: 26px 0;
-  color: var(--muted);
-  font-size: .95rem;
 }
 
 /* ---------- 09 工具页（标签） ---------- */
@@ -1343,6 +1304,24 @@ a.card:hover { text-decoration: none; }
 
 html[data-pending] body { visibility: hidden; }
 
+@media (max-width: 1120px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .archive-rail {
+    position: static;
+    margin-top: 18px;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    max-height: none;
+  }
+  .archive-rail[open] { max-height: none; }
+  .archive-rail-body { max-height: 46vh; }
+  .home-main .masthead { padding-top: clamp(26px, 4.5vw, 40px); }
+}
+
 @media (max-width: 900px) {
   .head-lead {
     grid-template-columns: 1fr;
@@ -1368,21 +1347,7 @@ html[data-pending] body { visibility: hidden; }
   }
   .head-grid { grid-template-columns: 1fr; }
   .head-lead { grid-column: auto; }
-  .teaser-grid { grid-template-columns: 1fr; }
   .tool-grid { grid-template-columns: 1fr; }
-  .issue-row {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    row-gap: 4px;
-  }
-  .issue-no { grid-column: 1; grid-row: 1; }
-  .issue-date { grid-column: 2; grid-row: 1; }
-  .issue-arrow { grid-column: 3; grid-row: 1; }
-  .issue-head {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    white-space: normal;
-  }
-  .issue-meta { grid-column: 1 / -1; grid-row: 3; }
   footer.site .foot-grid { grid-template-columns: 1fr; }
   .foot-meta { text-align: left; }
 }

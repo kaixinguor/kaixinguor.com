@@ -99,6 +99,37 @@
     });
   });
 
+  /* ---------- 3b. 首页往期侧栏 ---------- */
+  var rail = document.querySelector("[data-archive-rail]");
+  if (rail) {
+    var railMq = window.matchMedia ? window.matchMedia("(max-width: 1120px)") : null;
+    var openArchive = function () { rail.setAttribute("open", ""); };
+    var syncRail = function (e) {
+      if (e.matches) {
+        if (location.hash !== "#archive") rail.removeAttribute("open");
+      } else {
+        openArchive();
+      }
+    };
+
+    // 桌面默认展开，手机默认收起；带 #archive 进来时始终展开。
+    if (railMq && railMq.matches && location.hash !== "#archive") {
+      rail.removeAttribute("open");
+    }
+    if (location.hash === "#archive") openArchive();
+
+    if (railMq) {
+      if (railMq.addEventListener) railMq.addEventListener("change", syncRail);
+      else if (railMq.addListener) railMq.addListener(syncRail);
+    }
+    window.addEventListener("hashchange", function () {
+      if (location.hash === "#archive") openArchive();
+    });
+    document.querySelectorAll('a[href="#archive"]').forEach(function (a) {
+      a.addEventListener("click", openArchive);
+    });
+  }
+
   /* ---------- 4. 工具页标签筛选 ---------- */
   var tablist = document.querySelector("[data-tool-tabs]");
   if (tablist) {

@@ -138,7 +138,7 @@ if (build.status !== 0) {
 if (flags.has("--push")) {
   const branch = (git(["rev-parse", "--abbrev-ref", "HEAD"]).stdout || "main").trim();
   // 只提交这一期相关的产物，避免把工作区里别的改动一起带走
-  const add = run("git", ["add", "daily", "index.html", "archive.html", "feed.xml", "sitemap.xml"]);
+  const add = run("git", ["add", "daily", "index.html", "feed.xml", "sitemap.xml"]);
   if (add.status !== 0) process.exit(add.status || 1);
 
   const staged = git(["diff", "--cached", "--quiet"]);

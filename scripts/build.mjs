@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 /* 由 daily/*.html 生成：
-   - index.html 的「今日日报」区与「最新三期」
-   - archive.html 的往期列表
+   - index.html 的「今日日报」区与「往期侧栏」
    - feed.xml（RSS）
    - sitemap.xml（含所有往期）
    不依赖任何第三方包。
@@ -17,8 +16,7 @@ import { fileURLToPath } from "node:url";
 import {
   readIssues,
   renderHomeToday,
-  renderLatest,
-  renderArchive,
+  renderArchiveSidebar,
   renderFeed,
   renderSitemap,
   applyMarkers,
@@ -28,7 +26,6 @@ import {
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DAILY_DIR = path.join(ROOT, "daily");
 const INDEX = path.join(ROOT, "index.html");
-const ARCHIVE = path.join(ROOT, "archive.html");
 const FEED = path.join(ROOT, "feed.xml");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const CHECK = process.argv.includes("--check");
@@ -70,22 +67,17 @@ const warnings = issues.flatMap(validate);
 
 const latest = issues[0];
 const today = renderHomeToday(latest);
-const latestList = renderLatest(issues, 3);
-const archiveList = renderArchive(issues);
+const archiveSidebar = renderArchiveSidebar(issues);
 const feed = renderFeed(issues);
 const sitemap = renderSitemap(issues);
 
 const indexHtml = applyMarkers(fs.readFileSync(INDEX, "utf8"), {
   TODAY: today,
-  LATEST: latestList
-});
-const archiveHtml = applyMarkers(fs.readFileSync(ARCHIVE, "utf8"), {
-  ARCHIVE: archiveList
+  ARCHIVE_SIDEBAR: archiveSidebar
 });
 
 const outputs = [
   [INDEX, indexHtml],
-  [ARCHIVE, archiveHtml],
   [FEED, feed],
   [SITEMAP, sitemap]
 ];
@@ -123,5 +115,5 @@ if (!QUIET) {
   console.log(`  最新：${latest.dateISO} ${latest.weekday} · ${latest.count} 条 · ${latest.issueLabel || "—"}`);
   console.log(`  头条：${latest.headline}`);
   console.log(changed.length ? `\n✓ 已更新：${changed.join("、")}` : "\n✓ 所有生成文件已是最新");
-  console.log("  首页 index.html / 归档 archive.html / feed.xml / sitemap.xml\n");
+  console.log("  首页 index.html / feed.xml / sitemap.xml\n");
 }
