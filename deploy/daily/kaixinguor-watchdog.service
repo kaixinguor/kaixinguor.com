@@ -1,0 +1,15 @@
+[Unit]
+Description=Kaixinguor AI Daily watchdog (checks today's issue)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=kaixinguor
+Group=kaixinguor
+Environment=TZ=Asia/Shanghai
+Environment=SITE_DIR=/opt/kaixinguor/site
+Environment=STATE_DIR=/var/lib/kaixinguor
+Environment=NOTIFY=/opt/kaixinguor/bin/notify.sh
+ExecStart=/opt/kaixinguor/bin/watchdog.sh
+TimeoutStartSec=1200

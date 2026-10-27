@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Kaixinguor AI Daily watchdog daily at 10:30 Asia/Shanghai
+
+[Timer]
+OnCalendar=*-*-* 10:30:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=kaixinguor-watchdog.service
+
+[Install]
+WantedBy=timers.target

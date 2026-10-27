@@ -100,6 +100,8 @@ npm run stage          # dist/site/
 
 完整方案（含 GitHub Actions、自有服务器 rsync / cron、nginx、RSS）见 [`docs/自动化与部署.md`](docs/自动化与部署.md)。
 
+每日 09:00 自动生成并发布（Ubuntu + DSH 定时任务、开机补跑、手机通知）见 [`docs/每日定时任务.md`](docs/每日定时任务.md)。
+
 ---
 
 ## 这次改版的几个决定

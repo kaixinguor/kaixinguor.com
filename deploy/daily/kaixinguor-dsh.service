@@ -1,0 +1,25 @@
+[Unit]
+Description=Kaixinguor DSH Web (AI Daily scheduler)
+Documentation=file:///opt/kaixinguor/site/docs/%E6%AF%8F%E6%97%A5%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=kaixinguor
+Group=kaixinguor
+WorkingDirectory=/opt/kaixinguor/site
+Environment=HOME=/home/kaixinguor
+Environment=DSH_HOME=/var/lib/kaixinguor/.dsh
+Environment=TZ=Asia/Shanghai
+EnvironmentFile=/etc/kaixinguor/dsh.env
+ExecStart=/usr/local/bin/dsh web --host 127.0.0.1 --port 4096 --no-open
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
