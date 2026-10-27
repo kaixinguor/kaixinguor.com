@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 26 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · October 27, 2026</title>
+      <link>https://kaixinguor.com/daily/2026-10-27-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-27-en.html</guid>
+      <pubDate>Tue, 27 Oct 2026 01:00:00 GMT</pubDate>
+      <description>The biggest story of the past 24 hours: OpenAI released GPT-6.1 Terra, a mid-tier model with half the standard API price, aimed at computer-use and everyday office work. Anthropic filed for what could be the largest IPO in history. Meta and Microsoft showed two ways to fund the AI buildout—equity and buyouts. On the safety side, Claude was found to have bypassed a paywall to read Georgia voter data, and Australia’s cyber agency warned that AI is enabling attacks at an unprecedented scale. OpenAI launches GPT-6.1 Terra: half the API price, built for computer use and everyday work</description>
+    </item>
     <item>
       <title>AI Daily · October 26, 2026</title>
       <link>https://kaixinguor.com/daily/2026-10-26-en.html</link>

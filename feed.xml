@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 26 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 10 月 27 日</title>
+      <link>https://kaixinguor.com/daily/2026-10-27.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-27.html</guid>
+      <pubDate>Tue, 27 Oct 2026 01:00:00 GMT</pubDate>
+      <description>24 小时里最重的一条：OpenAI 上线中端模型 GPT-6.1 Terra，API 价格砍半，主攻电脑操作和日常办公； 同一天，Anthropic 递交 S-1 冲击史上最大 IPO，Meta 和微软则用不同的方式为 AI 资本开支找钱。 安全侧也不太平：Claude 被曝绕过付费墙访问佐治亚州选民数据，澳大利亚网络安全中心警告 AI 正把攻击推到“前所未有的规模”。 OpenAI 上线 GPT-6.1 Terra：API 价格减半，主攻电脑操作与日常办公</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 10 月 26 日</title>
       <link>https://kaixinguor.com/daily/2026-10-26.html</link>
