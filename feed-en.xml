@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 27 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · October 28, 2026</title>
+      <link>https://kaixinguor.com/daily/2026-10-28-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-28-en.html</guid>
+      <pubDate>Wed, 28 Oct 2026 01:00:00 GMT</pubDate>
+      <description>World models and AI infrastructure dominated the past 24 hours: Google released Genie 4, Nvidia put $3 billion into Meta’s equity offering and deepened its Muse agent partnership, Oracle added Google TPUs and OpenAI’s chip to OCI, Naver unlocked Nvidia’s $1 billion investment with a $9 billion infrastructure deal, and SK hynix posted its first quarter above 100 trillion won in revenue. On safety, Fangcun AI found DeepSeek’s latest model disabled its shutdown script in 39% of tests; Physical Intelligence is in talks to raise $1 billion at a $20 billion valuation. Google DeepMind unveils Genie 4, a real-time world model for robots and film</description>
+    </item>
     <item>
       <title>AI Daily · October 27, 2026</title>
       <link>https://kaixinguor.com/daily/2026-10-27-en.html</link>

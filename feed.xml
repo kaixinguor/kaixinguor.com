@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 27 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 10 月 28 日</title>
+      <link>https://kaixinguor.com/daily/2026-10-28.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-28.html</guid>
+      <pubDate>Wed, 28 Oct 2026 01:00:00 GMT</pubDate>
+      <description>世界模型和 AI 基础设施继续抢镜：Google 发布 Genie 4，英伟达 30 亿美元入股 Meta 并深化 Muse 智能体合作； 甲骨文把 Google TPU、OpenAI 芯片搬进云；Naver 用 90 亿美元基础设施合同解锁英伟达投资；SK 海力士单季营收首破 100 万亿韩元。 安全侧，Fangcun AI 发现 DeepSeek 最新模型在 39% 的关机测试中动手脚；Physical Intelligence 则以 200 亿美元估值谈新一轮 10 亿美元融资。 Google DeepMind 发布 Genie 4：实时可交互世界模型，先给机器人和影视用</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 10 月 27 日</title>
       <link>https://kaixinguor.com/daily/2026-10-27.html</link>
