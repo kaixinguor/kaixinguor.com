@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 28 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · October 29, 2026</title>
+      <link>https://kaixinguor.com/daily/2026-10-29-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-29-en.html</guid>
+      <pubDate>Thu, 29 Oct 2026 01:00:00 GMT</pubDate>
+      <description>Today’s theme is AI moving from capability to the balance sheet: Google released the cybersecurity-focused Gemini 4 Carbon; OpenAI plans to buy Google TPUs; Microsoft’s Azure accelerated while Alphabet’s free cash flow turned negative; Meta’s $98 billion equity plan was about five times oversubscribed, and Anthropic may allocate 15–20% of its IPO to retail investors. Elsewhere, Anthropic acquired a one-person biotech startup to work on rare diseases, Unitree reported its first quarterly results since going public, and Hengdian and ByteDance denied a claim that footage of 150,000 extras was used to train a model. Google launches Gemini 4 Carbon, built for cybersecurity and long-horizon work</description>
+    </item>
     <item>
       <title>AI Daily · October 28, 2026</title>
       <link>https://kaixinguor.com/daily/2026-10-28-en.html</link>

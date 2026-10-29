@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · October 29, 2026</title>
+<meta name="description" content="AI Daily for 2026-10-29: a 24-hour window (Oct 28, 09:24 – Oct 29, 09:24 UTC+8), 8 items across Gemini 4 Carbon, OpenAI’s TPU plans, AI capex, Anthropic’s drug work and Unitree’s earnings.">
+<meta property="og:title" content="AI Daily · October 29, 2026">
+<meta property="og:description" content="AI Daily for 2026-10-29: a 24-hour window (Oct 28, 09:24 – Oct 29, 09:24 UTC+8), 8 items across Gemini 4 Carbon, OpenAI’s TPU plans, AI capex, Anthropic’s drug work and Unitree’s earnings.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily/2026-10-29-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/daily/2026-10-29-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily/2026-10-29.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily/2026-10-29-en.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily (Chinese)" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily (English)" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=6">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-10-29.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 004</span>
+    </div>
+    <h1 class="date">October 29, 2026<span class="weekday">THU</span></h1>
+    <p class="deck">Today’s theme is AI moving from capability to the balance sheet: Google released the cybersecurity-focused <em>Gemini 4 Carbon</em>; OpenAI plans to buy Google TPUs;
+      Microsoft’s Azure accelerated while Alphabet’s free cash flow turned negative; Meta’s $98 billion equity plan was about five times oversubscribed, and Anthropic may allocate 15–20% of its IPO to retail investors.
+      Elsewhere, Anthropic acquired a one-person biotech startup to work on rare diseases, Unitree reported its first quarterly results since going public, and Hengdian and ByteDance denied a claim that footage of 150,000 extras was used to train a model.</p>
+    <div class="metabar"><span class="pill">Issue 004</span>
+      <span class="dot"></span>
+      <span>Window Oct 28, 09:24 – Oct 29, 09:24 (UTC+8)</span>
+      <span class="dot"></span>
+      <span>8 items</span>
+      <span class="dot"></span>
+      <span>8 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>Models &amp; Capabilities</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Google releases Gemini 4 Carbon.</b> It is positioned for long-horizon tasks and cybersecurity; Google says it ranks first on the Artificial Analysis Intelligence Index v5.0 with a score of 59 and scores 88.2% on SEC-bench Pro for finding vulnerabilities. It is opening first to cyber defenders.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>OpenAI plans to buy Google TPUs.</b> The Information reported the plan without terms; OpenAI put its frontier models on Google Cloud just last week. OpenAI remains one of Nvidia’s largest GPU buyers.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Microsoft and Alphabet diverge.</b> Azure revenue grew 48% and Microsoft’s free cash flow stayed positive; Alphabet’s free cash flow was -$9.07 billion and its shares fell more than 10%. The market is now grading AI capex by cash flow.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Models &amp; Capabilities</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28</span>
+          <a class="src" href="https://f.aa.com.tr/en/world/us-tech-giant-google-unveils-gemini-4-carbon-ai-model/4104265" target="_blank" rel="noopener noreferrer">Anadolu Agency ↗</a>
+        </div>
+        <h3>Google launches Gemini 4 Carbon, built for cybersecurity and long-horizon work</h3>
+        <p>Google released Gemini 4 Carbon on October 28, just two weeks after Gemini 4 Argon. Google calls it its strongest frontier model, with gains in coding, autonomous agent tasks and cybersecurity defense. It says Carbon ranks first on the updated Artificial Analysis Intelligence Index v5.0 with a score of 59 and jumped 89 points to fourth place on the WebDev Arena leaderboard.</p>
+        <p>Cybersecurity is the headline use case: Google says Carbon scores 88.2% on SEC-bench Pro for finding vulnerabilities, 54.8% on ExploitGym for exploitation and 71% on CWE-bench for patching. In internal tests, it cut unsupported claims by about half versus Argon, reduced task overreach by 26% and under-service by 29% in multi-step workflows. Carbon opens first to cybersecurity defenders this week, then to developers, businesses and consumers.</p>
+        <p>Google is offering introductory pricing of $2 per million input tokens and $10 per million output tokens, with cached input discounted by 95%; standard pricing later rises to $4 per million input and $20 per million output.</p>
+        <p class="why"><b>Why it matters</b>A “best cybersecurity model” is inherently dual-use: the same vulnerability-finding ability can defend or attack. Opening first to defenders buys a safety window, but an 88.2% vulnerability-detection score also means attackers getting equivalent capability is only a matter of time.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">Products</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 18:21</span>
+          <a class="src" href="https://finance.sina.com.cn/roll/2026-10-28/doc-iniwuqvx5923454.shtml" target="_blank" rel="noopener noreferrer">Shanghai Securities News ↗</a>
+        </div>
+        <h3>Hengdian and ByteDance deny claim that 150,000 extras’ data trained a model</h3>
+        <p>Responding to a viral claim that Hengdian and ByteDance were feeding the likenesses and voices of 150,000 extras into a ByteDance model, Doubao PR head Liu Xing said on October 28 that the claim was “seriously false.” He said the project in question is the Hengdian Film and TV AI Service Platform, which aims to build public digital infrastructure for the industry: turning real filming locations and other assets into high-quality datasets to help crews scout, prepare and shoot more efficiently, and to lower the barrier to AI for smaller studios.</p>
+        <p>Liu clarified three points: Volcano Engine is only a technology provider, and all data assets belong to Hengdian or authorized parties; any use of a person’s likeness or voice requires that person’s authorization, and there is no unauthorized collection; and the data collected by the project will not be used to train ByteDance’s large models. Public records show the project is at the bidding stage and will cover film-industry datasets and supporting technology platforms.</p>
+        <p class="why"><b>Why it matters</b>This is a textbook data-consent controversy: the public worry is not whether AI can help film production, but whether their faces and voices become training data without their knowledge. Clearly answering “who owns the data, where is consent, and is it used for training?” builds more trust than a bare denial.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 14:14</span>
+          <a class="src" href="https://www.digitaltoday.co.kr/en/view/120783/anthropic-acquires-one-person-bio-startup-to-step-up-rare-disease-drug-research" target="_blank" rel="noopener noreferrer">DigitalToday ↗</a>
+        </div>
+        <h3>Anthropic buys one-person biotech Mithril and pushes into rare-disease drugs with Claude</h3>
+        <p>Anthropic has acquired Mithril Medicine, a biotech startup with only one full-time employee, founder Cody Tranbarger, and is moving into rare-disease drug development. Tranbarger used Claude to manage contracts with 11 external research institutions, experiment schedules, logistics and data analysis, advancing two rare muscular disease programs to animal testing in under 18 months.</p>
+        <p>The team developed a bispecific antibody designed to restore the connection between muscle fibers and surrounding tissue. After six weeks of treatment in mice with a LAMA2-related disease, some groups had about twice the grip strength and muscle strength of controls; survival improved but did not return to normal. Claude also analyzed 341 pages of manufacturing data on 113 candidate antibodies and classified them in under eight minutes.</p>
+        <p>Errors happened too: Claude-written emails misrecorded antibody quantities, and at least three were sent to outside institutions even after human review. Anthropic calls this the first “one-person drug development pipeline”; if candidate validation goes smoothly, human trials could begin as early as the second half of 2028. The results are early animal data, and human safety and efficacy are unproven.</p>
+        <p class="why"><b>Why it matters</b>AI is not inventing the drug here so much as absorbing the contracts, scheduling, logistics and data wrangling that consume a scientist’s time. That can speed early R&amp;D, but three erroneous emails show human review is not a safe deposit box; critical data needs automated checks and an accountable owner.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 20:51</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202610283912455456.html" target="_blank" rel="noopener noreferrer">National Business Daily ↗</a>
+        </div>
+        <h3>Unitree’s first post-IPO quarter: revenue up nearly 70%, profit down 17%, R&amp;D triples</h3>
+        <p>Unitree reported its first quarterly results since listing on the STAR Market on August 19. Q3 revenue was 665 million yuan, up 69.93% year on year; net profit attributable to shareholders was 113 million yuan, down 17.37%; adjusted net profit was 105 million yuan, down 17.42%. For the first nine months, revenue was 1.817 billion yuan, up 55.71%, and net profit was 387 million yuan, up 270.54%.</p>
+        <p>The main drag on profit was R&amp;D: Q3 R&amp;D spending was 127 million yuan, up 249.58%, and the nine-month total was 263 million yuan, up 191.48%, or 14.47% of revenue. Unitree says the money went into embodied large models, compute, hiring and new products. Operating cash flow for the nine months was 194 million yuan, down 54.69%.</p>
+        <p>The same day, Unitree and Sequoia China announced the “Shanyu Venture Program” to invest in early-stage embodied AI, robotics applications and upstream/downstream technology (source: <a href="https://finance.sina.com.cn/roll/2026-10-28/doc-iniwukpw3425656.shtml" target="_blank" rel="noopener noreferrer">Shanghai Securities News</a>).</p>
+        <p class="why"><b>Why it matters</b>Unitree’s revenue is still growing fast, but profit is already paying for the embodied-model bet. R&amp;D tripling and cash flow falling show that the shift from selling hardware to selling intelligence is far from over. The next test is whether orders can cover R&amp;D, not whether the demo moves smoothly.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 10:55</span>
+          <a class="src" href="https://www.stheadline.com/zh-hans/realtime-finance/3630793/OpenAI%e6%8d%ae%e6%8a%a5%e5%90%91Google%e9%87%87%e8%b4%adTPU%e6%99%b6%e7%89%87-%e7%94%b2%e9%aa%a8%e6%96%87%e4%ba%91%e7%ab%af%e6%98%8e%e5%b9%b4%e5%bc%95%e5%85%a5TPU" target="_blank" rel="noopener noreferrer">Sing Tao Headline ↗</a>
+        </div>
+        <h3>OpenAI plans to buy Google TPUs, adding a second compute route beyond Nvidia</h3>
+        <p>The Information reported on October 28 that OpenAI plans to buy Google’s AI chips; financial terms and other details were not disclosed. The move would deepen commercial ties between OpenAI and Google, which compete in AI products and search, but last week OpenAI put its frontier models on Google Cloud.</p>
+        <p>OpenAI is still one of Nvidia’s largest GPU buyers. Reuters reported in June 2025 that OpenAI had begun renting Google’s AI chips. Google’s TPUs are gaining traction as an alternative to Nvidia; Google began selling TPUs directly to some customers this year, and Alphabet expects to recognize a small slice of TPU sales revenue this year, with most coming in 2027.</p>
+        <p class="why"><b>Why it matters</b>OpenAI buying TPUs is not just “one more supplier”; it turns Google from a rival into a compute supplier. For Nvidia, its biggest customer is diversifying; for Google, TPUs become an external business. The lines between model companies, clouds and chipmakers are dissolving.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/29 05:30</span>
+          <a class="src" href="https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
+        </div>
+        <h3>Microsoft’s Azure accelerates, Alphabet’s cash flow turns negative: AI capex enters the cash-flow test</h3>
+        <p>Microsoft’s fiscal Q1 2027 revenue was $92.279 billion, up 19%; Azure revenue was $33.17 billion, up 48%, accelerating from 42% in the prior quarter; net profit was $36.63 billion, up 32%. Free cash flow was $18.63 billion, down 27% but still positive; capex plus finance leases was $45.2 billion, below the $50.67 billion consensus. The stock rose nearly 5% after hours.</p>
+        <p>Alphabet’s Q3 revenue was $127.58 billion, up 25% but below expectations; GAAP EPS was $2.12 and adjusted EPS was $2.67, both below the roughly $3.02 expected; net income fell to $26.17 billion from $34.98 billion a year earlier. Free cash flow was -$9.07 billion, far worse than the -$2.70 billion expected; capex was $51.36 billion, also below expectations. The stock fell more than 10%. Alphabet kept its 2026 capex guidance of $195–205 billion and expects a significant increase above $300 billion in 2027.</p>
+        <p class="why"><b>Why it matters</b>Both are spending heavily on AI, but the market rewarded Microsoft and punished Google: Microsoft’s cloud revenue shows the spending can buy growth, while Alphabet’s negative free cash flow suggests the spending is eating cash first. The valuation question is shifting from “who spends the most?” to “who can spend and still protect cash flow?”</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 14:02</span>
+          <a class="src" href="https://finance.sina.com.cn/roll/2026-10-28/doc-iniwueft3715450.shtml" target="_blank" rel="noopener noreferrer">Global Times ↗</a>
+        </div>
+        <h3>Meta’s $25 billion stock offering draws about five times demand, part of a $98 billion plan</h3>
+        <p>Bloomberg reported on October 28 that Meta completed an expanded $25 billion common-stock offering with demand about five times the deal size. The shares priced at $625, a 2.7% discount to the prior Friday’s close. More than half went to long-term and existing shareholders; the 15 largest investors received about 70%, and industrial investors including AMD participated.</p>
+        <p>The common stock is part of a total equity financing plan of up to about $98 billion, alongside $12.5 billion of mandatory convertible preferred stock and future at-the-market sales. Proceeds will fund AI compute infrastructure and personal-superintelligence research. Despite the strong demand, Meta shares fell as much as 1.4% intraday to $621.47, below the offering price.</p>
+        <p class="why"><b>Why it matters</b>Five-times oversubscription shows institutions still want Meta’s AI story, but a break below the offer price shows the secondary market is less excited. AI infrastructure funding has moved from operating cash flow to equity issuance; the question is whether the money turns into revenue rather than just GPUs and data centers.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 10:19</span>
+          <a class="src" href="https://www.cnbctv18.com/market/anthropic-said-to-pick-jpmorgan-to-lead-ipos-us-retail-offering-20020916.htm" target="_blank" rel="noopener noreferrer">CNBC-TV18 ↗</a>
+        </div>
+        <h3>Anthropic may allocate 15–20% of its IPO to retail investors, with JPMorgan leading US sales</h3>
+        <p>Bloomberg reported that Anthropic has picked JPMorgan to lead US sales to individual investors and is weighing allocating about 15–20% of the IPO shares to retail. JPMorgan CEO Jamie Dimon is expected to join the marketing effort; Citigroup will coordinate the international retail offering. Anthropic’s valuation is expected at $1.4–1.75 trillion, and the IPO could raise up to $100 billion.</p>
+        <p>JPMorgan previously led retail orders for SpaceX’s $86.2 billion IPO, which drew more than $100 billion of individual demand. Anthropic’s listing could be one of the largest IPOs ever, with a retail allocation far above a typical deal.</p>
+        <p class="why"><b>Why it matters</b>Giving 15–20% to retail copies the “everyone can buy” narrative around SpaceX and taps extra demand for a mega-IPO. But the more shares retail gets, the harder first-day volatility and sentiment pricing become to control. For Anthropic, it is a bet on both valuation and liquidity.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between 09:24 on October 28, 2026 and 09:24 on October 29, 2026 (UTC+8): 8 items. Search time: 10/29 09:24.</p>
+    <p class="disclaimer"><b>Disclaimer</b> This issue was researched, compiled and summarized by an AI agent. Every item links to the original report; facts and figures follow the original and are for reference only. Items marked “according to…” or “unverified” have not been independently confirmed. Headlines and commentary are edited and do not represent the views of any source.</p>
+    <p class="sig">AI Daily · Issue 004 · 24h window · Generated 2026-10-29 09:24</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 10 月 29 日</title>
+<meta name="description" content="2026-10-29 AI 日报：24 小时窗口（10/28 09:24 – 10/29 09:24），8 条，覆盖 Gemini 4 Carbon、OpenAI 采购 TPU、AI 资本开支、Anthropic 制药与宇树财报。">
+<meta property="og:title" content="AI 日报 · 2026 年 10 月 29 日">
+<meta property="og:description" content="2026-10-29 AI 日报：24 小时窗口（10/28 09:24 – 10/29 09:24），8 条，覆盖 Gemini 4 Carbon、OpenAI 采购 TPU、AI 资本开支、Anthropic 制药与宇树财报。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily/2026-10-29.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/daily/2026-10-29.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily/2026-10-29.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily/2026-10-29-en.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报（中文）" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily (English)" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=6">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-10-29-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 004 期</span>
+    </div>
+    <h1 class="date">2026 年 10 月 29 日<span class="weekday">THU</span></h1>
+    <p class="deck">今天的主题是 AI 从“能力”走向“账本”：Google 发布网络安全模型 <em>Gemini 4 Carbon</em>；OpenAI 计划采购 Google TPU；
+      微软 Azure 加速、Alphabet 自由现金流转负；Meta 980 亿美元股权融资获约 5 倍认购，Anthropic 拟把 15–20% 的 IPO 份额卖给散户。
+      另一边，Anthropic 收购“一人生物公司”做罕见病药，宇树交出上市后首份季报，横店与字节否认“15 万群演数据喂模型”。</p>
+    <div class="metabar"><span class="pill">第 004 期</span>
+      <span class="dot"></span>
+      <span>窗口 10/28 09:24 – 10/29 09:24</span>
+      <span class="dot"></span>
+      <span>8 条</span>
+      <span class="dot"></span>
+      <span>阅读约 8 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Google 发布 Gemini 4 Carbon。</b>主打长程任务与网络安全，Google 称其在 Artificial Analysis 智能指数 v5.0 上以 59 分排第一；漏洞检测 SEC-bench Pro 得分 88.2%。先向网络安全防御者开放。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>OpenAI 计划采购 Google TPU。</b>据 The Information，交易条款未披露；上周 OpenAI 刚把前沿模型放到 Google Cloud 上。OpenAI 目前仍是英伟达 GPU 的最大买家之一。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>微软与 Alphabet 财报分化。</b>微软 Azure 收入同比增 48%，自由现金流仍为正；Alphabet 自由现金流 -90.7 亿美元，股价跌超 10%，市场开始用现金流给 AI 资本开支打分。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28</span>
+          <a class="src" href="https://f.aa.com.tr/en/world/us-tech-giant-google-unveils-gemini-4-carbon-ai-model/4104265" target="_blank" rel="noopener noreferrer">Anadolu Agency ↗</a>
+        </div>
+        <h3>Google 发布 Gemini 4 Carbon：主打网络安全与长程任务，先给防御者用</h3>
+        <p>Google 10 月 28 日发布 Gemini 4 Carbon，距离上一代 Gemini 4 Argon 只隔两周。Google 称这是其最强的前沿模型，重点提升编程、自主智能体任务和网络安全防御能力。公司称，Carbon 在更新后的 Artificial Analysis 智能指数 v5.0 上以 59 分排名第一，在 WebDev Arena 上提升 89 分、升至第四。</p>
+        <p>网络安全是这次的主打场景：Google 称 Carbon 在 SEC-bench Pro 漏洞发现测试中得分 88.2%，ExploitGym 利用测试 54.8%，CWE-bench 修复测试 71%。在内部测试中，它把无依据陈述比 Argon 减少约一半，多步工作流中的任务越界减少 26%、服务不足减少 29%。Carbon 本周先向网络安全防御者开放，随后再向开发者、企业和消费者推出。</p>
+        <p>价格方面，Google 给出每百万输入 token 2 美元、输出 10 美元的优惠价，缓存输入再打 95% 折扣；优惠期后恢复为输入 4 美元、输出 20 美元。</p>
+        <p class="why"><b>看点</b>“网络安全最强模型”天然是双刃剑：同一套漏洞发现能力可以用于防御，也可以用于攻击。Google 先向防御者开放、再逐步放开，是在用部署节奏换安全窗口；但 88.2% 的漏洞发现得分也意味着，攻击方拿到同等能力只是时间问题。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 18:21</span>
+          <a class="src" href="https://finance.sina.com.cn/roll/2026-10-28/doc-iniwuqvx5923454.shtml" target="_blank" rel="noopener noreferrer">上海证券报 ↗</a>
+        </div>
+        <h3>横店与字节否认“15 万群演数据喂模型”：数据归横店，不用于训练大模型</h3>
+        <p>针对“横店与字节合作，把 15 万名群演的肖像和声音喂给字节大模型”的传言，字节豆包公关负责人刘星 10 月 28 日回应称“严重失实”。他表示，引发讨论的是横店影视 AI 服务平台项目，目标是建设影视行业的公共数字基础设施，把影视基地实景等资产做成高质量数据集，帮助剧组更高效地选景、筹备和拍摄，也降低中小影视企业使用 AI 的门槛。</p>
+        <p>刘星澄清了三点：火山引擎在该项目中仅是技术方，所有数据资产归横店或授权方所有；涉及任何人的肖像和声音使用，都需要本人授权，不存在未经授权采集；本项目采集的数据不会用于训练字节大模型。公开资料显示，该项目目前处于中标阶段，将围绕影视行业数据集建设和配套技术平台展开。</p>
+        <p class="why"><b>看点</b>这是一次典型的“数据授权”舆情：公众真正担心的不是 AI 能不能做影视，而是自己的脸和声音会不会在不知情的情况下变成训练数据。把“数据归谁、授权在哪、是否用于训练”三件事说清楚，比一句“传言失实”更能建立信任。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 14:14</span>
+          <a class="src" href="https://www.digitaltoday.co.kr/en/view/120783/anthropic-acquires-one-person-bio-startup-to-step-up-rare-disease-drug-research" target="_blank" rel="noopener noreferrer">DigitalToday ↗</a>
+        </div>
+        <h3>Anthropic 收购“一人生物公司” Mithril，用 Claude 推进罕见病药物</h3>
+        <p>Anthropic 已收购生物科技初创公司 Mithril Medicine，正式进入罕见病药物研发。Mithril 只有创始人 Cody Tranbarger 一名全职员工，他借助 Claude 管理 11 家外部研究机构的合同、实验排期、物流和数据分析，在不到 18 个月里把两个罕见肌肉疾病项目推进到动物实验阶段。</p>
+        <p>研究团队开发了一种同时结合两类蛋白的双特异性抗体，试图恢复肌肉纤维与周围组织的连接。给 LAMA2 相关疾病小鼠注射原型抗体 6 周后，部分实验组的握力和肌肉力量约为对照组的 2 倍，存活率也有改善，但未恢复到正常小鼠水平。Claude 还在后续研究中分析了 113 个候选抗体的 341 页制造数据，不到 8 分钟就完成分类。</p>
+        <p>错误同样存在：Claude 写的邮件里出现过抗体数量记录错误，至少 3 封在人工审核后仍发给了外部机构。Anthropic 称这是“一人药物开发流水线”的首个案例，若候选物验证顺利，最早可能在 2028 年下半年启动人体临床试验；目前只是早期动物结果，人体安全性和疗效均未验证。</p>
+        <p class="why"><b>看点</b>AI 在这里不是“替科学家想出新药”，而是把合同、排期、物流、数据整理这些吃掉大量时间的环节压缩给一个人。这确实能提高早期研发效率，但 3 封带错邮件说明：人工审核不是保险箱，关键数据必须有自动校验和责任人。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 20:51</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202610283912455456.html" target="_blank" rel="noopener noreferrer">每日经济新闻 ↗</a>
+        </div>
+        <h3>宇树上市后首份季报：Q3 营收增近七成，净利降 17%，研发投入翻两倍</h3>
+        <p>宇树科技 10 月 28 日晚披露 2026 年三季报，这是公司 8 月 19 日登陆科创板后的首份财报。第三季度营收 6.65 亿元，同比增长 69.93%；归母净利润 1.13 亿元，同比下降 17.37%；扣非净利润 1.05 亿元，同比下降 17.42%。前三季度营收 18.17 亿元，同比增长 55.71%；归母净利润 3.87 亿元，同比增长 270.54%。</p>
+        <p>利润下滑的主要变量是研发：第三季度研发投入 1.27 亿元，同比增长 249.58%；前三季度累计 2.63 亿元，同比增长 191.48%，占营收比例升至 14.47%。公司称，资金主要投向具身大模型、算力、研发团队和新产品。前三季度经营活动现金流净额 1.94 亿元，同比下降 54.69%。</p>
+        <p>同日，宇树还宣布与红杉中国成立“杉宇·创计划”，专注发掘和投资具身智能、机器人应用及上下游早期项目（<a href="https://finance.sina.com.cn/roll/2026-10-28/doc-iniwukpw3425656.shtml" target="_blank" rel="noopener noreferrer">上海证券报</a>）。</p>
+        <p class="why"><b>看点</b>宇树的收入还在高速增长，但利润已经开始为“具身大模型”付账。研发费用翻两倍、现金流下降，说明人形机器人从卖硬件走向卖智能，烧钱阶段远没结束；接下来要看的是订单能不能覆盖研发，而不是演示动作有多丝滑。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 10:55</span>
+          <a class="src" href="https://www.stheadline.com/zh-hans/realtime-finance/3630793/OpenAI%e6%8d%ae%e6%8a%a5%e5%90%91Google%e9%87%87%e8%b4%adTPU%e6%99%b6%e7%89%87-%e7%94%b2%e9%aa%a8%e6%96%87%e4%ba%91%e7%ab%af%e6%98%8e%e5%b9%b4%e5%bc%95%e5%85%a5TPU" target="_blank" rel="noopener noreferrer">星岛头条 ↗</a>
+        </div>
+        <h3>OpenAI 计划采购 Google TPU，英伟达之外再找一条算力路线</h3>
+        <p>据 The Information 10 月 28 日报道，OpenAI 计划采购 Google 的 AI 芯片，财务条款和其他细节尚未披露。报道称，这会加深 OpenAI 与 Google 的商业关系：两家公司在 AI 产品和搜索上竞争，但上周 OpenAI 刚把前沿模型放到 Google Cloud 上。</p>
+        <p>OpenAI 目前仍是英伟达 GPU 的最大买家之一；路透社 2025 年 6 月曾报道，OpenAI 已开始租用 Google 的 AI 芯片。Google 的 TPU 正作为英伟达的替代方案获得关注，Google 今年开始直接向部分客户销售 TPU；Alphabet 预计今年底开始确认一小部分 TPU 销售收入，绝大部分将在 2027 年确认。</p>
+        <p class="why"><b>看点</b>OpenAI 买 TPU，不只是“多一个供应商”，而是把 Google 从竞争对手变成算力供应商。对英伟达来说，最大客户开始分流；对 Google 来说，TPU 从内部自用变成对外生意。模型公司、云厂商和芯片公司的边界，正在互相穿透。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/29 05:30</span>
+          <a class="src" href="https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
+        </div>
+        <h3>微软 Azure 加速、Alphabet 现金流转负：AI 资本开支进入“现金流审判期”</h3>
+        <p>微软 2027 财年第一财季营收 922.79 亿美元，同比增长 19%；Azure 收入 331.7 亿美元，同比增长 48%，增速较上一季度的 42% 继续加快；净利润 366.3 亿美元，同比增长 32%。自由现金流 186.3 亿美元，同比下降 27%，但仍为正；资本开支加融资租赁 452 亿美元，低于市场预期的 506.7 亿美元。财报后股价一度涨近 5%。</p>
+        <p>Alphabet 第三季度营收 1275.8 亿美元，同比增长 25%，但低于预期；GAAP 每股收益 2.12 美元，调整后每股收益 2.67 美元，均低于市场预期的约 3.02 美元；净利润 261.7 亿美元，低于上年同期的 349.8 亿美元。自由现金流为 -90.7 亿美元，远差于预期的 -27 亿美元；资本开支 513.6 亿美元，也低于预期。股价跌超 10%。公司维持 2026 年资本开支 1950–2050 亿美元的指引，并预计 2027 年将显著增加、超过 3000 亿美元。</p>
+        <p class="why"><b>看点</b>同样是 AI 资本开支，市场对微软和 Google 给出了相反反馈：微软的云收入证明了“投入能换增长”，Google 的负自由现金流则让人担心“投入先吃掉了现金”。AI 基建的估值逻辑正在从“谁花得多”转向“谁能在花钱的同时把现金流守住”。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 14:02</span>
+          <a class="src" href="https://finance.sina.com.cn/roll/2026-10-28/doc-iniwueft3715450.shtml" target="_blank" rel="noopener noreferrer">环球网 ↗</a>
+        </div>
+        <h3>Meta 250 亿美元普通股发行获约 5 倍超额认购，总融资规模上看 980 亿美元</h3>
+        <p>据彭博社 10 月 28 日报道，Meta 扩大后的 250 亿美元普通股发行完成，认购需求约为发行规模的 5 倍；发行价每股 625 美元，较公告前上周五收盘价折让 2.7%。超过一半股份配给长期投资者和现有股东，最大的 15 家投资者合计拿到约 70% 的份额，AMD 等产业资本也参与认购。</p>
+        <p>这笔普通股是 Meta 总规模最高约 980 亿美元股权融资计划的一部分，另有 125 亿美元强制可转换优先股和后续市价增发安排。资金将用于 AI 算力基础设施和个人超级智能研发。尽管认购火爆，Meta 股价在纽约交易时段一度下跌 1.4%，触及 621.47 美元，跌破发行价。</p>
+        <p class="why"><b>看点</b>5 倍认购说明机构仍愿意为 Meta 的 AI 故事买单，但股价跌破发行价说明二级市场没那么兴奋。AI 基建的融资需求已经从“自有现金流”走到“股权融资”，接下来要看这些钱能不能变成收入，而不是只变成 GPU 和数据中心。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/28 10:19</span>
+          <a class="src" href="https://www.cnbctv18.com/market/anthropic-said-to-pick-jpmorgan-to-lead-ipos-us-retail-offering-20020916.htm" target="_blank" rel="noopener noreferrer">CNBC-TV18 ↗</a>
+        </div>
+        <h3>Anthropic 拟把 15–20% 的 IPO 份额卖给散户，摩根大通负责美国零售</h3>
+        <p>据彭博社报道，Anthropic 已选定摩根大通负责其 IPO 的美国散户销售，并考虑把约 15–20% 的 IPO 股份分配给个人投资者。摩根大通 CEO 杰米·戴蒙预计会参与路演；花旗将协调国际散户发行。Anthropic 的估值预期在 1.4 万亿–1.75 万亿美元之间，IPO 可能募资至多 1000 亿美元。</p>
+        <p>摩根大通此前负责 SpaceX 860 亿美元 IPO 的散户认购，该笔发行吸引了超过 1000 亿美元的个人投资者需求。Anthropic 的 IPO 可能成为史上最大规模 IPO 之一，散户配售比例也远高于传统 IPO。</p>
+        <p class="why"><b>看点</b>把 15–20% 的份额留给散户，是在复制 SpaceX 的“全民认购”叙事，也是在为巨型 IPO 找增量资金。但散户拿到的份额越多，上市首日的波动和情绪定价就越难控制；对 Anthropic 来说，这是一场关于估值和流动性的豪赌。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 10 月 28 日 09:24 至 2026 年 10 月 29 日 09:24（北京时间）之间发布的报道，共 8 条。检索时间 10/29 09:24。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标注“据…报道”“未核实”的内容未经独立核实；标题与点评为编辑加工，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 004 · 24h window · Generated 2026-10-29 09:24</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

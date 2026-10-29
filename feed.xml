@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 28 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 10 月 29 日</title>
+      <link>https://kaixinguor.com/daily/2026-10-29.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-29.html</guid>
+      <pubDate>Thu, 29 Oct 2026 01:00:00 GMT</pubDate>
+      <description>今天的主题是 AI 从“能力”走向“账本”：Google 发布网络安全模型 Gemini 4 Carbon；OpenAI 计划采购 Google TPU； 微软 Azure 加速、Alphabet 自由现金流转负；Meta 980 亿美元股权融资获约 5 倍认购，Anthropic 拟把 15–20% 的 IPO 份额卖给散户。 另一边，Anthropic 收购“一人生物公司”做罕见病药，宇树交出上市后首份季报，横店与字节否认“15 万群演数据喂模型”。 Google 发布 Gemini 4 Carbon：主打网络安全与长程任务，先给防御者用</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 10 月 28 日</title>
       <link>https://kaixinguor.com/daily/2026-10-28.html</link>
