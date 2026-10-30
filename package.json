@@ -11,7 +11,8 @@
     "publish": "node scripts/publish-daily.mjs",
     "stage": "node scripts/stage.mjs",
     "preview": "python3 -m http.server 8899",
-    "deploy:cf": "node scripts/build.mjs && node scripts/stage.mjs && npx wrangler pages deploy dist/site --project-name=kaixinguor"
+    "deploy:cf": "node scripts/build.mjs && node scripts/stage.mjs && npx wrangler pages deploy dist/site --project-name=kaixinguor",
+    "social": "node scripts/make-social.mjs"
   },
   "engines": {
     "node": ">=20"

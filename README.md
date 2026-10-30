@@ -34,7 +34,7 @@ npm run preview        # http://127.0.0.1:8899/
 cd site
 node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html \
   --en ../ai-daily/2026-10-26-en.html \
-  --check-links --push
+  --push
 ```
 
 它会：
@@ -45,7 +45,32 @@ node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html \
 4. 可选：逐条检查原文链接（非 2xx 停止）
 5. 可选：`git commit` + `git push`
 
-同一天重跑会覆盖，不会追加。
+同一天重跑会覆盖，不会追加。发布时加 `--social`，会顺带生成本地配图。
+
+---
+
+## 生成公众号图片消息图（本地）
+
+```bash
+cd site
+npm run social -- daily/2026-10-29.html
+# 或 node scripts/make-social.mjs daily/2026-10-29.html
+```
+
+默认写到仓库外的 `../ai-daily/social/YYYY-MM-DD/`，不会进 git、不会上线：
+
+- `wechat/`：**5 张** 1080×1440（3:4）：封面 → 3 条重点 → 速览，**没有尾页**
+- `公众号-图片消息.md`：标题 / 描述 / 逐图说明 / 发布步骤，直接复制去发
+- `AI-Daily-YYYY-MM-DD-wechat.zip`、`README.txt`、`manifest.json`
+
+标题固定为 `AI 日报 · M月D日`。**只做公众号，不再生成小红书图**——完整规则见 [`docs/社交配图规则.md`](docs/社交配图规则.md)。同一天重跑会覆盖。
+
+需要 Python 3 + Playwright 的 Chromium：
+
+```bash
+python3 -m pip install playwright
+python3 -m playwright install chromium
+```
 
 ---
 
@@ -68,12 +93,15 @@ site/
 ├── scripts/
 │   ├── build.mjs           由 daily/ 生成首页全文、往期抽屉、RSS、sitemap
 │   ├── publish-daily.mjs   发布一期（解析 → 落盘 → 构建 → push）
+│   ├── make-social.mjs     生成公众号图片消息图（5 张，本地）
+│   ├── social/             配图版式与 Playwright 截图
 │   ├── check-links.mjs     原文链接逐条检查
 │   └── stage.mjs           生成 dist/site/ 部署产物
 ├── feed.xml                RSS（中文，自动生成）
 ├── feed-en.xml             RSS（英文，自动生成）
 ├── sitemap.xml             自动生成
 ├── docs/自动化与部署.md     更新链路、Cloudflare / 服务器部署
+├── docs/社交配图规则.md     公众号图片消息的图数 / 标题 / 发布规则
 └── .github/workflows/      CI：校验 + 可选 Cloudflare Pages 部署
 ```
 
@@ -111,5 +139,5 @@ npm run stage          # dist/site/
 - **全站一套视觉**：日报的纸张色、墨色、朱红、衬线/等宽三层字体、发丝线、栏目色条，全部收进 `style.css`；产品子站也换上了同一套页头和页脚。
 - **日报双语**：每期同时生成中文页和英文页；英文不是逐字直译，按标准英语重写标题、导语、摘要和「看点」。首页、往期抽屉、RSS 都按语言分开。
 - **页脚**：`源泉混混，不舍昼夜，盈科而后进，放乎四海。——《孟子·离娄下》`；英文用对应译文。
-- **日报脚注**：声明本期由 AI Agent 搜索、整理并总结，条目均链接原文，事实与数字以原文为准，仅供参考。
+- **日报脚注**：固定声明（与配图封面底部、公众号文案里的一字不差）——本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评为编辑加工，不代表任何来源立场。
 - **更新链路**：生成 → `publish-daily.mjs` → GitHub → Cloudflare Pages。RSS 兜底，不依赖任何推送服务。

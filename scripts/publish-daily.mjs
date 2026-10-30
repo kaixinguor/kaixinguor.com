@@ -10,12 +10,14 @@
    用法：
      node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html
      node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html --en ../ai-daily/2026-10-26-en.html
-     node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html --en ../ai-daily/2026-10-26-en.html --check-links --push
+     node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html --en ../ai-daily/2026-10-26-en.html --check-links --social --push
 
    选项：
      --en <file>        英文版 HTML；不写就找同目录的 YYYY-MM-DD-en.html
-     --check-links      发布前用浏览器 UA 逐条请求原文，非 2xx 直接失败
+     --check-links      已有，且现在默认开启；保留为兼容写法
+     --no-check-links   跳过原文链接检查（仅限排障，正常发布不要用）
      --allow-bad-links  链接检查失败也继续发布（会打印警告）
+     --social           发布后顺带生成本地公众号图片消息图（5 张，不上线）
      --push             git add daily/ index.html feed.xml feed-en.xml sitemap.xml
                         → commit → push origin 当前分支
      --dry-run          只解析和打印，不写文件
@@ -56,7 +58,7 @@ for (let i = 0; i < args.length; i++) {
 
 const sourceArg = positional[0];
 if (!sourceArg) {
-  console.error(`用法：node scripts/publish-daily.mjs <中文日报.html> [--en <英文日报.html>] [--check-links] [--push] [--dry-run]`);
+  console.error(`用法：node scripts/publish-daily.mjs <中文日报.html> [--en <英文日报.html>] [--no-check-links] [--social] [--push] [--dry-run]`);
   process.exit(1);
 }
 
@@ -154,13 +156,17 @@ for (const item of [issue, enIssue]) {
 const page = renderIssuePage(issue, { templatePath: TEMPLATE });
 const enPage = renderIssuePage(enIssue, { templatePath: TEMPLATE });
 
-/* ---------- 先做链接检查，失败就不落盘 ---------- */
-if (flags.has("--check-links")) {
+/* ---------- 先做链接检查，失败就不落盘（默认开启，必须显式跳过） ---------- */
+if (flags.has("--no-check-links")) {
+  console.warn(`\n! 已跳过原文链接检查（--no-check-links）。打不开的来源不该发布，仅限排障时使用。`);
+} else {
   console.log(`\n→ 检查 ${issue.links.length} 条原文链接（浏览器 UA，15 秒超时）…`);
   const result = run(process.execPath, [path.join(ROOT, "scripts", "check-links.mjs"), source, "--strict"]);
   if (result.status !== 0) {
     if (!flags.has("--allow-bad-links")) {
-      console.error(`\n✗ 有链接不可用，未写入站点。修好链接，或加 --allow-bad-links 强行发布。`);
+      console.error(`\n✗ 有原文链接打不开，未写入站点。`);
+      console.error(`  底线：没打开过的页面不写进日报。删掉这几条、换一条能打开的来源，不要带病发布；`);
+      console.error(`  确实要强行发布才加 --allow-bad-links。`);
       process.exit(1);
     }
     console.warn(`\n! 有链接不可用，按 --allow-bad-links 继续。`);
@@ -187,6 +193,16 @@ const build = run(process.execPath, [path.join(ROOT, "scripts", "build.mjs")]);
 if (build.status !== 0) {
   console.error("\n✗ 站点生成失败，日报文件已写入，但首页/RSS 没有更新。");
   process.exit(build.status || 1);
+}
+
+/* ---------- 本地成品图（可选，失败不影响日报发布） ---------- */
+if (flags.has("--social")) {
+  console.log("\n→ 生成公众号图片消息图（5 张，本地，不上线）…");
+  const social = run(process.execPath, [path.join(ROOT, "scripts", "make-social.mjs"), destination]);
+  if (social.status !== 0) {
+    console.warn("\n! 成品图生成失败；日报正文与站点已正常发布，可稍后单独重跑：");
+    console.warn(`  node scripts/make-social.mjs ${path.relative(ROOT, destination)}`);
+  }
 }
 
 /* ---------- 发布到 GitHub ---------- */
