@@ -1,5 +1,5 @@
 [Unit]
-Description=Kaixinguor AI Daily watchdog (checks today's issue)
+Description=Kaixinguor daily watchdog (AI Daily + Economic Daily)
 After=network-online.target
 Wants=network-online.target
 

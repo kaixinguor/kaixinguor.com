@@ -12,7 +12,11 @@
     "stage": "node scripts/stage.mjs",
     "preview": "python3 -m http.server 8899",
     "deploy:cf": "node scripts/build.mjs && node scripts/stage.mjs && npx wrangler pages deploy dist/site --project-name=kaixinguor",
-    "social": "node scripts/make-social.mjs"
+    "social": "node scripts/make-social.mjs",
+    "publish:ai": "node scripts/publish-daily.mjs",
+    "publish:economy": "node scripts/publish-economy.mjs",
+    "check:links:ai": "node scripts/check-links.mjs --latest --section ai",
+    "check:links:economy": "node scripts/check-links.mjs --latest --section economy"
   },
   "engines": {
     "node": ">=20"

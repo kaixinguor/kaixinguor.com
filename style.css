@@ -618,7 +618,8 @@ a.card:hover { text-decoration: none; }
   .card.wide .why,
   .items > .card:last-child:nth-child(odd) .why {
     grid-column: 2;
-    grid-row: 2 / span 2;
+    /* 占满正文的整列，避免 why 撑高它所在的行、在段落之间留下空白 */
+    grid-row: 2 / span 30;
     margin-top: 0;
     align-self: start;
   }

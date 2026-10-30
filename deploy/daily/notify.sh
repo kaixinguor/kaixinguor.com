@@ -3,6 +3,7 @@
 #
 # 用法：
 #   notify.sh success "AI 日报 2026-10-27 已发布：https://kaixinguor.com/"
+#   KAIXINGUOR_NOTIFY_NAME="经济日报" notify.sh success "经济日报 2026-10-30 已发布"
 #   notify.sh failure "AI 日报 2026-10-27 生成失败，详见 journalctl -u kaixinguor-dsh"
 #
 # 配置：/etc/kaixinguor/notify.env（权限 600），支持以下任意组合：
@@ -18,7 +19,7 @@ STATUS="${1:-info}"
 shift || true
 MESSAGE="${*:-AI Daily notification}"
 ENV_FILE="${KAIXINGUOR_NOTIFY_ENV:-/etc/kaixinguor/notify.env}"
-TITLE="AI 日报 · ${STATUS}"
+TITLE="${KAIXINGUOR_NOTIFY_NAME:-AI 日报} · ${STATUS}"
 
 if [ -r "$ENV_FILE" ]; then
   # shellcheck disable=SC1090

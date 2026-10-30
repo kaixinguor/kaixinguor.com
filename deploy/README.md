@@ -21,7 +21,7 @@ npm run stage     # 生成 dist/site/
 
 ```
 index.html  archive.html  tools.html  wish.html  privacy.html  404.html
-daily/（中文 + -en 英文）  hark/  snipread/  assets/
+daily-ai/（中文 + -en 英文）  hark/  snipread/  assets/
 style.css   site.js       lang.js     favicon.svg
 feed.xml    feed-en.xml  sitemap.xml  robots.txt  _headers
 ```
@@ -48,7 +48,7 @@ server {
     root /www/wwwroot/tools.mathster.cn;
     index index.html;
 
-    # /hark/、/daily/ 这种目录要能找到里面的 index.html
+    # /hark/、/daily-ai/ 这种目录要能找到里面的 index.html
     location / {
         try_files $uri $uri/ $uri/index.html =404;
     }
@@ -125,7 +125,7 @@ server {
 ```bash
 curl -I https://tools.mathster.cn/            # 200
 curl -I https://tools.mathster.cn/hark/       # 200，不能是 403
-curl -I https://tools.mathster.cn/daily/2026-10-26.html   # 200
+curl -I https://tools.mathster.cn/daily-ai/2026-10-26.html   # 200
 curl -I https://tools.mathster.cn/feed.xml    # 200，Content-Type: application/rss+xml 或 xml
 curl -I https://tools.mathster.cn/feed-en.xml # 同上，英文 RSS
 curl -I https://tools.mathster.cn/nope        # 404，且返回你自己的 404 页

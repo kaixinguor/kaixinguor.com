@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* 为 AI 日报生成公众号「图片消息」成品图（本地文件，不上线）。
 
-   输入：一期中文日报 HTML（ai-daily/ 的源稿，或 site/daily/ 的成品页）
+   输入：一期中文日报 HTML（ai-daily/ 的源稿，或 site/daily-ai/ 的成品页）
    输出：5 张 1080×1440（3:4）排版卡
      wechat/01-cover.png → 05-overview.png
    外加 zip、manifest.json、README.txt，以及可整段复制的
@@ -15,8 +15,8 @@
 
    用法：
      node scripts/make-social.mjs ../ai-daily/2026-10-29.html
-     node scripts/make-social.mjs daily/2026-10-29.html --out ../ai-daily/social/2026-10-29
-     node scripts/make-social.mjs daily/2026-10-29.html --no-zip
+     node scripts/make-social.mjs daily-ai/2026-10-29.html --out ../ai-daily/social/2026-10-29
+     node scripts/make-social.mjs daily-ai/2026-10-29.html --no-zip
 
    依赖：Python 3 + playwright（chromium）。首次使用：
      python3 -m pip install playwright

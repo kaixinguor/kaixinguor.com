@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>经济日报 · kaixinguor</title>
+    <link>https://kaixinguor.com/</link>
+    <description>经济日报：央行与利率、增长与结构、产业与公司，每天更新。</description>
+    <language>zh-CN</language>
+    <atom:link href="https://kaixinguor.com/feed-economy.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Fri, 30 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>经济日报 · 2026 年 10 月 30 日</title>
+      <link>https://kaixinguor.com/daily-economy/2026-10-30.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-10-30.html</guid>
+      <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
+      <description>今天没有大新闻，只有三本账：央行用 1 万亿隔夜工具把月末的资金缺口补上；上海的融资结构里，直接融资占比一年抬高 10 个百分点； 深市 2862 份三季报里只有 1332 家增长，光模块涨 200%，半导体设备只涨 5.10%。钱还在流动，但流向变得很窄。 月末的 1 万亿：央行用隔夜工具补缺口，而不是降准</description>
+    </item>
+  </channel>
+</rss>

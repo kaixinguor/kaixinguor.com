@@ -1,5 +1,5 @@
 /* 日报内容解析与渲染。
-   输入：一期日报 HTML（可以是 ai-daily/ 里自包含的母版，也可以是 daily/ 里已生成的页面）。
+   输入：一期日报 HTML（可以是 ai-daily/ 里自包含的母版，也可以是 daily-ai/ 里已生成的页面）。
    输出：统一结构 + 站点版本的日报页 / 首页今日区 / 归档行 / RSS。
    只依赖 Node 内置模块，不需要安装任何东西。 */
 
@@ -396,9 +396,45 @@ ${chapter.cards.map(renderCard).join("\n\n")}
   </section>`).join("\n\n");
 }
 
+/* 两个版块：各自的目录、RSS、标题。renderIssuePage / renderFeed / renderSitemap 共用。 */
+export const SECTIONS = {
+  ai: {
+    dir: "daily-ai",
+    label: "AI Daily",
+    kickerZh: "AI 日报",
+    kickerEn: "AI DAILY",
+    subtitle: "Daily AI Brief",
+    footZh: "AI 日报 · 每天更新",
+    footEn: "AI Daily · updated whenever there is news",
+    feedZh: "feed.xml",
+    feedEn: "feed-en.xml",
+    titleZh: "AI 日报 · kaixinguor",
+    titleEn: "AI Daily · kaixinguor",
+    descZh: "严格 24 小时窗口的 AI 日报，每天更新。",
+    descEn: "A strict 24-hour AI daily. Updated whenever there is news."
+  },
+  economy: {
+    dir: "daily-economy",
+    label: "Economy Daily",
+    kickerZh: "经济日报",
+    kickerEn: "ECONOMY DAILY",
+    subtitle: "Daily Economy Brief",
+    footZh: "经济日报 · 每天更新",
+    footEn: "Economic Daily · updated whenever there is news",
+    feedZh: "feed-economy.xml",
+    feedEn: "feed-economy-en.xml",
+    titleZh: "经济日报 · kaixinguor",
+    titleEn: "Economic Daily · kaixinguor",
+    descZh: "经济日报：央行与利率、增长与结构、产业与公司，每天更新。",
+    descEn: "An economy daily: central banks, growth and the companies that book the profit."
+  }
+};
+
 const LOCALES = {
   zh: {
     htmlLang: "zh-CN",
+    navAi: "AI 日报",
+    navEcon: "经济日报",
     navDaily: "日报",
     navTools: "工具",
     navWish: "许愿",
@@ -425,6 +461,8 @@ const LOCALES = {
   },
   en: {
     htmlLang: "en",
+    navAi: "AI Daily",
+    navEcon: "Economic Daily",
     navDaily: "Daily",
     navTools: "Tools",
     navWish: "Wish",
@@ -479,8 +517,10 @@ export function renderIssuePage(issue, opts = {}) {
   const template = getIssueTemplate(templatePath);
   const lang = issue.lang || "zh";
   const loc = LOCALES[lang] || LOCALES.zh;
+  const section = opts.section || "ai";
+  const sec = SECTIONS[section] || SECTIONS.ai;
   const suffix = lang === "en" ? "-en" : "";
-  const stem = `daily/${issue.dateISO}${suffix}.html`;
+  const stem = `${sec.dir}/${issue.dateISO}${suffix}.html`;
   const canonical = `https://kaixinguor.com/${stem}`;
   const switchHref = `${issue.dateISO}${lang === "en" ? "" : "-en"}.html`;
   const langKey = lang === "en" ? "en" : "zh";
@@ -489,18 +529,24 @@ export function renderIssuePage(issue, opts = {}) {
     TITLE: escapeHtml(issue.title),
     DESCRIPTION: escapeHtml(issue.description),
     CANONICAL: canonical,
-    ALT_ZH: `https://kaixinguor.com/daily/${issue.dateISO}.html`,
-    ALT_EN: `https://kaixinguor.com/daily/${issue.dateISO}-en.html`,
-    RSS_ZH_TITLE: escapeHtml(loc.rssZh),
-    RSS_EN_TITLE: escapeHtml(loc.rssEn),
-    RSS_HREF: lang === "en" ? "../feed-en.xml" : "../feed.xml",
+    ALT_ZH: `https://kaixinguor.com/${sec.dir}/${issue.dateISO}.html`,
+    ALT_EN: `https://kaixinguor.com/${sec.dir}/${issue.dateISO}-en.html`,
+    RSS_ZH_TITLE: escapeHtml(sec.titleZh),
+    RSS_EN_TITLE: escapeHtml(sec.titleEn),
+    RSS_ZH_HREF: `../${sec.feedZh}`,
+    RSS_EN_HREF: `../${sec.feedEn}`,
+    RSS_HREF: lang === "en" ? `../${sec.feedEn}` : `../${sec.feedZh}`,
+    NAV_AI: loc.navAi,
+    NAV_ECON: loc.navEcon,
     NAV_DAILY: loc.navDaily,
     NAV_TOOLS: loc.navTools,
     NAV_WISH: loc.navWish,
     THEME_LABEL: loc.themeToggle,
     SKIP: loc.skip,
-    KICKER: loc.kicker,
-    KICKER_EN: loc.kickerEn,
+    KICKER: lang === "en" ? sec.kickerEn : sec.kickerZh,
+    KICKER_EN: sec.subtitle,
+    CUR_AI: section === "ai" ? ' aria-current="page"' : "",
+    CUR_ECON: section === "economy" ? ' aria-current="page"' : "",
     TOC_LABEL: loc.tocLabel,
     ISSUE_LABEL: escapeHtml(issue.issueLabel),
     DATE_DISPLAY: escapeHtml(issue.dateDisplay),
@@ -516,7 +562,7 @@ export function renderIssuePage(issue, opts = {}) {
     SWITCH_HREFLANG: loc.switchHreflang,
     FOOT_TAGLINE: loc.footTagline,
     FOOT_PRIVACY: loc.footPrivacy,
-    FOOT_DAILY: loc.footDaily,
+    FOOT_DAILY: lang === "en" ? sec.footEn : sec.footZh,
     LANG_SCRIPT: `try { localStorage.setItem("kaixinguor.lang", "${langKey}"); } catch (e) {}`
   };
   return template.replace(/\{\{([A-Z_]+)\}\}/g, (m, key) =>
@@ -526,16 +572,18 @@ export function renderIssuePage(issue, opts = {}) {
 
 /* 首页直接放整份日报：报头 + 目录 + 速览 + 全部栏目 + 期脚注。
    不再区分「摘要」和「读完整份日报」。 */
-export function renderHomeIssue(issue, lang = "zh") {
+export function renderHomeIssue(issue, lang = "zh", opts = {}) {
   const loc = LOCALES[lang] || LOCALES.zh;
   const suffix = `-${lang}`;
+  const kicker = opts.kicker || loc.kicker;
+  const kickerEn = opts.kickerEn || loc.kickerEn;
 
   return `    <header class="masthead">
       <div class="wrap">
         <div class="kicker">
-          <span class="zh">${escapeHtml(loc.kicker)}</span>
+          <span class="zh">${escapeHtml(kicker)}</span>
           <span class="sep"></span>
-          <span>${escapeHtml(loc.kickerEn)}</span>
+          <span>${escapeHtml(kickerEn)}</span>
           ${issue.issueLabel ? `<span class="issue-tag">${escapeHtml(issue.issueLabel)}</span>` : ""}
         </div>
         <h1 class="date">${escapeHtml(issue.dateDisplay)}<span class="weekday">${escapeHtml(issue.weekday)}</span></h1>
@@ -567,8 +615,9 @@ ${renderChapters(issue, suffix)}
     </footer>`;
 }
 
-export function renderArchiveSidebar(issues, lang = "zh") {
+export function renderArchiveSidebar(issues, lang = "zh", opts = {}) {
   const loc = LOCALES[lang] || LOCALES.zh;
+  const prefix = opts.prefix || "daily-ai/";
   const entries = issues
     .map((issue) => ({ issue, view: lang === "en" ? issue.en : issue }))
     .filter((entry) => entry.view);
@@ -590,7 +639,7 @@ export function renderArchiveSidebar(issues, lang = "zh") {
 
   return groups.map((group, gi) => {
     const open = gi === 0 ? " open" : "";
-    const links = group.items.map((entry, i) => `        <a class="archive-link${gi === 0 && i === 0 ? " is-current" : ""}" href="daily/${entry.issue.dateISO}${lang === "en" ? "-en" : ""}.html" title="${escapeHtml(entry.view.headline)}">
+    const links = group.items.map((entry, i) => `        <a class="archive-link${gi === 0 && i === 0 ? " is-current" : ""}" href="${prefix}${entry.issue.dateISO}${lang === "en" ? "-en" : ""}.html" title="${escapeHtml(entry.view.headline)}">
           <span class="a-date">${escapeHtml(entry.view.dateDot)} <em>${escapeHtml(entry.view.weekday)}</em></span>
           <span class="a-head">${escapeHtml(entry.view.headline)}</span>
         </a>`).join("\n");
@@ -601,11 +650,13 @@ ${links}
   }).join("\n");
 }
 
-export function renderFeed(issues, lang = "zh", siteUrl = "https://kaixinguor.com") {
+export function renderFeed(issues, lang = "zh", opts = {}) {
+  const siteUrl = opts.siteUrl || "https://kaixinguor.com";
+  const sec = SECTIONS[opts.section] || SECTIONS.ai;
   const isEn = lang === "en";
   const views = isEn ? issues.filter((issue) => issue.en).map((issue) => issue.en) : issues;
   const items = views.slice(0, 20).map((issue) => {
-    const link = `${siteUrl}/daily/${issue.dateISO}${isEn ? "-en" : ""}.html`;
+    const link = `${siteUrl}/${sec.dir}/${issue.dateISO}${isEn ? "-en" : ""}.html`;
     const pub = new Date(`${issue.dateISO}T09:00:00+08:00`).toUTCString();
     const desc = [issue.deckText, issue.headline].filter(Boolean).join(" ");
     return `    <item>
@@ -618,11 +669,9 @@ export function renderFeed(issues, lang = "zh", siteUrl = "https://kaixinguor.co
   }).join("\n");
 
   const latestDate = views[0] ? new Date(`${views[0].dateISO}T09:00:00+08:00`).toUTCString() : new Date().toUTCString();
-  const feedName = isEn ? "feed-en.xml" : "feed.xml";
-  const channelTitle = isEn ? "AI Daily · kaixinguor" : "AI 日报 · kaixinguor";
-  const channelDesc = isEn
-    ? "A strict 24-hour AI daily. Updated whenever there is news."
-    : "严格 24 小时窗口的 AI 日报，每天更新。";
+  const feedName = isEn ? sec.feedEn : sec.feedZh;
+  const channelTitle = isEn ? sec.titleEn : sec.titleZh;
+  const channelDesc = isEn ? sec.descEn : sec.descZh;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -639,10 +688,13 @@ ${items}
 `;
 }
 
-export function renderSitemap(issues, siteUrl = "https://kaixinguor.com") {
+export function renderSitemap(issues, opts = {}) {
+  const siteUrl = opts.siteUrl || "https://kaixinguor.com";
+  const economy = opts.economy || [];
   const latest = issues[0] ? issues[0].dateISO : "2026-10-26";
   const staticPages = [
     ["/", "1.0", latest],
+    ["/economy.html", "1.0", latest],
     ["/tools.html", "0.9", latest],
     ["/hark/", "0.8", "2026-10-24"],
     ["/snipread/", "0.8", "2026-10-24"],
@@ -656,8 +708,12 @@ export function renderSitemap(issues, siteUrl = "https://kaixinguor.com") {
   ];
   const daily = [];
   for (const issue of issues) {
-    daily.push([`/daily/${issue.dateISO}.html`, "0.9", issue.dateISO]);
-    if (issue.en) daily.push([`/daily/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+    daily.push([`/daily-ai/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily-ai/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+  }
+  for (const issue of economy) {
+    daily.push([`/daily-economy/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily-economy/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
   }
   const rows = [...staticPages, ...daily].map(([loc, priority, lastmod]) => `  <url>
     <loc>${siteUrl}${loc}</loc>

@@ -26,10 +26,13 @@ const files = [
   "sitemap.xml",
   "feed.xml",
   "feed-en.xml",
-  "_headers"
+  "feed-economy.xml",
+  "feed-economy-en.xml",
+  "_headers",
+  "_redirects"
 ];
 
-const dirs = ["daily", "hark", "snipread", "assets"];
+const dirs = ["daily-ai", "daily-economy", "hark", "snipread", "assets"];
 
 let count = 0;
 function copyFile(from, to) {

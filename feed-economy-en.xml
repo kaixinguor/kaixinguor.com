@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Economic Daily · kaixinguor</title>
+    <link>https://kaixinguor.com/</link>
+    <description>An economy daily: central banks, growth and the companies that book the profit.</description>
+    <language>en</language>
+    <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Fri, 30 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · October 30, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/2026-10-30-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-10-30-en.html</guid>
+      <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
+      <description>No single headline today, just three sets of books: the central bank plugged the month-end funding gap with RMB 1 trillion of overnight money; Shanghai&#39;s financing mix moved another 10 points toward bonds and equity; and of 2,862 Shenzhen earnings reports, fewer than half showed growth — optical modules up 200%, chipmaking equipment up 5.10%. Money is still moving, but it is moving through fewer channels. RMB 1 trillion overnight: the PBoC bridges month-end without cutting rates</description>
+    </item>
+  </channel>
+</rss>

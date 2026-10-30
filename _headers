@@ -20,5 +20,13 @@
   Cache-Control: public, max-age=0, must-revalidate
   Content-Type: application/rss+xml; charset=utf-8
 
+/feed-economy.xml
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: application/rss+xml; charset=utf-8
+
+/feed-economy-en.xml
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: application/rss+xml; charset=utf-8
+
 /download/*.dmg
   Content-Disposition: attachment

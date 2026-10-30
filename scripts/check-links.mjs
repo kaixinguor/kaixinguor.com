@@ -3,9 +3,10 @@
    只用 Node 内置 fetch，不需要装包。
 
    用法：
-     node scripts/check-links.mjs daily/2026-10-26.html
-     node scripts/check-links.mjs daily/2026-10-26.html --strict
+     node scripts/check-links.mjs daily-ai/2026-10-26.html
+     node scripts/check-links.mjs daily-ai/2026-10-26.html --strict
      node scripts/check-links.mjs --latest
+     node scripts/check-links.mjs --latest --section economy
      node scripts/check-links.mjs --all
 
    判定：最终状态码 200–299 算通过；其余算失败。
@@ -17,13 +18,16 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DAILY_DIR = path.join(ROOT, "daily");
 const args = process.argv.slice(2);
+const sectionIdx = args.indexOf("--section");
+const section = sectionIdx >= 0 ? (args[sectionIdx + 1] || "ai") : "ai";
+const DAILY_DIR = path.join(ROOT, section === "economy" ? "daily-economy" : "daily-ai");
 const flags = new Set(args.filter((a) => a.startsWith("--")));
 const strict = flags.has("--strict");
 const all = flags.has("--all");
 const latest = flags.has("--latest");
-const fileArg = args.find((a) => !a.startsWith("--"));
+const sectionValueIdx = sectionIdx >= 0 ? sectionIdx + 1 : -1;
+const fileArg = args.find((a, i) => !a.startsWith("--") && i !== sectionValueIdx);
 
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
@@ -45,7 +49,7 @@ if (fileArg) {
 } else if (latest) {
   const allFiles = dailyFiles();
   if (!allFiles.length) {
-    console.error("✗ daily/ 里还没有日报");
+    console.error(`✗ ${section === "economy" ? "daily-economy" : "daily-ai"}/ 里还没有日报`);
     process.exit(1);
   }
   const latestDate = path.basename(allFiles[allFiles.length - 1]).slice(0, 10);
@@ -53,7 +57,7 @@ if (fileArg) {
 } else if (all) {
   files = dailyFiles();
 } else {
-  console.error("用法：node scripts/check-links.mjs <日报.html> [--strict] | --latest | --all");
+  console.error("用法：node scripts/check-links.mjs <日报.html> [--strict] | --latest | --all [--section ai|economy]");
   process.exit(1);
 }
 

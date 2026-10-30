@@ -14,9 +14,9 @@
 <link rel="alternate" hreflang="zh-CN" href="{{ALT_ZH}}">
 <link rel="alternate" hreflang="en" href="{{ALT_EN}}">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="alternate" type="application/rss+xml" title="{{RSS_ZH_TITLE}}" hreflang="zh-CN" href="../feed.xml">
-<link rel="alternate" type="application/rss+xml" title="{{RSS_EN_TITLE}}" hreflang="en" href="../feed-en.xml">
-<link rel="stylesheet" href="../style.css?v=6">
+<link rel="alternate" type="application/rss+xml" title="{{RSS_ZH_TITLE}}" hreflang="zh-CN" href="{{RSS_ZH_HREF}}">
+<link rel="alternate" type="application/rss+xml" title="{{RSS_EN_TITLE}}" hreflang="en" href="{{RSS_EN_HREF}}">
+<link rel="stylesheet" href="../style.css?v=7">
 <script>
 /* 在渲染前定好深浅色，避免闪白 */
 (function () {
@@ -42,7 +42,8 @@
   <div class="wrap">
     <a class="brand" href="../index.html">kaixinguor</a>
     <nav class="top">
-      <a href="../index.html" aria-current="page">{{NAV_DAILY}}</a>
+      <a href="../index.html"{{CUR_AI}}>{{NAV_AI}}</a>
+      <a href="../economy.html"{{CUR_ECON}}>{{NAV_ECON}}</a>
       <a href="../tools.html">{{NAV_TOOLS}}</a>
       <a href="../wish.html">{{NAV_WISH}}</a>
       <a class="lang-btn" href="{{SWITCH_HREF}}" hreflang="{{SWITCH_HREFLANG}}">{{SWITCH_LABEL}}</a>
@@ -97,7 +98,8 @@
         <p>{{FOOT_TAGLINE}}</p>
       </div>
       <div class="foot-links">
-        <a href="../index.html">{{NAV_DAILY}}</a>
+        <a href="../index.html">{{NAV_AI}}</a>
+        <a href="../economy.html">{{NAV_ECON}}</a>
         <a href="../tools.html">{{NAV_TOOLS}}</a>
         <a href="../wish.html">{{NAV_WISH}}</a>
         <a href="../privacy.html">{{FOOT_PRIVACY}}</a>

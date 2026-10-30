@@ -1,13 +1,14 @@
 # kaixinguor.com
 
-一个人做的小工具 + 中英双语每日 AI 日报。纯静态站点，报刊编辑风。
+一个人做的小工具 + 两份中英双语日报。纯静态站点，报刊编辑风。
 
-- 首页 = 当天 AI 日报全文（报头、目录、速览、全部栏目、期脚注；不再分摘要和「读全文」）
-- 首页最左侧贴边 ARCHIVE 抽屉 = 往期（点贴边把手打开；`archive.html` 只做旧链接跳转）
+- 两个版块：**AI 日报**（首页 `/`）与**经济日报**（`/economy.html`），导航里并列
+- 首页 / 经济日报页 = 当天整份日报全文（报头、目录、速览、全部栏目、期脚注）
+- 最左侧贴边 ARCHIVE 抽屉 = 各自的往期（`archive.html` 只做旧链接跳转）
 - `/tools.html` = 标签式工具列表
-- `/daily/YYYY-MM-DD.html` = 每一期中文日报
-- `/daily/YYYY-MM-DD-en.html` = 每一期英文日报
-- `/feed.xml` / `/feed-en.xml` = 中英文 RSS
+- `/daily-ai/YYYY-MM-DD.html`、`/daily-ai/YYYY-MM-DD-en.html` = AI 日报中英文
+- `/daily-economy/YYYY-MM-DD.html`、`/daily-economy/YYYY-MM-DD-en.html` = 经济日报中英文
+- `/feed.xml` / `/feed-en.xml` = AI 日报 RSS；`/feed-economy.xml` / `/feed-economy-en.xml` = 经济日报 RSS
 
 视觉语言来自 `ai-daily/2026-10-26.html`，抽成了 `style.css`；日报、首页、工具、许愿共用同一套 tokens 和组件。
 
@@ -30,22 +31,33 @@ npm run preview        # http://127.0.0.1:8899/
 
 ## 发布一期日报
 
+两份日报用同一个流程，只是写到不同目录、更新不同首页与 RSS。
+
 ```bash
 cd site
+
+# AI 日报 → daily-ai/ + index.html + feed.xml / feed-en.xml
 node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html \
   --en ../ai-daily/2026-10-26-en.html \
+  --push
+
+# 经济日报 → daily-economy/ + economy.html + feed-economy*.xml
+node scripts/publish-economy.mjs ../economy-daily/2026-10-30.html \
+  --en ../economy-daily/2026-10-30-en.html \
   --push
 ```
 
 它会：
 
 1. 解析中文版和英文版 HTML（自包含母版或已套壳页面都行）
-2. 套上 `templates/issue.html`，分别写到 `daily/YYYY-MM-DD.html` 和 `daily/YYYY-MM-DD-en.html`
-3. 重新生成首页中英文全文、往期抽屉、`feed.xml`、`feed-en.xml`、`sitemap.xml`
-4. 可选：逐条检查原文链接（非 2xx 停止）
-5. 可选：`git commit` + `git push`
+2. 套上 `templates/issue.html`，写到对应版块的 `YYYY-MM-DD.html` 与 `-en.html`
+3. 重新生成两个首页的今日全文与往期抽屉、两套 RSS、`sitemap.xml`
+4. 逐条检查原文链接（打不开就停，默认开启）
+5. 可选：`git commit` + `git push`（只提交本版块相关的文件）
 
-同一天重跑会覆盖，不会追加。发布时加 `--social`，会顺带生成本地配图。
+同一天重跑会覆盖，不会追加。`--social` 只属于 AI 日报。
+
+母版放在仓库外，和站点目录平级：`../ai-daily/`、`../economy-daily/`。
 
 ---
 
@@ -53,8 +65,8 @@ node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html \
 
 ```bash
 cd site
-npm run social -- daily/2026-10-29.html
-# 或 node scripts/make-social.mjs daily/2026-10-29.html
+npm run social -- daily-ai/2026-10-29.html
+# 或 node scripts/make-social.mjs daily-ai/2026-10-29.html
 ```
 
 默认写到仓库外的 `../ai-daily/social/YYYY-MM-DD/`，不会进 git、不会上线：
@@ -78,29 +90,35 @@ python3 -m playwright install chromium
 
 ```
 site/
-├── index.html              首页（完整日报 + 左侧往期抽屉）
+├── index.html              首页 = AI 日报（完整一期 + 左侧往期抽屉）
+├── economy.html            经济日报（完整一期 + 左侧往期抽屉）
 ├── archive.html            旧 /archive.html 跳转到 /#archive
 ├── tools.html              工具（标签筛选）
 ├── wish.html               许愿
 ├── privacy.html / 404.html / download.html / changelog.html
-├── daily/YYYY-MM-DD.html   每一期中文日报
-├── daily/YYYY-MM-DD-en.html 每一期英文日报
+├── daily-ai/YYYY-MM-DD.html        AI 日报（中/英）
+├── daily-economy/YYYY-MM-DD.html   经济日报（中/英）
 ├── hark/  snipread/        两个产品子站
 ├── style.css               全站唯一设计系统
 ├── site.js                 深浅色 / 进度条 / 目录 / 工具标签
 ├── lang.js                 站点框架 zh/en
 ├── templates/issue.html    日报外壳
 ├── scripts/
-│   ├── build.mjs           由 daily/ 生成首页全文、往期抽屉、RSS、sitemap
-│   ├── publish-daily.mjs   发布一期（解析 → 落盘 → 构建 → push）
+│   ├── build.mjs           生成两个首页、两套 RSS、sitemap
+│   ├── build-economy.mjs   经济日报首页 economy.html（build.mjs 会调用）
+│   ├── publish-daily.mjs   发布一期 AI 日报
+│   ├── publish-economy.mjs 发布一期经济日报
+│   ├── lib/publish.mjs     两个发布命令共用的流程
 │   ├── make-social.mjs     生成公众号图片消息图（5 张，本地）
 │   ├── social/             配图版式与 Playwright 截图
 │   ├── check-links.mjs     原文链接逐条检查
 │   └── stage.mjs           生成 dist/site/ 部署产物
-├── feed.xml                RSS（中文，自动生成）
-├── feed-en.xml             RSS（英文，自动生成）
+├── feed.xml / feed-en.xml                  AI 日报 RSS（自动生成）
+├── feed-economy.xml / feed-economy-en.xml  经济日报 RSS（自动生成）
 ├── sitemap.xml             自动生成
 ├── docs/自动化与部署.md     更新链路、Cloudflare / 服务器部署
+├── docs/每日生成任务.md     AI 日报的作业说明
+├── docs/每日生成任务-经济日报.md  经济日报的作业说明
 ├── docs/社交配图规则.md     公众号图片消息的图数 / 标题 / 发布规则
 └── .github/workflows/      CI：校验 + 可选 Cloudflare Pages 部署
 ```

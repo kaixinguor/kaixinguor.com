@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* 由 daily/*.html 生成：
+/* 由 daily-ai/*.html 生成：
    - index.html 的中文 / 英文「今日日报」区与「往期侧栏」
    - feed.xml（中文 RSS）/ feed-en.xml（英文 RSS）
    - sitemap.xml（含中英文往期）
@@ -13,6 +13,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildEconomy } from "./build-economy.mjs";
 import {
   readIssues,
   renderHomeIssue,
@@ -24,11 +25,13 @@ import {
 } from "./lib/issue.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DAILY_DIR = path.join(ROOT, "daily");
+const DAILY_DIR = path.join(ROOT, "daily-ai");
 const INDEX = path.join(ROOT, "index.html");
 const FEED = path.join(ROOT, "feed.xml");
 const FEED_EN = path.join(ROOT, "feed-en.xml");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
+const FEED_ECON = path.join(ROOT, "feed-economy.xml");
+const FEED_ECON_EN = path.join(ROOT, "feed-economy-en.xml");
 const CHECK = process.argv.includes("--check");
 const QUIET = process.argv.includes("--quiet");
 
@@ -59,21 +62,30 @@ function validate(issue) {
   return warnings;
 }
 
-if (!fs.existsSync(DAILY_DIR)) fail("找不到 daily/ 目录");
+if (!fs.existsSync(DAILY_DIR)) fail("找不到 daily-ai/ 目录");
 
 const issues = readIssues(DAILY_DIR);
-if (!issues.length) fail("daily/ 里还没有任何 YYYY-MM-DD.html");
+if (!issues.length) fail("daily-ai/ 里还没有任何 YYYY-MM-DD.html");
 
 const warnings = issues.flatMap(validate);
 for (const issue of issues) {
   if (issue.en) warnings.push(...validate(issue.en));
-  else if (issue !== issues[0]) warnings.push(`daily/${issue.dateISO}.html: 没有对应的英文版 -en.html`);
+  else if (issue !== issues[0]) warnings.push(`daily-ai/${issue.dateISO}.html: 没有对应的英文版 -en.html`);
 }
 
 const latest = issues[0];
 if (!latest.en) {
-  fail(`最新一期 ${latest.dateISO} 缺少英文版 daily/${latest.dateISO}-en.html；先运行 publish-daily 并带 --en。`);
+  fail(`最新一期 ${latest.dateISO} 缺少英文版 daily-ai/${latest.dateISO}-en.html；先运行 publish-daily 并带 --en。`);
 }
+
+/* 经济日报：先构建 economy.html，同时拿到它的期次（后面生成 RSS 和 sitemap 要用） */
+let econ = { skipped: true };
+try {
+  econ = buildEconomy({ check: CHECK, quiet: true });
+} catch (err) {
+  fail(err.message);
+}
+const econIssues = econ.issues || [];
 
 const block = (cls, lang, inner, hidden = false) => `      <div class="${cls}" data-lang="${lang}"${hidden ? " hidden" : ""}>
 ${inner}
@@ -83,9 +95,11 @@ const todayZh = block("today-lang", "zh", renderHomeIssue(latest, "zh"));
 const todayEn = block("today-lang", "en", renderHomeIssue(latest.en, "en"), true);
 const sidebarZh = block("archive-lang", "zh", renderArchiveSidebar(issues, "zh"));
 const sidebarEn = block("archive-lang", "en", renderArchiveSidebar(issues, "en"), true);
-const feed = renderFeed(issues, "zh");
-const feedEn = renderFeed(issues, "en");
-const sitemap = renderSitemap(issues);
+const feed = renderFeed(issues, "zh", { section: "ai" });
+const feedEn = renderFeed(issues, "en", { section: "ai" });
+const feedEcon = econIssues.length ? renderFeed(econIssues, "zh", { section: "economy" }) : null;
+const feedEconEn = econIssues.length ? renderFeed(econIssues, "en", { section: "economy" }) : null;
+const sitemap = renderSitemap(issues, { economy: econIssues });
 
 const indexHtml = applyMarkers(fs.readFileSync(INDEX, "utf8"), {
   TODAY_ZH: todayZh,
@@ -100,6 +114,7 @@ const outputs = [
   [FEED_EN, feedEn],
   [SITEMAP, sitemap]
 ];
+if (feedEcon) outputs.push([FEED_ECON, feedEcon], [FEED_ECON_EN, feedEconEn]);
 
 if (CHECK) {
   let stale = 0;
@@ -113,11 +128,12 @@ if (CHECK) {
   if (warnings.length) {
     for (const w of warnings) console.error(`! ${w}`);
   }
-  if (stale) {
-    console.error(`\n✗ ${stale} 个文件需要重新生成。`);
+  if (stale || econ.stale) {
+    console.error(`\n✗ ${stale + (econ.stale ? 1 : 0)} 个文件需要重新生成。`);
     process.exit(1);
   }
   console.log(`✓ 生成结果已是最新（${issues.length} 期，最新 ${latest.dateISO}）`);
+  if (!econ.skipped) console.log(`✓ 经济日报 economy.html 已是最新（${econ.issues.length} 期）`);
   process.exit(0);
 }
 
