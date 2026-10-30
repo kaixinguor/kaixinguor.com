@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 30 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · October 31, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-10-31-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-31-en.html</guid>
+      <pubDate>Sat, 31 Oct 2026 01:00:00 GMT</pubDate>
+      <description>Today’s thread is distribution. Apple puts Alibaba’s Qwen inside Siri, Writing Tools and Visual Intelligence; Baidu cuts its search API to RMB 4.9 per thousand calls; SenseTime ships a 9B looped model that argues parameter count is not the only path. The fight is moving from leaderboards to system permissions and pricing units. Apple Intelligence taps Alibaba’s Qwen, putting a third-party model behind Siri</description>
+    </item>
     <item>
       <title>AI Daily · October 30, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-10-30-en.html</link>

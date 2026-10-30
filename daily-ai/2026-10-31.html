@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 10 月 31 日</title>
+<meta name="description" content="2026-10-31 AI 日报：Apple 智能接入阿里千问、11 月 4 日开放测试；商汤开源 9B 循环模型 Loop；百度搜索 API 低至 4.9 元/千次；谷歌在轨 TPU 传回首个 AI 回复；英伟达 10 亿美元入股 Naver。">
+<meta property="og:title" content="AI 日报 · 2026 年 10 月 31 日">
+<meta property="og:description" content="2026-10-31 AI 日报：Apple 智能接入阿里千问、11 月 4 日开放测试；商汤开源 9B 循环模型 Loop；百度搜索 API 低至 4.9 元/千次；谷歌在轨 TPU 传回首个 AI 回复；英伟达 10 亿美元入股 Naver。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-10-31.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-10-31.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-10-31.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-10-31-en.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-10-31-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 006 期</span>
+    </div>
+    <h1 class="date">2026 年 10 月 31 日<span class="weekday">SAT</span></h1>
+    <p class="deck">今天的主线是入口。苹果把千问放进 Siri、写作工具和视觉智能，11 月 4 日开放测试；百度把搜索 API 压到 4.9 元/千次；
+      商汤用一个 9B 的循环模型证明参数不是唯一的路。<em>入口之争，正从模型榜单转到系统权限与计价单位。</em></p>
+    <div class="metabar"><span class="pill">第 006 期</span>
+      <span class="dot"></span>
+      <span>窗口 10/30 07:05 – 10/31 07:20</span>
+      <span class="dot"></span>
+      <span>8 条</span>
+      <span class="dot"></span>
+      <span>阅读约 9 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#products"><span class="n">01</span>产品与智能体</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Apple 智能接入阿里千问，11 月 4 日开放测试。</b>中国用户可在 Siri、写作工具与视觉智能中调用千问的文本和图像理解能力，12 月随 iOS 27.3 正式上线。首批功能以翻译、写作、照片整理为主，不含 Siri AI 等下一代能力。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>英伟达 10 亿美元入股 Naver，下周完成缴款。</b>交易后英伟达成为 Naver 第三大股东；Naver 已确保至少 90 亿美元的计算基础设施。股权换需求，芯片厂商同时成了客户、股东与供应商。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>谷歌在轨 TPU 传回首个 AI 回复。</b>Project Suncatcher 原型卫星上的 Gemma 4 写下一首关于太空的俳句，经挪威斯瓦尔巴地面站下传。芯片每次只能开机约 20 分钟，真正的约束是供电窗口与发射成本。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 07:06</span>
+          <a class="src" href="https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/" target="_blank" rel="noopener noreferrer">Apple 新闻稿 ↗</a>
+        </div>
+        <h3>Apple 智能接入阿里千问：系统级入口，12 月随 iOS 27.3 落地中国</h3>
+        <p>10 月 31 日，苹果宣布 Apple 智能即将在中国上线。首批功能将于 11 月 4 日起随最新的 iOS 开发者 Beta 版开放测试，12 月 iOS 27.3 正式发布时面向中国用户推出。苹果同时确认与阿里巴巴达成合作，在部分体验中加入对千问的支持：用户可直接在 Siri、写作工具以及视觉智能中使用千问，包括文本与图像理解相关能力。</p>
+        <p>首批功能清单偏工具型：实时翻译（整合进信息、FaceTime 与电话，并支持 AirPods）、写作工具、视觉智能、照片 app 的消除工具与自然语言搜索、智绘表情、邮件优先邮件与摘要、通知摘要与「减少干扰」、备忘录音频转录摘要，以及「输入文字与 Siri 对话」。用户登录千问账户或使用「通过 Apple 登录」，即可在 Apple 智能中访问千问。</p>
+        <p>边界也写得明确：本次更新不含 Siri AI 以及苹果在 WWDC 2026 上宣布的其他下一代 Apple 智能功能，其他平台要等必要审批后才推出。先到的是工具，不是重构后的助手。</p>
+        <p class="why"><b>看点</b>入口的意义大于功能清单。苹果在中国选择「自研模型 + 千问补位」，把第三方模型放进系统级入口，同时保留账户与审批两道闸门。对国内模型厂商，这是一次「被集成」的定价权测试：能力可以外供，用户关系仍在苹果手里。真正要看的不是首发光环，而是 12 月正式版里千问被调用的频率、场景，以及苹果为每次调用付了什么。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 15:16</span>
+          <a class="src" href="https://www.stcn.com/article/detail/4305055.html" target="_blank" rel="noopener noreferrer">证券时报 ↗</a>
+        </div>
+        <h3>百度升级搜索与文心助手：搜索 AI API 最低 4.9 元/千次</h3>
+        <p>10 月 30 日，百度 APP 在北京举办产品升级沟通会，宣布围绕搜索框、AI 镜头、GUI 可视化、AI 互动应用四个方向升级，并称百度搜索已实现「递归自我进化」。</p>
+        <p>文心助手面向复杂问题和高频事务可直接交付成果物，长期任务可持续跟踪并主动提醒，目前覆盖 170 余种场景。</p>
+        <p>商业化同步跟进：搜索 AI API 升级后，活动期间最低价达 4.9 元/千次，百度称低于 DeepSeek 搜索 API。</p>
+        <p class="why"><b>看点</b>搜索正在从「给链接」变成「给结果」，计价单位也跟着从 token 变成「千次调用」。4.9 元/千次把检索与生成打包，等于用入口补贴 API：对开发者是成本下降，对百度是把搜索流量改造成调用量。真正的门槛是结果可验证性——交付物错了，按次计费并不解决问题，只会把纠纷从「答得不好」变成「这单该不该收钱」。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 17:14</span>
+          <a class="src" href="https://m.ithome.com/html/1020224.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>豆包把降价拆成签到：30 天 8800 额度，超过标准套餐一个月</h3>
+        <p>10 月 30 日，豆包推出新一轮免费额度活动：所有用户每日签到可得 200 额度，周一翻倍；累计达到 500、2000、5000 三个里程碑，可分别再得 200、500、1300 额度，连续签到 30 天合计 8800。</p>
+        <p>首次登录豆包电脑版或豆包工作电脑版的新用户，可直接领取 30 天免费体验套餐，额度可用于除生视频、Pro 模型以外的所有能力；赠送额度有效期为 30 天。</p>
+        <p>对照订阅价：标准套餐每 7 天 2100 额度（30 天约 8400）、加强套餐 5600、高级套餐 14000。官方称，30 天签到所得已超过标准套餐一个月的额度。</p>
+        <p class="why"><b>看点</b>这是把「降价」拆成「签到」：现金补贴变成行为激励，既拉日活，也训练用户每天打开一次 Agent。对字节，成本从获客预算挪到推理额度；对用户，免费的是额度而不是能力——生视频和 Pro 模型仍被排除在外。付费墙没有消失，只是往后挪了一格，而挪动它的成本，最终要由推理毛利来承担。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 20:39</span>
+          <a class="src" href="https://www.jiemian.com/article/15274918.html" target="_blank" rel="noopener noreferrer">界面新闻 ↗</a>
+        </div>
+        <h3>商汤开源 SenseNova Loop-9B：用循环深度换参数，对标 27B</h3>
+        <p>10 月 30 日，商汤宣布开源日日新 SenseNova Loop-9B-Preview。模型采用 Looped Transformer 架构，把中间层改造为参数共享的循环计算模块，通过多轮迭代扩展「有效计算深度」，并引入 mHC 多路残差连接。</p>
+        <p>商汤称，该模型在仅 9B 参数的规模下媲美 27B 参数模型，在 WorkBuddy Bench、RaccoonPPT Bench、AutomationBench 等评测中超过 Qwen3.5-27B；消融实验显示，引入 mHC 后 GPQA Diamond 与 TeamBench 分别提高 4.42 分和 13.34 分。</p>
+        <p>权重已在 GitHub 与 Hugging Face 开放，并接入商汤小浣熊客户端，用于多步骤任务实测。</p>
+        <p class="why"><b>看点</b>这是参数竞赛之外的另一条路：不把模型做大，而是让同一批参数多跑几轮计算。9B 的开源权重让「有效算力」这件事可以被复现、被压测，也把竞争指标从「总参数」推向「每瓦、每元能买到多少有效深度」。如果这条路成立，下一轮比的不是谁参数多，而是谁能在同样的显存里多跑几轮推理——这对推理成本的意义，比榜单排名大得多。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30</span>
+          <a class="src" href="https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/" target="_blank" rel="noopener noreferrer">Google Blog ↗</a>
+        </div>
+        <h3>谷歌在轨 TPU 传回首个 AI 回复：Gemma 4 在太空写了一首俳句</h3>
+        <p>Google 10 月 30 日称，Project Suncatcher 原型卫星传回了首个由在轨 TPU 生成的 AI 回复。这颗卫星本月早些时候搭乘猎鹰 9 号升空，与 100 余个航天器一同进入轨道，搭载 TPU，可产生约 1 千瓦电力。</p>
+        <p>受功耗限制，芯片每次只能开机约 20 分钟。经过约三周的在轨测试与系统校准，卫星进入正式运行阶段。工程师本周向星上预装的 Gemma 4 模型发送第一个提示，要求它写一首关于太空的俳句，卫星飞经挪威斯瓦尔巴地面站时下传成功；随后又测试了太空主题打油诗与汇报载荷状态的遥测提示。</p>
+        <p>下一步是评估轨道热应力与宇宙辐射对 TPU 的影响，尤其是「比特翻转」；若验证通过，Google 计划 2027 年再发射两颗采用更先进芯片的卫星，并验证星间光学通信。</p>
+        <p class="why"><b>看点</b>这件事的价值不在「太空写诗」，而在把推理的物理边界往外推了一步：能源、散热、辐射，三件事在地面上是成本，在轨道上是生死。真正的约束不是芯片，而是发射价格和每次 20 分钟的供电窗口——在它们被解决之前，轨道数据中心是实验，不是产能。把它当成一次极限环境下的可靠性测试，比当成数据中心替代方案更准确。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 07:40</span>
+          <a class="src" href="http://english.news.cn/northamerica/20261030/fb60b9903a4e42e1acd332659bb99254/c.html" target="_blank" rel="noopener noreferrer">新华社 ↗</a>
+        </div>
+        <h3>纽约立法：不得向 18 岁以下用户提供「假装人类」「制造情感依赖」的聊天机器人</h3>
+        <p>据新华社报道，纽约州州长霍楚尔本周三签署法律，禁止企业向 18 岁以下用户提供一系列聊天机器人功能，包括假装自己是人类、建立情感依赖、鼓励自残，以及进行色情对话。</p>
+        <p>违法行为的民事罚款最高可达 2.5 万美元，由纽约州总检察长提起；州政府还将设立公开网站，供居民举报聊天机器人公司的潜在违法行为。</p>
+        <p>美国多个州正在收紧：今年 9 月，加州要求聊天机器人开发者开展并公布年度儿童安全风险评估，并将产品送交独立审计；纽森同期还签署法律，禁止社交媒体平台对 16 岁以下用户使用成瘾性功能。</p>
+        <p class="why"><b>看点</b>监管开始管「产品设计」，而不只是「内容」。假装人类、制造依赖这些交互目标被写进禁令，等于要求厂商证明自己没有利用未成年人的心理弱点。2.5 万美元的罚款上限并不高，真正的成本是产品改版、年龄验证和独立审计。对做情感陪伴的团队，这是一条比内容审核更难绕的合规线——因为它约束的是留存指标本身。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 17:31</span>
+          <a class="src" href="https://en.edaily.co.kr/news/eda202610305657/" target="_blank" rel="noopener noreferrer">Edaily ↗</a>
+        </div>
+        <h3>Machenta 拿 4000 万美元种子轮：让机器人看一次人类演示就学会</h3>
+        <p>据韩国经济日报（Edaily）10 月 30 日报道，伦敦机器人 AI 初创公司 Machenta 完成 4000 万美元种子轮，由 Union Square Ventures 领投，Creandum 参投；报道称这是英国机器人初创企业迄今最大的一笔种子轮融资。</p>
+        <p>公司从帝国理工学院机器人学习实验室分拆成立，核心技术是让机器人在人类演示一次后复现任务。与逐帧记录动作、累积真机数据不同，它先用计算机虚拟环境生成的数据预训练模型，使机器人不必在真实场景中反复示教。</p>
+        <p>公司目前有 11 名员工，计划在伦敦 King's Cross 设立新的办公室与研究实验室，并扩充算力。报道也指出，其模型在精细操作或复杂动作上仍有局限，现阶段重心是扩大可适用任务范围，而非立即商业化。</p>
+        <p class="why"><b>看点</b>具身智能的真正分歧在数据从哪来：一条路是建数采中心、堆真机小时数，另一条是用仿真预训练、把真机数据留给对齐。4000 万美元押的是后者。它能不能成，不看演示视频，而看「一次演示」在不同物体、不同光照、不同台面高度下还能不能成立——泛化一旦掉线，省下的采集成本会以失败率的形式还回来。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 09:55</span>
+          <a class="src" href="https://m-en.yna.co.kr/view/AEN20261030002900320" target="_blank" rel="noopener noreferrer">韩联社 ↗</a>
+        </div>
+        <h3>英伟达 10 亿美元入股 Naver：第三大股东，换来 90 亿美元算力底座</h3>
+        <p>据韩联社 10 月 30 日报道，Naver 当天提交的监管文件显示，英伟达将于下周五完成对 Naver 的 10 亿美元投资，交易完成后将成为这家韩国 IT 公司的第三大股东。</p>
+        <p>文件称，随着增资完成，Naver 已确保至少 90 亿美元的计算基础设施；Naver 将在下周二确定英伟达通过配股取得的普通股数量。目前韩国国民年金以 9.49% 为第一大股东，贝莱德以 7.31% 位居第二。</p>
+        <p>这笔投资是双方 7 月宣布的战略合作的一部分，目标是在韩国建立一座全球性 AI 工厂。</p>
+        <p class="why"><b>看点</b>英伟达又把「卖芯片」做成了「入股换需求」：10 亿美元股权，对应至少 90 亿美元的算力基础设施，芯片厂商同时成为客户、股东和供应商。这种结构让订单更确定，也让风险更集中——算力需求一旦转向，减值会同时出现在被投企业和投资方的账上。它解决的是「谁来建」的问题，没有解决「建完给谁用」的问题。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 10 月 30 日 07:05 至 2026 年 10 月 31 日 07:20（北京时间）之间发布的报道，共 8 条。检索时间 10/31 07:20。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评为编辑加工，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 006 · 24h window · Generated 2026-10-31 07:20</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

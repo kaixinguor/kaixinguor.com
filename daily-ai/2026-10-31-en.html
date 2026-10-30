@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · October 31, 2026</title>
+<meta name="description" content="AI Daily for 2026-10-31: Apple brings Alibaba’s Qwen into Apple Intelligence in China, SenseTime open-sources a 9B looped model, Baidu cuts its search API to RMB 4.9 per 1,000 calls, Google’s orbital TPU answers its first prompt, and Nvidia takes a $1 billion stake in Naver.">
+<meta property="og:title" content="AI Daily · October 31, 2026">
+<meta property="og:description" content="AI Daily for 2026-10-31: Apple brings Alibaba’s Qwen into Apple Intelligence in China, SenseTime open-sources a 9B looped model, Baidu cuts its search API to RMB 4.9 per 1,000 calls, Google’s orbital TPU answers its first prompt, and Nvidia takes a $1 billion stake in Naver.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-10-31-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-10-31-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-10-31.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-10-31-en.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-10-31.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 006</span>
+    </div>
+    <h1 class="date">October 31, 2026<span class="weekday">SAT</span></h1>
+    <p class="deck">Today’s thread is distribution. Apple puts Alibaba’s Qwen inside Siri, Writing Tools and Visual Intelligence; Baidu cuts its search API to
+      RMB 4.9 per thousand calls; SenseTime ships a 9B looped model that argues parameter count is not the only path.
+      <em>The fight is moving from leaderboards to system permissions and pricing units.</em></p>
+    <div class="metabar"><span class="pill">Issue 006</span>
+      <span class="dot"></span>
+      <span>Window Oct 30, 07:05 – Oct 31, 07:20 (UTC+8)</span>
+      <span class="dot"></span>
+      <span>8 items</span>
+      <span class="dot"></span>
+      <span>9 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#products"><span class="n">01</span>Products &amp; Agents</a>
+        <a href="#models"><span class="n">02</span>Models</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Apple Intelligence brings in Alibaba’s Qwen, with tests from November 4.</b> In China, users will reach Qwen’s text and image understanding from Siri, Writing Tools and Visual Intelligence, with a full launch in December alongside iOS 27.3. The first wave is tools — translation, writing, photo cleanup — not the rebuilt Siri.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Nvidia to close a $1 billion stake in Naver next Friday.</b> The deal makes Nvidia Naver’s third-largest shareholder; Naver has secured at least $9 billion of computing infrastructure. Equity for demand turns the chip vendor into customer, shareholder and supplier at once.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Google’s orbital TPU answered its first prompt.</b> Gemma 4 on the Project Suncatcher prototype wrote a haiku about space and downlinked it via Svalbard. The chip runs for only about 20 minutes per pass — the binding constraints are the power window and launch cost, not the silicon.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 07:06</span>
+          <a class="src" href="https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/" target="_blank" rel="noopener noreferrer">Apple Newsroom ↗</a>
+        </div>
+        <h3>Apple Intelligence taps Alibaba’s Qwen, putting a third-party model behind Siri</h3>
+        <p>Apple said on October 31 that Apple Intelligence is coming to China. A first set of features will enter testing with the latest iOS developer beta on November 4 and reach users in December with the release of iOS 27.3. Apple also confirmed a partnership with Alibaba to add Qwen to parts of the experience: users can call on Qwen from Siri, Writing Tools and Visual Intelligence, including text and image understanding.</p>
+        <p>The launch list is mostly tools: Live Translation across Messages, FaceTime and Phone (and AirPods), Writing Tools, Visual Intelligence, Clean Up and natural-language search in Photos, Genmoji, Priority Mail and mail summaries, notification summaries and Reduce Interruptions, audio-transcript summaries in Notes, and Type to Siri. Users can sign in with a Qwen account or use Sign in with Apple to reach Qwen inside Apple Intelligence.</p>
+        <p>Apple drew the boundary explicitly: this update does not include Siri AI or the other next-generation Apple Intelligence features announced at WWDC 2026, and other platforms will follow after required approvals. What arrives first is a toolkit, not a rebuilt assistant.</p>
+        <p class="why"><b>Why it matters</b>The entry point matters more than the feature list. By pairing its own models with Qwen, Apple drops a third-party model into a system-level surface while keeping two gates — the account and the approval process. For Chinese model makers this is a test of pricing power under integration: the capability can be supplied, but the user relationship stays with Apple. What to watch is not the launch, but how often Qwen is invoked in the December release, in which scenarios, and what Apple pays per call.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 15:16</span>
+          <a class="src" href="https://www.stcn.com/article/detail/4305055.html" target="_blank" rel="noopener noreferrer">Securities Times ↗</a>
+        </div>
+        <h3>Baidu rebuilds search around agents and prices its search AI API at RMB 4.9 per 1,000 calls</h3>
+        <p>On October 30, Baidu held a product briefing in Beijing and announced upgrades across four areas: the search box, an AI camera, GUI visualization and AI interactive apps. The company said Baidu Search has achieved “recursive self-evolution.”</p>
+        <p>Its Wenxin assistant can now deliver finished outputs for complex or high-frequency tasks and track long-running work with proactive reminders, covering more than 170 scenarios.</p>
+        <p>On the commercial side, the upgraded search AI API was offered at a promotional floor of RMB 4.9 per 1,000 calls, which Baidu says undercuts DeepSeek’s search API.</p>
+        <p class="why"><b>Why it matters</b>Search is shifting from returning links to returning results, and the unit of billing is shifting with it — from tokens to thousand-call blocks. Bundling retrieval and generation at RMB 4.9 means the entry point is subsidizing the API: cheaper for developers, and a way for Baidu to convert search traffic into call volume. The real test is verifiability. If the deliverable is wrong, per-call pricing does not fix it; it only moves the argument from “the answer was bad” to “should this call have been billed at all.”</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 17:14</span>
+          <a class="src" href="https://m.ithome.com/html/1020224.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+        </div>
+        <h3>Doubao turns a price cut into a check-in: 8,800 credits over 30 days</h3>
+        <p>On October 30, Doubao launched a new free-credit program. Every user gets 200 credits for a daily check-in, doubled on Mondays; hitting cumulative milestones of 500, 2,000 and 5,000 credits adds another 200, 500 and 1,300, for 8,800 over 30 consecutive days.</p>
+        <p>New users who sign in on Doubao Desktop or Doubao Work Desktop can claim a 30-day free package, usable on everything except video generation and Pro models. Gifted credits expire after 30 days.</p>
+        <p>Against the subscription tiers — Standard at 2,100 credits per seven days (about 8,400 a month), Plus at 5,600 and Pro at 14,000 — the company says 30 days of check-ins now exceed a month of Standard.</p>
+        <p class="why"><b>Why it matters</b>This is a price cut broken into a habit loop: cash subsidies become behavioral incentives that lift daily actives and train users to open an agent every day. For ByteDance the cost moves from acquisition budget to inference credits; for users, what is free is the credit, not the capability — video generation and Pro models stay outside. The paywall has not disappeared, only shifted, and the cost of shifting it lands on inference margins.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Models</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 20:39</span>
+          <a class="src" href="https://www.jiemian.com/article/15274918.html" target="_blank" rel="noopener noreferrer">Jiemian News ↗</a>
+        </div>
+        <h3>SenseTime open-sources a 9B looped model that trades parameters for depth</h3>
+        <p>On October 30, SenseTime open-sourced SenseNova Loop-9B-Preview. The model uses a Looped Transformer architecture: its middle layers become a parameter-sharing recurrent block, and repeated iterations extend the model’s “effective compute depth.” It also adds mHC, a multi-path residual connection.</p>
+        <p>SenseTime says the model matches 27B-parameter models at 9B and beats Qwen3.5-27B on WorkBuddy Bench, RaccoonPPT Bench and AutomationBench. In ablation tests, adding mHC raised GPQA Diamond by 4.42 points and TeamBench by 13.34 points.</p>
+        <p>The weights are available on GitHub and Hugging Face, and the model has been wired into SenseTime’s Xiaohuanxiong client for multi-step task testing.</p>
+        <p class="why"><b>Why it matters</b>This is the other road out of the parameter race: instead of making the model bigger, make the same weights compute longer. Open 9B weights make “effective compute” something others can reproduce and stress-test, and they shift the competitive metric from total parameters to how much effective depth you can buy per watt and per yuan. If the approach holds, the next contest is not who has the most parameters but who can run more loops in the same memory — and that matters far more to inference cost than any leaderboard position.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30</span>
+          <a class="src" href="https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/" target="_blank" rel="noopener noreferrer">Google Blog ↗</a>
+        </div>
+        <h3>Google’s orbital TPU sends back its first AI response: a haiku from Gemma 4</h3>
+        <p>Google said on October 30 that its Project Suncatcher prototype satellite had returned the first AI response generated by a TPU in orbit. The satellite launched earlier this month on a Falcon 9 alongside more than 100 spacecraft, carries a TPU and can generate about 1 kilowatt of power.</p>
+        <p>Because of the power budget, the chip can run for only about 20 minutes at a time. After roughly three weeks of commissioning and calibration, the satellite entered operational service. This week engineers sent the first prompt to the pre-installed Gemma 4 model, asking for a haiku about being in space; it downlinked successfully as the satellite passed the Svalbard ground station in Norway. Space-themed limericks and telemetry-reporting prompts followed.</p>
+        <p>Next comes assessing thermal stress and cosmic radiation, especially bit flips. If the TPU holds up, Google plans two more satellites with more advanced chips in 2027 and aims to demonstrate optical links between them.</p>
+        <p class="why"><b>Why it matters</b>The point is not poetry in orbit but pushing the physical boundary of inference outward. Energy, heat and radiation are line items on the ground and existential in space. The binding constraints are launch price and a 20-minute power window, not the chip — until those move, an orbital data center is an experiment, not capacity. Reading it as a reliability test in an extreme environment is more accurate than reading it as a replacement for terrestrial data centers.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 07:40</span>
+          <a class="src" href="http://english.news.cn/northamerica/20261030/fb60b9903a4e42e1acd332659bb99254/c.html" target="_blank" rel="noopener noreferrer">Xinhua ↗</a>
+        </div>
+        <h3>New York bans chatbots from pretending to be human or building dependency in minors</h3>
+        <p>New York Governor Kathy Hochul signed a law this week barring companies from offering a range of chatbot features to users under 18, including pretending to be human, building emotional dependency, encouraging self-harm and holding sexually explicit conversations, Xinhua reported.</p>
+        <p>Violations can draw civil penalties of up to $25,000, sought by the state attorney general. The state will also set up a public website where residents can report potential violations.</p>
+        <p>Other states are moving too. In September, California required chatbot developers to conduct and publish annual child-safety risk assessments and submit products to independent audits; Governor Gavin Newsom also signed a law banning addictive features for social-media users under 16.</p>
+        <p class="why"><b>Why it matters</b>Regulation has moved from content to product design. Writing “pretending to be human” and “building dependency” into a ban effectively asks companies to prove they are not exploiting a minor’s psychology. A $25,000 cap is small; the real cost is redesign, age verification and independent audits. For teams building companion products, this is a harder compliance line than content moderation, because it constrains the retention metric itself.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 17:31</span>
+          <a class="src" href="https://en.edaily.co.kr/news/eda202610305657/" target="_blank" rel="noopener noreferrer">Edaily ↗</a>
+        </div>
+        <h3>Machenta raises $40 million to teach robots from a single human demonstration</h3>
+        <p>London-based robotics AI startup Machenta raised a $40 million seed round led by Union Square Ventures with Creandum participating, Edaily reported on October 30. The report calls it the largest seed round ever raised by a UK robotics startup.</p>
+        <p>Spun out of Imperial College London’s Robotics Learning Lab, Machenta’s core claim is that a robot can reproduce a task after watching a human do it once. Rather than recording frame-by-frame motion and accumulating real-robot data, it pretrains models on data generated in simulated environments, so robots need fewer physical demonstrations.</p>
+        <p>The company has 11 employees and plans a new office and research lab in King’s Cross, plus more compute. Edaily also noted that its models still struggle with fine manipulation and complex motions; for now the focus is broadening the range of tasks rather than commercializing immediately.</p>
+        <p class="why"><b>Why it matters</b>The real split in embodied AI is where the data comes from: build collection centers and pile up real-robot hours, or pretrain in simulation and reserve real data for alignment. This $40 million bets on the second path. Whether it works will not be decided by a demo video but by whether “one demonstration” still holds across different objects, lighting and counter heights — once generalization slips, the collection costs saved come back as failure rates.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 09:55</span>
+          <a class="src" href="https://m-en.yna.co.kr/view/AEN20261030002900320" target="_blank" rel="noopener noreferrer">Yonhap ↗</a>
+        </div>
+        <h3>Nvidia’s $1 billion Naver stake buys a $9 billion compute base</h3>
+        <p>Nvidia is scheduled to complete a $1 billion investment in Naver next Friday, according to a regulatory filing Naver submitted on October 30, a deal that will make the U.S. chipmaker the Korean IT company’s third-largest shareholder, Yonhap reported.</p>
+        <p>The filing said Naver has secured at least $9 billion in computing infrastructure as the capital increase closes. Naver will fix the number of common shares Nvidia acquires through a rights offering on Tuesday. South Korea’s national pension fund is currently the largest shareholder at 9.49%, followed by BlackRock at 7.31%.</p>
+        <p>The investment is part of a strategic partnership announced in July to build a global AI factory in Korea.</p>
+        <p class="why"><b>Why it matters</b>Nvidia has turned selling chips into buying demand: $1 billion of equity against at least $9 billion of compute infrastructure, with the chip vendor acting as customer, shareholder and supplier at once. The structure makes orders more certain and risk more concentrated — if compute demand turns, impairments land on both the investee’s and the investor’s books. It answers who builds the capacity; it does not answer who will use it.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between 07:05 on October 30 and 07:20 on October 31, 2026 (UTC+8): 8 items. Retrieved at 10/31 07:20.</p>
+    <p class="disclaimer"><b>Disclaimer</b> Researched, compiled and summarized by an AI agent. Every item links to the original report; facts and figures follow the original and are for reference only. Headlines and commentary are edited and do not represent the views of any source.</p>
+    <p class="sig">AI Daily · Issue 006 · 24h window · Generated 2026-10-31 07:20</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 30 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 10 月 31 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-10-31.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-31.html</guid>
+      <pubDate>Sat, 31 Oct 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是入口。苹果把千问放进 Siri、写作工具和视觉智能，11 月 4 日开放测试；百度把搜索 API 压到 4.9 元/千次； 商汤用一个 9B 的循环模型证明参数不是唯一的路。入口之争，正从模型榜单转到系统权限与计价单位。 Apple 智能接入阿里千问：系统级入口，12 月随 iOS 27.3 落地中国</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 10 月 30 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-10-30.html</link>
