@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 10 月 30 日</title>
+<meta name="description" content="2026-10-30 AI 日报：24 小时窗口（10/29 09:05 – 10/30 09:05），9 条，覆盖 Alphabet 现金流、智元 AI Day、豆包工作开放、OpenAI Model Spec、纽约 RAISE 2.0 与光通信并购。">
+<meta property="og:title" content="AI 日报 · 2026 年 10 月 30 日">
+<meta property="og:description" content="2026-10-30 AI 日报：24 小时窗口（10/29 09:05 – 10/30 09:05），9 条，覆盖 Alphabet 现金流、智元 AI Day、豆包工作开放、OpenAI Model Spec、纽约 RAISE 2.0 与光通信并购。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily/2026-10-30.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/daily/2026-10-30.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily/2026-10-30.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily/2026-10-30-en.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报（中文）" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily (English)" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=6">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-10-30-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 005 期</span>
+    </div>
+    <h1 class="date">2026 年 10 月 30 日<span class="weekday">FRI</span></h1>
+    <p class="deck">今天没有新模型，主线是 AI 开始算账：<em>Alphabet</em> 因自由现金流转负单日蒸发约 5000 亿美元；
+      智元发布 GO-3 与灵渠 OS，并用 Worken 给机器人记“有效工时”；豆包工作向 Kimi、GLM、DeepSeek 开放。
+      资本、平台与具身三条线，都在回答同一个问题——AI 的钱和活，怎么算。</p>
+    <div class="metabar"><span class="pill">第 005 期</span>
+      <span class="dot"></span>
+      <span>窗口 10/29 09:05 – 10/30 09:05</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 9 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#capital"><span class="n">01</span>行业与资本</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Alphabet 单日蒸发约 5000 亿美元。</b>Q3 营收 1276 亿美元、云收入翻倍，但资本开支达 514 亿美元，自由现金流 -91 亿美元，搜索增速降到 12%。市场开始按基础设施公司而非搜索现金牛给谷歌定价。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>智元发布 GO-3 Preview 与灵渠 OS 1.0。</b>GO-3 登顶 RoboDojo、RoboTwin、RoboColiseum 三个榜单，年底开源；智元同时提出 Worken（有效智能工时），试图给机器人劳动一把统一标尺。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>豆包工作向企业开放第三方模型。</b>首批接入 Kimi 3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash，企业无需单独采购，按已有 AI 点数计费。字节在企业 AI 市场从卖模型转向做平台。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 06:56</span>
+          <a class="src" href="https://www.tmtpost.com/agent/ai-article/21842" target="_blank" rel="noopener noreferrer">钛媒体 ↗</a>
+        </div>
+        <h3>Alphabet 单日蒸发约 5000 亿美元：AI 资本开支开始被现金流定价</h3>
+        <p>10 月 29 日美股收盘，Alphabet 跌 12.73%，创 2004 年上市以来最大单日跌幅，市值单日蒸发约 5000 亿美元。三季度营收 1276 亿美元、同比增 25%，谷歌云营收 307 亿美元、同比翻倍，但搜索营收增速从上一季度的 17% 放缓到 12%，搜索营收约 633 亿美元。</p>
+        <p>真正触发抛售的是现金流：季度资本开支 514 亿美元，自由现金流 -91 亿美元，连续第二个季度为负，远超分析师预期的 -27 亿美元；全年资本开支指引上调至 1950–2050 亿美元，并暗示 2027 年还会显著增加。</p>
+        <p>市场开始把谷歌从“搜索现金牛”按“高资本开支、低自由现金流的基础设施公司”重新定价。AI 搜索让答案更完整，却削弱了广告点击；云增长再快，也还覆盖不了当季资本开支。</p>
+        <p class="why"><b>看点</b>这不是一份“业绩差”的财报，而是一次估值模型的切换：AI 投入从加分项变成要先回答回报期的负债。接下来每个超大规模云厂商都会被同一把尺子量——资本开支、自由现金流、搜索/广告的变现斜率。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/29 23:55</span>
+          <a class="src" href="https://www.chaincatcher.com/en/article/2300068" target="_blank" rel="noopener noreferrer">ChainCatcher ↗</a>
+        </div>
+        <h3>Cohere 估值升至 205 亿美元：加拿大政府与英伟达参投</h3>
+        <p>Cohere 10 月 29 日确认新一轮融资首期完成，估值达到 205 亿美元，整轮规模最高可达 50 亿美元。加拿大政府承诺最高投资 11.4 亿美元，英伟达等产业投资方参与。</p>
+        <p>Cohere 主打企业级大模型与私有化部署，客户集中在金融、制造和公共部门。与 OpenAI、Anthropic 的通用助手路线不同，它更依赖把模型放进客户自己的云、权限和数据边界里。</p>
+        <p>这轮融资也带有明显的产业政策色彩：加拿大把 Cohere 当作本土 AI 冠军，英伟达则通过投资锁定推理算力需求。估值能否撑住，要看企业合同续约和推理收入，而不是融资额。</p>
+        <p class="why"><b>看点</b>企业 AI 的估值锚正在从“模型能力”转向“合同质量”。Cohere 拿到政府与英伟达的双重背书，但 205 亿美元对应的是长期企业合同，不是 demo。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 07:00</span>
+          <a class="src" href="http://www.nbd.com.cn/articles/2026-10-29/4627827.html" target="_blank" rel="noopener noreferrer">每日经济新闻 ↗</a>
+        </div>
+        <h3>迈威尔拟收购 Lumentum：AI 数据中心的下一场并购在光通信</h3>
+        <p>10 月 29 日，媒体援引知情人士称，芯片设计公司迈威尔科技正就收购光通信龙头 Lumentum 展开深入谈判，交易最快下周官宣。双方尚未达成最终协议，条款和对价仍可能变化，谈判也可能终止。</p>
+        <p>Lumentum 生产用于云计算与 AI 数据中心的光学及光子产品，包括激光器、光学元件和网络系统。随着算力集群从“堆 GPU”转向“堆带宽、降功耗”，光互连正在成为 AI 基础设施的稀缺环节。</p>
+        <p>英伟达此前已投资 Lumentum，既是客户又是股东；若迈威尔接盘，客户、供应商与竞争对手的身份会叠在一起，整合难度和监管审查都不会小。</p>
+        <p class="why"><b>看点</b>AI 基建的瓶颈正从芯片本身转向芯片之间的连接。谁控制光器件，谁就掌握下一代集群的带宽与功耗曲线；但这笔交易的溢价和整合成本，可能比“买到稀缺资产”更先到来。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 06:30</span>
+          <a class="src" href="http://www.nbd.com.cn/articles/2026-10-29/4629521.html" target="_blank" rel="noopener noreferrer">每日经济新闻 ↗</a>
+        </div>
+        <h3>豆包工作向企业开放第三方模型：Kimi、GLM、DeepSeek 首批接入</h3>
+        <p>10 月 29 日，豆包工作宣布向企业客户推出三方模型服务，首批接入 Kimi 3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 等系列模型。功能上线后默认开启，企业无需另行向模型厂商采购或申请，按用量扣除已有 AI 点数。</p>
+        <p>此前豆包工作只支持字节自研模型；这次把竞品模型放进同一个计费和企业权限体系，意味着字节在企业 AI 市场的角色从“卖模型”转向“做平台”。对客户来说，选型成本下降；对模型厂商来说，分发入口多了一个，但议价权也更依赖平台。</p>
+        <p class="why"><b>看点</b>企业 AI 的竞争从“谁的模型更强”转向“谁掌握工作流入口”。豆包工作用开放换黏性，真正的胜负手是权限、数据边界和计费透明度，而不是模型名单。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 06:30</span>
+          <a class="src" href="http://www.nbd.com.cn/articles/2026-10-29/4629521.html" target="_blank" rel="noopener noreferrer">每日经济新闻 ↗</a>
+        </div>
+        <h3>启元机器人接入腾讯 WorkBuddy：Q1、T1 打通会议、读书、音乐与绘本</h3>
+        <p>10 月 29 日，启元机器人与腾讯云达成战略合作，以个人机器人和 WorkBuddy 为核心载体，做云边端协同的消费级机器人方案。启元 Q1、启元 T1 接入后，将打通腾讯会议、微信读书、QQ 音乐、绘本生成等技能。</p>
+        <p>WorkBuddy 此前已接入记忆眼镜、Plaud、Rokid 等硬件；启元的加入补上了“物理执行”环节——从看见、听见，走到在物理世界里做事。消费级机器人缺的往往不是单个技能，而是账号、内容与服务生态的连续性。</p>
+        <p class="why"><b>看点</b>机器人进家庭的关键不是多一个语音助手，而是能不能接管已有的数字生活。腾讯用 WorkBuddy 做入口，启元提供身体，接下来要验证的是隐私边界与真实使用频率。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/30 02:33</span>
+          <a class="src" href="https://www.tmtpost.com/agent/ai-article/21839" target="_blank" rel="noopener noreferrer">钛媒体 ↗</a>
+        </div>
+        <h3>OpenAI 重写 Model Spec：从案例法收束为五条价值观</h3>
+        <p>OpenAI 10 月 29 日发布新版 Model Spec，把原先约百页、案例法式的行为规则，收束为五条价值观：忠实于人类意图、伤害最小化、诚实与透明、促进人的能动性、以关怀行事。每条价值观下仍保留 Root / System / Developer / User / Guideline 的权限层级和红线。</p>
+        <p>变化在于“规则变薄、裁量权变厚”：平台守住不可覆盖的红线，红线内的大量取舍交给开发者和企业，通过 system/developer 指令去配置。OpenAI 称这份规范已用于训练，但生产模型尚未完全符合。</p>
+        <p>这与模型从对话走向智能体有关：动作组合无法穷举，只能用高阶原则加权限层级来约束。责任也随之下移——企业需要自己定义风险、审批和回滚。</p>
+        <p class="why"><b>看点</b>规范从“清单”变成“宪法”，听起来更灵活，实际是把治理成本转移给调用方。真正要看的不是五条价值观写得多好，而是 OpenAI 是否给出可量化、可复现的冲突评估基准。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/29</span>
+          <a class="src" href="https://dailyaibrief.com/news/new-york-bill-limit-compute-risky-ai-models-y6FcXBOG" target="_blank" rel="noopener noreferrer">AI Brief ↗</a>
+        </div>
+        <h3>纽约提出 RAISE Act 2.0：可限制算力、72 小时报告、独立审查员</h3>
+        <p>纽约州参议员 Andrew Gounardes 与议员 Jordan Wright 10 月 29 日提出 RAISE Act 2.0（S.10731），在去年 RAISE Act 基础上加码：大型开发者需按季度报告 AI 研究自动化比例与算力使用，风险或自动化能力出现重大跃升须在 72 小时内报告。</p>
+        <p>新设的 DIGIT 办公室可在认定灾难性风险时限制训练算力、要求暂停部署；州总检察长可向法院申请叫停。适用范围扩至三年 AI 研发投入超 10 亿美元的公司，算力门槛对齐欧盟 AI Act。</p>
+        <p>法案还要求企业聘请州执照的独立“前沿审查员”，每年审计合规、每 90 天做灾难风险评估，报告公开；举报人保护写入法律，初犯罚款最高每天 100 万美元，再犯每天 300 万美元。</p>
+        <p class="why"><b>看点</b>这是美国州层面第一次把“放慢前沿”写成可执行的行政权力：不是等事故后罚款，而是事前限制算力。它会不会被联邦优先权或诉讼挡住另说，但“算力可被监管”这个先例已经立起来了。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/29 22:25</span>
+          <a class="src" href="https://36kr.com/p/4047032889800965" target="_blank" rel="noopener noreferrer">36氪 ↗</a>
+        </div>
+        <h3>智元发布 GO-3 Preview 与灵渠 OS 1.0：给机器人记“有效工时”</h3>
+        <p>10 月 29 日智元 A.I.DAY 上，智元发布 GO-3 Preview 具身基座模型、WITA-OMNI 全模态交互模型、AGILE 运动智能框架、灵渠 OS 1.0 与 AHA3 硬件架构。GO-3 采用“先预测、后动作”的一体化决策，登顶 RoboDojo、RoboTwin、RoboColiseum 三个榜单，计划 2026 年底开源。</p>
+        <p>灵渠 OS 1.0 是业内首个具身智能原生操作系统，已适配 15 类、100 多种外设，1000Hz 指令下误差小于 4 微秒；智元计划年底开源约 2 亿行代码、5000 多个生态软件包，并向开放原子开源基金会捐赠。</p>
+        <p>智元还提出 Worken（有效智能工时）= 活跃机器人数量 × 自主工作时长 × 产出效能比，试图给“机器人在岗位上干了多少活”一把统一标尺。彭志辉披露，2026 年上半年营收接近 20 亿元，累计下线 2 万台。</p>
+        <p class="why"><b>看点</b>机器人行业过去比动作、比参数，智元这次比“工时”。Worken 如果被客户接受，卖机器人就会变成卖生产力套餐；但前提是数据可审计、产出可复核，否则只是一个营销单位。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/29 09:19</span>
+          <a class="src" href="https://www.bjnews.com.cn/detail/1793236287129864.html" target="_blank" rel="noopener noreferrer">新京报 ↗</a>
+        </div>
+        <h3>文远知行子公司景烁科技首轮融资数千万美元，押注物理 AI 数据底座</h3>
+        <p>10 月 29 日，文远知行披露子公司景烁科技完成数千万美元 pre-A 轮，投资方包括嘉御资本、香港科技园、天狼星资本。资金将用于扩充研发，深化数据平台、世界模型与技能资产引擎的协同。</p>
+        <p>景烁聚焦具身智能与大模型所需的数据和世界模型基础设施，核心团队来自文远知行的物理 AI 研发体系。公司称订单规模超数十亿元，年收入增长超过 100%，服务数十家世界模型和具身智能企业。</p>
+        <p>融资后景烁仍作为文远知行控股子公司独立运营，并继续并入合并报表。自动驾驶公司把积累的真实世界数据与工程能力拆出来卖给具身智能行业，正在成为一条新的基础设施赛道。</p>
+        <p class="why"><b>看点</b>具身智能最贵的不是本体，而是“见过足够多真实世界”的数据。景烁把文远十年的路测资产产品化，但数据授权、场景迁移和客户复购，才是这门生意的真门槛。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 10 月 29 日 09:05 至 2026 年 10 月 30 日 09:05（北京时间）之间发布的报道，共 9 条。检索时间 10/30 09:05。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标注“据…报道”“未核实”的内容未经独立核实；标题与点评为编辑加工，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 005 · 24h window · Generated 2026-10-30 09:05</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

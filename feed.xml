@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 29 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 10 月 30 日</title>
+      <link>https://kaixinguor.com/daily/2026-10-30.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-30.html</guid>
+      <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
+      <description>今天没有新模型，主线是 AI 开始算账：Alphabet 因自由现金流转负单日蒸发约 5000 亿美元； 智元发布 GO-3 与灵渠 OS，并用 Worken 给机器人记“有效工时”；豆包工作向 Kimi、GLM、DeepSeek 开放。 资本、平台与具身三条线，都在回答同一个问题——AI 的钱和活，怎么算。 Alphabet 单日蒸发约 5000 亿美元：AI 资本开支开始被现金流定价</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 10 月 29 日</title>
       <link>https://kaixinguor.com/daily/2026-10-29.html</link>

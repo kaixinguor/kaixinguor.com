@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 29 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · October 30, 2026</title>
+      <link>https://kaixinguor.com/daily/2026-10-30-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily/2026-10-30-en.html</guid>
+      <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
+      <description>No new frontier model landed today. The story is accountability: Alphabet lost roughly $500 billion in a single session as free cash flow turned negative; AgiBot unveiled GO-3 and Lingqu OS and proposed “Worken” to measure robot labor; Doubao Work opened its enterprise platform to Kimi, GLM and DeepSeek. Capital, platforms and embodied AI are all answering the same question — how do you account for AI’s money and work? Alphabet loses about $500 billion in a day as AI capex meets cash flow</description>
+    </item>
     <item>
       <title>AI Daily · October 29, 2026</title>
       <link>https://kaixinguor.com/daily/2026-10-29-en.html</link>
