@@ -2,9 +2,9 @@
 /* 发布一期 AI 日报：daily-ai/ + index.html + feed.xml / feed-en.xml + sitemap.xml
 
    用法：
-     node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html
-     node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html --en ../ai-daily/2026-10-26-en.html
-     node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html --social --push
+     node scripts/publish-daily.mjs daily-ai/2026-10-26.html
+     node scripts/publish-daily.mjs daily-ai/2026-10-26.html --en ../ai-daily/2026-10-26-en.html
+     node scripts/publish-daily.mjs daily-ai/2026-10-26.html --social --push
 
    选项：
      --en <file>        英文版；不写就找同目录的 YYYY-MM-DD-en.html

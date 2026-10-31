@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-/* 为 AI 日报生成公众号「图片消息」成品图（本地文件，不上线）。
+/* 为 AI 日报 / 经济日报生成公众号「图片消息」成品图（本地文件，不上线）。
 
-   输入：一期中文日报 HTML（ai-daily/ 的源稿，或 site/daily-ai/ 的成品页）
+   输入：一期中文日报 HTML（daily-ai/ 或 daily-economy/ 里的页面）
    输出：5 张 1080×1440（3:4）排版卡
      wechat/01-cover.png → 05-overview.png
    外加 manifest.json、README.txt，以及可整段复制的
@@ -10,12 +10,12 @@
    规则（不要改回去做 6 张、不要加小红书）：
      - 只服务公众号，小红书图已停做；
      - 固定 5 张：封面 → 3 条重点 → 速览，没有尾页；
-     - 标题固定为「AI 日报 · M月D日」，不写期号、不写当天 headline。
+     - 标题固定为「日报名 · M月D日」，不写期号、不写当天 headline；日报名按源稿自动识别。
    细节见 docs/社交配图规则.md。
 
    用法：
-     node scripts/make-social.mjs ../ai-daily/2026-10-29.html
-     node scripts/make-social.mjs daily-ai/2026-10-29.html --out ../ai-daily/social/2026-10-29
+     node scripts/make-social.mjs daily-ai/2026-10-29.html
+     node scripts/make-social.mjs daily-economy/2026-10-29.html --out /tmp/econ-images
      node scripts/make-social.mjs daily-ai/2026-10-29.html --zip   # 需要整包发送时才打包
 
    依赖：Python 3 + playwright（chromium）。首次使用：
@@ -88,6 +88,15 @@ try {
 if (issue.lang !== "zh") {
   console.log(`! 这是英文版日报，成品图仍按中文版式生成。`);
 }
+
+/* 日报类型：按路径判断，决定品牌名、标题和默认输出目录。 */
+const SECTION = /economy|经济/i.test(source) ? "economy" : "ai";
+const BRAND = {
+  ai: { zh: "AI 日报", en: "Daily AI Brief", dir: "daily-ai", zip: "AI" },
+  economy: { zh: "经济日报", en: "Daily Economy Brief", dir: "daily-economy", zip: "Economy" }
+}[SECTION];
+issue.brandZh = BRAND.zh;
+issue.brandEn = BRAND.en;
 
 /* 图片底部与图片消息描述里的声明，直接取自当天页面（含“声明”标签），保证和网页一字不差。 */
 const DISCLAIMER_FALLBACK =
@@ -212,7 +221,7 @@ const stories = pickStories(issue);
 
 /* ---------- 输出目录 ---------- */
 
-const defaultOut = path.resolve(ROOT, "..", "ai-daily", "social", issue.dateISO);
+const defaultOut = path.resolve(ROOT, BRAND.dir, "social", issue.dateISO);
 const outDir = outArg ? path.resolve(process.cwd(), outArg) : defaultOut;
 
 if (fs.existsSync(outDir) && fs.readdirSync(outDir).length) {
@@ -271,7 +280,7 @@ for (const platform of platforms) {
   }
 }
 
-console.log(`\nAI 日报 · ${issue.dateISO} · 第 ${issue.issueNo || "—"} 期`);
+console.log(`\n${BRAND.zh} · ${issue.dateISO} · 第 ${issue.issueNo || "—"} 期`);
 console.log(`  ${stories.length} 条重点：${stories.map((s) => clipTitle(s.card.titleText, 36)).join(" / ")}`);
 console.log(`  输出：${outDir}`);
 console.log(`  共 ${jobs.length} 张（公众号图片消息 1080×1440）`);
@@ -327,7 +336,7 @@ if (flags.has("--zip")) {
   for (const platform of platforms) {
     const dir = path.join(outDir, platform.dir);
     const files = designs.map((d) => `${d.name}.png`);
-    const zipName = `AI-Daily-${issue.dateISO}-${platform.key}.zip`;
+    const zipName = `${BRAND.zip === "AI" ? "AI" : "Economy"}-Daily-${issue.dateISO}-${platform.key}.zip`;
     const zipPath = path.join(outDir, zipName);
     fs.rmSync(zipPath, { force: true });
     const zip = spawnSync("zip", ["-q", "-j", zipPath, ...files], { cwd: dir });
@@ -343,7 +352,7 @@ if (flags.has("--zip")) {
 /* ---------- 说明文件与 manifest ---------- */
 
 const [y, mo, da] = issue.dateISO.split("-").map(Number);
-const wechatTitle = `AI 日报 · ${mo}月${da}日`;
+const wechatTitle = `${BRAND.zh} · ${mo}月${da}日`;
 const overviewNo = String(stories.length + 2).padStart(2, "0");
 
 const publishSteps = [
@@ -355,7 +364,7 @@ const publishSteps = [
 ];
 
 const readme = [
-  `AI 日报 · ${issue.dateISO} · 第 ${issue.issueNo || "—"} 期`,
+  `${BRAND.zh} · ${issue.dateISO} · 第 ${issue.issueNo || "—"} 期`,
   ``,
   `公众号图片消息 ${designs.length} 张（1080×1440，3:4）：wechat/01-cover.png → ${overviewNo}-overview.png`,
   ``,
@@ -378,7 +387,7 @@ const files = designs.map((d) => `wechat/${d.name}.png`);
 
 const captions = [
   `**01 · 封面**`,
-  `> ${clipTitle(`AI 日报 · 第 ${issue.issueNo || "—"} 期｜${issue.headline}`, 60)}`,
+  `> ${clipTitle(`${BRAND.zh} · 第 ${issue.issueNo || "—"} 期｜${issue.headline}`, 60)}`,
   ``
 ];
 stories.forEach((story, index) => {
@@ -428,6 +437,7 @@ const copyFile = [
 fs.writeFileSync(path.join(outDir, "公众号-图片消息.md"), copyFile, "utf8");
 
 const manifest = {
+  section: SECTION,
   date: issue.dateISO,
   issue: issue.issueNo || "",
   issueLabel: issue.issueLabel || "",

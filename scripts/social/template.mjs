@@ -270,6 +270,8 @@ function disclaimerHtml(issue) {
 
 function shell(issue, { body, cat = "", cls = "", footLeft = "", footRight = "" }) {
   const color = CHAPTER_COLORS[cat] || "#b23a1e";
+  const brandZh = issue.brandZh || "AI 日报";
+  const brandEn = issue.brandEn || "Daily AI Brief";
   const foot = footLeft || footRight
     ? `<footer class="foot"><span>${footLeft}</span><span class="url">${footRight}</span></footer>`
     : "";
@@ -277,13 +279,13 @@ function shell(issue, { body, cat = "", cls = "", footLeft = "", footRight = "" 
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>AI 日报 ${escapeHtml(issue.dateISO)}</title>
+<title>${escapeHtml(brandZh)} ${escapeHtml(issue.dateISO)}</title>
 <style>${CSS}</style>
 </head>
 <body style="--c:${color}">
 <div class="page ${cls}">
   <header class="top">
-    <div class="brand"><span class="cn">AI 日报</span><span class="en">Daily AI Brief</span></div>
+    <div class="brand"><span class="cn">${escapeHtml(brandZh)}</span><span class="en">${escapeHtml(brandEn)}</span></div>
     <div class="issue">第 <b>${escapeHtml(issue.issueNo || "—")}</b> 期 · ${escapeHtml(issue.dateDot)}</div>
   </header>
   ${body}
@@ -318,7 +320,7 @@ export function renderCover(issue) {
   return shell(issue, {
     body,
     cls: "cover",
-    footLeft: `AI 日报 · 第 ${issue.issueNo || "—"} 期`,
+    footLeft: `${issue.brandZh || "AI 日报"} · 第 ${issue.issueNo || "—"} 期`,
     footRight: `kaixinguor.com · ${d.compact}`
   });
 }
@@ -352,7 +354,7 @@ export function renderStory(issue, story, index, total, others = []) {
     body,
     cat: card.cat,
     cls: "story",
-    footLeft: `AI 日报 · 第 ${issue.issueNo || "—"} 期 · ${escapeHtml(card.chapterName)}`,
+    footLeft: `${issue.brandZh || "AI 日报"} · 第 ${issue.issueNo || "—"} 期 · ${escapeHtml(card.chapterName)}`,
     footRight: `重点 ${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")} · ${d.compact}`
   });
 }
@@ -379,7 +381,7 @@ export function renderOverview(issue) {
   return shell(issue, {
     body,
     cls: "overview",
-    footLeft: `AI 日报 · 第 ${issue.issueNo || "—"} 期`,
+    footLeft: `${issue.brandZh || "AI 日报"} · 第 ${issue.issueNo || "—"} 期`,
     footRight: `速览 · ${d.compact} · kaixinguor.com`
   });
 }

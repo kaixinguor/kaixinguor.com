@@ -37,13 +37,13 @@ npm run preview        # http://127.0.0.1:8899/
 cd site
 
 # AI 日报 → daily-ai/ + index.html + feed.xml / feed-en.xml
-node scripts/publish-daily.mjs ../ai-daily/2026-10-26.html \
-  --en ../ai-daily/2026-10-26-en.html \
+node scripts/publish-daily.mjs daily-ai/2026-10-26.html \
+  --en daily-ai/2026-10-26-en.html \
   --push
 
 # 经济日报 → daily-economy/ + economy.html + feed-economy*.xml
-node scripts/publish-economy.mjs ../economy-daily/2026-10-30.html \
-  --en ../economy-daily/2026-10-30-en.html \
+node scripts/publish-economy.mjs daily-economy/2026-10-30.html \
+  --en daily-economy/2026-10-30-en.html \
   --push
 ```
 
@@ -57,7 +57,7 @@ node scripts/publish-economy.mjs ../economy-daily/2026-10-30.html \
 
 同一天重跑会覆盖，不会追加。`--social` 只属于 AI 日报。
 
-母版放在仓库外，和站点目录平级：`../ai-daily/`、`../economy-daily/`。
+源稿与成品同路径：`daily-ai/`、`daily-economy/` 里的 `YYYY-MM-DD.html` 既是源稿也是上线页。
 
 ---
 
@@ -69,7 +69,7 @@ npm run social -- daily-ai/2026-10-29.html
 # 或 node scripts/make-social.mjs daily-ai/2026-10-29.html
 ```
 
-默认写到仓库外的 `../ai-daily/social/YYYY-MM-DD/`，不会进 git、不会上线：
+默认写到 `daily-ai/social/YYYY-MM-DD/`（经济日报为 `daily-economy/social/`），已在 `.gitignore`，不会进 git、不会上线：
 
 - `wechat/`：**5 张** 1080×1440（3:4）：封面 → 3 条重点 → 速览，**没有尾页**
 - `公众号-图片消息.md`：标题 / 描述 / 逐图说明 / 发布步骤，直接复制去发
