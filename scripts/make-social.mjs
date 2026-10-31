@@ -4,7 +4,7 @@
    输入：一期中文日报 HTML（ai-daily/ 的源稿，或 site/daily-ai/ 的成品页）
    输出：5 张 1080×1440（3:4）排版卡
      wechat/01-cover.png → 05-overview.png
-   外加 zip、manifest.json、README.txt，以及可整段复制的
+   外加 manifest.json、README.txt，以及可整段复制的
    `公众号-图片消息.md`（标题 / 描述 / 逐图说明 / 发布步骤）。
 
    规则（不要改回去做 6 张、不要加小红书）：
@@ -16,7 +16,7 @@
    用法：
      node scripts/make-social.mjs ../ai-daily/2026-10-29.html
      node scripts/make-social.mjs daily-ai/2026-10-29.html --out ../ai-daily/social/2026-10-29
-     node scripts/make-social.mjs daily-ai/2026-10-29.html --no-zip
+     node scripts/make-social.mjs daily-ai/2026-10-29.html --zip   # 需要整包发送时才打包
 
    依赖：Python 3 + playwright（chromium）。首次使用：
      python3 -m pip install playwright
@@ -68,7 +68,7 @@ for (let i = 0; i < args.length; i++) {
 
 const sourceArg = positional[0];
 if (!sourceArg) {
-  console.error(`用法：node scripts/make-social.mjs <中文日报.html> [--out <目录>] [--no-zip] [--keep-html]`);
+  console.error(`用法：node scripts/make-social.mjs <中文日报.html> [--out <目录>] [--zip] [--keep-html]`);
   process.exit(1);
 }
 
@@ -323,7 +323,7 @@ console.log(`✓ ${jobs.length} 张图片尺寸正确`);
 /* ---------- zip ---------- */
 
 const zips = {};
-if (!flags.has("--no-zip")) {
+if (flags.has("--zip")) {
   for (const platform of platforms) {
     const dir = path.join(outDir, platform.dir);
     const files = designs.map((d) => `${d.name}.png`);
@@ -370,7 +370,7 @@ const readme = [
   `条数：${issue.count} 条 · 阅读约 ${issue.readMinutes} 分钟`,
   ``,
   `文案见同目录「公众号-图片消息.md」，可直接复制。`,
-  `说明：图片只在本地生成，不会提交到站点仓库。改版式后重跑本命令即可覆盖。`
+  `说明：图片只在本地生成，不会提交到站点仓库。改版式后重跑本命令即可覆盖；需要整包发送时加 --zip。`
 ].join("\n");
 fs.writeFileSync(path.join(outDir, "README.txt"), `${readme}\n`, "utf8");
 
@@ -461,4 +461,4 @@ if (!flags.has("--keep-html")) {
 }
 
 console.log(`\n✓ 成品目录：${outDir}`);
-console.log(`  README.txt / manifest.json 已写好，可直接取图或发 zip。`);
+console.log(`  README.txt / manifest.json 已写好，可直接取图。`);

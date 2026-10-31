@@ -66,6 +66,24 @@ export function clipProse(text = "", max = 160) {
   return head.replace(/[，。；：、,.;:\s]+$/, "") + "…";
 }
 
+/** 看点截断：优先在句号处收尾，其次在分号/逗号处收尾，最后才补省略号。
+    上限按 4 行 × 约 29 字估算，保证排版不被 CSS 从句子中间切掉。 */
+export function clipWhy(text = "", max = 172) {
+  const src = String(text).replace(/\s+/g, " ").trim();
+  if (src.length <= max) return src;
+  const head = src.slice(0, max);
+  const stops = ["。", "！", "？", "!", "?"];
+  let at = -1;
+  for (const mark of stops) at = Math.max(at, head.lastIndexOf(mark));
+  if (at > max * 0.45) return head.slice(0, at + 1);
+  const soft = ["；", ";", "，", ","];
+  let softAt = -1;
+  for (const mark of soft) softAt = Math.max(softAt, head.lastIndexOf(mark));
+  if (softAt > max * 0.6) return head.slice(0, softAt).replace(/[，,；;\s]+$/, "") + "…";
+  const cut = head.lastIndexOf(" ");
+  return (cut > max * 0.6 ? head.slice(0, cut) : head).replace(/[，。；：、,.;:\s]+$/, "") + "…";
+}
+
 function dateParts(iso) {
   const [year, month, day] = iso.split("-").map(Number);
   return {
@@ -192,7 +210,7 @@ body{
 }
 .story-sum{
   font-size:33px;line-height:1.78;color:var(--ink-2);margin-top:26px;
-  max-height:10.68em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:6;
+  overflow:hidden;display:-webkit-box;-webkit-line-clamp:6;
   text-wrap:pretty;
 }
 .why{
@@ -202,7 +220,7 @@ body{
 .why .lab{font-family:var(--mono);font-size:15px;letter-spacing:.2em;color:var(--c);font-weight:700;margin-bottom:10px}
 .why p{
   font-size:30px;line-height:1.74;color:var(--ink-2);
-  max-height:6.96em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;
+  overflow:hidden;display:-webkit-box;-webkit-line-clamp:6;
   text-wrap:pretty;
 }
 .also{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
@@ -322,8 +340,8 @@ export function renderStory(issue, story, index, total, others = []) {
   <main class="story-body">
     <div class="cmeta"><span>${escapeHtml(card.time || d.month + "/" + d.day)}</span><span class="dot"></span><span class="src">${escapeHtml(card.sourceName || "综合报道")}</span></div>
     <h1 class="story-title">${escapeHtml(protectCjk(tightenLatin(clipTitle(card.titleText, 64))))}</h1>
-    <p class="story-sum">${escapeHtml(tightenLatin(clipProse(summary, 230)))}</p>
-    ${why ? `<div class="why"><div class="lab">看点 / WHY IT MATTERS</div><p>${escapeHtml(tightenLatin(clipProse(why, 150)))}</p></div>` : ""}
+    <p class="story-sum">${escapeHtml(tightenLatin(clipProse(summary, 166)))}</p>
+    ${why ? `<div class="why"><div class="lab">看点 / WHY IT MATTERS</div><p>${escapeHtml(tightenLatin(clipWhy(why, 172)))}</p></div>` : ""}
     ${others.length ? `<div class="also">
       <div class="also-h">本 期 还 有</div>
       ${others.map((item) => `<div class="also-item"><span class="k">${String(item.rank).padStart(2, "0")}</span><span class="t">${escapeHtml(protectCjk(tightenLatin(clipTitle(item.title, 40))))}</span></div>`).join("\n      ")}

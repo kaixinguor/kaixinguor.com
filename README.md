@@ -73,7 +73,7 @@ npm run social -- daily-ai/2026-10-29.html
 
 - `wechat/`：**5 张** 1080×1440（3:4）：封面 → 3 条重点 → 速览，**没有尾页**
 - `公众号-图片消息.md`：标题 / 描述 / 逐图说明 / 发布步骤，直接复制去发
-- `AI-Daily-YYYY-MM-DD-wechat.zip`、`README.txt`、`manifest.json`
+- `README.txt`、`manifest.json`（`--zip` 时另出 `AI-Daily-YYYY-MM-DD-wechat.zip`）
 
 标题固定为 `AI 日报 · M月D日`。**只做公众号，不再生成小红书图**——完整规则见 [`docs/社交配图规则.md`](docs/社交配图规则.md)。同一天重跑会覆盖。
 
