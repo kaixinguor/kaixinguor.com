@@ -319,12 +319,12 @@ export function parseIssue(file) {
   const finalFooter = footerHtml || (isEn ? [
     `<p class="disclaimer"><b>Disclaimer</b> This issue covers reports published between ${escapeHtml(metaWindow)} (UTC+8): ${count} items. It was researched, compiled and summarized by an AI agent.</p>`,
     `<p>Every item links to the original report; facts and figures follow the original and are for reference only.</p>`,
-    `<p>Headlines and commentary are edited and do not represent the views of any source.</p>`,
+    `<p>Headlines and commentary are AI-generated and do not represent the views of any source.</p>`,
     `<p class="sig">AI Daily · Issue ${issueNo || "—"} · 24h window · Generated ${escapeHtml(generatedAt || dateDisplay)}</p>`
   ].join("\n    ") : [
     `<p class="disclaimer"><b>声明</b> 本期收录 ${escapeHtml(metaWindow)}（北京时间）之间发布的报道，共 ${count} 条。本期内容由 AI Agent 搜索、整理并总结。</p>`,
     `<p>所有条目均链接原文，事实与数字以原文为准，仅供参考。</p>`,
-    `<p>标题与点评为编辑加工，不代表任何来源立场。</p>`,
+    `<p>标题与点评由 AI 生成，不代表任何来源立场。</p>`,
     `<p class="sig">AI Daily · Issue ${issueNo || "—"} · 24h window · Generated ${escapeHtml(generatedAt || dateDisplay)}</p>`
   ].join("\n    "));
 

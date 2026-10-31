@@ -91,7 +91,7 @@ if (issue.lang !== "zh") {
 
 /* 图片底部与图片消息描述里的声明，直接取自当天页面（含“声明”标签），保证和网页一字不差。 */
 const DISCLAIMER_FALLBACK =
-  "声明 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评为编辑加工，不代表任何来源立场。";
+  "声明 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。";
 
 function readDisclaimer(file) {
   const html = fs.readFileSync(file, "utf8");
