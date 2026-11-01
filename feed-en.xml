@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 31 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 1, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-01-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-01-en.html</guid>
+      <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today’s thread is letting agents out of a single session. DeepSeek published a router/worker substrate for personal agents, Anthropic scrapped the five-hour window, and Tencent and Alibaba are lining up same-generation flagships in the same week. The unit of competition is shifting from one answer to one long-running job. DeepSeek open-sources a Super-agent design: agents that file their own pull requests</description>
+    </item>
     <item>
       <title>AI Daily · October 31, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-10-31-en.html</link>

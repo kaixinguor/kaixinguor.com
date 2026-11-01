@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 1 日</title>
+<meta name="description" content="2026-11-01 AI 日报：DeepSeek 开源 Super-agent 底座架构；Claude 取消 5 小时窗口限制；腾讯 Hy4 与阿里 Qwen4 下周同代对决；OpenAI 将定期发布社区安全报告；新芯航途 X7 Ultra 用世界模型定义车规芯片；英伟达展示 OOI 光互连原型。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 1 日">
+<meta property="og:description" content="2026-11-01 AI 日报：DeepSeek 开源 Super-agent 底座架构；Claude 取消 5 小时窗口限制；腾讯 Hy4 与阿里 Qwen4 下周同代对决；OpenAI 将定期发布社区安全报告；新芯航途 X7 Ultra 用世界模型定义车规芯片；英伟达展示 OOI 光互连原型。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-01.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-01.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-01.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-01-en.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-01-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 007 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 1 日<span class="weekday">SUN</span></h1>
+    <p class="deck">今天的主线是把 Agent 从一次会话里放出来：DeepSeek 公开了 Super-agent 的 Router/Worker 底座，Claude 直接取消了 5 小时窗口，
+      腾讯与阿里下周用同一代旗舰正面相撞。<em>竞争的单位，正从「一次回答」变成「一件被持续推进的事」。</em></p>
+    <div class="metabar"><span class="pill">第 007 期</span>
+      <span class="dot"></span>
+      <span>窗口 10/31 07:00 – 11/01 07:00</span>
+      <span class="dot"></span>
+      <span>7 条</span>
+      <span class="dot"></span>
+      <span>阅读约 8 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#products"><span class="n">01</span>产品与智能体</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>DeepSeek 开源 Super-agent 底座：中位 12.4 分钟完成多任务。</b>Router 接消息、Worker 并行干活，任务可跨 IM 群聊一直延续到 GitHub PR。取消事件直通后，Router 决策次数增加约 30%、读取缓存 token 增加约 37%——效率是拿 token 换的。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>英伟达展示 OOI 光互连原型，没有给出时间表。</b>把光引擎放到中介层上，Rubin 平台 2026 下半年导入第一代 CPO、2027 年规模放量。原型的意义是缩短电通道，量产的门槛在封装良率与可维护性。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>OpenAI 将定期发布《社区安全报告》，首期在 2027 年初。</b>2026 年三季度已向执法机关移交 200 余起案件线索；对话出现暴力执念时，ChatGPT 可自动终止，账户可被临时冻结。安全开始有报表，也就要被按报表考核。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 21:49</span>
+          <a class="src" href="https://www.qbitai.com/2026/10/506904.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>DeepSeek 开源 Super-agent 架构：AI 自己找 Bug、自己提 PR</h3>
+        <p>10 月 31 日晚，DeepSeek 公开了一套面向个人 Agent 的底座架构思路「Super-agent：迈向更自主的 Agent 系统」，并放出了原型仓库 dsh-superagent-prototype。它要解决的问题不是「模型会不会做」，而是「一个人同时只能跟进三到五个会话」：任务散在群聊、代码平台和邮件里，上下文要靠人来回搬运。</p>
+        <p>架构分两层：上层 Router 接消息、分任务、维护全局上下文；下层是一组 Worker，各自执行、互不干扰。Worker 可以「订阅」某个 GitHub PR，后续评论直接进这个 Worker，不再经 Router 转发。消息侧做了两级过滤，先用程序规则筛掉无关消息，再让模型判断剩下的事件要不要行动。</p>
+        <p>官方给的初步实验是：模拟约 300 条消息、20 项工作请求的协作环境，重复 5 次，Super-agent 任务完成时间中位数 12.4 分钟、95 分位 15.7 分钟；传统单会话方案在提示中性时，95 分位达到 29.5 分钟。代价也写了出来：取消事件直通机制后，Router 决策次数增加约 30%，读取缓存 token 增加约 37%。</p>
+        <p>另外两个工程细节值得记：一是异步 ReAct Loop，已在 DeepSeek Harness 中实现但尚未默认开启；二是计算、状态与执行环境分离，加上独立的 Watchdog 监督循环与异常恢复。文章之外，目前能验证的只有原型仓库，还没有对外可用的产品。</p>
+        <p class="why"><b>看点</b>这份架构真正改动的是「谁记住进度」。过去是人记着哪个会话进行到哪一步，现在由 Router 维护全局上下文、Worker 各自订阅后续事件——省下的是人的注意力，花掉的是 token 与调度复杂度。12.4 分钟对 29.5 分钟这个对比，测的是多任务吞吐，不是单任务质量；等它开放给外部使用时，要看的第一个指标也不是完成时间，而是「主动行动」的误报率：一个会自己找 Bug 的 Agent，找错的成本由谁承担。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 13:05</span>
+          <a class="src" href="https://www.qbitai.com/2026/10/506855.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>Claude 改订阅：Max 20x 更名 Ultra，取消 5 小时窗口</h3>
+        <p>10 月 31 日，Anthropic 调整 Claude 订阅计划：原来的 Max 5x 与 Max 20x 分别更名为 Max 和 Ultra，价格不变，仍是每月 100 美元和 200 美元。真正的变化在 200 美元档：通过账户验证的 Ultra 用户取消 5 小时使用窗口，可以在每周额度内连续使用。</p>
+        <p>其余权益维持：每周额度仍为 Pro 的 10 倍，新模型与新功能优先体验，支持 Claude Code 与后台长程任务。现有订阅用户由系统自动迁移，新账号需要等待账户验证，验证依据账号与支付历史等信息自动完成。</p>
+        <p>负责订阅产品的 Mike Overell 解释了改名：最初「20 倍」指的是单个 5 小时窗口内为 Pro 的 20 倍，后来加了每周额度，周额度却只有 Pro 的 10 倍，命名与实际不符。他为此前的沟通问题道歉。</p>
+        <p>这个时间点有点微妙：前一天 OpenAI 刚给 Pro 用户把额度翻倍。而据《华尔街日报》今年 6 月的报道，已有消费者就高价订阅的限制宣传提起诉讼，争议焦点正是 Max 5x 与 Max 20x 的实际可用量。</p>
+        <p class="why"><b>看点</b>取消 5 小时窗口，表面是放宽限制，实质是把「按时间切片」换成「按周总量」——用户不再被打断，但总量没变，重度用户只是把同样的额度用得更连续。对 Anthropic，这既是回应诉讼与舆论，也是在为长程 Agent 任务铺路：跑到一半被窗口掐断，是产品问题，不是体验问题。要观察的是周额度耗尽后的行为，那里才是真正的定价边界。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 10:06</span>
+          <a class="src" href="https://www.tmtpost.com/8187944.html" target="_blank" rel="noopener noreferrer">钛媒体 · 字母榜 ↗</a>
+        </div>
+        <h3>腾讯 Hy4 对阿里 Qwen4：同代旗舰，同一周上场</h3>
+        <p>10 月 31 日，字母榜在钛媒体发文称：腾讯刚宣布混元 Hy4 正式版即将发布，阿里则在欧洲放出 Qwen4 下周登场的消息。两家过去习惯错开档期，这一次版本号相同、窗口相同，都押注 Agent 与真实生产力。</p>
+        <p>按文中披露的预览版信息，Qwen4 的架构先在 Qwen3.8-Flash-Next 上验证：注意力机制结合 Gated DeltaNet 与 Qwen Sparse Attention，主干 125B 参数、另加 51B 的 N-gram Embedding，每个 token 激活 6B，训练成本为 Qwen3.7-Plus 的九分之一。真正要在 Qwen4 上回答的是，这套架构能不能延续到旗舰规模。</p>
+        <p>另一条线是 RSI。阿里称 Qwen3.8-Max 已能在人类几乎零参与下自主搭建训练流程、构造数据、设计实验并定位缺陷，持续迭代超过一个月、完成 33 轮有效迭代，Artificial Analysis 评测得分从 40 提升到 45；推理侧自主适配平头哥新架构后，单实例吞吐提升 96%；在芯片协同设计中，模型依据总线模块规范自迭代 60 小时、调用 EDA 工具超过一万次，把物理实现面积缩减 42%。</p>
+        <p>Hy4 这边，腾讯强调的是长程任务与真实生产力、思维链效率，并首次引入视觉理解，同时推出 Hy4 Flash 承接高频调用。两边的组织背景也被摆上台面：Qwen4 是刘大一恒接任后的第一个完整代际，Hy4 是姚顺雨重建预训练与强化学习基础设施后的正式产品。</p>
+        <p class="why"><b>看点</b>同代对决最有价值的部分不是跑分，而是两家对「Agent 能力」的定义是否一致：阿里把筹码压在长程任务成功率与 RSI 摊薄训练成本，腾讯压在视觉输入与产品场景回灌。定义不同，榜单就不可比——真正能分出胜负的，是同一个真实任务在两边的完成率、返工率和每任务成本。RSI 那组数字（33 轮迭代、面积 -42%）如果可复现，改变的不是某一代模型的排名，而是下一代的研发工时表。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 07:09</span>
+          <a class="src" href="https://www.ithome.com/1/020/394.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>OpenAI 要给安全出报表：首期《社区安全报告》2027 年初发布</h3>
+        <p>据 IT之家 10 月 31 日报道，OpenAI 于当地时间 10 月 30 日发布博文，承诺定期发布《社区安全报告》（Community Safety Report），系统公开暴力预防、其他社区安全议题以及各项防护机制的实际成效。首期报告将于 2027 年初发布，覆盖 2026 年下半年数据，此后每半年更新一次。</p>
+        <p>已经披露的数字是：仅在 2026 年第三季度，OpenAI 就向执法部门移交了 200 余起案件线索。</p>
+        <p>产品侧同步收紧。针对既往大规模恶性袭击事件及凶手，ChatGPT 只提供极度精简的信息，限制对作案细节的复盘，包括武器参数、获取途径以及可能助长凶手恶名的伤害规模对比，且不区分用户年龄与提问动机；对青少年可获取的涉枪涉武器信息也加了一道更严的门槛，即便提问表面无害。</p>
+        <p>更实质的改动是断路器：当对话显示用户开始执念于暴力、或萌生严重伤害他人的念头时，ChatGPT 可以自动终止当前对话；同一账户因此被多次中断，可能被临时冻结。OpenAI 称正在开发新功能，在青少年账户被临时冻结时第一时间通知家长。</p>
+        <p class="why"><b>看点</b>把安全从政策文本变成半年一份的报表，好处是可核查，代价是可考核：一旦公开中止率、移交数、误伤率，就会被拿来和其他实验室比，也会被拿来和「不中断」的用户体验比。自动终止对话是一条硬边界，它把判断权从模型输出挪到了账户层——问题随之变成：误判一次，用户丢掉的是对话还是账号；申诉通道在哪。这些不会写进首期报告，但会决定它有没有人信。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 13:11</span>
+          <a class="src" href="https://www.qbitai.com/2026/10/506866.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>新芯航途 X7 Ultra：用 Momenta 的世界模型给车规芯片打分</h3>
+        <p>10 月 31 日，成立两年多的芯片公司新芯航途（XHEART）首次公开亮相，发布车规芯片 X7 Ultra。算力 700 TOPS，但官方强调的两个指标不是算力：量化模型输出与 FP32 基准模型的相似度超过 99.99%，NPU 计算利用率达到 98.7%。</p>
+        <p>它提出的评测口径叫「大模型算力」：不只看实验室基准，而是把真实量产智驾模型放进芯片跑，约束是模型结构不能改、精度不能降、驾驶体验不能打折。这台芯片上的参考模型，是 Momenta 的 R7 世界模型。两家没有股权隶属关系，但 Momenta 创始团队成员曹旭东、夏炎通过控股股东间接持有新芯航途股份，属于「姐妹公司」；X7 已经在上汽大众的新车上量产。</p>
+        <p>硬件侧还有几个具体数字：激光雷达专用加速器每秒处理 2000 万点，支持千线级点云；摄像头链路的处理稳定性较传统方案提升 100%；内存带宽消耗对比常见产品下降 80%、能效提升 100%；采用 Arm v9 车规级 CPU，官方称这是 Arm v9 架构第一次在中国落地，内核性能提升 20%、能效提升 10%；SoC 达到 ASIL-B、集成 MCU 达到 ASIL-D。</p>
+        <p>曹旭东给出的判断是「大模型定义芯片」：智驾模型要支撑规模化 L4，端侧可能需要 10B 甚至 100B 参数级别，芯片设计必须和模型架构一起演进。</p>
+        <p class="why"><b>看点</b>把评价单位从 TOPS 换成「真实量产模型跑多快」，等于把芯片公司的责任从硬件指标延伸到软件栈：模型结构不能改，就得靠编译器、算子库和调度去榨性能，任何一环掉链子，700 TOPS 也跑不出来。这对采购方是好事——能按车型、按模型版本验收；对供应商是硬约束——卖的不再是一颗芯片，而是一套能持续跟上模型迭代的工具链。真正的验证不在发布会，而在下一个模型版本上车时，这套工具链还要不要重写。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 22:25</span>
+          <a class="src" href="https://www.tmtpost.com/nictation/8188883.html" target="_blank" rel="noopener noreferrer">钛媒体（上证报） ↗</a>
+        </div>
+        <h3>英伟达展示 OOI 光互连原型：光引擎搬上中介层，时间表仍未给</h3>
+        <p>10 月 31 日，钛媒体援引上证报称，在旧金山举行的 SEMICON West 2026 上，英伟达展示了下一代共封装光学（CPO）方案原型，命名为 OOI（Optics-on-Interposer，中介层上集成光学）。公司没有公布任何商业化时间表，只表示已经拿到原型样品。</p>
+        <p>路线图倒是清楚的：Rubin 平台自 2026 年下半年起导入第一代 CPO，2027 年进入规模放量；Rubin Ultra 计划在 2027 年之后把 CPO 扩展到跨机架互连。</p>
+        <p>报道同时提示，中短期看，OOI 不会对国内光通信产业产生影响。</p>
+        <p class="why"><b>看点</b>把光引擎从中介层之外搬进中介层，缩短的是电信号最后那几毫米，省下的是功耗与信号完整性——这正是机架规模越大越贵的地方。但原型与量产之间隔着封装良率、热管理和可维护性：光模块坏了可以拔下来换，共封装的光引擎坏了，换的是整块板。英伟达不给时间表，说明它自己也在等这三个数字。对供应链，OOI 的赢家不是「谁做光模块」，而是「谁能做可返修的中介层封装」。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">10/31 10:48</span>
+          <a class="src" href="https://finance.sina.com.cn/wm/2026-10-31/doc-inixaray1792371.shtml" target="_blank" rel="noopener noreferrer">证券时报 ↗</a>
+        </div>
+        <h3>苹果市值反超英伟达：5.03 万亿对 4.93 万亿美元</h3>
+        <p>10 月 31 日，证券时报旗下券商中国复盘美股周五行情：纳指跌 2.86%，纳斯达克 100 跌 3.46%，道指跌 1.09%，标普 500 跌 1.82%，罗素 2000 跌 1.66%。费城半导体指数跌 7.20%，创 6 月以来最大跌幅，英特尔暴跌超 28%，为其史上最大单日跌幅。</p>
+        <p>芯片股几乎全线告跌：高通跌超 11%，AMD 跌超 10%，ARM 跌近 10%，应用材料跌超 7%，阿斯麦跌超 6%；存储板块闪迪跌超 13%、SK 海力士跌近 8%；光通信的 Coherent 跌超 11%、迈威尔跌超 10%。大型科技股中，SpaceX 跌超 6%、英伟达跌超 4%，微软、Meta、谷歌、亚马逊、苹果跌超 1%，特斯拉跌 0.87%。</p>
+        <p>由此，苹果市值回到 5.03 万亿美元，反超英伟达的 4.93 万亿美元，重回全球第一。报道把抛售归因于多家大型科技公司业绩不及预期，包括英特尔与亚马逊，此前谷歌与 Meta 的财报同样令人失望。</p>
+        <p>另一个信号来自融资端：据英国《金融时报》报道，随着科技股下挫、市场对 AI 投入规模与回报节奏的担忧升温，OpenAI 已把最新一轮融资目标下调 100 亿美元，现计划以 1.25 万亿美元估值融资约 200 亿美元，低于上月 300 亿美元的募资计划。</p>
+        <p class="why"><b>看点</b>市值第一换人，换的不是技术路线，而是现金流的位置：苹果卖的是已经装进手机的存量，英伟达卖的是还没建完的算力。当资本开支的回报周期被拉长，估值就会从「算力叙事」往「现金流叙事」挪一格。OpenAI 把融资目标下调 100 亿美元，是同一件事在私募市场的版本——不是不需要钱，而是这个价格上愿意给钱的人变少了。接下来要盯的是超大规模厂商的资本开支指引，那才是这条链的总闸。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 10 月 31 日 07:00 至 2026 年 11 月 1 日 07:00（北京时间）之间发布的报道，共 7 条。检索时间 11/01 09:05。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 007 · 24h window · Generated 2026-11-01 09:05</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 31 Oct 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 1 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-01.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-01.html</guid>
+      <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是把 Agent 从一次会话里放出来：DeepSeek 公开了 Super-agent 的 Router/Worker 底座，Claude 直接取消了 5 小时窗口， 腾讯与阿里下周用同一代旗舰正面相撞。竞争的单位，正从「一次回答」变成「一件被持续推进的事」。 DeepSeek 开源 Super-agent 架构：AI 自己找 Bug、自己提 PR</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 10 月 31 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-10-31.html</link>
