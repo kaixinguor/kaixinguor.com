@@ -1,5 +1,6 @@
 # 这些不进部署产物（Workers Static Assets / Pages 打包时都会跳过）
 docs/
+lab/
 deploy/
 scripts/
 templates/
