@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>问题层 · 2026 年 10 月 30 日 · 附于第 005 期</title>
+<meta name="description" content="2026 年 10 月 30 日 问题层：从当日 9 条事实里长出 4 个问题。不评分、不记录、不建库。">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="stylesheet" href="../../style.css?v=6">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<style>
+/* ---------- 问题层：只在 64rem 里生效，不污染全站 ---------- */
+.qpage { --qmax: 47rem; }
+.qpage .wrap { max-width: var(--maxw); }
+.qpage .narrow { max-width: var(--qmax); margin-inline: auto; padding-inline: clamp(18px, 5vw, 28px); }
+
+.qhead { padding: clamp(34px, 6vw, 62px) 0 clamp(22px, 3vw, 30px); border-bottom: 1px solid var(--line); }
+.qhead .kicker {
+  display: flex; align-items: center; gap: .62rem;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--muted);
+}
+.qhead .kicker .zh { color: var(--accent); letter-spacing: .12em; }
+.qhead .kicker .sep { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex: none; }
+.qhead .kicker .issue-tag { margin-left: auto; letter-spacing: .12em; }
+.qhead h1 {
+  margin: .5rem 0 0; font-family: var(--serif);
+  font-size: clamp(1.62rem, 5.2vw, 3.1rem); font-weight: 600;
+  line-height: 1.2; letter-spacing: -.01em; text-wrap: balance;
+}
+.qhead .deck { max-width: 40em; margin: .9rem 0 0; color: var(--ink-2); font-size: clamp(.98rem, 1.5vw, 1.08rem); line-height: 1.75; }
+.qhead .metabar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .55rem;
+  margin-top: 1.1rem; font-family: var(--mono); font-size: 11px;
+  letter-spacing: .06em; color: var(--muted);
+}
+.qhead .metabar .dot { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: .55; }
+
+.qlayer { padding: clamp(30px, 5vw, 46px) 0 0; }
+
+/* 事实层：压到很小，只说"问题是从这长出来的" */
+.facts { border-bottom: 1px solid var(--line); padding-bottom: clamp(20px, 3.4vw, 28px); margin-bottom: clamp(22px, 3.6vw, 32px); }
+.facts h2 {
+  margin: 0 0 .2rem; font-family: var(--mono); font-size: 10.5px;
+  font-weight: 400; letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+}
+.facts .fhint { margin: 0 0 1rem; color: var(--muted); font-size: .82rem; line-height: 1.6; }
+.facts ol { list-style: none; margin: 0; padding: 0; display: grid; gap: .34rem; }
+.facts li {
+  display: flex; align-items: baseline; gap: .6rem;
+  font-size: .86rem; line-height: 1.55; color: var(--ink-2);
+  padding-bottom: .34rem; border-bottom: 1px solid var(--line-soft);
+}
+.facts li:last-child { border-bottom: 0; }
+.facts .fn { font-family: var(--mono); font-size: 9.5px; color: var(--muted); flex: none; letter-spacing: .08em; }
+.facts a { color: var(--ink-2); }
+.facts a:hover { color: var(--accent); }
+.facts .fs { margin-left: auto; font-family: var(--mono); font-size: 9.5px; color: var(--muted); flex: none; }
+
+/* 问题卡 */
+.qcard { padding: clamp(26px, 4vw, 38px) 0; border-top: 1px solid var(--line); }
+.qcard:first-of-type { border-top: 0; padding-top: 0; }
+.qtop { display: flex; align-items: baseline; gap: .55rem; font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+.qtop .qnum { color: var(--accent); font-size: 11px; }
+.qtop .qsep { width: 14px; height: 1px; background: var(--line); }
+.qtop .qconcept { color: var(--ink-2); letter-spacing: .08em; }
+
+.qtext {
+  margin: .72rem 0 0; font-family: var(--serif);
+  font-size: clamp(1.28rem, 2.9vw, 1.72rem); font-weight: 600;
+  line-height: 1.62; letter-spacing: .004em; text-wrap: balance;
+}
+.qanchor {
+  margin: 1rem 0 0; padding: .6rem .8rem .6rem .85rem;
+  border-left: 2px solid var(--line); color: var(--ink-2); font-size: .84rem; line-height: 1.65;
+}
+.qanchor .alabel {
+  display: inline-block; margin-right: .5rem; font-family: var(--mono);
+  font-size: 9px; letter-spacing: .16em; color: var(--muted); vertical-align: .1em;
+}
+.qanchor a { color: var(--ink); border-bottom: 1px solid var(--line); }
+.qanchor a:hover { color: var(--accent); border-color: currentColor; }
+.qanchor .afact { display: block; margin-top: .3rem; color: var(--muted); }
+
+.qmore { margin-top: .9rem; }
+.qmore summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: .4rem;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+  color: var(--muted); padding: .3rem 0; text-transform: uppercase;
+}
+.qmore summary::-webkit-details-marker { display: none; }
+.qmore summary::before { content: "+"; color: var(--accent); font-size: 13px; line-height: 1; }
+.qmore[open] summary::before { content: "–"; }
+.qmore summary:hover { color: var(--ink); }
+
+.qbody { margin-top: .8rem; display: grid; gap: .1rem; }
+.qrow { padding: .68rem 0; border-top: 1px solid var(--line-soft); }
+.qrow p { margin: .18rem 0 0; color: var(--ink-2); font-size: .95rem; line-height: 1.75; }
+.rlabel { font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+.qrow.turn p { color: var(--ink); font-weight: 500; }
+.qrow.turn {
+  border-top-color: transparent;
+  margin: .2rem 0;
+  padding: .75rem .85rem;
+  background: var(--tint);
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+.qrow b { font-weight: 600; color: var(--ink); }
+.probes { list-style: none; margin: .3rem 0 0; padding: 0; display: grid; gap: .42rem; }
+.probes li { display: flex; gap: .55rem; font-size: .93rem; line-height: 1.7; color: var(--ink-2); }
+.probes .pn { font-family: var(--mono); font-size: 9.5px; color: var(--accent); flex: none; padding-top: .3em; }
+
+.qfoot { display: flex; align-items: center; gap: .75rem; margin-top: 1rem; }
+.take {
+  font: inherit; font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-2); background: transparent;
+  border: 1px solid var(--line); border-radius: 2px; padding: .5rem .85rem;
+  cursor: pointer; transition: color .16s, border-color .16s, background .16s;
+}
+.take:hover { color: var(--accent); border-color: var(--accent); background: var(--tint); }
+.taken { font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em; color: var(--accent); }
+.qcard.is-taken .take { display: none; }
+
+/* 判准与判掉 */
+.judge { border-top: 1px solid var(--line); padding: clamp(30px, 5vw, 46px) 0 0; margin-top: clamp(10px, 3vw, 24px); }
+.judge h2 { font-family: var(--serif); font-size: 1.24rem; font-weight: 600; margin: 0 0 .5rem; }
+.judge .lead { margin: 0 0 1rem; color: var(--ink-2); font-size: .95rem; line-height: 1.78; }
+.judge .lead b { color: var(--ink); }
+.rejected { list-style: none; margin: 1.1rem 0 0; padding: 0; display: grid; gap: .9rem; }
+.rejected li { padding-top: .8rem; border-top: 1px solid var(--line-soft); }
+.rejected .rq { margin: 0; font-family: var(--serif); font-size: 1rem; line-height: 1.6; color: var(--ink-2); text-decoration: line-through; text-decoration-color: var(--line); }
+.rejected .rr { margin: .3rem 0 0; font-size: .86rem; line-height: 1.7; color: var(--muted); }
+.rejected .kind {
+  display: inline-block; margin-right: .5rem; padding: .05rem .4rem;
+  font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
+  color: var(--accent); border: 1px solid var(--line); border-radius: 2px; white-space: nowrap;
+}
+
+/* 带走：模态 */
+.takebox[hidden] { display: none; }
+.takebox {
+  position: fixed; inset: 0; z-index: 60;
+  display: flex; align-items: flex-end; justify-content: center;
+  background: rgba(12, 9, 7, .42); backdrop-filter: blur(2px);
+  padding: 0;
+}
+.takecard {
+  width: 100%; max-width: 34rem; max-height: 86vh; overflow: auto;
+  background: var(--paper-2); border: 1px solid var(--line); border-bottom: 0;
+  border-radius: 4px 4px 0 0; padding: 1.15rem 1.2rem 1.3rem;
+  box-shadow: 0 -18px 50px rgba(0, 0, 0, .16);
+}
+@media (min-width: 720px) {
+  .takebox { align-items: center; }
+  .takecard { border-bottom: 1px solid var(--line); border-radius: 4px; padding: 1.4rem 1.5rem 1.5rem; }
+}
+.takecard .th { display: flex; align-items: center; gap: .5rem; font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.takecard .th .x { margin-left: auto; cursor: pointer; background: none; border: 0; font: inherit; color: var(--muted); padding: .2rem .3rem; }
+.takecard .th .x:hover { color: var(--accent); }
+.takecard h3 { margin: .7rem 0 0; font-family: var(--serif); font-size: 1.06rem; font-weight: 600; line-height: 1.62; }
+.takecard pre {
+  margin: .9rem 0 0; padding: .85rem; background: var(--tint);
+  border: 1px solid var(--line-soft); border-radius: 2px;
+  font-family: var(--mono); font-size: 11px; line-height: 1.72;
+  white-space: pre-wrap; word-break: break-word; color: var(--ink-2);
+  max-height: 42vh; overflow: auto;
+}
+.takecard .acts { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .9rem; align-items: center; }
+.takecard .copy {
+  flex: none; white-space: nowrap;
+  font: inherit; font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
+  background: var(--ink); color: var(--paper); border: 1px solid var(--ink);
+  border-radius: 2px; padding: .55rem .95rem; cursor: pointer;
+}
+.takecard .copy:hover { background: var(--accent); border-color: var(--accent); }
+.takecard .note { margin: 0; font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+.qfoot-space { height: clamp(40px, 7vw, 70px); }
+
+/* 手机上：目录换行而不是横向裁切；事实层右侧来源让位给标题 */
+@media (max-width: 620px) {
+  .qpage .toc { position: static; backdrop-filter: none; }
+  .qpage .toc-inner { flex-wrap: wrap; gap: .55rem 1.15rem; }
+  .facts .fs { display: none; }
+  .facts li { font-size: .84rem; }
+}
+</style>
+</head>
+<body class="daily-page qpage">
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../daily/2026-10-30.html">日报</a>
+      <a href="2026-10-30.html" aria-current="page">问题层</a>
+      <a href="../../tools.html">工具</a>
+      <a href="../../wish.html">许愿</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="qhead">
+  <div class="narrow">
+    <div class="kicker">
+      <span class="zh">问题层</span>
+      <span class="sep"></span>
+      <span>Question Layer</span>
+      <span class="issue-tag">附于第 005 期</span>
+    </div>
+    <h1>2026 年 10 月 30 日 · 今天值得带走的问题</h1>
+    <p class="deck">今天有 4 条够格，不是因为 4 这个数字有什么讲究。判掉的 4 条也列在最后——判准比问题本身更值得看。</p>
+    <div class="metabar">
+      <span>9 条事实</span><span class="dot"></span>
+      <span>4 问</span><span class="dot"></span>
+      <span>判掉 4 条</span><span class="dot"></span>
+      <span>不评分 · 不记录 · 不建库</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="问题索引">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#q-capex"><span class="n">01</span>资本成本</a>
+      <a href="#q-worken"><span class="n">02</span>一般等价物</a>
+      <a href="#q-penalty"><span class="n">03</span>有效违约</a>
+      <a href="#q-spec"><span class="n">04</span>规则与标准</a>
+      <a href="#judge"><span class="n">—</span>判准</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+  <div class="narrow qlayer">
+
+    <section class="facts" aria-label="事实层">
+      <h2>事实层 · 今天的 9 条</h2>
+      <p class="fhint">下面是问题长出来的地方。点击任一条回到日报原文；问题层本身不写新闻、不补事实。</p>
+      <ol>
+        <li><span class="fn">01</span><a href="../../daily/2026-10-30.html#capital">Alphabet 单日蒸发约 5000 亿美元：AI 资本开支开始被现金流定价</a><span class="fs">钛媒体</span></li>
+        <li><span class="fn">02</span><a href="../../daily/2026-10-30.html#capital">Cohere 估值升至 205 亿美元：加拿大政府与英伟达参投</a><span class="fs">ChainCatcher</span></li>
+        <li><span class="fn">03</span><a href="../../daily/2026-10-30.html#capital">迈威尔拟收购 Lumentum：AI 数据中心的下一场并购在光通信</a><span class="fs">每日经济新闻</span></li>
+        <li><span class="fn">04</span><a href="../../daily/2026-10-30.html#products">豆包工作向企业开放第三方模型：Kimi、GLM、DeepSeek 首批接入</a><span class="fs">每日经济新闻</span></li>
+        <li><span class="fn">05</span><a href="../../daily/2026-10-30.html#products">启元机器人接入腾讯 WorkBuddy：Q1、T1 打通会议、读书、音乐与绘本</a><span class="fs">每日经济新闻</span></li>
+        <li><span class="fn">06</span><a href="../../daily/2026-10-30.html#research">OpenAI 重写 Model Spec：从案例法收束为五条价值观</a><span class="fs">钛媒体</span></li>
+        <li><span class="fn">07</span><a href="../../daily/2026-10-30.html#research">纽约提出 RAISE Act 2.0：可限制算力、72 小时报告、独立审查员</a><span class="fs">AI Brief</span></li>
+        <li><span class="fn">08</span><a href="../../daily/2026-10-30.html#embodied">智元发布 GO-3 Preview 与灵渠 OS 1.0：给机器人记“有效工时”</a><span class="fs">36氪</span></li>
+        <li><span class="fn">09</span><a href="../../daily/2026-10-30.html#embodied">文远知行子公司景烁科技首轮融资数千万美元，押注物理 AI 数据底座</a><span class="fs">新京报</span></li>
+      </ol>
+    </section>
+
+
+      <article class="qcard" id="q-capex" data-id="capex">
+        <div class="qtop">
+          <span class="qnum">01</span>
+          <span class="qtag">公司金融</span>
+          <span class="qsep"></span>
+          <span class="qconcept">资本成本</span>
+        </div>
+
+        <h2 class="qtext">同一笔 514 亿美元，财报把它记成资产，市场把它记成风险。是哪一条规则决定它最终算哪一个？</h2>
+
+        <p class="qanchor">
+          <span class="alabel">挂靠</span>
+          <a href="../../daily/2026-10-30.html#capital">Alphabet 单日蒸发约 5000 亿美元：AI 资本开支开始被现金流定价</a>
+          <span class="afact">Q3 资本开支 514 亿美元，自由现金流 -91 亿美元；营收同比 +25%，云收入翻倍；股价单日跌 12.73%。</span>
+        </p>
+
+        <details class="qmore">
+          <summary>怎么答 · 答完改什么</summary>
+          <div class="qbody">
+            <div class="qrow">
+              <span class="rlabel">最顺口的答案</span>
+              <p>看它将来能不能挣回来——能挣回来就是资产，挣不回来就是损失。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">它不够的地方</span>
+              <p>那「能不能挣回来」是谁、在什么时候判断的？财报的判断和市场的判断，用的是同一把尺子吗？</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">撬开的假设</span>
+              <p>我们默认「花掉的钱会变成资产」是因为它买了东西。其实「资产」是一个会计判断，不是物理事实。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">承重的概念</span>
+              <p><b>资本成本</b> —— 一笔钱值不值，不取决于它买了什么，而取决于它必须战胜的那个回报率。而这个回报率不是公司定的，是愿意把钱借给它的人定的。</p>
+            </div>
+            <div class="qrow turn">
+              <span class="rlabel">答完可以改口说</span>
+              <p>原来不是「这笔投资好不好」，是「市场今天要求多高的回报才算好」。同一笔投资，利率一变，结论就变。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">带去问你的 AI · 三层追问</span>
+              <ol class="probes">
+            <li><span class="pn">1</span><span>如果明天无风险利率降一半，这 514 亿会重新变回「资产」吗？为什么？</span></li>
+            <li><span class="pn">2</span><span>把资本开支记成资产、把折旧摊到未来，这个「摊」的动作，对今年的利润和对明年的利润分别意味着什么？</span></li>
+            <li><span class="pn">3</span><span>一家公司能不能只靠改折旧年限，就改变市场对它的判断？如果能，那市场到底在看什么？</span></li>
+              </ol>
+            </div>
+            <div class="qrow edge">
+              <span class="rlabel">这个答案什么时候不成立</span>
+              <p>这个答案在一种情况下不成立：公司拿的是不需要回报的钱（财政补贴、政策性贷款、战略投资）。那时资本成本接近零，市场那把尺子就量不到它。</p>
+            </div>
+          </div>
+        </details>
+
+        <div class="qfoot">
+          <button class="take" type="button" data-take="capex">带走这一问</button>
+          <span class="taken" hidden>已带走 · 只在你这边</span>
+        </div>
+      </article>
+
+      <article class="qcard" id="q-worken" data-id="worken">
+        <div class="qtop">
+          <span class="qnum">02</span>
+          <span class="qtag">货币与计量</span>
+          <span class="qsep"></span>
+          <span class="qconcept">一般等价物</span>
+        </div>
+
+        <h2 class="qtext">一台机器人的一小时，和一个工人的一小时，凭什么可以相加？</h2>
+
+        <p class="qanchor">
+          <span class="alabel">挂靠</span>
+          <a href="../../daily/2026-10-30.html#embodied">智元发布 GO-3 Preview 与灵渠 OS 1.0：给机器人记“有效工时”</a>
+          <span class="afact">智元提出 Worken（有效智能工时）= 活跃机器人数量 × 自主工作时长 × 产出效能比，想给「机器人在岗位上干了多少活」一把统一标尺。</span>
+        </p>
+
+        <details class="qmore">
+          <summary>怎么答 · 答完改什么</summary>
+          <div class="qbody">
+            <div class="qrow">
+              <span class="rlabel">最顺口的答案</span>
+              <p>因为它们都能折算成钱——一小时机器人产出多少、一小时工人产出多少，一比就出来了。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">它不够的地方</span>
+              <p>那「折算成钱」这一步，是谁在做？折算的比例又是谁定的？</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">撬开的假设</span>
+              <p>我们默认「时间」是那个共同的东西。其实让它们可加的从来不是时间，是钱——而钱不是单位，是权力。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">承重的概念</span>
+              <p><b>一般等价物</b> —— 一个东西能当尺度，不是因为它「自然」「公平」，而是因为足够多的人接受用它来结算。单位是被承认出来的，不是被发现的。</p>
+            </div>
+            <div class="qrow turn">
+              <span class="rlabel">答完可以改口说</span>
+              <p>原来「工时」不是量，是价格。给机器人记工分，等于在给一种新的资本品发行计价单位。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">带去问你的 AI · 三层追问</span>
+              <ol class="probes">
+            <li><span class="pn">1</span><span>工人加班要付 1.5 倍。机器人「加班」付什么？如果付的是电费和折旧，那这个「工时」里还剩多少是劳动、多少是资本？</span></li>
+            <li><span class="pn">2</span><span>如果客户真的接受 Worken 来结算，机器人的「工资」会由谁定？定的那一刻，谁变成了定价者？</span></li>
+            <li><span class="pn">3</span><span>一个只有智元在用的单位，和一个所有人都用的单位，差别在哪里？这个差别是从哪一天开始产生的？</span></li>
+              </ol>
+            </div>
+            <div class="qrow edge">
+              <span class="rlabel">这个答案什么时候不成立</span>
+              <p>Worken 现在还是一个营销单位，不是计量单位。它要变成真的单位，得先有第三方审计、跨厂商互认、和可复核的产出——缺一样，它都只是一句报价。</p>
+            </div>
+          </div>
+        </details>
+
+        <div class="qfoot">
+          <button class="take" type="button" data-take="worken">带走这一问</button>
+          <span class="taken" hidden>已带走 · 只在你这边</span>
+        </div>
+      </article>
+
+      <article class="qcard" id="q-penalty" data-id="penalty">
+        <div class="qtop">
+          <span class="qnum">03</span>
+          <span class="qtag">法与经济</span>
+          <span class="qsep"></span>
+          <span class="qconcept">有效违约</span>
+        </div>
+
+        <h2 class="qtext">如果违规的代价是每天 100 万美元，这条法律是在禁止这件事，还是在给它标价？</h2>
+
+        <p class="qanchor">
+          <span class="alabel">挂靠</span>
+          <a href="../../daily/2026-10-30.html#research">纽约提出 RAISE Act 2.0：可限制算力、72 小时报告、独立审查员</a>
+          <span class="afact">RAISE Act 2.0 规定：初犯罚款最高每天 100 万美元，再犯每天 300 万美元；同时 DIGIT 办公室可限制训练算力、要求暂停部署。</span>
+        </p>
+
+        <details class="qmore">
+          <summary>怎么答 · 答完改什么</summary>
+          <div class="qbody">
+            <div class="qrow">
+              <span class="rlabel">最顺口的答案</span>
+              <p>在禁止——因为除了罚款，还能叫停、能限制算力，罚到最后没人做得下去。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">它不够的地方</span>
+              <p>那「罚款」和「叫停」是两种完全不同的东西：一个是价格，一个是禁令。一条法律里同时放了这两个，说明它在对不同的人说不同的话。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">撬开的假设</span>
+              <p>我们默认「违法」等于「不被允许」。其实很多法律的效果是「允许，但要付钱」——尤其是当违法的收益远大于罚款的时候。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">承重的概念</span>
+              <p><b>有效违约</b> —— 当法律的救济是「付一笔钱」而不是「不许做」时，这条法律实际上是在给行为标价。谁付得起，谁就可以继续做。</p>
+            </div>
+            <div class="qrow turn">
+              <span class="rlabel">答完可以改口说</span>
+              <p>原来「合不合法」和「做不做得起」是两个问题。当罚则低于收益，法律就变成了许可证。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">带去问你的 AI · 三层追问</span>
+              <ol class="probes">
+            <li><span class="pn">1</span><span>每天 100 万美元，对一家年研发投入 100 亿美元的公司，等于几个小时的收入？</span></li>
+            <li><span class="pn">2</span><span>如果一个行为「付得起就能做」，那这条法律实际保护的是谁？</span></li>
+            <li><span class="pn">3</span><span>什么时候罚款才会真的变成禁令？——注意它还配了「叫停」和「限制算力」。那这两套救济为什么要写在同一部法里？</span></li>
+              </ol>
+            </div>
+            <div class="qrow edge">
+              <span class="rlabel">这个答案什么时候不成立</span>
+              <p>只有当罚款是唯一救济时，「标价」这个解释才成立。如果禁令真的可执行（法院叫停、算力被物理切断），那就是禁令，不是价格——所以要看的不是罚多少，是叫不叫得停。</p>
+            </div>
+          </div>
+        </details>
+
+        <div class="qfoot">
+          <button class="take" type="button" data-take="penalty">带走这一问</button>
+          <span class="taken" hidden>已带走 · 只在你这边</span>
+        </div>
+      </article>
+
+      <article class="qcard" id="q-spec" data-id="spec">
+        <div class="qtop">
+          <span class="qnum">04</span>
+          <span class="qtag">制度与契约</span>
+          <span class="qsep"></span>
+          <span class="qconcept">规则与标准</span>
+        </div>
+
+        <h2 class="qtext">规则从一百页变成五条，约束是变少了，还是只是换了一个人来执行？</h2>
+
+        <p class="qanchor">
+          <span class="alabel">挂靠</span>
+          <a href="../../daily/2026-10-30.html#research">OpenAI 重写 Model Spec：从案例法收束为五条价值观</a>
+          <span class="afact">OpenAI 把约百页、案例法式的 Model Spec 收束成五条价值观，红线内的取舍交给 developer / system 指令配置；并称规范已用于训练，但生产模型尚未完全符合。</span>
+        </p>
+
+        <details class="qmore">
+          <summary>怎么答 · 答完改什么</summary>
+          <div class="qbody">
+            <div class="qrow">
+              <span class="rlabel">最顺口的答案</span>
+              <p>变少了——规则越少，能管的事越少，模型更自由。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">它不够的地方</span>
+              <p>那原来那一百页管的那些具体事，现在谁在管？没人管，还是有人管、只是换了个人？</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">撬开的假设</span>
+              <p>我们默认「规则的数量」等于「约束的强度」。其实约束的总量基本不变，它只是从「写死的条文」搬到了「执行者的判断」。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">承重的概念</span>
+              <p><b>规则与标准</b> —— 规则事先说清，成本高但可预期；标准事后判断，灵活但把裁量权交给了有裁量权的人。两者之间不是「多和少」，是「谁来承担不确定性」。</p>
+            </div>
+            <div class="qrow turn">
+              <span class="rlabel">答完可以改口说</span>
+              <p>原来约束没有消失，它从平台的条文里，搬到了企业的合同和开发者的配置里——成本也跟着搬过去了。</p>
+            </div>
+            <div class="qrow">
+              <span class="rlabel">带去问你的 AI · 三层追问</span>
+              <ol class="probes">
+            <li><span class="pn">1</span><span>一条「不可覆盖的红线」，和一百页案例，哪个更容易被绕过？为什么？</span></li>
+            <li><span class="pn">2</span><span>如果裁量权下放给企业，那出事的时候，谁负责？</span></li>
+            <li><span class="pn">3</span><span>一份「已经用于训练、但生产模型尚未完全符合」的规范，算不算已经生效？</span></li>
+              </ol>
+            </div>
+            <div class="qrow edge">
+              <span class="rlabel">这个答案什么时候不成立</span>
+              <p>如果平台保留了对 developer 指令的最终否决权，那裁量权其实没下放，只是换了个写法。要判断这一点，不能看规范怎么写，得看它怎么罚。</p>
+            </div>
+          </div>
+        </details>
+
+        <div class="qfoot">
+          <button class="take" type="button" data-take="spec">带走这一问</button>
+          <span class="taken" hidden>已带走 · 只在你这边</span>
+        </div>
+      </article>
+
+    <section class="judge" id="judge">
+      <h2>为什么是这几问，为什么不是那几问</h2>
+      <p class="lead"><b>深刻的问题，是一句话就能答、但答完之后你必须改口的问题。</b>
+        一句话答得出来，才有得讨论；答完要改口，才不只是多知道了一个事实；
+        改的还是那个学科里少数几条撑着别的东西的结论，才算摸到了底层。</p>
+      <p class="lead">所以「深」不看题目大不大，看答完之后你的模型动没动。
+        宏大而无法回答的问题，比具体而能改口的问题浅。</p>
+
+      <p class="lead" style="margin-top:1.2rem;color:var(--muted);font-size:.86rem">今天被判掉的 4 条，比上面那 4 条更能说明这条线在哪：</p>
+      <ul class="rejected">
+
+        <li>
+          <p class="rq">AI 资本开支的狂欢还能持续多久？</p>
+          <p class="rr"><span class="kind">预测题</span>不可判定——没有任何证据能让它倒向一边。答完你的模型不动，只是多了个态度。而且「狂欢」是情绪词，不是判断。</p>
+        </li>
+
+        <li>
+          <p class="rq">Alphabet 自由现金流为负，是不是 AI 泡沫破裂的信号？</p>
+          <p class="rr"><span class="kind">站队题</span>「泡沫」和「破裂」都没定义。答完你只是选了边，没有学到任何能带走的东西。</p>
+        </li>
+
+        <li>
+          <p class="rq">什么是自由现金流？</p>
+          <p class="rr"><span class="kind">百科题</span>一搜就有。这是知识，不是问题。知识该由日报的事实层给，不该占问题的位置。</p>
+        </li>
+
+        <li>
+          <p class="rq">当买方、卖方和股东是同一批人，这笔交易的价格是谁跟谁谈出来的？</p>
+          <p class="rr"><span class="kind">好题，但挂不住</span>这是今天迈威尔收购 Lumentum 那条里最长出来的一问——英伟达既是 Lumentum 的客户又是股东。问题本身够深，但事实不够：英伟达持股多少、Lumentum 多少收入来自英伟达，都没有披露。挂在空气上，答起来只能猜。等披露补齐可以升格。</p>
+        </li>
+      </ul>
+    </section>
+
+    <div class="qfoot-space"></div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><b>kaixinguor</b><p>问题层 · 附于 2026 年 10 月 30 日 日报。不评分，不记录你带走了哪一问；刷新即忘。</p></div>
+      <div class="foot-meta">SOURCE · daily/2026-10-30.html</div>
+    </div>
+    <div class="foot-links">
+      <a href="../../daily/2026-10-30.html">回到事实层</a>
+      <a href="../../index.html">首页</a>
+      <span>判准全文：docs/问题层-判准.md</span>
+    </div>
+  </div>
+</footer>
+
+<div class="takebox" id="takebox" hidden>
+  <div class="takecard" role="dialog" aria-modal="true" aria-labelledby="take-title">
+    <div class="th">
+      <span>带走 · TAKEAWAY</span>
+      <button class="x" type="button" id="take-close" aria-label="关闭">✕</button>
+    </div>
+    <h3 id="take-title"></h3>
+    <pre id="take-text"></pre>
+    <div class="acts">
+      <button class="copy" type="button" id="take-copy">复制</button>
+      <p class="note">粘进你自己的 AI 对话框就行。这段文字没有发往任何服务器，关掉页面就没了。</p>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="take-data">{"capex":{"title":"Alphabet 单日蒸发约 5000 亿美元：AI 资本开支开始被现金流定价","issue":"第 005 期","date":"2026 年 10 月 30 日","concept":"资本成本","discipline":"公司金融","question":"同一笔 514 亿美元，财报把它记成资产，市场把它记成风险。是哪一条规则决定它最终算哪一个？","anchorFact":"Q3 资本开支 514 亿美元，自由现金流 -91 亿美元；营收同比 +25%，云收入翻倍；股价单日跌 12.73%。","quickAnswer":"看它将来能不能挣回来——能挣回来就是资产，挣不回来就是损失。","quickAnswerGap":"那「能不能挣回来」是谁、在什么时候判断的？财报的判断和市场的判断，用的是同一把尺子吗？","assumption":"我们默认「花掉的钱会变成资产」是因为它买了东西。其实「资产」是一个会计判断，不是物理事实。","conceptNote":"一笔钱值不值，不取决于它买了什么，而取决于它必须战胜的那个回报率。而这个回报率不是公司定的，是愿意把钱借给它的人定的。","turn":"原来不是「这笔投资好不好」，是「市场今天要求多高的回报才算好」。同一笔投资，利率一变，结论就变。","probes":["如果明天无风险利率降一半，这 514 亿会重新变回「资产」吗？为什么？","把资本开支记成资产、把折旧摊到未来，这个「摊」的动作，对今年的利润和对明年的利润分别意味着什么？","一家公司能不能只靠改折旧年限，就改变市场对它的判断？如果能，那市场到底在看什么？"],"boundary":"这个答案在一种情况下不成立：公司拿的是不需要回报的钱（财政补贴、政策性贷款、战略投资）。那时资本成本接近零，市场那把尺子就量不到它。"},"worken":{"title":"智元发布 GO-3 Preview 与灵渠 OS 1.0：给机器人记“有效工时”","issue":"第 005 期","date":"2026 年 10 月 30 日","concept":"一般等价物","discipline":"货币与计量","question":"一台机器人的一小时，和一个工人的一小时，凭什么可以相加？","anchorFact":"智元提出 Worken（有效智能工时）= 活跃机器人数量 × 自主工作时长 × 产出效能比，想给「机器人在岗位上干了多少活」一把统一标尺。","quickAnswer":"因为它们都能折算成钱——一小时机器人产出多少、一小时工人产出多少，一比就出来了。","quickAnswerGap":"那「折算成钱」这一步，是谁在做？折算的比例又是谁定的？","assumption":"我们默认「时间」是那个共同的东西。其实让它们可加的从来不是时间，是钱——而钱不是单位，是权力。","conceptNote":"一个东西能当尺度，不是因为它「自然」「公平」，而是因为足够多的人接受用它来结算。单位是被承认出来的，不是被发现的。","turn":"原来「工时」不是量，是价格。给机器人记工分，等于在给一种新的资本品发行计价单位。","probes":["工人加班要付 1.5 倍。机器人「加班」付什么？如果付的是电费和折旧，那这个「工时」里还剩多少是劳动、多少是资本？","如果客户真的接受 Worken 来结算，机器人的「工资」会由谁定？定的那一刻，谁变成了定价者？","一个只有智元在用的单位，和一个所有人都用的单位，差别在哪里？这个差别是从哪一天开始产生的？"],"boundary":"Worken 现在还是一个营销单位，不是计量单位。它要变成真的单位，得先有第三方审计、跨厂商互认、和可复核的产出——缺一样，它都只是一句报价。"},"penalty":{"title":"纽约提出 RAISE Act 2.0：可限制算力、72 小时报告、独立审查员","issue":"第 005 期","date":"2026 年 10 月 30 日","concept":"有效违约","discipline":"法与经济","question":"如果违规的代价是每天 100 万美元，这条法律是在禁止这件事，还是在给它标价？","anchorFact":"RAISE Act 2.0 规定：初犯罚款最高每天 100 万美元，再犯每天 300 万美元；同时 DIGIT 办公室可限制训练算力、要求暂停部署。","quickAnswer":"在禁止——因为除了罚款，还能叫停、能限制算力，罚到最后没人做得下去。","quickAnswerGap":"那「罚款」和「叫停」是两种完全不同的东西：一个是价格，一个是禁令。一条法律里同时放了这两个，说明它在对不同的人说不同的话。","assumption":"我们默认「违法」等于「不被允许」。其实很多法律的效果是「允许，但要付钱」——尤其是当违法的收益远大于罚款的时候。","conceptNote":"当法律的救济是「付一笔钱」而不是「不许做」时，这条法律实际上是在给行为标价。谁付得起，谁就可以继续做。","turn":"原来「合不合法」和「做不做得起」是两个问题。当罚则低于收益，法律就变成了许可证。","probes":["每天 100 万美元，对一家年研发投入 100 亿美元的公司，等于几个小时的收入？","如果一个行为「付得起就能做」，那这条法律实际保护的是谁？","什么时候罚款才会真的变成禁令？——注意它还配了「叫停」和「限制算力」。那这两套救济为什么要写在同一部法里？"],"boundary":"只有当罚款是唯一救济时，「标价」这个解释才成立。如果禁令真的可执行（法院叫停、算力被物理切断），那就是禁令，不是价格——所以要看的不是罚多少，是叫不叫得停。"},"spec":{"title":"OpenAI 重写 Model Spec：从案例法收束为五条价值观","issue":"第 005 期","date":"2026 年 10 月 30 日","concept":"规则与标准","discipline":"制度与契约","question":"规则从一百页变成五条，约束是变少了，还是只是换了一个人来执行？","anchorFact":"OpenAI 把约百页、案例法式的 Model Spec 收束成五条价值观，红线内的取舍交给 developer / system 指令配置；并称规范已用于训练，但生产模型尚未完全符合。","quickAnswer":"变少了——规则越少，能管的事越少，模型更自由。","quickAnswerGap":"那原来那一百页管的那些具体事，现在谁在管？没人管，还是有人管、只是换了个人？","assumption":"我们默认「规则的数量」等于「约束的强度」。其实约束的总量基本不变，它只是从「写死的条文」搬到了「执行者的判断」。","conceptNote":"规则事先说清，成本高但可预期；标准事后判断，灵活但把裁量权交给了有裁量权的人。两者之间不是「多和少」，是「谁来承担不确定性」。","turn":"原来约束没有消失，它从平台的条文里，搬到了企业的合同和开发者的配置里——成本也跟着搬过去了。","probes":["一条「不可覆盖的红线」，和一百页案例，哪个更容易被绕过？为什么？","如果裁量权下放给企业，那出事的时候，谁负责？","一份「已经用于训练、但生产模型尚未完全符合」的规范，算不算已经生效？"],"boundary":"如果平台保留了对 developer 指令的最终否决权，那裁量权其实没下放，只是换了个写法。要判断这一点，不能看规范怎么写，得看它怎么罚。"}}</script>
+<script>
+(function () {
+  "use strict";
+  var TAKE = JSON.parse(document.getElementById("take-data").textContent);
+  var box = document.getElementById("takebox");
+  var titleEl = document.getElementById("take-title");
+  var preEl = document.getElementById("take-text");
+  var copyBtn = document.getElementById("take-copy");
+
+  function build(q) {
+    return [
+      "【问题】" + q.question,
+      "",
+      "【挂靠】" + q.title + "（" + q.issue + " · " + q.date + "）",
+      q.anchorFact,
+      "",
+      "【最顺口的答案】" + q.quickAnswer,
+      "【它不够的地方】" + q.quickAnswerGap,
+      "",
+      "【被撬开的假设】" + q.assumption,
+      "【承重的概念】" + q.concept + "（" + q.discipline + "）—— " + q.conceptNote,
+      "",
+      "【答完可以改口说】" + q.turn,
+      "",
+      "【带回去问我的 AI】",
+      "1. " + q.probes[0],
+      "2. " + q.probes[1],
+      "3. " + q.probes[2],
+      "",
+      "【这个答案什么时候不成立】" + q.boundary,
+      "",
+      "—— kaixinguor 问题层 · " + q.date,
+      "（我自己选的这一问。请先别急着回答，先问我：我觉得最可能的答案是什么，为什么。）"
+    ].join("\n");
+  }
+
+  function open(id) {
+    var q = TAKE[id];
+    if (!q) return;
+    titleEl.textContent = q.question;
+    preEl.textContent = build(q);
+    box.hidden = false;
+    document.body.style.overflow = "hidden";
+    var card = document.querySelector('[data-id="' + id + '"]');
+    if (card) { card.classList.add("is-taken"); var t = card.querySelector(".taken"); if (t) t.hidden = false; }
+    copyBtn.textContent = "复制";
+  }
+
+  function close() {
+    box.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest ? e.target.closest("[data-take]") : null;
+    if (btn) { open(btn.getAttribute("data-take")); return; }
+    if (e.target === box || e.target.id === "take-close") close();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !box.hidden) close();
+  });
+
+  copyBtn.addEventListener("click", function () {
+    var text = preEl.textContent;
+    function done() {
+      copyBtn.textContent = "已复制";
+      setTimeout(function () { copyBtn.textContent = "复制"; }, 1600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else {
+      fallback();
+    }
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); done(); } catch (err) { copyBtn.textContent = "请手动选中"; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script src="../../site.js?v=6"></script>
+</body>
+</html>
