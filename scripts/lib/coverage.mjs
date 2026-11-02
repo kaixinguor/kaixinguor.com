@@ -123,7 +123,12 @@ export function newFacts(newCard, oldCard, cache) {
   const A = tokenSet(newCard, cache);
   const B = tokenSet(oldCard, cache);
   return [...A]
-    .filter((token) => /^[NL]:/.test(token) && !B.has(token))
+    .filter((token) => {
+      if (B.has(token)) return false;
+      if (token.startsWith("L:")) return token.length >= 5; // 至少 3 个字符的型号/公司名
+      if (token.startsWith("N:")) return /^[\d.]+[^\d.]/.test(token.slice(2)); // 必须带单位，纯年份不算
+      return false;
+    })
     .map((token) => token.slice(2));
 }
 
