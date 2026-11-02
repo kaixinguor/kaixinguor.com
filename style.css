@@ -1137,10 +1137,42 @@ html.archive-open body { overflow: hidden; }
 /* 发送前的确认弹窗（wish.html） */
 /* 许愿页底部：直接找我的入口 */
 .wish-contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
   max-width: 720px;
   margin: 46px 0 20px;
   padding-top: 22px;
   border-top: 1px solid var(--line-soft);
+}
+.wish-contact-text { min-width: 0; }
+.wish-qr {
+  flex: none;
+  margin: 0;
+  text-align: center;
+}
+.wish-qr img {
+  display: block;
+  width: 132px;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 6px;
+}
+.wish-qr figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+}
+@media (max-width: 560px) {
+  .wish-contact { flex-direction: column; gap: 16px; }
+  .wish-qr { display: flex; align-items: center; gap: 12px; }
+  .wish-qr figcaption { margin-top: 0; }
+  .wish-qr img { width: 96px; }
 }
 .wish-contact-lead {
   margin: 0 0 8px;

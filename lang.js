@@ -69,7 +69,7 @@ const I18N = {
     "wish.q5": "Which device?",
     "wish.contact.lead": "Rather not wait? Talk to me directly:",
     "wish.contact.email": "contact@kaixinguor.com",
-    "wish.contact.wechat": "WeChat: kaixinguor",
+    "wish.contact.qr": "Scan on WeChat",
     "wish.contact.note": "Wishes are async — I read every one, but I don't always reply. If it's urgent, or you want to talk it through, or need a quote, come find me.",
     "wish.send": "Send",
     "wish.note": "Hit Send and it goes straight to me — or copy it into your own mail app.",
