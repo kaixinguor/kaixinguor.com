@@ -91,7 +91,8 @@ if (issue.lang !== "zh") {
 
 /* 日报类型：按路径判断，决定品牌名、标题和默认输出目录。 */
 const SECTION = /economy|经济/i.test(source) ? "economy" : "ai";
-if (SECTION === "economy") {
+const isEconomyIssue = SECTION === "economy" || /经济日报|Economic Daily/.test(issue.title || "");
+if (isEconomyIssue) {
   console.error(`✗ 经济日报自 2026-11-02 起不再生成公众号配图。`);
   console.error(`  已有期数的成品保留，不删；配图只对 daily-ai/ 生成。`);
   process.exit(1);
