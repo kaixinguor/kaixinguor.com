@@ -126,7 +126,10 @@
       <div class="wish-contact-text">
         <p class="wish-contact-lead" data-i18n="wish.contact.lead">不想等，或者想直接聊？找我本人：</p>
         <p class="wish-contact-line">
-          <a href="mailto:contact@kaixinguor.com" data-i18n="wish.contact.email">contact@kaixinguor.com</a>
+          <button type="button" class="wish-copy-email" id="copy-contact" data-email="contact@kaixinguor.com" title="点击复制">
+            <span class="email" data-i18n="wish.contact.email">contact@kaixinguor.com</span>
+            <span class="hint" data-i18n="wish.contact.copy">点击复制</span>
+          </button>
         </p>
         <p class="faint" data-i18n="wish.contact.note">许愿是异步的——我逐条读，但不一定回。真着急、想当面说、或者要报价，直接来找我。</p>
       </div>
@@ -325,6 +328,63 @@
   copyBtn.addEventListener('click', copy);
   cancelBtn.addEventListener('click', function () { dlg.close(); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+})();
+</script>
+<script>
+(function () {
+  var btn = document.getElementById('copy-contact');
+  if (!btn) return;
+  var email = btn.getAttribute('data-email') || 'contact@kaixinguor.com';
+  var hint = btn.querySelector('.hint');
+  var base = null;   // 点击时再取，避免语言切换后被写死成中文
+  var timer = null;
+
+  function flash(text) {
+    if (!hint) return;
+    if (base === null) base = hint.textContent;
+    hint.textContent = text;
+    clearTimeout(timer);
+    timer = setTimeout(function () { hint.textContent = base; }, 1600);
+  }
+
+  function copiedLabel() {
+    return document.documentElement.lang === 'en' ? 'Copied' : '已复制';
+  }
+
+  btn.addEventListener('click', function () {
+    var text = email;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        flash(copiedLabel());
+      }).catch(function () { fallback(text); });
+    } else {
+      fallback(text);
+    }
+  });
+
+  function fallback(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    if (ok) {
+      flash(copiedLabel());
+      return;
+    }
+    // 再退一步：把地址选中，让人自己按 ⌘C / Ctrl+C
+    var range = document.createRange();
+    range.selectNodeContents(btn.querySelector('.email'));
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    flash(document.documentElement.lang === 'en' ? 'press ⌘C' : '按 ⌘C 复制');
+  }
 })();
 </script>
 </body>

@@ -1189,6 +1189,28 @@ html.archive-open body { overflow: hidden; }
   word-break: break-word;
 }
 .wish-contact-line a { color: var(--accent); }
+.wish-copy-email {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .55em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.wish-copy-email:hover .email { text-decoration: underline; }
+.wish-copy-email:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wish-copy-email .hint {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  white-space: nowrap;
+}
 .wish-contact-line .sep { margin: 0 .55em; color: var(--muted); }
 .wish-contact code {
   font-family: var(--mono);
