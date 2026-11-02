@@ -69,7 +69,7 @@ npm run social -- daily-ai/2026-10-29.html
 # 或 node scripts/make-social.mjs daily-ai/2026-10-29.html
 ```
 
-默认写到 `daily-ai/social/YYYY-MM-DD/`（经济日报为 `daily-economy/social/`），已在 `.gitignore`，不会进 git、不会上线：
+默认写到 `daily-ai/social/YYYY-MM-DD/`，已在 `.gitignore`，不会进 git、不会上线。经济日报自 2026-11-02 起不再生成配图，旧图保留在 `daily-economy/social/`：
 
 - `wechat/`：**5 张** 1080×1440（3:4）：封面 → 3 条重点 → 速览，**没有尾页**
 - `公众号-图片消息.md`：标题 / 描述 / 逐图说明 / 发布步骤，直接复制去发

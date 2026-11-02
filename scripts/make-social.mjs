@@ -1,21 +1,21 @@
 #!/usr/bin/env node
-/* 为 AI 日报 / 经济日报生成公众号「图片消息」成品图（本地文件，不上线）。
+/* 为 AI 日报生成公众号「图片消息」成品图（本地文件，不上线）。
 
-   输入：一期中文日报 HTML（daily-ai/ 或 daily-economy/ 里的页面）
+   输入：一期中文 AI 日报 HTML（daily-ai/ 里的页面）
    输出：5 张 1080×1440（3:4）排版卡
      wechat/01-cover.png → 05-overview.png
    外加 manifest.json、README.txt，以及可整段复制的
    `公众号-图片消息.md`（标题 / 描述 / 逐图说明 / 发布步骤）。
 
    规则（不要改回去做 6 张、不要加小红书）：
-     - 只服务公众号，小红书图已停做；
+     - 只服务 AI 日报的公众号图片消息；小红书图已停做；
+     - 经济日报自 2026-11-02 起不再出配图，传 daily-economy/ 会直接报错；
      - 固定 5 张：封面 → 3 条重点 → 速览，没有尾页；
-     - 标题固定为「日报名 · M月D日」，不写期号、不写当天 headline；日报名按源稿自动识别。
+     - 标题固定为「AI 日报 · M月D日」，不写期号、不写当天 headline。
    细节见 docs/社交配图规则.md。
 
    用法：
      node scripts/make-social.mjs daily-ai/2026-10-29.html
-     node scripts/make-social.mjs daily-economy/2026-10-29.html --out /tmp/econ-images
      node scripts/make-social.mjs daily-ai/2026-10-29.html --zip   # 需要整包发送时才打包
 
    依赖：Python 3 + playwright（chromium）。首次使用：
@@ -91,6 +91,11 @@ if (issue.lang !== "zh") {
 
 /* 日报类型：按路径判断，决定品牌名、标题和默认输出目录。 */
 const SECTION = /economy|经济/i.test(source) ? "economy" : "ai";
+if (SECTION === "economy") {
+  console.error(`✗ 经济日报自 2026-11-02 起不再生成公众号配图。`);
+  console.error(`  已有期数的成品保留，不删；配图只对 daily-ai/ 生成。`);
+  process.exit(1);
+}
 const BRAND = {
   ai: { zh: "AI 日报", en: "Daily AI Brief", dir: "daily-ai", zip: "AI" },
   economy: { zh: "经济日报", en: "Daily Economy Brief", dir: "daily-economy", zip: "Economy" }

@@ -3,7 +3,8 @@
 
    用法：
      node scripts/wechat-draft.mjs daily-ai/social/2026-11-01/manifest.json
-     node scripts/wechat-draft.mjs daily-economy/social/2026-11-01/manifest.json --dry-run
+     node scripts/wechat-draft.mjs daily-ai/social/2026-11-01/manifest.json --dry-run
+    （经济日报自 2026-11-02 起不再出配图；旧 manifest 仍可读，但不再为新期建草稿。）
 
    凭据：环境变量 WECHAT_APPID / WECHAT_APPSECRET；没有就读 ~/.env 里的同名变量。
    不做登录态模拟、不群发、不发表——只创建草稿，剩下的在 mp.weixin.qq.com 草稿箱里人工确认。
