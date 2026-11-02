@@ -215,6 +215,7 @@
       failed: '没发出去：',
       noBackend: '服务器还没接上发信。点「复制」，粘到任何邮箱里都能发。',
       offline: '网络不通。点「复制」，粘到邮箱里发。',
+      throttled: '发得太频繁了，过一分钟再试。',
       empty: '标题和正文都别空着。'
     },
     en: {
@@ -224,6 +225,7 @@
       failed: 'Not sent: ',
       noBackend: 'Sending is not wired up yet. Use Copy — paste it into any email.',
       offline: 'Network error. Use Copy and send it from your inbox.',
+      throttled: 'Too many attempts — give it a minute.',
       empty: 'Subject and body cannot be empty.'
     }
   };
@@ -294,6 +296,7 @@
         return;
       }
       if (res.status === 404 || res.status === 405 || res.status === 501) setStatus(t('noBackend'), 'err');
+      else if (res.status === 403 || res.status === 429) setStatus(t('throttled'), 'err');
       else setStatus(t('failed') + ' ' + ((data && data.error) || res.status), 'err');
     } catch (err) {
       setStatus(t('offline'), 'err');
