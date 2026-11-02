@@ -169,6 +169,7 @@ function parseCard(raw, chapter) {
     .replace(/\bcard\b/g, "")
     .replace(/\s+/g, " ")
     .trim();
+  const followup = firstMatch(/\bdata-followup="([^"]*)"/i, raw.attrs || "");
 
   const cmeta = firstMatch(/<div class="cmeta">([\s\S]*?)<\/div>/i, raw.body);
   const time = stripTags(firstMatch(/<span class="d">([\s\S]*?)<\/span>/i, cmeta));
@@ -197,6 +198,7 @@ function parseCard(raw, chapter) {
 
   return {
     extraClass,
+    followup,
     cat: chapter.cat,
     chapterName: chapter.name,
     chapterEn: chapter.en,
@@ -231,11 +233,66 @@ function parseChapters(html) {
     const cardRe = /<article class="card([^"]*)"([^>]*)>([\s\S]*?)<\/article>/gi;
     let cm;
     while ((cm = cardRe.exec(body)) !== null) {
-      chapter.cards.push(parseCard({ attr: cm[1], body: cm[3] }, chapter));
+      chapter.cards.push(parseCard({ attr: cm[1], attrs: cm[2], body: cm[3] }, chapter));
     }
     if (chapter.cards.length) chapters.push(chapter);
   }
   return chapters;
+}
+
+const MONTH_ABBR = {
+  jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6,
+  jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12
+};
+
+function pad2(n) {
+  return String(n).padStart(2, "0");
+}
+
+function bjISO(year, month, day, hour, minute) {
+  if (!year || month < 1 || month > 12 || day < 1 || day > 31) return "";
+  return `${year}-${pad2(month)}-${pad2(day)}T${pad2(hour)}:${pad2(minute)}:00+08:00`;
+}
+
+/* 窗口区间支持两种来源：
+   1) <meta name="issue-window" content="起始ISO/结束ISO">（新页面优先）
+   2) metabar 里的「窗口 11/01 09:20 – 11/02 09:20」/「Window Nov 1, 09:20 – Nov 2, 09:20」
+   年份用期号日期推：结束日属于本期，起始日跨年时回退一年。 */
+function parseWindowRange(text, iso, isEn) {
+  if (!text) return null;
+  const issueYear = Number(iso.slice(0, 4));
+  let m;
+  let sm, sd, sh, smin, em, ed, eh, emin;
+  if (isEn) {
+    m = String(text).match(/([A-Za-z]{3,9})\s+(\d{1,2}),?\s+(\d{1,2}):(\d{2})\s*(?:–|—|-|to)\s*([A-Za-z]{3,9})\s+(\d{1,2}),?\s+(\d{1,2}):(\d{2})/i);
+    if (!m) return null;
+    sm = MONTH_ABBR[m[1].slice(0, 3).toLowerCase()];
+    em = MONTH_ABBR[m[5].slice(0, 3).toLowerCase()];
+    sd = Number(m[2]); sh = Number(m[3]); smin = Number(m[4]);
+    ed = Number(m[6]); eh = Number(m[7]); emin = Number(m[8]);
+  } else {
+    m = String(text).match(/(\d{1,2})\/(\d{1,2})\s+(\d{1,2}):(\d{2})\s*(?:–|—|-|~|至|到)\s*(\d{1,2})\/(\d{1,2})\s+(\d{1,2}):(\d{2})/);
+    if (!m) return null;
+    sm = Number(m[1]); sd = Number(m[2]); sh = Number(m[3]); smin = Number(m[4]);
+    em = Number(m[5]); ed = Number(m[6]); eh = Number(m[7]); emin = Number(m[8]);
+  }
+  if (!sm || !em) return null;
+  const endYear = issueYear;
+  const startYear = sm > em ? endYear - 1 : endYear;
+  return {
+    start: bjISO(startYear, sm, sd, sh, smin),
+    end: bjISO(endYear, em, ed, eh, emin)
+  };
+}
+
+function parseMetaWindow(html) {
+  const content = firstMatch(/<meta\s+name="issue-window"\s+content="([^"]+)"/i, html);
+  if (!content) return null;
+  const parts = content.split("/");
+  if (parts.length !== 2) return null;
+  const [start, end] = parts.map((s) => s.trim());
+  if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(start) || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(end)) return null;
+  return { start, end };
 }
 
 export function parseIssue(file) {
@@ -268,6 +325,7 @@ export function parseIssue(file) {
 
   const window = stripTags(firstMatch(/<span>(?:窗口|Window)\s*([\s\S]*?)<\/span>/i, metabarHtml)) ||
     stripTags(firstMatch(/(?:窗口|Window)\s*([^<]+)/i, metabarHtml));
+  const windowRange = parseMetaWindow(html) || parseWindowRange(window, iso, isEn);
   const readMinutesMatch = metabarHtml.match(/阅读约\s*(\d+)\s*分钟|(\d+)\s*min(?:ute)?s?\s+read/i);
   const readMinutes = readMinutesMatch ? Number(readMinutesMatch[1] || readMinutesMatch[2]) : 0;
 
@@ -346,6 +404,8 @@ export function parseIssue(file) {
     issueNo,
     issueLabel,
     window: metaWindow,
+    windowStart: windowRange ? windowRange.start : "",
+    windowEnd: windowRange ? windowRange.end : "",
     count,
     readMinutes: finalRead,
     generatedAt,
@@ -364,12 +424,13 @@ function renderCard(card) {
   const source = card.sourceName
     ? `<a class="src" href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(card.sourceName)} ↗</a>`
     : "";
+  const followup = card.followup ? ` data-followup="${escapeHtml(card.followup)}"` : "";
   const paras = card.paras.map((p) => `        <p>${p}</p>`).join("\n");
   const why = card.why
     ? `\n        <p class="why"><b>${escapeHtml(card.why.label)}</b>${card.why.html}</p>`
     : "";
   const extra = card.extraClass ? ` ${card.extraClass}` : "";
-  return `      <article class="card${extra}">
+  return `      <article class="card${extra}"${followup}>
         <div class="cmeta">
           <span class="d">${escapeHtml(card.time)}</span>
           ${source}
@@ -551,6 +612,7 @@ export function renderIssuePage(issue, opts = {}) {
     ISSUE_LABEL: escapeHtml(issue.issueLabel),
     DATE_DISPLAY: escapeHtml(issue.dateDisplay),
     WEEKDAY: escapeHtml(issue.weekday),
+    ISSUE_WINDOW: `${issue.windowStart || ""}/${issue.windowEnd || ""}`,
     DECK: issue.deckHtml,
     METABAR: issue.metabarHtml,
     TOC: renderToc(issue),
@@ -565,9 +627,11 @@ export function renderIssuePage(issue, opts = {}) {
     FOOT_DAILY: lang === "en" ? sec.footEn : sec.footZh,
     LANG_SCRIPT: `try { localStorage.setItem("kaixinguor.lang", "${langKey}"); } catch (e) {}`
   };
-  return template.replace(/\{\{([A-Z_]+)\}\}/g, (m, key) =>
+  const rendered = template.replace(/\{\{([A-Z_]+)\}\}/g, (m, key) =>
     Object.prototype.hasOwnProperty.call(values, key) ? values[key] : m
   );
+  // 老页面没有窗口信息时不输出空的 meta，避免 content="/"
+  return rendered.replace('<meta name="issue-window" content="/">\n', "");
 }
 
 /* 首页直接放整份日报：报头 + 目录 + 速览 + 全部栏目 + 期脚注。

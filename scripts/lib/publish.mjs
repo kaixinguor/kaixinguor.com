@@ -62,7 +62,7 @@ export function publish({ section = "ai", argv = [] } = {}) {
 
   const sourceArg = positional[0];
   if (!sourceArg) {
-    fail(`用法：node scripts/${cmd}.mjs <中文母版.html> [--en <英文母版.html>] [--no-check-links] [--push] [--dry-run]`);
+    fail(`用法：node scripts/${cmd}.mjs <中文母版.html> [--en <英文母版.html>] [--allow-overlap] [--no-check-links] [--push] [--dry-run]`);
   }
 
   const source = path.resolve(process.cwd(), sourceArg);
@@ -126,6 +126,20 @@ export function publish({ section = "ai", argv = [] } = {}) {
   for (const item of [issue, enIssue]) {
     item.footerHtml = item.footerHtml.replace(/Issue\s+—/g, `Issue ${item.issueNo}`);
     item.footerHtml = item.footerHtml.replace(/Issue\s+null/g, `Issue ${item.issueNo}`);
+  }
+
+  /* ---------- 与往期去重 + 窗口衔接（默认开启） ---------- */
+  if (flags.has("--no-check-overlap")) {
+    console.warn(`\n! 已跳过与往期的重复检查（--no-check-overlap）。仅限排障时使用。`);
+  } else {
+    console.log(`\n→ 检查与往期的内容重复、窗口是否首尾相接…`);
+    const result = run(process.execPath, [path.join(ROOT, "scripts", "coverage.mjs"), "check", source, "--section", section]);
+    if (result.status !== 0 && !flags.has("--allow-overlap")) {
+      console.error(`\n✗ 本期与往期存在重复内容或窗口重叠，未写入站点。`);
+      console.error(`  删掉重复条目；确属追更，给卡片加 data-followup 并在正文补新数字/型号。`);
+      console.error(`  确实要强行发布才加 --allow-overlap。`);
+      process.exit(1);
+    }
   }
 
   /* ---------- 链接检查，失败就不落盘（默认开启） ---------- */

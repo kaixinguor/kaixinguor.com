@@ -8,6 +8,8 @@
 
    选项：
      --en <file>        英文版；不写就找同目录的 YYYY-MM-DD-en.html
+     --allow-overlap    与往期内容重复 / 窗口重叠也继续发布（仅限排障）
+     --no-check-overlap 跳过与往期的重复检查（仅限排障）
      --no-check-links   跳过原文链接检查（仅限排障）
      --allow-bad-links  链接检查失败也继续发布
      --social           发布后生成本地公众号配图（5 张，不上线）

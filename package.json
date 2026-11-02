@@ -16,7 +16,9 @@
     "publish:ai": "node scripts/publish-daily.mjs",
     "publish:economy": "node scripts/publish-economy.mjs",
     "check:links:ai": "node scripts/check-links.mjs --latest --section ai",
-    "check:links:economy": "node scripts/check-links.mjs --latest --section economy"
+    "check:links:economy": "node scripts/check-links.mjs --latest --section economy",
+    "check:overlap": "node scripts/coverage.mjs check",
+    "report:coverage": "node scripts/coverage.mjs report"
   },
   "engines": {
     "node": ">=20"
