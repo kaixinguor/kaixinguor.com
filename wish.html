@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>许愿 · kaixinguor</title>
-<meta name="description" content="告诉我你想要什么工具。会打开你的邮件客户端，内容已经填好。">
+<meta name="description" content="告诉我你想要什么工具。确认后直接寄给我，也可以复制或用自己的邮箱发。">
 <meta name="theme-color" content="#f7f3ed">
 <link rel="canonical" href="https://kaixinguor.com/wish.html">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="AI 日报（中文）" hreflang="zh-CN" href="feed.xml">
 <link rel="alternate" type="application/rss+xml" title="AI Daily (English)" hreflang="en" href="feed-en.xml">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 <script>
 (function () {
   try {
@@ -122,7 +122,7 @@
 
       <div class="wish-actions">
         <button class="btn btn-primary" type="submit" data-i18n="wish.send">发送</button>
-        <span class="faint" data-i18n="wish.note">会打开你的邮件客户端，内容已经填好。</span>
+        <span class="faint" data-i18n="wish.note">点「发送」直接寄给我；也可以复制到自己的邮箱里发。</span>
       </div>
 
     </form>
@@ -150,25 +150,186 @@
   </div>
 </footer>
 
+<dialog id="wish-dialog" class="wish-dialog" aria-labelledby="wish-dialog-title">
+  <div class="inner">
+    <h2 id="wish-dialog-title" data-i18n="wish.dlg.title">再看一眼，然后发出</h2>
+    <p class="wish-dialog-hint" data-i18n="wish.dlg.hint">这两段都可以改。发送后我会收到一封邮件，不会存到数据库里。</p>
+
+    <label>
+      <span data-i18n="wish.dlg.subject">标题</span>
+      <input id="wish-subject" type="text" maxlength="200" autocomplete="off">
+    </label>
+
+    <label>
+      <span data-i18n="wish.dlg.body">正文</span>
+      <textarea id="wish-body" rows="12" spellcheck="false"></textarea>
+    </label>
+
+    <p class="wish-status" id="wish-status" role="status" aria-live="polite"></p>
+
+    <div class="wish-dialog-actions">
+      <button type="button" class="btn btn-ghost" id="wish-cancel" data-i18n="wish.dlg.cancel">取消</button>
+      <button type="button" class="btn btn-ghost" id="wish-copy" data-i18n="wish.dlg.copy">复制</button>
+      <a class="btn btn-ghost" id="wish-mailapp" href="mailto:wish@kaixinguor.com" data-i18n="wish.dlg.mailapp">用邮件 App 打开</a>
+      <span class="spacer"></span>
+      <button type="button" class="btn btn-primary" id="wish-send" data-i18n="wish.dlg.send">直接发送</button>
+    </div>
+  </div>
+</dialog>
+
 <script src="lang.js?v=6"></script>
 <script src="site.js?v=6"></script>
 <script>
-document.getElementById('wish').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const f = e.target;
-  const v = (n) => (f.elements[n].value || '').trim();
-  const body = [
-    '1. 想让它干什么：', v('what'), '',
-    '2. 现在怎么应付：', v('now'), '',
-    '3. 多久碰到一次：', f.elements.freq.selectedOptions[0].text, '',
-    '4. 愿意付多少：', f.elements.price.selectedOptions[0].text, '',
-    '5. 主要设备：', f.elements.platform.selectedOptions[0].text, '',
-    '6. 联系方式：', v('contact') || '(没填)'
-  ].join('\n');
-  const subject = '许愿：' + (v('what').slice(0, 40) || '一个新工具');
-  location.href = 'mailto:linr.w@163.com?subject=' + encodeURIComponent(subject)
-                + '&body=' + encodeURIComponent(body);
-});
+(function () {
+  var form = document.getElementById('wish');
+  var dlg = document.getElementById('wish-dialog');
+  if (!form || !dlg) return;
+
+  var subjEl = document.getElementById('wish-subject');
+  var bodyEl = document.getElementById('wish-body');
+  var statusEl = document.getElementById('wish-status');
+  var sendBtn = document.getElementById('wish-send');
+  var copyBtn = document.getElementById('wish-copy');
+  var mailLink = document.getElementById('wish-mailapp');
+  var cancelBtn = document.getElementById('wish-cancel');
+  var contact = '';
+
+  var TEXT = {
+    zh: {
+      sending: '发送中…',
+      sent: '已发出，谢谢。',
+      copied: '已复制，粘到邮件里就能发。',
+      failed: '没发出去：',
+      noBackend: '服务器还没接上发信。先点「复制」或「用邮件 App 打开」，一样能到。',
+      offline: '网络不通。先点「复制」或「用邮件 App 打开」。',
+      empty: '标题和正文都别空着。'
+    },
+    en: {
+      sending: 'Sending…',
+      sent: 'Sent. Thank you.',
+      copied: 'Copied — paste it into any email.',
+      failed: 'Not sent: ',
+      noBackend: 'Sending is not wired up yet. Use Copy or the mail app — either works.',
+      offline: 'Network error. Use Copy or the mail app.',
+      empty: 'Subject and body cannot be empty.'
+    }
+  };
+
+  function t(key) {
+    var lang = document.documentElement.lang === 'en' ? 'en' : 'zh';
+    return TEXT[lang][key] || TEXT.zh[key];
+  }
+
+  function setStatus(msg, state) {
+    statusEl.textContent = msg || '';
+    statusEl.dataset.state = state || '';
+  }
+
+  function current() {
+    return { subject: subjEl.value.trim(), body: bodyEl.value.trim() };
+  }
+
+  function mailtoHref() {
+    var c = current();
+    return 'mailto:wish@kaixinguor.com?subject=' + encodeURIComponent(c.subject) +
+           '&body=' + encodeURIComponent(c.body);
+  }
+
+  function syncMailLink() {
+    mailLink.setAttribute('href', mailtoHref());
+  }
+
+  // 把表单里的六问拼成正文
+  function collect() {
+    var v = function (n) { return (form.elements[n].value || '').trim(); };
+    var en = document.documentElement.lang === 'en';
+    var L = en
+      ? ['1. What should it do: ', '2. How do you cope today: ', '3. How often: ', '4. Would pay: ', '5. Device: ', '6. Contact: ']
+      : ['1. 想让它干什么：', '2. 现在怎么应付：', '3. 多久碰到一次：', '4. 愿意付多少：', '5. 主要设备：', '6. 联系方式：'];
+    var text = [
+      L[0], v('what'), '',
+      L[1], v('now'), '',
+      L[2], form.elements.freq.selectedOptions[0].text, '',
+      L[3], form.elements.price.selectedOptions[0].text, '',
+      L[4], form.elements.platform.selectedOptions[0].text, '',
+      L[5], v('contact') || (en ? '(not given)' : '(没填)')
+    ].join('\n');
+    contact = v('contact');
+    return {
+      subject: (en ? 'Wish: ' : '许愿：') + (v('what').slice(0, 40) || (en ? 'a new tool' : '一个新工具')),
+      body: text
+    };
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (form.reportValidity && !form.reportValidity()) return;
+    var c = collect();
+    subjEl.value = c.subject;
+    bodyEl.value = c.body;
+    setStatus('');
+    syncMailLink();
+    if (typeof dlg.showModal === 'function') dlg.showModal();
+    else window.location.href = mailtoHref();
+  });
+
+  async function send() {
+    var c = current();
+    if (!c.subject || !c.body) { setStatus(t('empty'), 'err'); return; }
+    sendBtn.disabled = true;
+    setStatus(t('sending'), '');
+    try {
+      var res = await fetch('/api/wish', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ subject: c.subject, body: c.body, contact: contact })
+      });
+      var data = null;
+      try { data = await res.json(); } catch (err) {}
+      if (res.ok && data && data.ok) {
+        setStatus(t('sent'), 'ok');
+        form.reset();
+        setTimeout(function () { if (dlg.open) dlg.close(); }, 1100);
+        return;
+      }
+      if (res.status === 404 || res.status === 501) setStatus(t('noBackend'), 'err');
+      else setStatus(t('failed') + ' ' + ((data && data.error) || res.status), 'err');
+    } catch (err) {
+      setStatus(t('offline'), 'err');
+    } finally {
+      sendBtn.disabled = false;
+    }
+  }
+
+  async function copy() {
+    var c = current();
+    var text = 'To: wish@kaixinguor.com\nSubject: ' + c.subject + '\n\n' + c.body;
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('no clipboard');
+      await navigator.clipboard.writeText(text);
+      setStatus(t('copied'), 'ok');
+    } catch (err) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      if (ok) setStatus(t('copied'), 'ok');
+      else setStatus('wish@kaixinguor.com', '');
+    }
+  }
+
+  sendBtn.addEventListener('click', send);
+  copyBtn.addEventListener('click', copy);
+  cancelBtn.addEventListener('click', function () { dlg.close(); });
+  subjEl.addEventListener('input', syncMailLink);
+  bodyEl.addEventListener('input', syncMailLink);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+})();
 </script>
 </body>
 </html>

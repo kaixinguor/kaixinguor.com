@@ -32,7 +32,7 @@ const files = [
   "_redirects"
 ];
 
-const dirs = ["daily-ai", "daily-economy", "hark", "snipread", "assets"];
+const dirs = ["daily-ai", "daily-economy", "hark", "snipread", "assets", "functions"];
 
 let count = 0;
 function copyFile(from, to) {
