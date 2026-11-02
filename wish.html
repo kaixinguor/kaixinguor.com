@@ -115,17 +115,22 @@
         </select>
       </label>
 
-      <label>
-        <span data-i18n="wish.q6">怎么联系你（可选）</span>
-        <input name="contact" data-i18n-ph="wish.q6.ph" placeholder="邮箱或微信">
-      </label>
-
       <div class="wish-actions">
         <button class="btn btn-primary" type="submit" data-i18n="wish.send">发送</button>
         <span class="faint" data-i18n="wish.note">点「发送」直接寄给我；也可以复制到自己的邮箱里发。</span>
       </div>
 
     </form>
+
+    <div class="wish-contact">
+      <p class="wish-contact-lead" data-i18n="wish.contact.lead">不想等，或者想直接聊？找我本人：</p>
+      <p class="wish-contact-line">
+        <a href="mailto:contact@kaixinguor.com" data-i18n="wish.contact.email">contact@kaixinguor.com</a>
+        <!-- 微信号待定：确认后在这里加 <span class="sep">/</span><span>微信：<code>xxx</code></span> -->
+        
+      </p>
+      <p class="faint" data-i18n="wish.contact.note">许愿是异步的——我逐条读，但不一定回。真着急、想当面说、或者要报价，直接来找我。</p>
+    </div>
   </div>
 </main>
 
@@ -253,17 +258,16 @@
     var v = function (n) { return (form.elements[n].value || '').trim(); };
     var en = document.documentElement.lang === 'en';
     var L = en
-      ? ['1. What should it do: ', '2. How do you cope today: ', '3. How often: ', '4. Would pay: ', '5. Device: ', '6. Contact: ']
-      : ['1. 想让它干什么：', '2. 现在怎么应付：', '3. 多久碰到一次：', '4. 愿意付多少：', '5. 主要设备：', '6. 联系方式：'];
+      ? ['1. What should it do: ', '2. How do you cope today: ', '3. How often: ', '4. Would pay: ', '5. Device: ']
+      : ['1. 想让它干什么：', '2. 现在怎么应付：', '3. 多久碰到一次：', '4. 愿意付多少：', '5. 主要设备：'];
     var text = [
       L[0], v('what'), '',
       L[1], v('now'), '',
       L[2], form.elements.freq.selectedOptions[0].text, '',
       L[3], form.elements.price.selectedOptions[0].text, '',
-      L[4], form.elements.platform.selectedOptions[0].text, '',
-      L[5], v('contact') || (en ? '(not given)' : '(没填)')
+      L[4], form.elements.platform.selectedOptions[0].text
     ].join('\n');
-    contact = v('contact');
+    contact = '';
     return {
       subject: (en ? 'Wish: ' : '许愿：') + (v('what').slice(0, 40) || (en ? 'a new tool' : '一个新工具')),
       body: text
