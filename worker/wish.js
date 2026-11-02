@@ -138,7 +138,9 @@ export async function handleWish(request, env) {
 
   let payload;
   try {
-    payload = await request.json();
+    const raw = await request.text();
+    if (raw.length > MAX_PAYLOAD_BYTES) return json({ ok: false, error: "内容太大" }, 413);
+    payload = JSON.parse(raw);
   } catch {
     return json({ ok: false, error: "body must be JSON" }, 400);
   }
