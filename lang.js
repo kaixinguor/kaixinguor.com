@@ -79,8 +79,6 @@ const I18N = {
     "wish.dlg.body": "Message",
     "wish.dlg.cancel": "Cancel",
     "wish.dlg.copy": "Copy",
-    "wish.dlg.mailapp": "Open in mail app",
-    "wish.dlg.gmail": "Write in Gmail",
     "wish.dlg.send": "Send now",
     "wish.f1": "Daily",
     "wish.f2": "Weekly",
