@@ -9,3 +9,4 @@ __pycache__/
 *.zip
 lab/shots/
 lab/economy/
+.wrangler/

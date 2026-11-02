@@ -1,11 +1,19 @@
 {
-  // Cloudflare Workers 静态资源部署配置（npx wrangler deploy）。
-  // 如果走 Cloudflare Pages（推荐），用 dist/site/ 作为输出目录，
-  // 这个文件会被忽略，留着无害。见 docs/自动化与部署.md。
+  // Cloudflare Workers 部署配置（npx wrangler deploy）。
+  // - 页面是静态资源：assets.directory = "."，由 .assetsignore 决定哪些不进产物
+  // - 唯一需要跑代码的是 /api/wish，入口在 main 指向的 worker/index.js
   "name": "kaixinguor",
+  "main": "worker/index.js",
   "compatibility_date": "2026-10-24",
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
     "not_found_handling": "404-page"
   }
+  // 想用 Cloudflare 原生发信时，先到 Email Service → Email Sending 里 onboard 域名，
+  // 再把下面这条解注释并重新部署（之后函数会自动走绑定，不需要 API token）：
+  //
+  // "send_email": [
+  //   { "name": "EMAIL", "destination_address": "ling.wang.nj@gmail.com" }
+  // ]
 }

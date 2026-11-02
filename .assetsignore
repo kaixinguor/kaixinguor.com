@@ -3,7 +3,14 @@ docs/
 deploy/
 scripts/
 templates/
+worker/
 .github/
+.git/
+node_modules/
+.dev.vars
+.wrangler/
+.env
+.env.*
 dist/
 preview.sh
 pack.sh

@@ -1,7 +1,7 @@
-// POST /api/wish —— 许愿表单的收信端点（Cloudflare Pages Functions）
+// POST /api/wish —— 许愿表单的收信逻辑（由 worker/index.js 路由进来）
 //
 // 发送方式按优先级（有哪个用哪个）：
-//   1. env.EMAIL                              —— Workers 的 send_email 绑定（Pages 不支持这个绑定）
+//   1. env.EMAIL                              —— Workers 的 send_email 绑定（wrangler.jsonc 里配）
 //   2. env.CF_API_TOKEN + env.CF_ACCOUNT_ID   —— Cloudflare Email Sending 的 REST API
 //   3. env.RESEND_API_KEY                     —— Resend REST（第三方，免费 3000 封/月）
 //   4. 都没有                                   —— 返回 501，前端自动降级成「复制 / 用邮件 App 打开」
@@ -44,8 +44,8 @@ function allowedOrigin(request) {
   return (
     /^https:\/\/(www\.)?kaixinguor\.com$/.test(origin) ||
     /^https:\/\/[a-z0-9-]+\.kaixinguor\.pages\.dev$/.test(origin) ||
-    /^http:\/\/localhost(:\d+)?$/.test(origin) ||
-    /^http:\/\/127\.0\.0\.1(:\d+)?$/.test(origin)
+    /^https?:\/\/localhost(:\d+)?$/.test(origin) ||
+    /^https?:\/\/127\.0\.0\.1(:\d+)?$/.test(origin)
   );
 }
 
@@ -65,7 +65,7 @@ function looksLikeEmail(s) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
 }
 
-function buildText({ subject, body, contact, request }) {
+function buildText({ body, request }) {
   const ua = request.headers.get("user-agent") || "-";
   const when = new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
   return [
@@ -103,7 +103,7 @@ async function sendWithResend(env, message) {
   return res.json();
 }
 
-// Cloudflare Email Sending 的 REST API —— 不依赖绑定，Pages 里也能用
+// Cloudflare Email Sending 的 REST API —— 不依赖绑定，任何 JS 运行时都能调
 async function sendWithCloudflareRest(env, message) {
   const url = CF_SEND_URL.replace("{id}", env.CF_ACCOUNT_ID);
   const res = await fetch(url, {
@@ -129,7 +129,10 @@ async function sendWithCloudflareRest(env, message) {
   return data.result;
 }
 
-export async function onRequestPost({ request, env }) {
+export async function handleWish(request, env) {
+  if (request.method !== "POST") {
+    return json({ ok: false, error: "POST only" }, 405);
+  }
   if (!allowedOrigin(request)) return json({ ok: false, error: "origin not allowed" }, 403);
 
   const ip = request.headers.get("cf-connecting-ip") || "unknown";
@@ -157,7 +160,7 @@ export async function onRequestPost({ request, env }) {
   const to = env.WISH_TO || DEFAULT_TO;
   const from = env.WISH_FROM || DEFAULT_FROM;
   const replyTo = looksLikeEmail(contact) ? contact : undefined;
-  const text = buildText({ subject, body, contact, request });
+  const text = buildText({ body, request });
 
   try {
     if (env.EMAIL) {
@@ -174,10 +177,6 @@ export async function onRequestPost({ request, env }) {
     }
     return json({ ok: false, error: "not_configured" }, 501);
   } catch (err) {
-    return json({ ok: false, error: String(err && err.message || err).slice(0, 200) }, 502);
+    return json({ ok: false, error: String((err && err.message) || err).slice(0, 200) }, 502);
   }
-}
-
-export async function onRequestGet() {
-  return json({ ok: false, error: "POST only" }, 405);
 }
