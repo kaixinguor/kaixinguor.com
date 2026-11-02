@@ -34,14 +34,14 @@ function loadEnvFile() {
   for (const line of fs.readFileSync(file, "utf8").split("\n")) {
     const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
     if (!m) continue;
-    out[m[1]] = m[2].replace(/^["']|["']$/g, "");
+    out[m[1]] = m[2].replace(/^["']|["']$/g, "").trim();
   }
   return out;
 }
 
 const envFile = loadEnvFile();
-const APPID = process.env.WECHAT_APPID || envFile.WECHAT_APPID;
-const APPSECRET = process.env.WECHAT_APPSECRET || envFile.WECHAT_APPSECRET;
+const APPID = (process.env.WECHAT_APPID || envFile.WECHAT_APPID || "").trim();
+const APPSECRET = (process.env.WECHAT_APPSECRET || envFile.WECHAT_APPSECRET || "").trim();
 
 if (!APPID || !APPSECRET) {
   console.error("✗ 没有找到 WECHAT_APPID / WECHAT_APPSECRET（环境变量或 ~/.env）");
@@ -156,7 +156,9 @@ try {
   }
 } catch (err) {
   console.error(`\n✗ ${err.message}`);
-  console.error("  如果错误码是 40164：把本机出口 IP 加进公众号后台的 IP 白名单。");
+  console.error("  如果错误码是 40013：AppID 不正确（检查是否带空格、是否拿成了小程序/服务号的 AppID）。");
+  console.error("  如果错误码是 40125：AppSecret 不正确。");
+  console.error("  如果错误码是 40164 / 61004：把本机出口 IP 加进公众号后台的 IP 白名单。");
   console.error("  如果错误码是 48001：这个账号（多为个人主体订阅号）没有草稿/素材接口权限。");
   process.exitCode = 2;
 }
