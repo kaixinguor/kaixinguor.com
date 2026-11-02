@@ -171,6 +171,7 @@
       <button type="button" class="btn btn-ghost" id="wish-cancel" data-i18n="wish.dlg.cancel">取消</button>
       <button type="button" class="btn btn-ghost" id="wish-copy" data-i18n="wish.dlg.copy">复制</button>
       <a class="btn btn-ghost" id="wish-mailapp" href="mailto:wish@kaixinguor.com" data-i18n="wish.dlg.mailapp">用邮件 App 打开</a>
+      <a class="btn btn-ghost" id="wish-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wish@kaixinguor.com" target="_blank" rel="noopener" data-i18n="wish.dlg.gmail">用 Gmail 写</a>
       <span class="spacer"></span>
       <button type="button" class="btn btn-primary" id="wish-send" data-i18n="wish.dlg.send">直接发送</button>
     </div>
@@ -191,6 +192,7 @@
   var sendBtn = document.getElementById('wish-send');
   var copyBtn = document.getElementById('wish-copy');
   var mailLink = document.getElementById('wish-mailapp');
+  var gmailLink = document.getElementById('wish-gmail');
   var cancelBtn = document.getElementById('wish-cancel');
   var contact = '';
 
@@ -200,8 +202,8 @@
       sent: '已发出，谢谢。',
       copied: '已复制，粘到邮件里就能发。',
       failed: '没发出去：',
-      noBackend: '服务器还没接上发信。先点「复制」或「用邮件 App 打开」，一样能到。',
-      offline: '网络不通。先点「复制」或「用邮件 App 打开」。',
+      noBackend: '服务器还没接上发信。用「复制」「用 Gmail 写」或「用邮件 App 打开」，一样能到。',
+      offline: '网络不通。用「复制」或「用 Gmail 写」发出去。',
       empty: '标题和正文都别空着。'
     },
     en: {
@@ -236,7 +238,14 @@
   }
 
   function syncMailLink() {
+    var c = current();
     mailLink.setAttribute('href', mailtoHref());
+    if (gmailLink) {
+      gmailLink.setAttribute('href',
+        'https://mail.google.com/mail/?view=cm&fs=1&to=wish@kaixinguor.com' +
+        '&su=' + encodeURIComponent(c.subject) +
+        '&body=' + encodeURIComponent(c.body));
+    }
   }
 
   // 把表单里的六问拼成正文
@@ -292,7 +301,7 @@
         setTimeout(function () { if (dlg.open) dlg.close(); }, 1100);
         return;
       }
-      if (res.status === 404 || res.status === 501) setStatus(t('noBackend'), 'err');
+      if (res.status === 404 || res.status === 405 || res.status === 501) setStatus(t('noBackend'), 'err');
       else setStatus(t('failed') + ' ' + ((data && data.error) || res.status), 'err');
     } catch (err) {
       setStatus(t('offline'), 'err');

@@ -1,14 +1,16 @@
 {
   // Cloudflare Workers 部署配置（npx wrangler deploy）。
   // - 页面是静态资源：assets.directory = "."，由 .assetsignore 决定哪些不进产物
-  // - 唯一需要跑代码的是 /api/wish，入口在 main 指向的 worker/index.js
+  // - 只有 /api/* 进 Worker（run_worker_first 限定），其余请求由静态资源直接响应，
+  //   这样即使 Worker 出问题，页面也不会被拖下水。
   "name": "kaixinguor",
-  // "main": "worker/index.js",   // 暂停：Worker 路由导致线上超时，先恢复纯静态
+  "main": "worker/index.js",
   "compatibility_date": "2026-10-24",
   "assets": {
     "directory": ".",
-    // "binding": "ASSETS",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
   }
   // 想用 Cloudflare 原生发信时，先到 Email Service → Email Sending 里 onboard 域名，
   // 再把下面这条解注释并重新部署（之后函数会自动走绑定，不需要 API token）：
