@@ -131,7 +131,8 @@ async function sendWithCloudflareRest(env, message) {
 
 export async function handleWish(request, env) {
   if (request.method !== "POST") {
-    return json({ ok: false, error: "POST only" }, 405);
+    // 临时诊断：只报绑定名字，不泄露任何值
+    return json({ ok: false, error: "POST only", bindings: Object.keys(env || {}) }, 405);
   }
   if (!allowedOrigin(request)) return json({ ok: false, error: "origin not allowed" }, 403);
 
