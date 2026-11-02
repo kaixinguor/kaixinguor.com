@@ -21,7 +21,7 @@ const CF_SEND_URL = "https://api.cloudflare.com/client/v4/accounts/{id}/email/se
 
 const MAX_SUBJECT = 200;
 const MAX_BODY = 20000;
-const MAX_CONTACT = 200;
+const MAX_PAYLOAD_BYTES = 24 * 1024;
 
 const RATE_WINDOW_MS = 10 * 60 * 1000;
 const RATE_MAX = 5;
@@ -61,12 +61,8 @@ function throttle(ip) {
   return rec.count <= RATE_MAX;
 }
 
-function looksLikeEmail(s) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
-}
-
 function buildText({ body, request }) {
-  const ua = request.headers.get("user-agent") || "-";
+  const ua = (request.headers.get("user-agent") || "-").replace(/[\r\n]+/g, " ");
   const when = new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
   return [
     body,
@@ -93,8 +89,7 @@ async function sendWithResend(env, message) {
       from: "kaixinguor 许愿 <" + message.from + ">",
       to: [message.to],
       subject: message.subject,
-      text: message.text,
-      reply_to: message.replyTo
+      text: message.text
     })
   });
   if (!res.ok) {
@@ -138,6 +133,9 @@ export async function handleWish(request, env) {
   const ip = request.headers.get("cf-connecting-ip") || "unknown";
   if (!throttle(ip)) return json({ ok: false, error: "太多请求了，过一会儿再试" }, 429);
 
+  const declared = Number(request.headers.get("content-length") || 0);
+  if (declared > MAX_PAYLOAD_BYTES) return json({ ok: false, error: "内容太大" }, 413);
+
   let payload;
   try {
     payload = await request.json();
@@ -148,31 +146,28 @@ export async function handleWish(request, env) {
   // 蜜罐：正常表单没有这个字段，填了就是机器人
   if (payload.website) return json({ ok: true });
 
-  const subject = String(payload.subject || "").trim();
+  const subject = String(payload.subject || "").replace(/[\r\n]+/g, " ").trim();
   const body = String(payload.body || "").trim();
-  const contact = String(payload.contact || "").trim();
 
   if (!subject || !body) return json({ ok: false, error: "标题和正文不能为空" }, 400);
   if (subject.length > MAX_SUBJECT) return json({ ok: false, error: "标题太长" }, 400);
   if (body.length > MAX_BODY) return json({ ok: false, error: "正文太长" }, 400);
-  if (contact.length > MAX_CONTACT) return json({ ok: false, error: "联系方式太长" }, 400);
 
   const to = env.WISH_TO || DEFAULT_TO;
   const from = env.WISH_FROM || DEFAULT_FROM;
-  const replyTo = looksLikeEmail(contact) ? contact : undefined;
   const text = buildText({ body, request });
 
   try {
     if (env.EMAIL) {
-      const result = await sendWithBinding(env, { to, from, subject, text, replyTo });
+      const result = await sendWithBinding(env, { to, from, subject, text });
       return json({ ok: true, id: result && result.messageId });
     }
     if (env.CF_API_TOKEN && env.CF_ACCOUNT_ID) {
-      const result = await sendWithCloudflareRest(env, { to, from, subject, text, replyTo });
+      const result = await sendWithCloudflareRest(env, { to, from, subject, text });
       return json({ ok: true, delivered: (result && result.delivered) || [] });
     }
     if (env.RESEND_API_KEY) {
-      const result = await sendWithResend(env, { to, from, subject, text, replyTo });
+      const result = await sendWithResend(env, { to, from, subject, text });
       return json({ ok: true, id: result && result.id });
     }
     return json({ ok: false, error: "not_configured" }, 501);
