@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 01 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 2, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-02-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-02-en.html</guid>
+      <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today’s thread runs through the ledger. Meituan bets 1.6 trillion parameters on long-horizon work, Cisco hands one engineer an unlimited token budget to rewrite 98% of its legacy code, and Delaware proposes a 30-month sandbox for agent-run companies. Meanwhile Hongqi Convenience spent 16 months and ¥2.87 million proving a robot still cannot run a store. Capability keeps moving; someone is starting to sign the bill. Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents</description>
+    </item>
     <item>
       <title>AI Daily · November 1, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-01-en.html</link>

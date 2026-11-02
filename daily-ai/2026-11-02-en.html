@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 2, 2026</title>
+<meta name="description" content="AI Daily for 2026-11-02: Meituan&#39;s LongCat-2.5 ships 1.6T parameters for long-horizon agents; Cisco gives one engineer an unlimited token budget to rewrite 98% of its legacy code; Delaware proposes a 30-month sandbox for agent-run companies; Tsinghua&#39;s algebraic world model proves levels unsolvable in Lean 4; Grok adds invisible text watermarks; Hongqi ends its robot store project; Aramco buys 49% of HUMAIN; Kioxia sells out 2027 capacity.">
+<meta property="og:title" content="AI Daily · November 2, 2026">
+<meta property="og:description" content="AI Daily for 2026-11-02: Meituan&#39;s LongCat-2.5 ships 1.6T parameters for long-horizon agents; Cisco gives one engineer an unlimited token budget to rewrite 98% of its legacy code; Delaware proposes a 30-month sandbox for agent-run companies; Tsinghua&#39;s algebraic world model proves levels unsolvable in Lean 4; Grok adds invisible text watermarks; Hongqi ends its robot store project; Aramco buys 49% of HUMAIN; Kioxia sells out 2027 capacity.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-02-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-02-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-02.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-02-en.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-02.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 008</span>
+    </div>
+    <h1 class="date">November 2, 2026<span class="weekday">MON</span></h1>
+    <p class="deck">Today’s thread runs through the ledger. Meituan bets 1.6 trillion parameters on long-horizon work, Cisco hands one engineer an unlimited token budget to rewrite 98% of its legacy code,
+      and Delaware proposes a 30-month sandbox for agent-run companies. Meanwhile Hongqi Convenience spent 16 months and ¥2.87 million proving a robot still cannot run a store.
+      <em>Capability keeps moving; someone is starting to sign the bill.</em></p>
+    <div class="metabar"><span class="pill">Issue 008</span>
+      <span class="dot"></span>
+      <span>Window Nov 1, 09:20 – Nov 2, 09:20 (UTC+8)</span>
+      <span class="dot"></span>
+      <span>8 items</span>
+      <span class="dot"></span>
+      <span>9 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>Models</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Meituan’s LongCat-2.5: 1.6 trillion total parameters, 48 billion active per token.</b> The model is pitched at long-horizon agent tasks, with vision split into multi-level discrete tokens and training tuned for domestic accelerators plus W4A4 inference. The demo and API are live; the weights are still “coming soon”.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Aramco buys 49% of HUMAIN, injecting about SAR 9.9 billion; PIF keeps 51%.</b> The deal mixes AI asset transfers with new capital, giving Aramco an industrial deployment channel while the sovereign fund keeps control. Oil cash is becoming an internal valuation anchor for compute.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Tsinghua’s Algebraic World Model proves an ARC-AGI-3 level unsolvable — in Lean 4.</b> It clears all 183 levels at 99.9%, using 43% of the human baseline’s actions. The paper is an arXiv preprint and has not been peer-reviewed.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Models</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 09:18</span>
+          <a class="src" href="https://www.ithome.com/1/020/873.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents</h3>
+        <p>Meituan’s LongCat team released LongCat-2.5 on the morning of November 2: a natively multimodal model with 1.6 trillion total parameters and roughly 48 billion activated per token. The company says it builds on LongCat-2.0 with stronger native vision and agentic coding, aimed at long-horizon agent work rather than single-turn chat.</p>
+        <p>Two training changes matter. Long-sequence training now includes more long-horizon trajectories and large-scale long-horizon reinforcement learning, aimed at end-to-end engineering such as working inside a large codebase or building a complete project. The team also turns real agent failures into reproducible, verifiable training tasks, so the data targets known weaknesses. That approach depends on having enough real task traces, not just synthetic data.</p>
+        <p>Multimodality is handled by tokenising vision: visual signals become multi-level discrete tokens so the backbone processes images and text in one format. The company says this makes the model strong at visual coding and supports creative design and 3D work. On infrastructure, it cites long-context training and W4A4 inference on domestic accelerators, plus train/inference numerical consistency and long-context rollout to make large-scale long-horizon RL practical.</p>
+        <p>Two entry points are live: the longcat.chat demo and the API. GitHub and Hugging Face pages still say “coming soon”, so the weights are not actually open yet. Benchmark results are published as images on the release page; the text lists no scores, and no third party has reproduced them.</p>
+        <p class="why"><b>Why it matters</b>A 1.6T/48B split is a sparse-MoE ledger: total parameters buy capacity, active parameters buy inference cost. The real bet is not size but “long-horizon” — longer context, more tool calls, higher failure rates — and W4A4 plus domestic-silicon tuning exist to push down cost per token. Judge it on three things: success on long tasks rather than single-turn scores, the API price, and whether the community can reproduce the results once weights ship. Parameter counts make good launch events; rework rates on long tasks do not.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 08:17</span>
+          <a class="src" href="https://www.ithome.com/1/020/857.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Cisco gives one 27-year-old engineer unlimited tokens to rewrite 98% of its legacy code</h3>
+        <p>Fortune reports that Cisco president and chief product officer Jeetu Patel gave 27-year-old engineer Padmanabhan Krishnamurthy a target: rewrite or refactor 98% of the company’s legacy code with AI within 24 months, with an unlimited token budget. “I gave him unlimited tokens because he’s going to refactor the code,” Patel said.</p>
+        <p>Krishnamurthy co-founded the real-time translation startup EzDubs in 2023 and joined Cisco when it acquired the company in 2025. Patel describes him as having been “buried deep in the organisation, doing things that didn’t matter”; the turn came during a visit to Cisco’s San Francisco office, when Krishnamurthy argued that a two-person team could rewrite Cisco’s sprawling legacy code.</p>
+        <p>For now this is a target, not a result. Krishnamurthy has set himself a four-week validation period, and 98% is the 24-month goal. The report does not say how much code has been changed, whether the trial worked, or whether “rewrite” is measured in lines, modules or behavioural compatibility.</p>
+        <p>The cost framing is the interesting part: outsourcing is priced in person-months, this is priced in tokens, with no cap. For a networking company, legacy maintenance has long sat in operations and headcount budgets; moving it to a compute budget turns a fixed cost into a variable one.</p>
+        <p class="why"><b>Why it matters</b>“98% of the code” is an easy number to misread. Legacy code is valuable for behavioural compatibility, not line count: rewriting 98% while breaking one billing or protocol edge case can cost more than the maintenance it saves. The acceptance metrics should be regression pass rate, production incidents and rollbacks, not the share rewritten. Unlimited tokens also move marginal cost from people to compute — a reclassification on the budget sheet, with outsourcing and maintenance down and GPUs and inference up. If the four-week check-in reports only how much was rewritten and not how much broke, the case study is worthless.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 08:18</span>
+          <a class="src" href="https://www.ithome.com/1/020/858.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Delaware proposes a 30-month sandbox for agent-run companies</h3>
+        <p>TechRadar reports that Delaware plans to loosen business regulation to let companies operated by AI agents register. The draft creates a 30-month regulatory sandbox for these “AI companies” (AICs), during which agents make business decisions inside a supervised environment.</p>
+        <p>Liability is the core of the draft. An AIC could be sued like any company and could also bring suits. Supporters say this gives autonomous businesses legal certainty; Andrew Baker, a law professor at the University of California, calls the move a compromise in search of legal certainty.</p>
+        <p>Congress is pushing back. James Comer, chair of the House Oversight Committee, has written to Governor Matt Meyer warning that AICs could shield well-funded AI companies and their investors from liability for reckless and harmful conduct.</p>
+        <p>This is a proposal, not law; sandbox terms, capital requirements and disclosure duties are still undefined. For AI companies, it would give agent-run entities a corporate shell for signing contracts, opening accounts and filing taxes; for regulators, 30 months is a probation period that can be revoked.</p>
+        <p class="why"><b>Why it matters</b>The question is not whether a bot can incorporate but where limited liability stops. Once an AIC is a separate legal person, tort liability stays inside the shell and victims have a harder time reaching the parent; without the shell, every autonomous decision needs a human backstop and the business case collapses. The 30-month sandbox is a revocable trial for liability isolation. Watch three things rather than the registration count: minimum capital, mandatory disclosure of who controls the agent, and whether a court pierces the veil in the first AIC suit.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/01 16:02</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/507031.html" target="_blank" rel="noopener noreferrer">QbitAI ↗</a>
+        </div>
+        <h3>Tsinghua’s Algebraic World Model: prove the level is impossible, then finish it</h3>
+        <p>A team led by Andrew Yao and Yang Yuan at Tsinghua University has proposed an “Algebraic World Model” (AWM). The paper is on arXiv (2610.40503) as a preprint and has not been peer-reviewed. The co-first authors are Pan Guancheng of Zhejiang University, who is on leave to research at Tsinghua, and Tan Qixin of Tsinghua’s Yao Class.</p>
+        <p>The method has three steps: explore, by writing observations into executable Python as provisional hypotheses; distil, by testing and revising those hypotheses against new observations into more general objects and rules; and prove, by formalising the rules in Lean 4 as machine-checkable mathematical claims. The team borrows two tools from category theory, projective and inductive limits, to compose and generalise concepts.</p>
+        <p>On ARC-AGI-3, AWM running on Opus 5 cleared all 183 levels with a score of 99.9% and used only 43% of the human baseline’s average number of actions. Given a level altered to be unwinnable, the Opus 5.5 version proved in two attempts that it could not be solved at the current step count, and noted that one more step would make it solvable.</p>
+        <p>The control is more informative. GPT-6 Astra with a provider adapter also scores 99.9%, but it compiles game mechanics into symbolic rules that are essentially Tycho Brahe’s notebook: precise observations without the underlying law. Across 12 impossible-level tests, GPT-6 Astra and Claude Opus 5.5 together recognised “impossible” only 5 times, and 4 of those answers still gave the wrong minimum step count.</p>
+        <p class="why"><b>Why it matters</b>This line of work moves “world model” from predicting the next frame to a system of provable rules. The difference is auditability: a Lean 4 proof can be checked by a machine, so when the model says “impossible” you get either a proof or a visible gap, not a confident sentence. The limits are explicit too — a proof holds only for the world the model observed, and incomplete exploration yields a local truth. ARC-AGI-3 is a closed toy world; moving to open environments requires solving incomplete observation before proof ability. 99.9% is nice; the next metrics are sample efficiency and the cost of proof.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/01 14:11</span>
+          <a class="src" href="https://www.ithome.com/1/020/721.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Grok starts watermarking generated text on November 7, across every API region</h3>
+        <p>SpaceXAI says it will add an invisible watermark to text generated by Grok starting November 7. A detector reads the signal to decide whether a piece of text carries the mark. The company says the change responds to the European Union’s AI Act.</p>
+        <p>The watermark covers SpaceXAI APIs in every region and seven models: grok-4.7, grok-4.6, grok-4.5, grok-4.3, grok-4.20 reasoning, grok-4.20 non-reasoning and grok-4.20 multi-agent. Team administrators can turn the watermark off for an individual model.</p>
+        <p>The mechanism is worth noting: the mark is not hidden characters or metadata but is woven into the model’s token choices during generation. That leaves visible text unchanged while spending some sampling freedom, and detection requires the corresponding key or model.</p>
+        <p>Andrew Curran, who tracks AI governance, notes that the only major model without a text watermark is now ChatGPT in North America. The EU’s labelling requirement for generated content is moving from advice to default-on.</p>
+        <p class="why"><b>Why it matters</b>A watermark answers “can this text be proven AI-written”, not “should this text be published”. Handing the switch to team administrators pushes the EU’s labelling duty down to enterprise customers: on by default, off if you like, with responsibility transferred. Verification is the bigger issue — if the detector is not public, no third party can check whether a mark exists or was removed. For downstream users, watermarks change the cost of distribution: reposts, rewrites and translations can erode the signal, so the cases that most need labelling become the hardest to identify.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/01 15:50</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/506990.html" target="_blank" rel="noopener noreferrer">QbitAI ↗</a>
+        </div>
+        <h3>Hongqi ends its robot convenience store after 16 months and ¥2.87 million</h3>
+        <p>In March 2025, Sichuan convenience-store chain Hongqi announced a joint project with a robotics company to build an unmanned robot sales system. The stock hit its daily limit the next day and was about 35% higher by April 23. In July 2026, Hongqi terminated the project, saying the system had not reached the standard for large-scale commercial deployment, and shifted to 24-hour remote staffing.</p>
+        <p>The risks were spelled out at launch: the arm had a high grab-failure rate with dense shelves and irregular packaging; vision drifted under different lighting; obstacle avoidance had to coexist with stable data transmission. Sixteen months later the prototype never arrived; the termination notice did.</p>
+        <p>The cost was small: Hongqi’s 2025 annual report shows about ¥2.8668 million in R&amp;D spending, and the company had not previously disclosed R&amp;D, so the project’s spend was probably in that range. A person close to Hongqi told QbitAI that chilled glass bottles sweat in summer and the robot kept dropping them, and that complex packaging was also unreliable; aisles are narrow and customers stand nearby, making the real store far messier than the lab.</p>
+        <p>The industry keeps expanding anyway: more than 100 robot retail pods or layouts are running in over 30 Chinese cities. A retail robot sells for nearly ¥700,000, and with the pod, operators estimate close to ¥1 million per unit. A pod carries a few dozen SKUs; a convenience store carries 2,000 to 3,000. Practitioners put the timeline for replacing a store clerk at two to five years.</p>
+        <p class="why"><b>Why it matters</b>The lesson is not that robots cannot work; it is that ¥2.87 million was spent validating a million-yuan store model. The failures are long-tail: condensation, soft packaging, narrow aisles, moving customers. Each is small; together they make grasp reliability unusable. Retail is forgiving and highly visible, which is why it became the robotics companies’ “scenario” rather than the retailer’s “employee” — as one operator put it, the robots need the scenario more than the scenario needs robots. Commercial viability has one threshold: payback within a year, or a robot cheaper than a clerk. Until then, these pods are closer to billboards.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 08:44</span>
+          <a class="src" href="https://www.ithome.com/1/020/863.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Aramco buys 49% of HUMAIN and injects about SAR 9.9 billion</h3>
+        <p>On November 1 local time, HUMAIN, previously wholly owned by Saudi Arabia’s sovereign wealth fund PIF, said Aramco will buy a 49% stake, with PIF keeping the remaining 51%.</p>
+        <p>The consideration is a transfer of key AI assets plus about SAR 9.9 billion (roughly ¥17.55 billion) in new capital. Both shareholders will contribute AI assets, capabilities and people, and jointly oversee HUMAIN’s expansion.</p>
+        <p>Aramco frames the deal around industrial use: it plans to use HUMAIN’s AI infrastructure to turn advanced capabilities into industrial applications and improve its own operations. For HUMAIN, that means a sovereign backer plus a customer with real industrial sites.</p>
+        <p>The 49/51 split matters: control stays with PIF, while Aramco gets economic exposure and a route into industrial deployment. The consideration mixes cash and assets; the asset list and valuation basis were not disclosed.</p>
+        <p class="why"><b>Why it matters</b>This is oil cash providing an internal valuation anchor for compute assets. HUMAIN’s clusters and models need long-term capital, and funding them entirely from PIF would concentrate the sovereign balance sheet; selling 49% to Aramco spreads the AI capex across the oil business and plugs the models into refining and exploration. For Aramco, AI spending moves from cost line to equity stake; for HUMAIN, orders and backing are steadier than a pure fundraising round. The risk is related-party pricing: without disclosure of how assets were valued, utilisation and who absorbs losses, the valuation is an inside number.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 07:39</span>
+          <a class="src" href="https://www.ithome.com/1/020/849.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Kioxia sells out 2027 capacity and locks more than half of 2028</h3>
+        <p>Japanese outlet ITmedia reports that on Kioxia’s fiscal-2027 second-quarter earnings call (July to September 2026), executive vice president Yoshihiko Kawamura said the company’s 2027 chip capacity allocation is essentially fully assigned and sold out, with every available unit locked up.</p>
+        <p>Locking the entire following year before it begins is a first for Kioxia. Buyers are already reaching further out: more than 50% of 2028 capacity has firm purchase commitments, and the company has started commercial talks for 2029 and 2030.</p>
+        <p>The financial response is blunt. Kioxia held ¥1.3973 trillion in cash at the end of September (about ¥59.127 billion yuan); apart from a contingency reserve, it plans to put all of it into growth investment. In June it said average annual investment for fiscal 2026-2028 would be about ¥470 billion, roughly ¥1.4 trillion over three years. For fiscal 2026 it is pulling capex forward from fiscal 2027, with spending expected near ¥600 billion.</p>
+        <p>On capacity, Kioxia plans a third fab building at its Kitakami plant in Iwate prefecture, due to come online in fiscal 2029. The first two buildings started production in 2020 and 2025.</p>
+        <p class="why"><b>Why it matters</b>NAND is turning from a cyclical commodity into an allocation. Buyers used to watch spot prices; now they lock volume a year and a half ahead. Volume commitments usually come with price negotiations, but no prices were disclosed, so “sold out” means tight supply, not necessarily higher prices. For buyers, 2027 being sold out means memory costs for AI servers, phones and PCs are unlikely to fall before 2027. For Kioxia, spending ¥1.4 trillion is a bet on 2028 demand; if AI capex slows, the third fab becomes depreciation. Watch the price of 2028 allocations, and whether HBM expansion cannibalises conventional NAND capacity.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between 09:20 on November 1 and 09:20 on November 2, 2026 (UTC+8): 8 items. Compiled at 09:30 on November 2.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 008 · 24h window · Generated 2026-11-02 09:30</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

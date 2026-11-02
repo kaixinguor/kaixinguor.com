@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 2 日</title>
+<meta name="description" content="2026-11-02 AI 日报：美团龙猫发布 1.6 万亿参数 LongCat-2.5；思科让一名工程师用 AI 重写 98% 遗留代码；特拉华州拟允许 AI 智能体开公司；清华提出可证明的代数世界模型；Grok 文本加隐形水印；红旗连锁终止机器人售货；沙特阿美买下 HUMAIN 49%；铠侠 2027 年产能售罄。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 2 日">
+<meta property="og:description" content="2026-11-02 AI 日报：美团龙猫发布 1.6 万亿参数 LongCat-2.5；思科让一名工程师用 AI 重写 98% 遗留代码；特拉华州拟允许 AI 智能体开公司；清华提出可证明的代数世界模型；Grok 文本加隐形水印；红旗连锁终止机器人售货；沙特阿美买下 HUMAIN 49%；铠侠 2027 年产能售罄。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-02.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-02.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-02.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-02-en.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-02-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 008 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 2 日<span class="weekday">MON</span></h1>
+    <p class="deck">今天的主线是把智能体放进真实账本：美团用 1.6 万亿参数押长程任务，思科用不设上限的 Token 重写 98% 遗留代码，
+      特拉华州给「AI 公司」开 30 个月沙盒。另一边，红旗连锁用 16 个月和 286.68 万元证明：机器人还卖不了货。
+      <em>能力在往前走，账单开始有人签。</em></p>
+    <div class="metabar"><span class="pill">第 008 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/01 09:20 – 11/02 09:20</span>
+      <span class="dot"></span>
+      <span>8 条</span>
+      <span class="dot"></span>
+      <span>阅读约 9 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>美团龙猫发布 LongCat-2.5：1.6 万亿总参数、每 token 激活 480 亿。</b>主打长程智能体任务，视觉信号被拆成多层级离散 token；官方称在国产算力上做了长上下文训练与 W4A4 推理。在线体验与 API 已开，权重仍在「即将上线」。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>沙特阿美买下 HUMAIN 49%，PIF 保留 51%。</b>交易包含 AI 资产转让与约 99 亿里亚尔注资，阿美拿到工业落地渠道，主权基金保留控制权。石油现金流开始为算力资产提供内部估值锚。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>清华「代数世界模型」用 Lean 4 证明「这关无解」。</b>ARC-AGI-3 的 183 个关卡全部通关、得分 99.9%，平均动作数只有人类基准的 43%；论文是 arXiv 预印本，尚未同行评审。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 09:18</span>
+          <a class="src" href="https://www.ithome.com/1/020/873.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体</h3>
+        <p>11 月 2 日上午，美团龙猫发布原生多模态模型 LongCat-2.5，总参数量 1.6 万亿，每个 token 激活约 480 亿参数。按官方说法，它在 LongCat-2.0 的基础上进一步强化原生视觉理解与智能体编程能力，面向的是长程智能体任务，而不是单轮问答。</p>
+        <p>训练侧有两处改动值得记：一是在长序列训练里加入更多长程轨迹数据，并用大规模长程强化学习提升复杂代码库开发、完整项目构建这类端到端工程能力；二是把真实 Agent 的失败轨迹转成可复现、可验证的训练任务，针对短板补数据。这套方法的前提是有足够多的真实任务轨迹，而不是只靠合成数据。</p>
+        <p>多模态的实现方式是「视觉 token 化」：LongCat-2.5 把视觉信号表示为多层级离散 token，让主干模型以统一的 token 形式处理视觉与文本输入。官方称这让它在 Visual Coding 上表现突出，并支持创意设计和 3D 等任务。基础设施方面，官方提到在国产算力上优化长上下文训练与 W4A4 推理，并用训推数值一致性和长上下文 rollout 支撑大规模长程强化学习。</p>
+        <p>目前可以验证的入口有两个：longcat.chat 的在线体验和 API；GitHub 与 HuggingFace 页面写着「即将上线」，也就是说权重还没有真正开放。官方给出的评测结果以图片形式附在发布页，正文没有列出具体分数，第三方复现也还没有。</p>
+        <p class="why"><b>看点</b>1.6 万亿总参数、480 亿激活，是典型的稀疏 MoE 账本：用总参数换容量，用激活参数换推理成本。真正的赌注不在参数，而在「长程」——长任务意味着更长的上下文、更多的工具调用和更高的失败率，W4A4 与国产算力优化都是在压每 token 的成本。要判断它是否成立，先看三件事：长任务的成功率而不是单轮分数、API 价格、以及权重开放后社区能否复现。参数规模可以开发布会，长程任务的返工率不能。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 08:17</span>
+          <a class="src" href="https://www.ithome.com/1/020/857.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>思科让一名 27 岁工程师用 AI 重写 98% 遗留代码，Token 不设上限</h3>
+        <p>据《财富》报道，思科总裁兼首席产品官吉图·帕特尔（Jeetu Patel）给 27 岁的工程师帕德马纳班·克里希那穆提（Padmanabhan Krishnamurthy）定了一个目标：24 个月内用 AI 重构或重写公司 98% 的遗留代码，并给他不设上限的 Token 预算。「我已经给了他无限制的 Token，因为他要去重构代码，」帕特尔说。</p>
+        <p>克里希那穆提 2023 年联合创办实时翻译公司 EzDubs，2025 年思科收购后加入。帕特尔称他此前「被埋在组织深处，做着无关大局的边缘事务」；转机发生在帕特尔视察旧金山办公室时，克里希那穆提提出只需一个两人团队就能重写思科庞大的遗留代码。</p>
+        <p>目前这件事还停留在目标阶段：他给自己定了四周的验证期，98% 是 24 个月的终极目标，不是已经完成的成果。报道没有披露当前的代码修改体量、试验成效，也没有说明「重写」的验收标准是行数、模块数还是行为兼容性。</p>
+        <p>值得注意的对照是成本口径：传统外包按人月计价，这里按 Token 计价，且不设上限。对一家以网络设备为主业的公司，遗留代码的维护成本长期藏在运维与人力预算里；把它换成算力预算，等于把一笔固定成本变成可变成本。</p>
+        <p class="why"><b>看点</b>「98% 的代码」是一个很容易被误读的指标。遗留代码的价值不在行数，而在行为兼容——重写 98% 但引入一个计费或协议兼容问题，损失可能超过省下的维护费。真正该看的验收指标是回归测试通过率、线上故障率与回滚次数，而不是重写比例。另一方面，不设上限的 Token 把边际成本从人力转到算力，这在预算表上是一次科目重分类：省下的是外包与维护，增加的是 GPU 与推理账单。四周验证期结束时，如果只公布「重写了多少」，不公布「坏了多少」，这个案例就没有参考价值。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 08:18</span>
+          <a class="src" href="https://www.ithome.com/1/020/858.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>特拉华州拟给 AI 公司开 30 个月沙盒：智能体可注册、可被起诉</h3>
+        <p>据科技媒体 TechRadar 报道，美国特拉华州计划放宽商业监管规定，允许由 AI 智能体运营的企业注册成立。草案为这类「AI 公司」（AIC）设定 30 个月监管沙盒，期间由智能体作出商业决策，并在受监管的环境中测试。</p>
+        <p>责任安排是草案的核心：AIC 与普通企业一样可以成为诉讼对象，必要时也可以主动提起诉讼。支持者认为，这能给自主商业运营企业提供法律确定性；加州大学法学教授安德鲁·贝克（Andrew Baker）称，特拉华州是在寻找折中方案。</p>
+        <p>反对声音来自国会。众议院监督委员会主席詹姆斯·科默（James Comer）已致信州长马特·迈耶（Matt Meyer），称担心 AIC 被用来保护实力雄厚的 AI 企业及投资者，使他们免于为鲁莽且造成伤害的行为承担责任。</p>
+        <p>目前这是「拟允许」，不是已生效的法律；沙盒期限、资本要求、披露义务等细节仍待明确。对 AI 公司，这意味着「智能体签约、开户、报税」第一次有了法人外壳；对监管，30 个月是一次可撤销的试用期。</p>
+        <p class="why"><b>看点</b>争点不是机器人能不能开公司，而是有限责任的边界。AIC 一旦成为独立法人，侵权责任就被锁在壳里，受害者要穿透到母公司会更难；反过来，如果没有这层壳，智能体的每一次自主决策都要由人兜底，商业上就跑不起来。30 个月沙盒的设计，本质是给「责任隔离」设一个可撤销的试用期。接下来要看的不是有多少家注册，而是三件事：最低资本金、强制披露（谁在背后控制）、以及首例 AIC 诉讼里法院是否愿意刺破面纱。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/01 16:02</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/507031.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>清华姚期智团队提出「代数世界模型」：先证明，再通关</h3>
+        <p>清华大学姚期智、袁洋团队提出「代数世界模型」（Algebraic World Model，AWM），论文已挂在 arXiv（2610.40503），目前是预印本，尚未经过同行评审。共同第一作者是浙江大学的潘冠成（休学在清华做研究）与清华姚班的谭淇心。</p>
+        <p>方法分三步：探索，先把观察到的现象写成可执行的 Python 代码，作为初步假设；凝炼，用新的观察验证、修正假设，提炼成更通用的对象与规则；证明，把规律形式化成 Lean 4 语言，变成机器可以自动检查的数学断言。团队借用了范畴论里的「投射极限」与「归纳极限」，用来做概念的组合与泛化。</p>
+        <p>在 ARC-AGI-3 上，基于 Opus 5 的 AWM 通关全部 183 个关卡，得分 99.9%，平均通关动作数只有人类基准的 43%。面对一个被改成无解的关卡，基于 Opus 5.5 的 AWM 尝试两次就证明了「当前步数下无解」，并指出只差一步就能获胜。</p>
+        <p>对照实验更能说明问题：GPT-6 Astra 配合 Provider Adapter 也能拿到 99.9%，但它把游戏机制整理成符号规则，本质上只是「第谷的实验记录本」，描述现象而没有抓住规律。在 12 次「不可能关卡」测试里，GPT-6 Astra 与 Claude Opus 5.5 合计只有 5 次判断出「不可能」，其中 4 次给出的最低步数还是错的。</p>
+        <p class="why"><b>看点</b>这条路线把「世界模型」从预测下一帧，改成了「可证明的规则系统」。区别在于可审计：Lean 4 的证明可以被机器检查，模型说「不可能」时，你要么看到一个证明，要么看到一个缺口，而不是一句置信度很高的话。但它的边界也写得很清楚——证明只在「观测到的世界」里成立，探索不全，得到的就只是局部真理。ARC-AGI-3 是封闭的小世界，迁移到开放环境，首先要解决的是「观测不全」，而不是证明能力。99.9% 很好看，下一个指标应该是样本效率与证明成本。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/01 14:11</span>
+          <a class="src" href="https://www.ithome.com/1/020/721.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Grok 给生成文本加隐形水印：11 月 7 日起，全球 API 生效</h3>
+        <p>SpaceXAI 宣布，自 11 月 7 日起为 Grok 模型生成的文本添加隐形水印，检测器通过识别特定信号判断一段文本是否带有水印。官方称，这次调整是为了响应欧盟《人工智能法案》的要求。</p>
+        <p>覆盖范围是全球所有地区的 SpaceXAI API，涉及 grok-4.7、grok-4.6、grok-4.5、grok-4.3、grok-4.20 reasoning、grok-4.20 non-reasoning 与 grok-4.20 multi-agent 共 7 个模型。团队管理员可以选择为某一款模型单独关闭水印。</p>
+        <p>技术路径值得记：水印不是通过隐藏字符或元数据实现，而是融入模型生成文本时对 Token 的选择过程。这意味着它不改变文本的可见内容，但要占用一部分采样自由度；检测器需要拿到对应的密钥或模型才能判断。</p>
+        <p>AI 治理观察者安德鲁·库兰（Andrew Curran）指出，目前还没有为文字加入隐形水印的模型仅剩北美地区的 ChatGPT。欧盟 AI 法案对生成内容的标注要求，正在从「建议」变成「默认开启」。</p>
+        <p class="why"><b>看点</b>水印解决的是「这段文字能不能被证明是 AI 写的」，不是「这段文字该不该发」。把开关交给团队管理员，等于把欧盟的标注义务下推给企业客户：默认开启、可以关闭，责任随之转移。更关键的是可验证性——检测器不公开，第三方就无法独立验证水印是否存在、是否被去除。对下游应用，水印会改变内容分发的成本结构：转载、洗稿、翻译都可能削弱信号，真正需要标注的场景反而更难识别。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/01 15:50</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/506990.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>红旗连锁终止机器人无人售货：16 个月，286.68 万元研发费</h3>
+        <p>2025 年 3 月，四川便利店龙头红旗连锁公告与机器人公司联合立项「机器人无人售货系统」，次日股价涨停，至 4 月 23 日较公告前上涨约 35%。2026 年 7 月，红旗公告终止该项目，理由是系统暂未达到大规模商业化落地标准，转而做 24 小时云值守。</p>
+        <p>立项时的风险提示已经写得很具体：面对密集货架与异形商品，机械臂「抓取失误率较高，稳定性亟待提升」；不同光照下视觉识别容易偏差；既要避障又要保证数据传输稳定。16 个月后，样机没有等到，等来的是终止公告。</p>
+        <p>成本侧的数字不大：红旗 2025 年年报研发费用约 286.68 万元，此前未公示研发费用，项目支出大概率就在这个量级。一位接近红旗的人士对量子位称，夏季玻璃瓶冷饮易结水珠，机器人拿不稳总摔碎，复杂包装也拿不稳；货架过道窄、周围有顾客，真实场景比实验室复杂得多。</p>
+        <p>行业侧却在扩张：全国已有 100 多个机器人零售仓或零售布局，分布在 30 多座城市；一台零售机器人售价近 70 万元，加上零售仓，业内估算单台成本近百万元；零售仓 SKU 只有几十种，而传统便利店有 2000 到 3000 个。多位从业者认为，机器人替代店员还需要 2 到 5 年。</p>
+        <p class="why"><b>看点</b>这不是「机器人不行」的结论，而是「用 280 万元验证了一个百万元级的单店模型」。失败点不在 Demo 能力，而在长尾：水珠、软包装、窄过道、顾客走动，每一项都不难，叠在一起就让抓取成功率不可用。零售场景容错高、展示性强，所以成了机器人公司的「场景」，而不是零售商的「员工」——按从业者的说法，是机器人更需要场景，不是场景更需要机器人。真正的商业化临界点只有一个：单店回本周期压到一年以内，或者机器人成本低于一名店员。在那之前，这些仓更像是广告位。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 08:44</span>
+          <a class="src" href="https://www.ithome.com/1/020/863.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>沙特阿美买下 HUMAIN 49%，将注资约 99 亿里亚尔</h3>
+        <p>当地时间 11 月 1 日，此前由沙特主权财富基金 PIF 全资控股的 AI 公司 HUMAIN 宣布，沙特阿美（Aramco）将收购其 49% 的股份，PIF 保留剩余 51%。</p>
+        <p>交易形式是「转让关键 AI 资产 + 注资约 99 亿沙特里亚尔」（约合 175.5 亿元人民币）。两家股东将分别向 HUMAIN 注入 AI 资产、能力与人才，并共同监督其业务扩张。</p>
+        <p>阿美给出的理由是工业应用：它计划利用 HUMAIN 的 AI 基础设施，把先进 AI 能力转化为工业场景，增强自身运营。对 HUMAIN，这意味着它同时拿到主权基金背书与一家全球最大石化企业的场景订单。</p>
+        <p>股权结构值得注意：49% 对 51%，控制权仍在 PIF，阿美拿的是经济权益与工业落地渠道。交易对价里既有现金，也有资产，具体的资产清单与估值口径没有披露。</p>
+        <p class="why"><b>看点</b>这是一次用油气现金流给算力资产做「内部估值锚」的操作。HUMAIN 的算力与模型需要长期资本，PIF 单独出钱会让资产负债表更集中；把 49% 卖给阿美，等于让石油业务的现金流来分担 AI 的资本开支，同时把 AI 能力直接接入炼化、勘探这些真实场景。对阿美，AI 支出从成本项变成股东权益，报表上的位置变了；对 HUMAIN，订单与背书比纯融资更稳。风险在关联交易：资产怎么定价、算力利用率多少、亏损由谁承担，这些不披露，估值就只能是内部价。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 07:39</span>
+          <a class="src" href="https://www.ithome.com/1/020/849.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>铠侠 2027 年产能售罄，2028 年过半被锁定</h3>
+        <p>据日媒 ITmedia 报道，在铠侠控股 2027 财年第二财季（2026 年 7 月至 9 月）财报电话会上，执行副总裁河村芳彦表示，铠侠 2027 年的芯片产能配额已基本分配完毕，处于售罄状态，所有可供应产能均已完成锁定。</p>
+        <p>提前把次年全年产能锁死，在铠侠历史上尚属首次。更远的时间点也被预订：2028 年已有超过 50% 的产能获得客户的确定性采购承诺，公司甚至已启动 2029 至 2030 年的商务洽谈。</p>
+        <p>财务侧的动作很直接：截至 9 月底，铠侠账面现金 1.3973 万亿日元（约 591.27 亿元人民币），除留出应急储备外，原则上全部投入成长性投资。公司在 6 月披露，2026 至 2028 财年年均投资约 4700 亿日元，三年累计约 1.4 万亿日元；2026 财年因扩产紧迫，把原定 2027 财年的资本开支提前，当年投资规模预计近 6000 亿日元。</p>
+        <p>产能建设上，铠侠计划在日本岩手县北上市北上工厂新建「第 3 制造厂房」，预计 2029 财年内投产。第 1、第 2 厂房分别于 2020 年、2025 年投产。</p>
+        <p class="why"><b>看点</b>存储正在从「周期品」变成「配额品」。过去买 NAND 看现货价，现在下游要提前一年半锁量；锁量通常伴随价格谈判，但报道没有披露价格，所以「售罄」不等于「涨价」，只说明供给紧张。对下游，2027 年产能售罄意味着 AI 服务器、手机、PC 的存储成本在 2027 年前很难下来；对铠侠，把 1.4 万亿日元现金全投出去，是用扩产赌 2028 年的需求，如果 AI 资本开支放缓，第 3 厂房就会变成折旧。接下来要看的不是「售罄」这个形容词，而是 2028 年配额的价格，以及 HBM 扩产会不会挤占传统 NAND 的产能。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 1 日 09:20 至 2026 年 11 月 2 日 09:20（北京时间）之间发布的报道，共 8 条。检索时间 11/02 09:30。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 008 · 24h window · Generated 2026-11-02 09:30</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

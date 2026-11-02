@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 01 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 2 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-02.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-02.html</guid>
+      <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是把智能体放进真实账本：美团用 1.6 万亿参数押长程任务，思科用不设上限的 Token 重写 98% 遗留代码， 特拉华州给「AI 公司」开 30 个月沙盒。另一边，红旗连锁用 16 个月和 286.68 万元证明：机器人还卖不了货。 能力在往前走，账单开始有人签。 美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 1 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-01.html</link>
