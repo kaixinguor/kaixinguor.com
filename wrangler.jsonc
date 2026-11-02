@@ -11,6 +11,12 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page",
     "run_worker_first": ["/api/*"]
+  },
+  // 非密钥的运行时变量放这里；密钥（RESEND_API_KEY）用 wrangler secret put 单独存。
+  // 用 Resend 的测试发件人时，发件人必须是 onboarding@resend.dev（只能发给账号本人）。
+  // 换成 Cloudflare Email Sending 后，这里改回 wish-form@kaixinguor.com。
+  "vars": {
+    "WISH_FROM": "onboarding@resend.dev"
   }
   // 想用 Cloudflare 原生发信时，先到 Email Service → Email Sending 里 onboard 域名，
   // 再把下面这条解注释并重新部署（之后函数会自动走绑定，不需要 API token）：
