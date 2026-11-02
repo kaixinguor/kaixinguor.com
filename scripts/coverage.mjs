@@ -132,6 +132,7 @@ function check(file) {
 
   const history = loadIssues(section).filter((i) => i.dateISO < issue.dateISO);
   const previous = history[0] || null;
+  const sameDate = loadIssues(section).find((i) => i.dateISO === issue.dateISO);
   const crossIssues = loadIssues(otherSection).filter((i) => i.dateISO === issue.dateISO);
 
   const newEntries = flatCards(issue);
@@ -182,6 +183,12 @@ function check(file) {
   });
 
   const windows = windowCheck(issue, previous);
+  if (sameDate && (sameDate.windowStart !== issue.windowStart || sameDate.windowEnd !== issue.windowEnd)) {
+    windows.push({
+      level: "error",
+      text: `同一天已有页面（${sameDate.windowStart || "缺窗口"} – ${sameDate.windowEnd || "缺窗口"}），本期窗口是 ${issue.windowStart || "缺窗口"} – ${issue.windowEnd || "缺窗口"}。重跑请沿用原窗口；确要改窗口才加 --allow-overlap。`
+    });
+  }
   const blocking = conflicts.filter((c) => c.level !== "warn");
   const windowBlocking = windows.filter((w) => w.level === "error");
 
