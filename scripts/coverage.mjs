@@ -171,6 +171,17 @@ function check(file) {
         note = "已标记追更，但正文没有上期之外的新数字/型号，仍按重复处理";
       }
     }
+    /* 跨版块重叠不拦发布：同一件事可以在两份里各写一次，只要侧重点不同。
+       这里只把它降成提示，提醒作者确认两份写的是不同的问题。 */
+    if (kind === "cross-section") {
+      if (level !== "warn") {
+        level = "warn";
+        note = (note ? note + "；" : "") +
+          "跨版块重叠不拦发布：两份可以都写，但要各自给出本领域关心的角度与数字";
+      } else if (!note) {
+        note = "跨版块重叠：确认两份的侧重点不同即可";
+      }
+    }
     conflicts.push({
       level,
       kind,
@@ -247,6 +258,11 @@ function check(file) {
       console.log(`\n处理：删掉重复条目；确属追更时，把卡片改成`);
       console.log(`  <article class="card" data-followup="${first.match.issue.dateISO}">`);
       console.log(`并在正文补至少一个上期没有的新数字/型号。`);
+    }
+    const crossWarns = conflicts.filter((c) => c.kind === "cross-section");
+    if (crossWarns.length) {
+      console.log(`\n跨版块重叠 ${crossWarns.length} 处，已放行（不拦发布）：同一件事可以两份都写，`);
+      console.log(`但请确认每条写的是本领域关心的角度和数字，不要换个说法重发一遍。`);
     }
   }
 
