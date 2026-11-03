@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教育日报 · kaixinguor</title>
+    <link>https://kaixinguor.com/</link>
+    <description>教育日报：政策与监管、学校与招生、职教与就业、行业与资本，每天更新。</description>
+    <language>zh-CN</language>
+    <atom:link href="https://kaixinguor.com/feed-education.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Tue, 03 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>教育日报 · 2026 年 11 月 3 日</title>
+      <link>https://kaixinguor.com/daily-education/2026-11-03.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-education/2026-11-03.html</guid>
+      <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
+      <description>教育这条线，今天的新闻都指向同一处：AI 怎么进课堂。教育部「扶光计划」在广西落地，14 个市、20 个县、60 所学校；同一天，教育部要求教师 AI 培训全覆盖，81% 的教师说 AI 能省备课时间，但「心里的那道坎」比技术更难跨。装备展上 700 多家企业把「人工智能引领」写进主题。另一边，15 家教育上市公司三季报合计营收 187.75 亿元——AI 讲了两年，兑现的差异开始写在报表上。课堂的门槛，从来不在设备。 教育部「扶光计划」在广西启动：14 个市、20 个县、60 所学校</description>
+    </item>
+  </channel>
+</rss>

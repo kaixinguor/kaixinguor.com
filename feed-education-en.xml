@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Education Daily · kaixinguor</title>
+    <link>https://kaixinguor.com/</link>
+    <description>An education daily: policy, schools and admissions, vocational training and the business of learning.</description>
+    <language>en</language>
+    <atom:link href="https://kaixinguor.com/feed-education-en.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Tue, 03 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Education Daily · November 3, 2026</title>
+      <link>https://kaixinguor.com/daily-education/2026-11-03-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-education/2026-11-03-en.html</guid>
+      <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Every education story today points the same way: how AI gets into the classroom. The Ministry of Education’s Fujiang programme opened in Guangxi — 14 cities, 20 counties, 60 schools — on the same day it ordered nationwide AI training for teachers; 81% say AI saves them preparation time, while the harder barrier turns out to be confidence, not skill. More than 700 companies brought &quot;AI leads the way&quot; as the theme to the national equipment fair. And 15 listed education companies reported 18.775 billion yuan of nine-month revenue — after two years of AI talk, delivery is starting to appear in the accounts. The threshold was never the hardware. Ministry of Education’s Fujiang programme launches in Guangxi: 14 cities, 20 counties, 60 schools</description>
+    </item>
+  </channel>
+</rss>

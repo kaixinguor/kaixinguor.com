@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-title-en="Education Daily · kaixinguor">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>教育日报 · kaixinguor</title>
+<meta name="description" content="每天一份中英双语的教育日报：政策与监管、学校与招生、职教与就业、行业与资本。往期收在左侧抽屉里。">
+<meta property="og:title" content="教育日报 · kaixinguor">
+<meta property="og:description" content="每天一份中英双语的教育日报：政策与监管、学校与招生、职教与就业、行业与资本。往期收在左侧抽屉里。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kaixinguor.com/education.html">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="canonical" href="https://kaixinguor.com/education.html">
+<link rel="alternate" type="application/rss+xml" title="教育日报 · kaixinguor" hreflang="zh-CN" href="feed-education.xml">
+<link rel="alternate" type="application/rss+xml" title="Education Daily · kaixinguor" hreflang="en" href="feed-education-en.xml">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=7">
+<script>
+/* 在渲染前定好深浅色和语言，避免闪 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+(function () {
+  try {
+    var en = (localStorage.getItem("kaixinguor.lang") || "zh") === "en";
+    document.documentElement.lang = en ? "en" : "zh-CN";
+    if (en) {
+      document.documentElement.setAttribute("data-pending", "1");
+      setTimeout(function () {
+        document.documentElement.removeAttribute("data-pending");
+      }, 800);
+    }
+  } catch (e) {}
+})();
+</script>
+<style>html[data-pending] body{visibility:hidden!important}</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="index.html" data-i18n="nav.ai">AI 日报</a>
+      <a href="economy.html" data-i18n="nav.econ">经济日报</a>
+      <a href="education.html" aria-current="page" data-i18n="nav.edu">教育日报</a>
+      <a href="tools.html" data-i18n="nav.tools">工具</a>
+      <a href="wish.html" data-i18n="nav.wish">许愿</a>
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="today">
+    <!-- TODAY_ZH:START -->
+      <div class="today-lang" data-lang="zh">
+    <header class="masthead">
+      <div class="wrap">
+        <div class="kicker">
+          <span class="zh">教育日报</span>
+          <span class="sep"></span>
+          <span>Daily Education Brief</span>
+          <span class="issue-tag">第 001 期</span>
+        </div>
+        <h1 class="date">2026 年 11 月 3 日<span class="weekday">TUE</span></h1>
+        <p class="deck">教育这条线，今天的新闻都指向同一处：AI 怎么进课堂。教育部「扶光计划」在广西落地，14 个市、20 个县、60 所学校；同一天，教育部要求教师 AI 培训全覆盖，81% 的教师说 AI 能省备课时间，但「心里的那道坎」比技术更难跨。装备展上 700 多家企业把「人工智能引领」写进主题。另一边，15 家教育上市公司三季报合计营收 187.75 亿元——AI 讲了两年，兑现的差异开始写在报表上。<em>课堂的门槛，从来不在设备。</em></p>
+        <div class="metabar"><span class="pill">第 001 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/02 09:20 – 11/03 10:50</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 11 分钟</span></div>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="栏目">
+      <div class="wrap">
+        <div class="toc-inner">
+          <a href="#tldr-zh"><span class="n">00</span>速览</a>
+        <a href="#policy-zh"><span class="n">01</span>政策与监管</a>
+        <a href="#career-zh"><span class="n">02</span>职教与就业</a>
+        <a href="#tech-zh"><span class="n">03</span>技术与产品</a>
+        <a href="#capital-zh"><span class="n">04</span>行业与资本</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrap today-body">
+      <ol class="tldr" id="tldr-zh">
+    <li>
+      <span class="idx">01</span>
+      <p><b>教育部「扶光计划」在广西启动：14 个设区市、20 个项目县、60 所学校。</b>广西是全国首个启动实施的省份，重点向边境国门学校、民族山区学校与运河沿线学校倾斜，构建「自治区—市—县—校」四级联动，做的是分层分类研修，不是配设备。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>教育部要求教师 AI 培训全覆盖，AI 纳入教师资格考试与认证。</b>《2025 年中国中小学教师数字素养年度报告》显示 81% 的教师认为 AI 能节省备课时间；10 月 10 日国家智慧教育平台教师发展中心升级上线，设 AI 素养专区。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>A 股 15 家教育公司三季报：合计营收 187.75 亿元，8 家增长、10 家盈利。</b>多家转向存量提效与第二增长曲线；AI 是降本增效主线，但落地节奏不一，业绩兑现差异明显。</p>
+    </li>
+      </ol>
+
+  <section class="chapter" id="policy-zh" data-c="policy">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>政策与监管</h2>
+      <span class="cen">Policy &amp; Regulation</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.jyb.cn/rmtzcg/xwy/wzxw/202611/t20261102_2111537627.html" target="_blank" rel="noopener noreferrer">中国教育报 · 中国教育新闻网 ↗</a>
+        </div>
+        <h3>教育部「扶光计划」在广西启动：14 个市、20 个县、60 所学校</h3>
+        <p>教育部「扶光计划」中小学人工智能素养提升项目在广西南宁启动，广西成为该项目全国首个启动实施的省份。项目覆盖广西 14 个设区市、20 个项目县、60 所学校。</p>
+        <p>项目定位是面向中西部中小学师生的人工智能素养培育：对地方教育管理者、教研人员、中小学校长和一线教师分层分类研修，培育一批人工智能教育「种子」师资，打磨适配基层教学场景的课例资源，推动优质资源向边疆民族地区、乡村学校普惠下沉。</p>
+        <p>布局上，项目重点向边境国门学校、民族山区学校和运河沿线学校倾斜，构建「自治区—市—县—校」四级联动推进格局。教育部基础教育司副司长陈秋燕在启动仪式上提出「学用结合、扎根课堂实践」；广西教育厅厅长韩流表示，要提炼形成可复制、可推广的「广西方案」。</p>
+        <p>两处细节值得记：一是项目名称是「素养提升」，经费落在研修与课例，而不是设备采购；二是 60 所学校对应 14 个设区市，平均每个市不到 5 所，是典型的试点规模。</p>
+        <p class="why"><b>看点</b>这是一次「师资先行」的试点。AI 进课堂最难的不是算力，是老师会不会用、敢不敢用——项目把研修对象分成管理者、教研员、校长、教师四层，等于承认「校本推进」需要每一层都有人负责。60 所学校的规模说明它想验证的是机制（四级联动、种子教师、课例资源），不是覆盖率。真正的考验在两年后：这 60 所学校能不能产出可复制的课例，以及「种子教师」离开项目后还在不在用。只培训不沉淀，它就是教育信息化的软件版采购；课例能留下来，它才是「人工智能 + 教育」的基层样本。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03 03:55</span>
+          <a class="src" href="https://news.gmw.cn/2026-11/03/content_39082206.htm" target="_blank" rel="noopener noreferrer">光明日报 ↗</a>
+        </div>
+        <h3>教育部要求 AI 培训全覆盖：81% 的教师说省时间，但「坎」在心里</h3>
+        <p>教育部近期召开「人工智能赋能教师发展现场会」，要求开展好人工智能全覆盖培训。今年 4 月，教育部等五部门印发的《「人工智能+教育」行动计划》明确提出制定教师智能素养标准，并把人工智能纳入教师资格考试和认证。</p>
+        <p>需求侧已经被数据验证：《2025 年中国中小学教师数字素养年度报告》显示，81% 的教师表示 AI 能节省备课时间。扬州大学教育科学学院教授刘佳的调研发现，教师对作业批改、学情分析这类「减负类」应用接受度最高；一旦涉及构建交互式学习环境或多智能体协同，培训难度就上来了。</p>
+        <p>供给端在补。10 月 10 日，国家智慧教育平台教师发展中心升级上线，集成学习资源、智能工具与研修社群，并设 AI 素养专区，课程分理念认知、伦理安全、工具实操三类；线下依托「国培计划」示范培训，省市县校分级培育。教育部教师工作司司长王磊说，很多老师面对 AI 最大的障碍不是技术，而是「心里的那道坎」——要么怕被取代，要么怕学不会。</p>
+        <p>一线已经在自找出路。天津实验中学滨海学校物理教师金文洋用 AI 把测评分析封装成固定流程：上传数据，一键生成班级学习看板，再生成人手一份的学习方案，但方案要经老师逐份审核才能发给学生。湖南湘潭的莫卫红则先把校本要求、自己以前的教案喂给模型，让它学会自己的路子，再成套产出教学设计。</p>
+        <p>边界也在被讨论。中国教育技术协会中小学专委会副主任张伟春认为，「依赖的本质不是用得多，而是搞不清 AI 该怎么用、何时用」——他举例说，先让学生自己推演动点轨迹再播 AI 演示，与一上来就放演示，效果完全不同。刘佳则建议学校实行生成式 AI 工具「白名单」，确立「辅助不代替、工具不越位」的原则。</p>
+        <p class="why"><b>看点</b>这场培训真正要解决的不是「不会用」，而是「不敢用」和「用过头」两端。81% 说明减负需求已经被验证，但减负类应用（批改、学情分析）与教学类应用（设计课堂、评价学生）之间有一条能力鸿沟：前者可以标准化，后者依赖教师的专业判断。把 AI 纳入教师资格考试，等于把这条鸿沟写进准入标准。接下来该看三件事：标准的细则怎么定（考什么、谁来考）、培训学时能否抵扣继续教育、以及学校层面的白名单会不会变成新的采购目录。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.jyb.cn/rmtzcg/xwy/wzxw/202611/t20261102_2111537751.html" target="_blank" rel="noopener noreferrer">中国教育报 · 中国教育新闻网 ↗</a>
+        </div>
+        <h3>首次设境外办学专题论坛：教育部拟建年报制度，倡导「小而美、轻资产」</h3>
+        <p>2026 中国国际教育年会首次设立境外办学专题平行论坛，由河北工业大学承办，以「政策引领·实践破题·高质量发展」为主线，汇聚教育主管部门领导、中外高校专家与全国高校国际事务负责人百余人。年会主题为「开放育新，合作致远」。</p>
+        <p>教育部国际合作与交流司二级巡视员席茹在主旨报告中表示，境外办学是我国教育对外开放的重要组成部分，目前已涌现海外卓越工程师学院、鲁班工坊等代表性平台与品牌；下一步将持续探索建立境外办学年报制度及监测指标体系，倡导「小而美、惠民生、轻资产」的办学模式，引导院校规范有序开展境外办学。</p>
+        <p>论坛案例覆盖中亚国家、东盟国家和欧洲发达国家，兼顾普通高校与职业院校：西北农林科技大学塔什干分校、河北工业大学芬兰校区、鲁班工坊等；哈萨克斯坦阿斯塔纳国际大学介绍了中哈教育合作的「双支柱」布局。</p>
+        <p>论坛还设置中芬对话环节，由河北工业大学国际教育学院院长史耕山主持，邀请芬兰 LUT 大学教育发展主管与一线教师，围绕校区对学生成长、教职员工发展、跨文化认知与管理经验互鉴分享运行经验。</p>
+        <p class="why"><b>看点</b>「年报制度 + 监测指标」是把境外办学从审批制往「备案加评估」推的一步。过去境外办学的问题不在开不出去，而在开出去之后没人算账：投入多少、招了多少、毕业去向、师资从哪来，缺少统一口径。年报的价值不是多一张表，而是让办学质量第一次可以横向比较。而「轻资产」的提法很实际——海外自建校区动辄数亿元，租场地、合作办学、课程输出才是大多数院校付得起的路径。对高校，这意味着国际化从「建校区」转向「建课程」；对监管，年报的口径设计比制度本身更重要。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.gzns.gov.cn/zwgk/zdlyxxgk/jyxx/content/post_11082749.html" target="_blank" rel="noopener noreferrer">广州市南沙区教育局 ↗</a>
+        </div>
+        <h3>广州南沙通报两起违规校外培训：没收违法所得 1340 元、罚款 1608 元</h3>
+        <p>11 月 2 日，广州市南沙区教育局通报两起违法违规校外培训典型案例，均由南沙区综合行政执法局依法核查并作出处罚。</p>
+        <p>案例一：广州市某文化咨询服务有限公司未经审批擅自开展校外培训，依据《校外培训行政处罚暂行办法》第十七条、第四十二条，被责令停止举办校外培训、没收违法所得人民币 1340 元、罚款人民币 1608 元。</p>
+        <p>案例二：广州某教育咨询有限公司未经审批开展校外培训、擅自举办校外培训机构，依据同一条款，被责令停止举办校外培训机构、没收违法所得人民币 2536 元。</p>
+        <p>南沙区教育局表示，下一步将依法持续规范校外培训机构办学行为，督促区内机构依法依规办学，不断巩固校外培训治理成果。</p>
+        <p class="why"><b>看点</b>两笔罚款加起来不到 5000 元，但通报本身才是重点。案例一是「没收 + 罚款」，案例二是「没收 + 责令停止」，力度按违法所得定，说明执法走的是过罚相当的路子；对一家咨询公司，真正的成本不是 1608 元，而是「停办」与公开通报带来的信用损失。这条也提醒一件事：以「文化咨询」「教育咨询」名义开展培训，是目前监管重点识别的对象——经营范围不等于办学许可。接下来看执行密度：区级通报如果变成月更，才算常态化；一年只有几例，它就仍是一次示范。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="career-zh" data-c="career">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>职教与就业</h2>
+      <span class="cen">Vocational &amp; Careers</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.jyb.cn/rmtzcg/xwy/wzxw/202611/t20261102_2111537759.html" target="_blank" rel="noopener noreferrer">中国教育报 · 中国教育新闻网 ↗</a>
+        </div>
+        <h3>全国具身智能产教融合共同体在哈尔滨成立：513 家成员、覆盖 29 个省</h3>
+        <p>全国具身智能产业应用行业产教融合共同体成立大会在哈尔滨举行，由东北大学、哈尔滨职业技术大学、乐聚智能（深圳）股份有限公司共同牵头组建。教育部、工信部、黑龙江省教育厅、哈尔滨市教育局与合作院校、企业、行业协会代表出席。</p>
+        <p>成员规模：来自全国 29 个省（区、市）的 513 家成员单位参会。大会发布了具身智能人才培养与评价体系共建工作与具身智能教材体系，从标准共建、实训课程、师资建设、教学资源供给四方面支撑院校培养。</p>
+        <p>会场外同步布设药品分拣、物流生产线、家居服务等多个乐聚机器人数据采集实景场景，把真实工序搬进展区。</p>
+        <p>牵头单位哈尔滨职业技术大学党委书记王骞表示，学校将在专业共建、课程共研、师资共育、基地共享、技术共攻上持续深耕，打通教育链、人才链与产业链、创新链。</p>
+        <p class="why"><b>看点</b>「共同体」这三个字过去几年被用得很泛，判断它是否实体化，看三个指标：有没有共同开发的教材、有没有共用的实训基地、有没有企业真正买单的岗位。这次发布的是教材体系与人才培养评价体系，属于第一层；513 家成员覆盖 29 个省，规模够大，但规模本身不是成果。具身智能的人才缺口是真的——机器人公司缺的是既懂机械又懂模型、还能在现场调试的人，这类岗位很难由传统专业直接供给。接下来该看的是：共同体能不能把「数据采集」这类真实工序变成课程模块，以及首批毕业生的对口就业率。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.jyb.cn/rmtzcg/xwy/wzxw/202611/t20261102_2111537625.html" target="_blank" rel="noopener noreferrer">中国教育报 · 中国教育新闻网 ↗</a>
+        </div>
+        <h3>合肥五大产教融合共同体交卷：维信诺方向毕业生对口就业率保持 90% 以上</h3>
+        <p>由合肥（新站）高新技术产教联合体主办的合肥市重点产业链产教融合共同体建设情况汇报会举行。信息技术应用创新、智能物联、高端装备制造、新型储能、新型显示与集成电路五个市级重点产业链共同体依次陈述阶段性成果，同时逐项列出建设短板与专项资金使用规划。</p>
+        <p>最具代表性的一组数据：合肥职业技术学院与合肥维信诺自 2020 年建立战略合作，在机电一体化、机械设计与制造等专业持续协同育人，该方向毕业生对口就业率保持在 90% 以上，其中 25% 已成长为企业技术骨干或基层管理者。双方联合组建的「维信诺现场工程师班」已运行至第三期，企业高管与技术骨干直接进课堂授课。</p>
+        <p>新型储能共同体侧重科研协同：合肥职业技术学院与国轩高科共建科技创新与服务平台、微尺寸材料储能研究中心，按「企业出题、项目驱动，真题真做、市场检验」的路径运行，企业真实需求被纳入学校科研项目重点支持范围，教师以「揭榜挂帅」方式承接横向课题。</p>
+        <p>短板也被摆上台面：各共同体普遍反映，校企合作在不同产业链上进展不均衡，部分共同体企业参与深度不足，合作停留在项目层面，尚未嵌入日常教学与生产流程。</p>
+        <p>合肥（新站）高新技术产教联合体自 2023 年入选教育部首批国家级市域产教联合体以来，按「一体两园三平台四联盟」架构运行。</p>
+        <p class="why"><b>看点</b>这条最值得记的不是 90%，而是「短板清单摆上桌」。产教融合的通病是签协议时热闹、三年后没人提；让五个共同体同台陈述成果、同时列出短板与专项资金使用规划，等于把考核从「有没有合作」改成「合作到了哪一步」。90% 对口就业率与 25% 成长为骨干是可验证的产出指标，但样本只来自一个企业、一个专业方向，不能外推。真正的分水岭在「嵌入」二字：合作如果还停在「开班 + 实习」，就仍是项目；只有当企业需求进入日常教学计划、教师考核与学校预算，它才是制度。接下来看专项资金怎么花——用于实训设备，容易变成一次性投入；用于课程与师资，才可能留下东西。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="tech-zh" data-c="tech">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>技术与产品</h2>
+      <span class="cen">Technology &amp; Products</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03</span>
+          <a class="src" href="http://www.jyb.cn/rmtzgjyb/202611/t20261103_2111537804.html" target="_blank" rel="noopener noreferrer">中国教育报 ↗</a>
+        </div>
+        <h3>第 88 届中国教育装备展示会闭幕：700 余家企业，科研与技术服务占 29.6%</h3>
+        <p>11 月 1 日，第 88 届中国教育装备展示会在长沙国际会展中心闭幕。展会由中国教育装备行业协会主办，湖南省教育厅、长沙市人民政府共同承办，为期 3 天。</p>
+        <p>主题是「人工智能引领教育装备高质量发展」，集中展示人工智能、大数据、云计算、虚拟现实等技术在智慧课堂、实验教学、校园管理、个性化学习等场景的应用；同期开展学术研讨、供需对接、新品发布与教育装备创新实践展演。</p>
+        <p>参展企业 700 余家，其中科学研究和技术服务企业占比 29.6%，信息传输、软件和信息技术服务企业占比 13.9%。主办方称，这组结构「折射出国内教育装备产业正经历从规模扩容向价值深耕的战略转型」。</p>
+        <p class="why"><b>看点</b>把 29.6% 与 13.9% 放在一起看，教育装备的供给结构已经变了：卖硬件的份额在降，卖软件与服务的在升。这对学校是好事——设备一次采购、三年折旧，软件却要持续付费；但也带来新问题：预算科目怎么列、数据归属给谁、换供应商之后数据能不能带走。展会主题从「数字化」换成「人工智能引领」，说明厂商在跟着政策口径走。真正的分化会出现在明年：当地方财政收紧、而 AI 功能还停留在演示阶段时，能留下来的只会是那些把 AI 嵌进日常教学流程、而不是做成一个独立展项的公司。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital-zh" data-c="capital">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03 08:50</span>
+          <a class="src" href="https://www.stcn.com/article/detail/4318818.html" target="_blank" rel="noopener noreferrer">上海证券报 ↗</a>
+        </div>
+        <h3>A 股 15 家教育公司三季报：合计营收 187.75 亿元，8 家增长、10 家盈利</h3>
+        <p>上海证券报统计显示，A 股教育行业上市公司 2026 年三季报已全部披露：15 家公司前三季度合计实现营业收入约 187.75 亿元。</p>
+        <p>其中 8 家营业收入实现增长，10 家保持盈利。梳理来看，教育行业上市公司业绩冷暖分化，多家企业转向「存量提效」，并寻找第二增长曲线。</p>
+        <p>AI 既是降本增效的核心工具，也是行业开辟新增长极的主线，但各家落地节奏不一，业绩兑现差异比较明显。</p>
+        <p class="why"><b>看点</b>187.75 亿元摊到 15 家，平均每家 12.5 亿元；10 家盈利、8 家增长，说明这个行业已经过了「讲 AI 故事就能涨」的阶段。教育公司的 AI 收入大致来自三个方向：卖给学校的软硬件、卖给个人的课程、以及内部降本。前两个受财政与消费影响，第三个只体现在费用率上——所以真正能验证「AI 兑现」的指标不是发布会数量，而是毛利率与人均创收。接下来看两件事：现金流是否改善（预收款是教育公司的命门），以及研发费用率有没有随 AI 投入上升。如果收入增长、毛利下降、研发上升，那 AI 就还只是成本项。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 10:21</span>
+          <a class="src" href="http://www.duozhi.com/industry/insight/2026110218946.shtml" target="_blank" rel="noopener noreferrer">多知网 ↗</a>
+        </div>
+        <h3>东京 Gecipe 完成 6.6 亿日元 B 轮：电竞英语课累计授课超 60 万次，续课率 96%</h3>
+        <p>东京沉浸式教育初创公司 Gecipe 完成 B 轮最终交割，该轮总融资额达到 6.6 亿日元（约 2782 万元人民币）。投资方包括老股东 Nippon Venture Capital，以及新加入的 Kyoto Capital Partners、Colopl Next、SBI Okasan Alternative Investment、Resona Bank 和日本政策金融公库。</p>
+        <p>融资将用于扩展沉浸式教育业务、招聘、强化组织，并为上市做准备。公司成立于 2018 年，主要利用电竞游戏和虚拟世界开发沉浸式教育服务。</p>
+        <p>核心产品是电竞英语会话服务 eSpi!：把英语交流嵌入游戏场景，让用户在游戏协作过程中练口语。该产品 2020 年推出，截至 2026 年 9 月累计授课次数超过 60 万次，用户续课率超过 96%，累计用户评价超过 9.5 万条，平均评分 4.8 分（满分 5）。</p>
+        <p>除个人用户外，Gecipe 近期开始拓展学校及地方政府市场，推出面向地方自治体学校的教育数字化项目，尝试把电竞英语课程引入学校教育场景，已有多个地方政府采用。</p>
+        <p class="why"><b>看点</b>这组数据里最有信息量的不是 6.6 亿日元，而是 96% 的续课率与 60 万次授课——教育产品最难的是留存，用「游戏协作」替代「背单词」，本质是把练习变成社交行为。更值得注意的是它正在做的事：从 C 端转向地方政府与学校采购。这条路的毛利率低于 C 端，但现金流稳定、获客成本低；对一家准备上市的公司，公共部门收入是估值锚。风险也在这里：日本教育 DX 的采购节奏受财政周期影响，一旦地方预算收紧，增长会立刻放缓。6.6 亿日元在东京不算大钱，它验证的是一个模式能不能跨过「有趣但不持久」的门槛。</p>
+      </article>
+
+    </div>
+  </section>
+    </div>
+
+    <footer class="issue-footer">
+      <div class="wrap">
+        <p>本期为创刊号，收录 2026 年 11 月 2 日 09:20 至 2026 年 11 月 3 日 10:50（北京时间）之间发布的报道，共 9 条。检索时间 11/03 10:50。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">Education Daily · Issue 001 · 9 items · Generated 2026-11-03 10:50</p>
+      </div>
+    </footer>
+      </div>
+<!-- TODAY_ZH:END -->
+    <!-- TODAY_EN:START -->
+      <div class="today-lang" data-lang="en" hidden>
+    <header class="masthead">
+      <div class="wrap">
+        <div class="kicker">
+          <span class="zh">EDUCATION DAILY</span>
+          <span class="sep"></span>
+          <span>Daily Education Brief</span>
+          <span class="issue-tag">Issue 001</span>
+        </div>
+        <h1 class="date">November 3, 2026<span class="weekday">TUE</span></h1>
+        <p class="deck">Every education story today points the same way: how AI gets into the classroom. The Ministry of Education&rsquo;s Fujiang programme opened in Guangxi — 14 cities, 20 counties, 60 schools — on the same day it ordered nationwide AI training for teachers; 81% say AI saves them preparation time, while the harder barrier turns out to be confidence, not skill. More than 700 companies brought &quot;AI leads the way&quot; as the theme to the national equipment fair. And 15 listed education companies reported 18.775 billion yuan of nine-month revenue — after two years of AI talk, delivery is starting to appear in the accounts. <em>The threshold was never the hardware.</em></p>
+        <div class="metabar"><span class="pill">Issue 001</span>
+      <span class="dot"></span>
+      <span>Window Nov 2, 09:20 – Nov 3, 10:50 (UTC+8)</span>
+      <span class="dot"></span>
+      <span>9 items</span>
+      <span class="dot"></span>
+      <span>11 min read</span></div>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Sections">
+      <div class="wrap">
+        <div class="toc-inner">
+          <a href="#tldr-en"><span class="n">00</span>At a glance</a>
+        <a href="#policy-en"><span class="n">01</span>Policy &amp; Regulation</a>
+        <a href="#career-en"><span class="n">02</span>Vocational &amp; Careers</a>
+        <a href="#tech-en"><span class="n">03</span>Technology &amp; Products</a>
+        <a href="#capital-en"><span class="n">04</span>Industry &amp; Capital</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrap today-body">
+      <ol class="tldr" id="tldr-en">
+    <li>
+      <span class="idx">01</span>
+      <p><b>The Ministry of Education&rsquo;s Fujiang programme starts in Guangxi: 14 cities, 20 counties, 60 schools.</b> Guangxi is the first province to launch it, with priority for border, ethnic-mountain and canal-area schools and a four-tier chain from region to county to school. The money goes into training and lesson materials, not equipment.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Nationwide AI training for teachers, with AI added to teacher certification.</b> The 2025 national digital-literacy survey finds 81% of teachers say AI saves preparation time; the national smart-education platform upgraded its teacher centre and opened an AI literacy section on October 10.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Fifteen listed Chinese education companies report 18.775 billion yuan of nine-month revenue; 8 grew and 10 stayed profitable.</b> Several are shifting to efficiency in existing businesses and a second growth curve. AI is the main cost lever, but delivery varies widely.</p>
+    </li>
+      </ol>
+
+  <section class="chapter" id="policy-en" data-c="policy">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Policy &amp; Regulation</h2>
+      <span class="cen">Policy &amp; Regulation</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.jyb.cn/rmtzcg/xwy/wzxw/202611/t20261102_2111537627.html" target="_blank" rel="noopener noreferrer">China Education Daily ↗</a>
+        </div>
+        <h3>Ministry of Education&rsquo;s Fujiang programme launches in Guangxi: 14 cities, 20 counties, 60 schools</h3>
+        <p>The Ministry of Education launched its &quot;Fujiang&quot; programme for AI literacy in primary and secondary schools in Nanning, making Guangxi the first province to run it. The programme covers 14 prefecture-level cities, 20 participating counties and 60 schools.</p>
+        <p>Its stated aim is to build AI literacy among teachers and students in central and western China: tiered training for local administrators, researchers, principals and front-line teachers, a cohort of &quot;seed&quot; AI educators, and lesson materials adapted to ordinary classrooms, with resources pushed toward border, ethnic-minority and rural schools.</p>
+        <p>The design leans toward border schools, schools in ethnic mountain areas and schools along the canal, and builds a four-tier chain running from the region to the city, the county and the school. Chen Qiuyan, deputy director of the ministry&rsquo;s basic education department, called for practice rooted in classrooms; Guangxi&rsquo;s education chief Han Liu said the region wants to distil a replicable &quot;Guangxi model&quot;.</p>
+        <p>Two details stand out. The programme is framed as literacy, and its money goes into training and lesson materials rather than hardware. And 60 schools across 14 cities works out to fewer than five per city — a pilot footprint, not a rollout.</p>
+        <p class="why"><b>Why it matters</b>This is a teachers-first pilot. The hard part of putting AI in classrooms is not compute; it is whether teachers can use it and dare to. Splitting the trainees into administrators, researchers, principals and teachers admits that school-level adoption needs an owner at every layer. Sixty schools says the goal is to test a mechanism — the four-tier chain, seed teachers, reusable lessons — not coverage. The real test comes in two years: whether those 60 schools produce lessons that travel, and whether the seed teachers still use AI after the programme ends. Training without deposit is just software procurement with a teacher attached; lessons that survive are the only evidence that &quot;AI plus education&quot; reached the grassroots.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03 03:55</span>
+          <a class="src" href="https://news.gmw.cn/2026-11/03/content_39082206.htm" target="_blank" rel="noopener noreferrer">Guangming Daily ↗</a>
+        </div>
+        <h3>Nationwide AI training for teachers: 81% say it saves time, but the barrier is confidence</h3>
+        <p>The Ministry of Education recently convened a national meeting on AI for teacher development and called for full coverage of AI training. In April, a five-ministry &quot;AI plus education&quot; action plan set out to define a standard for teachers&rsquo; AI literacy and to add AI to teacher qualification exams and certification.</p>
+        <p>Demand is well documented: the 2025 national survey of primary and secondary teachers&rsquo; digital literacy found 81% say AI saves them preparation time. Liu Jia, a professor at Yangzhou University, found teachers accept &quot;workload-reducing&quot; uses such as marking and learning analytics most readily; training gets harder once the task involves building interactive environments or coordinating multiple agents.</p>
+        <p>Supply is catching up. On October 10 the national smart-education platform relaunched its teacher development centre with an AI literacy section split into concepts, ethics and hands-on tools; offline training runs through the national teaching programme, cascading from province to school. Wang Lei, head of the ministry&rsquo;s teacher affairs department, said the biggest obstacle for many teachers is not the technology but &quot;the hurdle in their heads&quot; — fear of being replaced, or of being left behind.</p>
+        <p>Classrooms are already improvising. Jin Wenyang, a physics teacher in Tianjin, packages assessment analysis into a fixed workflow: upload the data, generate a class dashboard, then produce an individual plan for each student — with every plan reviewed by a teacher before it is sent. Mo Weihong in Xiangtan takes the opposite order, feeding school requirements and her own past lesson plans into a model so it learns her approach before generating new material.</p>
+        <p>The boundary is being argued too. Zhang Weichun of the China Association for Educational Technology says dependence &quot;is not about using it a lot, but about not knowing when and how&quot; — letting students work out a locus on paper before showing an AI animation is not the same lesson as playing the animation first. Liu Jia recommends approved-tool whitelists for schools, under a principle that AI assists but does not replace, and tools do not overstep.</p>
+        <p class="why"><b>Why it matters</b>The problem this training addresses is not the teachers who cannot use AI but the two ends: those afraid to try and those who overdo it. The 81% figure validates the workload case, but there is a capability gap between reducing work (marking, analytics) and teaching with AI (designing lessons, judging students). The first standardises; the second depends on professional judgement. Adding AI to teacher certification writes that gap into the entry requirement. Three things to watch: what the standard actually tests and who administers it, whether training hours count toward continuing education, and whether school whitelists turn into a new procurement list.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.jyb.cn/rmtzcg/xwy/wzxw/202611/t20261102_2111537751.html" target="_blank" rel="noopener noreferrer">China Education Daily ↗</a>
+        </div>
+        <h3>First forum on running schools abroad: an annual reporting system, and a push for &quot;small, light&quot; campuses</h3>
+        <p>The 2026 China International Education Conference held its first dedicated forum on overseas campuses, hosted by Hebei University of Technology and attended by more than a hundred university international officers, under the theme &quot;openness for renewal, cooperation for reach&quot;.</p>
+        <p>Xi Ru, a second-level inspector at the ministry&rsquo;s international cooperation department, said overseas campuses are an important part of education opening-up, with platforms such as the Overseas Excellence Engineer Academies and Luban Workshops already established. Next, the ministry will explore an annual reporting system and monitoring indicators, and promote a model she described as &quot;small and beautiful, benefiting people, asset-light&quot;, so that institutions expand in an orderly way.</p>
+        <p>Cases spanned Central Asia, ASEAN and Europe, mixing universities and vocational colleges: Northwest A&amp;F University&rsquo;s Tashkent branch, Hebei University of Technology&rsquo;s Finland campus, and Luban Workshops. Astana International University described its &quot;two-pillar&quot; cooperation with China.</p>
+        <p>A China-Finland dialogue closed the forum, with LUT University&rsquo;s head of educational development and front-line teachers discussing student growth, staff development, cross-cultural understanding and what actually happens inside a campus.</p>
+        <p class="why"><b>Why it matters</b>Annual reporting plus indicators moves overseas campuses from an approval regime toward registration with evaluation. The old problem was never opening a campus; it was that nobody kept the books afterwards — how much went in, how many students enrolled, where graduates went, where the faculty came from. The value of reporting is not another form but the first basis for comparing quality across institutions. &quot;Asset-light&quot; is the realistic part: building a campus abroad costs hundreds of millions of yuan, while renting space, partnering and exporting courses is what most institutions can afford. For universities this shifts internationalisation from building campuses to building curricula; for regulators, how the indicators are defined matters more than the rule itself.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.gzns.gov.cn/zwgk/zdlyxxgk/jyxx/content/post_11082749.html" target="_blank" rel="noopener noreferrer">Nansha District Education Bureau ↗</a>
+        </div>
+        <h3>Guangzhou&rsquo;s Nansha names two unlicensed tutoring cases: 1,340 yuan confiscated, 1,608 yuan fined</h3>
+        <p>On November 2, the Nansha District Education Bureau in Guangzhou published two typical cases of illegal off-campus tutoring, both investigated and penalised by the district&rsquo;s integrated enforcement bureau.</p>
+        <p>In the first case, a cultural consulting company ran tutoring without approval. Under articles 17 and 42 of the interim measures on administrative penalties for off-campus tutoring, it was ordered to stop, had 1,340 yuan of illegal gains confiscated and was fined 1,608 yuan.</p>
+        <p>In the second, an education consulting company ran tutoring and an unlicensed tutoring institution. Under the same articles it was ordered to shut the institution and had 2,536 yuan of illegal gains confiscated.</p>
+        <p>The bureau said it will keep regulating tutoring providers and consolidating the results of the sector clean-up.</p>
+        <p class="why"><b>Why it matters</b>The two penalties add up to less than 5,000 yuan, but the notice itself is the point. One case combines confiscation with a fine, the other confiscation with closure; the penalties scale with illegal gains, which is the proportionality principle in practice. For a consulting firm, the real cost is not 1,608 yuan but closure and the public naming. It is also a reminder that tutoring under the label of &quot;cultural&quot; or &quot;education consulting&quot; is what enforcement now looks for — a business licence is not a school permit. Watch the density of enforcement: monthly district notices would mean routine; a handful a year still means demonstration.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="career-en" data-c="career">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Vocational &amp; Careers</h2>
+      <span class="cen">Vocational &amp; Careers</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.jyb.cn/rmtzcg/xwy/wzxw/202611/t20261102_2111537759.html" target="_blank" rel="noopener noreferrer">China Education Daily ↗</a>
+        </div>
+        <h3>National embodied-AI industry-education consortium forms in Harbin: 513 members across 29 provinces</h3>
+        <p>A national consortium for industry-education integration in embodied AI held its founding meeting in Harbin, led jointly by Northeastern University, Harbin Vocational and Technical College and Leju Robotics of Shenzhen.</p>
+        <p>The 513 member institutions come from 29 provinces, regions and municipalities. Officials from the Ministry of Education, the Ministry of Industry and Information Technology, and provincial and municipal education departments attended, alongside colleges, companies and industry associations.</p>
+        <p>The meeting published a joint programme for building talent-training and assessment systems for embodied AI, plus a textbook system, covering standards, practical courses, teacher development and teaching resources.</p>
+        <p>Outside the hall, Leju set up working scenarios for data collection — medicine sorting, a logistics line, home services — bringing real production steps into the venue. Harbin Vocational and Technical College said it will work on joint programmes, shared curricula, shared faculty, shared facilities and joint technical work.</p>
+        <p class="why"><b>Why it matters</b>&quot;Consortium&quot; has been used loosely for years. Whether one is real comes down to three things: textbooks developed together, training facilities shared, and jobs that companies actually pay for. This meeting delivered the first — a textbook and assessment system. Five hundred and thirteen members across 29 provinces is scale, not achievement. The skills gap in embodied AI is genuine: robotics firms need people who understand mechanics and models and can debug on site, a profile traditional majors do not produce directly. What to watch: whether the consortium turns real work such as data collection into course modules, and what share of its first graduates land jobs in the field.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="http://www.jyb.cn/rmtzcg/xwy/wzxw/202611/t20261102_2111537625.html" target="_blank" rel="noopener noreferrer">China Education Daily ↗</a>
+        </div>
+        <h3>Hefei&rsquo;s five industry-education consortia report: 90% job-match rate in the Visionox track</h3>
+        <p>The Hefei (Xinzhan) high-tech industry-education alliance convened a review of five municipal consortia covering information technology application, smart internet of things, high-end equipment manufacturing, new energy storage, and new displays and integrated circuits. Each presented results and, item by item, its shortfalls and plans for dedicated funding.</p>
+        <p>The most concrete numbers came from the display and chip consortium: Hefei Vocational and Technical College and Visionox, partners since 2020, report that more than 90% of graduates in mechatronics and mechanical design go into matched jobs, and that 25% of them have become technical leads or front-line managers. Their joint &quot;Visionox field engineer class&quot; is now in its third cohort, with company executives and engineers teaching in person.</p>
+        <p>The energy-storage consortium focused on research collaboration: the college and Gotion High-Tech built a joint innovation platform and a micro-scale materials research centre, run on a principle of problems set by industry, projects as drivers, real work assessed by the market. Companies&rsquo; genuine needs enter the college&rsquo;s research priorities, and teachers take on commissioned projects.</p>
+        <p>The shortfalls were tabled too: progress differs across supply chains, and some consortia still see shallow company involvement, with cooperation stuck at project level rather than embedded in daily teaching and production.</p>
+        <p>The Hefei (Xinzhan) alliance joined the ministry&rsquo;s first batch of national city-level industry-education alliances in 2023 and runs on a &quot;one body, two parks, three platforms, four alliances&quot; structure.</p>
+        <p class="why"><b>Why it matters</b>The 90% is not the story; the shortfall list is. Industry-education deals are easy to sign and easy to forget; putting five consortia on one stage to present results and name their gaps changes the test from &quot;is there cooperation&quot; to &quot;how far did it get&quot;. A 90% match rate and 25% becoming team leads are verifiable outputs — but from one company and one programme, so they do not generalise. The dividing line is the word &quot;embedded&quot;: if cooperation stays at classes and internships, it is a project; only when company needs enter teaching plans, teacher evaluation and school budgets does it become an institution. Watch how the dedicated money is spent — on equipment it is a one-off; on curriculum and faculty it might leave something behind.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="tech-en" data-c="tech">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Technology &amp; Products</h2>
+      <span class="cen">Technology &amp; Products</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03</span>
+          <a class="src" href="http://www.jyb.cn/rmtzgjyb/202611/t20261103_2111537804.html" target="_blank" rel="noopener noreferrer">China Education Daily ↗</a>
+        </div>
+        <h3>88th China Education Equipment Exhibition closes: 700+ exhibitors, 29.6% in research and technical services</h3>
+        <p>The 88th China Education Equipment Exhibition closed on November 1 at the Changsha International Convention and Exhibition Centre after a three-day run, hosted by the China Educational Equipment Industry Association with the Hunan education department and Changsha&rsquo;s municipal government.</p>
+        <p>Its theme was &quot;AI leads high-quality development of education equipment&quot;, with displays of AI, big data, cloud computing and virtual reality in smart classrooms, lab teaching, campus management and personalised learning. Academic sessions, buyer-supplier matching, product launches and demonstrations ran alongside.</p>
+        <p>Of more than 700 exhibitors, companies in scientific research and technical services accounted for 29.6%, and those in information transmission, software and IT services for 13.9%. The organisers read the mix as a shift &quot;from scale expansion to value deepening&quot;.</p>
+        <p class="why"><b>Why it matters</b>Put 29.6% and 13.9% together and the supply side has already changed: fewer boxes, more software and services. That is good for schools — hardware is bought once and depreciated over three years, while software is paid for continuously — but it raises new questions about budget lines, data ownership, and whether data can leave when a vendor does. The theme moved from &quot;digitalisation&quot; to &quot;AI leads&quot;, which is vendors following the policy vocabulary. The real sorting comes next year: when local budgets tighten while AI features are still demos, the survivors will be the companies that embedded AI in everyday teaching rather than selling it as a standalone exhibit.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital-en" data-c="capital">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03 08:50</span>
+          <a class="src" href="https://www.stcn.com/article/detail/4318818.html" target="_blank" rel="noopener noreferrer">Shanghai Securities News ↗</a>
+        </div>
+        <h3>Fifteen listed education companies report 18.775 billion yuan, 8 growing and 10 profitable</h3>
+        <p>Shanghai Securities News&rsquo; tally of third-quarter reports shows 15 listed education companies in China posting about 18.775 billion yuan of revenue for the first nine months of 2026.</p>
+        <p>Eight of them grew revenue and 10 stayed profitable. Several are shifting toward efficiency in existing businesses and looking for a second growth curve.</p>
+        <p>AI is both the main tool for cutting costs and the main thread for new growth, but the pace of implementation differs widely and the results show up unevenly in earnings.</p>
+        <p class="why"><b>Why it matters</b>Eighteen and three-quarter billion yuan across 15 companies averages 1.25 billion each; with 10 profitable and 8 growing, the sector has moved past the stage where telling an AI story lifts the stock. AI revenue for education companies comes from roughly three places: hardware and software sold to schools, courses sold to individuals, and internal cost cuts. The first two depend on budgets and household spending; the third shows up only in the expense ratio. So the metric that verifies &quot;AI delivery&quot; is not the number of launch events but gross margin and revenue per employee. Watch two things: whether operating cash flow improves — prepayments are the lifeblood of education firms — and whether R&amp;D intensity rises with AI spending. Growth with falling margin and rising R&amp;D means AI is still a cost line.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 10:21</span>
+          <a class="src" href="http://www.duozhi.com/industry/insight/2026110218946.shtml" target="_blank" rel="noopener noreferrer">Duozhi ↗</a>
+        </div>
+        <h3>Tokyo&rsquo;s Gecipe closes a 660 million yen Series B: 600,000 lessons and a 96% renewal rate</h3>
+        <p>Gecipe, a Tokyo-based immersive-education startup, completed the final close of its Series B, taking the round to 660 million yen (about 27.82 million yuan). Investors include existing backer Nippon Venture Capital and new entrants Kyoto Capital Partners, Colopl Next, SBI Okasan Alternative Investment, Resona Bank and the Japan Finance Corporation.</p>
+        <p>The money goes into expanding the immersive-education business, hiring, organisation building and preparation for an IPO. Founded in 2018, the company builds education services on esports and virtual worlds.</p>
+        <p>Its core product, eSpi!, teaches conversational English inside game scenarios, so learners speak while cooperating in play. Launched in 2020, it passed 600,000 cumulative lessons by September 2026, with a renewal rate above 96% and more than 95,000 reviews averaging 4.8 out of 5.</p>
+        <p>Beyond consumers, Gecipe has begun selling to schools and local governments, offering digital English programmes to municipal schools; several local authorities have adopted it.</p>
+        <p class="why"><b>Why it matters</b>The informative numbers are not the 660 million yen but the 96% renewal rate and 600,000 lessons — retention is the hardest part of any education product, and using game cooperation instead of vocabulary drills turns practice into a social act. What it is doing next matters too: moving from consumers to local-government and school procurement. That route carries lower gross margin but steadier cash flow and cheaper acquisition; for a company preparing to list, public-sector revenue is a valuation anchor. The risk sits in the same place: Japanese education digitalisation follows fiscal cycles, so a tighter municipal budget slows growth quickly. Six hundred and sixty million yen is not a large round in Tokyo; what it tests is whether the model can cross the line from &quot;fun but temporary&quot; to durable.</p>
+      </article>
+
+    </div>
+  </section>
+    </div>
+
+    <footer class="issue-footer">
+      <div class="wrap">
+        <p>This is the inaugural issue. It covers reports published between 09:20 on November 2 and 10:50 on November 3, 2026 (UTC+8): 9 items. Compiled at 10:50 on November 3.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">Education Daily · Issue 001 · 9 items · Generated 2026-11-03 10:50</p>
+      </div>
+    </footer>
+      </div>
+<!-- TODAY_EN:END -->
+  </section>
+</main>
+
+<details class="archive-drawer" id="archive" data-archive-drawer>
+  <summary class="archive-handle" aria-label="往期">
+    <span class="ah-label"><span class="ah-en">ARCHIVE</span><span class="ah-zh" data-i18n="archive.label">往期</span></span>
+    <span class="ah-close" aria-hidden="true">×</span>
+  </summary>
+  <div class="archive-panel" role="dialog" aria-label="往期 / Archive">
+    <div class="archive-panel-head">
+      <span class="kicker">
+        <span class="zh">ARCHIVE</span>
+        <span class="sep"></span>
+        <span data-i18n="archive.label">往期</span>
+      </span>
+    </div>
+    <div class="archive-panel-body">
+      <!-- ARCHIVE_SIDEBAR_ZH:START -->
+      <div class="archive-lang" data-lang="zh">
+      <details class="archive-month" open>
+        <summary><span>2026 年 11 月</span><span class="am-count">01</span></summary>
+        <a class="archive-link is-current" href="daily-education/2026-11-03.html" title="教育部「扶光计划」在广西启动：14 个市、20 个县、60 所学校">
+          <span class="a-date">2026.11.03 <em>TUE</em></span>
+          <span class="a-head">教育部「扶光计划」在广西启动：14 个市、20 个县、60 所学校</span>
+        </a>
+      </details>
+      </div>
+<!-- ARCHIVE_SIDEBAR_ZH:END -->
+      <!-- ARCHIVE_SIDEBAR_EN:START -->
+      <div class="archive-lang" data-lang="en" hidden>
+      <details class="archive-month" open>
+        <summary><span>November 2026</span><span class="am-count">01</span></summary>
+        <a class="archive-link is-current" href="daily-education/2026-11-03-en.html" title="Ministry of Education’s Fujiang programme launches in Guangxi: 14 cities, 20 counties, 60 schools">
+          <span class="a-date">2026.11.03 <em>TUE</em></span>
+          <span class="a-head">Ministry of Education’s Fujiang programme launches in Guangxi: 14 cities, 20 counties, 60 schools</span>
+        </a>
+      </details>
+      </div>
+<!-- ARCHIVE_SIDEBAR_EN:END -->
+    </div>
+  </div>
+</details>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p data-i18n="footer.tagline">源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="index.html" data-i18n="nav.ai">AI 日报</a>
+        <a href="economy.html" data-i18n="nav.econ">经济日报</a>
+        <a href="education.html" aria-current="page" data-i18n="nav.edu">教育日报</a>
+        <a href="tools.html" data-i18n="nav.tools">工具</a>
+        <a href="wish.html" data-i18n="nav.wish">许愿</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私</a>
+        <a href="feed-education.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br><span data-i18n="footer.edu">教育日报 · 每天更新</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="lang.js?v=6"></script>
+<script src="site.js?v=6"></script>
+</body>
+</html>
