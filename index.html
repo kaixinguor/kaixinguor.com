@@ -68,19 +68,21 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 008 期</span>
+          <span class="issue-tag">第 009 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 2 日<span class="weekday">MON</span></h1>
-        <p class="deck">今天的主线是把智能体放进真实账本：美团用 1.6 万亿参数押长程任务，思科用不设上限的 Token 重写 98% 遗留代码，
-      特拉华州给「AI 公司」开 30 个月沙盒。另一边，红旗连锁用 16 个月和 286.68 万元证明：机器人还卖不了货。
-      <em>能力在往前走，账单开始有人签。</em></p>
-        <div class="metabar"><span class="pill">第 008 期</span>
+        <h1 class="date">2026 年 11 月 3 日<span class="weekday">TUE</span></h1>
+        <p class="deck">今天的主线是账单。Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，
+      同时首次披露 8954 亿美元算力承诺。同一天，Marvell 以 1150 亿美元买下 Lumentum，甲骨文再融 200 亿美元，
+      韩国把 2027 年 AI 预算提到 21.3 万亿韩元。另一端，高盛把 Claude Code 从交易员手里收回，
+      MIT 的团队直接改写权重——不训练，只动 0.016% 的参数。
+      <em>算力账单越写越长，工具权限越收越紧。</em></p>
+        <div class="metabar"><span class="pill">第 009 期</span>
       <span class="dot"></span>
-      <span>窗口 11/01 09:20 – 11/02 09:20</span>
+      <span>窗口 11/02 09:20 – 11/03 09:02</span>
       <span class="dot"></span>
-      <span>8 条</span>
+      <span>9 条</span>
       <span class="dot"></span>
-      <span>阅读约 9 分钟</span></div>
+      <span>阅读约 11 分钟</span></div>
       </div>
     </header>
 
@@ -88,11 +90,11 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-zh"><span class="n">00</span>速览</a>
-        <a href="#models-zh"><span class="n">01</span>模型与能力</a>
-        <a href="#products-zh"><span class="n">02</span>产品与智能体</a>
-        <a href="#research-zh"><span class="n">03</span>研究与安全</a>
-        <a href="#embodied-zh"><span class="n">04</span>具身智能</a>
-        <a href="#capital-zh"><span class="n">05</span>行业与资本</a>
+        <a href="#capital-zh"><span class="n">01</span>行业与资本</a>
+        <a href="#models-zh"><span class="n">02</span>模型与能力</a>
+        <a href="#products-zh"><span class="n">03</span>产品与智能体</a>
+        <a href="#research-zh"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied-zh"><span class="n">05</span>具身智能</a>
         </div>
       </div>
     </nav>
@@ -101,147 +103,21 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>美团龙猫发布 LongCat-2.5：1.6 万亿总参数、每 token 激活 480 亿。</b>主打长程智能体任务，视觉信号被拆成多层级离散 token；官方称在国产算力上做了长上下文训练与 W4A4 推理。在线体验与 API 已开，权重仍在「即将上线」。</p>
+      <p><b>Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元。</b>营收环比增 47%，增速从二季度的 144% 明显放缓；算力与基础设施支出环比增 77% 至 99 亿美元。承诺付款排到 2045 年，其中约 698 亿美元 12 个月内到期。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>沙特阿美买下 HUMAIN 49%，PIF 保留 51%。</b>交易包含 AI 资产转让与约 99 亿里亚尔注资，阿美拿到工业落地渠道，主权基金保留控制权。石油现金流开始为算力资产提供内部估值锚。</p>
+      <p><b>Marvell 以 1150 亿美元全股票收购 Lumentum，较并购消息前溢价 23.9%。</b>交易股权价值 1025.4 亿美元，Lumentum 股东换股后持有合并公司约 33%；两家股价盘前分别跌 2.3% 和 6.5%。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>清华「代数世界模型」用 Lean 4 证明「这关无解」。</b>ARC-AGI-3 的 183 个关卡全部通关、得分 99.9%，平均动作数只有人类基准的 43%；论文是 arXiv 预印本，尚未同行评审。</p>
+      <p><b>MIT 团队让模型直接读写权重：只改 0.016% 的参数，Qwen3.5-0.8B 的 MATH-500 从 7.9% 升到 48.1%。</b>方法不经过优化器与梯度下降；作者同时承认，在很少出现循环的 Gemma 3 270M 上，同样的编辑提不动分数。</p>
     </li>
       </ol>
 
-  <section class="chapter" id="models-zh" data-c="model">
-    <div class="chead">
-      <span class="cnum">01</span>
-      <h2>模型与能力</h2>
-      <span class="cen">Models</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/02 09:18</span>
-          <a class="src" href="https://www.ithome.com/1/020/873.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体</h3>
-        <p>11 月 2 日上午，美团龙猫发布原生多模态模型 LongCat-2.5，总参数量 1.6 万亿，每个 token 激活约 480 亿参数。按官方说法，它在 LongCat-2.0 的基础上进一步强化原生视觉理解与智能体编程能力，面向的是长程智能体任务，而不是单轮问答。</p>
-        <p>训练侧有两处改动值得记：一是在长序列训练里加入更多长程轨迹数据，并用大规模长程强化学习提升复杂代码库开发、完整项目构建这类端到端工程能力；二是把真实 Agent 的失败轨迹转成可复现、可验证的训练任务，针对短板补数据。这套方法的前提是有足够多的真实任务轨迹，而不是只靠合成数据。</p>
-        <p>多模态的实现方式是「视觉 token 化」：LongCat-2.5 把视觉信号表示为多层级离散 token，让主干模型以统一的 token 形式处理视觉与文本输入。官方称这让它在 Visual Coding 上表现突出，并支持创意设计和 3D 等任务。基础设施方面，官方提到在国产算力上优化长上下文训练与 W4A4 推理，并用训推数值一致性和长上下文 rollout 支撑大规模长程强化学习。</p>
-        <p>目前可以验证的入口有两个：longcat.chat 的在线体验和 API；GitHub 与 HuggingFace 页面写着「即将上线」，也就是说权重还没有真正开放。官方给出的评测结果以图片形式附在发布页，正文没有列出具体分数，第三方复现也还没有。</p>
-        <p class="why"><b>看点</b>1.6 万亿总参数、480 亿激活，是典型的稀疏 MoE 账本：用总参数换容量，用激活参数换推理成本。真正的赌注不在参数，而在「长程」——长任务意味着更长的上下文、更多的工具调用和更高的失败率，W4A4 与国产算力优化都是在压每 token 的成本。要判断它是否成立，先看三件事：长任务的成功率而不是单轮分数、API 价格、以及权重开放后社区能否复现。参数规模可以开发布会，长程任务的返工率不能。</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="products-zh" data-c="product">
-    <div class="chead">
-      <span class="cnum">02</span>
-      <h2>产品与智能体</h2>
-      <span class="cen">Products &amp; Agents</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/02 08:17</span>
-          <a class="src" href="https://www.ithome.com/1/020/857.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>思科让一名 27 岁工程师用 AI 重写 98% 遗留代码，Token 不设上限</h3>
-        <p>据《财富》报道，思科总裁兼首席产品官吉图·帕特尔（Jeetu Patel）给 27 岁的工程师帕德马纳班·克里希那穆提（Padmanabhan Krishnamurthy）定了一个目标：24 个月内用 AI 重构或重写公司 98% 的遗留代码，并给他不设上限的 Token 预算。「我已经给了他无限制的 Token，因为他要去重构代码，」帕特尔说。</p>
-        <p>克里希那穆提 2023 年联合创办实时翻译公司 EzDubs，2025 年思科收购后加入。帕特尔称他此前「被埋在组织深处，做着无关大局的边缘事务」；转机发生在帕特尔视察旧金山办公室时，克里希那穆提提出只需一个两人团队就能重写思科庞大的遗留代码。</p>
-        <p>目前这件事还停留在目标阶段：他给自己定了四周的验证期，98% 是 24 个月的终极目标，不是已经完成的成果。报道没有披露当前的代码修改体量、试验成效，也没有说明「重写」的验收标准是行数、模块数还是行为兼容性。</p>
-        <p>值得注意的对照是成本口径：传统外包按人月计价，这里按 Token 计价，且不设上限。对一家以网络设备为主业的公司，遗留代码的维护成本长期藏在运维与人力预算里；把它换成算力预算，等于把一笔固定成本变成可变成本。</p>
-        <p class="why"><b>看点</b>「98% 的代码」是一个很容易被误读的指标。遗留代码的价值不在行数，而在行为兼容——重写 98% 但引入一个计费或协议兼容问题，损失可能超过省下的维护费。真正该看的验收指标是回归测试通过率、线上故障率与回滚次数，而不是重写比例。另一方面，不设上限的 Token 把边际成本从人力转到算力，这在预算表上是一次科目重分类：省下的是外包与维护，增加的是 GPU 与推理账单。四周验证期结束时，如果只公布「重写了多少」，不公布「坏了多少」，这个案例就没有参考价值。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/02 08:18</span>
-          <a class="src" href="https://www.ithome.com/1/020/858.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>特拉华州拟给 AI 公司开 30 个月沙盒：智能体可注册、可被起诉</h3>
-        <p>据科技媒体 TechRadar 报道，美国特拉华州计划放宽商业监管规定，允许由 AI 智能体运营的企业注册成立。草案为这类「AI 公司」（AIC）设定 30 个月监管沙盒，期间由智能体作出商业决策，并在受监管的环境中测试。</p>
-        <p>责任安排是草案的核心：AIC 与普通企业一样可以成为诉讼对象，必要时也可以主动提起诉讼。支持者认为，这能给自主商业运营企业提供法律确定性；加州大学法学教授安德鲁·贝克（Andrew Baker）称，特拉华州是在寻找折中方案。</p>
-        <p>反对声音来自国会。众议院监督委员会主席詹姆斯·科默（James Comer）已致信州长马特·迈耶（Matt Meyer），称担心 AIC 被用来保护实力雄厚的 AI 企业及投资者，使他们免于为鲁莽且造成伤害的行为承担责任。</p>
-        <p>目前这是「拟允许」，不是已生效的法律；沙盒期限、资本要求、披露义务等细节仍待明确。对 AI 公司，这意味着「智能体签约、开户、报税」第一次有了法人外壳；对监管，30 个月是一次可撤销的试用期。</p>
-        <p class="why"><b>看点</b>争点不是机器人能不能开公司，而是有限责任的边界。AIC 一旦成为独立法人，侵权责任就被锁在壳里，受害者要穿透到母公司会更难；反过来，如果没有这层壳，智能体的每一次自主决策都要由人兜底，商业上就跑不起来。30 个月沙盒的设计，本质是给「责任隔离」设一个可撤销的试用期。接下来要看的不是有多少家注册，而是三件事：最低资本金、强制披露（谁在背后控制）、以及首例 AIC 诉讼里法院是否愿意刺破面纱。</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="research-zh" data-c="research">
-    <div class="chead">
-      <span class="cnum">03</span>
-      <h2>研究与安全</h2>
-      <span class="cen">Research &amp; Safety</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/01 16:02</span>
-          <a class="src" href="https://www.qbitai.com/2026/11/507031.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
-        </div>
-        <h3>清华姚期智团队提出「代数世界模型」：先证明，再通关</h3>
-        <p>清华大学姚期智、袁洋团队提出「代数世界模型」（Algebraic World Model，AWM），论文已挂在 arXiv（2610.40503），目前是预印本，尚未经过同行评审。共同第一作者是浙江大学的潘冠成（休学在清华做研究）与清华姚班的谭淇心。</p>
-        <p>方法分三步：探索，先把观察到的现象写成可执行的 Python 代码，作为初步假设；凝炼，用新的观察验证、修正假设，提炼成更通用的对象与规则；证明，把规律形式化成 Lean 4 语言，变成机器可以自动检查的数学断言。团队借用了范畴论里的「投射极限」与「归纳极限」，用来做概念的组合与泛化。</p>
-        <p>在 ARC-AGI-3 上，基于 Opus 5 的 AWM 通关全部 183 个关卡，得分 99.9%，平均通关动作数只有人类基准的 43%。面对一个被改成无解的关卡，基于 Opus 5.5 的 AWM 尝试两次就证明了「当前步数下无解」，并指出只差一步就能获胜。</p>
-        <p>对照实验更能说明问题：GPT-6 Astra 配合 Provider Adapter 也能拿到 99.9%，但它把游戏机制整理成符号规则，本质上只是「第谷的实验记录本」，描述现象而没有抓住规律。在 12 次「不可能关卡」测试里，GPT-6 Astra 与 Claude Opus 5.5 合计只有 5 次判断出「不可能」，其中 4 次给出的最低步数还是错的。</p>
-        <p class="why"><b>看点</b>这条路线把「世界模型」从预测下一帧，改成了「可证明的规则系统」。区别在于可审计：Lean 4 的证明可以被机器检查，模型说「不可能」时，你要么看到一个证明，要么看到一个缺口，而不是一句置信度很高的话。但它的边界也写得很清楚——证明只在「观测到的世界」里成立，探索不全，得到的就只是局部真理。ARC-AGI-3 是封闭的小世界，迁移到开放环境，首先要解决的是「观测不全」，而不是证明能力。99.9% 很好看，下一个指标应该是样本效率与证明成本。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/01 14:11</span>
-          <a class="src" href="https://www.ithome.com/1/020/721.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>Grok 给生成文本加隐形水印：11 月 7 日起，全球 API 生效</h3>
-        <p>SpaceXAI 宣布，自 11 月 7 日起为 Grok 模型生成的文本添加隐形水印，检测器通过识别特定信号判断一段文本是否带有水印。官方称，这次调整是为了响应欧盟《人工智能法案》的要求。</p>
-        <p>覆盖范围是全球所有地区的 SpaceXAI API，涉及 grok-4.7、grok-4.6、grok-4.5、grok-4.3、grok-4.20 reasoning、grok-4.20 non-reasoning 与 grok-4.20 multi-agent 共 7 个模型。团队管理员可以选择为某一款模型单独关闭水印。</p>
-        <p>技术路径值得记：水印不是通过隐藏字符或元数据实现，而是融入模型生成文本时对 Token 的选择过程。这意味着它不改变文本的可见内容，但要占用一部分采样自由度；检测器需要拿到对应的密钥或模型才能判断。</p>
-        <p>AI 治理观察者安德鲁·库兰（Andrew Curran）指出，目前还没有为文字加入隐形水印的模型仅剩北美地区的 ChatGPT。欧盟 AI 法案对生成内容的标注要求，正在从「建议」变成「默认开启」。</p>
-        <p class="why"><b>看点</b>水印解决的是「这段文字能不能被证明是 AI 写的」，不是「这段文字该不该发」。把开关交给团队管理员，等于把欧盟的标注义务下推给企业客户：默认开启、可以关闭，责任随之转移。更关键的是可验证性——检测器不公开，第三方就无法独立验证水印是否存在、是否被去除。对下游应用，水印会改变内容分发的成本结构：转载、洗稿、翻译都可能削弱信号，真正需要标注的场景反而更难识别。</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="embodied-zh" data-c="robot">
-    <div class="chead">
-      <span class="cnum">04</span>
-      <h2>具身智能</h2>
-      <span class="cen">Embodied AI</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/01 15:50</span>
-          <a class="src" href="https://www.qbitai.com/2026/11/506990.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
-        </div>
-        <h3>红旗连锁终止机器人无人售货：16 个月，286.68 万元研发费</h3>
-        <p>2025 年 3 月，四川便利店龙头红旗连锁公告与机器人公司联合立项「机器人无人售货系统」，次日股价涨停，至 4 月 23 日较公告前上涨约 35%。2026 年 7 月，红旗公告终止该项目，理由是系统暂未达到大规模商业化落地标准，转而做 24 小时云值守。</p>
-        <p>立项时的风险提示已经写得很具体：面对密集货架与异形商品，机械臂「抓取失误率较高，稳定性亟待提升」；不同光照下视觉识别容易偏差；既要避障又要保证数据传输稳定。16 个月后，样机没有等到，等来的是终止公告。</p>
-        <p>成本侧的数字不大：红旗 2025 年年报研发费用约 286.68 万元，此前未公示研发费用，项目支出大概率就在这个量级。一位接近红旗的人士对量子位称，夏季玻璃瓶冷饮易结水珠，机器人拿不稳总摔碎，复杂包装也拿不稳；货架过道窄、周围有顾客，真实场景比实验室复杂得多。</p>
-        <p>行业侧却在扩张：全国已有 100 多个机器人零售仓或零售布局，分布在 30 多座城市；一台零售机器人售价近 70 万元，加上零售仓，业内估算单台成本近百万元；零售仓 SKU 只有几十种，而传统便利店有 2000 到 3000 个。多位从业者认为，机器人替代店员还需要 2 到 5 年。</p>
-        <p class="why"><b>看点</b>这不是「机器人不行」的结论，而是「用 280 万元验证了一个百万元级的单店模型」。失败点不在 Demo 能力，而在长尾：水珠、软包装、窄过道、顾客走动，每一项都不难，叠在一起就让抓取成功率不可用。零售场景容错高、展示性强，所以成了机器人公司的「场景」，而不是零售商的「员工」——按从业者的说法，是机器人更需要场景，不是场景更需要机器人。真正的商业化临界点只有一个：单店回本周期压到一年以内，或者机器人成本低于一名店员。在那之前，这些仓更像是广告位。</p>
-      </article>
-
-    </div>
-  </section>
-
   <section class="chapter" id="capital-zh" data-c="capital">
     <div class="chead">
-      <span class="cnum">05</span>
+      <span class="cnum">01</span>
       <h2>行业与资本</h2>
       <span class="cen">Industry &amp; Capital</span>
       <span class="crule"></span>
@@ -250,28 +126,168 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/02 08:44</span>
-          <a class="src" href="https://www.ithome.com/1/020/863.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/03 07:51</span>
+          <a class="src" href="https://m.21jingji.com/article/20261103/herald/50772c170d79b150aefb905b6e992215.html" target="_blank" rel="noopener noreferrer">21 财经 · 财联社 ↗</a>
         </div>
-        <h3>沙特阿美买下 HUMAIN 49%，将注资约 99 亿里亚尔</h3>
-        <p>当地时间 11 月 1 日，此前由沙特主权财富基金 PIF 全资控股的 AI 公司 HUMAIN 宣布，沙特阿美（Aramco）将收购其 49% 的股份，PIF 保留剩余 51%。</p>
-        <p>交易形式是「转让关键 AI 资产 + 注资约 99 亿沙特里亚尔」（约合 175.5 亿元人民币）。两家股东将分别向 HUMAIN 注入 AI 资产、能力与人才，并共同监督其业务扩张。</p>
-        <p>阿美给出的理由是工业应用：它计划利用 HUMAIN 的 AI 基础设施，把先进 AI 能力转化为工业场景，增强自身运营。对 HUMAIN，这意味着它同时拿到主权基金背书与一家全球最大石化企业的场景订单。</p>
-        <p>股权结构值得注意：49% 对 51%，控制权仍在 PIF，阿美拿的是经济权益与工业落地渠道。交易对价里既有现金，也有资产，具体的资产清单与估值口径没有披露。</p>
-        <p class="why"><b>看点</b>这是一次用油气现金流给算力资产做「内部估值锚」的操作。HUMAIN 的算力与模型需要长期资本，PIF 单独出钱会让资产负债表更集中；把 49% 卖给阿美，等于让石油业务的现金流来分担 AI 的资本开支，同时把 AI 能力直接接入炼化、勘探这些真实场景。对阿美，AI 支出从成本项变成股东权益，报表上的位置变了；对 HUMAIN，订单与背书比纯融资更稳。风险在关联交易：资产怎么定价、算力利用率多少、亏损由谁承担，这些不披露，估值就只能是内部价。</p>
+        <h3>Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元</h3>
+        <p>当地时间 11 月 2 日，Anthropic 向美国证券交易委员会提交招股书修订稿，补上了首版里空缺的 2026 财年第三财季（截至 9 月 30 日）数据：营收约 170 亿美元，较二季度的 116 亿美元增长约 47%，较去年同期的 14 亿美元增长逾 10 倍。</p>
+        <p>利润端重新转负。三季度经营亏损 5.67 亿美元，而二季度刚刚首次实现经营盈利 9.74 亿美元。直接原因是算力成本：公司通常提前 12 至 18 个月签长期合同预订算力，三季度需求超出预期，只好临时加购 50 亿美元短期算力，价格明显高于长约。当季算力与基础设施支出环比增 77% 至 99 亿美元，每 1 美元算力与基础设施投入带来的收入从二季度的 2.08 美元降到 1.72 美元。新模型降价与合同折扣又让收入少了约 6 亿美元；另有与员工捐赠配捐计划相关的 20 亿美元非现金费用，剔除后调整后经营利润约 25 亿美元，利润率从 19% 降到 15%。</p>
+        <p>修订稿首次给出承诺支出总额：计入 9 月 30 日之后新签的合同，采购与租赁承诺约 8954 亿美元，几乎全部用于购买算力、租用数据中心，付款期一直排到 2045 年。其中未来 12 个月内到期约 698 亿美元——超过按三季度营收折算的全年收入，也相当于其 9 月末约 1318 亿美元现金及短期投资的一半以上。</p>
+        <p>这还不是全部。Anthropic 还计划向谷歌采购 1250 亿至 1500 亿美元的芯片，并在 AMD 上花费超过 200 亿美元，这两笔因未约定固定金额暂未计入；公司估算此类合同未来约需支付 1500 亿至 1750 亿美元，计入后账单总额超过 1 万亿美元。钱流向链条上的各个环节：博通以约 1612 亿美元的 TPU 设备租赁居首，谷歌不低于 1213 亿美元，SpaceX 的 AI 部门合同上限 1205 亿美元，亚马逊不低于 1100 亿美元，微软 449 亿美元。</p>
+        <p>另有一处风险提示：今年前九个月有 5% 至 7% 的收入来自违反其使用政策或商业条款的客户，公司自 8 月起加大了对违规使用的整治力度，未来收入增速可能因此承压。</p>
+        <p class="why"><b>看点</b>把增长和承诺放在同一页上看，问题不在亏损的 5.67 亿美元，而在承诺的久期。季度收入 170 亿美元、年化不到 700 亿，12 个月内到期的承诺就有 698 亿，几乎等于一整年的收入；而 8954 亿美元摊到 2045 年，等于把未来二十年的现金流提前抵押给算力供应商。成本会按顺序落在三拨人身上：先是股东，IPO 定价要消化这笔表外负担；再是供应商，产能被长约锁定，议价权上移；最后是客户，价格由折旧决定。要判断这个循环能不能立住，看两个指标就够了——毛利率能否回到 19%，以及 12 个月内那 698 亿美元，靠什么付。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/02 07:39</span>
-          <a class="src" href="https://www.ithome.com/1/020/849.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/02 20:52</span>
+          <a class="src" href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/02/marvell-to-buy-lumentum-in-us115-billion-deal-in-ai-data-center-bet/" target="_blank" rel="noopener noreferrer">BNN Bloomberg · 路透社 ↗</a>
         </div>
-        <h3>铠侠 2027 年产能售罄，2028 年过半被锁定</h3>
-        <p>据日媒 ITmedia 报道，在铠侠控股 2027 财年第二财季（2026 年 7 月至 9 月）财报电话会上，执行副总裁河村芳彦表示，铠侠 2027 年的芯片产能配额已基本分配完毕，处于售罄状态，所有可供应产能均已完成锁定。</p>
-        <p>提前把次年全年产能锁死，在铠侠历史上尚属首次。更远的时间点也被预订：2028 年已有超过 50% 的产能获得客户的确定性采购承诺，公司甚至已启动 2029 至 2030 年的商务洽谈。</p>
-        <p>财务侧的动作很直接：截至 9 月底，铠侠账面现金 1.3973 万亿日元（约 591.27 亿元人民币），除留出应急储备外，原则上全部投入成长性投资。公司在 6 月披露，2026 至 2028 财年年均投资约 4700 亿日元，三年累计约 1.4 万亿日元；2026 财年因扩产紧迫，把原定 2027 财年的资本开支提前，当年投资规模预计近 6000 亿日元。</p>
-        <p>产能建设上，铠侠计划在日本岩手县北上市北上工厂新建「第 3 制造厂房」，预计 2029 财年内投产。第 1、第 2 厂房分别于 2020 年、2025 年投产。</p>
-        <p class="why"><b>看点</b>存储正在从「周期品」变成「配额品」。过去买 NAND 看现货价，现在下游要提前一年半锁量；锁量通常伴随价格谈判，但报道没有披露价格，所以「售罄」不等于「涨价」，只说明供给紧张。对下游，2027 年产能售罄意味着 AI 服务器、手机、PC 的存储成本在 2027 年前很难下来；对铠侠，把 1.4 万亿日元现金全投出去，是用扩产赌 2028 年的需求，如果 AI 资本开支放缓，第 3 厂房就会变成折旧。接下来要看的不是「售罄」这个形容词，而是 2028 年配额的价格，以及 HBM 扩产会不会挤占传统 NAND 的产能。</p>
+        <h3>Marvell 以 1150 亿美元全股票收购 Lumentum，较并购消息前溢价 23.9%</h3>
+        <p>11 月 2 日，定制芯片商 Marvell 宣布收购光器件厂商 Lumentum，交易总额 1150 亿美元（含债务，全股票），股权价值 1025.4 亿美元。这是 2026 年最大的并购之一，也是芯片业对 AI 基建最激进的一次下注。</p>
+        <p>对价结构：每股 1132 美元，较 10 月 28 日（并购谈判曝光前）的收盘价溢价 23.9%；Lumentum 股东每股换 4.5 股 Marvell，交割后持有合并公司约 33% 的股权（完全稀释口径）。双方董事会一致通过，预计 2028 年上半年完成交割。若 Marvell 放弃交易或转投其他收购要约，需向 Lumentum 支付 58 亿美元分手费；反向违约 Lumentum 付 29 亿美元；若监管否决，Marvell 付 32 亿美元。</p>
+        <p>市场并不买账：消息公布后 Lumentum 盘前跌 6.5%，Marvell 跌 2.3%，两家股价自谈判曝光以来都已明显回落。英伟达今年早些时候分别向两家公司各投 20 亿美元，未对交易置评。Marvell 市值已超 1700 亿美元，8 月刚拿下为谷歌 AI 芯片配套、到 2033 财年最多 1200 亿美元销售额的订单，并在 10 月投资者日给出 2031 财年 700 亿至 900 亿美元的营收指引。</p>
+        <p>Lumentum 同时给出二季度营收指引 15.8 亿至 16.3 亿美元，高于分析师平均预期的 14.8 亿美元。Marvell CEO 墨菲（Matt Murphy）称，AI 基础设施正在向光互连做架构迁移，「这是一代人只有一次的机会」；交易把合并公司的可服务市场抬到 5500 亿美元。</p>
+        <p class="why"><b>看点</b>这笔交易买的不是当下的利润，是光互连的过路费。AI 集群从几百张卡扩到几万张卡，瓶颈从算力转向连接——光模块、激光器、光交换，单价与用量一起涨。Marvell 把 TAM 抬到 5500 亿美元，等于承认自己不再只是定制芯片商。代价是 33% 的股权和一张 1150 亿美元的资产表：如果 2028 年交割时 AI 资本开支已经见顶，这笔钱会以商誉和折旧的形式留在报表上。分手费结构很能说明问题——监管否决只赔 32 亿美元，远低于主动放弃的 58 亿，双方认定真正的风险不是反垄断，是需求。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03 08:33</span>
+          <a class="src" href="https://www.zhitongcaijing.com/content/detail/1517527.html" target="_blank" rel="noopener noreferrer">智通财经 ↗</a>
+        </div>
+        <h3>甲骨文启动 200 亿美元股票与债券发行，股价跌约 6%，年内累跌 38%</h3>
+        <p>甲骨文正式披露融资计划：通过发行股票与债券合计筹集 200 亿美元，用于 AI 与云基础设施建设并偿还部分债务，支撑其到 2030 财年把销售额做到 2250 亿美元的目标。</p>
+        <p>债券分 6 个期限，从 2029 年到 2046 年，其中 1 只为浮动利率、5 只为固定利率，利率与发行价待定。消息公布后股价下跌约 6%，今年以来累计跌幅已达 38%。公司负债总额 1253.4 亿美元，超过其 2026 财年 673.6 亿美元的销售额。</p>
+        <p>管理层的说法是转折在望：CFO 希拉里·麦克森（Hilary Maxson）预计现金流将在 2028 财年下半年转正；上月 28 日，这一预期曾让股价单日上涨约 11%。公司承诺在 2030 财年前把 AI 相关的额外融资控制在 200 亿美元以内，设备投资在本财年与下一财年见顶，2030 财年调整后每股收益目标超过 21 美元。</p>
+        <p>资金用途涵盖设备投资、债务偿还、并购、分红与股票回购。投资者焦虑的核心是对仍处亏损的 OpenAI 业务的高度依赖，以及相对微软、亚马逊在销售体量上的劣势。</p>
+        <p class="why"><b>看点</b>这是用债养算力的典型样本：先签客户，再发债建机房，最后用客户的付款还债。链条成立的前提是客户按时付款且规模继续扩大；一旦客户自己的融资节奏放慢，甲骨文就要用更贵的钱去填已经开工的工地。200 亿美元里有一半是股票，等于把估值也押进去——股价年内已跌 38%，这个位置发股票，稀释比一年前贵得多。接下来该看的不是营收指引，是两件事：资本化利息的规模，以及 2028 财年现金流转正里，有多少来自应收回款。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 09:28</span>
+          <a class="src" href="https://en.sedaily.com/politics/2026/11/02/korea-to-invest-213-trillion-won-in-ai-under-2027-budget" target="_blank" rel="noopener noreferrer">Seoul Economic Daily ↗</a>
+        </div>
+        <h3>韩国 2027 年 AI 预算提到 21.3 万亿韩元，接近今年的两倍</h3>
+        <p>11 月 2 日，韩国总统李在明在国会发表 2027 年度预算施政演说：政府将向半导体、物理 AI（具身智能）与 AI 数据中心三大项目投入 21.3 万亿韩元，接近今年水平的两倍。</p>
+        <p>三大项目内部的分法很清楚。半导体先设专项账户作为稳定投资基础，投 2 万亿韩元扩产，包括首都圈晶圆厂提前投产与西南产业集群建设，另投 2.1 万亿韩元做电力、用水与产业园基础设施；物理 AI 拿 5000 亿韩元，在制造、智能工厂、国防等 8 个领域做现场验证；前沿 AI 4.7 万亿韩元，目标是让国产模型进入全球第一梯队，同时启动面向公众的 AI 智能体服务。</p>
+        <p>研发侧创下纪录：下一代增长引擎「NEXT 10」战略技术投 13.8 万亿韩元，研发总预算提高到 39.5 万亿韩元。能源转型投 2.8 万亿韩元，电动车购置补贴名额提高到 43 万辆；文化产业 11.6 万亿韩元。</p>
+        <p>总预算 820.9 万亿韩元，同比增长逾 10%，增量主要来自半导体景气带来的税收。人才方面计划培养 2000 名芯片设计与地方半导体产业专家，并把 AI 教育铺到学生、求职者与在职人员各个阶段。</p>
+        <p class="why"><b>看点</b>这是一份把税收押在周期上的预算。820.9 万亿韩元的盘子，增量来自半导体景气；而 21.3 万亿韩元的 AI 支出，又主要补给晶圆厂、电力与数据中心——等于用芯片的当期利润，去赌下一轮芯片需求。值得注意的结构是物理 AI 只占 5000 亿韩元，约为 AI 总盘子的 2.4%，硬件与产能拿走了绝大部分，说明政府判断瓶颈在电力和产能，不在算法。真正的考验在两年后：如果存储价格回落、税收增量消失，这笔支出要靠什么续上。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models-zh" data-c="model">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 21:19</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6762500.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>腾讯混元发布 Hyra 2.0：AI 科研从「解题」转向「造工具」</h3>
+        <p>11 月 2 日，腾讯混元发布 AI 科研系统 Hyra 2.0，把研发重点从「直接用 AI 攻克科学难题」转向「让通用 Agent 参与科学模型、研究工作流与软件工具的研发与升级」，让一次研发的成果在后续研究里被反复使用。</p>
+        <p>上一代 Hyra 1.0 曾驱动开源模型解决加法组合学中悬置五十余年的开放问题，验证了「给 AI 明确评判标准的难题并循环尝试」这条路。Hyra 2.0 在此基础上提出「智能复利」：工具升级带来的收益可以被下游任务反复复用。</p>
+        <p>架构把研究工作拆成三层：Overall 与人类研究者沟通并对齐目标；Mission 长期负责单一研究问题、判断路线取舍；Worker 独立读代码、做实验、分析失败原因，并可以质疑 Mission 的判断。存储也分成三套：项目状态、Agent 分层记忆、共享知识库 Books。项目复盘时，可迁移的方法会被整理成 skill，供后续任务直接调用。</p>
+        <p>官方称，Hyra 2.0 已完成一批工具的研发与升级，相关成果将持续公开在 GitHub 仓库，供社区检验和复用。</p>
+        <p class="why"><b>看点</b>「智能复利」背后是一笔很朴素的账：如果每次研究都从零开始，AI 的产出是线性的；如果工具能沉淀，后面的任务会越来越便宜。Hyra 2.0 把赌注押在后者，代价是把「研究」拆成可管理的三层，并要求人留在 Overall 这一层对齐目标。这也划出了它的边界——需要明确定义、可验证评判标准的问题适合交给它；评价标准本身有争议的开放问题不适合。对腾讯，这是把混元从模型供应商往科研基础设施挪；对读者，判断它成不成立只需要看一件事：Books 里沉下来的 skill，在下一个课题里被复用了多少次。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products-zh" data-c="product">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 21:57</span>
+          <a class="src" href="https://awtmt.com/articles/3785017" target="_blank" rel="noopener noreferrer">华尔街见闻 ↗</a>
+        </div>
+        <h3>DeepSeek 推出「创作者模式」：一句话生成可安装插件，番茄钟 5 分 24 秒装好</h3>
+        <p>11 月 2 日，DeepSeek Harness 团队宣布推出「创作者模式」（Creator Mode）：用户用自然语言描述需求，就能把想法变成可安装、可使用的自定义插件，扩展 Harness 的工具、技能与交互界面。官方口号是「你的 Harness，由你定义」（Your Harness. You Define It）。</p>
+        <p>同时发布 7 组中英文演示提示词，覆盖 3D 地标建筑展厅、Transformer 三维可视化、像素风应用界面、海报设计工作台、视频编辑工作台、论文阅读器、会话统计工具。</p>
+        <p>流程上，用户提出需求后，Harness 会加载 Cordis 插件开发技能、检查运行环境与可用接口、写插件配置与代码、调用插件管理工具安装，再检查插件是否正常运行。官方演示中，一个悬浮式番茄钟从开发到安装验证耗时约 5 分 24 秒。</p>
+        <p>官方在提示词合集里特别说明，部分演示插件经过多轮对话调整，仅凭一条提示词不一定能完全复现视频里的最终效果。背景是 Harness 的插件化架构：这款基于 Cordis 构建的开源智能体框架以「一切皆插件」为理念，目前是开放测试，核心插件与 API 仍在迭代。</p>
+        <p class="why"><b>看点</b>这比「让 AI 写一段代码」往前推了一步：变成让 AI 改写它自己运行的环境。差别在权限——插件能装进来，就能读会话数据、调用工具、长期驻留。番茄钟是最无害的例子；会话统计要读 Token 消耗与成本，论文阅读器要读用户上传的文档，这两类插件一旦由第三方分发，「谁能看到什么」就成了新问题。对 DeepSeek，这一步的战略价值大于功能价值：插件生态是唯一能让智能体框架不被模型能力单点决定的护城河。接下来要看的是插件的签名与权限模型、第三方分发的审核，以及失败插件怎么回滚。演示里的 5 分 24 秒很漂亮，能不能安全地跑 500 天是另一回事。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="https://the-decoder.com/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers/" target="_blank" rel="noopener noreferrer">The Decoder · 据彭博社 ↗</a>
+        </div>
+        <h3>高盛收回交易员与投行家的 AI 编程工具，只留给工程师</h3>
+        <p>据彭博社看到的内部指引，高盛已对大部分员工关闭 Anthropic 的 Claude Code 与微软的 GitHub Copilot 等高级 AI 编程工具，只有工程师可以继续使用。交易员与投行家此前已经用了几个月，用来监控交易流与生成内容；报道称这一回收在公司内部引发了不满。</p>
+        <p>反差在于半年前的表态。7 月，高盛首席信息官马尔科·阿根蒂（Marco Argenti）还公开称赞非技术员工的「氛围编程」：交易员或资管人员有想法，先用 AI 快速搭个原型，再交给工程师做成生产系统。</p>
+        <p>高盛发言人尼克·卡卡特拉（Nick Carcaterra）把原因概括为「生产率与风险管理等多种因素」，并称试验阶段已经结束，工具将只留给「最适合长期使用它们的人」。彭博社的报道没有给出更细的规则，比如哪些岗位保留、数据访问如何分级。</p>
+        <p class="why"><b>看点</b>这是一次权限回收，不是技术失败。编码工具发给交易员，收益是原型速度；成本有两样，一是模型能碰到敏感数据（交易流、客户信息），二是非工程人员写的代码进入生产环境后的责任归属。高盛说「试验阶段结束」，等于承认前一阶段的收益没有大到值得承担后一类成本。更值得注意的是口径——把生产率与风险并列，说明这不是合规部门单方面的决定。对工具厂商，这是一个信号：企业市场的增长不会沿「席位越多越好」走，而会沿「权限分级」走。接下来该看采购结构：按席位卖，还是按受控环境里的调用量卖。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research-zh" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="https://rikiyat.github.io/blog/weight-space-programming/" target="_blank" rel="noopener noreferrer">MIT CSAIL · 研究博客 ↗</a>
+        </div>
+        <h3>MIT 团队让模型直接读写神经网络权重：改 0.016% 的参数，Qwen 数学从 7.9% 升到 48.1%</h3>
+        <p>MIT CSAIL 的 Rikiya Takehi、Jayden Teoh、Alex Zhang 与 Omar Khattab 在 11 月 2 日发布研究，提出「权重空间编程」（Weight-Space Programming）：让通用大模型直接读取和改写神经网络的权重，不经过优化器，也不用梯度下降。</p>
+        <p>读取能力先被验证。把 17253 个权重以文本形式交给 GPT-6 Astra，在不告知候选游戏的情况下，它把四个同结构网络的训练游戏全部说对（Breakout、Pong、Pac-Man、Freeway）。再看中间层：三个 720 万参数的字符级 transformer 被去掉输入输出层，只留四层，Astra 仍能判断训练语料是 Python、罗马字日语还是英语，并准确指出每一个复制头（induction head），没有误报。</p>
+        <p>写入能力更直接。在 Kinetix 的「汽车上坡」任务里，PPO 收敛到局部最优，256 次全部失败；Astra 只改 3.5% 的权重，1024 次全部成功。在 MinAtar 的三个游戏里，它不看数据、不算梯度，一次性写出的网络击败了训练 1 亿步的 PPO，其中 Breakout 得分 517.4，对手是 15.8（训练 5 亿步的 PPO 为 25.3）。</p>
+        <p>真正上到语言模型的是最后一组：面对 Qwen3.5-0.8B 的数学推理「循环」问题，Astra 把故障定位到第 15、19 层 MLP 写出的同一个方向，从每层 64 个输出列里把它减掉——131072 个权重，占 0.016%。在 50 次前向传播的预算下，MATH-500 从 7.9% 升到 48.1%，GSM8K 从 13.8% 升到 67.1%，IFEval 从 21.0% 升到 62.3%，撞到 32768 token 上限的比例从 93% 降到 33%。</p>
+        <p>边界同样清楚。同样的方法用在很少循环的 Gemma 3 270M 上，没有任何一次编辑让 MATH-500 提升超过约 1 分。作者的结论是：编辑权重可以移除遮挡能力的障碍，但加不上模型本来没有的能力。他们还试过只凭权重判断哪个模型被微调成了「谄媚」，四次尝试全部失败。</p>
+        <p class="why"><b>看点</b>这条研究改的是「优化」的入口：过去改行为要靠数据、损失和梯度，现在可以在权重上做定点修改——0.016% 的参数，换来 40 个百分点的 MATH-500。效率的另一面是审计。能被定点修改的行为，也能被定点植入：作者在「下一步」里列的两个用途正好都是安全用途，不跑推理就能发现后门、不收集数据就能遗忘能力——这对防御方是好事，对攻击方同样如此。判断它是否可信，先看两件事：日志能否被第三方复现（作者已放出全部交互记录与改过的 Qwen 权重），以及在大模型上，「改权重」相对「改提示词」的收益差在什么规模上反转。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied-zh" data-c="robot">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 10:23</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6761596.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>智元发布 GO-3 Preview：便利店机器人 5 天把成功率从 28.6% 拉到 85.7%</h3>
+        <p>11 月 2 日，智元推出具身模型 GO-3 Preview，称其在预训练、后训练与部署后三个阶段都实现了规模化学习。模型采用具身原生的 WRAM（World Reasoning Action Model，世界推理动作模型）架构，把任务推理、未来预测与动作生成连接起来。</p>
+        <p>数据分两路：人类第一视角视频提供丰富的物体交互与任务过程，机器人轨迹则建立观测、动作与物理结果之间的对应；后训练阶段使用分布式混合环境系统 Genie Evolver，依托百台真机，并结合物理仿真与世界模型。</p>
+        <p>最有说服力的是部署后的数据：搭载具身 Agent 框架 Genie Master 的精灵 G2 在真实便利店上岗，不依赖人工示范与调试，完整任务成功率从首日 28.6%，5 天后稳定在 85.7%；单任务成功率比常规微调（SFT）高 17.7 个百分点。演示里还包括桌面冰壶（4 小时在线迭代后超过被测人类平均水平）、抽积木塔（连续抽 5 块保持整塔稳定），以及煎饼果子、乐高拼装这类长程精细任务。</p>
+        <p>官方称模型已登顶 RoboDojo、RoboTwin、RoboColiseum 三个评测榜，并将在 2026 年底全面开源。目前是 Preview，权重尚未放出。</p>
+        <p class="why"><b>看点</b>最值得记的不是榜单，而是 28.6% 到 85.7% 这段曲线的时间轴：5 天。它说明「部署后学习」开始进入真实门店，而不只是在仿真里迭代。但三个数字要一起读：85.7% 是完整任务成功率，17.7 个百分点是相对 SFT 的增量，4 小时是冰壶单项的在线迭代——都不是通用能力。分水岭在开源之后：如果权重放开、社区能在别的门店复现 85.7%，零售机器人就从「展示」变成「排班」；复现不了，它仍是一段演示视频。另外，便利店是容错高的场景，失败一次只是拿错一瓶饮料；换成药店或后厨，同样的 14.3% 失败率就是事故。</p>
       </article>
 
     </div>
@@ -280,9 +296,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 1 日 09:20 至 2026 年 11 月 2 日 09:20（北京时间）之间发布的报道，共 8 条。检索时间 11/02 09:30。</p>
+        <p>本期收录 2026 年 11 月 2 日 09:20 至 2026 年 11 月 3 日 09:02（北京时间）之间发布的报道，共 9 条。检索时间 11/03 09:40。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 008 · 24h window · Generated 2026-11-02 09:30</p>
+    <p class="sig">AI Daily · Issue 009 · 24h window · Generated 2026-11-03 09:40</p>
       </div>
     </footer>
       </div>
@@ -295,19 +311,21 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 008</span>
+          <span class="issue-tag">Issue 009</span>
         </div>
-        <h1 class="date">November 2, 2026<span class="weekday">MON</span></h1>
-        <p class="deck">Today’s thread runs through the ledger. Meituan bets 1.6 trillion parameters on long-horizon work, Cisco hands one engineer an unlimited token budget to rewrite 98% of its legacy code,
-      and Delaware proposes a 30-month sandbox for agent-run companies. Meanwhile Hongqi Convenience spent 16 months and ¥2.87 million proving a robot still cannot run a store.
-      <em>Capability keeps moving; someone is starting to sign the bill.</em></p>
-        <div class="metabar"><span class="pill">Issue 008</span>
+        <h1 class="date">November 3, 2026<span class="weekday">TUE</span></h1>
+        <p class="deck">Today the story is the bill. Anthropic&#39;s amended S-1 reports $17 billion of quarterly revenue, a $567 million operating loss
+      and, for the first time, $895.4 billion of purchase and lease commitments. In the same session Marvell agreed to buy Lumentum for $115 billion,
+      Oracle moved to raise $20 billion and Korea lifted its 2027 AI budget to 21.3 trillion won. On the other side of the ledger, Goldman Sachs
+      took coding agents away from its traders while MIT researchers edited model weights directly — no training, 0.016% of the parameters.
+      <em>The bills keep getting longer; the permissions keep getting shorter.</em></p>
+        <div class="metabar"><span class="pill">Issue 009</span>
       <span class="dot"></span>
-      <span>Window Nov 1, 09:20 – Nov 2, 09:20 (UTC+8)</span>
+      <span>Window Nov 2, 09:20 – Nov 3, 09:02 (UTC+8)</span>
       <span class="dot"></span>
-      <span>8 items</span>
+      <span>9 items</span>
       <span class="dot"></span>
-      <span>9 min read</span></div>
+      <span>11 min read</span></div>
       </div>
     </header>
 
@@ -315,11 +333,11 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-en"><span class="n">00</span>At a glance</a>
-        <a href="#models-en"><span class="n">01</span>Models</a>
-        <a href="#products-en"><span class="n">02</span>Products &amp; Agents</a>
-        <a href="#research-en"><span class="n">03</span>Research &amp; Safety</a>
-        <a href="#embodied-en"><span class="n">04</span>Embodied AI</a>
-        <a href="#capital-en"><span class="n">05</span>Industry &amp; Capital</a>
+        <a href="#capital-en"><span class="n">01</span>Industry &amp; Capital</a>
+        <a href="#models-en"><span class="n">02</span>Models</a>
+        <a href="#products-en"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#research-en"><span class="n">04</span>Research &amp; Safety</a>
+        <a href="#embodied-en"><span class="n">05</span>Embodied AI</a>
         </div>
       </div>
     </nav>
@@ -328,147 +346,21 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>Meituan’s LongCat-2.5: 1.6 trillion total parameters, 48 billion active per token.</b> The model is pitched at long-horizon agent tasks, with vision split into multi-level discrete tokens and training tuned for domestic accelerators plus W4A4 inference. The demo and API are live; the weights are still “coming soon”.</p>
+      <p><b>Anthropic&#39;s amended S-1: $17 billion of quarterly revenue, a $567 million operating loss, $895.4 billion of compute commitments.</b> Revenue rose 47% from the second quarter, down from 144% growth in Q2, while compute and infrastructure spending jumped 77% to $9.9 billion. Payments run to 2045, and about $69.8 billion falls due within twelve months.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>Aramco buys 49% of HUMAIN, injecting about SAR 9.9 billion; PIF keeps 51%.</b> The deal mixes AI asset transfers with new capital, giving Aramco an industrial deployment channel while the sovereign fund keeps control. Oil cash is becoming an internal valuation anchor for compute.</p>
+      <p><b>Marvell is buying Lumentum for $115 billion in stock, a 23.9% premium to the pre-report closing price.</b> The equity value is $102.54 billion; Lumentum holders end up with roughly 33% of the combined company. The two stocks fell 2.3% and 6.5% before the open.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>Tsinghua’s Algebraic World Model proves an ARC-AGI-3 level unsolvable — in Lean 4.</b> It clears all 183 levels at 99.9%, using 43% of the human baseline’s actions. The paper is an arXiv preprint and has not been peer-reviewed.</p>
+      <p><b>MIT researchers let a model read and write weights directly: editing 0.016% of parameters lifts Qwen3.5-0.8B from 7.9% to 48.1% on MATH-500.</b> No optimizer, no gradients. The authors also report that the same treatment does nothing for Gemma 3 270M, a model that rarely loops.</p>
     </li>
       </ol>
 
-  <section class="chapter" id="models-en" data-c="model">
-    <div class="chead">
-      <span class="cnum">01</span>
-      <h2>Models</h2>
-      <span class="cen">Models</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/02 09:18</span>
-          <a class="src" href="https://www.ithome.com/1/020/873.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents</h3>
-        <p>Meituan’s LongCat team released LongCat-2.5 on the morning of November 2: a natively multimodal model with 1.6 trillion total parameters and roughly 48 billion activated per token. The company says it builds on LongCat-2.0 with stronger native vision and agentic coding, aimed at long-horizon agent work rather than single-turn chat.</p>
-        <p>Two training changes matter. Long-sequence training now includes more long-horizon trajectories and large-scale long-horizon reinforcement learning, aimed at end-to-end engineering such as working inside a large codebase or building a complete project. The team also turns real agent failures into reproducible, verifiable training tasks, so the data targets known weaknesses. That approach depends on having enough real task traces, not just synthetic data.</p>
-        <p>Multimodality is handled by tokenising vision: visual signals become multi-level discrete tokens so the backbone processes images and text in one format. The company says this makes the model strong at visual coding and supports creative design and 3D work. On infrastructure, it cites long-context training and W4A4 inference on domestic accelerators, plus train/inference numerical consistency and long-context rollout to make large-scale long-horizon RL practical.</p>
-        <p>Two entry points are live: the longcat.chat demo and the API. GitHub and Hugging Face pages still say “coming soon”, so the weights are not actually open yet. Benchmark results are published as images on the release page; the text lists no scores, and no third party has reproduced them.</p>
-        <p class="why"><b>Why it matters</b>A 1.6T/48B split is a sparse-MoE ledger: total parameters buy capacity, active parameters buy inference cost. The real bet is not size but “long-horizon” — longer context, more tool calls, higher failure rates — and W4A4 plus domestic-silicon tuning exist to push down cost per token. Judge it on three things: success on long tasks rather than single-turn scores, the API price, and whether the community can reproduce the results once weights ship. Parameter counts make good launch events; rework rates on long tasks do not.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="products-en" data-c="product">
-    <div class="chead">
-      <span class="cnum">02</span>
-      <h2>Products &amp; Agents</h2>
-      <span class="cen">Products &amp; Agents</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/02 08:17</span>
-          <a class="src" href="https://www.ithome.com/1/020/857.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>Cisco gives one 27-year-old engineer unlimited tokens to rewrite 98% of its legacy code</h3>
-        <p>Fortune reports that Cisco president and chief product officer Jeetu Patel gave 27-year-old engineer Padmanabhan Krishnamurthy a target: rewrite or refactor 98% of the company’s legacy code with AI within 24 months, with an unlimited token budget. “I gave him unlimited tokens because he’s going to refactor the code,” Patel said.</p>
-        <p>Krishnamurthy co-founded the real-time translation startup EzDubs in 2023 and joined Cisco when it acquired the company in 2025. Patel describes him as having been “buried deep in the organisation, doing things that didn’t matter”; the turn came during a visit to Cisco’s San Francisco office, when Krishnamurthy argued that a two-person team could rewrite Cisco’s sprawling legacy code.</p>
-        <p>For now this is a target, not a result. Krishnamurthy has set himself a four-week validation period, and 98% is the 24-month goal. The report does not say how much code has been changed, whether the trial worked, or whether “rewrite” is measured in lines, modules or behavioural compatibility.</p>
-        <p>The cost framing is the interesting part: outsourcing is priced in person-months, this is priced in tokens, with no cap. For a networking company, legacy maintenance has long sat in operations and headcount budgets; moving it to a compute budget turns a fixed cost into a variable one.</p>
-        <p class="why"><b>Why it matters</b>“98% of the code” is an easy number to misread. Legacy code is valuable for behavioural compatibility, not line count: rewriting 98% while breaking one billing or protocol edge case can cost more than the maintenance it saves. The acceptance metrics should be regression pass rate, production incidents and rollbacks, not the share rewritten. Unlimited tokens also move marginal cost from people to compute — a reclassification on the budget sheet, with outsourcing and maintenance down and GPUs and inference up. If the four-week check-in reports only how much was rewritten and not how much broke, the case study is worthless.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/02 08:18</span>
-          <a class="src" href="https://www.ithome.com/1/020/858.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>Delaware proposes a 30-month sandbox for agent-run companies</h3>
-        <p>TechRadar reports that Delaware plans to loosen business regulation to let companies operated by AI agents register. The draft creates a 30-month regulatory sandbox for these “AI companies” (AICs), during which agents make business decisions inside a supervised environment.</p>
-        <p>Liability is the core of the draft. An AIC could be sued like any company and could also bring suits. Supporters say this gives autonomous businesses legal certainty; Andrew Baker, a law professor at the University of California, calls the move a compromise in search of legal certainty.</p>
-        <p>Congress is pushing back. James Comer, chair of the House Oversight Committee, has written to Governor Matt Meyer warning that AICs could shield well-funded AI companies and their investors from liability for reckless and harmful conduct.</p>
-        <p>This is a proposal, not law; sandbox terms, capital requirements and disclosure duties are still undefined. For AI companies, it would give agent-run entities a corporate shell for signing contracts, opening accounts and filing taxes; for regulators, 30 months is a probation period that can be revoked.</p>
-        <p class="why"><b>Why it matters</b>The question is not whether a bot can incorporate but where limited liability stops. Once an AIC is a separate legal person, tort liability stays inside the shell and victims have a harder time reaching the parent; without the shell, every autonomous decision needs a human backstop and the business case collapses. The 30-month sandbox is a revocable trial for liability isolation. Watch three things rather than the registration count: minimum capital, mandatory disclosure of who controls the agent, and whether a court pierces the veil in the first AIC suit.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="research-en" data-c="research">
-    <div class="chead">
-      <span class="cnum">03</span>
-      <h2>Research &amp; Safety</h2>
-      <span class="cen">Research &amp; Safety</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/01 16:02</span>
-          <a class="src" href="https://www.qbitai.com/2026/11/507031.html" target="_blank" rel="noopener noreferrer">QbitAI ↗</a>
-        </div>
-        <h3>Tsinghua’s Algebraic World Model: prove the level is impossible, then finish it</h3>
-        <p>A team led by Andrew Yao and Yang Yuan at Tsinghua University has proposed an “Algebraic World Model” (AWM). The paper is on arXiv (2610.40503) as a preprint and has not been peer-reviewed. The co-first authors are Pan Guancheng of Zhejiang University, who is on leave to research at Tsinghua, and Tan Qixin of Tsinghua’s Yao Class.</p>
-        <p>The method has three steps: explore, by writing observations into executable Python as provisional hypotheses; distil, by testing and revising those hypotheses against new observations into more general objects and rules; and prove, by formalising the rules in Lean 4 as machine-checkable mathematical claims. The team borrows two tools from category theory, projective and inductive limits, to compose and generalise concepts.</p>
-        <p>On ARC-AGI-3, AWM running on Opus 5 cleared all 183 levels with a score of 99.9% and used only 43% of the human baseline’s average number of actions. Given a level altered to be unwinnable, the Opus 5.5 version proved in two attempts that it could not be solved at the current step count, and noted that one more step would make it solvable.</p>
-        <p>The control is more informative. GPT-6 Astra with a provider adapter also scores 99.9%, but it compiles game mechanics into symbolic rules that are essentially Tycho Brahe’s notebook: precise observations without the underlying law. Across 12 impossible-level tests, GPT-6 Astra and Claude Opus 5.5 together recognised “impossible” only 5 times, and 4 of those answers still gave the wrong minimum step count.</p>
-        <p class="why"><b>Why it matters</b>This line of work moves “world model” from predicting the next frame to a system of provable rules. The difference is auditability: a Lean 4 proof can be checked by a machine, so when the model says “impossible” you get either a proof or a visible gap, not a confident sentence. The limits are explicit too — a proof holds only for the world the model observed, and incomplete exploration yields a local truth. ARC-AGI-3 is a closed toy world; moving to open environments requires solving incomplete observation before proof ability. 99.9% is nice; the next metrics are sample efficiency and the cost of proof.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/01 14:11</span>
-          <a class="src" href="https://www.ithome.com/1/020/721.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>Grok starts watermarking generated text on November 7, across every API region</h3>
-        <p>SpaceXAI says it will add an invisible watermark to text generated by Grok starting November 7. A detector reads the signal to decide whether a piece of text carries the mark. The company says the change responds to the European Union’s AI Act.</p>
-        <p>The watermark covers SpaceXAI APIs in every region and seven models: grok-4.7, grok-4.6, grok-4.5, grok-4.3, grok-4.20 reasoning, grok-4.20 non-reasoning and grok-4.20 multi-agent. Team administrators can turn the watermark off for an individual model.</p>
-        <p>The mechanism is worth noting: the mark is not hidden characters or metadata but is woven into the model’s token choices during generation. That leaves visible text unchanged while spending some sampling freedom, and detection requires the corresponding key or model.</p>
-        <p>Andrew Curran, who tracks AI governance, notes that the only major model without a text watermark is now ChatGPT in North America. The EU’s labelling requirement for generated content is moving from advice to default-on.</p>
-        <p class="why"><b>Why it matters</b>A watermark answers “can this text be proven AI-written”, not “should this text be published”. Handing the switch to team administrators pushes the EU’s labelling duty down to enterprise customers: on by default, off if you like, with responsibility transferred. Verification is the bigger issue — if the detector is not public, no third party can check whether a mark exists or was removed. For downstream users, watermarks change the cost of distribution: reposts, rewrites and translations can erode the signal, so the cases that most need labelling become the hardest to identify.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="embodied-en" data-c="robot">
-    <div class="chead">
-      <span class="cnum">04</span>
-      <h2>Embodied AI</h2>
-      <span class="cen">Embodied AI</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/01 15:50</span>
-          <a class="src" href="https://www.qbitai.com/2026/11/506990.html" target="_blank" rel="noopener noreferrer">QbitAI ↗</a>
-        </div>
-        <h3>Hongqi ends its robot convenience store after 16 months and ¥2.87 million</h3>
-        <p>In March 2025, Sichuan convenience-store chain Hongqi announced a joint project with a robotics company to build an unmanned robot sales system. The stock hit its daily limit the next day and was about 35% higher by April 23. In July 2026, Hongqi terminated the project, saying the system had not reached the standard for large-scale commercial deployment, and shifted to 24-hour remote staffing.</p>
-        <p>The risks were spelled out at launch: the arm had a high grab-failure rate with dense shelves and irregular packaging; vision drifted under different lighting; obstacle avoidance had to coexist with stable data transmission. Sixteen months later the prototype never arrived; the termination notice did.</p>
-        <p>The cost was small: Hongqi’s 2025 annual report shows about ¥2.8668 million in R&amp;D spending, and the company had not previously disclosed R&amp;D, so the project’s spend was probably in that range. A person close to Hongqi told QbitAI that chilled glass bottles sweat in summer and the robot kept dropping them, and that complex packaging was also unreliable; aisles are narrow and customers stand nearby, making the real store far messier than the lab.</p>
-        <p>The industry keeps expanding anyway: more than 100 robot retail pods or layouts are running in over 30 Chinese cities. A retail robot sells for nearly ¥700,000, and with the pod, operators estimate close to ¥1 million per unit. A pod carries a few dozen SKUs; a convenience store carries 2,000 to 3,000. Practitioners put the timeline for replacing a store clerk at two to five years.</p>
-        <p class="why"><b>Why it matters</b>The lesson is not that robots cannot work; it is that ¥2.87 million was spent validating a million-yuan store model. The failures are long-tail: condensation, soft packaging, narrow aisles, moving customers. Each is small; together they make grasp reliability unusable. Retail is forgiving and highly visible, which is why it became the robotics companies’ “scenario” rather than the retailer’s “employee” — as one operator put it, the robots need the scenario more than the scenario needs robots. Commercial viability has one threshold: payback within a year, or a robot cheaper than a clerk. Until then, these pods are closer to billboards.</p>
-      </article>
-
-    </div>
-  </section>
-
   <section class="chapter" id="capital-en" data-c="capital">
     <div class="chead">
-      <span class="cnum">05</span>
+      <span class="cnum">01</span>
       <h2>Industry &amp; Capital</h2>
       <span class="cen">Industry &amp; Capital</span>
       <span class="crule"></span>
@@ -477,28 +369,168 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/02 08:44</span>
-          <a class="src" href="https://www.ithome.com/1/020/863.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/03 07:51</span>
+          <a class="src" href="https://m.21jingji.com/article/20261103/herald/50772c170d79b150aefb905b6e992215.html" target="_blank" rel="noopener noreferrer">21st Century Business Herald · Cailian Press ↗</a>
         </div>
-        <h3>Aramco buys 49% of HUMAIN and injects about SAR 9.9 billion</h3>
-        <p>On November 1 local time, HUMAIN, previously wholly owned by Saudi Arabia’s sovereign wealth fund PIF, said Aramco will buy a 49% stake, with PIF keeping the remaining 51%.</p>
-        <p>The consideration is a transfer of key AI assets plus about SAR 9.9 billion (roughly ¥17.55 billion) in new capital. Both shareholders will contribute AI assets, capabilities and people, and jointly oversee HUMAIN’s expansion.</p>
-        <p>Aramco frames the deal around industrial use: it plans to use HUMAIN’s AI infrastructure to turn advanced capabilities into industrial applications and improve its own operations. For HUMAIN, that means a sovereign backer plus a customer with real industrial sites.</p>
-        <p>The 49/51 split matters: control stays with PIF, while Aramco gets economic exposure and a route into industrial deployment. The consideration mixes cash and assets; the asset list and valuation basis were not disclosed.</p>
-        <p class="why"><b>Why it matters</b>This is oil cash providing an internal valuation anchor for compute assets. HUMAIN’s clusters and models need long-term capital, and funding them entirely from PIF would concentrate the sovereign balance sheet; selling 49% to Aramco spreads the AI capex across the oil business and plugs the models into refining and exploration. For Aramco, AI spending moves from cost line to equity stake; for HUMAIN, orders and backing are steadier than a pure fundraising round. The risk is related-party pricing: without disclosure of how assets were valued, utilisation and who absorbs losses, the valuation is an inside number.</p>
+        <h3>Anthropic&#39;s amended S-1: $17 billion of quarterly revenue, a $567 million operating loss and $895.4 billion of compute commitments</h3>
+        <p>On November 2, Anthropic filed an amended S-1 with the U.S. Securities and Exchange Commission, filling in the fiscal third quarter (ended September 30) that the first filing left blank. Revenue was about $17 billion, up roughly 47% from $11.6 billion in the second quarter and more than tenfold from $1.4 billion a year earlier.</p>
+        <p>Profit flipped back into the red. The company posted a $567 million operating loss, one quarter after its first operating profit of $974 million. The cause is compute. Anthropic normally signs 12-to-18-month contracts to reserve capacity; demand in the quarter outran those plans, so it bought $5 billion of short-term compute at prices well above its long-term deals. Compute and infrastructure spending rose 77% from the prior quarter to $9.9 billion, and revenue per dollar of such spending fell from $2.08 to $1.72. Price cuts and contract discounts cost another $600 million of revenue, and a $2 billion non-cash charge tied to an employee donation-matching program pushed adjusted operating profit to about $2.5 billion, with margin down from 19% to 15%.</p>
+        <p>The amendment also discloses the total commitment for the first time: about $895.4 billion of purchase and lease obligations, including contracts signed after September 30, almost all of it for compute and data-center space, with payments stretching to 2045. Roughly $69.8 billion comes due within twelve months — more than a full year of revenue at the third-quarter run rate, and more than half of the $131.8 billion in cash and short-term investments the company held at the end of September.</p>
+        <p>That is not the ceiling. Anthropic plans to buy $125–150 billion of chips from Google and more than $20 billion from AMD; neither is counted yet because the amounts are not fixed, and the company estimates $150–175 billion of such future payments, which would take the total past $1 trillion. The money goes down the supply chain: Broadcom leads with about $161.2 billion of TPU equipment leasing, Google with at least $121.3 billion, SpaceX&#39;s AI unit with a contract capped at $120.5 billion, Amazon with at least $110 billion and Microsoft with $44.9 billion.</p>
+        <p>One more disclosure deserves attention: 5% to 7% of revenue in the first nine months came from customers who violated its usage policies or commercial terms, and the company has been tightening enforcement since August. Growth may take a hit as a result.</p>
+        <p class="why"><b>Why it matters</b>Read growth and commitments on the same page and the $567 million loss is not the story; the duration of the commitments is. A $17 billion quarter annualises to under $70 billion, yet $69.8 billion falls due in twelve months, and the full $895.4 billion is spread to 2045 — two decades of cash flow mortgaged to compute suppliers in advance. The cost lands in order: on shareholders, since IPO pricing must absorb an obligation that sits off the earnings line; on suppliers, whose capacity is locked up and whose bargaining power therefore rises; and on customers, whose prices are set by depreciation. Two numbers decide whether the loop holds: whether gross margin returns to 19%, and how the $69.8 billion due within a year actually gets paid.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/02 07:39</span>
-          <a class="src" href="https://www.ithome.com/1/020/849.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/02 20:52</span>
+          <a class="src" href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/02/marvell-to-buy-lumentum-in-us115-billion-deal-in-ai-data-center-bet/" target="_blank" rel="noopener noreferrer">BNN Bloomberg · Reuters ↗</a>
         </div>
-        <h3>Kioxia sells out 2027 capacity and locks more than half of 2028</h3>
-        <p>Japanese outlet ITmedia reports that on Kioxia’s fiscal-2027 second-quarter earnings call (July to September 2026), executive vice president Yoshihiko Kawamura said the company’s 2027 chip capacity allocation is essentially fully assigned and sold out, with every available unit locked up.</p>
-        <p>Locking the entire following year before it begins is a first for Kioxia. Buyers are already reaching further out: more than 50% of 2028 capacity has firm purchase commitments, and the company has started commercial talks for 2029 and 2030.</p>
-        <p>The financial response is blunt. Kioxia held ¥1.3973 trillion in cash at the end of September (about ¥59.127 billion yuan); apart from a contingency reserve, it plans to put all of it into growth investment. In June it said average annual investment for fiscal 2026-2028 would be about ¥470 billion, roughly ¥1.4 trillion over three years. For fiscal 2026 it is pulling capex forward from fiscal 2027, with spending expected near ¥600 billion.</p>
-        <p>On capacity, Kioxia plans a third fab building at its Kitakami plant in Iwate prefecture, due to come online in fiscal 2029. The first two buildings started production in 2020 and 2025.</p>
-        <p class="why"><b>Why it matters</b>NAND is turning from a cyclical commodity into an allocation. Buyers used to watch spot prices; now they lock volume a year and a half ahead. Volume commitments usually come with price negotiations, but no prices were disclosed, so “sold out” means tight supply, not necessarily higher prices. For buyers, 2027 being sold out means memory costs for AI servers, phones and PCs are unlikely to fall before 2027. For Kioxia, spending ¥1.4 trillion is a bet on 2028 demand; if AI capex slows, the third fab becomes depreciation. Watch the price of 2028 allocations, and whether HBM expansion cannibalises conventional NAND capacity.</p>
+        <h3>Marvell buys Lumentum for $115 billion in stock, a 23.9% premium</h3>
+        <p>On November 2, custom-chip maker Marvell said it would buy optical-components maker Lumentum in a $115 billion all-stock deal including debt, valuing the equity at $102.54 billion. It is one of the largest transactions of 2026 and one of the boldest bets yet on the AI build-out.</p>
+        <p>The terms: $1,132 per Lumentum share, a 23.9% premium to its last unaffected close on October 28, before deal talks surfaced. Lumentum holders receive 4.5 Marvell shares each and will own roughly 33% of the combined company on a fully diluted basis. Both boards approved unanimously; the deal is expected to close in the first half of calendar 2028. Marvell would owe Lumentum $5.8 billion if it walks away, Lumentum would owe $2.9 billion in the mirror case, and Marvell would pay $3.2 billion if regulators block the deal.</p>
+        <p>Investors were unimpressed: Lumentum fell 6.5% and Marvell 2.3% before the open, and both stocks have dropped sharply since talks were first reported. Nvidia, which invested $2 billion in each company earlier this year, declined to comment. Marvell&#39;s market value now exceeds $170 billion, helped by an August agreement to supply chips alongside Google&#39;s AI processors worth up to $120 billion in sales through fiscal 2033 and October guidance of $70–90 billion of fiscal 2031 revenue.</p>
+        <p>Lumentum separately guided second-quarter revenue to $1.58–1.63 billion, above the $1.48 billion analysts expected. CEO Matt Murphy framed the move as an architectural shift: &quot;AI infrastructure is undergoing a fundamental architectural shift toward optical connectivity, creating an opportunity that comes along once in a generation.&quot; Marvell says the combined addressable market reaches $550 billion.</p>
+        <p class="why"><b>Why it matters</b>This is not a purchase of current earnings; it is a purchase of a toll road. As AI clusters grow from hundreds of accelerators to tens of thousands, the bottleneck moves from compute to connection — optics, lasers, optical switching — and both price and volume rise. Marvell&#39;s $550 billion TAM is an admission that it is no longer merely a custom-silicon vendor. The price is 33% of the equity and a $115 billion balance sheet: if AI capex has peaked by the 2028 closing, the money reappears as goodwill and depreciation. The break-up fee structure is telling — a regulatory block costs $3.2 billion, far less than the $5.8 billion for walking away — which says the parties see demand, not antitrust, as the real risk.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03 08:33</span>
+          <a class="src" href="https://www.zhitongcaijing.com/content/detail/1517527.html" target="_blank" rel="noopener noreferrer">Zhitong Finance ↗</a>
+        </div>
+        <h3>Oracle moves to raise $20 billion in stock and bonds; shares fall about 6%</h3>
+        <p>Oracle has disclosed a plan to raise $20 billion through a mix of stock and bonds, money earmarked for AI and cloud infrastructure and for repaying some debt, as it chases $225 billion of sales in fiscal 2030.</p>
+        <p>The bond sale spans six maturities from 2029 to 2046, one floating-rate and five fixed, with coupons and pricing still to be set. The stock fell about 6% on the news and is down 38% this year. Total liabilities stand at $125.34 billion, more than the $67.36 billion of revenue booked in fiscal 2026.</p>
+        <p>Management argues the turn is close. CFO Hilary Maxson expects cash flow to turn positive in the second half of fiscal 2028 — an outlook that lifted the stock about 11% in a single session on October 28. The company has pledged to cap AI-related additional financing at $20 billion through fiscal 2030, expects equipment spending to peak this fiscal year and next, and targets adjusted earnings above $21 a share in fiscal 2030.</p>
+        <p>Proceeds cover equipment, debt repayment, acquisitions, dividends and buybacks. What worries investors is the dependence on OpenAI, which is still losing money, and Oracle&#39;s smaller sales base relative to Microsoft and Amazon.</p>
+        <p class="why"><b>Why it matters</b>This is the template for funding compute with debt: sign the customers, borrow to build the halls, then service the debt out of customer payments. That chain works only while customers pay on schedule and keep scaling; if their own funding slows, Oracle must fill already-broken ground with more expensive money. Half the $20 billion is equity, which puts the valuation on the table too — with the stock down 38% this year, issuing here dilutes far more than it would have a year ago. Watch two things rather than the revenue target: the size of capitalised interest, and how much of the fiscal 2028 cash-flow turn comes from collections.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 09:28</span>
+          <a class="src" href="https://en.sedaily.com/politics/2026/11/02/korea-to-invest-213-trillion-won-in-ai-under-2027-budget" target="_blank" rel="noopener noreferrer">Seoul Economic Daily ↗</a>
+        </div>
+        <h3>Korea lifts its 2027 AI budget to 21.3 trillion won, nearly double this year&#39;s</h3>
+        <p>In a budget address to the National Assembly on November 2, President Lee Jae-myung said his government will pour 21.3 trillion won into three flagship programs — semiconductors, physical AI and AI data centers — nearly double this year&#39;s level.</p>
+        <p>The split is explicit. A dedicated semiconductor account underpins 2 trillion won of capacity expansion, including earlier operation of fabs in the greater Seoul area and a new southwestern cluster, plus 2.1 trillion won for power, water and industrial-park infrastructure. Physical AI gets 500 billion won for field trials across eight sectors including manufacturing, smart factories and defense. Frontier AI receives 4.7 trillion won with the stated goal of pushing homegrown models into the global top tier, alongside public-facing AI agents that walk citizens from information to applications.</p>
+        <p>Research spending reaches a record. The NEXT 10 strategic technology fields get 13.8 trillion won, and the overall R&amp;D budget rises to a record 39.5 trillion won. Renewables take 2.8 trillion won, the electric-vehicle subsidy quota rises to a record 430,000 units, and culture receives 11.6 trillion won.</p>
+        <p>The total budget is 820.9 trillion won, up more than 10% on this year, with the increase carried largely by tax revenue from the semiconductor upcycle. On talent, the plan trains 2,000 specialists for chip design and regional semiconductor industries and extends AI education from students to job seekers and incumbent workers.</p>
+        <p class="why"><b>Why it matters</b>This is a budget that pledges tax receipts from one cycle to fund the next. The 820.9 trillion won total is financed by a chip boom, and 21.3 trillion won of the AI money flows mainly back into fabs, power and data centers — using today&#39;s chip profits to bet on tomorrow&#39;s chip demand. The structure is worth noting: physical AI receives 500 billion won, about 2.4% of the AI envelope, while hardware and capacity take the rest, which implies the government sees the binding constraint as power and production, not algorithms. The test arrives in two years: if memory prices roll over and the tax windfall disappears, what keeps this spending going?</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models-en" data-c="model">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Models</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 21:19</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6762500.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>Tencent Hunyuan ships Hyra 2.0, an AI research system that builds tools instead of solving puzzles</h3>
+        <p>On November 2, Tencent&#39;s Hunyuan team released Hyra 2.0, an AI research system that shifts the emphasis from having an AI attack open scientific problems directly to having general agents build and upgrade the scientific models, workflows and software tools that later research reuses.</p>
+        <p>The previous version set the precedent: Hyra 1.0 drove an open model to solve an open problem in additive combinatorics that had stood for more than fifty years, validating the approach of handing an AI a problem with a clear scoring rule and letting it iterate.</p>
+        <p>The architecture splits research into three tiers. An Overall layer aligns with the human researcher; Mission layers own a single question over time and decide which routes to abandon; Workers read code, run experiments and diagnose failures independently, and are allowed to challenge Mission&#39;s judgement. Storage is likewise separated into project state, tiered agent memory and a shared knowledge base called Books. When a project is reviewed, transferable methods are written up as skills that later tasks can call directly.</p>
+        <p>The company says a batch of tools has already been built and upgraded, and that the results will be published in a GitHub repository for the community to test and reuse.</p>
+        <p class="why"><b>Why it matters</b>&quot;Intelligence compounding&quot; is a plain accounting idea: if every project starts from zero, an AI&#39;s output is linear; if tooling accumulates, later projects get cheaper. Hyra 2.0 bets on the second, at the price of decomposing research into three manageable layers and keeping a human at the Overall layer. That also defines its boundary — problems with clear definitions and verifiable scoring rules suit it; open questions where the scoring rule itself is contested do not. For Tencent, this moves Hunyuan from model vendor toward research infrastructure. For everyone else, one measurement decides whether it works: how often the skills deposited in Books get reused on the next project.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products-en" data-c="product">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 21:57</span>
+          <a class="src" href="https://awtmt.com/articles/3785017" target="_blank" rel="noopener noreferrer">Wallstreetcn ↗</a>
+        </div>
+        <h3>DeepSeek launches Creator Mode: describe a plugin in one sentence, install a pomodoro timer in 5 minutes 24 seconds</h3>
+        <p>On November 2, the DeepSeek Harness team launched Creator Mode, which turns a natural-language description into an installable custom plugin that extends Harness&#39;s tools, skills and interface. The tagline: &quot;Your Harness. You Define It.&quot;</p>
+        <p>Seven bilingual demo prompts shipped alongside it, covering a 3D landmark gallery, an interactive Transformer visualisation, pixel-art app themes, a poster design workbench, a video editor, an academic paper reader and a session-statistics tool.</p>
+        <p>The mechanics: Harness loads its Cordis plugin-development skill, inspects the runtime and available interfaces, writes the configuration and code, installs the plugin through its own plugin manager and then checks that it runs. In the official demo, a floating pomodoro timer went from request to installed-and-verified in about 5 minutes 24 seconds.</p>
+        <p>The team notes that some demo plugins needed several rounds of conversation, so a single prompt may not reproduce the final result shown on video. The context: Harness is an open-source agent framework built on Cordis around the idea that everything is a plugin, available on desktop and web, and still in open beta with core plugins and APIs under active iteration.</p>
+        <p class="why"><b>Why it matters</b>This pushes past &quot;AI writes some code&quot; to &quot;AI rewrites the environment it runs in&quot;. The difference is permission: a plugin that installs can read session data, call tools and stay resident. A pomodoro timer is the harmless end of that spectrum; a session-statistics tool reads token spend and cost, and a paper reader reads whatever the user uploads — once such plugins are distributed by third parties, who can see what becomes a new question. Strategically, the plugin ecosystem matters more to DeepSeek than any single feature: it is the only moat that keeps an agent framework from being decided solely by whoever has the best model. What to watch is the signing and permission model, review for third-party distribution, and how a broken plugin gets rolled back. Five minutes twenty-four seconds is a good demo; running safely for 500 days is a different claim.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="https://the-decoder.com/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers/" target="_blank" rel="noopener noreferrer">The Decoder · citing Bloomberg ↗</a>
+        </div>
+        <h3>Goldman Sachs pulls AI coding tools from traders and bankers, keeps them for engineers</h3>
+        <p>Goldman Sachs has cut most employees off from advanced AI coding tools including Anthropic&#39;s Claude Code and Microsoft&#39;s GitHub Copilot, leaving them to engineers, according to internal guidelines reported by Bloomberg. Traders and bankers had spent months using the tools to monitor trading flows and draft content; the rollback is reportedly unpopular internally.</p>
+        <p>The contrast with earlier messaging is sharp. In July, CIO Marco Argenti publicly praised &quot;vibe coding&quot; by non-technical staff: a trader or asset manager would prototype an idea with AI and hand it to an engineer to harden for production.</p>
+        <p>Spokesperson Nick Carcaterra attributed the change to &quot;a variety of factors including productivity and risk management&quot;, adding that the experimentation phase is over and the tools will go to the people &quot;best suited to leverage them for the long term&quot;. The reporting does not detail which roles keep access or how data access is tiered.</p>
+        <p class="why"><b>Why it matters</b>This is a withdrawal of permissions, not a failure of the technology. Handing coding agents to traders buys prototyping speed and costs two things: models touching sensitive data such as trading flows and client information, and ambiguity over who owns code that non-engineers push into production. Saying the experiment is over is an admission that the first benefit did not justify the second cost. The phrasing matters too — productivity and risk listed side by side suggests this was not a compliance decision alone. For tool vendors the signal is that enterprise growth will follow permission tiers rather than seat counts. Watch the procurement structure next: per seat, or per invocation inside a controlled environment?</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research-en" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="https://rikiyat.github.io/blog/weight-space-programming/" target="_blank" rel="noopener noreferrer">MIT CSAIL · research blog ↗</a>
+        </div>
+        <h3>MIT researchers have models read and write weights directly: 0.016% of parameters takes Qwen&#39;s maths from 7.9% to 48.1%</h3>
+        <p>Rikiya Takehi, Jayden Teoh, Alex Zhang and Omar Khattab of MIT CSAIL published work on November 2 under the name Weight-Space Programming: general-purpose LLMs reading and writing a network&#39;s weights directly, without an optimizer and without gradient descent.</p>
+        <p>Reading comes first. Handed 17,253 weights as text, GPT-6 Astra named the game each of four identically shaped policies had been trained on — Breakout, Pong, Pac-Man and Freeway — without being told the candidates. Strip the input and output layers from three 7.2-million-parameter character transformers and give it only the four middle blocks, and it still identified the training corpus as Python, romaji Japanese or English, and named every induction head with no false positives.</p>
+        <p>Writing is more direct. In a Kinetix car-on-ramp task where PPO settled into a local optimum and failed all 256 evaluation episodes, Astra changed 3.5% of the weights and succeeded in all 1,024. In three MinAtar games it wrote networks from scratch, with no data and no gradients, that beat PPO trained for 100 million steps — a Breakout score of 517.4 against 15.8, where PPO at 500 million steps reaches 25.3.</p>
+        <p>The language-model result is the one that scales. Facing Qwen3.5-0.8B&#39;s tendency to loop in mathematical reasoning, Astra traced the failure to a single direction written by the MLPs in layers 15 and 19 and subtracted it from 64 output columns in each — 131,072 weights, or 0.016%. With a budget of 50 forward passes, MATH-500 rose from 7.9% to 48.1%, GSM8K from 13.8% to 67.1% and IFEval from 21.0% to 62.3%, while the share of answers hitting the 32,768-token limit fell from 93% to 33%.</p>
+        <p>The boundary is explicit. The same method applied to Gemma 3 270M, which rarely loops, produced no edit worth more than about one point on MATH-500. The authors&#39; reading: editing weights can remove an obstacle hiding a capability, but cannot add one the model lacks. They also tried to identify, from weights alone, which of two models had been fine-tuned to be sycophantic; all four attempts failed.</p>
+        <p class="why"><b>Why it matters</b>This moves the entry point to optimisation. Changing behaviour used to require data, a loss and gradients; now it can be a targeted edit — 0.016% of parameters for 40 points of MATH-500. Efficiency has a second face, which is auditability: behaviour that can be edited at a point can also be implanted at a point. Two of the uses the authors list are defensive — finding backdoors without running inference, and unlearning without collecting data — and both work just as well for an attacker. Before trusting the result, check two things: whether the logs reproduce outside the lab (the authors released every interaction and the edited Qwen weights), and, at larger scale, where the return on editing weights stops beating the return on editing prompts.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied-en" data-c="robot">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 10:23</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6761596.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>Agibot&#39;s GO-3 Preview takes a convenience-store robot from 28.6% to 85.7% in five days</h3>
+        <p>On November 2, Agibot introduced GO-3 Preview, an embodied model it says scales learning across pre-training, post-training and post-deployment. The architecture, called WRAM (World Reasoning Action Model), links task reasoning, future prediction and action generation.</p>
+        <p>Training runs on two data streams: first-person human video supplies object interaction and task procedures, while robot trajectories tie observations and actions to physical outcomes. Post-training uses a distributed mixed-environment system called Genie Evolver, built on a hundred real robots plus physics simulation and world models.</p>
+        <p>The strongest numbers come after deployment. A G2 robot running the Genie Master agent framework, placed in a working convenience store without human demonstrations or hand-tuning, went from a 28.6% full-task success rate on day one to a stable 85.7% after five days. Single-task success ran 17.7 percentage points above conventional supervised fine-tuning. Demos include tabletop curling — 4 hours of online iteration beat the measured human average — a 5-block Jenga pull that kept the tower standing, and long-horizon fine manipulation such as jianbing and Lego assembly.</p>
+        <p>Agibot says the model tops three benchmarks — RoboDojo, RoboTwin and RoboColiseum — and will be fully open-sourced by the end of 2026. For now it is a preview; the weights are not out.</p>
+        <p class="why"><b>Why it matters</b>The benchmark rankings are not the interesting part; the timeline is. 28.6% to 85.7% in five days means post-deployment learning has moved into a real store rather than iterating inside a simulator. Three numbers have to be read together, though: 85.7% is full-task success, 17.7 points is a gain over fine-tuning, and 4 hours applies to one curling task — none of them is general capability. The divide comes after open-sourcing: if the community reproduces 85.7% in other stores, retail robots move from demonstration to shift scheduling; if not, this remains a video. Store work is also forgiving — a failure means handing over the wrong drink — whereas the same 14.3% failure rate in a pharmacy or a kitchen is an incident.</p>
       </article>
 
     </div>
@@ -507,9 +539,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between 09:20 on November 1 and 09:20 on November 2, 2026 (UTC+8): 8 items. Compiled at 09:30 on November 2.</p>
+        <p>This issue covers reports published between 09:20 on November 2 and 09:02 on November 3, 2026 (UTC+8): 9 items. Compiled at 09:40 on November 3.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 008 · 24h window · Generated 2026-11-02 09:30</p>
+    <p class="sig">AI Daily · Issue 009 · 24h window · Generated 2026-11-03 09:40</p>
       </div>
     </footer>
       </div>
@@ -534,8 +566,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">02</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-02.html" title="美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体">
+        <summary><span>2026 年 11 月</span><span class="am-count">03</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-03.html" title="Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元">
+          <span class="a-date">2026.11.03 <em>TUE</em></span>
+          <span class="a-head">Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-02.html" title="美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体">
           <span class="a-date">2026.11.02 <em>MON</em></span>
           <span class="a-head">美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体</span>
         </a>
@@ -576,8 +612,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">02</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-02-en.html" title="Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents">
+        <summary><span>November 2026</span><span class="am-count">03</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-03-en.html" title="Anthropic&#39;s amended S-1: $17 billion of quarterly revenue, a $567 million operating loss and $895.4 billion of compute commitments">
+          <span class="a-date">2026.11.03 <em>TUE</em></span>
+          <span class="a-head">Anthropic&#39;s amended S-1: $17 billion of quarterly revenue, a $567 million operating loss and $895.4 billion of compute commitments</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-02-en.html" title="Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents">
           <span class="a-date">2026.11.02 <em>MON</em></span>
           <span class="a-head">Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents</span>
         </a>

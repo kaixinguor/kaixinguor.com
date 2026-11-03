@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 3 日</title>
+<meta name="description" content="2026-11-03 AI 日报：Anthropic 修订招股书，三季度营收 170 亿美元、算力承诺 8954 亿美元；Marvell 以 1150 亿美元收购 Lumentum；甲骨文启动 200 亿美元融资；韩国 2027 年 AI 预算提到 21.3 万亿韩元；腾讯混元发布 Hyra 2.0；DeepSeek 推出创作者模式；高盛收回交易员的 AI 编程工具；MIT 让模型直接改写权重；智元 GO-3 便利店成功率 5 天到 85.7%。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 3 日">
+<meta property="og:description" content="2026-11-03 AI 日报：Anthropic 修订招股书，三季度营收 170 亿美元、算力承诺 8954 亿美元；Marvell 以 1150 亿美元收购 Lumentum；甲骨文启动 200 亿美元融资；韩国 2027 年 AI 预算提到 21.3 万亿韩元；腾讯混元发布 Hyra 2.0；DeepSeek 推出创作者模式；高盛收回交易员的 AI 编程工具；MIT 让模型直接改写权重；智元 GO-3 便利店成功率 5 天到 85.7%。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-03.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-02T09:20:00+08:00/2026-11-03T09:02:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-03.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-03.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-03-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-03-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 009 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 3 日<span class="weekday">TUE</span></h1>
+    <p class="deck">今天的主线是账单。Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，
+      同时首次披露 8954 亿美元算力承诺。同一天，Marvell 以 1150 亿美元买下 Lumentum，甲骨文再融 200 亿美元，
+      韩国把 2027 年 AI 预算提到 21.3 万亿韩元。另一端，高盛把 Claude Code 从交易员手里收回，
+      MIT 的团队直接改写权重——不训练，只动 0.016% 的参数。
+      <em>算力账单越写越长，工具权限越收越紧。</em></p>
+    <div class="metabar"><span class="pill">第 009 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/02 09:20 – 11/03 09:02</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 11 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#capital"><span class="n">01</span>行业与资本</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#products"><span class="n">03</span>产品与智能体</a>
+        <a href="#research"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied"><span class="n">05</span>具身智能</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元。</b>营收环比增 47%，增速从二季度的 144% 明显放缓；算力与基础设施支出环比增 77% 至 99 亿美元。承诺付款排到 2045 年，其中约 698 亿美元 12 个月内到期。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Marvell 以 1150 亿美元全股票收购 Lumentum，较并购消息前溢价 23.9%。</b>交易股权价值 1025.4 亿美元，Lumentum 股东换股后持有合并公司约 33%；两家股价盘前分别跌 2.3% 和 6.5%。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>MIT 团队让模型直接读写权重：只改 0.016% 的参数，Qwen3.5-0.8B 的 MATH-500 从 7.9% 升到 48.1%。</b>方法不经过优化器与梯度下降；作者同时承认，在很少出现循环的 Gemma 3 270M 上，同样的编辑提不动分数。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03 07:51</span>
+          <a class="src" href="https://m.21jingji.com/article/20261103/herald/50772c170d79b150aefb905b6e992215.html" target="_blank" rel="noopener noreferrer">21 财经 · 财联社 ↗</a>
+        </div>
+        <h3>Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元</h3>
+        <p>当地时间 11 月 2 日，Anthropic 向美国证券交易委员会提交招股书修订稿，补上了首版里空缺的 2026 财年第三财季（截至 9 月 30 日）数据：营收约 170 亿美元，较二季度的 116 亿美元增长约 47%，较去年同期的 14 亿美元增长逾 10 倍。</p>
+        <p>利润端重新转负。三季度经营亏损 5.67 亿美元，而二季度刚刚首次实现经营盈利 9.74 亿美元。直接原因是算力成本：公司通常提前 12 至 18 个月签长期合同预订算力，三季度需求超出预期，只好临时加购 50 亿美元短期算力，价格明显高于长约。当季算力与基础设施支出环比增 77% 至 99 亿美元，每 1 美元算力与基础设施投入带来的收入从二季度的 2.08 美元降到 1.72 美元。新模型降价与合同折扣又让收入少了约 6 亿美元；另有与员工捐赠配捐计划相关的 20 亿美元非现金费用，剔除后调整后经营利润约 25 亿美元，利润率从 19% 降到 15%。</p>
+        <p>修订稿首次给出承诺支出总额：计入 9 月 30 日之后新签的合同，采购与租赁承诺约 8954 亿美元，几乎全部用于购买算力、租用数据中心，付款期一直排到 2045 年。其中未来 12 个月内到期约 698 亿美元——超过按三季度营收折算的全年收入，也相当于其 9 月末约 1318 亿美元现金及短期投资的一半以上。</p>
+        <p>这还不是全部。Anthropic 还计划向谷歌采购 1250 亿至 1500 亿美元的芯片，并在 AMD 上花费超过 200 亿美元，这两笔因未约定固定金额暂未计入；公司估算此类合同未来约需支付 1500 亿至 1750 亿美元，计入后账单总额超过 1 万亿美元。钱流向链条上的各个环节：博通以约 1612 亿美元的 TPU 设备租赁居首，谷歌不低于 1213 亿美元，SpaceX 的 AI 部门合同上限 1205 亿美元，亚马逊不低于 1100 亿美元，微软 449 亿美元。</p>
+        <p>另有一处风险提示：今年前九个月有 5% 至 7% 的收入来自违反其使用政策或商业条款的客户，公司自 8 月起加大了对违规使用的整治力度，未来收入增速可能因此承压。</p>
+        <p class="why"><b>看点</b>把增长和承诺放在同一页上看，问题不在亏损的 5.67 亿美元，而在承诺的久期。季度收入 170 亿美元、年化不到 700 亿，12 个月内到期的承诺就有 698 亿，几乎等于一整年的收入；而 8954 亿美元摊到 2045 年，等于把未来二十年的现金流提前抵押给算力供应商。成本会按顺序落在三拨人身上：先是股东，IPO 定价要消化这笔表外负担；再是供应商，产能被长约锁定，议价权上移；最后是客户，价格由折旧决定。要判断这个循环能不能立住，看两个指标就够了——毛利率能否回到 19%，以及 12 个月内那 698 亿美元，靠什么付。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 20:52</span>
+          <a class="src" href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/02/marvell-to-buy-lumentum-in-us115-billion-deal-in-ai-data-center-bet/" target="_blank" rel="noopener noreferrer">BNN Bloomberg · 路透社 ↗</a>
+        </div>
+        <h3>Marvell 以 1150 亿美元全股票收购 Lumentum，较并购消息前溢价 23.9%</h3>
+        <p>11 月 2 日，定制芯片商 Marvell 宣布收购光器件厂商 Lumentum，交易总额 1150 亿美元（含债务，全股票），股权价值 1025.4 亿美元。这是 2026 年最大的并购之一，也是芯片业对 AI 基建最激进的一次下注。</p>
+        <p>对价结构：每股 1132 美元，较 10 月 28 日（并购谈判曝光前）的收盘价溢价 23.9%；Lumentum 股东每股换 4.5 股 Marvell，交割后持有合并公司约 33% 的股权（完全稀释口径）。双方董事会一致通过，预计 2028 年上半年完成交割。若 Marvell 放弃交易或转投其他收购要约，需向 Lumentum 支付 58 亿美元分手费；反向违约 Lumentum 付 29 亿美元；若监管否决，Marvell 付 32 亿美元。</p>
+        <p>市场并不买账：消息公布后 Lumentum 盘前跌 6.5%，Marvell 跌 2.3%，两家股价自谈判曝光以来都已明显回落。英伟达今年早些时候分别向两家公司各投 20 亿美元，未对交易置评。Marvell 市值已超 1700 亿美元，8 月刚拿下为谷歌 AI 芯片配套、到 2033 财年最多 1200 亿美元销售额的订单，并在 10 月投资者日给出 2031 财年 700 亿至 900 亿美元的营收指引。</p>
+        <p>Lumentum 同时给出二季度营收指引 15.8 亿至 16.3 亿美元，高于分析师平均预期的 14.8 亿美元。Marvell CEO 墨菲（Matt Murphy）称，AI 基础设施正在向光互连做架构迁移，「这是一代人只有一次的机会」；交易把合并公司的可服务市场抬到 5500 亿美元。</p>
+        <p class="why"><b>看点</b>这笔交易买的不是当下的利润，是光互连的过路费。AI 集群从几百张卡扩到几万张卡，瓶颈从算力转向连接——光模块、激光器、光交换，单价与用量一起涨。Marvell 把 TAM 抬到 5500 亿美元，等于承认自己不再只是定制芯片商。代价是 33% 的股权和一张 1150 亿美元的资产表：如果 2028 年交割时 AI 资本开支已经见顶，这笔钱会以商誉和折旧的形式留在报表上。分手费结构很能说明问题——监管否决只赔 32 亿美元，远低于主动放弃的 58 亿，双方认定真正的风险不是反垄断，是需求。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/03 08:33</span>
+          <a class="src" href="https://www.zhitongcaijing.com/content/detail/1517527.html" target="_blank" rel="noopener noreferrer">智通财经 ↗</a>
+        </div>
+        <h3>甲骨文启动 200 亿美元股票与债券发行，股价跌约 6%，年内累跌 38%</h3>
+        <p>甲骨文正式披露融资计划：通过发行股票与债券合计筹集 200 亿美元，用于 AI 与云基础设施建设并偿还部分债务，支撑其到 2030 财年把销售额做到 2250 亿美元的目标。</p>
+        <p>债券分 6 个期限，从 2029 年到 2046 年，其中 1 只为浮动利率、5 只为固定利率，利率与发行价待定。消息公布后股价下跌约 6%，今年以来累计跌幅已达 38%。公司负债总额 1253.4 亿美元，超过其 2026 财年 673.6 亿美元的销售额。</p>
+        <p>管理层的说法是转折在望：CFO 希拉里·麦克森（Hilary Maxson）预计现金流将在 2028 财年下半年转正；上月 28 日，这一预期曾让股价单日上涨约 11%。公司承诺在 2030 财年前把 AI 相关的额外融资控制在 200 亿美元以内，设备投资在本财年与下一财年见顶，2030 财年调整后每股收益目标超过 21 美元。</p>
+        <p>资金用途涵盖设备投资、债务偿还、并购、分红与股票回购。投资者焦虑的核心是对仍处亏损的 OpenAI 业务的高度依赖，以及相对微软、亚马逊在销售体量上的劣势。</p>
+        <p class="why"><b>看点</b>这是用债养算力的典型样本：先签客户，再发债建机房，最后用客户的付款还债。链条成立的前提是客户按时付款且规模继续扩大；一旦客户自己的融资节奏放慢，甲骨文就要用更贵的钱去填已经开工的工地。200 亿美元里有一半是股票，等于把估值也押进去——股价年内已跌 38%，这个位置发股票，稀释比一年前贵得多。接下来该看的不是营收指引，是两件事：资本化利息的规模，以及 2028 财年现金流转正里，有多少来自应收回款。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 09:28</span>
+          <a class="src" href="https://en.sedaily.com/politics/2026/11/02/korea-to-invest-213-trillion-won-in-ai-under-2027-budget" target="_blank" rel="noopener noreferrer">Seoul Economic Daily ↗</a>
+        </div>
+        <h3>韩国 2027 年 AI 预算提到 21.3 万亿韩元，接近今年的两倍</h3>
+        <p>11 月 2 日，韩国总统李在明在国会发表 2027 年度预算施政演说：政府将向半导体、物理 AI（具身智能）与 AI 数据中心三大项目投入 21.3 万亿韩元，接近今年水平的两倍。</p>
+        <p>三大项目内部的分法很清楚。半导体先设专项账户作为稳定投资基础，投 2 万亿韩元扩产，包括首都圈晶圆厂提前投产与西南产业集群建设，另投 2.1 万亿韩元做电力、用水与产业园基础设施；物理 AI 拿 5000 亿韩元，在制造、智能工厂、国防等 8 个领域做现场验证；前沿 AI 4.7 万亿韩元，目标是让国产模型进入全球第一梯队，同时启动面向公众的 AI 智能体服务。</p>
+        <p>研发侧创下纪录：下一代增长引擎「NEXT 10」战略技术投 13.8 万亿韩元，研发总预算提高到 39.5 万亿韩元。能源转型投 2.8 万亿韩元，电动车购置补贴名额提高到 43 万辆；文化产业 11.6 万亿韩元。</p>
+        <p>总预算 820.9 万亿韩元，同比增长逾 10%，增量主要来自半导体景气带来的税收。人才方面计划培养 2000 名芯片设计与地方半导体产业专家，并把 AI 教育铺到学生、求职者与在职人员各个阶段。</p>
+        <p class="why"><b>看点</b>这是一份把税收押在周期上的预算。820.9 万亿韩元的盘子，增量来自半导体景气；而 21.3 万亿韩元的 AI 支出，又主要补给晶圆厂、电力与数据中心——等于用芯片的当期利润，去赌下一轮芯片需求。值得注意的结构是物理 AI 只占 5000 亿韩元，约为 AI 总盘子的 2.4%，硬件与产能拿走了绝大部分，说明政府判断瓶颈在电力和产能，不在算法。真正的考验在两年后：如果存储价格回落、税收增量消失，这笔支出要靠什么续上。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 21:19</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6762500.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>腾讯混元发布 Hyra 2.0：AI 科研从「解题」转向「造工具」</h3>
+        <p>11 月 2 日，腾讯混元发布 AI 科研系统 Hyra 2.0，把研发重点从「直接用 AI 攻克科学难题」转向「让通用 Agent 参与科学模型、研究工作流与软件工具的研发与升级」，让一次研发的成果在后续研究里被反复使用。</p>
+        <p>上一代 Hyra 1.0 曾驱动开源模型解决加法组合学中悬置五十余年的开放问题，验证了「给 AI 明确评判标准的难题并循环尝试」这条路。Hyra 2.0 在此基础上提出「智能复利」：工具升级带来的收益可以被下游任务反复复用。</p>
+        <p>架构把研究工作拆成三层：Overall 与人类研究者沟通并对齐目标；Mission 长期负责单一研究问题、判断路线取舍；Worker 独立读代码、做实验、分析失败原因，并可以质疑 Mission 的判断。存储也分成三套：项目状态、Agent 分层记忆、共享知识库 Books。项目复盘时，可迁移的方法会被整理成 skill，供后续任务直接调用。</p>
+        <p>官方称，Hyra 2.0 已完成一批工具的研发与升级，相关成果将持续公开在 GitHub 仓库，供社区检验和复用。</p>
+        <p class="why"><b>看点</b>「智能复利」背后是一笔很朴素的账：如果每次研究都从零开始，AI 的产出是线性的；如果工具能沉淀，后面的任务会越来越便宜。Hyra 2.0 把赌注押在后者，代价是把「研究」拆成可管理的三层，并要求人留在 Overall 这一层对齐目标。这也划出了它的边界——需要明确定义、可验证评判标准的问题适合交给它；评价标准本身有争议的开放问题不适合。对腾讯，这是把混元从模型供应商往科研基础设施挪；对读者，判断它成不成立只需要看一件事：Books 里沉下来的 skill，在下一个课题里被复用了多少次。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 21:57</span>
+          <a class="src" href="https://awtmt.com/articles/3785017" target="_blank" rel="noopener noreferrer">华尔街见闻 ↗</a>
+        </div>
+        <h3>DeepSeek 推出「创作者模式」：一句话生成可安装插件，番茄钟 5 分 24 秒装好</h3>
+        <p>11 月 2 日，DeepSeek Harness 团队宣布推出「创作者模式」（Creator Mode）：用户用自然语言描述需求，就能把想法变成可安装、可使用的自定义插件，扩展 Harness 的工具、技能与交互界面。官方口号是「你的 Harness，由你定义」（Your Harness. You Define It）。</p>
+        <p>同时发布 7 组中英文演示提示词，覆盖 3D 地标建筑展厅、Transformer 三维可视化、像素风应用界面、海报设计工作台、视频编辑工作台、论文阅读器、会话统计工具。</p>
+        <p>流程上，用户提出需求后，Harness 会加载 Cordis 插件开发技能、检查运行环境与可用接口、写插件配置与代码、调用插件管理工具安装，再检查插件是否正常运行。官方演示中，一个悬浮式番茄钟从开发到安装验证耗时约 5 分 24 秒。</p>
+        <p>官方在提示词合集里特别说明，部分演示插件经过多轮对话调整，仅凭一条提示词不一定能完全复现视频里的最终效果。背景是 Harness 的插件化架构：这款基于 Cordis 构建的开源智能体框架以「一切皆插件」为理念，目前是开放测试，核心插件与 API 仍在迭代。</p>
+        <p class="why"><b>看点</b>这比「让 AI 写一段代码」往前推了一步：变成让 AI 改写它自己运行的环境。差别在权限——插件能装进来，就能读会话数据、调用工具、长期驻留。番茄钟是最无害的例子；会话统计要读 Token 消耗与成本，论文阅读器要读用户上传的文档，这两类插件一旦由第三方分发，「谁能看到什么」就成了新问题。对 DeepSeek，这一步的战略价值大于功能价值：插件生态是唯一能让智能体框架不被模型能力单点决定的护城河。接下来要看的是插件的签名与权限模型、第三方分发的审核，以及失败插件怎么回滚。演示里的 5 分 24 秒很漂亮，能不能安全地跑 500 天是另一回事。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="https://the-decoder.com/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers/" target="_blank" rel="noopener noreferrer">The Decoder · 据彭博社 ↗</a>
+        </div>
+        <h3>高盛收回交易员与投行家的 AI 编程工具，只留给工程师</h3>
+        <p>据彭博社看到的内部指引，高盛已对大部分员工关闭 Anthropic 的 Claude Code 与微软的 GitHub Copilot 等高级 AI 编程工具，只有工程师可以继续使用。交易员与投行家此前已经用了几个月，用来监控交易流与生成内容；报道称这一回收在公司内部引发了不满。</p>
+        <p>反差在于半年前的表态。7 月，高盛首席信息官马尔科·阿根蒂（Marco Argenti）还公开称赞非技术员工的「氛围编程」：交易员或资管人员有想法，先用 AI 快速搭个原型，再交给工程师做成生产系统。</p>
+        <p>高盛发言人尼克·卡卡特拉（Nick Carcaterra）把原因概括为「生产率与风险管理等多种因素」，并称试验阶段已经结束，工具将只留给「最适合长期使用它们的人」。彭博社的报道没有给出更细的规则，比如哪些岗位保留、数据访问如何分级。</p>
+        <p class="why"><b>看点</b>这是一次权限回收，不是技术失败。编码工具发给交易员，收益是原型速度；成本有两样，一是模型能碰到敏感数据（交易流、客户信息），二是非工程人员写的代码进入生产环境后的责任归属。高盛说「试验阶段结束」，等于承认前一阶段的收益没有大到值得承担后一类成本。更值得注意的是口径——把生产率与风险并列，说明这不是合规部门单方面的决定。对工具厂商，这是一个信号：企业市场的增长不会沿「席位越多越好」走，而会沿「权限分级」走。接下来该看采购结构：按席位卖，还是按受控环境里的调用量卖。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02</span>
+          <a class="src" href="https://rikiyat.github.io/blog/weight-space-programming/" target="_blank" rel="noopener noreferrer">MIT CSAIL · 研究博客 ↗</a>
+        </div>
+        <h3>MIT 团队让模型直接读写神经网络权重：改 0.016% 的参数，Qwen 数学从 7.9% 升到 48.1%</h3>
+        <p>MIT CSAIL 的 Rikiya Takehi、Jayden Teoh、Alex Zhang 与 Omar Khattab 在 11 月 2 日发布研究，提出「权重空间编程」（Weight-Space Programming）：让通用大模型直接读取和改写神经网络的权重，不经过优化器，也不用梯度下降。</p>
+        <p>读取能力先被验证。把 17253 个权重以文本形式交给 GPT-6 Astra，在不告知候选游戏的情况下，它把四个同结构网络的训练游戏全部说对（Breakout、Pong、Pac-Man、Freeway）。再看中间层：三个 720 万参数的字符级 transformer 被去掉输入输出层，只留四层，Astra 仍能判断训练语料是 Python、罗马字日语还是英语，并准确指出每一个复制头（induction head），没有误报。</p>
+        <p>写入能力更直接。在 Kinetix 的「汽车上坡」任务里，PPO 收敛到局部最优，256 次全部失败；Astra 只改 3.5% 的权重，1024 次全部成功。在 MinAtar 的三个游戏里，它不看数据、不算梯度，一次性写出的网络击败了训练 1 亿步的 PPO，其中 Breakout 得分 517.4，对手是 15.8（训练 5 亿步的 PPO 为 25.3）。</p>
+        <p>真正上到语言模型的是最后一组：面对 Qwen3.5-0.8B 的数学推理「循环」问题，Astra 把故障定位到第 15、19 层 MLP 写出的同一个方向，从每层 64 个输出列里把它减掉——131072 个权重，占 0.016%。在 50 次前向传播的预算下，MATH-500 从 7.9% 升到 48.1%，GSM8K 从 13.8% 升到 67.1%，IFEval 从 21.0% 升到 62.3%，撞到 32768 token 上限的比例从 93% 降到 33%。</p>
+        <p>边界同样清楚。同样的方法用在很少循环的 Gemma 3 270M 上，没有任何一次编辑让 MATH-500 提升超过约 1 分。作者的结论是：编辑权重可以移除遮挡能力的障碍，但加不上模型本来没有的能力。他们还试过只凭权重判断哪个模型被微调成了「谄媚」，四次尝试全部失败。</p>
+        <p class="why"><b>看点</b>这条研究改的是「优化」的入口：过去改行为要靠数据、损失和梯度，现在可以在权重上做定点修改——0.016% 的参数，换来 40 个百分点的 MATH-500。效率的另一面是审计。能被定点修改的行为，也能被定点植入：作者在「下一步」里列的两个用途正好都是安全用途，不跑推理就能发现后门、不收集数据就能遗忘能力——这对防御方是好事，对攻击方同样如此。判断它是否可信，先看两件事：日志能否被第三方复现（作者已放出全部交互记录与改过的 Qwen 权重），以及在大模型上，「改权重」相对「改提示词」的收益差在什么规模上反转。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/02 10:23</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6761596.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>智元发布 GO-3 Preview：便利店机器人 5 天把成功率从 28.6% 拉到 85.7%</h3>
+        <p>11 月 2 日，智元推出具身模型 GO-3 Preview，称其在预训练、后训练与部署后三个阶段都实现了规模化学习。模型采用具身原生的 WRAM（World Reasoning Action Model，世界推理动作模型）架构，把任务推理、未来预测与动作生成连接起来。</p>
+        <p>数据分两路：人类第一视角视频提供丰富的物体交互与任务过程，机器人轨迹则建立观测、动作与物理结果之间的对应；后训练阶段使用分布式混合环境系统 Genie Evolver，依托百台真机，并结合物理仿真与世界模型。</p>
+        <p>最有说服力的是部署后的数据：搭载具身 Agent 框架 Genie Master 的精灵 G2 在真实便利店上岗，不依赖人工示范与调试，完整任务成功率从首日 28.6%，5 天后稳定在 85.7%；单任务成功率比常规微调（SFT）高 17.7 个百分点。演示里还包括桌面冰壶（4 小时在线迭代后超过被测人类平均水平）、抽积木塔（连续抽 5 块保持整塔稳定），以及煎饼果子、乐高拼装这类长程精细任务。</p>
+        <p>官方称模型已登顶 RoboDojo、RoboTwin、RoboColiseum 三个评测榜，并将在 2026 年底全面开源。目前是 Preview，权重尚未放出。</p>
+        <p class="why"><b>看点</b>最值得记的不是榜单，而是 28.6% 到 85.7% 这段曲线的时间轴：5 天。它说明「部署后学习」开始进入真实门店，而不只是在仿真里迭代。但三个数字要一起读：85.7% 是完整任务成功率，17.7 个百分点是相对 SFT 的增量，4 小时是冰壶单项的在线迭代——都不是通用能力。分水岭在开源之后：如果权重放开、社区能在别的门店复现 85.7%，零售机器人就从「展示」变成「排班」；复现不了，它仍是一段演示视频。另外，便利店是容错高的场景，失败一次只是拿错一瓶饮料；换成药店或后厨，同样的 14.3% 失败率就是事故。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 2 日 09:20 至 2026 年 11 月 3 日 09:02（北京时间）之间发布的报道，共 9 条。检索时间 11/03 09:40。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 009 · 24h window · Generated 2026-11-03 09:40</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 02 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 3 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-03.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-03.html</guid>
+      <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是账单。Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元， 同时首次披露 8954 亿美元算力承诺。同一天，Marvell 以 1150 亿美元买下 Lumentum，甲骨文再融 200 亿美元， 韩国把 2027 年 AI 预算提到 21.3 万亿韩元。另一端，高盛把 Claude Code 从交易员手里收回， MIT 的团队直接改写权重——不训练，只动 0.016% 的参数。 算力账单越写越长，工具权限越收越紧。 Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 2 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-02.html</link>

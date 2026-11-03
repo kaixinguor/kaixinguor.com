@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 02 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 3, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-03-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-03-en.html</guid>
+      <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today the story is the bill. Anthropic&#39;s amended S-1 reports $17 billion of quarterly revenue, a $567 million operating loss and, for the first time, $895.4 billion of purchase and lease commitments. In the same session Marvell agreed to buy Lumentum for $115 billion, Oracle moved to raise $20 billion and Korea lifted its 2027 AI budget to 21.3 trillion won. On the other side of the ledger, Goldman Sachs took coding agents away from its traders while MIT researchers edited model weights directly — no training, 0.016% of the parameters. The bills keep getting longer; the permissions keep getting shorter. Anthropic&#39;s amended S-1: $17 billion of quarterly revenue, a $567 million operating loss and $895.4 billion of compute commitments</description>
+    </item>
     <item>
       <title>AI Daily · November 2, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-02-en.html</link>
