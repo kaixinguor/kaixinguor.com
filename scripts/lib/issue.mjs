@@ -488,6 +488,21 @@ export const SECTIONS = {
     titleEn: "Economic Daily · kaixinguor",
     descZh: "经济日报：央行与利率、增长与结构、产业与公司，每天更新。",
     descEn: "An economy daily: central banks, growth and the companies that book the profit."
+  },
+  education: {
+    dir: "daily-education",
+    label: "Education Daily",
+    kickerZh: "教育日报",
+    kickerEn: "EDUCATION DAILY",
+    subtitle: "Daily Education Brief",
+    footZh: "教育日报 · 每天更新",
+    footEn: "Education Daily · updated whenever there is news",
+    feedZh: "feed-education.xml",
+    feedEn: "feed-education-en.xml",
+    titleZh: "教育日报 · kaixinguor",
+    titleEn: "Education Daily · kaixinguor",
+    descZh: "教育日报：政策与监管、职教与就业、技术与产品、行业与资本，每天更新。",
+    descEn: "An education daily: policy, vocational training, classroom technology and the business of learning."
   }
 };
 
@@ -496,6 +511,7 @@ const LOCALES = {
     htmlLang: "zh-CN",
     navAi: "AI 日报",
     navEcon: "经济日报",
+    navEdu: "教育日报",
     navDaily: "日报",
     navTools: "工具",
     navWish: "许愿",
@@ -524,6 +540,7 @@ const LOCALES = {
     htmlLang: "en",
     navAi: "AI Daily",
     navEcon: "Economic Daily",
+    navEdu: "Education Daily",
     navDaily: "Daily",
     navTools: "Tools",
     navWish: "Wish",
@@ -599,6 +616,7 @@ export function renderIssuePage(issue, opts = {}) {
     RSS_HREF: lang === "en" ? `../${sec.feedEn}` : `../${sec.feedZh}`,
     NAV_AI: loc.navAi,
     NAV_ECON: loc.navEcon,
+    NAV_EDU: loc.navEdu,
     NAV_DAILY: loc.navDaily,
     NAV_TOOLS: loc.navTools,
     NAV_WISH: loc.navWish,
@@ -608,6 +626,7 @@ export function renderIssuePage(issue, opts = {}) {
     KICKER_EN: sec.subtitle,
     CUR_AI: section === "ai" ? ' aria-current="page"' : "",
     CUR_ECON: section === "economy" ? ' aria-current="page"' : "",
+    CUR_EDU: section === "education" ? ' aria-current="page"' : "",
     TOC_LABEL: loc.tocLabel,
     ISSUE_LABEL: escapeHtml(issue.issueLabel),
     DATE_DISPLAY: escapeHtml(issue.dateDisplay),
@@ -755,10 +774,12 @@ ${items}
 export function renderSitemap(issues, opts = {}) {
   const siteUrl = opts.siteUrl || "https://kaixinguor.com";
   const economy = opts.economy || [];
+  const education = opts.education || [];
   const latest = issues[0] ? issues[0].dateISO : "2026-10-26";
   const staticPages = [
     ["/", "1.0", latest],
     ["/economy.html", "1.0", latest],
+    ["/education.html", "1.0", latest],
     ["/tools.html", "0.9", latest],
     ["/hark/", "0.8", "2026-10-24"],
     ["/snipread/", "0.8", "2026-10-24"],
@@ -778,6 +799,10 @@ export function renderSitemap(issues, opts = {}) {
   for (const issue of economy) {
     daily.push([`/daily-economy/${issue.dateISO}.html`, "0.9", issue.dateISO]);
     if (issue.en) daily.push([`/daily-economy/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+  }
+  for (const issue of education) {
+    daily.push([`/daily-education/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily-education/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
   }
   const rows = [...staticPages, ...daily].map(([loc, priority, lastmod]) => `  <url>
     <loc>${siteUrl}${loc}</loc>

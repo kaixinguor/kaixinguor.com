@@ -243,7 +243,7 @@ sudo rm /etc/nginx/sites-enabled/kaixinguor.com && sudo nginx -t && sudo systemc
 注意两点：
 
 - `daily-ai/*.html` 是 `templates/issue.html` 生成的，**改模板**，否则下一期日报就把备案号冲掉；
-- 首页 / 经济日报页的页脚由 `scripts/build.mjs` 维护，改完跑一次 `node scripts/build.mjs --check` 确认没被覆盖。
+- 首页 / 经济日报页 / 教育日报页的页脚由 `scripts/build.mjs` 维护，改完跑一次 `node scripts/build.mjs --check` 确认没被覆盖。
 
 **公安联网备案**：网站上线后 30 日内到 <https://beian.mps.gov.cn/> 办理，通过后页脚同样要挂公安备案号（`mathster.cn` 的 Aiseum 页脚已有示例）。
 

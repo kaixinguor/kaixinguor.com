@@ -28,8 +28,8 @@ import {
 } from "./lib/coverage.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DIRS = { ai: "daily-ai", economy: "daily-economy" };
-const LABELS = { ai: "AI 日报", economy: "经济日报" };
+const DIRS = { ai: "daily-ai", economy: "daily-economy", education: "daily-education" };
+const LABELS = { ai: "AI 日报", economy: "经济日报", education: "教育日报" };
 
 const argv = process.argv.slice(2);
 const flags = new Set();
@@ -47,7 +47,13 @@ function flagValue(name, fallback = "") {
 
 function sectionFor(file = "") {
   if (/daily-economy/.test(file)) return "economy";
+  if (/daily-education/.test(file)) return "education";
   return "ai";
+}
+
+function labelForFile(file = "") {
+  const key = Object.keys(DIRS).find((name) => String(file).includes(DIRS[name]));
+  return key ? LABELS[key] : "同日另一版块";
 }
 
 function loadIssues(section) {
@@ -127,13 +133,14 @@ function check(file) {
     process.exit(2);
   }
   const section = flagValue("--section") || sectionFor(resolved);
-  const otherSection = section === "ai" ? "economy" : "ai";
+  const otherSections = Object.keys(DIRS).filter((key) => key !== section);
   const issue = parseIssue(resolved);
 
   const history = loadIssues(section).filter((i) => i.dateISO < issue.dateISO);
   const previous = history[0] || null;
   const sameDate = loadIssues(section).find((i) => i.dateISO === issue.dateISO);
-  const crossIssues = loadIssues(otherSection).filter((i) => i.dateISO === issue.dateISO);
+  const crossIssues = otherSections
+    .flatMap((key) => loadIssues(key).filter((i) => i.dateISO === issue.dateISO));
 
   const newEntries = flatCards(issue);
   const historyEntries = history.flatMap((i) => flatCards(i).map((e) => ({ ...e, issue: i })));
@@ -229,7 +236,7 @@ function check(file) {
       .forEach((c, i) => {
         const n = c.newEntry;
         const where = c.kind === "inside" ? `本期第 ${n.cardIndex} 条（同版块内）`
-          : c.kind === "cross-section" ? `${LABELS[otherSection]} ${c.match.issue.dateISO} ·「${c.match.card.titleText}」`
+          : c.kind === "cross-section" ? `${labelForFile(c.match.issue.file)} ${c.match.issue.dateISO} ·「${c.match.card.titleText}」`
           : `${c.match.issue.dateISO} · ${c.match.issue.issueLabel || ""} ·「${c.match.card.titleText}」`;
         console.log(`${i + 1}) 本期 ${n.chapterIndex}-${n.cardIndex}「${n.card.titleText}」`);
         console.log(`   ↔ ${where}`);

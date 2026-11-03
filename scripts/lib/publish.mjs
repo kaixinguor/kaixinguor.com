@@ -25,8 +25,8 @@ import {
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const TEMPLATE = path.join(ROOT, "templates", "issue.html");
 
-const HOMES = { ai: "index.html", economy: "economy.html" };
-const LABELS = { ai: "AI 日报", economy: "经济日报" };
+const HOMES = { ai: "index.html", economy: "economy.html", education: "education.html" };
+const LABELS = { ai: "AI 日报", economy: "经济日报", education: "教育日报" };
 
 function run(command, args, options = {}) {
   return spawnSync(command, args, { cwd: ROOT, stdio: "inherit", ...options });
@@ -48,7 +48,7 @@ export function publish({ section = "ai", argv = [] } = {}) {
   const DIR = path.join(ROOT, sec.dir);
   const HOME = HOMES[section];
   const LABEL = LABELS[section];
-  const cmd = section === "ai" ? "publish-daily" : "publish-economy";
+  const cmd = section === "ai" ? "publish-daily" : `publish-${section}`;
 
   const flags = new Set();
   const positional = [];

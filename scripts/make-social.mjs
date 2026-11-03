@@ -90,10 +90,11 @@ if (issue.lang !== "zh") {
 }
 
 /* 日报类型：按路径判断，决定品牌名、标题和默认输出目录。 */
-const SECTION = /economy|经济/i.test(source) ? "economy" : "ai";
+const SECTION = /education|教育/i.test(source) ? "education" : (/economy|经济/i.test(source) ? "economy" : "ai");
 const isEconomyIssue = SECTION === "economy" || /经济日报|Economic Daily/.test(issue.title || "");
-if (isEconomyIssue) {
-  console.error(`✗ 经济日报自 2026-11-02 起不再生成公众号配图。`);
+const isEducationIssue = SECTION === "education" || /教育日报|Education Daily/.test(issue.title || "");
+if (isEconomyIssue || isEducationIssue) {
+  console.error(`✗ 公众号配图只对 AI 日报生成；经济日报自 2026-11-02 起、教育日报自创刊起都不出图。`);
   console.error(`  已有期数的成品保留，不删；配图只对 daily-ai/ 生成。`);
   process.exit(1);
 }

@@ -7,6 +7,7 @@ const I18N = {
   en: {
     "nav.ai": "AI Daily",
     "nav.econ": "Economic Daily",
+    "nav.edu": "Education Daily",
     "nav.daily": "Daily",
     "nav.tools": "Tools",
     "nav.wish": "Wish",
@@ -15,6 +16,7 @@ const I18N = {
     "footer.tagline": "A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class=\"foot-src\">— Mencius, Li Lou II</span>",
     "footer.daily": "AI Daily · updated whenever there is news",
     "footer.econ": "Economic Daily · updated whenever there is news",
+    "footer.edu": "Education Daily · updated whenever there is news",
     "footer.built": "Static site · built with DeepSeek Harness",
 
     "home.lead": "Today's lead",

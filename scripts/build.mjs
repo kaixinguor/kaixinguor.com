@@ -14,6 +14,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildEconomy } from "./build-economy.mjs";
+import { buildEducation } from "./build-education.mjs";
 import {
   readIssues,
   renderHomeIssue,
@@ -32,6 +33,8 @@ const FEED_EN = path.join(ROOT, "feed-en.xml");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const FEED_ECON = path.join(ROOT, "feed-economy.xml");
 const FEED_ECON_EN = path.join(ROOT, "feed-economy-en.xml");
+const FEED_EDU = path.join(ROOT, "feed-education.xml");
+const FEED_EDU_EN = path.join(ROOT, "feed-education-en.xml");
 const CHECK = process.argv.includes("--check");
 const QUIET = process.argv.includes("--quiet");
 
@@ -87,6 +90,15 @@ try {
 }
 const econIssues = econ.issues || [];
 
+/* 教育日报：同理，先构建 education.html，再拿它的期次生成 RSS 与 sitemap */
+let edu = { skipped: true };
+try {
+  edu = buildEducation({ check: CHECK, quiet: true });
+} catch (err) {
+  fail(err.message);
+}
+const eduIssues = edu.issues || [];
+
 const block = (cls, lang, inner, hidden = false) => `      <div class="${cls}" data-lang="${lang}"${hidden ? " hidden" : ""}>
 ${inner}
       </div>`;
@@ -99,7 +111,9 @@ const feed = renderFeed(issues, "zh", { section: "ai" });
 const feedEn = renderFeed(issues, "en", { section: "ai" });
 const feedEcon = econIssues.length ? renderFeed(econIssues, "zh", { section: "economy" }) : null;
 const feedEconEn = econIssues.length ? renderFeed(econIssues, "en", { section: "economy" }) : null;
-const sitemap = renderSitemap(issues, { economy: econIssues });
+const feedEdu = eduIssues.length ? renderFeed(eduIssues, "zh", { section: "education" }) : null;
+const feedEduEn = eduIssues.length ? renderFeed(eduIssues, "en", { section: "education" }) : null;
+const sitemap = renderSitemap(issues, { economy: econIssues, education: eduIssues });
 
 const indexHtml = applyMarkers(fs.readFileSync(INDEX, "utf8"), {
   TODAY_ZH: todayZh,
@@ -115,6 +129,7 @@ const outputs = [
   [SITEMAP, sitemap]
 ];
 if (feedEcon) outputs.push([FEED_ECON, feedEcon], [FEED_ECON_EN, feedEconEn]);
+if (feedEdu) outputs.push([FEED_EDU, feedEdu], [FEED_EDU_EN, feedEduEn]);
 
 if (CHECK) {
   let stale = 0;
@@ -128,12 +143,13 @@ if (CHECK) {
   if (warnings.length) {
     for (const w of warnings) console.error(`! ${w}`);
   }
-  if (stale || econ.stale) {
-    console.error(`\n✗ ${stale + (econ.stale ? 1 : 0)} 个文件需要重新生成。`);
+  if (stale || econ.stale || edu.stale) {
+    console.error(`\n✗ ${stale + (econ.stale ? 1 : 0) + (edu.stale ? 1 : 0)} 个文件需要重新生成。`);
     process.exit(1);
   }
   console.log(`✓ 生成结果已是最新（${issues.length} 期，最新 ${latest.dateISO}）`);
   if (!econ.skipped) console.log(`✓ 经济日报 economy.html 已是最新（${econ.issues.length} 期）`);
+  if (!edu.skipped) console.log(`✓ 教育日报 education.html 已是最新（${edu.issues.length} 期）`);
   process.exit(0);
 }
 

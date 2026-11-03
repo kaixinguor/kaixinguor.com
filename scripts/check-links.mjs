@@ -7,6 +7,7 @@
      node scripts/check-links.mjs daily-ai/2026-10-26.html --strict
      node scripts/check-links.mjs --latest
      node scripts/check-links.mjs --latest --section economy
+     node scripts/check-links.mjs --latest --section education
      node scripts/check-links.mjs --all
 
    判定：最终状态码 200–299 算通过；其余算失败。
@@ -21,7 +22,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const sectionIdx = args.indexOf("--section");
 const section = sectionIdx >= 0 ? (args[sectionIdx + 1] || "ai") : "ai";
-const DAILY_DIR = path.join(ROOT, section === "economy" ? "daily-economy" : "daily-ai");
+const DIRS = { ai: "daily-ai", economy: "daily-economy", education: "daily-education" };
+const DAILY_DIR = path.join(ROOT, DIRS[section] || "daily-ai");
 const flags = new Set(args.filter((a) => a.startsWith("--")));
 const strict = flags.has("--strict");
 const all = flags.has("--all");
@@ -49,7 +51,7 @@ if (fileArg) {
 } else if (latest) {
   const allFiles = dailyFiles();
   if (!allFiles.length) {
-    console.error(`✗ ${section === "economy" ? "daily-economy" : "daily-ai"}/ 里还没有日报`);
+    console.error(`✗ ${DIRS[section] || "daily-ai"}/ 里还没有日报`);
     process.exit(1);
   }
   const latestDate = path.basename(allFiles[allFiles.length - 1]).slice(0, 10);
@@ -57,7 +59,7 @@ if (fileArg) {
 } else if (all) {
   files = dailyFiles();
 } else {
-  console.error("用法：node scripts/check-links.mjs <日报.html> [--strict] | --latest | --all [--section ai|economy]");
+  console.error("用法：node scripts/check-links.mjs <日报.html> [--strict] | --latest | --all [--section ai|economy|education]");
   process.exit(1);
 }
 

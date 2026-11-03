@@ -1,14 +1,15 @@
 # kaixinguor.com
 
-一个人做的小工具 + 两份中英双语日报。纯静态站点，报刊编辑风。
+一个人做的小工具 + 三份中英双语日报。纯静态站点，报刊编辑风。
 
-- 两个版块：**AI 日报**（首页 `/`）与**经济日报**（`/economy.html`），导航里并列
-- 首页 / 经济日报页 = 当天整份日报全文（报头、目录、速览、全部栏目、期脚注）
+- 三个版块：**AI 日报**（首页 `/`）、**经济日报**（`/economy.html`）与**教育日报**（`/education.html`），导航里并列
+- 首页 / 经济日报页 / 教育日报页 = 当天整份日报全文（报头、目录、速览、全部栏目、期脚注）
 - 最左侧贴边 ARCHIVE 抽屉 = 各自的往期（`archive.html` 只做旧链接跳转）
 - `/tools.html` = 标签式工具列表
 - `/daily-ai/YYYY-MM-DD.html`、`/daily-ai/YYYY-MM-DD-en.html` = AI 日报中英文
 - `/daily-economy/YYYY-MM-DD.html`、`/daily-economy/YYYY-MM-DD-en.html` = 经济日报中英文
-- `/feed.xml` / `/feed-en.xml` = AI 日报 RSS；`/feed-economy.xml` / `/feed-economy-en.xml` = 经济日报 RSS
+- `/daily-education/YYYY-MM-DD.html`、`/daily-education/YYYY-MM-DD-en.html` = 教育日报中英文
+- `/feed.xml` / `/feed-en.xml` = AI 日报 RSS；`/feed-economy.xml` / `/feed-economy-en.xml` = 经济日报 RSS；`/feed-education.xml` / `/feed-education-en.xml` = 教育日报 RSS
 
 视觉语言来自 `ai-daily/2026-10-26.html`，抽成了 `style.css`；日报、首页、工具、许愿共用同一套 tokens 和组件。
 
@@ -31,7 +32,7 @@ npm run preview        # http://127.0.0.1:8899/
 
 ## 发布一期日报
 
-两份日报用同一个流程，只是写到不同目录、更新不同首页与 RSS。
+三份日报用同一个流程，只是写到不同目录、更新不同首页与 RSS。
 
 ```bash
 cd site
@@ -44,6 +45,11 @@ node scripts/publish-daily.mjs daily-ai/2026-10-26.html \
 # 经济日报 → daily-economy/ + economy.html + feed-economy*.xml
 node scripts/publish-economy.mjs daily-economy/2026-10-30.html \
   --en daily-economy/2026-10-30-en.html \
+  --push
+
+# 教育日报 → daily-education/ + education.html + feed-education*.xml
+node scripts/publish-education.mjs daily-education/2026-11-03.html \
+  --en daily-education/2026-11-03-en.html \
   --push
 ```
 
@@ -92,12 +98,14 @@ python3 -m playwright install chromium
 site/
 ├── index.html              首页 = AI 日报（完整一期 + 左侧往期抽屉）
 ├── economy.html            经济日报（完整一期 + 左侧往期抽屉）
+├── education.html          教育日报（完整一期 + 左侧往期抽屉）
 ├── archive.html            旧 /archive.html 跳转到 /#archive
 ├── tools.html              工具（标签筛选）
 ├── wish.html               许愿
 ├── privacy.html / 404.html / download.html / changelog.html
 ├── daily-ai/YYYY-MM-DD.html        AI 日报（中/英）
 ├── daily-economy/YYYY-MM-DD.html   经济日报（中/英）
+├── daily-education/YYYY-MM-DD.html 教育日报（中/英）
 ├── hark/  snipread/        两个产品子站
 ├── style.css               全站唯一设计系统
 ├── site.js                 深浅色 / 进度条 / 目录 / 工具标签
@@ -106,8 +114,10 @@ site/
 ├── scripts/
 │   ├── build.mjs           生成两个首页、两套 RSS、sitemap
 │   ├── build-economy.mjs   经济日报首页 economy.html（build.mjs 会调用）
+│   ├── build-education.mjs 教育日报首页 education.html（build.mjs 会调用）
 │   ├── publish-daily.mjs   发布一期 AI 日报
 │   ├── publish-economy.mjs 发布一期经济日报
+│   ├── publish-education.mjs 发布一期教育日报
 │   ├── lib/publish.mjs     两个发布命令共用的流程
 │   ├── make-social.mjs     生成公众号图片消息图（5 张，本地）
 │   ├── social/             配图版式与 Playwright 截图
@@ -115,10 +125,12 @@ site/
 │   └── stage.mjs           生成 dist/site/ 部署产物
 ├── feed.xml / feed-en.xml                  AI 日报 RSS（自动生成）
 ├── feed-economy.xml / feed-economy-en.xml  经济日报 RSS（自动生成）
+├── feed-education.xml / feed-education-en.xml  教育日报 RSS（自动生成）
 ├── sitemap.xml             自动生成
 ├── docs/自动化与部署.md     更新链路、Cloudflare / 服务器部署
 ├── docs/每日生成任务.md     AI 日报的作业说明
 ├── docs/每日生成任务-经济日报.md  经济日报的作业说明
+├── docs/每日生成任务-教育日报.md  教育日报的作业说明
 ├── docs/社交配图规则.md     公众号图片消息的图数 / 标题 / 发布规则
 └── .github/workflows/      CI：校验 + 可选 Cloudflare Pages 部署
 ```
@@ -146,7 +158,7 @@ npm run stage          # dist/site/
 
 完整方案（含 GitHub Actions、自有服务器 rsync / cron、nginx、RSS）见 [`docs/自动化与部署.md`](docs/自动化与部署.md)。
 
-每日 09:00 自动生成并发布（Ubuntu + DSH 定时任务、开机补跑、手机通知）见 [`docs/每日定时任务.md`](docs/每日定时任务.md)。
+每日 09:00 / 09:30 / 10:00 依次生成并发布三份日报（Ubuntu + DSH 定时任务、开机补跑、手机通知）见 [`docs/每日定时任务.md`](docs/每日定时任务.md)。
 
 ---
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "kaixinguor.com · AI 日报 + 工具站",
+  "description": "kaixinguor.com · 三份日报（AI / 经济 / 教育）+ 工具站",
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs --check",
@@ -18,7 +18,9 @@
     "check:links:ai": "node scripts/check-links.mjs --latest --section ai",
     "check:links:economy": "node scripts/check-links.mjs --latest --section economy",
     "check:overlap": "node scripts/coverage.mjs check",
-    "report:coverage": "node scripts/coverage.mjs report"
+    "report:coverage": "node scripts/coverage.mjs report",
+    "publish:education": "node scripts/publish-education.mjs",
+    "check:links:education": "node scripts/check-links.mjs --latest --section education"
   },
   "engines": {
     "node": ">=20"
