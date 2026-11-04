@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 03 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 4, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-04-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-04-en.html</guid>
+      <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today&#39;s thread is who pays for compute. Inference provider fal raised $1.3 billion at a $16 billion valuation on just over $800 million of annualised revenue — demand so far ahead of capacity that it rate-limited customers this summer, on margins that stay thin. Behind Grok Bot&#39;s 800,000 paid weekly users, Musk now says serving costs are &quot;unsustainably high relative to revenue&quot; and quotas have come down; AMD&#39;s data center revenue reached $8.55 billion, nearly double a year ago, with a $17 billion guide for the fourth quarter. At the other end, Apple handed part of Apple Intelligence in China to Alibaba&#39;s Qwen, and Google wired Search and Gemini to a single switch: opt out of the AI, lose the search box. Compute keeps getting dearer; the doors keep getting narrower. Inference provider fal raises $1.3 billion at a $16 billion valuation on $800 million of annualised revenue</description>
+    </item>
     <item>
       <title>AI Daily · November 3, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-03-en.html</link>
