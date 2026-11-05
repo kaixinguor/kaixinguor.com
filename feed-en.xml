@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 04 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 5, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-05-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-05-en.html</guid>
+      <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today the thread is size. Moonshot released the weights of Kimi K3.1 Pro — 2.8 trillion parameters, roughly 5.6TB at BF16 and about 1.4TB even at INT4 — which moves the open-model question from &quot;can I get it&quot; to &quot;can I move it&quot;. Tencent shipped Hunyuan Hy4, a 770B MoE that reads images and drives a computer for the first time. In the same 24 hours, Together AI used a swarm of agents to push inference throughput on frontier open models up to 2.6x higher, and OpenAI moved to buy Pierre Computer so version control can keep up with agents that commit far faster than people. The models get bigger; the engineering that feeds them gets finer. Moonshot opens the Kimi K3.1 Pro weights: 2.8 trillion parameters, about 5.6TB at BF16</description>
+    </item>
     <item>
       <title>AI Daily · November 4, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-04-en.html</link>

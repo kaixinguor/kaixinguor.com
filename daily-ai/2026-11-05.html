@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 5 日</title>
+<meta name="description" content="2026-11-05 AI 日报：月之暗面开放 Kimi K3.1 Pro 权重，2.8 万亿参数、BF16 约 5.6TB；OpenAI 收购 Pierre Computer，把 agent 时代的分支与存储收进 Codex；腾讯混元 Hy4 正式版 770B，首次能看图、能操作电脑；OpenAI 推出 Images 2.6，ChatGPT 能直接做 GIF、每周出图 40 亿张；Nothing 预告 12 月首款 AI 原生设备；openJiuwen 上线视听双流记忆；Together 用 agent 24 小时把推理吞吐最高提升 2.6 倍；招商局狮子山实验室发布 Lion-ER-35B-A3B；超维动力展出 117 自由度本体与乒乓机器人。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 5 日">
+<meta property="og:description" content="2026-11-05 AI 日报：月之暗面开放 Kimi K3.1 Pro 权重，2.8 万亿参数、BF16 约 5.6TB；OpenAI 收购 Pierre Computer，把 agent 时代的分支与存储收进 Codex；腾讯混元 Hy4 正式版 770B，首次能看图、能操作电脑；OpenAI 推出 Images 2.6，ChatGPT 能直接做 GIF、每周出图 40 亿张；Nothing 预告 12 月首款 AI 原生设备；openJiuwen 上线视听双流记忆；Together 用 agent 24 小时把推理吞吐最高提升 2.6 倍；招商局狮子山实验室发布 Lion-ER-35B-A3B；超维动力展出 117 自由度本体与乒乓机器人。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-05.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-04T09:04:00+08:00/2026-11-05T09:00:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-05.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-05.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-05-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-05-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 011 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 5 日<span class="weekday">THU</span></h1>
+    <p class="deck">今天的主线是「体积」。月之暗面把 2.8 万亿参数的 Kimi K3.1 Pro 权重放了出来，BF16 全套约 5.6TB、INT4 也要 1.4TB——开源的门槛从「能不能拿到」变成「搬不搬得动」。腾讯混元 Hy4 正式版 770B，第一次能看图、能操作电脑。同一天，Together 用一组 agent 在 24 小时内把前沿开源模型的推理吞吐最高提了 2.6 倍，OpenAI 把 Pierre 收进 Codex，让版本控制跟得上 agent 的提交频率。<em>模型越做越大，喂它的工程越做越细。</em></p>
+    <div class="metabar"><span class="pill">第 011 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/04 09:04 – 11/05 09:00</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 12 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#capital"><span class="n">01</span>行业与资本</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#products"><span class="n">03</span>产品与智能体</a>
+        <a href="#research"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied"><span class="n">05</span>具身智能</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>月之暗面开放 Kimi K3.1 Pro 完整权重：2.8 万亿参数 MoE，单次激活约 1040 亿，100 万 Token 上下文。</b>权重按 10 月 24 日的承诺放出，BF16 约 5.6TB、INT4 约 1.4TB，消费级单机放不下。Agent Arena 上位列开放权重模型第一、全部模型第 13，净改进率 +5.1%；Terminal-Bench 4.0 得分 65.7%。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>OpenAI 宣布收购开发者工具公司 Pierre Computer，条款未披露，交易仍待监管批准。</b>Pierre 提供让 agent 存代码的云服务，客户 Lovable 的代码检索延迟降了约 70%；它的 Trees 与 Diffs 两个开源库已经在支撑 Codex 的界面。观察者把这笔交易看作 agent 时代对 GitHub 的正面进攻。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Together AI 发布 Together Compiler：用 agent 搜索推理内核优化，24 小时内把前沿开源模型吞吐最高提升 2.6 倍。</b>在 SemiAnalysis 的 InferenceX 低延迟设置上创下新纪录：MiniMax M3.1-Flash 1111 TPS、DeepSeek v4.1-Flash 1205 TPS；Llama 1B、batch=1 下比现有开源 mega-kernel 高 1.7 倍。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/05 08:00</span>
+          <a class="src" href="https://www.ithome.com/1/022/490.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>月之暗面开放 Kimi K3.1 Pro 权重：2.8 万亿参数，BF16 权重约 5.6TB</h3>
+        <p>11 月 5 日，月之暗面按 10 月 24 日发布时给出的承诺，在 Hugging Face 开放了 Kimi K3.1 Pro 的完整模型权重。模型采用混合专家架构，总参数 2.8 万亿，单次推理激活约 1040 亿参数，支持约 100 万 Token 上下文窗口，原生支持视觉理解。</p>
+        <p>与 K3 相比，K3.1 Pro 以 K3 为基座做了大规模联合强化学习后训练，覆盖数百个下游领域，并把部分全注意力层替换为门控稀疏注意力层，以降低长上下文建模的开销。可下载不等于可本地运行：2.8 万亿参数以 BF16 存储约 5.6TB，即使 INT4 量化也要约 1.4TB。</p>
+        <p>评测口径来自 Agent Arena：K3.1 Pro（Max）在开放权重模型中排第一、全部参评模型第 13；净改进率 +5.1%，上一代 K3（Max）为 +0.9%。分项上，衡量 Shell 命令执行可靠性的 Bash Reliability 从 -4.5% 升到 +7.9%，开放模型第一；用户满意度指标 Praise vs Complaint 从 +1.3% 升到 +7.7%；可操控性 Steerability 为 +6.5%，同样居开放模型首位。这套榜单不用成对盲投，而是从超过 1.75 万次真实长程智能体会话里取信号（用户确认、表扬与投诉、纠正指令、Shell 执行错误），再用随机化推断估算净改进率。</p>
+        <p>传统基准上：Terminal-Bench 4.0 得分 65.7%，高于 GPT-6 Astra 的 58.2%，与 Claude Opus 5.5 的 66.4% 相差不到 1 个百分点。同一天，<a href="https://www.ithome.com/1/022/502.htm" target="_blank" rel="noopener noreferrer">华为宣布昇腾对 K3.1 Pro 实现 0 Day 推理适配</a>，基于 vLLM Ascend 与 SGLang 支持 Atlas 800 A3、Atlas 900 A3 SuperPod 与昇腾 950 超节点部署；适配重点是模型新增的稀疏注意力路径与多模态推理，以及 KDA 线性注意力层、缓存管理与跨卡通信的协同优化。</p>
+        <p class="why"><b>看点</b>开源界的参数纪录又往上跳了一格，但真正变的是「可及」的定义：2.8 万亿参数在 BF16 下 5.6TB，INT4 也要 1.4TB，个人开发者拿到的是权重文件而不是能跑的服务，能部署的是云厂商与超节点。工程上值得盯三件事：稀疏注意力在 100 万上下文下的实际显存曲线、昇腾 0-day 适配的算子覆盖度（是否只跑通了 batch=1 的演示）、以及 Agent Arena 这种「从真实会话取信号」的评测能不能替代成对盲测。对下游，最直接的影响是推理定价——能跑 2.8 万亿的供应商就那么几家，开源并不自动等于便宜。<br><b>另一个视角</b>权重放出的同一天，国产超节点就有了可用的推理路径，模型与芯片的绑定在加速；这让「开源」在国内更像一次算力生态的排位赛，而不是纯粹的社区礼物。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/05 05:14</span>
+          <a class="src" href="https://siliconangle.com/2026/11/04/openai-to-acquire-developer-tooling-startup-pierre-computer/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>OpenAI 收购 Pierre Computer：把 agent 的代码存储与版本控制收进 Codex</h3>
+        <p>11 月 4 日，OpenAI 宣布计划收购开发者工具公司 Pierre Computer Company，条款未披露，交易仍需监管批准。观察者把这笔交易看作对微软 GitHub 的正面进攻——目标不是人类开发者的仓库，而是 agent 的仓库。</p>
+        <p>Pierre 运营一项云服务，供 AI agent 存放它们生成的代码，也能存许可证、界面设计文件等关联内容。按 Pierre 的说法，它的性能显著优于同类技术：帮客户 Lovable 把代码检索延迟降了约 70%。</p>
+        <p>它同时维护一批流行的开源库。其中两个——Trees 与 Diffs——正是 OpenAI Codex 编程工具界面的底座：Trees 负责文件夹导航（搜索、拖拽移动子目录、标记新增与更新文件），Diffs 负责差异展示。大型项目动辄数百个代码文件、几十层目录，这两个库决定了 agent 读写仓库时的交互效率。</p>
+        <p>把时间线拼起来看更清楚：Codex 这类 agent 成为高频提交者后，仓库的瓶颈从存储容量变成并发与延迟——多个 agent 要各开一条工作线、平行提交、随时回滚。OpenAI 收下「存 agent 产出」这一层，等于把 Codex 的前端（Trees/Diffs）与后端（Pierre 云服务）一起握住。</p>
+        <p class="why"><b>看点</b>这不是买团队，是买 agent 的写入路径。人类开发者的 Git 工作流假设提交稀疏、分支少、冲突靠人解；agent 的工作流是提交密集、分支多、需要并排跑。谁掌握这一层，谁就掌握了 agent 的「记忆」与审计线索。接下来看两件事：Pierre 的云服务是否继续对第三方开放，以及 OpenAI 会不会把 Codex 的会话与提交历史做成可查询的仓库。对做 agent 工具的团队，这是一个明确的信号——基础设施的竞争正在从「模型加编排」下沉到「版本控制加存储」。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04 12:59</span>
+          <a class="src" href="https://www.ithome.com/1/022/035.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>腾讯混元 Hy4 正式版发布：770B MoE，首次能看图、能操作电脑</h3>
+        <p>11 月 4 日，腾讯发布混元 Hy4 正式版，官方称这是混元首次跻身最强开源模型之列。相比 8 月底的 Hy4 preview，正式版扩大了预训练与后训练规模，参数量来到 770B（MoE 架构，激活约 49B）。<a href="https://cloud.tencent.cn/developer/article/2776227" target="_blank" rel="noopener noreferrer">腾讯云开发者社区给出的规格</a>显示，上下文突破 100 万 Token——TokenHub 侧最大输入约 960K、最大输出约 64K。</p>
+        <p>两项「第一次」是重点。视觉上，Hy4 把感知、推理与工具调用连起来，可做细粒度图像处理、复杂图表分析与带图的数学视觉推理；官方举的例子是在 28 亿像素航拍图里定位约 2 米大小的屋顶构件、以及重组 900 片拼图还原一幅画。操作上，Hy4 首次支持电脑操作（Computer Use），能结合图形界面与命令行使用软件，并针对 Blender、CAD 等专业软件和跨应用长程任务做了专项训练；腾讯云 Agent Runtime 团队为它搭了沙箱，部署数百款应用反复执行验证。</p>
+        <p>官方内部口径：WorkBuddy 办公协作评测平均 83.18 分、任务通过率 96.15%，12 个场景里 9 个国内第一；游戏开发场景提升 19.1%、GameLogic 提升 9.8%；「因猜测导致的错误率」从 23.1% 降到 5.6%。价格延续 preview：输入 6 元、输出 18 元每百万 Token，发布期有五折优惠。</p>
+        <p>权重尚未放出。腾讯说会「近期开源模型权重、发布系统卡片」，并称开源会重点关注网络与生物安全风险；更省成本的 Hy4 Flash 也在计划中。</p>
+        <p class="why"><b>看点</b>770B 总参数、49B 激活，意味着单机八卡跑不动，服务成本由路由稀疏度决定（激活占比约 6.4%）。真正值得看的是 Computer Use 的训练方式：在沙箱里部署数百款软件、让模型反复执行，是拿环境换数据；这条路 Anthropic 与 OpenAI 都在走，差别在腾讯把 Blender、CAD 这类专业软件列进了主场景。对下游，如果 GUI 操作在真实软件上稳定，国内一批「RPA 加大模型」的产品会被直接替代；如果不稳定，它就只是一个会看图的聊天模型。开源权重的时间表是关键——没有权重，微调与私有化部署都无从谈起。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/05 07:41</span>
+          <a class="src" href="https://www.ithome.com/1/022/486.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>OpenAI 推出 Images 2.6：ChatGPT 能直接做 GIF，每周出图 40 亿张</h3>
+        <p>11 月 5 日，OpenAI 推出 Images 2.6 模型。ChatGPT 现在可以用一段提示词、或一张上传的照片直接生成 GIF 动图，并能调整动画速度、逐帧编辑、分享给他人；在此之前，ChatGPT 无法一步原生生成 GIF。官方给的例子是「你能做一只跳舞的猫的 GIF 吗」，生成后可以在几帧之间逐帧查看。</p>
+        <p>规模数字更能说明变化：OpenAI 称用户现在每周通过 ChatGPT 及其 API 生成超过 40 亿张图片，比 9 月报告的每周 30 亿张明显增长。更新正向所有 ChatGPT 与 Codex 用户推送，覆盖网页、桌面与移动端。</p>
+        <p>API 侧同时推出两个变体：GPT-Image-2.6 Flare 与 GPT-Image-2.6 Sunburst，分别对应更快的生成与更高的质量。</p>
+        <p class="why"><b>看点</b>图像模型的竞争点正在从「画得好不好」转向「改得动不动」。GIF 看着是小事，实际把「一次生成」变成「一条时间轴」：模型要维持跨帧一致性，成本按帧数上涨，评测口径也从单图质量变成「动作是否连贯」。40 亿张/周是个该记住的容量数字——推理压力正从文本转到图像，而图像的单次成本远高于文本 token。对产品团队，这是「生成功能变成编辑功能」的又一例：能不能逐帧改、能不能保持一致，比能不能出图更决定留存。Flare 与 Sunburst 的分工值得等官方给出延迟与价格再判断。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/05 08:58</span>
+          <a class="src" href="https://m.ithome.com/html/1022507.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Nothing 预告 12 月发布首款 AI 原生设备：没有屏幕，也不是 App</h3>
+        <p>11 月 4 日，Nothing 创始人裴宇发文，预告公司首款 AI 原生产品将在 2026 年 12 月发布。他给的两条限定很清楚：没有屏幕，也不是一款软件应用；「它是一种工具，但带有定义 Nothing 产品的个性与用心」。</p>
+        <p>他的论证是产品史：新技术总是在工作中先被认可，再进入家庭——PC 先是电子表格与文字处理设备，很久以后才用来听音乐；手机先是车载电话，几十年后才进到青少年手里。AI 也一样，编程、IT、客服、法务，连口袋里那个聊天机器人本质上都是生产力工具。</p>
+        <p>问题在于「上下文缺口」：现在用 AI，一半的工作是把上下文敲进文本框，而最重要的上下文根本进不了模型——喝咖啡时想到的点子、随口说的一句话。所以他认为，人们每天随身携带的工具才是获取上下文最方便的入口，而不是文本框。</p>
+        <p>形态目前还是传闻。消息人士 Roland Quandt 称 Nothing 将推出两款智能眼镜：一款主打音频（音乐、通话、语音助手，配光致变色镜片），一款带摄像头（支持 ChatGPT 与翻译）。彭博社此前的报道称，Nothing 的智能眼镜把 AI 任务放在手机与云端处理，不配 AR 显示屏。</p>
+        <p class="why"><b>看点</b>这条的价值不在产品，在论证。如果「上下文缺口」成立，AI 硬件的胜负手就不是模型能力，而是「能不能一直在场且不惹人烦」——常开麦克风、常开摄像头，换来的是隐私与续航两笔账。Nothing 选「没有屏幕」，等于放弃视觉输出，把交互压到语音与音频；这与 Humane、Rabbit 想替代手机的路线不同，它讲的是「补充上下文的入口」。12 月要看三件事：形态、续航，以及它是否要求用户一直戴着。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04 10:49</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/507533.html" target="_blank" rel="noopener noreferrer">量子位 · openJiuwen 授权刊载 ↗</a>
+        </div>
+        <h3>openJiuwen 上线「视听双流记忆」：按事件切分长视频，召回精度最高提升 45.7%</h3>
+        <p>11 月 4 日，openJiuwen 的 AgentMemory 上线多模态记忆能力 OmniMem-Lens，版本号 0.2.0。它要解决的问题很具体：三个小时的视频，agent 怎么「记」。</p>
+        <p>通行做法是按固定时间窗口（比如一分钟）把长视频切开，让智能体分段记忆。openJiuwen 团队认为这带来两个硬伤：一是记忆被切碎，一段连贯的讲解在中间被切断，提问时只能拿到半段证据，容易产生幻觉；二是记忆被稀释，几秒钟的关键动作和前后几分钟无关画面打包在一起，检索时关键信息被噪音淹没。他们的说法是「agent 在按秒记视频，人在按事件理解视频」。</p>
+        <p>OmniMem-Lens 的做法是视听双流：视觉失灵时听觉顶上，听觉失灵时（比如无台词的镜头切换）视觉顶上，两路交叉判定事件边界，再按事件组织记忆与分层检索。官方口径的数字是：召回精度最高提升 45.7%，在线问答时延最高降低 97%。项目已在 GitCode 开源（openJiuwen/agent-memory），WorkSwarm 称即将支持对接。</p>
+        <p class="why"><b>看点</b>这是把「记忆」从模型能力拆成系统能力的一次尝试：不换模型，只改切分与索引。方法本身不新——按事件分段、双流互补在视频理解里都有人做过——但把它做成 agent 的记忆底座、并给出时延与召回两个工程指标，是可复用的形态。要注意口径：45.7% 与 97% 都是官方自测，没有第三方复现，也没有公布测试集与基线配置。对做长视频 agent 的团队，值得抄的是「按事件而不是按时间切」这个约束，以及双流互补的判据设计。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04</span>
+          <a class="src" href="https://www.together.ai/blog/together-compiler-continual-compilation-for-ai-inference" target="_blank" rel="noopener noreferrer">Together AI · 工程博客 ↗</a>
+        </div>
+        <h3>Together AI 用 agent 持续编译推理引擎：24 小时把前沿模型吞吐最高提升 2.6 倍</h3>
+        <p>11 月 4 日，Together AI 发布 Together Compiler（TKCC），把推理内核优化从「编译问题」改写成「agent 搜索问题」。输入是流量形态、模型与硬件，输出是一串针对推理引擎的优化方案，由一组 agent 反复生成、验证、迭代。</p>
+        <p>数字：在不到 24 小时里，TKCC 把 Kimi K3、GLM 5.3、MiniMax M3.1-Flash、DeepSeek v4.1-Flash 等前沿开源模型的 TPS 最高提升了 2.6 倍；在 SemiAnalysis 的 InferenceX 低延迟设置上创下新纪录——MiniMax M3.1-Flash 1111 TPS、DeepSeek v4.1-Flash 1205 TPS；在经典的 Llama 1B、batch size 1 场景下，比现有开源 mega-kernel 高 1.7 倍。</p>
+        <p>三个关键设计。第一是「常驻引擎」：现有 agent 优化系统每试一个想法都要重启 vLLM、SGLang 或 TRT-LLM，而引擎启动要几十分钟，实验吞吐被卡死；TKCC 让引擎只启动一次，之后热加载候选前向，不重启。第二是保真度：不拿随机输入测 kernel——MoE 与稀疏注意力的优化效果依赖输入分布，必须用真实流量测。第三是自研成本模型来选择并行策略（TP、EP、DCP 等），避免为每一种组合都实际跑一遍。</p>
+        <p>Together 说 TKCC 已在部分 serverless 生产端点运行，并把这套方法泛化到天气建模、PDE、时序与生物模型等非语言模型负载上。</p>
+        <p class="why"><b>看点</b>推理优化的瓶颈从来不是「有没有更快的 kernel」，而是「试一个想法要多久」。TKCC 的实质是把实验循环从「几十分钟重启一次」压到「秒级热加载」，于是 agent 能在 24 小时里试完人类专家几个月的组合。方法可复用的前提有两个：引擎要支持前向热替换，评测要用真实输入分布——否则优化出来的 kernel 在 MoE 路由偏斜时会退化。对自建推理的团队，这是今年最值得抄的一张架构图；对模型厂商，它意味着「发布即最优」的窗口在缩短。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04 18:08</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/507586.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>招商局狮子山实验室发布 Lion-ER-35B-A3B：激活 3B 参数，十项具身基准全线提升</h3>
+        <p>11 月 4 日，招商局先进技术研究院下属狮子山人工智能实验室发布具身推理视觉语言模型「驭物 Lion-ER-35B-A3B」。模型采用 MoE 架构，总参数约 35B，每个 Token 仅激活约 3B 参数，基座是 Qwen3.6-35B-A3B。</p>
+        <p>它的路线不是堆数据，而是「先定义能力，再反向造题」。团队把具身推理拆成实体、空间、时序、物理、可供性、任务、社会、证据 8 个一级领域、39 项二级能力，形成一张能力蓝图；再用「能力编译」把每项能力落成「需要什么场景、怎样组织观察、提什么问题、依据什么定答案」。监督训练集共 312,380 条样本，训练预算按能力需求分配，而不是按数据源的题量分配。</p>
+        <p>错题直接反哺数据。评测发现短板后，团队从覆盖 31 个数据源、约 430 万条记录的素材池里检索「推理逻辑相同、场景不同」的新素材，构题核验后加入训练，再评测验证——他们把这套闭环叫 Eval-Driven Data Harness。</p>
+        <p>结果：十项公开具身基准全部上涨，等权综合均分 65.29（avg@4，即每题独立作答 4 次取平均）。分项上，Where2Place 空间放置 64.28（比基座 +9.30）、ERQA 具身推理 64.38（+6.19）、SAT 空间推理 89.33、ERQA 轨迹理解子类 68.18（+12.12）。四道公开题展示了它比基座强在哪：从两帧画面判断相机朝哪边转、从四条轨迹里选出真能碰到目标的那条、靠三张照片还原拍摄者方位、判断长程任务当前步骤是否完成。</p>
+        <p class="why"><b>看点</b>这条研究的价值是「数据从哪来」的另一种答案：不追规模，先定义能力，再反向造题。31 万条监督样本不算大，但每条都挂在 39 项能力中的某一项上，评测错题直接变成下一轮的数据需求——这是把「数据飞轮」写成工程流程，而不是靠堆量。口径要看清：十项都是公开基准，等权均分 65.29 没有和同参数量开源模型做全面对照，只与基座和 27B 版本对比；「部分指标超过更大模型」是选择性陈述。能否复现，取决于能力蓝图与构题规范会不会公开——目前还没看到技术报告。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04 16:59</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/507574.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>超维动力在香港金融科技周展出全栈矩阵：117 自由度本体与乒乓机器人 SMASH</h3>
+        <p>11 月 4 日，2026 香港金融科技周在香港会议展览中心揭幕，全栈具身智能公司超维动力（Kinetix AI，2025 年 7 月成立）展出四件产品：高动态人形机器人乒乓系统 SMASH、117 自由度的拟人本体 KAIBot、37 自由度灵巧手 KAI Hand，以及第一人称数采头环 KAI Halo，并与恒生银行合设体验区。</p>
+        <p>SMASH 是现场最直观的一件：机器人在毫秒级时间窗口内完成来球识别、轨迹计算与击球规划，肩、肘、腕、腰、腿多关节协同，能自主接发球并打出长球、短球；升级后可以应对各类旋转，回击时还能施加旋转变化，接球范围覆盖从远台到近台的连续空间。</p>
+        <p>本体与手的数据更能说明路线。KAIBot 有 117 个全身自由度，机身 173 厘米、70 千克，配覆盖率 80% 的定制触觉皮肤、18,000 个感知触点，可识别低至 0.1N 的力度；KAI Hand 有 37 个自由度（20 主动、1 被动、16 柔顺），与真人手掌 1:1 尺寸，指尖力 30N 以上可持续抓握，5 个指尖配触觉传感器，单指损坏可单独更换。</p>
+        <p>KAI Halo 负责数据：四个摄像头融合多相机视觉与 IMU，做厘米级全身姿态理解与环境重建，头戴部分 300 余克，配套从采集任务下发到云端处理、训练、部署测试的完整链路。</p>
+        <p class="why"><b>看点</b>乒乓是一个诚实的具身测试：球在几百毫秒内来回，感知、规划、执行的延迟藏不住，而且旋转必须从飞行弧线里推断——这类物理量无法从语言模型迁移，只能靠数据与控制。但这条新闻的信息量在硬件规格：117 自由度、18,000 个触点、37 自由度的手，说明本体在向「拟人」堆自由度，代价是控制难度、成本与可靠性。真正的分水岭不是展台上能接几板球，而是这些自由度能不能在非结构化环境里换成有用功——以及 2025 年才成立的公司，量产与交付的时间表在哪里。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 4 日 09:04 至 2026 年 11 月 5 日 09:00（北京时间）之间发布的报道，共 9 条。检索时间 11/05 12:10。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 011 · 24h window · Generated 2026-11-05 12:10</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

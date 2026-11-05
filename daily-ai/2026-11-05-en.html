@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 5, 2026</title>
+<meta name="description" content="AI Daily for 2026-11-05: Moonshot opens the Kimi K3.1 Pro weights — 2.8 trillion parameters, about 5.6TB at BF16; OpenAI moves to acquire Pierre Computer and fold agent-scale version control into Codex; Tencent ships Hunyuan Hy4, a 770B MoE that can read images and drive a computer; OpenAI releases Images 2.6, with GIFs inside ChatGPT and 4 billion images a week; Nothing teases an AI-native device for December; openJiuwen ships audio-visual memory for long video; Together AI uses agents to recompile inference engines for up to 2.6x throughput; LionRock lab releases Lion-ER-35B-A3B; Kinetix AI shows a 117-DoF humanoid and a table-tennis robot.">
+<meta property="og:title" content="AI Daily · November 5, 2026">
+<meta property="og:description" content="AI Daily for 2026-11-05: Moonshot opens the Kimi K3.1 Pro weights — 2.8 trillion parameters, about 5.6TB at BF16; OpenAI moves to acquire Pierre Computer and fold agent-scale version control into Codex; Tencent ships Hunyuan Hy4, a 770B MoE that can read images and drive a computer; OpenAI releases Images 2.6, with GIFs inside ChatGPT and 4 billion images a week; Nothing teases an AI-native device for December; openJiuwen ships audio-visual memory for long video; Together AI uses agents to recompile inference engines for up to 2.6x throughput; LionRock lab releases Lion-ER-35B-A3B; Kinetix AI shows a 117-DoF humanoid and a table-tennis robot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-05-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-04T09:04:00+08:00/2026-11-05T09:00:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-05-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-05.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-05-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../education.html">Education Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-05.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 011</span>
+    </div>
+    <h1 class="date">November 5, 2026<span class="weekday">THU</span></h1>
+    <p class="deck">Today the thread is size. Moonshot released the weights of Kimi K3.1 Pro — 2.8 trillion parameters, roughly 5.6TB at BF16 and about 1.4TB even at INT4 — which moves the open-model question from &quot;can I get it&quot; to &quot;can I move it&quot;. Tencent shipped Hunyuan Hy4, a 770B MoE that reads images and drives a computer for the first time. In the same 24 hours, Together AI used a swarm of agents to push inference throughput on frontier open models up to 2.6x higher, and OpenAI moved to buy Pierre Computer so version control can keep up with agents that commit far faster than people. <em>The models get bigger; the engineering that feeds them gets finer.</em></p>
+    <div class="metabar"><span class="pill">Issue 011</span>
+      <span class="dot"></span>
+      <span>Window Nov 4, 09:04 – Nov 5, 09:00 (UTC+8)</span>
+      <span class="dot"></span>
+      <span>9 items</span>
+      <span class="dot"></span>
+      <span>12 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#capital"><span class="n">01</span>Industry &amp; Capital</a>
+        <a href="#models"><span class="n">02</span>Models</a>
+        <a href="#products"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">04</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">05</span>Embodied AI</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Moonshot released the full Kimi K3.1 Pro weights: a 2.8-trillion-parameter MoE with about 104 billion active per token and a 1M-token context.</b> The release honours an October 24 promise; at BF16 the weights are roughly 5.6TB, and about 1.4TB even at INT4, so a single consumer machine is out of the question. On Agent Arena the model ranks first among open-weight entries and 13th overall, with a net improvement rate of +5.1%; it scores 65.7% on Terminal-Bench 4.0.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>OpenAI announced plans to acquire developer-tooling company Pierre Computer; terms were not disclosed and the deal still needs regulatory approval.</b> Pierre runs a cloud service where agents store the code they generate; customer Lovable cut code-retrieval latency by about 70%. Two of Pierre&#39;s open-source libraries, Trees and Diffs, already sit under the Codex interface. Observers read the deal as a direct attack on GitHub for the agent era.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Together AI released Together Compiler, which turns inference-kernel tuning into an agent search problem and lifted throughput on frontier open models by up to 2.6x in under 24 hours.</b> It set new lows in latency on SemiAnalysis&#39; InferenceX: 1,111 TPS on MiniMax M3.1-Flash and 1,205 TPS on DeepSeek v4.1-Flash, plus 1.7x over open-source megakernels on Llama 1B at batch size 1.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/05 08:00</span>
+          <a class="src" href="https://www.ithome.com/1/022/490.htm" target="_blank" rel="noopener noreferrer">ITHome ↗</a>
+        </div>
+        <h3>Moonshot opens the Kimi K3.1 Pro weights: 2.8 trillion parameters, about 5.6TB at BF16</h3>
+        <p>On November 5, Moonshot AI released the full Kimi K3.1 Pro weights on Hugging Face, honouring the promise it made when the model launched on October 24. It is a mixture-of-experts model with 2.8 trillion total parameters and about 104 billion active per token, a context window of roughly one million tokens, and native visual understanding.</p>
+        <p>Against K3, the Pro version was post-trained with large-scale joint reinforcement learning across hundreds of downstream domains, and some full-attention layers were replaced with gated sparse attention to cut the cost of long-context modelling. Downloadable is not the same as runnable: at BF16 the weights are about 5.6TB, and roughly 1.4TB even at INT4.</p>
+        <p>The head-line numbers come from Agent Arena. Kimi K3.1 Pro (Max) ranks first among open-weight models and 13th across all evaluated models, with a net improvement rate of +5.1% against +0.9% for K3 (Max). By sub-metric, Bash Reliability rose from -4.5% to +7.9%, first among open models; Praise vs Complaint went from +1.3% to +7.7%; Steerability reached +6.5%, also first among open models. Arena does not run pairwise blind votes — it extracts signals from more than 17,500 real long-horizon agent sessions (explicit task confirmations, praise and complaints, correction instructions, shell execution errors) and estimates each model&#39;s net improvement with randomised inference.</p>
+        <p>On conventional benchmarks, K3.1 Pro scores 65.7% on Terminal-Bench 4.0, above GPT-6 Astra at 58.2% and within one point of Claude Opus 5.5 at 66.4%. The same day, <a href="https://www.ithome.com/1/022/502.htm" target="_blank" rel="noopener noreferrer">Huawei said Ascend offers day-zero inference support</a>, via vLLM Ascend and SGLang, on Atlas 800 A3, Atlas 900 A3 SuperPod and Ascend 950 SuperPod systems; the work covered the model&#39;s new sparse-attention path, multimodal inference, and joint optimisation of KDA linear-attention layers, cache management and cross-card communication.</p>
+        <p class="why"><b>Why it matters</b>The open-weight parameter record moved up a notch, but what actually changed is the definition of &quot;available&quot;. At 5.6TB in BF16 and 1.4TB at INT4, an individual developer gets a file, not a service; the parties who can deploy are cloud providers and supernode operators. Three things are worth watching: the real memory curve of sparse attention at a million tokens, how complete the Ascend day-zero operator coverage is (or whether it only runs a batch-of-one demo), and whether a signal-from-real-sessions benchmark like Agent Arena can replace pairwise blind tests. For everyone downstream, the immediate consequence is inference pricing — only a handful of providers can serve 2.8 trillion parameters, and open weights do not automatically mean cheap tokens.<br><b>The other view</b>On the same day the weights landed, domestic supernodes had a working inference path, which tightens the coupling between model and chip. In China, &quot;open&quot; is turning into a positioning race for the compute ecosystem as much as a gift to the community.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/05 05:14</span>
+          <a class="src" href="https://siliconangle.com/2026/11/04/openai-to-acquire-developer-tooling-startup-pierre-computer/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>OpenAI to acquire Pierre Computer, folding agent-scale version control into Codex</h3>
+        <p>On November 4, OpenAI announced plans to acquire Pierre Computer Company Inc., a low-profile developer-tooling startup. Terms were not disclosed and the deal still needs regulatory approval. Observers framed it as a shot at Microsoft&#39;s GitHub — but aimed at agents&#39; repositories rather than people&#39;s.</p>
+        <p>Pierre runs a cloud service that AI agents use to store the code they generate, along with related files such as software licences and interface design assets. The company says the service is significantly faster than competing technology: it helped customer Lovable cut code-retrieval latency by about 70%.</p>
+        <p>It also maintains a set of popular open-source libraries. Two of them, Trees and Diffs, underpin the Codex interface: Trees handles folder navigation, with search, drag-and-drop moves and flags on recently added or updated files; Diffs handles the diff view. Large projects run to hundreds of files in dozens of folders, so those libraries decide how efficiently an agent can read and write a repository.</p>
+        <p>Put the pieces together and the logic is clear. Once agents like Codex become high-frequency committers, the bottleneck moves from storage capacity to concurrency and latency — several agents each need their own line of work, committing in parallel and rolling back at will. Buying the layer that stores what agents produce means OpenAI now holds both the front end (Trees, Diffs) and the back end (Pierre&#39;s cloud).</p>
+        <p class="why"><b>Why it matters</b>This is not a team acquisition; it is a purchase of the agent&#39;s write path. Git workflows assume sparse commits, few branches and humans resolving conflicts. Agent workflows are the opposite: dense commits, many branches, parallel work. Whoever owns that layer owns both the agent&#39;s memory and its audit trail. Two things to watch: whether Pierre&#39;s cloud stays open to third parties, and whether OpenAI turns Codex sessions and commit history into a queryable repository. For anyone building agent tooling, the signal is that infrastructure competition is sinking from &quot;model plus orchestration&quot; down to &quot;version control plus storage&quot;.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="model">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Models</h2>
+      <span class="cen">Models</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04 12:59</span>
+          <a class="src" href="https://www.ithome.com/1/022/035.htm" target="_blank" rel="noopener noreferrer">ITHome ↗</a>
+        </div>
+        <h3>Tencent ships Hunyuan Hy4: a 770B MoE that can read images and drive a computer</h3>
+        <p>On November 4, Tencent released the production version of Hunyuan Hy4, which it says puts Hunyuan among the strongest open models for the first time. Compared with the preview in late August, the final model expands pre-training and post-training, reaches 770B parameters in a mixture-of-experts architecture with about 49B active. <a href="https://cloud.tencent.cn/developer/article/2776227" target="_blank" rel="noopener noreferrer">Specs published on Tencent Cloud&#39;s developer community</a> put context past a million tokens — on TokenHub the maximum input is about 960K and output about 64K.</p>
+        <p>The two firsts are the point. On vision, Hy4 links perception, reasoning and tool use, handling fine-grained image work, complex charts and maths that includes pictures; Tencent&#39;s examples include locating a roughly two-metre roof component in a 2.8-gigapixel aerial photograph and reassembling 900 puzzle pieces into a painting. On action, Hy4 supports computer use for the first time, combining graphical interfaces with the command line, with dedicated training for professional software such as Blender and CAD and for long cross-application tasks; Tencent Cloud&#39;s Agent Runtime team built a sandbox with hundreds of applications for repeated execution and verification.</p>
+        <p>Tencent&#39;s internal numbers: an average of 83.18 points and a 96.15% task pass rate on its WorkBuddy office benchmark, with nine of twelve scenarios ranked first in China; game development up 19.1% and GameLogic up 9.8%; the rate of errors caused by guessing down from 23.1% to 5.6%. Pricing carries over from the preview at 6 yuan per million input tokens and 18 yuan per million output tokens, with a 50% launch discount.</p>
+        <p>The weights are not out yet. Tencent says it will open them soon with a system card, framed around network and biological safety risks, and that a cheaper Hy4 Flash is planned.</p>
+        <p class="why"><b>Why it matters</b>At 770B total and 49B active, this does not fit on a single eight-GPU node, and serving cost is set by routing sparsity — about 6.4% of parameters active per token. The more interesting question is how computer use was trained: putting hundreds of applications in a sandbox and letting the model run them repeatedly is trading environment for data. Anthropic and OpenAI are on the same road; the difference is that Tencent put Blender and CAD in the main scenario. Downstream, if GUI control holds up in real software, a generation of Chinese &quot;RPA plus LLM&quot; products gets replaced outright; if it does not, this is a chat model that can look at pictures. The open-weights timetable is the deciding factor — without weights there is no fine-tuning and no on-premise deployment.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/05 07:41</span>
+          <a class="src" href="https://www.ithome.com/1/022/486.htm" target="_blank" rel="noopener noreferrer">ITHome ↗</a>
+        </div>
+        <h3>OpenAI releases Images 2.6: GIFs inside ChatGPT, and 4 billion images a week</h3>
+        <p>On November 5, OpenAI introduced the Images 2.6 model. ChatGPT can now turn a prompt — or an uploaded photo — into an animated GIF, with adjustable playback speed, frame-by-frame editing and sharing; before this, ChatGPT could not produce a GIF natively in one step. OpenAI&#39;s example is &quot;can you make a GIF of a cat dancing&quot;, after which you can step through the frames.</p>
+        <p>The scale number is the more telling change: OpenAI says users now generate more than 4 billion images a week through ChatGPT and its API, up sharply from the 3 billion a week it reported in September. The update is rolling out to all ChatGPT and Codex users across web, desktop and mobile.</p>
+        <p>The API gains two variants at the same time, GPT-Image-2.6 Flare and GPT-Image-2.6 Sunburst, aimed at faster generation and higher quality respectively.</p>
+        <p class="why"><b>Why it matters</b>The competition in image models has moved from &quot;does it look good&quot; to &quot;can I keep editing it&quot;. GIFs look minor, but they turn a single generation into a timeline: the model has to hold consistency across frames, cost rises with frame count, and the evaluation criterion shifts from single-image quality to whether the motion holds together. Four billion images a week is the capacity number worth remembering: inference pressure is moving from text to images, where cost per generation is far above cost per token. For product teams this is another case of a generator becoming an editor — frame-level edits and consistency decide retention more than the ability to produce an image at all. As for Flare versus Sunburst, wait for OpenAI to publish latency and pricing before reading much into the split.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="product">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/05 08:58</span>
+          <a class="src" href="https://m.ithome.com/html/1022507.htm" target="_blank" rel="noopener noreferrer">ITHome ↗</a>
+        </div>
+        <h3>Nothing teases its first AI-native device for December: no screen, and not an app</h3>
+        <p>On November 4, Nothing founder Carl Pei said the company&#39;s first AI-native product will launch in December 2026. He set two limits: it has no screen, and it is not a software application. &quot;It is a tool, but with the personality and care that define a Nothing product,&quot; he wrote.</p>
+        <p>His argument is a history lesson. New technology is always accepted at work before it wins hearts at home: PCs were spreadsheets and word processors long before they played music, and phones were car phones for people doing deals decades before they reached teenagers. AI is on the same path — programming, IT, customer support, legal work, and even the chatbot in a billion pockets is fundamentally a productivity tool.</p>
+        <p>The problem, he argues, is a context gap. Half the work of using AI today is typing context into a text box, and the most important context never makes it in: an idea that arrives over coffee, a sentence said in passing. So the tool people carry every day is a more natural place to capture context than a text field.</p>
+        <p>The form factor is still rumour. Leaker Roland Quandt says Nothing will ship two pairs of smart glasses: an audio pair (music, calls, voice assistant, photochromic lenses) and a camera pair supporting ChatGPT and translation. Bloomberg has reported that Nothing&#39;s glasses will process AI tasks on the phone and in the cloud, without an AR display.</p>
+        <p class="why"><b>Why it matters</b>The value here is the argument, not the product. If the context gap is real, the deciding factor for AI hardware is not model quality but whether it can be present all the time without being annoying — always-on microphones and cameras cost you privacy and battery. Choosing &quot;no screen&quot; gives up visual output and pushes interaction into voice and audio; unlike Humane and Rabbit, which tried to replace the phone, Nothing is pitching an input for context. December will answer three things: the form factor, the battery life, and whether it expects you to wear it constantly.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04 10:49</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/507533.html" target="_blank" rel="noopener noreferrer">QbitAI · published with openJiuwen&#39;s permission ↗</a>
+        </div>
+        <h3>openJiuwen ships audio-visual memory for long video, claiming up to 45.7% better recall</h3>
+        <p>On November 4, openJiuwen&#39;s AgentMemory added a multimodal memory capability called OmniMem-Lens in version 0.2.0. The problem it targets is concrete: how does an agent remember a three-hour video?</p>
+        <p>The common approach chops long video into fixed windows — one minute at a time — and lets the agent remember each segment separately. The team argues this breaks memory in two ways. First, evidence fragments: a continuous explanation is cut in the middle, so a question retrieves half an argument and the model hallucinates the rest. Second, evidence drowns: a few seconds of key action get packaged with minutes of irrelevant background, so retrieval accuracy collapses. Their framing: agents remember video by the second, while people understand it by event.</p>
+        <p>OmniMem-Lens uses two streams. When vision fails, audio takes over; when audio fails — say, a wordless cut — vision does; the two together decide event boundaries, and memory is organised and retrieved by event. The company&#39;s numbers are a recall improvement of up to 45.7% and an online question-answering latency cut of up to 97%. The project is open on GitCode (openJiuwen/agent-memory), and WorkSwarm says it will support the integration.</p>
+        <p class="why"><b>Why it matters</b>This is an attempt to turn memory from a model capability into a systems capability: no new model, just different segmentation and indexing. The method is not novel — event-based segmentation and two-stream complementarity have both been tried in video understanding — but packaging it as an agent memory substrate, with latency and recall as the two engineering numbers, is reusable. Mind the provenance: 45.7% and 97% are the vendor&#39;s own measurements, with no third-party reproduction and no published test set or baseline configuration. What is worth copying is the constraint — segment by event, not by clock — and the design of the two-stream criterion.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04</span>
+          <a class="src" href="https://www.together.ai/blog/together-compiler-continual-compilation-for-ai-inference" target="_blank" rel="noopener noreferrer">Together AI · engineering blog ↗</a>
+        </div>
+        <h3>Together AI lets agents recompile inference engines: up to 2.6x throughput in under 24 hours</h3>
+        <p>On November 4, Together AI released Together Compiler (TKCC), which reframes inference-kernel optimisation as an agent search problem rather than a compilation problem. The inputs are traffic shape, model and hardware; the output is a series of optimisations for the serving engine, generated, measured and iterated by a group of agents.</p>
+        <p>The numbers: in under 24 hours, TKCC lifted tokens per second by up to 2.6x across frontier open models including Kimi K3, GLM 5.3, MiniMax M3.1-Flash and DeepSeek v4.1-Flash. It set a new state of the art in the low-latency setting on SemiAnalysis&#39; InferenceX benchmark — 1,111 TPS on MiniMax M3.1-Flash and 1,205 TPS on DeepSeek v4.1-Flash — and beat existing open-source megakernels by 1.7x on the classic Llama 1B, batch size 1 workload.</p>
+        <p>Three design choices matter. First, persistent engines: existing agentic optimisers restart vLLM, SGLang or TRT-LLM for every experiment, and engine start-up costs tens of minutes, which caps experiment throughput; TKCC starts the engine once and hot-reloads candidate forward passes. Second, fidelity: kernels are not measured on random inputs, because the payoff of MoE and sparse-attention optimisations depends on input distribution, so it uses real traffic. Third, a custom cost model picks parallelism strategies — TP, EP, DCP — instead of measuring every combination.</p>
+        <p>Together says TKCC already runs on some serverless production endpoints, and that the same approach generalises beyond language models to weather modelling, PDEs, time series and biology models.</p>
+        <p class="why"><b>Why it matters</b>The bottleneck in inference optimisation was never &quot;is there a faster kernel&quot;; it was &quot;how long does it take to try an idea&quot;. TKCC compresses the loop from tens of minutes per restart to seconds per hot reload, which lets agents cover in a day what human experts cover in months. Two preconditions make the method portable: the engine must support hot-swapping forward passes, and evaluation must use real input distributions — otherwise the optimised kernel degrades once MoE routing skews. For teams running their own inference, this is the architecture diagram to copy this year; for model vendors, it means the window in which a launch-day configuration is optimal keeps shrinking.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="robot">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04 18:08</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/507586.html" target="_blank" rel="noopener noreferrer">QbitAI ↗</a>
+        </div>
+        <h3>China Merchants&#39; LionRock lab releases Lion-ER-35B-A3B: 3B active parameters, ten embodied benchmarks up</h3>
+        <p>On November 4, the LionRock AI Lab under China Merchants&#39; Advanced Technology Institute released Lion-ER-35B-A3B, an embodied-reasoning vision-language model. It is a mixture-of-experts model with about 35B total parameters and roughly 3B active per token, built on the Qwen3.6-35B-A3B base.</p>
+        <p>The route is not more data but a capability blueprint first. The team decomposed embodied reasoning into eight top-level domains — entity, space, time, physics, affordance, task, social and evidence — and 39 second-level capabilities. A &quot;capability compiler&quot; then turns each into a specification: which scene is needed, how observations are organised, what question is asked, and what counts as the answer. The supervised set totals 312,380 samples, with training budget allocated by capability need rather than by how many questions a data source happens to contribute.</p>
+        <p>Errors feed data production directly. When evaluation exposes a weakness, the team searches a pool of 31 data sources and roughly 4.3 million records for material with the same reasoning pattern in a different scene, validates the new questions, adds them to training and re-evaluates — a loop they call an Eval-Driven Data Harness.</p>
+        <p>Results: ten public embodied benchmarks all improved, with an equal-weight average of 65.29 under avg@4 scoring, where each question is answered four times independently. By benchmark, Where2Place scores 64.28 (+9.30 over the base), ERQA 64.38 (+6.19), SAT 89.33, and the trajectory-understanding slice of ERQA 68.18 (+12.12). Four published examples show the gaps: deciding which way a camera rotated from two frames, choosing the one of four trajectories that actually reaches the target, reconstructing where a painting was relative to the photographer from three photos, and judging whether the current step of a long task is finished.</p>
+        <p class="why"><b>Why it matters</b>The value is a different answer to &quot;where does the data come from&quot;: define capabilities first, then generate questions backwards. 312,000 supervised samples is not large, but every one is attached to one of 39 capabilities, and evaluation errors become the next round&#39;s data requirements — a data flywheel written as an engineering process instead of a pile of scraped video. Read the claims carefully: all ten are public benchmarks, the 65.29 average is not compared against open models of the same size, only against the base and a 27B version, and &quot;beats larger models on some metrics&quot; is a selective statement. Reproducibility depends on whether the capability blueprint and question specifications are published; no technical report is out yet.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/04 16:59</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/507574.html" target="_blank" rel="noopener noreferrer">QbitAI ↗</a>
+        </div>
+        <h3>Kinetix AI shows a full-stack lineup in Hong Kong: a 117-DoF body and a table-tennis robot</h3>
+        <p>On November 4, the 2026 Hong Kong FinTech Week opened at the convention centre, and Kinetix AI — a full-stack embodied-AI company founded in July 2025 — showed four products: the high-dynamic table-tennis humanoid SMASH, the 117-degree-of-freedom KAIBot, the 37-DoF KAI Hand and the first-person data-collection headset KAI Halo, alongside a joint experience zone with Hang Seng Bank.</p>
+        <p>SMASH is the most legible demo: within a millisecond-scale window it identifies the incoming ball, computes its trajectory and plans the stroke, coordinating shoulder, elbow, wrist, waist and legs to serve and return, including long and short balls. After an upgrade it handles spin and can add spin on the return, covering the full space from the back of the table to close in.</p>
+        <p>The body and hand specs say more about the approach. KAIBot has 117 degrees of freedom, stands 173cm at 70kg, and is covered by a custom tactile skin over 80% of its surface with 18,000 sensing points that resolve forces as low as 0.1N. KAI Hand has 37 degrees of freedom (20 active, 1 passive, 16 compliant) at a 1:1 human palm scale, sustains more than 30N of fingertip force, carries tactile sensors in five fingertips, and allows a single damaged finger to be swapped without replacing the hand.</p>
+        <p>KAI Halo handles data: four cameras fused with IMU data for centimetre-level full-body pose and environment reconstruction, a headset of just over 300 grams, and a pipeline that runs from collection tasks through cloud processing to training and deployment testing.</p>
+        <p class="why"><b>Why it matters</b>Table tennis is an honest embodied test: the ball crosses in a few hundred milliseconds, so perception, planning and execution latency cannot hide, and spin has to be inferred from the flight arc — physics that does not transfer from a language model, only from data and control. But the information here is in the hardware numbers: 117 degrees of freedom, 18,000 touch points, a 37-DoF hand. The body is being pushed toward human equivalence, at the cost of control difficulty, price and reliability. The divide is not how many rallies it can return on a show floor; it is whether those degrees of freedom convert into useful work in unstructured settings — and where the shipping timeline sits for a company founded in 2025.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between 09:04 on November 4 and 09:00 on November 5, 2026 (UTC+8): 9 items. Compiled at 12:10 on November 5.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 011 · 24h window · Generated 2026-11-05 12:10</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../education.html">Education Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>
