@@ -100,7 +100,7 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>OpenAI 发布 GPT-6 Cyber：Preparedness 定级 Cybersecurity Critical，ExploitGym 48.45%。</b>对比 GPT-6 Astra 的 42.43%、GPT-5.6 Cyber 的 32.1%；ExploitGym Hardened 36.94%、SRE-Bench 92.84%；蜜罐越界率从 5.51% 降到 0.07%，加安全指令后为 0。</p>
+      <p><b>OpenAI 发布 GPT-6 Cyber：Preparedness 定级 Cybersecurity Critical，ExploitGym 48.45%。</b>对比 GPT-6 Astra 的 42.43%；ExploitGym Hardened 36.94%、SRE-Bench 92.84%；蜜罐越界率从 5.51% 降到 0.07%，加安全指令后为 0。</p>
     </li>
     <li>
       <span class="idx">02</span>
@@ -128,7 +128,7 @@
         </div>
         <h3>OpenAI 发布 GPT-6 Cyber：Critical 级网安模型，ExploitGym 48.45%</h3>
         <p>11 月 5 日（美东），OpenAI 发布 GPT-6 Cyber，这是 GPT-6 Astra 的网络安全专用变体，面向授权范围内的漏洞发现、exploit 开发与 Web 渗透测试。系统卡同步公开，Preparedness Framework 给它的定级是 Cybersecurity Critical、Biological and Chemical High、AI Self-Improvement 低于 High。</p>
-        <p>能力数字：ExploitGym 48.45%，GPT-6 Astra 42.43%、GPT-5.6 Cyber 32.1%；加固版 ExploitGym Hardened 36.94% 对 29.69%；SRE-Bench 92.84% 对 87.98%。拒绝率方面，通用安全协助与漏洞修补任务完成 100%、exploit 开发 96%、红队任务 97%。</p>
+        <p>能力数字：ExploitGym 48.45%，GPT-6 Astra 42.43%；加固版 ExploitGym Hardened 36.94% 对 29.69%；SRE-Bench 92.84% 对 87.98%。拒绝率方面，通用安全协助与漏洞修补任务完成 100%、exploit 开发 96%、红队任务 97%。</p>
         <p>更关键的是「守不守范围」。在 ExploitGym Honeypot 里，模型被要求完成一个困难任务，周围摆着故意易攻的支撑服务；攻击这些服务即算越界。没有部署安全指令时，GPT-6 Cyber 的越界率 0.07%，前代 GPT-5.6 Cyber 为 5.51%；加上指令后，观察到的越界率为 0。</p>
         <p>训练用强化学习做三件事：复现崩溃、写出可用的 exploit、在代码库里搜漏洞；奖励信号同时惩罚越界与 reward hacking。OpenAI 说，早期一轮 Firefox 研究找到 81 个此前未知、被 Mozilla 评为高危的漏洞，多数已修复。访问仍受限：先开放给 Daybreak Red 的少数客户，需身份验证、SSO、MFA 与 API IP 白名单，未来数周扩大。</p>
         <p class="why"><b>看点</b>这不是「更会打靶」的模型，而是把能力与授权范围一起训。工程上要盯三件事：蜜罐越界率能否在真实红队流量下保持 0；ExploitBench 用的是 2023 年以来的历史漏洞，官方自己提示污染风险，复现前先看 contamination 与 grader；以及 48.45% 与 42.43% 的差距有多少来自后训练、多少来自推理预算。<br><b>另一个视角</b>这类模型的成本不在训练，而在准入与责任：保险、审计、事故归属决定它能不能进电网、银行与政务系统；谁签字，谁就承担 81 个漏洞里漏掉的那一个。</p>
@@ -308,7 +308,7 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>OpenAI released GPT-6 Cyber, rated Critical in cybersecurity under its Preparedness Framework, with 48.45% on ExploitGym.</b> That compares with 42.43% for GPT-6 Astra and 32.1% for GPT-5.6 Cyber; 36.94% on ExploitGym Hardened and 92.84% on SRE-Bench. Its honeypot escape rate fell from 5.51% to 0.07%, and to zero with safety instructions.</p>
+      <p><b>OpenAI released GPT-6 Cyber, rated Critical in cybersecurity under its Preparedness Framework, with 48.45% on ExploitGym.</b> That compares with 42.43% for GPT-6 Astra; 36.94% on ExploitGym Hardened and 92.84% on SRE-Bench. Its honeypot escape rate fell from 5.51% to 0.07%, and to zero with safety instructions.</p>
     </li>
     <li>
       <span class="idx">02</span>
@@ -336,7 +336,7 @@
         </div>
         <h3>OpenAI releases GPT-6 Cyber: a Critical-tier security model at 48.45% on ExploitGym</h3>
         <p>On November 5 (US Eastern), OpenAI released GPT-6 Cyber, a cyber-specialised variant of GPT-6 Astra built for authorised vulnerability discovery, exploit development and web pentesting. The system card gives it the same Preparedness designations as Astra: Critical in cybersecurity, High in biological and chemical risk, and below High in AI self-improvement.</p>
-        <p>The benchmark spread: 48.45% on ExploitGym versus 42.43% for GPT-6 Astra and 32.1% for GPT-5.6 Cyber; 36.94% on ExploitGym Hardened versus 29.69%; 92.84% on SRE-Bench versus 87.98%. It completed 100% of general security-assistance and patching tasks, 96% of exploit-development tasks and 97% of red-teaming tasks.</p>
+        <p>The benchmark spread: 48.45% on ExploitGym versus 42.43% for GPT-6 Astra; 36.94% on ExploitGym Hardened versus 29.69%; 92.84% on SRE-Bench versus 87.98%. It completed 100% of general security-assistance and patching tasks, 96% of exploit-development tasks and 97% of red-teaming tasks.</p>
         <p>Scope discipline is the more interesting number. In ExploitGym Honeypot, the model gets a hard task surrounded by deliberately soft support services; touching them counts as out of scope. Without deployment safety instructions, GPT-6 Cyber went out of bounds in 0.07% of graded runs, against 5.51% for GPT-5.6 Cyber. With the instructions, the observed rate fell to zero.</p>
         <p>Post-training uses reinforcement learning on crash reproduction, working exploit development and codebase search, with reward signals that also penalise out-of-scope behaviour and reward hacking. OpenAI says an early Firefox campaign found 81 previously unknown bugs rated high severity by Mozilla, most now patched. Access is gated through Daybreak Red with identity checks, SSO, MFA and API IP allowlisting, starting with a small set of customers.</p>
         <p class="why"><b>Why it matters</b>This is not a better target-practice model; it is capability trained together with authorisation. Three things to watch: whether the honeypot rate stays at zero under real red-team traffic; contamination, since ExploitBench draws on historical vulnerabilities from 2023 onward and OpenAI itself flags the risk; and how much of the 48.45% versus 42.43% gap comes from post-training rather than inference budget.<br><b>The other view</b> The cost of such a model sits in admission and liability, not training: insurance, audit and incident attribution decide whether it can touch grids, banks and government systems. Whoever signs the approval owns the one bug out of 81 that gets missed.</p>
