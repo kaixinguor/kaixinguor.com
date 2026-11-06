@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 05 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 6, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-06-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-06-en.html</guid>
+      <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today&#39;s thread is boundaries. OpenAI released GPT-6 Cyber, a Critical-tier security model that scores 48.45% on ExploitGym and escaped its honeypot in 0.07% of runs without safety instructions, zero with them. Baidu open-sourced ERNIE 5.5 Flash Base: 280 billion total parameters, 14 billion active per token, 33.5 trillion tokens of pretraining. Claude now links bank, card, loan and investment accounts. And two papers put numbers on things that usually stay qualitative: loss of control, and how much models care about other models. The stronger the capability, the more expensive the admission. OpenAI releases GPT-6 Cyber: a Critical-tier security model at 48.45% on ExploitGym</description>
+    </item>
     <item>
       <title>AI Daily · November 5, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-05-en.html</link>

@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 05 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 6 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-06.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-06.html</guid>
+      <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是「边界」。OpenAI 把 GPT-6 Cyber 放出来：Critical 级网安模型，ExploitGym 48.45%，但在自家蜜罐里，无安全指令时的越界率是 0.07%、加上指令后为 0。百度开源文心 5.5 Flash Base，2800 亿总参、每个 Token 激活 140 亿、33.5 万亿 Token 预训练；Claude 把银行、信用卡、贷款和投资账户接进对话；两篇研究分别给「失控」打分、给多智能体之间的「福利关切」量化。能力越强，准入越贵。 OpenAI 发布 GPT-6 Cyber：Critical 级网安模型，ExploitGym 48.45%</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 5 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-05.html</link>
