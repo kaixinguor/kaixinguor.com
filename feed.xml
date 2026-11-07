@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 06 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 7 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-07.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-07.html</guid>
+      <pubDate>Sat, 07 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是「把成本摊开」。DeepMind 让智能体在数周内找出旧式 1024 位 RSA 的两处弱点：密码分析比过去的方法快约 1600 倍。OpenAI 完成 110 亿美元首关、估值 1.25 万亿美元，整轮最多 200 亿；同一天，微软被曝停租甲骨文的 AI 算力——合同的价值随 GPU 代际衰减。国内，豆包工作个人版取消 5 小时额度，DeepSeek Harness 把日活 154 万、日耗 92 万亿 Token 摆上台面，中石油昆仑制造与宇树则把工业具身智能装进一家合营公司。能力在涨，账单也在重算。 DeepMind 用智能体找出 1024 位 RSA 的两处弱点，密码分析提速约 1600 倍</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 6 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-06.html</link>

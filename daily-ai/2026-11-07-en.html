@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 7, 2026</title>
+<meta name="description" content="AI Daily for November 7, 2026, Issue 013: DeepMind agents find two weaknesses in legacy 1024-bit RSA, making cryptanalysis about 1,600 times faster; OpenAI closes $11 billion of a round at a $1.25 trillion valuation; Microsoft winds down its Oracle AI compute lease as older GPUs lose value; Doubao drops its 5-hour quota; DeepSeek Harness reports 1.54M DAU and 92 trillion tokens a day; MIT lets robots correct their own bad object memories; PetroChina and Unitree form an industrial embodied-AI joint venture.">
+<meta property="og:title" content="AI Daily · November 7, 2026">
+<meta property="og:description" content="AI Daily for November 7, 2026, Issue 013: DeepMind agents find two weaknesses in legacy 1024-bit RSA, making cryptanalysis about 1,600 times faster; OpenAI closes $11 billion of a round at a $1.25 trillion valuation; Microsoft winds down its Oracle AI compute lease as older GPUs lose value; Doubao drops its 5-hour quota; DeepSeek Harness reports 1.54M DAU and 92 trillion tokens a day; MIT lets robots correct their own bad object memories; PetroChina and Unitree form an industrial embodied-AI joint venture.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-07-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-06T15:39:00+08:00/2026-11-07T11:23:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-07-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-07.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-07-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../education.html">Education Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-07.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 013</span>
+    </div>
+    <h1 class="date">November 7, 2026<span class="weekday">SAT</span></h1>
+    <p class="deck">Today's thread is the invoice. DeepMind's agents found two weaknesses in legacy 1024-bit RSA in a matter of weeks, making cryptanalysis roughly 1,600 times faster. OpenAI closed the first $11 billion of a round that could reach $20 billion at a $1.25 trillion valuation, while Microsoft was reported to be winding down its Oracle AI compute lease: a contract whose value decays with each GPU generation. In China, Doubao dropped its five-hour quota, DeepSeek Harness put 1.54 million daily users and 92 trillion tokens a day on the record, and PetroChina's Kunlun Manufacturing and Unitree put industrial embodied AI into a joint venture. <em>Capability keeps rising; the bill keeps getting recalculated.</em></p>
+    <div class="metabar"><span class="pill">Issue 013</span>
+      <span class="dot"></span>
+      <span>Window Nov 6, 15:39 – Nov 7, 11:23 (UTC+8)</span>
+      <span class="dot"></span>
+      <span>7 items</span>
+      <span class="dot"></span>
+      <span>9 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>DeepMind agents found two weaknesses in legacy 1024-bit RSA, making cryptanalysis about 1,600 times faster.</b> The work took weeks under human cryptanalysts; RSA 2048 and stronger modern encryption are unaffected, and no live production system was named.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>OpenAI closed the first $11 billion of a round at a $1.25 trillion valuation, with the full round potentially reaching $20 billion, while Microsoft was reported to be ending its Oracle AI compute lease.</b> Oracle's fiscal 2026 IaaS revenue was $18.09 billion, up 77%, against negative free cash flow of $23.7 billion.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>MIT's UQ-DAAAM lets robots correct their own bad object memories: it resolved ambiguity for 92% of objects and raised description accuracy by 5%.</b> The method compares views, quantifies uncertainty, and writes the evidence from extra viewpoints back into a 3D map.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 06:21</span>
+          <a class="src" href="https://interestingengineering.com/ai-robotics/google-deepmind-agents-expose-older-encryption-flaws" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+        </div>
+        <h3>DeepMind agents find two weaknesses in 1024-bit RSA, making cryptanalysis about 1,600 times faster</h3>
+        <p>On November 6 (US Eastern), Google DeepMind reported that AI agents, guided by human cryptanalysts, found two significant weaknesses in legacy 1024-bit RSA in a matter of weeks. One line of work points to bypassing older digital signature protections; the other involves factoring 1024-bit keys in bulk. Pushmeet Kohli, DeepMind's VP of science, announced the result on social media. This is a research announcement, not a live compromise.</p>
+        <p>The numbers: the report says the same cryptanalytic work now runs roughly 1,600 times faster than previous methods, with the two weaknesses pointing at legacy signature protection and at 1024-bit key factoring. The work was led by Dj Dvijotham and Abhradeep Thakurta, with researchers from UC San Diego and France's Inria. DeepMind drew the boundary explicitly: modern encryption such as RSA 2048 is not affected, and no production system was named.</p>
+        <p>The more reproducible finding concerns padding: once an attacker controls roughly half or more of the signed data block, padding provides almost no additional protection. That is worth recording because it gives a threshold rather than an average.</p>
+        <p class="why"><b>Why it matters</b>Handing the read-paper, write-code, run-experiment loop to an agent moves cryptanalysis from years to weeks; that is a capability shift, not a spectacle. To judge reproducibility, check three things: which model version and how much compute; what baseline the 1,600-times figure is measured against and on which attack path. Downstream, 1024-bit keys still live in old certificate chains, embedded firmware and long-lived infrastructure nobody remembers provisioning. Inventory beats panic.<br><b>The other view</b> Discovery got one to two orders of magnitude cheaper; replacement did not. Behind each legacy key sits a device that has to be taken offline, re-issued and re-verified, so the real schedule is set by asset lists and maintenance windows, not by a paper. The migration budget lands on whoever still operates the old infrastructure.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/06 20:27</span>
+          <a class="src" href="https://finance.sina.com.cn/tech/it/2026-11-06/doc-inixvfew8804680.shtml" target="_blank" rel="noopener noreferrer">Sina Tech ↗</a>
+        </div>
+        <h3>Doubao's individual work plan drops the five-hour quota, leaving only a weekly budget</h3>
+        <p>On the evening of November 6, Sina Tech reported that Doubao's individual work plan had removed its five-hour quota starting that day. Individual users are no longer bound by the short five-hour window and can spread usage across the weekly allowance as their work requires; the weekly quota and other rules still follow the plan.</p>
+        <p>Previously it used the same dual-cycle scheme as most assistant products, with a five-hour and a seven-day limit: even with weekly allowance left, a user who hit the five-hour cap had to wait for the short window to reset.</p>
+        <p>The company did not disclose the weekly quota's size, whether concurrency or rate limits apply, or whether pricing changed. What is confirmed is the change in quota structure itself.</p>
+        <p class="why"><b>Why it matters</b>Collapsing two cycles into one moves throttling from the session layer to the billing layer. For people running code or batch jobs, the five-hour window hurt not through total volume but by forcing long tasks to be chopped up and resumed on a clock. The thing to watch now is the weekly budget and the unit price. For agent builders, quota shape feeds directly into scheduler design: when to queue, when to fall back to a smaller model, when to let a job run overnight.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 08:46</span>
+          <a class="src" href="https://eu.36kr.com/zh/p/4057774236652417" target="_blank" rel="noopener noreferrer">36Kr · InfoQ ↗</a>
+        </div>
+        <h3>DeepSeek Harness reports 1.54 million daily users and 92 trillion tokens a day, and plans Token rewards for plugin authors</h3>
+        <p>On November 7, InfoQ, publishing via 36Kr, laid out DeepSeek Harness's product and community numbers: as of November 4, measured among users of the official API, daily active users reached 1.54 million and daily token consumption about 92 trillion. Third-party plugins number roughly 35,000, and about 60% of active users have made or installed at least one.</p>
+        <p>Since v0.1 on August 13 the product has pushed an "everything is a plugin" design, under which even built-in features can be replaced by third-party plugins. The company says the next steps are more stable and compatible plugin APIs, better plugin security, an official plugin marketplace, and a support programme for plugin authors built around Token rewards, technical exchange and featured listings.</p>
+        <p>The costs are showing too. Some users report infinite loops, context overflow and higher token burn after installing more than 15 plugins, and one reported a small project costing 20 times what OpenCode used. Releases between October 15 and November 4 added dependency sync, hot reload, long-conversation compaction and cache reuse.</p>
+        <p class="why"><b>Why it matters</b>1.54 million daily users and 92 trillion tokens a day make this a runtime, not a tool. Every plugin adds instructions the model must read, so context budget gets eaten by the tooling itself. Every agent platform faces the same equation: plugin discovery, permissions and context overhead have to be designed together, or openness becomes a usability tax. For developers, a marketplace is distribution and also an audit and compatibility bill. The metric that matters is effective calls per plugin, not plugin count.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/06 19:02</span>
+          <a class="src" href="https://interestingengineering.com/ai-robotics/mit-robot-erase-and-rewrite-bad-memories" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+        </div>
+        <h3>MIT adds uncertainty to robot memory, letting 92% of ambiguous objects correct themselves</h3>
+        <p>A team at MIT has built a system called UQ-DAAAM that lets a robot judge how much to trust its own description of an object. It compares several descriptions of the same object from different viewpoints, quantifies the uncertainty, then actively chooses new viewpoints that reduce it, merging the observations into a better description that is written back into memory.</p>
+        <p>It builds on DAAAM, an earlier framework in which a vision-language model writes descriptions of objects seen by onboard cameras and stores them in a 3D map representation for later retrieval during questions or manipulation. The new layer is uncertainty quantification: in tests it resolved ambiguity for 92% of objects and improved description accuracy by 5%.</p>
+        <p>According to Interesting Engineering, public links to the paper and code were not yet available, and it is not yet disclosed what hardware the system runs on or how many extra viewpoints a correction requires.</p>
+        <p class="why"><b>Why it matters</b>Robots usually fail not because they cannot see but because they remember wrongly and stay confident about it. Making uncertainty explicit and then choosing viewpoints to gather evidence turns a VLM hallucination into an executable sensing policy. Five points looks small, but it lands on memory, where one bad description gets inherited and amplified over dozens of downstream steps. The hard part is calibration: when the model says it is unsure, is it actually unsure? That determines whether the extra views are worth the motion.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/06 17:37</span>
+          <a class="src" href="https://finance.sina.com.cn/wm/2026-11-06/doc-inixuywy8817500.shtml" target="_blank" rel="noopener noreferrer">CCTV Finance ↗</a>
+        </div>
+        <h3>PetroChina's Kunlun Manufacturing and Unitree form a joint venture for industrial embodied robotics</h3>
+        <p>The Beijing Municipal Administration for Market Regulation has disclosed that China National Petroleum Corporation's Kunlun Manufacturing and its concert party Kunlun Capital signed an agreement with Unitree Robotics and Beijing Fanjie Intelligence to create a joint venture. The new company will work on industrial embodied-AI robot solutions. The simplified merger review case is in its public comment period from November 4 to November 13, 2026.</p>
+        <p>Ownership after closing: Kunlun Manufacturing and its concert party hold 60%, while Unitree and Fanjie Intelligence hold 20% each. All three jointly control the venture.</p>
+        <p>The mix is energy-major scenarios, robot hardware and systems integration: PetroChina brings heavy, hazardous and repetitive work in oilfields, refining and pipelines; Unitree supplies the bodies; Fanjie fills in deployment. The comment period has not closed, and the transaction still has to clear merger review.</p>
+        <p class="why"><b>Why it matters</b>Embodied-AI orders are shifting from selling hardware to running joint ventures: customers no longer just buy robots, they put scenarios, data and operations into one company. For hardware and algorithm teams, that is a shortcut to real operating data and the start of being bound to delivery targets; the metrics are uptime, intervention frequency and downtime, not degrees of freedom. Whether data flows back to the model has to be written into the terms up front.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 08:06</span>
+          <a class="src" href="https://eu.36kr.com/zh/p/4058879839359873" target="_blank" rel="noopener noreferrer">36Kr · Synced ↗</a>
+        </div>
+        <h3>OpenAI closes the first $11 billion at a $1.25 trillion valuation, out of a round that may reach $20 billion</h3>
+        <p>Bloomberg reported on November 6 that OpenAI has completed the first close of its new round at about $11 billion, valuing the company at $1.25 trillion. The money reached the company's accounts on Friday; the remainder is expected over the coming weeks and the full round could reach $20 billion. OpenAI declined to comment.</p>
+        <p>Coatue and T. Rowe Price participated in the first close. Other investors in the round include SoftBank, Sequoia, Founders Fund and Andreessen Horowitz, plus a consortium of UAE investors. The company is also working with banks to raise from high-net-worth individuals and retail investors.</p>
+        <p>The change in the target is worth recording: in late September the company sought at least $30 billion at a $1.4 trillion valuation; by late October the Financial Times reported the target had been cut by about $10 billion to $20 billion, with the valuation down to $1.25 trillion. CFO Sarah Friar said at the Citi TMT conference on November 6 that demand is still there and the company will keep financing data centres, adding that "a good CFO always raises money when they can."</p>
+        <p class="why"><b>Why it matters</b>$11 billion is a first close, not the round; treating it as the final number overstates certainty, and the gap to the target is the real risk over the next few weeks. Downstream, what matters is where the money goes: data centres, compute contracts and inference prices. A valuation moving from $1.4 trillion to $1.25 trillion says the discount rate on capability-to-revenue is changing. Engineering teams should watch next year's cost per token, not this round's headline number.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 06:44</span>
+          <a class="src" href="https://m.ithome.com/html/1023606.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Microsoft winds down its Oracle AI compute lease as older GPUs lose the economics</h3>
+        <p>Bloomberg reported on November 7 that Microsoft is gradually ending its AI compute leasing arrangement with Oracle: it decided not to renew the contracts and has recently begun shutting down some capacity rented from Oracle. People familiar with the matter said the servers Oracle provided use an earlier generation of Nvidia GPUs, and as Microsoft's own specifications changed, that capacity became less useful.</p>
+        <p>The arrangement was announced in 2023, with Oracle giving Microsoft server access to support a new version of Bing; the full value was never disclosed. Microsoft has since signed large capacity leases with neoclouds including CoreWeave, Nscale and Nebius, committing more than $80 billion to external cloud capacity. The report says some Microsoft managers are unhappy with the cost and delivery delays of the neoclouds.</p>
+        <p>Oracle said AI infrastructure demand remains strong, including for older GPUs. Its fiscal 2026 cloud revenue was $33.99 billion, of which IaaS was $18.09 billion, up 77%, while free cash flow was negative $23.7 billion. Microsoft declined to comment.</p>
+        <p class="why"><b>Why it matters</b>A compute contract loses value with each GPU generation, and that is the hidden cost of leasing versus building: signed at scarcity prices, repriced two or three years later on process node, memory bandwidth and interconnect. Buyers should write migratable capacity specs and exit terms into contracts rather than headline chip counts; sellers still have demand for older cards, but the price anchor has moved. What model teams feel directly is that a fixed budget buys a different amount of useful compute every year.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between 15:39 on November 6 and 11:23 on November 7, 2026 (UTC+8): 7 items. Compiled at 11:23 on November 7.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 013 · 24h window · Generated 2026-11-07 11:23</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../education.html">Education Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>
