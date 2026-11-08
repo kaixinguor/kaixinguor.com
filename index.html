@@ -69,17 +69,17 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 013 期</span>
+          <span class="issue-tag">第 014 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 7 日<span class="weekday">SAT</span></h1>
-        <p class="deck">今天的主线是「把成本摊开」。DeepMind 让智能体在数周内找出旧式 1024 位 RSA 的两处弱点：密码分析比过去的方法快约 1600 倍。OpenAI 完成 110 亿美元首关、估值 1.25 万亿美元，整轮最多 200 亿；同一天，微软被曝停租甲骨文的 AI 算力——合同的价值随 GPU 代际衰减。国内，豆包工作个人版取消 5 小时额度，DeepSeek Harness 把日活 154 万、日耗 92 万亿 Token 摆上台面，中石油昆仑制造与宇树则把工业具身智能装进一家合营公司。<em>能力在涨，账单也在重算。</em></p>
-        <div class="metabar"><span class="pill">第 013 期</span>
+        <h1 class="date">2026 年 11 月 8 日<span class="weekday">SUN</span></h1>
+        <p class="deck">今天的主线是「能力落地之后，责任落在哪一层」。苹果把 HALO 装进宇树 G1，在 6 个未建图环境跑了 360 次单项任务，平均成功率 91%，训练与部署代码全部公开；同一天，Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub，DeepSeek 网页与 API 中断 45 分钟，工信部与北京把机器人「一机一码」推进到落地部署。<em>机器人学会在陌生房间干活，软件也得学会替自己的权限负责。</em></p>
+        <div class="metabar"><span class="pill">第 014 期</span>
       <span class="dot"></span>
-      <span>窗口 11/06 15:39 – 11/07 11:23</span>
+      <span>窗口 11/07 11:23 – 11/08 13:08</span>
       <span class="dot"></span>
-      <span>7 条</span>
+      <span>6 条</span>
       <span class="dot"></span>
-      <span>阅读约 9 分钟</span></div>
+      <span>阅读约 8 分钟</span></div>
       </div>
     </header>
 
@@ -100,15 +100,15 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>DeepMind 用智能体找出旧式 1024 位 RSA 的两处弱点：密码分析比过去的方法快约 1600 倍。</b>在人类密码学家指导下数周完成；RSA 2048 等现代加密不受影响，也没有点名任何在用的生产系统。</p>
+      <p><b>苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%。</b>长序列组合任务平均 70%，最难的「俯身过障—走向目标—推箱子」10 次成功 5 次；数据生成、训练与部署代码已公开。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>OpenAI 完成 110 亿美元首关，估值 1.25 万亿美元，整轮规模最多 200 亿美元；同日微软被曝停租甲骨文 AI 算力。</b>甲骨文 2026 财年 IaaS 收入 180.9 亿美元、同比增长 77%，自由现金流为 -237 亿美元。</p>
+      <p><b>工信部就机器人「一机一码」征求意见，北京同步部署落地。</b>标识码分四段、终身不变，制造商年度申请量一般不超过上年实际产量的 300%；公示期到 12 月 5 日。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>MIT 的 UQ-DAAAM 让机器人自己纠正「记错」的物体：92% 的模糊描述被消解，描述准确率提升 5%。</b>做法是多视角比较加不确定性量化，再把主动补拍的证据写回三维地图记忆。</p>
+      <p><b>Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub。</b>Apiiro 在 103,617 个仓库发现 104,185 份配置文件，其中 1.1% 至少含一个密钥，共 1,379 个。</p>
     </li>
       </ol>
 
@@ -123,14 +123,25 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 06:21</span>
-          <a class="src" href="https://interestingengineering.com/ai-robotics/google-deepmind-agents-expose-older-encryption-flaws" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+          <span class="d">11/07 17:40</span>
+          <a class="src" href="https://www.ithome.com/1/023/767.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>DeepMind 用智能体找出 1024 位 RSA 的两处弱点，密码分析提速约 1600 倍</h3>
-        <p>11 月 6 日（美东），Google DeepMind 公布：在人类密码学家指导下，AI 智能体用数周时间找出旧式 1024 位 RSA 的两处重大弱点。一条路径指向绕过旧式数字签名保护，另一条指向批量分解 1024 位密钥。DeepMind 科学与研究副总裁 Pushmeet Kohli 在社交平台公布了这一结果。这是研究公告，不是已经发生的入侵。</p>
-        <p>数字口径：报道称，同样的密码分析工作比过去的方法快约 1600 倍；两处弱点分别指向旧式数字签名保护与 1024 位密钥分解。研究由 Dj Dvijotham 与 Abhradeep Thakurta 带领，合作方包括加州大学圣地亚哥分校与法国 Inria。DeepMind 明确划了边界：结论不影响 RSA 2048 及更强的现代加密，也没有点名任何在用的生产系统。</p>
-        <p>另一条可复现的结论关于填充（padding）：一旦攻击者能控制签名数据块约一半以上，填充几乎不再提供额外保护。这一点比「1600 倍」更值得记录，因为它给出了一个阈值，而不是一个平均值。</p>
-        <p class="why"><b>看点</b>把「读论文—写代码—跑实验」的循环交给智能体，密码分析的迭代单位从年变成周，这是能力变化，不是奇观。要判断可复现性，先看三件事：用的是哪一版模型、多少算力；1600 倍是相对哪条基线、在哪种攻击路径上成立。对下游，1024 位密钥还活在旧证书链、嵌入式固件和没人记得的长期基础设施里，清点比恐慌有用。<br><b>另一个视角</b>发现成本降了一到两个数量级，替换成本没降：一把旧密钥背后是一台要停机、重新签发、再验证的设备。真正的时间表由设备清单和运维窗口决定，不由论文决定；这笔迁移预算会落在持有旧基础设施的运营商与公共部门账上。</p>
+        <h3>苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%</h3>
+        <p>苹果研究团队在 arXiv 提交论文《Perceptive Humanoid Motion from Simulation》，披露人形机器人自主控制系统 HALO，并把它部署到宇树 G1 上验证：背部加装 3D 打印外壳，内置一台 M4 Pro、64GB 统一内存的 Mac mini，负责机载推理开销较大的 Orchestrator（VLM，默认千问 Qwen3.6-35B-A3B）与 Motion Generator（DiT，千问 Qwen3.5-2B）；G1 自带芯片运行 50Hz 的 Tracker（强化学习策略）。</p>
+        <p>在 6 个未预先扫描或建图的真实环境中，团队做了 360 次单项任务测试，平均成功率 91%。长序列组合任务在单一场景各测 10 次，3 种组合平均 70%；最复杂的「俯身通过障碍—走向目标—推箱子」10 次成功 5 次，为 50%。数据侧用 250 张 H100 合成主要训练数据、耗时约 48 小时；动作生成器用 64 张 B200，跟踪器用 4 张 H100。</p>
+        <p>团队公开了数据生成、模型训练与部署代码。论文也写明局限：新增物理任务仍需人工写提示词、设计动作关键帧，部分动作依赖人类视频或动捕；机器人主要靠视觉，难以直接感知接触，物体离开视野或被遮挡时，涉及接触的任务会明显变差。</p>
+        <p class="why"><b>看点</b>91% 是单项任务的成功率，70% 才是长序列的真实体感——误差会沿步骤累积，这是所有分层控制系统的共同瓶颈。更值得抄的是工程拆分：大模型放在机载 Mac mini 上跑语义与编排，实时策略留在机器人控制器，云端只是可选；再加上公开代码，复现门槛从「有机器人」降到「有 G1 加一台 Mac」。下一步的胜负手在触觉与遮挡处理，不在再刷高单项成功率。<br><b>另一个视角</b>这套管线一次数据循环要 250 张 H100 跑两天，动作生成还要 64 张 B200；能力越依赖合成数据，账单越像训练一家模型公司，而不是造一台机器人。谁来为「每个新任务重新采一遍数据」付钱，会决定这类系统是实验室演示还是可售产品。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 22:16</span>
+          <a class="src" href="https://github.com/Video-Rebirth/hyperflow-h3-flash" target="_blank" rel="noopener noreferrer">GitHub · Video Rebirth ↗</a>
+        </div>
+        <h3>HyperFlow 把 31B 视频音频模型压到 13.7B，4 到 8 步出片，给 INT8 与 GGUF 两版</h3>
+        <p>Video Rebirth 在 GitHub 放出 HyperFlow H3 Flash：以 MiniMax-H3 的 31B 联合视频—音频生成模型为底座，压到 13.7B，推理步数降到 4 至 8 步，同时提供 INT8 量化版和 GGUF 版。仓库把「联合生成」作为卖点——画面与声音在同一次去噪里产生，而不是先出视频再配音。</p>
+        <p>项目页给出的关键数字是参数量、步数与量化格式，没有给出与教师模型逐项对比的基准分数，也没有说明训练数据规模与许可证细节。它目前是社区发布，不是同行评审论文；所有性能数字都应视为作者自测。</p>
+        <p class="why"><b>看点</b>把 31B 蒸馏到 13.7B、再把步数压到个位数，省的是推理时的显存与时间，代价通常落在细节、运动一致性和音画同步上。要判断它能不能用，别只看画质样片：先看 8 步与 4 步的差异、口型与敲击声是否对齐、INT8 掉点多少，以及 GGUF 在消费级显卡上的实际帧率。对做本地生成工具的团队，GGUF 版意味着可以绕开数据中心，但许可证和商用条款要先读清楚。</p>
       </article>
 
     </div>
@@ -147,26 +158,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/06 20:27</span>
-          <a class="src" href="https://finance.sina.com.cn/tech/it/2026-11-06/doc-inixvfew8804680.shtml" target="_blank" rel="noopener noreferrer">新浪科技 ↗</a>
+          <span class="d">11/07 17:26</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261107A0B22Q00" target="_blank" rel="noopener noreferrer">中新经纬 ↗</a>
         </div>
-        <h3>豆包工作个人版取消 5 小时额度限制，改成只在周额度内调度</h3>
-        <p>11 月 6 日晚间，新浪科技获悉，豆包工作个人版从 11 月 6 日起取消 5 小时额度限制。调整后，个人用户不再受 5 小时短周期额度约束，可以在周额度范围内按自己的工作节奏安排使用；周额度与其他使用规则仍以对应套餐为准。</p>
-        <p>此前它和市面上主流大模型产品一样，采用「5 小时 + 7 天」双周期额度管理：即使周额度还有剩余，用户达到 5 小时上限后也要等短周期重置才能继续。</p>
-        <p>官方没有公布周额度的具体数值，也没有说明是否有并发数、速率限制，或是否伴随价格变化。能确认的只有额度周期的变化本身。</p>
-        <p class="why"><b>看点</b>把双周期改成单周期，实质是把限流从「会话层」挪到「账单层」。对写代码、跑批处理的人，5 小时窗口最难受的不是总量，而是必须把长任务切成几段、等钟表；取消后真正要盯的是周额度和单价。对做 agent 的团队，额度模型会直接进调度器设计：什么时候排队、什么时候降级到更小的模型、什么时候让任务跨天。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/07 08:46</span>
-          <a class="src" href="https://eu.36kr.com/zh/p/4057774236652417" target="_blank" rel="noopener noreferrer">36氪 · InfoQ ↗</a>
-        </div>
-        <h3>DeepSeek Harness 日活 154 万、日耗 92 万亿 Token，官方准备给插件作者发 Token</h3>
-        <p>11 月 7 日，InfoQ 在 36 氪发文梳理 DeepSeek Harness 的产品与社区进展：截至 11 月 4 日，以使用官方 API 的用户为统计范围，日活跃用户达到 154 万，日消耗 Token 约 92 万亿；第三方插件约 3.5 万个，约 60% 的活跃用户制作或安装过至少一款第三方插件。</p>
-        <p>产品从 8 月 13 日的 v0.1 走到现在，主打「一切皆插件」：内置功能也可以被第三方插件替换。官方称下一步会提升插件 API 的稳定性与兼容性、完善插件安全机制、建设官方插件市场，并筹备面向插件作者的 Token 激励、技术交流与作品推荐。</p>
-        <p>代价也在显现：有用户装到 15 个以上插件后出现无限循环、上下文溢出与 Token 消耗上升；也有人报告完成一个小项目时消耗是 OpenCode 的 20 倍、单任务耗时 30 至 40 分钟。10 月 15 日至 11 月 4 日的多个版本在补插件依赖同步、热重载、长对话压缩与缓存复用。</p>
-        <p class="why"><b>看点</b>154 万日活、92 万亿 Token/天，说明它已经是「运行环境」而不是「工具」。插件越多，模型要读的工具说明越多，上下文预算被工具本身吃掉——这是所有 agent 平台的同一道题：插件发现、权限与上下文开销必须一起设计，否则开放度会变成使用门槛。对开发者，插件市场是分发入口，也是审核与兼容性成本的开始；真正该被计量的指标是「每个插件的有效调用率」，不是插件总数。</p>
+        <h3>DeepSeek 网页与 API 部分中断 45 分钟，官方状态页称已修复</h3>
+        <p>11 月 7 日 15:11 至 15:56，DeepSeek 网页与 API 出现部分中断，话题「DeepSeek 又崩了」登上微博热搜。官方状态页显示问题已解决、服务恢复；同一页面记录 8 月 16 个故障、7 月 8 个、10 月 7 个。</p>
+        <p>这次没有公布受影响的具体模型、区域与请求比例，也没有说明是容量、依赖还是发布引起的。能确认的只有中断时段和恢复状态。</p>
+        <p class="why"><b>看点</b>45 分钟对聊天用户是一次刷新，对跑批量任务的 agent 却可能是一次不可重入的失败。把重试做成幂等、把长任务切成可检查点的步骤、在客户端保留可切换的备用模型，比追问「为什么崩」更能降低损失。状态页只给「部分中断」四个字，也说明对外可观测性还不够：至少该有按模型、按接口的成功率与延迟曲线，否则开发者无法判断该降级还是该等待。</p>
       </article>
 
     </div>
@@ -183,14 +181,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/06 19:02</span>
-          <a class="src" href="https://interestingengineering.com/ai-robotics/mit-robot-erase-and-rewrite-bad-memories" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+          <span class="d">11/07</span>
+          <a class="src" href="https://cybersecuritynews.com/claude-codes-yes-and-dont-ask-again/" target="_blank" rel="noopener noreferrer">Cyber Security News ↗</a>
         </div>
-        <h3>MIT 给机器人记忆加「不确定性」：92% 的模糊物体能被自己纠正</h3>
-        <p>MIT 团队公布一套名为 UQ-DAAAM 的系统，让机器人判断自己对物体的描述有多可信：它比较同一物体来自不同视角的多份描述，量化不确定性，再主动选择能降低不确定性的新视角，把多次观察合并成更准确的描述，写回机器人的记忆。</p>
-        <p>它建立在早前的 DAAAM 框架上——用视觉语言模型给机载相机拍到的物体生成描述，存进三维地图表示，供机器人回答问题或执行任务时检索。新系统加的是不确定性量化这一层：测试中，92% 的模糊物体被消解，描述准确率提升 5%。</p>
-        <p>据 Interesting Engineering 报道，论文与代码的公开链接尚未给出；系统在什么硬件上运行、单次纠正需要补拍几个视角，也还没有对外披露。</p>
-        <p class="why"><b>看点</b>机器人出错往往不是「看不见」，而是「记错了还很自信」。把不确定性显式化、再用主动视角选择去补证据，等于把视觉语言模型的幻觉问题转成一个可执行的采集策略。5% 看起来小，但它作用在记忆层：一条错误描述会被后续几十步任务继承、放大。真正难的是校准——模型说「不确定」的时候，是不是真的不确定；这决定了补拍策略会不会白跑。</p>
+        <h3>Claude Code 的「不再询问」把密码写进项目配置，1,122 份公开副本含密钥</h3>
+        <p>Apiiro 的扫描显示，Claude Code 在用户选择「Yes, and don't ask again」后，会把整条命令原样写进项目的 <code>.claude/settings.local.json</code>；如果命令里带着密码或 token，它们也以明文落盘。公开 GitHub 上有 104,185 份该文件，分布在 103,617 个仓库，其中 1,122 份（约 1.1%）至少含一个密钥，合计 1,379 个。</p>
+        <p>拆开看：379 个数据库密码、43 个公网服务器 SSH 登录、42 个 GitHub/GitLab/npm token、23 个 AWS 密钥；涉及 63 家组织。研究者追踪的 1,105 个仓库里，539 个的该文件由带 Claude 共同署名的提交改动。含密钥的文件中，一半在默认分支上已存在至少 217 天；另有 734 个历史密钥、211 个 fork 副本。把共享配置、历史版本与聊天记录都算上，共 2,539 个密钥、1,994 个仓库。</p>
+        <p>常见扫描器漏得不少：gitleaks 标出 564 份、TruffleHog 标出 643 份，两者都没标出的有 215 份，主要是写在命令行里的密码。Claude Code 首次写入时会把该文件加进本机全局 git excludes，但这个保护不随仓库走，也不会改写已经提交的历史。</p>
+        <p class="why"><b>看点</b>这不是「模型泄露」，是权限交互的设计问题：为了少弹窗，工具把「允许这条命令」记成了「记住这条命令的全文」。修复顺序应该是先轮换、再清理——从仓库删除文件不会抹掉 git 历史与 fork。对做 agent 的团队，允许规则要按命令模式而不是完整命令行保存，密钥只以变量名出现；同时把 <code>.claude/</code>、<code>.cursor/</code> 这类目录当成 <code>.env</code> 来扫。默认值选错一次，代价是几百个凭据。</p>
       </article>
 
     </div>
@@ -207,14 +205,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/06 17:37</span>
-          <a class="src" href="https://finance.sina.com.cn/wm/2026-11-06/doc-inixuywy8817500.shtml" target="_blank" rel="noopener noreferrer">央视财经 ↗</a>
+          <span class="d">11/07 12:53</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261107A07AQI00" target="_blank" rel="noopener noreferrer">北京青年报 ↗</a>
         </div>
-        <h3>中石油昆仑制造与宇树科技设合营企业，做工业具身智能机器人方案</h3>
-        <p>北京市市场监督管理局近日披露，中国石油集团昆仑制造有限公司及其一致行动人昆仑资本，与宇树科技股份有限公司、北京泛界智能科技有限公司签署协议，拟新设一家合营企业，从事工业具身智能机器人解决方案业务。该经营者集中简易案件已进入公示期，公示期为 2026 年 11 月 4 日至 11 月 13 日。</p>
-        <p>股权结构：交易完成后，昆仑制造及其一致行动人合计持有合营企业 60% 股份，宇树科技与泛界智能各持 20%，三方共同控制。</p>
-        <p>这是「能源央企场景 + 机器人本体 + 系统集成」的组合：中石油一侧提供油田、炼化、管道等重载、危险、重复的作业场景，宇树提供本体，泛界智能补方案落地。公示期尚未结束，交易仍需走完经营者集中程序。</p>
-        <p class="why"><b>看点</b>具身智能的订单正在从「卖本体」转向「合资运营」：客户不再只买机器人，而是把场景、数据和运维一起装进一家公司。对本体与算法团队，这类合营是拿到真实工况数据的捷径，也是被绑定交付指标的起点——考核的不是自由度，而是连续运行时长、人工介入频次与停机时间。数据能不能回流到模型，条款里要提前写清楚。</p>
+        <h3>机器人将有「身份证」：工信部就「一机一码」征求意见，北京启动部署</h3>
+        <p>11 月 6 日，工信部装备工业一司就《机器人产品标识码管理暂行办法（征求意见稿）》公开征求意见，公示期至 12 月 5 日。标识码用于标识机器人整机身份，由制造商代码、产品说明代码、产品顺序号代码和其他代码四部分组成，覆盖工业、服务与特种机器人。</p>
+        <p>办法要求制造商至少采用数字存储、供人识读、机器识读三种方式赋码，多形式信息须一致；标识应清晰、耐久、不易更换，终身不变、不可篡改、不可擦除。年度申请量一般不超过上一年度实际产量的 300%，确需增加要提交产量证明；办法实施前已出厂销售的产品，需通过平台备案自定义序列号。11 月 4 日，北京市经信局已召开赋码工作动员部署会。</p>
+        <p class="why"><b>看点</b>这是给具身智能补「身份层」：有了统一编码，召回、溯源、安全事件定责和二手流转才有共同的主键。真正的成本在产线与数据：每台机器多一道赋码工序，制造商要改 MES，平台要定字段与接口，旧设备还要补录序列号。对做机器人软件的人，标识码会成为设备注册、权限绑定与固件升级的入口；现在就该想清楚哪些数据写进码、哪些留在云端，以及断网时怎么验。</p>
       </article>
 
     </div>
@@ -231,26 +228,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 08:06</span>
-          <a class="src" href="https://eu.36kr.com/zh/p/4058879839359873" target="_blank" rel="noopener noreferrer">36氪 · 机器之心 ↗</a>
+          <span class="d">11/07 20:50</span>
+          <a class="src" href="http://k.sina.com.cn/article_5952915705_162d248f906703ss08.html" target="_blank" rel="noopener noreferrer">天津广播电视台 ↗</a>
         </div>
-        <h3>OpenAI 完成 110 亿美元首关，估值 1.25 万亿美元，整轮最多 200 亿</h3>
-        <p>据彭博社 11 月 6 日报道，OpenAI 已完成新一轮融资的首关，规模约 110 亿美元，对应公司估值 1.25 万亿美元；资金已在周五划入公司账户，剩余部分预计未来数周完成，整轮规模可能达到 200 亿美元。OpenAI 拒绝对此置评。</p>
-        <p>参与首关的投资者包括 Coatue、T. Rowe Price；本轮其他投资方包括软银、红杉资本、Founders Fund、Andreessen Horowitz，以及一个阿联酋投资者财团。公司也在与投行合作，向高净值个人与散户募资。</p>
-        <p>口径变化值得记录：9 月底公司希望以 1.4 万亿美元估值融资至少 300 亿美元；10 月底据 FT 报道，目标下调约 100 亿美元至 200 亿、估值降至 1.25 万亿。CFO Sarah Friar 11 月 6 日在花旗 TMT 峰会上说，需求仍在，公司会继续为数据中心融资，并称「好的 CFO 总是在能融资时融资」。</p>
-        <p class="why"><b>看点</b>110 亿是「首关」不是「整轮」，把它当成最终结果会高估确定性；首关与目标之间的差额，才是接下来几周的真实风险。对下游，真正相关的是钱去哪：数据中心、算力合同与推理价格。估值从 1.4 万亿降到 1.25 万亿，说明资本对「能力—收入」的折现率在变；工程团队该盯的是明年的单位推理成本，而不是这一轮的估值数字。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/07 06:44</span>
-          <a class="src" href="https://m.ithome.com/html/1023606.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>微软停租甲骨文 AI 算力：旧一代 GPU 让合同失去性价比</h3>
-        <p>据彭博社 11 月 7 日报道，微软正在逐步结束与甲骨文的 AI 算力租赁合作：先决定不再续签相关合同，近期开始关闭部分从甲骨文租用的计算资源。知情人士称，原因是甲骨文提供的服务器使用较早一代英伟达 GPU，随着微软自身技术规格变化，这些算力的实用价值下降。</p>
-        <p>这项合作 2023 年公布，甲骨文为微软新版 Bing 提供服务器访问，完整金额未披露。此后微软与 CoreWeave、Nscale、Nebius 等新兴云厂商签下大规模算力租约，对外部云服务的承诺超过 800 亿美元；报道称部分微软管理层对新兴云厂商的高成本与交付延迟不满。</p>
-        <p>甲骨文发言人表示，其 AI 基础设施需求依然强劲，包括较早一代 GPU；公司 2026 财年云收入 339.89 亿美元，其中 IaaS 收入 180.9 亿美元、同比增长 77%，但自由现金流为 -237 亿美元。微软拒绝置评。</p>
-        <p class="why"><b>看点</b>算力合同的价值随 GPU 代际衰减，这是「租赁」相对「自建」的隐性成本：签约时按稀缺定价，两三年后按制程、显存带宽和互联重新定价。对买方，合同里该写的是可迁移的算力规格与退出条款，而不是总卡数；对卖方，旧卡的需求还在，但价格锚已经换了。模型团队能直接感知到的是同一笔预算买到的有效算力每年都在变。</p>
+        <h3>2026 中国软件大会在天津开幕，发布「人机物融合」智能化软件开源社区</h3>
+        <p>11 月 7 日，2026 中国软件大会在天津开幕，由中国计算机学会主办、天津大学与南开大学承办，吸引 3000 多名高校、科研院所与软件企业人员参加，同期开设 60 多场交流活动，覆盖基础软件、人工智能软件工程、工业软件等方向。</p>
+        <p>开幕式发布的「人机物融合智能化软件开源社区」，由北京大学、清华大学、哈尔滨工业大学的团队，联合小米智能、麒麟软件、中科曙光等共同研发，提供算力、数据集与开发工具，支撑产学研共同做算法迭代。天津计划联合本地信创企业，面向智慧工厂、智慧港口做适配改造。</p>
+        <p class="why"><b>看点</b>这类社区的价值不在发布仪式，而在三件事：算力与数据是否真的对校外开发者开放、贡献如何审核、产出的组件能否被现有工具链直接依赖。若只是把校内项目搬到一起，它会变成展示页；若能提供稳定的基准、数据集版本和可复现的构建，它才可能成为「AI 软件工程」的基础设施。对团队来说，先看它有没有公开的 issue 列表与发布节奏，比看签约名单有用。</p>
       </article>
 
     </div>
@@ -259,9 +243,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 6 日 15:39 至 11 月 7 日 11:23（北京时间）之间发布的报道，共 7 条。检索时间 11/07 11:23。</p>
+        <p>本期收录 2026 年 11 月 7 日 11:23 至 11 月 8 日 13:08（北京时间）之间发布的报道，共 6 条。检索时间 11/08 13:08。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 013 · 24h window · Generated 2026-11-07 11:23</p>
+    <p class="sig">AI Daily · Issue 014 · 24h window · Generated 2026-11-08 13:08</p>
       </div>
     </footer>
       </div>
@@ -274,17 +258,17 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 013</span>
+          <span class="issue-tag">Issue 014</span>
         </div>
-        <h1 class="date">November 7, 2026<span class="weekday">SAT</span></h1>
-        <p class="deck">Today's thread is the invoice. DeepMind's agents found two weaknesses in legacy 1024-bit RSA in a matter of weeks, making cryptanalysis roughly 1,600 times faster. OpenAI closed the first $11 billion of a round that could reach $20 billion at a $1.25 trillion valuation, while Microsoft was reported to be winding down its Oracle AI compute lease: a contract whose value decays with each GPU generation. In China, Doubao dropped its five-hour quota, DeepSeek Harness put 1.54 million daily users and 92 trillion tokens a day on the record, and PetroChina's Kunlun Manufacturing and Unitree put industrial embodied AI into a joint venture. <em>Capability keeps rising; the bill keeps getting recalculated.</em></p>
-        <div class="metabar"><span class="pill">Issue 013</span>
+        <h1 class="date">November 8, 2026<span class="weekday">SUN</span></h1>
+        <p class="deck">Today's thread is where responsibility lands after capability ships. Apple's HALO ran on a Unitree G1 in six unmapped rooms, averaging 91% across 360 single-task trials, with training and deployment code released. The same day, Claude Code's "don't ask again" left 1,122 secret-bearing config files on public GitHub, DeepSeek's web and API went down for 45 minutes, and Beijing began deploying a national robot ID code. <em>The robot learned to work in a strange room; the software still has to own its permissions.</em></p>
+        <div class="metabar"><span class="pill">Issue 014</span>
       <span class="dot"></span>
-      <span>Window Nov 6, 15:39 – Nov 7, 11:23 (UTC+8)</span>
+      <span>Window Nov 7, 11:23 – Nov 8, 13:08</span>
       <span class="dot"></span>
-      <span>7 items</span>
+      <span>6 stories</span>
       <span class="dot"></span>
-      <span>9 min read</span></div>
+      <span>8 min read</span></div>
       </div>
     </header>
 
@@ -305,15 +289,15 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>DeepMind agents found two weaknesses in legacy 1024-bit RSA, making cryptanalysis about 1,600 times faster.</b> The work took weeks under human cryptanalysts; RSA 2048 and stronger modern encryption are unaffected, and no live production system was named.</p>
+      <p><b>Apple's HALO averages 91% across 360 single-task trials on a Unitree G1 in six unmapped environments.</b> Three composite tasks averaged 70%; the hardest run — duck under an obstacle, walk to the target, push a box — succeeded 5 times out of 10. Data-generation, training and deployment code are public.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>OpenAI closed the first $11 billion of a round at a $1.25 trillion valuation, with the full round potentially reaching $20 billion, while Microsoft was reported to be ending its Oracle AI compute lease.</b> Oracle's fiscal 2026 IaaS revenue was $18.09 billion, up 77%, against negative free cash flow of $23.7 billion.</p>
+      <p><b>China's industry ministry is consulting on a robot ID code, and Beijing has started deploying it.</b> The code has four segments and is fixed for a machine's lifetime; annual applications are generally capped at 300% of the previous year's output. Comments close December 5.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>MIT's UQ-DAAAM lets robots correct their own bad object memories: it resolved ambiguity for 92% of objects and raised description accuracy by 5%.</b> The method compares views, quantifies uncertainty, and writes the evidence from extra viewpoints back into a 3D map.</p>
+      <p><b>Claude Code's "don't ask again" left 1,122 secret-bearing config files on public GitHub.</b> Apiiro found 104,185 copies across 103,617 repositories; 1.1% held at least one secret, 1,379 in total.</p>
     </li>
       </ol>
 
@@ -321,21 +305,32 @@
     <div class="chead">
       <span class="cnum">01</span>
       <h2>Models &amp; Capability</h2>
-      <span class="cen">Models &amp; Capability</span>
+      <span class="cen">模型与能力</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 06:21</span>
-          <a class="src" href="https://interestingengineering.com/ai-robotics/google-deepmind-agents-expose-older-encryption-flaws" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+          <span class="d">11/07 17:40</span>
+          <a class="src" href="https://www.ithome.com/1/023/767.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
         </div>
-        <h3>DeepMind agents find two weaknesses in 1024-bit RSA, making cryptanalysis about 1,600 times faster</h3>
-        <p>On November 6 (US Eastern), Google DeepMind reported that AI agents, guided by human cryptanalysts, found two significant weaknesses in legacy 1024-bit RSA in a matter of weeks. One line of work points to bypassing older digital signature protections; the other involves factoring 1024-bit keys in bulk. Pushmeet Kohli, DeepMind's VP of science, announced the result on social media. This is a research announcement, not a live compromise.</p>
-        <p>The numbers: the report says the same cryptanalytic work now runs roughly 1,600 times faster than previous methods, with the two weaknesses pointing at legacy signature protection and at 1024-bit key factoring. The work was led by Dj Dvijotham and Abhradeep Thakurta, with researchers from UC San Diego and France's Inria. DeepMind drew the boundary explicitly: modern encryption such as RSA 2048 is not affected, and no production system was named.</p>
-        <p>The more reproducible finding concerns padding: once an attacker controls roughly half or more of the signed data block, padding provides almost no additional protection. That is worth recording because it gives a threshold rather than an average.</p>
-        <p class="why"><b>Why it matters</b>Handing the read-paper, write-code, run-experiment loop to an agent moves cryptanalysis from years to weeks; that is a capability shift, not a spectacle. To judge reproducibility, check three things: which model version and how much compute; what baseline the 1,600-times figure is measured against and on which attack path. Downstream, 1024-bit keys still live in old certificate chains, embedded firmware and long-lived infrastructure nobody remembers provisioning. Inventory beats panic.<br><b>The other view</b> Discovery got one to two orders of magnitude cheaper; replacement did not. Behind each legacy key sits a device that has to be taken offline, re-issued and re-verified, so the real schedule is set by asset lists and maintenance windows, not by a paper. The migration budget lands on whoever still operates the old infrastructure.</p>
+        <h3>Apple's HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1</h3>
+        <p>Apple's research team has posted "Perceptive Humanoid Motion from Simulation" on arXiv, describing HALO, a humanoid control system it deployed on a Unitree G1. The robot carries a 3D-printed shell and a Mac mini with an M4 Pro and 64GB of unified memory, which runs the compute-heavy Orchestrator (a vision-language model, Qwen3.6-35B-A3B by default) and the Motion Generator (a DiT, Qwen3.5-2B). The G1's own chip runs a 50Hz Tracker, a reinforcement-learning policy.</p>
+        <p>Across six real environments that had not been pre-scanned or mapped, the team ran 360 single-task trials and averaged 91% success. For long-horizon compositions, three task sequences were each run 10 times in one environment, averaging 70%; the hardest — duck under an obstacle, walk to the target, push a box — succeeded 5 out of 10. The data pipeline used 250 H100s for about 48 hours; the motion generator trained on 64 B200s, the tracker on four H100s.</p>
+        <p>The team released data-generation, training and deployment code. The paper also states the limits: new physical tasks still need hand-written prompts and keyframes, some motions rely on human video or motion capture, and the robot is vision-only, so contact-heavy tasks degrade when objects leave the camera's view or become occluded.</p>
+        <p class="why"><b>Why it matters</b>The 91% is single-task success; 70% is what long sequences actually feel like, because errors compound across steps — the shared bottleneck of every hierarchical control stack. The more copyable part is the engineering split: the large model runs on an on-robot Mac mini for semantics and orchestration, the real-time policy stays on the robot controller, and the cloud is optional. With code released, reproduction drops from "own a robot" to "own a G1 and a Mac". The next fight is touch and occlusion, not another point of single-task success.<br><b>The other view</b>One data cycle costs 250 H100s for two days, and motion generation another 64 B200s. The more capability depends on synthetic data, the more the bill looks like a model company's, not a robot company's. Who pays to re-collect data for every new task will decide whether this stays a lab demo or becomes a product.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 22:16</span>
+          <a class="src" href="https://github.com/Video-Rebirth/hyperflow-h3-flash" target="_blank" rel="noopener noreferrer">GitHub · Video Rebirth ↗</a>
+        </div>
+        <h3>HyperFlow squeezes a 31B video-and-audio model to 13.7B, generating in 4 to 8 steps</h3>
+        <p>Video Rebirth has published HyperFlow H3 Flash on GitHub: a compressed version of MiniMax-H3, a 31B joint video-audio generation model, cut to 13.7B parameters and 4 to 8 inference steps, with INT8 and GGUF builds. The pitch is joint generation — picture and sound emerge from the same denoising loop rather than a video pass followed by a dubbing pass.</p>
+        <p>The repository states parameter count, step count and quantization formats, but gives no head-to-head benchmark against the teacher model, no training-data scale, and no full licence details. This is a community release, not a peer-reviewed paper; every performance figure is the authors' own.</p>
+        <p class="why"><b>Why it matters</b>Distilling 31B into 13.7B and pushing steps into single digits buys memory and latency, and usually charges for it in detail, motion consistency and audio-visual sync. Before trusting it, compare the 4-step and 8-step outputs, check whether lip movements line up with impacts and speech, measure the INT8 drop, and look at real frame rates for the GGUF build on consumer cards. For teams building local generation tools, GGUF means escaping the data centre — but read the licence and commercial terms first.</p>
       </article>
 
     </div>
@@ -345,33 +340,20 @@
     <div class="chead">
       <span class="cnum">02</span>
       <h2>Products &amp; Agents</h2>
-      <span class="cen">Products &amp; Agents</span>
+      <span class="cen">产品与智能体</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/06 20:27</span>
-          <a class="src" href="https://finance.sina.com.cn/tech/it/2026-11-06/doc-inixvfew8804680.shtml" target="_blank" rel="noopener noreferrer">Sina Tech ↗</a>
+          <span class="d">11/07 17:26</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261107A0B22Q00" target="_blank" rel="noopener noreferrer">China News Service ↗</a>
         </div>
-        <h3>Doubao's individual work plan drops the five-hour quota, leaving only a weekly budget</h3>
-        <p>On the evening of November 6, Sina Tech reported that Doubao's individual work plan had removed its five-hour quota starting that day. Individual users are no longer bound by the short five-hour window and can spread usage across the weekly allowance as their work requires; the weekly quota and other rules still follow the plan.</p>
-        <p>Previously it used the same dual-cycle scheme as most assistant products, with a five-hour and a seven-day limit: even with weekly allowance left, a user who hit the five-hour cap had to wait for the short window to reset.</p>
-        <p>The company did not disclose the weekly quota's size, whether concurrency or rate limits apply, or whether pricing changed. What is confirmed is the change in quota structure itself.</p>
-        <p class="why"><b>Why it matters</b>Collapsing two cycles into one moves throttling from the session layer to the billing layer. For people running code or batch jobs, the five-hour window hurt not through total volume but by forcing long tasks to be chopped up and resumed on a clock. The thing to watch now is the weekly budget and the unit price. For agent builders, quota shape feeds directly into scheduler design: when to queue, when to fall back to a smaller model, when to let a job run overnight.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/07 08:46</span>
-          <a class="src" href="https://eu.36kr.com/zh/p/4057774236652417" target="_blank" rel="noopener noreferrer">36Kr · InfoQ ↗</a>
-        </div>
-        <h3>DeepSeek Harness reports 1.54 million daily users and 92 trillion tokens a day, and plans Token rewards for plugin authors</h3>
-        <p>On November 7, InfoQ, publishing via 36Kr, laid out DeepSeek Harness's product and community numbers: as of November 4, measured among users of the official API, daily active users reached 1.54 million and daily token consumption about 92 trillion. Third-party plugins number roughly 35,000, and about 60% of active users have made or installed at least one.</p>
-        <p>Since v0.1 on August 13 the product has pushed an "everything is a plugin" design, under which even built-in features can be replaced by third-party plugins. The company says the next steps are more stable and compatible plugin APIs, better plugin security, an official plugin marketplace, and a support programme for plugin authors built around Token rewards, technical exchange and featured listings.</p>
-        <p>The costs are showing too. Some users report infinite loops, context overflow and higher token burn after installing more than 15 plugins, and one reported a small project costing 20 times what OpenCode used. Releases between October 15 and November 4 added dependency sync, hot reload, long-conversation compaction and cache reuse.</p>
-        <p class="why"><b>Why it matters</b>1.54 million daily users and 92 trillion tokens a day make this a runtime, not a tool. Every plugin adds instructions the model must read, so context budget gets eaten by the tooling itself. Every agent platform faces the same equation: plugin discovery, permissions and context overhead have to be designed together, or openness becomes a usability tax. For developers, a marketplace is distribution and also an audit and compatibility bill. The metric that matters is effective calls per plugin, not plugin count.</p>
+        <h3>DeepSeek's web and API partially fail for 45 minutes; status page says fixed</h3>
+        <p>From 15:11 to 15:56 Beijing time on November 7, DeepSeek's web interface and API suffered a partial outage. The hashtag "DeepSeek is down again" reached the top of Weibo's trending list. The company's status page reported the issue resolved and service restored; the same page records 16 incidents in August, eight in July and seven in October.</p>
+        <p>DeepSeek did not say which models, regions or share of requests were affected, nor whether capacity, a dependency or a release caused it. Only the outage window and the recovery are confirmed.</p>
+        <p class="why"><b>Why it matters</b>Forty-five minutes is a refresh for a chat user and a non-replayable failure for a batch agent. Idempotent retries, checkpoints inside long tasks, and a client-side fallback model limit the damage more than any post-mortem. The status page's "partial outage" is also a signal about observability: developers need per-model, per-endpoint success rates and latency curves to decide whether to degrade or wait.</p>
       </article>
 
     </div>
@@ -381,21 +363,21 @@
     <div class="chead">
       <span class="cnum">03</span>
       <h2>Research &amp; Safety</h2>
-      <span class="cen">Research &amp; Safety</span>
+      <span class="cen">研究与安全</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/06 19:02</span>
-          <a class="src" href="https://interestingengineering.com/ai-robotics/mit-robot-erase-and-rewrite-bad-memories" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+          <span class="d">11/07</span>
+          <a class="src" href="https://cybersecuritynews.com/claude-codes-yes-and-dont-ask-again/" target="_blank" rel="noopener noreferrer">Cyber Security News ↗</a>
         </div>
-        <h3>MIT adds uncertainty to robot memory, letting 92% of ambiguous objects correct themselves</h3>
-        <p>A team at MIT has built a system called UQ-DAAAM that lets a robot judge how much to trust its own description of an object. It compares several descriptions of the same object from different viewpoints, quantifies the uncertainty, then actively chooses new viewpoints that reduce it, merging the observations into a better description that is written back into memory.</p>
-        <p>It builds on DAAAM, an earlier framework in which a vision-language model writes descriptions of objects seen by onboard cameras and stores them in a 3D map representation for later retrieval during questions or manipulation. The new layer is uncertainty quantification: in tests it resolved ambiguity for 92% of objects and improved description accuracy by 5%.</p>
-        <p>According to Interesting Engineering, public links to the paper and code were not yet available, and it is not yet disclosed what hardware the system runs on or how many extra viewpoints a correction requires.</p>
-        <p class="why"><b>Why it matters</b>Robots usually fail not because they cannot see but because they remember wrongly and stay confident about it. Making uncertainty explicit and then choosing viewpoints to gather evidence turns a VLM hallucination into an executable sensing policy. Five points looks small, but it lands on memory, where one bad description gets inherited and amplified over dozens of downstream steps. The hard part is calibration: when the model says it is unsure, is it actually unsure? That determines whether the extra views are worth the motion.</p>
+        <h3>Claude Code's "don't ask again" writes passwords into project settings; 1,122 public copies hold secrets</h3>
+        <p>Apiiro's scan found that when a Claude Code user picks "Yes, and don't ask again", the tool saves the entire command verbatim in the project's <code>.claude/settings.local.json</code>. If the command contains a password or token, it lands on disk in plain text. Public GitHub holds 104,185 copies of that file across 103,617 repositories; 1,122 of them — about 1.1% — contain at least one secret, 1,379 in total.</p>
+        <p>The breakdown: 379 database passwords, 43 SSH logins for public servers, 42 GitHub/GitLab/npm tokens and 23 AWS keys, spread across 63 organisations. In 539 of the 1,105 repositories the researchers traced, the file was changed by a commit listing Claude as a co-author. Half of the secret-bearing files had been on the default branch for at least 217 days; there are another 734 historical secrets and 211 forked copies. Counting shared settings, history and agent chat logs, the total reaches 2,539 secrets across 1,994 repositories.</p>
+        <p>Common scanners miss many of them: gitleaks flagged 564 files and TruffleHog 643, and neither flagged 215, mostly passwords typed inside commands. Claude Code adds the file to the user's global git excludes the first time it writes it, but that protection does not travel with the repository and does not rewrite history.</p>
+        <p class="why"><b>Why it matters</b>This is not a model leak; it is a permissions-design failure. To reduce prompts, the tool turned "allow this command" into "store this command in full". The order of repair is rotate first, clean second — deleting the file does not remove it from git history or forks. Agent builders should save allow-rules by command pattern, keep secrets as variable names only, and treat <code>.claude/</code>, <code>.cursor/</code> and similar directories as <code>.env</code> files in secret scanning. One wrong default can cost hundreds of credentials.</p>
       </article>
 
     </div>
@@ -405,21 +387,20 @@
     <div class="chead">
       <span class="cnum">04</span>
       <h2>Embodied AI</h2>
-      <span class="cen">Embodied AI</span>
+      <span class="cen">具身智能</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/06 17:37</span>
-          <a class="src" href="https://finance.sina.com.cn/wm/2026-11-06/doc-inixuywy8817500.shtml" target="_blank" rel="noopener noreferrer">CCTV Finance ↗</a>
+          <span class="d">11/07 12:53</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261107A07AQI00" target="_blank" rel="noopener noreferrer">Beijing Youth Daily ↗</a>
         </div>
-        <h3>PetroChina's Kunlun Manufacturing and Unitree form a joint venture for industrial embodied robotics</h3>
-        <p>The Beijing Municipal Administration for Market Regulation has disclosed that China National Petroleum Corporation's Kunlun Manufacturing and its concert party Kunlun Capital signed an agreement with Unitree Robotics and Beijing Fanjie Intelligence to create a joint venture. The new company will work on industrial embodied-AI robot solutions. The simplified merger review case is in its public comment period from November 4 to November 13, 2026.</p>
-        <p>Ownership after closing: Kunlun Manufacturing and its concert party hold 60%, while Unitree and Fanjie Intelligence hold 20% each. All three jointly control the venture.</p>
-        <p>The mix is energy-major scenarios, robot hardware and systems integration: PetroChina brings heavy, hazardous and repetitive work in oilfields, refining and pipelines; Unitree supplies the bodies; Fanjie fills in deployment. The comment period has not closed, and the transaction still has to clear merger review.</p>
-        <p class="why"><b>Why it matters</b>Embodied-AI orders are shifting from selling hardware to running joint ventures: customers no longer just buy robots, they put scenarios, data and operations into one company. For hardware and algorithm teams, that is a shortcut to real operating data and the start of being bound to delivery targets; the metrics are uptime, intervention frequency and downtime, not degrees of freedom. Whether data flows back to the model has to be written into the terms up front.</p>
+        <h3>Robots get an ID: China's industry ministry consults on a "one machine, one code" rule as Beijing starts deployment</h3>
+        <p>On November 6, the equipment industry department of China's Ministry of Industry and Information Technology opened public consultation on a draft measure for robot product identification codes, with comments due December 5. The code identifies a complete robot and has four segments: manufacturer code, product description code, serial-number code and other codes. It covers industrial, service and special-purpose robots.</p>
+        <p>The draft requires manufacturers to mark each unit in at least three ways — digital storage, human-readable and machine-readable — with consistent information. Marks must be clear, durable, hard to replace, fixed for life, tamper-proof and non-erasable. Annual applications are generally capped at 300% of the previous year's actual output, with extra volume requiring production evidence. Products shipped before the rule takes effect must register their own serial numbers on the platform. Beijing's economy and information technology bureau held a mobilisation meeting on November 4.</p>
+        <p class="why"><b>Why it matters</b>This adds an identity layer to embodied AI: a common primary key for recalls, traceability, incident liability and resale. The real cost sits in production lines and data — an extra marking step per unit, changes to MES, field and API definitions on the platform, and retroactive serial registration for installed machines. For robot-software teams, the code becomes the entry point for device registration, permission binding and firmware updates. Decide now what goes into the code, what stays in the cloud, and how it is verified offline.</p>
       </article>
 
     </div>
@@ -429,33 +410,20 @@
     <div class="chead">
       <span class="cnum">05</span>
       <h2>Industry &amp; Capital</h2>
-      <span class="cen">Industry &amp; Capital</span>
+      <span class="cen">行业与资本</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 08:06</span>
-          <a class="src" href="https://eu.36kr.com/zh/p/4058879839359873" target="_blank" rel="noopener noreferrer">36Kr · Synced ↗</a>
+          <span class="d">11/07 20:50</span>
+          <a class="src" href="http://k.sina.com.cn/article_5952915705_162d248f906703ss08.html" target="_blank" rel="noopener noreferrer">Tianjin TV ↗</a>
         </div>
-        <h3>OpenAI closes the first $11 billion at a $1.25 trillion valuation, out of a round that may reach $20 billion</h3>
-        <p>Bloomberg reported on November 6 that OpenAI has completed the first close of its new round at about $11 billion, valuing the company at $1.25 trillion. The money reached the company's accounts on Friday; the remainder is expected over the coming weeks and the full round could reach $20 billion. OpenAI declined to comment.</p>
-        <p>Coatue and T. Rowe Price participated in the first close. Other investors in the round include SoftBank, Sequoia, Founders Fund and Andreessen Horowitz, plus a consortium of UAE investors. The company is also working with banks to raise from high-net-worth individuals and retail investors.</p>
-        <p>The change in the target is worth recording: in late September the company sought at least $30 billion at a $1.4 trillion valuation; by late October the Financial Times reported the target had been cut by about $10 billion to $20 billion, with the valuation down to $1.25 trillion. CFO Sarah Friar said at the Citi TMT conference on November 6 that demand is still there and the company will keep financing data centres, adding that "a good CFO always raises money when they can."</p>
-        <p class="why"><b>Why it matters</b>$11 billion is a first close, not the round; treating it as the final number overstates certainty, and the gap to the target is the real risk over the next few weeks. Downstream, what matters is where the money goes: data centres, compute contracts and inference prices. A valuation moving from $1.4 trillion to $1.25 trillion says the discount rate on capability-to-revenue is changing. Engineering teams should watch next year's cost per token, not this round's headline number.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/07 06:44</span>
-          <a class="src" href="https://m.ithome.com/html/1023606.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>Microsoft winds down its Oracle AI compute lease as older GPUs lose the economics</h3>
-        <p>Bloomberg reported on November 7 that Microsoft is gradually ending its AI compute leasing arrangement with Oracle: it decided not to renew the contracts and has recently begun shutting down some capacity rented from Oracle. People familiar with the matter said the servers Oracle provided use an earlier generation of Nvidia GPUs, and as Microsoft's own specifications changed, that capacity became less useful.</p>
-        <p>The arrangement was announced in 2023, with Oracle giving Microsoft server access to support a new version of Bing; the full value was never disclosed. Microsoft has since signed large capacity leases with neoclouds including CoreWeave, Nscale and Nebius, committing more than $80 billion to external cloud capacity. The report says some Microsoft managers are unhappy with the cost and delivery delays of the neoclouds.</p>
-        <p>Oracle said AI infrastructure demand remains strong, including for older GPUs. Its fiscal 2026 cloud revenue was $33.99 billion, of which IaaS was $18.09 billion, up 77%, while free cash flow was negative $23.7 billion. Microsoft declined to comment.</p>
-        <p class="why"><b>Why it matters</b>A compute contract loses value with each GPU generation, and that is the hidden cost of leasing versus building: signed at scarcity prices, repriced two or three years later on process node, memory bandwidth and interconnect. Buyers should write migratable capacity specs and exit terms into contracts rather than headline chip counts; sellers still have demand for older cards, but the price anchor has moved. What model teams feel directly is that a fixed budget buys a different amount of useful compute every year.</p>
+        <h3>China Software Conference opens in Tianjin with an open-source community for human-machine-object software</h3>
+        <p>The 2026 China Software Conference opened in Tianjin on November 7, hosted by the China Computer Federation and organised by Tianjin University and Nankai University. More than 3,000 people from universities, research institutes and software firms attended, with over 60 sessions covering basic software, AI software engineering and industrial software.</p>
+        <p>The opening ceremony launched an open-source community for "human-machine-object fusion" intelligent software, developed by teams from Peking University, Tsinghua and Harbin Institute of Technology together with Xiaomi, Kylin Software and Sugon. It offers compute, datasets and development tools for joint algorithm work. Tianjin plans to adapt it with local vendors for smart factories and smart ports.</p>
+        <p class="why"><b>Why it matters</b>The value of such a community is not the launch event but three things: whether compute and data are genuinely open to outside developers, how contributions are reviewed, and whether its components can be depended on by existing toolchains. Without a public issue tracker and a release cadence it becomes a showcase; with reproducible builds and versioned datasets it could become infrastructure for AI software engineering. Check the issue list before the signing photo.</p>
       </article>
 
     </div>
@@ -464,9 +432,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between 15:39 on November 6 and 11:23 on November 7, 2026 (UTC+8): 7 items. Compiled at 11:23 on November 7.</p>
+        <p>This issue covers reports published between 11:23 on November 7 and 13:08 on November 8, 2026 (UTC+8): 6 items. Compiled at 13:08 on November 8.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 013 · 24h window · Generated 2026-11-07 11:23</p>
+    <p class="sig">AI Daily · Issue 014 · 24h window · Generated 2026-11-08 13:08</p>
       </div>
     </footer>
       </div>
@@ -491,8 +459,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">07</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-07.html" title="DeepMind 用智能体找出 1024 位 RSA 的两处弱点，密码分析提速约 1600 倍">
+        <summary><span>2026 年 11 月</span><span class="am-count">08</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-08.html" title="苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%">
+          <span class="a-date">2026.11.08 <em>SUN</em></span>
+          <span class="a-head">苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-07.html" title="DeepMind 用智能体找出 1024 位 RSA 的两处弱点，密码分析提速约 1600 倍">
           <span class="a-date">2026.11.07 <em>SAT</em></span>
           <span class="a-head">DeepMind 用智能体找出 1024 位 RSA 的两处弱点，密码分析提速约 1600 倍</span>
         </a>
@@ -553,8 +525,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">07</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-07-en.html" title="DeepMind agents find two weaknesses in 1024-bit RSA, making cryptanalysis about 1,600 times faster">
+        <summary><span>November 2026</span><span class="am-count">08</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-08-en.html" title="Apple&#39;s HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1">
+          <span class="a-date">2026.11.08 <em>SUN</em></span>
+          <span class="a-head">Apple&#39;s HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-07-en.html" title="DeepMind agents find two weaknesses in 1024-bit RSA, making cryptanalysis about 1,600 times faster">
           <span class="a-date">2026.11.07 <em>SAT</em></span>
           <span class="a-head">DeepMind agents find two weaknesses in 1024-bit RSA, making cryptanalysis about 1,600 times faster</span>
         </a>

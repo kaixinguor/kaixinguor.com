@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 8, 2026</title>
+<meta name="description" content="AI Daily, November 8, 2026, Issue 014: Apple&#39;s HALO averages 91% across 360 single-task trials on a Unitree G1 in six unmapped rooms; Claude Code&#39;s &#39;don&#39;t ask again&#39; leaves 1,122 secret-bearing config files on public GitHub; DeepSeek&#39;s web and API go down for 45 minutes; Beijing starts deploying a robot ID code; HyperFlow compresses a 31B video-audio model to 13.7B; a new open-source community for human-machine-object software.">
+<meta property="og:title" content="AI Daily · November 8, 2026">
+<meta property="og:description" content="AI Daily, November 8, 2026, Issue 014: Apple&#39;s HALO averages 91% across 360 single-task trials on a Unitree G1 in six unmapped rooms; Claude Code&#39;s &#39;don&#39;t ask again&#39; leaves 1,122 secret-bearing config files on public GitHub; DeepSeek&#39;s web and API go down for 45 minutes; Beijing starts deploying a robot ID code; HyperFlow compresses a 31B video-audio model to 13.7B; a new open-source community for human-machine-object software.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-08-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-07T11:23:00+08:00/2026-11-08T13:08:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-08-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-08.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-08-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../education.html">Education Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-08.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 014</span>
+    </div>
+    <h1 class="date">November 8, 2026<span class="weekday">SUN</span></h1>
+    <p class="deck">Today's thread is where responsibility lands after capability ships. Apple's HALO ran on a Unitree G1 in six unmapped rooms, averaging 91% across 360 single-task trials, with training and deployment code released. The same day, Claude Code's "don't ask again" left 1,122 secret-bearing config files on public GitHub, DeepSeek's web and API went down for 45 minutes, and Beijing began deploying a national robot ID code. <em>The robot learned to work in a strange room; the software still has to own its permissions.</em></p>
+    <div class="metabar"><span class="pill">Issue 014</span>
+      <span class="dot"></span>
+      <span>Window Nov 7, 11:23 – Nov 8, 13:08</span>
+      <span class="dot"></span>
+      <span>6 stories</span>
+      <span class="dot"></span>
+      <span>8 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Apple's HALO averages 91% across 360 single-task trials on a Unitree G1 in six unmapped environments.</b> Three composite tasks averaged 70%; the hardest run — duck under an obstacle, walk to the target, push a box — succeeded 5 times out of 10. Data-generation, training and deployment code are public.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>China's industry ministry is consulting on a robot ID code, and Beijing has started deploying it.</b> The code has four segments and is fixed for a machine's lifetime; annual applications are generally capped at 300% of the previous year's output. Comments close December 5.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Claude Code's "don't ask again" left 1,122 secret-bearing config files on public GitHub.</b> Apiiro found 104,185 copies across 103,617 repositories; 1.1% held at least one secret, 1,379 in total.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 17:40</span>
+          <a class="src" href="https://www.ithome.com/1/023/767.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+        </div>
+        <h3>Apple's HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1</h3>
+        <p>Apple's research team has posted "Perceptive Humanoid Motion from Simulation" on arXiv, describing HALO, a humanoid control system it deployed on a Unitree G1. The robot carries a 3D-printed shell and a Mac mini with an M4 Pro and 64GB of unified memory, which runs the compute-heavy Orchestrator (a vision-language model, Qwen3.6-35B-A3B by default) and the Motion Generator (a DiT, Qwen3.5-2B). The G1's own chip runs a 50Hz Tracker, a reinforcement-learning policy.</p>
+        <p>Across six real environments that had not been pre-scanned or mapped, the team ran 360 single-task trials and averaged 91% success. For long-horizon compositions, three task sequences were each run 10 times in one environment, averaging 70%; the hardest — duck under an obstacle, walk to the target, push a box — succeeded 5 out of 10. The data pipeline used 250 H100s for about 48 hours; the motion generator trained on 64 B200s, the tracker on four H100s.</p>
+        <p>The team released data-generation, training and deployment code. The paper also states the limits: new physical tasks still need hand-written prompts and keyframes, some motions rely on human video or motion capture, and the robot is vision-only, so contact-heavy tasks degrade when objects leave the camera's view or become occluded.</p>
+        <p class="why"><b>Why it matters</b>The 91% is single-task success; 70% is what long sequences actually feel like, because errors compound across steps — the shared bottleneck of every hierarchical control stack. The more copyable part is the engineering split: the large model runs on an on-robot Mac mini for semantics and orchestration, the real-time policy stays on the robot controller, and the cloud is optional. With code released, reproduction drops from "own a robot" to "own a G1 and a Mac". The next fight is touch and occlusion, not another point of single-task success.<br><b>The other view</b>One data cycle costs 250 H100s for two days, and motion generation another 64 B200s. The more capability depends on synthetic data, the more the bill looks like a model company's, not a robot company's. Who pays to re-collect data for every new task will decide whether this stays a lab demo or becomes a product.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 22:16</span>
+          <a class="src" href="https://github.com/Video-Rebirth/hyperflow-h3-flash" target="_blank" rel="noopener noreferrer">GitHub · Video Rebirth ↗</a>
+        </div>
+        <h3>HyperFlow squeezes a 31B video-and-audio model to 13.7B, generating in 4 to 8 steps</h3>
+        <p>Video Rebirth has published HyperFlow H3 Flash on GitHub: a compressed version of MiniMax-H3, a 31B joint video-audio generation model, cut to 13.7B parameters and 4 to 8 inference steps, with INT8 and GGUF builds. The pitch is joint generation — picture and sound emerge from the same denoising loop rather than a video pass followed by a dubbing pass.</p>
+        <p>The repository states parameter count, step count and quantization formats, but gives no head-to-head benchmark against the teacher model, no training-data scale, and no full licence details. This is a community release, not a peer-reviewed paper; every performance figure is the authors' own.</p>
+        <p class="why"><b>Why it matters</b>Distilling 31B into 13.7B and pushing steps into single digits buys memory and latency, and usually charges for it in detail, motion consistency and audio-visual sync. Before trusting it, compare the 4-step and 8-step outputs, check whether lip movements line up with impacts and speech, measure the INT8 drop, and look at real frame rates for the GGUF build on consumer cards. For teams building local generation tools, GGUF means escaping the data centre — but read the licence and commercial terms first.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 17:26</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261107A0B22Q00" target="_blank" rel="noopener noreferrer">China News Service ↗</a>
+        </div>
+        <h3>DeepSeek's web and API partially fail for 45 minutes; status page says fixed</h3>
+        <p>From 15:11 to 15:56 Beijing time on November 7, DeepSeek's web interface and API suffered a partial outage. The hashtag "DeepSeek is down again" reached the top of Weibo's trending list. The company's status page reported the issue resolved and service restored; the same page records 16 incidents in August, eight in July and seven in October.</p>
+        <p>DeepSeek did not say which models, regions or share of requests were affected, nor whether capacity, a dependency or a release caused it. Only the outage window and the recovery are confirmed.</p>
+        <p class="why"><b>Why it matters</b>Forty-five minutes is a refresh for a chat user and a non-replayable failure for a batch agent. Idempotent retries, checkpoints inside long tasks, and a client-side fallback model limit the damage more than any post-mortem. The status page's "partial outage" is also a signal about observability: developers need per-model, per-endpoint success rates and latency curves to decide whether to degrade or wait.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07</span>
+          <a class="src" href="https://cybersecuritynews.com/claude-codes-yes-and-dont-ask-again/" target="_blank" rel="noopener noreferrer">Cyber Security News ↗</a>
+        </div>
+        <h3>Claude Code's "don't ask again" writes passwords into project settings; 1,122 public copies hold secrets</h3>
+        <p>Apiiro's scan found that when a Claude Code user picks "Yes, and don't ask again", the tool saves the entire command verbatim in the project's <code>.claude/settings.local.json</code>. If the command contains a password or token, it lands on disk in plain text. Public GitHub holds 104,185 copies of that file across 103,617 repositories; 1,122 of them — about 1.1% — contain at least one secret, 1,379 in total.</p>
+        <p>The breakdown: 379 database passwords, 43 SSH logins for public servers, 42 GitHub/GitLab/npm tokens and 23 AWS keys, spread across 63 organisations. In 539 of the 1,105 repositories the researchers traced, the file was changed by a commit listing Claude as a co-author. Half of the secret-bearing files had been on the default branch for at least 217 days; there are another 734 historical secrets and 211 forked copies. Counting shared settings, history and agent chat logs, the total reaches 2,539 secrets across 1,994 repositories.</p>
+        <p>Common scanners miss many of them: gitleaks flagged 564 files and TruffleHog 643, and neither flagged 215, mostly passwords typed inside commands. Claude Code adds the file to the user's global git excludes the first time it writes it, but that protection does not travel with the repository and does not rewrite history.</p>
+        <p class="why"><b>Why it matters</b>This is not a model leak; it is a permissions-design failure. To reduce prompts, the tool turned "allow this command" into "store this command in full". The order of repair is rotate first, clean second — deleting the file does not remove it from git history or forks. Agent builders should save allow-rules by command pattern, keep secrets as variable names only, and treat <code>.claude/</code>, <code>.cursor/</code> and similar directories as <code>.env</code> files in secret scanning. One wrong default can cost hundreds of credentials.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 12:53</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261107A07AQI00" target="_blank" rel="noopener noreferrer">Beijing Youth Daily ↗</a>
+        </div>
+        <h3>Robots get an ID: China's industry ministry consults on a "one machine, one code" rule as Beijing starts deployment</h3>
+        <p>On November 6, the equipment industry department of China's Ministry of Industry and Information Technology opened public consultation on a draft measure for robot product identification codes, with comments due December 5. The code identifies a complete robot and has four segments: manufacturer code, product description code, serial-number code and other codes. It covers industrial, service and special-purpose robots.</p>
+        <p>The draft requires manufacturers to mark each unit in at least three ways — digital storage, human-readable and machine-readable — with consistent information. Marks must be clear, durable, hard to replace, fixed for life, tamper-proof and non-erasable. Annual applications are generally capped at 300% of the previous year's actual output, with extra volume requiring production evidence. Products shipped before the rule takes effect must register their own serial numbers on the platform. Beijing's economy and information technology bureau held a mobilisation meeting on November 4.</p>
+        <p class="why"><b>Why it matters</b>This adds an identity layer to embodied AI: a common primary key for recalls, traceability, incident liability and resale. The real cost sits in production lines and data — an extra marking step per unit, changes to MES, field and API definitions on the platform, and retroactive serial registration for installed machines. For robot-software teams, the code becomes the entry point for device registration, permission binding and firmware updates. Decide now what goes into the code, what stays in the cloud, and how it is verified offline.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 20:50</span>
+          <a class="src" href="http://k.sina.com.cn/article_5952915705_162d248f906703ss08.html" target="_blank" rel="noopener noreferrer">Tianjin TV ↗</a>
+        </div>
+        <h3>China Software Conference opens in Tianjin with an open-source community for human-machine-object software</h3>
+        <p>The 2026 China Software Conference opened in Tianjin on November 7, hosted by the China Computer Federation and organised by Tianjin University and Nankai University. More than 3,000 people from universities, research institutes and software firms attended, with over 60 sessions covering basic software, AI software engineering and industrial software.</p>
+        <p>The opening ceremony launched an open-source community for "human-machine-object fusion" intelligent software, developed by teams from Peking University, Tsinghua and Harbin Institute of Technology together with Xiaomi, Kylin Software and Sugon. It offers compute, datasets and development tools for joint algorithm work. Tianjin plans to adapt it with local vendors for smart factories and smart ports.</p>
+        <p class="why"><b>Why it matters</b>The value of such a community is not the launch event but three things: whether compute and data are genuinely open to outside developers, how contributions are reviewed, and whether its components can be depended on by existing toolchains. Without a public issue tracker and a release cadence it becomes a showcase; with reproducible builds and versioned datasets it could become infrastructure for AI software engineering. Check the issue list before the signing photo.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between 11:23 on November 7 and 13:08 on November 8, 2026 (UTC+8): 6 items. Compiled at 13:08 on November 8.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 014 · 24h window · Generated 2026-11-08 13:08</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../education.html">Education Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

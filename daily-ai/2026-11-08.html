@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 8 日</title>
+<meta name="description" content="2026-11-08 AI 日报第 014 期：苹果 HALO 在宇树 G1 上跑通 6 个未建图环境、360 次单项任务平均成功率 91%；Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub；DeepSeek 网页与 API 中断 45 分钟；工信部与北京推进机器人「一机一码」；HyperFlow 把 31B 视频音频模型压到 13.7B；中国软件大会发布人机物融合开源社区。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 8 日">
+<meta property="og:description" content="2026-11-08 AI 日报第 014 期：苹果 HALO 在宇树 G1 上跑通 6 个未建图环境、360 次单项任务平均成功率 91%；Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub；DeepSeek 网页与 API 中断 45 分钟；工信部与北京推进机器人「一机一码」；HyperFlow 把 31B 视频音频模型压到 13.7B；中国软件大会发布人机物融合开源社区。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-08.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-07T11:23:00+08:00/2026-11-08T13:08:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-08.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-08.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-08-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-08-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 014 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 8 日<span class="weekday">SUN</span></h1>
+    <p class="deck">今天的主线是「能力落地之后，责任落在哪一层」。苹果把 HALO 装进宇树 G1，在 6 个未建图环境跑了 360 次单项任务，平均成功率 91%，训练与部署代码全部公开；同一天，Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub，DeepSeek 网页与 API 中断 45 分钟，工信部与北京把机器人「一机一码」推进到落地部署。<em>机器人学会在陌生房间干活，软件也得学会替自己的权限负责。</em></p>
+    <div class="metabar"><span class="pill">第 014 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/07 11:23 – 11/08 13:08</span>
+      <span class="dot"></span>
+      <span>6 条</span>
+      <span class="dot"></span>
+      <span>阅读约 8 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%。</b>长序列组合任务平均 70%，最难的「俯身过障—走向目标—推箱子」10 次成功 5 次；数据生成、训练与部署代码已公开。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>工信部就机器人「一机一码」征求意见，北京同步部署落地。</b>标识码分四段、终身不变，制造商年度申请量一般不超过上年实际产量的 300%；公示期到 12 月 5 日。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub。</b>Apiiro 在 103,617 个仓库发现 104,185 份配置文件，其中 1.1% 至少含一个密钥，共 1,379 个。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 17:40</span>
+          <a class="src" href="https://www.ithome.com/1/023/767.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%</h3>
+        <p>苹果研究团队在 arXiv 提交论文《Perceptive Humanoid Motion from Simulation》，披露人形机器人自主控制系统 HALO，并把它部署到宇树 G1 上验证：背部加装 3D 打印外壳，内置一台 M4 Pro、64GB 统一内存的 Mac mini，负责机载推理开销较大的 Orchestrator（VLM，默认千问 Qwen3.6-35B-A3B）与 Motion Generator（DiT，千问 Qwen3.5-2B）；G1 自带芯片运行 50Hz 的 Tracker（强化学习策略）。</p>
+        <p>在 6 个未预先扫描或建图的真实环境中，团队做了 360 次单项任务测试，平均成功率 91%。长序列组合任务在单一场景各测 10 次，3 种组合平均 70%；最复杂的「俯身通过障碍—走向目标—推箱子」10 次成功 5 次，为 50%。数据侧用 250 张 H100 合成主要训练数据、耗时约 48 小时；动作生成器用 64 张 B200，跟踪器用 4 张 H100。</p>
+        <p>团队公开了数据生成、模型训练与部署代码。论文也写明局限：新增物理任务仍需人工写提示词、设计动作关键帧，部分动作依赖人类视频或动捕；机器人主要靠视觉，难以直接感知接触，物体离开视野或被遮挡时，涉及接触的任务会明显变差。</p>
+        <p class="why"><b>看点</b>91% 是单项任务的成功率，70% 才是长序列的真实体感——误差会沿步骤累积，这是所有分层控制系统的共同瓶颈。更值得抄的是工程拆分：大模型放在机载 Mac mini 上跑语义与编排，实时策略留在机器人控制器，云端只是可选；再加上公开代码，复现门槛从「有机器人」降到「有 G1 加一台 Mac」。下一步的胜负手在触觉与遮挡处理，不在再刷高单项成功率。<br><b>另一个视角</b>这套管线一次数据循环要 250 张 H100 跑两天，动作生成还要 64 张 B200；能力越依赖合成数据，账单越像训练一家模型公司，而不是造一台机器人。谁来为「每个新任务重新采一遍数据」付钱，会决定这类系统是实验室演示还是可售产品。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 22:16</span>
+          <a class="src" href="https://github.com/Video-Rebirth/hyperflow-h3-flash" target="_blank" rel="noopener noreferrer">GitHub · Video Rebirth ↗</a>
+        </div>
+        <h3>HyperFlow 把 31B 视频音频模型压到 13.7B，4 到 8 步出片，给 INT8 与 GGUF 两版</h3>
+        <p>Video Rebirth 在 GitHub 放出 HyperFlow H3 Flash：以 MiniMax-H3 的 31B 联合视频—音频生成模型为底座，压到 13.7B，推理步数降到 4 至 8 步，同时提供 INT8 量化版和 GGUF 版。仓库把「联合生成」作为卖点——画面与声音在同一次去噪里产生，而不是先出视频再配音。</p>
+        <p>项目页给出的关键数字是参数量、步数与量化格式，没有给出与教师模型逐项对比的基准分数，也没有说明训练数据规模与许可证细节。它目前是社区发布，不是同行评审论文；所有性能数字都应视为作者自测。</p>
+        <p class="why"><b>看点</b>把 31B 蒸馏到 13.7B、再把步数压到个位数，省的是推理时的显存与时间，代价通常落在细节、运动一致性和音画同步上。要判断它能不能用，别只看画质样片：先看 8 步与 4 步的差异、口型与敲击声是否对齐、INT8 掉点多少，以及 GGUF 在消费级显卡上的实际帧率。对做本地生成工具的团队，GGUF 版意味着可以绕开数据中心，但许可证和商用条款要先读清楚。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 17:26</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261107A0B22Q00" target="_blank" rel="noopener noreferrer">中新经纬 ↗</a>
+        </div>
+        <h3>DeepSeek 网页与 API 部分中断 45 分钟，官方状态页称已修复</h3>
+        <p>11 月 7 日 15:11 至 15:56，DeepSeek 网页与 API 出现部分中断，话题「DeepSeek 又崩了」登上微博热搜。官方状态页显示问题已解决、服务恢复；同一页面记录 8 月 16 个故障、7 月 8 个、10 月 7 个。</p>
+        <p>这次没有公布受影响的具体模型、区域与请求比例，也没有说明是容量、依赖还是发布引起的。能确认的只有中断时段和恢复状态。</p>
+        <p class="why"><b>看点</b>45 分钟对聊天用户是一次刷新，对跑批量任务的 agent 却可能是一次不可重入的失败。把重试做成幂等、把长任务切成可检查点的步骤、在客户端保留可切换的备用模型，比追问「为什么崩」更能降低损失。状态页只给「部分中断」四个字，也说明对外可观测性还不够：至少该有按模型、按接口的成功率与延迟曲线，否则开发者无法判断该降级还是该等待。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07</span>
+          <a class="src" href="https://cybersecuritynews.com/claude-codes-yes-and-dont-ask-again/" target="_blank" rel="noopener noreferrer">Cyber Security News ↗</a>
+        </div>
+        <h3>Claude Code 的「不再询问」把密码写进项目配置，1,122 份公开副本含密钥</h3>
+        <p>Apiiro 的扫描显示，Claude Code 在用户选择「Yes, and don't ask again」后，会把整条命令原样写进项目的 <code>.claude/settings.local.json</code>；如果命令里带着密码或 token，它们也以明文落盘。公开 GitHub 上有 104,185 份该文件，分布在 103,617 个仓库，其中 1,122 份（约 1.1%）至少含一个密钥，合计 1,379 个。</p>
+        <p>拆开看：379 个数据库密码、43 个公网服务器 SSH 登录、42 个 GitHub/GitLab/npm token、23 个 AWS 密钥；涉及 63 家组织。研究者追踪的 1,105 个仓库里，539 个的该文件由带 Claude 共同署名的提交改动。含密钥的文件中，一半在默认分支上已存在至少 217 天；另有 734 个历史密钥、211 个 fork 副本。把共享配置、历史版本与聊天记录都算上，共 2,539 个密钥、1,994 个仓库。</p>
+        <p>常见扫描器漏得不少：gitleaks 标出 564 份、TruffleHog 标出 643 份，两者都没标出的有 215 份，主要是写在命令行里的密码。Claude Code 首次写入时会把该文件加进本机全局 git excludes，但这个保护不随仓库走，也不会改写已经提交的历史。</p>
+        <p class="why"><b>看点</b>这不是「模型泄露」，是权限交互的设计问题：为了少弹窗，工具把「允许这条命令」记成了「记住这条命令的全文」。修复顺序应该是先轮换、再清理——从仓库删除文件不会抹掉 git 历史与 fork。对做 agent 的团队，允许规则要按命令模式而不是完整命令行保存，密钥只以变量名出现；同时把 <code>.claude/</code>、<code>.cursor/</code> 这类目录当成 <code>.env</code> 来扫。默认值选错一次，代价是几百个凭据。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 12:53</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261107A07AQI00" target="_blank" rel="noopener noreferrer">北京青年报 ↗</a>
+        </div>
+        <h3>机器人将有「身份证」：工信部就「一机一码」征求意见，北京启动部署</h3>
+        <p>11 月 6 日，工信部装备工业一司就《机器人产品标识码管理暂行办法（征求意见稿）》公开征求意见，公示期至 12 月 5 日。标识码用于标识机器人整机身份，由制造商代码、产品说明代码、产品顺序号代码和其他代码四部分组成，覆盖工业、服务与特种机器人。</p>
+        <p>办法要求制造商至少采用数字存储、供人识读、机器识读三种方式赋码，多形式信息须一致；标识应清晰、耐久、不易更换，终身不变、不可篡改、不可擦除。年度申请量一般不超过上一年度实际产量的 300%，确需增加要提交产量证明；办法实施前已出厂销售的产品，需通过平台备案自定义序列号。11 月 4 日，北京市经信局已召开赋码工作动员部署会。</p>
+        <p class="why"><b>看点</b>这是给具身智能补「身份层」：有了统一编码，召回、溯源、安全事件定责和二手流转才有共同的主键。真正的成本在产线与数据：每台机器多一道赋码工序，制造商要改 MES，平台要定字段与接口，旧设备还要补录序列号。对做机器人软件的人，标识码会成为设备注册、权限绑定与固件升级的入口；现在就该想清楚哪些数据写进码、哪些留在云端，以及断网时怎么验。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/07 20:50</span>
+          <a class="src" href="http://k.sina.com.cn/article_5952915705_162d248f906703ss08.html" target="_blank" rel="noopener noreferrer">天津广播电视台 ↗</a>
+        </div>
+        <h3>2026 中国软件大会在天津开幕，发布「人机物融合」智能化软件开源社区</h3>
+        <p>11 月 7 日，2026 中国软件大会在天津开幕，由中国计算机学会主办、天津大学与南开大学承办，吸引 3000 多名高校、科研院所与软件企业人员参加，同期开设 60 多场交流活动，覆盖基础软件、人工智能软件工程、工业软件等方向。</p>
+        <p>开幕式发布的「人机物融合智能化软件开源社区」，由北京大学、清华大学、哈尔滨工业大学的团队，联合小米智能、麒麟软件、中科曙光等共同研发，提供算力、数据集与开发工具，支撑产学研共同做算法迭代。天津计划联合本地信创企业，面向智慧工厂、智慧港口做适配改造。</p>
+        <p class="why"><b>看点</b>这类社区的价值不在发布仪式，而在三件事：算力与数据是否真的对校外开发者开放、贡献如何审核、产出的组件能否被现有工具链直接依赖。若只是把校内项目搬到一起，它会变成展示页；若能提供稳定的基准、数据集版本和可复现的构建，它才可能成为「AI 软件工程」的基础设施。对团队来说，先看它有没有公开的 issue 列表与发布节奏，比看签约名单有用。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 7 日 11:23 至 11 月 8 日 13:08（北京时间）之间发布的报道，共 6 条。检索时间 11/08 13:08。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 014 · 24h window · Generated 2026-11-08 13:08</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

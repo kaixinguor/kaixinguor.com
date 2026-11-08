@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 07 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 8 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-08.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-08.html</guid>
+      <pubDate>Sun, 08 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是「能力落地之后，责任落在哪一层」。苹果把 HALO 装进宇树 G1，在 6 个未建图环境跑了 360 次单项任务，平均成功率 91%，训练与部署代码全部公开；同一天，Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub，DeepSeek 网页与 API 中断 45 分钟，工信部与北京把机器人「一机一码」推进到落地部署。机器人学会在陌生房间干活，软件也得学会替自己的权限负责。 苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 7 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-07.html</link>

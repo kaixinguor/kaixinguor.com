@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 07 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 8, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-08-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-08-en.html</guid>
+      <pubDate>Sun, 08 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today&#39;s thread is where responsibility lands after capability ships. Apple&#39;s HALO ran on a Unitree G1 in six unmapped rooms, averaging 91% across 360 single-task trials, with training and deployment code released. The same day, Claude Code&#39;s &quot;don&#39;t ask again&quot; left 1,122 secret-bearing config files on public GitHub, DeepSeek&#39;s web and API went down for 45 minutes, and Beijing began deploying a national robot ID code. The robot learned to work in a strange room; the software still has to own its permissions. Apple&#39;s HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1</description>
+    </item>
     <item>
       <title>AI Daily · November 7, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-07-en.html</link>
