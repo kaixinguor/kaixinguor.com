@@ -10,7 +10,7 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="AI 日报（中文）" hreflang="zh-CN" href="feed.xml">
 <link rel="alternate" type="application/rss+xml" title="AI Daily (English)" hreflang="en" href="feed-en.xml">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 <script>
 (function () {
   try {
@@ -96,7 +96,7 @@
         </label>
 
         <label>
-          <span data-i18n="wish.q5">主要在哪台设备上用？</span>
+          <span data-i18n="wish.q4">主要在哪台设备上用？</span>
           <select name="platform">
             <option>Mac</option>
             <option data-i18n="wish.d2">Mac + iPhone</option>
@@ -105,17 +105,6 @@
           </select>
         </label>
       </div>
-
-      <label>
-        <span data-i18n="wish.q4">如果已经有人做好了，你愿意付多少？</span>
-        <select name="price">
-          <option data-i18n="wish.p0">不想付钱，免费才用</option>
-          <option data-i18n="wish.p1">¥50 以内</option>
-          <option data-i18n="wish.p2">¥50 – ¥200</option>
-          <option data-i18n="wish.p3">¥200 – ¥1000</option>
-          <option data-i18n="wish.p4">¥1000 以上，愿意单独定制</option>
-        </select>
-      </label>
 
       <div class="wish-actions">
         <button class="btn btn-primary" type="submit" data-i18n="wish.send">发送</button>
@@ -126,14 +115,8 @@
 
     <div class="wish-contact">
       <div class="wish-contact-text">
-        <p class="wish-contact-lead" data-i18n="wish.contact.lead">不想等，或者想直接聊？找我本人：</p>
-        <p class="wish-contact-line">
-          <button type="button" class="wish-copy-email" id="copy-contact" data-email="contact@kaixinguor.com" title="点击复制">
-            <span class="email" data-i18n="wish.contact.email">contact@kaixinguor.com</span>
-            <span class="hint" data-i18n="wish.contact.copy">点击复制</span>
-          </button>
-        </p>
-        <p class="faint" data-i18n="wish.contact.note">许愿是异步的——我逐条读，但不一定回。真着急、想当面说、或者要报价，直接来找我。</p>
+        <p class="wish-contact-lead" data-i18n="wish.contact.lead">想直接聊？加我微信</p>
+        <p class="faint" data-i18n="wish.contact.note">许愿是异步的——我逐条读，但不一定回。真着急、想直接聊，扫码就行。</p>
       </div>
 
       <figure class="wish-qr">
@@ -193,7 +176,7 @@
   </div>
 </dialog>
 
-<script src="lang.js?v=7"></script>
+<script src="lang.js?v=8"></script>
 <script src="site.js?v=6"></script>
 <script>
 (function () {
@@ -246,19 +229,18 @@
     return { subject: subjEl.value.trim(), body: bodyEl.value.trim() };
   }
 
-  // 把表单里的六问拼成正文
+  // 把表单里的四问拼成正文
   function collect() {
     var v = function (n) { return (form.elements[n].value || '').trim(); };
     var en = document.documentElement.lang === 'en';
     var L = en
-      ? ['1. What should it do: ', '2. How do you cope today: ', '3. How often: ', '4. Would pay: ', '5. Device: ']
-      : ['1. 想让它干什么：', '2. 现在怎么应付：', '3. 多久碰到一次：', '4. 愿意付多少：', '5. 主要设备：'];
+      ? ['1. What should it do: ', '2. How do you cope today: ', '3. How often: ', '4. Device: ']
+      : ['1. 想让它干什么：', '2. 现在怎么应付：', '3. 多久碰到一次：', '4. 主要设备：'];
     var text = [
       L[0], v('what'), '',
       L[1], v('now'), '',
       L[2], form.elements.freq.selectedOptions[0].text, '',
-      L[3], form.elements.price.selectedOptions[0].text, '',
-      L[4], form.elements.platform.selectedOptions[0].text
+      L[3], form.elements.platform.selectedOptions[0].text
     ].join('\n');
     contact = '';
     return {
@@ -333,63 +315,6 @@
   copyBtn.addEventListener('click', copy);
   cancelBtn.addEventListener('click', function () { dlg.close(); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
-})();
-</script>
-<script>
-(function () {
-  var btn = document.getElementById('copy-contact');
-  if (!btn) return;
-  var email = btn.getAttribute('data-email') || 'contact@kaixinguor.com';
-  var hint = btn.querySelector('.hint');
-  var base = null;   // 点击时再取，避免语言切换后被写死成中文
-  var timer = null;
-
-  function flash(text) {
-    if (!hint) return;
-    if (base === null) base = hint.textContent;
-    hint.textContent = text;
-    clearTimeout(timer);
-    timer = setTimeout(function () { hint.textContent = base; }, 1600);
-  }
-
-  function copiedLabel() {
-    return document.documentElement.lang === 'en' ? 'Copied' : '已复制';
-  }
-
-  btn.addEventListener('click', function () {
-    var text = email;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () {
-        flash(copiedLabel());
-      }).catch(function () { fallback(text); });
-    } else {
-      fallback(text);
-    }
-  });
-
-  function fallback(text) {
-    var ta = document.createElement('textarea');
-    ta.value = text;
-    ta.setAttribute('readonly', '');
-    ta.style.position = 'fixed';
-    ta.style.top = '-1000px';
-    document.body.appendChild(ta);
-    ta.select();
-    var ok = false;
-    try { ok = document.execCommand('copy'); } catch (e) {}
-    document.body.removeChild(ta);
-    if (ok) {
-      flash(copiedLabel());
-      return;
-    }
-    // 再退一步：把地址选中，让人自己按 ⌘C / Ctrl+C
-    var range = document.createRange();
-    range.selectNodeContents(btn.querySelector('.email'));
-    var sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
-    flash(document.documentElement.lang === 'en' ? 'press ⌘C' : '按 ⌘C 复制');
-  }
 })();
 </script>
 </body>
