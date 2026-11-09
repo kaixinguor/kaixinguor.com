@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "kaixinguor.com · 三份日报（AI / 经济 / 教育）+ 工具站",
+  "description": "kaixinguor.com · 四份日报（AI / 经济 / 教育 / 心理学）+ 工具站",
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs --check",
@@ -20,7 +20,9 @@
     "check:overlap": "node scripts/coverage.mjs check",
     "report:coverage": "node scripts/coverage.mjs report",
     "publish:education": "node scripts/publish-education.mjs",
-    "check:links:education": "node scripts/check-links.mjs --latest --section education"
+    "check:links:education": "node scripts/check-links.mjs --latest --section education",
+    "publish:psychology": "node scripts/publish-psychology.mjs",
+    "check:links:psychology": "node scripts/check-links.mjs --latest --section psychology"
   },
   "engines": {
     "node": ">=20"

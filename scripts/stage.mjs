@@ -28,11 +28,15 @@ const files = [
   "feed-en.xml",
   "feed-economy.xml",
   "feed-economy-en.xml",
+  "feed-education.xml",
+  "feed-education-en.xml",
+  "feed-psychology.xml",
+  "feed-psychology-en.xml",
   "_headers",
   "_redirects"
 ];
 
-const dirs = ["daily-ai", "daily-economy", "hark", "snipread", "assets"];
+const dirs = ["daily-ai", "daily-economy", "daily-education", "daily-psychology", "hark", "snipread", "assets"];
 
 let count = 0;
 function copyFile(from, to) {

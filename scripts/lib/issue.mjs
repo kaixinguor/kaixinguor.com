@@ -503,6 +503,21 @@ export const SECTIONS = {
     titleEn: "Education Daily · kaixinguor",
     descZh: "教育日报：政策与监管、职教与就业、技术与产品、行业与资本，每天更新。",
     descEn: "An education daily: policy, vocational training, classroom technology and the business of learning."
+  },
+  psychology: {
+    dir: "daily-psychology",
+    label: "Psychology Daily",
+    kickerZh: "心理学日报",
+    kickerEn: "PSYCHOLOGY DAILY",
+    subtitle: "Daily Psychology Brief",
+    footZh: "心理学日报 · 每天更新",
+    footEn: "Psychology Daily · updated whenever there is news",
+    feedZh: "feed-psychology.xml",
+    feedEn: "feed-psychology-en.xml",
+    titleZh: "心理学日报 · kaixinguor",
+    titleEn: "Psychology Daily · kaixinguor",
+    descZh: "心理学日报：社会与行为、临床与服务、技术与产业，每天更新。",
+    descEn: "A psychology daily: social and behavioural science, clinical care and the technology of the mind."
   }
 };
 
@@ -512,6 +527,7 @@ const LOCALES = {
     navAi: "AI 日报",
     navEcon: "经济日报",
     navEdu: "教育日报",
+    navPsy: "心理学日报",
     navDaily: "日报",
     navTools: "工具",
     navWish: "许愿",
@@ -541,6 +557,7 @@ const LOCALES = {
     navAi: "AI Daily",
     navEcon: "Economic Daily",
     navEdu: "Education Daily",
+    navPsy: "Psychology Daily",
     navDaily: "Daily",
     navTools: "Tools",
     navWish: "Wish",
@@ -617,6 +634,7 @@ export function renderIssuePage(issue, opts = {}) {
     NAV_AI: loc.navAi,
     NAV_ECON: loc.navEcon,
     NAV_EDU: loc.navEdu,
+    NAV_PSY: loc.navPsy,
     NAV_DAILY: loc.navDaily,
     NAV_TOOLS: loc.navTools,
     NAV_WISH: loc.navWish,
@@ -627,6 +645,7 @@ export function renderIssuePage(issue, opts = {}) {
     CUR_AI: section === "ai" ? ' aria-current="page"' : "",
     CUR_ECON: section === "economy" ? ' aria-current="page"' : "",
     CUR_EDU: section === "education" ? ' aria-current="page"' : "",
+    CUR_PSY: section === "psychology" ? ' aria-current="page"' : "",
     TOC_LABEL: loc.tocLabel,
     ISSUE_LABEL: escapeHtml(issue.issueLabel),
     DATE_DISPLAY: escapeHtml(issue.dateDisplay),
@@ -775,11 +794,13 @@ export function renderSitemap(issues, opts = {}) {
   const siteUrl = opts.siteUrl || "https://kaixinguor.com";
   const economy = opts.economy || [];
   const education = opts.education || [];
+  const psychology = opts.psychology || [];
   const latest = issues[0] ? issues[0].dateISO : "2026-10-26";
   const staticPages = [
     ["/", "1.0", latest],
     ["/economy.html", "1.0", latest],
     ["/education.html", "1.0", latest],
+    ["/psychology.html", "1.0", latest],
     ["/tools.html", "0.9", latest],
     ["/hark/", "0.8", "2026-10-24"],
     ["/snipread/", "0.8", "2026-10-24"],
@@ -803,6 +824,10 @@ export function renderSitemap(issues, opts = {}) {
   for (const issue of education) {
     daily.push([`/daily-education/${issue.dateISO}.html`, "0.9", issue.dateISO]);
     if (issue.en) daily.push([`/daily-education/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+  }
+  for (const issue of psychology) {
+    daily.push([`/daily-psychology/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily-psychology/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
   }
   const rows = [...staticPages, ...daily].map(([loc, priority, lastmod]) => `  <url>
     <loc>${siteUrl}${loc}</loc>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Psychology Daily · kaixinguor</title>
+    <link>https://kaixinguor.com/</link>
+    <description>A psychology daily: social and behavioural science, clinical care and the technology of the mind.</description>
+    <language>en</language>
+    <atom:link href="https://kaixinguor.com/feed-psychology-en.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 09 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Psychology Daily · November 9, 2026</title>
+      <link>https://kaixinguor.com/daily-psychology/2026-11-09-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-psychology/2026-11-09-en.html</guid>
+      <pubDate>Mon, 09 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today&#39;s thread is that psychological states are becoming readable signals — and readability is not the same as usefulness. A 92-country survey of 53,799 people puts the lows among young adults and richer countries; the full Instagram archives of 415 students separate emotional from social loneliness; and Wuhan has turned “work smell” into an eight-department clinic that saw 30,000 visits in three months. The more signals we have, the more insistently the same question returns: does any of this change an outcome? A 92-country survey of 53,799 people: mental wealth is lowest among the young and in richer countries</description>
+    </item>
+  </channel>
+</rss>

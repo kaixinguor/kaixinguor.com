@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-/* 发布一期双语日报（两个版块共用）。
-   版块由 SECTIONS 决定：AI 日报写 daily-ai/ + index.html，经济日报写 daily-economy/ + economy.html。
+/* 发布一期双语日报（四个版块共用）。
+   版块由 SECTIONS 决定：AI 日报写 daily-ai/ + index.html，经济日报写 daily-economy/ + economy.html，
+   教育日报写 daily-education/ + education.html，心理学日报写 daily-psychology/ + psychology.html。
 
    流程：
    1. 读中文母版 + 英文母版（默认找同名 -en.html，可用 --en 指定）
@@ -25,8 +26,8 @@ import {
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const TEMPLATE = path.join(ROOT, "templates", "issue.html");
 
-const HOMES = { ai: "index.html", economy: "economy.html", education: "education.html" };
-const LABELS = { ai: "AI 日报", economy: "经济日报", education: "教育日报" };
+const HOMES = { ai: "index.html", economy: "economy.html", education: "education.html", psychology: "psychology.html" };
+const LABELS = { ai: "AI 日报", economy: "经济日报", education: "教育日报", psychology: "心理学日报" };
 
 function run(command, args, options = {}) {
   return spawnSync(command, args, { cwd: ROOT, stdio: "inherit", ...options });

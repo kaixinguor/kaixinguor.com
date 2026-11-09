@@ -8,6 +8,7 @@ const I18N = {
     "nav.ai": "AI Daily",
     "nav.econ": "Economic Daily",
     "nav.edu": "Education Daily",
+    "nav.psy": "Psychology Daily",
     "nav.daily": "Daily",
     "nav.tools": "Tools",
     "nav.wish": "Wish",
@@ -17,6 +18,7 @@ const I18N = {
     "footer.daily": "AI Daily · updated whenever there is news",
     "footer.econ": "Economic Daily · updated whenever there is news",
     "footer.edu": "Education Daily · updated whenever there is news",
+    "footer.psy": "Psychology Daily · updated whenever there is news",
     "footer.built": "Static site · built with DeepSeek Harness",
 
     "home.lead": "Today's lead",

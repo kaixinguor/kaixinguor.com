@@ -8,6 +8,7 @@
      node scripts/check-links.mjs --latest
      node scripts/check-links.mjs --latest --section economy
      node scripts/check-links.mjs --latest --section education
+     node scripts/check-links.mjs --latest --section psychology
      node scripts/check-links.mjs --all
 
    判定：最终状态码 200–299 算通过；其余算失败。
@@ -22,7 +23,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const sectionIdx = args.indexOf("--section");
 const section = sectionIdx >= 0 ? (args[sectionIdx + 1] || "ai") : "ai";
-const DIRS = { ai: "daily-ai", economy: "daily-economy", education: "daily-education" };
+const DIRS = { ai: "daily-ai", economy: "daily-economy", education: "daily-education", psychology: "daily-psychology" };
 const DAILY_DIR = path.join(ROOT, DIRS[section] || "daily-ai");
 const flags = new Set(args.filter((a) => a.startsWith("--")));
 const strict = flags.has("--strict");
@@ -59,7 +60,7 @@ if (fileArg) {
 } else if (all) {
   files = dailyFiles();
 } else {
-  console.error("用法：node scripts/check-links.mjs <日报.html> [--strict] | --latest | --all [--section ai|economy|education]");
+  console.error("用法：node scripts/check-links.mjs <日报.html> [--strict] | --latest | --all [--section ai|economy|education|psychology]");
   process.exit(1);
 }
 

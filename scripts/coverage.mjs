@@ -28,8 +28,8 @@ import {
 } from "./lib/coverage.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DIRS = { ai: "daily-ai", economy: "daily-economy", education: "daily-education" };
-const LABELS = { ai: "AI 日报", economy: "经济日报", education: "教育日报" };
+const DIRS = { ai: "daily-ai", economy: "daily-economy", education: "daily-education", psychology: "daily-psychology" };
+const LABELS = { ai: "AI 日报", economy: "经济日报", education: "教育日报", psychology: "心理学日报" };
 
 const argv = process.argv.slice(2);
 const flags = new Set();
@@ -48,6 +48,7 @@ function flagValue(name, fallback = "") {
 function sectionFor(file = "") {
   if (/daily-economy/.test(file)) return "economy";
   if (/daily-education/.test(file)) return "education";
+  if (/daily-psychology/.test(file)) return "psychology";
   return "ai";
 }
 
@@ -311,7 +312,7 @@ function windowCmd() {
 /* ---------- report ---------- */
 
 function report() {
-  for (const section of ["ai", "economy"]) {
+  for (const section of ["ai", "economy", "education", "psychology"]) {
     const issues = loadIssues(section).slice().reverse();
     if (!issues.length) continue;
     console.log(`\n===== ${LABELS[section]} · 窗口链 =====`);
@@ -348,22 +349,27 @@ function report() {
   }
 
   console.log(`\n===== 同日跨版块 =====`);
-  const ai = loadIssues("ai");
-  const econ = loadIssues("economy");
+  const names = Object.keys(DIRS);
   let cross = 0;
-  for (const a of ai) {
-    const e = econ.find((x) => x.dateISO === a.dateISO);
-    if (!e) continue;
-    const entriesA = flatCards(a);
-    const entriesE = flatCards(e);
-    const stats = makeStats([...entriesA, ...entriesE].map((x) => cardText(x.card)));
-    const cache = new Map();
-    for (const x of entriesA) {
-      for (const y of entriesE) {
-        const r = compareCards(x.card, y.card, stats, cache);
-        if (r.level) {
-          cross++;
-          console.log(`${a.dateISO}  AI「${x.card.titleText.slice(0, 26)}」 ↔ 经济「${y.card.titleText.slice(0, 26)}」  ${r.reasons.join("；")}`);
+  for (let i = 0; i < names.length; i++) {
+    for (let j = i + 1; j < names.length; j++) {
+      const left = loadIssues(names[i]);
+      const right = loadIssues(names[j]);
+      for (const a of left) {
+        const e = right.find((x) => x.dateISO === a.dateISO);
+        if (!e) continue;
+        const entriesA = flatCards(a);
+        const entriesE = flatCards(e);
+        const stats = makeStats([...entriesA, ...entriesE].map((x) => cardText(x.card)));
+        const cache = new Map();
+        for (const x of entriesA) {
+          for (const y of entriesE) {
+            const r = compareCards(x.card, y.card, stats, cache);
+            if (r.level) {
+              cross++;
+              console.log(`${a.dateISO}  ${LABELS[names[i]]}「${x.card.titleText.slice(0, 26)}」 ↔ ${LABELS[names[j]]}「${y.card.titleText.slice(0, 26)}」  ${r.reasons.join("；")}`);
+            }
+          }
         }
       }
     }
@@ -378,8 +384,8 @@ else if (cmd === "window") windowCmd();
 else if (cmd === "report") report();
 else {
   console.log(`用法：
-  node scripts/coverage.mjs check <日报.html> [--section ai|economy] [--json]
-  node scripts/coverage.mjs window --section ai|economy [--force] [--start ISO] [--end ISO]
+  node scripts/coverage.mjs check <日报.html> [--section ai|economy|education|psychology] [--json]
+  node scripts/coverage.mjs window --section ai|economy|education|psychology [--force] [--start ISO] [--end ISO]
   node scripts/coverage.mjs report`);
   process.exit(cmd === "help" ? 0 : 2);
 }

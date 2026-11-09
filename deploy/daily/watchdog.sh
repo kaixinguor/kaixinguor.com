@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# 09:00 / 09:30 / 10:00 的 DSH 定时任务如果没跑成，11:00 的 watchdog 会检查当天三份日报是否存在。
-# 服务器在 11:00 之后才开机时，systemd timer 的 Persistent=true 会立即补跑本脚本；
+# 09:00 / 09:30 / 10:00 / 10:30 的 DSH 定时任务如果没跑成，11:30 的 watchdog 会检查当天四份日报是否存在。
+# 服务器在 11:30 之后才开机时，systemd timer 的 Persistent=true 会立即补跑本脚本；
 # 这里再等 15 分钟，给「开机后才开始生成」的任务留时间，避免误报。
 #
-# 检查三个版块：
+# 检查四个版块：
 #   AI 日报   → daily-ai/$TODAY.html       + daily-ai/$TODAY-en.html
 #   经济日报 → daily-economy/$TODAY.html  + daily-economy/$TODAY-en.html
 #   教育日报 → daily-education/$TODAY.html + daily-education/$TODAY-en.html
+#   心理学日报 → daily-psychology/$TODAY.html + daily-psychology/$TODAY-en.html
 #
 # 用法：watchdog.sh
 # 环境：SITE_DIR、STATE_DIR、NOTIFY
@@ -33,6 +34,9 @@ missing() {
   fi
   if ! present daily-education; then
     if [ -z "$out" ]; then out="教育日报"; else out="${out}、教育日报"; fi
+  fi
+  if ! present daily-psychology; then
+    if [ -z "$out" ]; then out="心理学日报"; else out="${out}、心理学日报"; fi
   fi
   printf '%s' "$out"
 }

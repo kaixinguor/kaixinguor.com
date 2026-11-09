@@ -15,6 +15,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildEconomy } from "./build-economy.mjs";
 import { buildEducation } from "./build-education.mjs";
+import { buildPsychology } from "./build-psychology.mjs";
 import {
   readIssues,
   renderHomeIssue,
@@ -35,6 +36,8 @@ const FEED_ECON = path.join(ROOT, "feed-economy.xml");
 const FEED_ECON_EN = path.join(ROOT, "feed-economy-en.xml");
 const FEED_EDU = path.join(ROOT, "feed-education.xml");
 const FEED_EDU_EN = path.join(ROOT, "feed-education-en.xml");
+const FEED_PSY = path.join(ROOT, "feed-psychology.xml");
+const FEED_PSY_EN = path.join(ROOT, "feed-psychology-en.xml");
 const CHECK = process.argv.includes("--check");
 const QUIET = process.argv.includes("--quiet");
 
@@ -99,6 +102,15 @@ try {
 }
 const eduIssues = edu.issues || [];
 
+/* 心理学日报：同样先构建 psychology.html，再拿期次生成 RSS 与 sitemap */
+let psy = { skipped: true };
+try {
+  psy = buildPsychology({ check: CHECK, quiet: true });
+} catch (err) {
+  fail(err.message);
+}
+const psyIssues = psy.issues || [];
+
 const block = (cls, lang, inner, hidden = false) => `      <div class="${cls}" data-lang="${lang}"${hidden ? " hidden" : ""}>
 ${inner}
       </div>`;
@@ -113,7 +125,9 @@ const feedEcon = econIssues.length ? renderFeed(econIssues, "zh", { section: "ec
 const feedEconEn = econIssues.length ? renderFeed(econIssues, "en", { section: "economy" }) : null;
 const feedEdu = eduIssues.length ? renderFeed(eduIssues, "zh", { section: "education" }) : null;
 const feedEduEn = eduIssues.length ? renderFeed(eduIssues, "en", { section: "education" }) : null;
-const sitemap = renderSitemap(issues, { economy: econIssues, education: eduIssues });
+const feedPsy = psyIssues.length ? renderFeed(psyIssues, "zh", { section: "psychology" }) : null;
+const feedPsyEn = psyIssues.length ? renderFeed(psyIssues, "en", { section: "psychology" }) : null;
+const sitemap = renderSitemap(issues, { economy: econIssues, education: eduIssues, psychology: psyIssues });
 
 const indexHtml = applyMarkers(fs.readFileSync(INDEX, "utf8"), {
   TODAY_ZH: todayZh,
@@ -130,6 +144,7 @@ const outputs = [
 ];
 if (feedEcon) outputs.push([FEED_ECON, feedEcon], [FEED_ECON_EN, feedEconEn]);
 if (feedEdu) outputs.push([FEED_EDU, feedEdu], [FEED_EDU_EN, feedEduEn]);
+if (feedPsy) outputs.push([FEED_PSY, feedPsy], [FEED_PSY_EN, feedPsyEn]);
 
 if (CHECK) {
   let stale = 0;
@@ -143,13 +158,14 @@ if (CHECK) {
   if (warnings.length) {
     for (const w of warnings) console.error(`! ${w}`);
   }
-  if (stale || econ.stale || edu.stale) {
-    console.error(`\n✗ ${stale + (econ.stale ? 1 : 0) + (edu.stale ? 1 : 0)} 个文件需要重新生成。`);
+  if (stale || econ.stale || edu.stale || psy.stale) {
+    console.error(`\n✗ ${stale + (econ.stale ? 1 : 0) + (edu.stale ? 1 : 0) + (psy.stale ? 1 : 0)} 个文件需要重新生成。`);
     process.exit(1);
   }
   console.log(`✓ 生成结果已是最新（${issues.length} 期，最新 ${latest.dateISO}）`);
   if (!econ.skipped) console.log(`✓ 经济日报 economy.html 已是最新（${econ.issues.length} 期）`);
   if (!edu.skipped) console.log(`✓ 教育日报 education.html 已是最新（${edu.issues.length} 期）`);
+  if (!psy.skipped) console.log(`✓ 心理学日报 psychology.html 已是最新（${psy.issues.length} 期）`);
   process.exit(0);
 }
 

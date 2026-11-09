@@ -1,15 +1,16 @@
 # kaixinguor.com
 
-一个人做的小工具 + 三份中英双语日报。纯静态站点，报刊编辑风。
+一个人做的小工具 + 四份中英双语日报。纯静态站点，报刊编辑风。
 
-- 三个版块：**AI 日报**（首页 `/`）、**经济日报**（`/economy.html`）与**教育日报**（`/education.html`），导航里并列
-- 首页 / 经济日报页 / 教育日报页 = 当天整份日报全文（报头、目录、速览、全部栏目、期脚注）
+- 四个版块：**AI 日报**（首页 `/`）、**经济日报**（`/economy.html`）、**教育日报**（`/education.html`）与**心理学日报**（`/psychology.html`），导航里并列
+- 首页 / 经济日报页 / 教育日报页 / 心理学日报页 = 当天整份日报全文（报头、目录、速览、全部栏目、期脚注）
 - 最左侧贴边 ARCHIVE 抽屉 = 各自的往期（`archive.html` 只做旧链接跳转）
 - `/tools.html` = 标签式工具列表
 - `/daily-ai/YYYY-MM-DD.html`、`/daily-ai/YYYY-MM-DD-en.html` = AI 日报中英文
 - `/daily-economy/YYYY-MM-DD.html`、`/daily-economy/YYYY-MM-DD-en.html` = 经济日报中英文
 - `/daily-education/YYYY-MM-DD.html`、`/daily-education/YYYY-MM-DD-en.html` = 教育日报中英文
-- `/feed.xml` / `/feed-en.xml` = AI 日报 RSS；`/feed-economy.xml` / `/feed-economy-en.xml` = 经济日报 RSS；`/feed-education.xml` / `/feed-education-en.xml` = 教育日报 RSS
+- `/daily-psychology/YYYY-MM-DD.html`、`/daily-psychology/YYYY-MM-DD-en.html` = 心理学日报中英文
+- `/feed.xml` / `/feed-en.xml` = AI 日报 RSS；`/feed-economy.xml` / `/feed-economy-en.xml` = 经济日报 RSS；`/feed-education.xml` / `/feed-education-en.xml` = 教育日报 RSS；`/feed-psychology.xml` / `/feed-psychology-en.xml` = 心理学日报 RSS
 
 视觉语言来自 `ai-daily/2026-10-26.html`，抽成了 `style.css`；日报、首页、工具、许愿共用同一套 tokens 和组件。
 
@@ -26,15 +27,15 @@ npm run preview        # http://127.0.0.1:8899/
 
 不需要安装依赖，Node 20+ 即可。
 
-> 改 `style.css` / `site.js` / `lang.js` 后，记得把页面里的 `?v=6` 一起加一（例如 `?v=7`）；Cloudflare 对这些静态资源有 1 小时缓存，不换版本号浏览器可能继续用旧 CSS。
+> 改 `style.css` / `site.js` / `lang.js` 后，记得把页面里对应的 `?v=` 一起加一（例如 `style.css?v=7` → `?v=8`）；Cloudflare 对这些静态资源有 1 小时缓存，不换版本号浏览器可能继续用旧 CSS。
 
 ---
 
 ## 发布一期日报
 
-三份日报用同一个流程，只是写到不同目录、更新不同首页与 RSS。
+四份日报用同一个流程，只是写到不同目录、更新不同首页与 RSS。
 
-> 同一天三份一起更新时，按 [`docs/每日三报统一规则.md`](docs/每日三报统一规则.md) 执行：三份共用同一个窗口终点，按 **AI → 经济 → 教育** 发布，只有 AI 日报出 5 张公众号图；封面是「摘要 + 今日三条」，不再放大重复的头条标题。
+> 同一天四份一起更新时，按 [`docs/每日四报统一规则.md`](docs/每日四报统一规则.md) 执行：四份共用同一个窗口终点，按 **AI → 经济 → 教育 → 心理学** 发布，只有 AI 日报出 5 张公众号图；封面是「摘要 + 今日三条」，不再放大重复的头条标题。
 
 ```bash
 cd site
@@ -53,19 +54,24 @@ node scripts/publish-economy.mjs daily-economy/2026-10-30.html \
 node scripts/publish-education.mjs daily-education/2026-11-03.html \
   --en daily-education/2026-11-03-en.html \
   --push
+
+# 心理学日报 → daily-psychology/ + psychology.html + feed-psychology*.xml
+node scripts/publish-psychology.mjs daily-psychology/2026-11-09.html \
+  --en daily-psychology/2026-11-09-en.html \
+  --push
 ```
 
 它会：
 
 1. 解析中文版和英文版 HTML（自包含母版或已套壳页面都行）
 2. 套上 `templates/issue.html`，写到对应版块的 `YYYY-MM-DD.html` 与 `-en.html`
-3. 重新生成两个首页的今日全文与往期抽屉、两套 RSS、`sitemap.xml`
+3. 重新生成对应版块首页的今日全文与往期抽屉、两套 RSS、`sitemap.xml`
 4. 逐条检查原文链接（打不开就停，默认开启）
 5. 可选：`git commit` + `git push`（只提交本版块相关的文件）
 
 同一天重跑会覆盖，不会追加。`--social` 只属于 AI 日报。
 
-源稿与成品同路径：`daily-ai/`、`daily-economy/` 里的 `YYYY-MM-DD.html` 既是源稿也是上线页。
+源稿与成品同路径：`daily-ai/`、`daily-economy/`、`daily-education/`、`daily-psychology/` 里的 `YYYY-MM-DD.html` 既是源稿也是上线页。
 
 ---
 
@@ -101,6 +107,7 @@ site/
 ├── index.html              首页 = AI 日报（完整一期 + 左侧往期抽屉）
 ├── economy.html            经济日报（完整一期 + 左侧往期抽屉）
 ├── education.html          教育日报（完整一期 + 左侧往期抽屉）
+├── psychology.html         心理学日报（完整一期 + 左侧往期抽屉）
 ├── archive.html            旧 /archive.html 跳转到 /#archive
 ├── tools.html              工具（标签筛选）
 ├── wish.html               许愿
@@ -108,19 +115,22 @@ site/
 ├── daily-ai/YYYY-MM-DD.html        AI 日报（中/英）
 ├── daily-economy/YYYY-MM-DD.html   经济日报（中/英）
 ├── daily-education/YYYY-MM-DD.html 教育日报（中/英）
+├── daily-psychology/YYYY-MM-DD.html 心理学日报（中/英）
 ├── hark/  snipread/        两个产品子站
 ├── style.css               全站唯一设计系统
 ├── site.js                 深浅色 / 进度条 / 目录 / 工具标签
 ├── lang.js                 站点框架 zh/en
 ├── templates/issue.html    日报外壳
 ├── scripts/
-│   ├── build.mjs           生成两个首页、两套 RSS、sitemap
+│   ├── build.mjs           生成四个首页、四套 RSS、sitemap
 │   ├── build-economy.mjs   经济日报首页 economy.html（build.mjs 会调用）
 │   ├── build-education.mjs 教育日报首页 education.html（build.mjs 会调用）
+│   ├── build-psychology.mjs 心理学日报首页 psychology.html（build.mjs 会调用）
 │   ├── publish-daily.mjs   发布一期 AI 日报
 │   ├── publish-economy.mjs 发布一期经济日报
 │   ├── publish-education.mjs 发布一期教育日报
-│   ├── lib/publish.mjs     两个发布命令共用的流程
+│   ├── publish-psychology.mjs 发布一期心理学日报
+│   ├── lib/publish.mjs     四个发布命令共用的流程
 │   ├── make-social.mjs     生成公众号图片消息图（5 张，本地）
 │   ├── social/             配图版式与 Playwright 截图
 │   ├── check-links.mjs     原文链接逐条检查
@@ -128,11 +138,13 @@ site/
 ├── feed.xml / feed-en.xml                  AI 日报 RSS（自动生成）
 ├── feed-economy.xml / feed-economy-en.xml  经济日报 RSS（自动生成）
 ├── feed-education.xml / feed-education-en.xml  教育日报 RSS（自动生成）
+├── feed-psychology.xml / feed-psychology-en.xml  心理学日报 RSS（自动生成）
 ├── sitemap.xml             自动生成
 ├── docs/自动化与部署.md     更新链路、Cloudflare / 服务器部署
 ├── docs/每日生成任务.md     AI 日报的作业说明
 ├── docs/每日生成任务-经济日报.md  经济日报的作业说明
 ├── docs/每日生成任务-教育日报.md  教育日报的作业说明
+├── docs/每日生成任务-心理学日报.md  心理学日报的作业说明
 ├── docs/社交配图规则.md     公众号图片消息的图数 / 标题 / 发布规则
 └── .github/workflows/      CI：校验 + 可选 Cloudflare Pages 部署
 ```
@@ -160,7 +172,7 @@ npm run stage          # dist/site/
 
 完整方案（含 GitHub Actions、自有服务器 rsync / cron、nginx、RSS）见 [`docs/自动化与部署.md`](docs/自动化与部署.md)。
 
-每日 09:00 / 09:30 / 10:00 依次生成并发布三份日报（Ubuntu + DSH 定时任务、开机补跑、手机通知）见 [`docs/每日定时任务.md`](docs/每日定时任务.md)。
+每日 09:00 / 09:30 / 10:00 / 10:30 依次生成并发布四份日报（Ubuntu + DSH 定时任务、开机补跑、手机通知）见 [`docs/每日定时任务.md`](docs/每日定时任务.md)。
 
 ---
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>心理学日报 · kaixinguor</title>
+    <link>https://kaixinguor.com/</link>
+    <description>心理学日报：社会与行为、临床与服务、技术与产业，每天更新。</description>
+    <language>zh-CN</language>
+    <atom:link href="https://kaixinguor.com/feed-psychology.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 09 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>心理学日报 · 2026 年 11 月 9 日</title>
+      <link>https://kaixinguor.com/daily-psychology/2026-11-09.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-psychology/2026-11-09.html</guid>
+      <pubDate>Mon, 09 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是「把心理状态变成可读的信号」。92 国、5.38 万人的调查显示，心理健康的低点集中在年轻人与高收入国家；415 名大学生的 Instagram 全量数据，能把情感孤独与社会孤独分开；武汉则把「班味」做成 8 个科室联合的门诊，三个月接住 3 万人次。信号越多，越要问同一个问题：它真的能改变结局吗？ 92 国 5.38 万人调查：心理健康的低点集中在年轻人与高收入国家</description>
+    </item>
+  </channel>
+</rss>
