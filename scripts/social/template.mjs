@@ -181,6 +181,15 @@ body{
 }
 .cover-stats .pill{border:1px solid var(--line);background:rgba(255,253,249,.6);padding:8px 13px;border-radius:2px}
 .cover-stats .sep{opacity:.5}
+.cover-index{margin-top:36px;border-top:3px solid var(--ink);padding-top:18px;flex:none}
+.cover-index .ci-h{font-family:var(--mono);font-size:15px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:6px}
+.cover-index .ci-item{display:flex;align-items:baseline;gap:15px;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.cover-index .ci-n{font-family:var(--mono);font-size:15px;color:var(--accent);flex:none;width:26px;letter-spacing:.04em}
+.cover-index .ci-t{
+  font-family:var(--serif);font-size:31px;line-height:1.5;font-weight:700;color:var(--ink);
+  max-height:3em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  text-wrap:balance;
+}
 .watermark{
   position:absolute;z-index:0;right:-30px;bottom:88px;font-family:var(--serif);font-weight:700;
   font-size:430px;line-height:.8;letter-spacing:-.07em;color:rgba(178,58,30,.055);white-space:nowrap;
@@ -295,15 +304,21 @@ function shell(issue, { body, cat = "", cls = "", footLeft = "", footRight = "" 
 </html>`;
 }
 
-export function renderCover(issue) {
+export function renderCover(issue, stories = []) {
   const d = dateParts(issue.dateISO);
+  const index = stories.length
+    ? `<div class="cover-index">
+      <div class="ci-h">今 日 三 条</div>
+      ${stories.map((story, i) => `<div class="ci-item"><span class="ci-n">${String(i + 1).padStart(2, "0")}</span><span class="ci-t">${escapeHtml(protectCjk(tightenLatin(clipTitle(story.card.titleText, 56))))}</span></div>`).join("\n      ")}
+    </div>`
+    : "";
   const body = `
   <main class="cover-main">
     <div class="dateline"><span>${d.year}</span><span class="bar"></span><span>${d.month} / ${d.day}</span><span>·</span><span class="wd">${weekdayZh(issue)}</span></div>
     <div class="date-big">${d.month}<span class="dot">.</span>${d.day}<span class="small">${d.year}</span></div>
     <div class="rule"></div>
-    <h1 class="headline">${escapeHtml(protectCjk(tightenLatin(clipTitle(issue.headline, 96))))}</h1>
     <p class="deck">${escapeHtml(tightenLatin(issue.deckText))}</p>
+    ${index}
     <div class="cover-foot">
       <p class="cover-note">${disclaimerHtml(issue)}</p>
       <div class="cover-stats">

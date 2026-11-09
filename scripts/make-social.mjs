@@ -249,7 +249,7 @@ fs.mkdirSync(buildDir, { recursive: true });
 
 /* ---------- 生成 5 张版式：封面 → 3 条重点 → 速览（没有尾页） ---------- */
 
-const designs = [{ name: "01-cover", html: renderCover(issue) }];
+const designs = [{ name: "01-cover", html: renderCover(issue, stories) }];
 stories.forEach((story, index) => {
   const others = stories
     .map((item, order) => ({ rank: order + 1, title: item.card.titleText }))
@@ -381,7 +381,7 @@ const readme = [
   `  ${overviewNo} 速览（${issue.count} 条）`,
   ``,
   `标题（固定格式）：${wechatTitle}`,
-  `封面主标题：${issue.headline}`,
+  `封面：摘要 + 今日三条（与 02–${String(stories.length + 1).padStart(2, "0")} 对应）`,
   `窗口：${issue.window}（北京时间）`,
   `条数：${issue.count} 条 · 阅读约 ${issue.readMinutes} 分钟`,
   ``,
@@ -394,7 +394,7 @@ const files = designs.map((d) => `wechat/${d.name}.png`);
 
 const captions = [
   `**01 · 封面**`,
-  `> ${clipTitle(`${BRAND.zh} · 第 ${issue.issueNo || "—"} 期｜${issue.headline}`, 60)}`,
+  `> ${BRAND.zh} · 第 ${issue.issueNo || "—"} 期｜摘要 + 今日三条`,
   ``
 ];
 stories.forEach((story, index) => {
