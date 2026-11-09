@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 08 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 9, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-09-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-09-en.html</guid>
+      <pubDate>Mon, 09 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today&#39;s thread is about removing one layer of waiting and one layer of trust. Nvidia cut the reasoning text out of the VLA action path, holding success while cutting latency by up to 3.4x. The same day, Menlo Ventures said 89% of enterprise open-source model spend goes to Chinese models, and a US indictment put $129m of AI-impersonation losses on the payment-authorisation chain. Making an action wait one less decode and making a payment wait one more callback are two ends of the same problem. Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency</description>
+    </item>
     <item>
       <title>AI Daily · November 8, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-08-en.html</link>

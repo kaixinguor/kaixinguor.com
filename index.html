@@ -69,15 +69,15 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 014 期</span>
+          <span class="issue-tag">第 015 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 8 日<span class="weekday">SUN</span></h1>
-        <p class="deck">今天的主线是「能力落地之后，责任落在哪一层」。苹果把 HALO 装进宇树 G1，在 6 个未建图环境跑了 360 次单项任务，平均成功率 91%，训练与部署代码全部公开；同一天，Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub，DeepSeek 网页与 API 中断 45 分钟，工信部与北京把机器人「一机一码」推进到落地部署。<em>机器人学会在陌生房间干活，软件也得学会替自己的权限负责。</em></p>
-        <div class="metabar"><span class="pill">第 014 期</span>
+        <h1 class="date">2026 年 11 月 9 日<span class="weekday">MON</span></h1>
+        <p class="deck">今天的主线是「把等待和信任分别拿掉一层」。英伟达把 VLA 的推理文本从动作路径里摘出去，成功率不变、延迟最多降 3.4 倍；同一时间，Menlo Ventures 说企业开源模型支出的 89% 流向中国模型，而美国司法部起诉的 AI 冒充案把 1.29 亿美元的损失摊在了付款授权链上。<em>让动作少等一次解码，和让付款多等一次回拨，是同一个问题的两端。</em></p>
+        <div class="metabar"><span class="pill">第 015 期</span>
       <span class="dot"></span>
-      <span>窗口 11/07 11:23 – 11/08 13:08</span>
+      <span>窗口 11/08 13:08 – 11/09 09:31</span>
       <span class="dot"></span>
-      <span>6 条</span>
+      <span>7 条</span>
       <span class="dot"></span>
       <span>阅读约 8 分钟</span></div>
       </div>
@@ -100,15 +100,15 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%。</b>长序列组合任务平均 70%，最难的「俯身过障—走向目标—推箱子」10 次成功 5 次；数据生成、训练与部署代码已公开。</p>
+      <p><b>英伟达 TacitVLA 把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍。</b>LIBERO 上单次调用 147ms，显式推理要 495ms；RoboMME 计数任务成功率 82.7%，此前最好 66.8%。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>工信部就机器人「一机一码」征求意见，北京同步部署落地。</b>标识码分四段、终身不变，制造商年度申请量一般不超过上年实际产量的 300%；公示期到 12 月 5 日。</p>
+      <p><b>Menlo Ventures：企业开源模型支出 89% 流向中国模型，Kimi 占 61%。</b>DeepSeek 15%、GLM 11%，Meta Llama 仅 7%；开源权重模型只处理企业 19% 的 token。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub。</b>Apiiro 在 103,617 个仓库发现 104,185 份配置文件，其中 1.1% 至少含一个密钥，共 1,379 个。</p>
+      <p><b>美国司法部起诉三人用 AI 冒充企业高管与律师，涉案 1.29 亿美元。</b>至少 6 家企业受害，英国一家科技公司损失超 1,100 万美元；三人分别在西班牙和英国被捕。</p>
     </li>
       </ol>
 
@@ -123,25 +123,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 17:40</span>
-          <a class="src" href="https://www.ithome.com/1/023/767.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/08 19:42</span>
+          <a class="src" href="https://www.163.com/dy/article/LB83S50S0511AQHO.html" target="_blank" rel="noopener noreferrer">机器之心 ↗</a>
         </div>
-        <h3>苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%</h3>
-        <p>苹果研究团队在 arXiv 提交论文《Perceptive Humanoid Motion from Simulation》，披露人形机器人自主控制系统 HALO，并把它部署到宇树 G1 上验证：背部加装 3D 打印外壳，内置一台 M4 Pro、64GB 统一内存的 Mac mini，负责机载推理开销较大的 Orchestrator（VLM，默认千问 Qwen3.6-35B-A3B）与 Motion Generator（DiT，千问 Qwen3.5-2B）；G1 自带芯片运行 50Hz 的 Tracker（强化学习策略）。</p>
-        <p>在 6 个未预先扫描或建图的真实环境中，团队做了 360 次单项任务测试，平均成功率 91%。长序列组合任务在单一场景各测 10 次，3 种组合平均 70%；最复杂的「俯身通过障碍—走向目标—推箱子」10 次成功 5 次，为 50%。数据侧用 250 张 H100 合成主要训练数据、耗时约 48 小时；动作生成器用 64 张 B200，跟踪器用 4 张 H100。</p>
-        <p>团队公开了数据生成、模型训练与部署代码。论文也写明局限：新增物理任务仍需人工写提示词、设计动作关键帧，部分动作依赖人类视频或动捕；机器人主要靠视觉，难以直接感知接触，物体离开视野或被遮挡时，涉及接触的任务会明显变差。</p>
-        <p class="why"><b>看点</b>91% 是单项任务的成功率，70% 才是长序列的真实体感——误差会沿步骤累积，这是所有分层控制系统的共同瓶颈。更值得抄的是工程拆分：大模型放在机载 Mac mini 上跑语义与编排，实时策略留在机器人控制器，云端只是可选；再加上公开代码，复现门槛从「有机器人」降到「有 G1 加一台 Mac」。下一步的胜负手在触觉与遮挡处理，不在再刷高单项成功率。<br><b>另一个视角</b>这套管线一次数据循环要 250 张 H100 跑两天，动作生成还要 64 张 B200；能力越依赖合成数据，账单越像训练一家模型公司，而不是造一台机器人。谁来为「每个新任务重新采一遍数据」付钱，会决定这类系统是实验室演示还是可售产品。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/07 22:16</span>
-          <a class="src" href="https://github.com/Video-Rebirth/hyperflow-h3-flash" target="_blank" rel="noopener noreferrer">GitHub · Video Rebirth ↗</a>
-        </div>
-        <h3>HyperFlow 把 31B 视频音频模型压到 13.7B，4 到 8 步出片，给 INT8 与 GGUF 两版</h3>
-        <p>Video Rebirth 在 GitHub 放出 HyperFlow H3 Flash：以 MiniMax-H3 的 31B 联合视频—音频生成模型为底座，压到 13.7B，推理步数降到 4 至 8 步，同时提供 INT8 量化版和 GGUF 版。仓库把「联合生成」作为卖点——画面与声音在同一次去噪里产生，而不是先出视频再配音。</p>
-        <p>项目页给出的关键数字是参数量、步数与量化格式，没有给出与教师模型逐项对比的基准分数，也没有说明训练数据规模与许可证细节。它目前是社区发布，不是同行评审论文；所有性能数字都应视为作者自测。</p>
-        <p class="why"><b>看点</b>把 31B 蒸馏到 13.7B、再把步数压到个位数，省的是推理时的显存与时间，代价通常落在细节、运动一致性和音画同步上。要判断它能不能用，别只看画质样片：先看 8 步与 4 步的差异、口型与敲击声是否对齐、INT8 掉点多少，以及 GGUF 在消费级显卡上的实际帧率。对做本地生成工具的团队，GGUF 版意味着可以绕开数据中心，但许可证和商用条款要先读清楚。</p>
+        <h3>英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍</h3>
+        <p>英伟达与纽约大学、UC 伯克利、约翰斯·霍普金斯、斯坦福的团队提出 TacitVLA：训练时照常让视觉语言主干生成推理文本，但在注意力掩码里让动作专家看不到这段文本。动作不再等待自回归解码，推理监督仍然塑造主干表示；论文与项目页已公开，代码标注为即将发布。</p>
+        <p>在 RoboMME、RMBench、LIBERO / LIBERO-Plus 和 PhysicalAI-AV 四个基准上，TacitVLA 的成功率与显式推理版本相当，单次调用延迟最多降低 3.4 倍。LIBERO 上为 147ms 对 495ms，正好卡进 250ms 的执行窗口；闭环驾驶为 127ms 对 269ms。在相同延迟下，它比不做推理训练的同一模型成功率最多高 17.1 个百分点。</p>
+        <p>绝对成绩：RoboMME 计数任务 82.7%（此前最好 66.8%），RMBench 77.5%（此前 56.5%），LIBERO-Plus 72.9%，PhysicalAI-AV 闭环场景分 52.5%。RMBench 的 Press Button 任务上 74.3%，不做推理的版本只有 7.7%，记忆条目正确率 99.7%。所有延迟数字都是单张 H100 上的均值。</p>
+        <p class="why"><b>看点</b>这不是让模型「少想」，而是把推理的两种作用拆开：训练时写推理能改善主干，部署时读当前推理只会增加延迟。对做机器人的团队，最小改动是一行 attention mask，不需要新模型或调度器；真正要验证的是长程记忆任务里「动作先出、日志后写」能否稳定，以及跨机型迁移时推理监督是否还划算。<br><b>另一个视角</b>延迟从 495ms 降到 147ms，省下的是产线节拍和 GPU 时间；如果每台机器人每天多跑三倍回合，数据回流成本会先于硬件成本成为瓶颈。</p>
       </article>
 
     </div>
@@ -158,13 +147,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 17:26</span>
-          <a class="src" href="https://news.qq.com/rain/a/20261107A0B22Q00" target="_blank" rel="noopener noreferrer">中新经纬 ↗</a>
+          <span class="d">11/08</span>
+          <a class="src" href="https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>DeepSeek 网页与 API 部分中断 45 分钟，官方状态页称已修复</h3>
-        <p>11 月 7 日 15:11 至 15:56，DeepSeek 网页与 API 出现部分中断，话题「DeepSeek 又崩了」登上微博热搜。官方状态页显示问题已解决、服务恢复；同一页面记录 8 月 16 个故障、7 月 8 个、10 月 7 个。</p>
-        <p>这次没有公布受影响的具体模型、区域与请求比例，也没有说明是容量、依赖还是发布引起的。能确认的只有中断时段和恢复状态。</p>
-        <p class="why"><b>看点</b>45 分钟对聊天用户是一次刷新，对跑批量任务的 agent 却可能是一次不可重入的失败。把重试做成幂等、把长任务切成可检查点的步骤、在客户端保留可切换的备用模型，比追问「为什么崩」更能降低损失。状态页只给「部分中断」四个字，也说明对外可观测性还不够：至少该有按模型、按接口的成功率与延迟曲线，否则开发者无法判断该降级还是该等待。</p>
+        <h3>Karpathy 用 Claude 一个周末搭出 HackerTube：4300 万条评论筛出 6,454 个视频</h3>
+        <p>Karpathy 用 Claude Opus 5.5 在一个周末搭出 HackerTube，从 Hacker News 20 年的 4300 万条评论里筛出 6,454 个被反复推荐的视频。页面不需要登录，只显示视频中段的一帧，状态存在浏览器本地。</p>
+        <p>他说 Claude Code 承担了从数据分析到服务器设置的几乎全部工作，自己只做了三件事：申请 Google Cloud API key、租服务器、买域名。随后又用 Claude Code「3 分钟一次成型」搭出 TristanTube，收录 47,000 个视频。</p>
+        <p class="why"><b>看点</b>重点不是又一个视频站，而是「数据清洗 + 前端 + 部署」被压进一个周末的成本结构。可复现的部分是任务拆分与验收：先让模型把 20 年评论变成可查询的候选集，再让人只做域名、密钥和上线三步。难点在评估——推荐质量靠作者的主观判断，没有基准；这类「一人产品」越多，越需要可审计的构建日志。</p>
       </article>
 
     </div>
@@ -181,14 +170,38 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07</span>
-          <a class="src" href="https://cybersecuritynews.com/claude-codes-yes-and-dont-ask-again/" target="_blank" rel="noopener noreferrer">Cyber Security News ↗</a>
+          <span class="d">11/08 21:23</span>
+          <a class="src" href="https://www.ithome.com/1/024/001.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>Claude Code 的「不再询问」把密码写进项目配置，1,122 份公开副本含密钥</h3>
-        <p>Apiiro 的扫描显示，Claude Code 在用户选择「Yes, and don't ask again」后，会把整条命令原样写进项目的 <code>.claude/settings.local.json</code>；如果命令里带着密码或 token，它们也以明文落盘。公开 GitHub 上有 104,185 份该文件，分布在 103,617 个仓库，其中 1,122 份（约 1.1%）至少含一个密钥，合计 1,379 个。</p>
-        <p>拆开看：379 个数据库密码、43 个公网服务器 SSH 登录、42 个 GitHub/GitLab/npm token、23 个 AWS 密钥；涉及 63 家组织。研究者追踪的 1,105 个仓库里，539 个的该文件由带 Claude 共同署名的提交改动。含密钥的文件中，一半在默认分支上已存在至少 217 天；另有 734 个历史密钥、211 个 fork 副本。把共享配置、历史版本与聊天记录都算上，共 2,539 个密钥、1,994 个仓库。</p>
-        <p>常见扫描器漏得不少：gitleaks 标出 564 份、TruffleHog 标出 643 份，两者都没标出的有 215 份，主要是写在命令行里的密码。Claude Code 首次写入时会把该文件加进本机全局 git excludes，但这个保护不随仓库走，也不会改写已经提交的历史。</p>
-        <p class="why"><b>看点</b>这不是「模型泄露」，是权限交互的设计问题：为了少弹窗，工具把「允许这条命令」记成了「记住这条命令的全文」。修复顺序应该是先轮换、再清理——从仓库删除文件不会抹掉 git 历史与 fork。对做 agent 的团队，允许规则要按命令模式而不是完整命令行保存，密钥只以变量名出现；同时把 <code>.claude/</code>、<code>.cursor/</code> 这类目录当成 <code>.env</code> 来扫。默认值选错一次，代价是几百个凭据。</p>
+        <h3>上海交大 AutoDNA 登上《自然》：多智能体自主做分子生物学实验，微米级定位、微升级移液</h3>
+        <p>上海交大计算机学院 IPADS 实验室陈海波、王肇国团队与化学化工学院樊春海、王飞团队合作，构建 AI 原生科学实验室 AutoDNA（思源一号），实现自主分子生物学实验操作。成果发表于《自然》，并获该刊官网首页头条报道。</p>
+        <p>架构上，多智能体把实验拆成文献检索、试剂选择、方案设计、代码生成、硬件执行、结果分析和迭代优化；仪器能力被抽象成带自然语言说明和统一代码接口的「原子服务」，模型可以组合设备能力、生成并修正跨设备控制代码。硬件提供微米级定位和微升级液体处理，控制终端基于 OpenHarmony。</p>
+        <p>团队已在核酸检测、酶促 DNA 合成、癌症检测等场景完成验证，并展示端到端 DNA 存储的编码、写入、保存、读取与解码流程。论文编号为 s41586-026-11228-6。</p>
+        <p class="why"><b>看点</b>这条的工程价值在「仪器抽象层」：把不同型号设备的差异藏在一个可被模型调用的服务接口后面，才可能让 agent 跨设备编排。需要看的是失败模式——微米级定位在长时间运行下的漂移、污染控制，以及实验失败后能否自动回滚。对做实验室自动化的团队，先统一接口和状态机，再谈让模型自由生成代码；否则一次错误调用就可能毁掉整批样本。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08 16:48</span>
+          <a class="src" href="https://www.ithome.com/1/023/925.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>美国司法部起诉三人用 AI 冒充高管与律师，涉案 1.29 亿美元</h3>
+        <p>美国纽约南区联邦检察官办公室公布起诉书：三名嫌疑人雅各布·索尔、沙龙·哈赞、盖伊·谢特里特涉嫌自 2024 年至 2026 年用 AI 伪造企业高管和律师的声音、影像，诱骗员工汇款，涉案超过 1.29 亿美元。索尔和哈赞今年夏天在西班牙被捕，谢特里特 9 月在英国落网。</p>
+        <p>手法是两步：先冒充高管联系员工，称有敏感财务交易需要协助；再让员工与「国际律所律师」对接，由假冒律师指示汇款。赃款到账后被兑换成加密货币，再与其他共谋者瓜分。</p>
+        <p>已披露的受害者包括：密苏里州一家医院集团损失近 500 万美元、罗德岛州一家银行约 270 万美元、加州一家医院集团约 300 万美元、马萨诸塞州一家共同基金公司超过 460 万美元、佛罗里达州一家宠物食品公司约 500 万美元、一家英国科技公司超过 1,100 万美元。三人被控共谋电信欺诈、洗钱共谋和加重身份盗用。</p>
+        <p class="why"><b>看点</b>这不是「深度伪造检测」的单点问题，而是授权链问题：员工被要求绕过正常的付款复核，因为对方「是高管、是律师」。修复顺序应是双人复核、回拨已知号码、付款白名单，而不是先买一个检测模型；对做语音和视频产品的团队，水印与来源凭证要默认开启，并且能被下游验证。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08</span>
+          <a class="src" href="https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Co-Design Bench：十个编码智能体最好的也只完整做对 26.4% 的任务</h3>
+        <p>阿里与多所亚洲高校的研究者用真实编码会话中的用户修改请求构建 Co-Design Bench，要求智能体改造现有 Web 应用，输入可以包含图片、音频、视频和文档。十个受测模型中最好的 GPT-6 Astra 平均满足约 70% 的任务要求，但只有 26.4% 的任务完全正确。</p>
+        <p>分轨道看，GPT-6 Astra 在多模态任务上完全做对 41%，在仓库级任务上不到 18%。Claude Opus 5 与 Qwen3.8-Max 紧随其后，Grok 4.6 垫底。任务同时包含布局、设计、交互、内容等多类修改时，所有模型都变差。</p>
+        <p>评测用两个 AI judge：一个在浏览器里操作成品，另一个复核所有正向判定并检查 mock-up 或硬编码；只有真正跑起来的功能才得分。另一个发现是 harness 影响很大：Qwen3.8-27B 在大改任务上，换环境可从 75% 掉到 56%，甚至改变两个模型的排名。</p>
+        <p class="why"><b>看点</b>99% 的旧基准分数已经不能说明「能不能交付」，26.4% 才接近真实项目的体感。对采购编码 agent 的团队，应该把模型和工作环境成对测试，并把验收拆成「能跑、不硬编码、多类修改同时成立」。对做 agent 的人，提升空间可能不在模型本身，而在规格、回滚和可验证的中间产物。</p>
       </article>
 
     </div>
@@ -205,13 +218,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 12:53</span>
-          <a class="src" href="https://news.qq.com/rain/a/20261107A07AQI00" target="_blank" rel="noopener noreferrer">北京青年报 ↗</a>
+          <span class="d">11/08 21:15</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202611083925662081.html" target="_blank" rel="noopener noreferrer">上海证券报 ↗</a>
         </div>
-        <h3>机器人将有「身份证」：工信部就「一机一码」征求意见，北京启动部署</h3>
-        <p>11 月 6 日，工信部装备工业一司就《机器人产品标识码管理暂行办法（征求意见稿）》公开征求意见，公示期至 12 月 5 日。标识码用于标识机器人整机身份，由制造商代码、产品说明代码、产品顺序号代码和其他代码四部分组成，覆盖工业、服务与特种机器人。</p>
-        <p>办法要求制造商至少采用数字存储、供人识读、机器识读三种方式赋码，多形式信息须一致；标识应清晰、耐久、不易更换，终身不变、不可篡改、不可擦除。年度申请量一般不超过上一年度实际产量的 300%，确需增加要提交产量证明；办法实施前已出厂销售的产品，需通过平台备案自定义序列号。11 月 4 日，北京市经信局已召开赋码工作动员部署会。</p>
-        <p class="why"><b>看点</b>这是给具身智能补「身份层」：有了统一编码，召回、溯源、安全事件定责和二手流转才有共同的主键。真正的成本在产线与数据：每台机器多一道赋码工序，制造商要改 MES，平台要定字段与接口，旧设备还要补录序列号。对做机器人软件的人，标识码会成为设备注册、权限绑定与固件升级的入口；现在就该想清楚哪些数据写进码、哪些留在云端，以及断网时怎么验。</p>
+        <h3>拓斯达发布 172cm 双足人形机器人 Star：72kg、双臂 10kg、续航 4 小时</h3>
+        <p>11 月 7 日至 8 日，拓斯达全球开放日发布三套工业场景方案，全尺寸工业双足人形机器人 Star 首次亮相：身高 172cm、重 72kg、双臂负载 10kg，7 轴仿人手臂与十字轴手腕，头部、胸部、背部三相机实现 360 度感知，续航超过 4 小时并支持快充。</p>
+        <p>公司称过去一年多拜访 100 多家客户、完成 30 余个场景与任务验证，收敛出多品种小批量分拣、多工序集成作业、智能搬运三个方向；同时发布人形机器人五轴加工专机 S400，聚焦关节、臂杆、壳体等复杂曲面构件。</p>
+        <p>订单侧，乐维精密累计复购埃弗米五轴设备 100 台；南斗星在采购 60 台模温机验证一年后，2026 年追加 290 台。活动期间凯航科技签人形机器人采购协议，浙江雷旺签五轴联动数控机床采购协议；拓斯达与大湾区大学、南昌大学共建联合实验室。</p>
+        <p class="why"><b>看点</b>172cm、72kg、10kg 这组参数是冲着现有工厂产线去的：不改线、能跨区、能顶一个班次。真正的门槛不是走路，而是「工艺模型 + 数据回流」——100 多家客户只收敛出 3 个方向，说明场景仍高度定制。对做具身智能的团队，先拿到可复用的工艺数据，再谈通用；对工厂，先算清 4 小时续航与换电、快充的停机成本。</p>
       </article>
 
     </div>
@@ -228,13 +242,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 20:50</span>
-          <a class="src" href="http://k.sina.com.cn/article_5952915705_162d248f906703ss08.html" target="_blank" rel="noopener noreferrer">天津广播电视台 ↗</a>
+          <span class="d">11/08 13:21</span>
+          <a class="src" href="https://www.ithome.com/1/023/885.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>2026 中国软件大会在天津开幕，发布「人机物融合」智能化软件开源社区</h3>
-        <p>11 月 7 日，2026 中国软件大会在天津开幕，由中国计算机学会主办、天津大学与南开大学承办，吸引 3000 多名高校、科研院所与软件企业人员参加，同期开设 60 多场交流活动，覆盖基础软件、人工智能软件工程、工业软件等方向。</p>
-        <p>开幕式发布的「人机物融合智能化软件开源社区」，由北京大学、清华大学、哈尔滨工业大学的团队，联合小米智能、麒麟软件、中科曙光等共同研发，提供算力、数据集与开发工具，支撑产学研共同做算法迭代。天津计划联合本地信创企业，面向智慧工厂、智慧港口做适配改造。</p>
-        <p class="why"><b>看点</b>这类社区的价值不在发布仪式，而在三件事：算力与数据是否真的对校外开发者开放、贡献如何审核、产出的组件能否被现有工具链直接依赖。若只是把校内项目搬到一起，它会变成展示页；若能提供稳定的基准、数据集版本和可复现的构建，它才可能成为「AI 软件工程」的基础设施。对团队来说，先看它有没有公开的 issue 列表与发布节奏，比看签约名单有用。</p>
+        <h3>Menlo Ventures：企业开源模型支出 89% 流向中国模型，Kimi 占 61%</h3>
+        <p>Menlo Ventures 的报告称，全球企业开源模型支出中，中国模型占 89%。月之暗面 Kimi 以 61% 居首，DeepSeek 15%，智谱 GLM 11%；西方模型中份额最高的 Meta Llama 仅 7%。</p>
+        <p>同一份报告里，开源权重模型只处理了企业 19% 的 token 使用量，闭源模型仍占主导；Anthropic 与 OpenAI 合计拿走 86% 的支出。报告由《南华早报》最早报道，IT之家 11 月 8 日转述。</p>
+        <p class="why"><b>看点</b>这组数字要分开读：89% 是「开源模型支出」的内部份额，不是企业 AI 总支出的 89%；19% 才是开源权重在 token 用量上的占比。对做模型商业化的团队，Kimi 的 61% 说明价格与中文场景仍是主要杠杆；对采购方，供应商集中度在闭源侧更高——Anthropic 加 OpenAI 86%，议价空间不在模型数量，而在可迁移的评测与退出成本。</p>
       </article>
 
     </div>
@@ -243,9 +257,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 7 日 11:23 至 11 月 8 日 13:08（北京时间）之间发布的报道，共 6 条。检索时间 11/08 13:08。</p>
+        <p>本期收录 2026 年 11 月 8 日 13:08 至 11 月 9 日 09:31（北京时间）之间发布的报道，共 7 条。检索时间 11/09 09:31。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 014 · 24h window · Generated 2026-11-08 13:08</p>
+    <p class="sig">AI Daily · Issue 015 · 24h window · Generated 2026-11-09 09:31</p>
       </div>
     </footer>
       </div>
@@ -258,15 +272,15 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 014</span>
+          <span class="issue-tag">Issue 015</span>
         </div>
-        <h1 class="date">November 8, 2026<span class="weekday">SUN</span></h1>
-        <p class="deck">Today's thread is where responsibility lands after capability ships. Apple's HALO ran on a Unitree G1 in six unmapped rooms, averaging 91% across 360 single-task trials, with training and deployment code released. The same day, Claude Code's "don't ask again" left 1,122 secret-bearing config files on public GitHub, DeepSeek's web and API went down for 45 minutes, and Beijing began deploying a national robot ID code. <em>The robot learned to work in a strange room; the software still has to own its permissions.</em></p>
-        <div class="metabar"><span class="pill">Issue 014</span>
+        <h1 class="date">November 9, 2026<span class="weekday">MON</span></h1>
+        <p class="deck">Today's thread is about removing one layer of waiting and one layer of trust. Nvidia cut the reasoning text out of the VLA action path, holding success while cutting latency by up to 3.4x. The same day, Menlo Ventures said 89% of enterprise open-source model spend goes to Chinese models, and a US indictment put $129m of AI-impersonation losses on the payment-authorisation chain. <em>Making an action wait one less decode and making a payment wait one more callback are two ends of the same problem.</em></p>
+        <div class="metabar"><span class="pill">Issue 015</span>
       <span class="dot"></span>
-      <span>Window Nov 7, 11:23 – Nov 8, 13:08</span>
+      <span>Window Nov 8, 13:08 – Nov 9, 09:31</span>
       <span class="dot"></span>
-      <span>6 stories</span>
+      <span>7 stories</span>
       <span class="dot"></span>
       <span>8 min read</span></div>
       </div>
@@ -289,15 +303,15 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>Apple's HALO averages 91% across 360 single-task trials on a Unitree G1 in six unmapped environments.</b> Three composite tasks averaged 70%; the hardest run — duck under an obstacle, walk to the target, push a box — succeeded 5 times out of 10. Data-generation, training and deployment code are public.</p>
+      <p><b>Nvidia's TacitVLA hides the reasoning text from the action expert: same success, up to 3.4x lower latency.</b>On LIBERO a call takes 147 ms instead of 495 ms; on RoboMME Counting it reaches 82.7%, against a previous best of 66.8%.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>China's industry ministry is consulting on a robot ID code, and Beijing has started deploying it.</b> The code has four segments and is fixed for a machine's lifetime; annual applications are generally capped at 300% of the previous year's output. Comments close December 5.</p>
+      <p><b>Menlo Ventures: 89% of enterprise open-source model spend goes to Chinese models, with Kimi at 61%.</b>DeepSeek takes 15% and GLM 11%; Meta's Llama is at 7%. Open-weight models handle only 19% of enterprise tokens.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>Claude Code's "don't ask again" left 1,122 secret-bearing config files on public GitHub.</b> Apiiro found 104,185 copies across 103,617 repositories; 1.1% held at least one secret, 1,379 in total.</p>
+      <p><b>The US charges three men over an AI impersonation scheme that stole $129m.</b>At least six companies were hit, including a UK tech firm that lost more than $11m; two were arrested in Spain and one in the UK.</p>
     </li>
       </ol>
 
@@ -312,25 +326,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 17:40</span>
-          <a class="src" href="https://www.ithome.com/1/023/767.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+          <span class="d">11/08 19:42</span>
+          <a class="src" href="https://www.163.com/dy/article/LB83S50S0511AQHO.html" target="_blank" rel="noopener noreferrer">Machine Heart ↗</a>
         </div>
-        <h3>Apple's HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1</h3>
-        <p>Apple's research team has posted "Perceptive Humanoid Motion from Simulation" on arXiv, describing HALO, a humanoid control system it deployed on a Unitree G1. The robot carries a 3D-printed shell and a Mac mini with an M4 Pro and 64GB of unified memory, which runs the compute-heavy Orchestrator (a vision-language model, Qwen3.6-35B-A3B by default) and the Motion Generator (a DiT, Qwen3.5-2B). The G1's own chip runs a 50Hz Tracker, a reinforcement-learning policy.</p>
-        <p>Across six real environments that had not been pre-scanned or mapped, the team ran 360 single-task trials and averaged 91% success. For long-horizon compositions, three task sequences were each run 10 times in one environment, averaging 70%; the hardest — duck under an obstacle, walk to the target, push a box — succeeded 5 out of 10. The data pipeline used 250 H100s for about 48 hours; the motion generator trained on 64 B200s, the tracker on four H100s.</p>
-        <p>The team released data-generation, training and deployment code. The paper also states the limits: new physical tasks still need hand-written prompts and keyframes, some motions rely on human video or motion capture, and the robot is vision-only, so contact-heavy tasks degrade when objects leave the camera's view or become occluded.</p>
-        <p class="why"><b>Why it matters</b>The 91% is single-task success; 70% is what long sequences actually feel like, because errors compound across steps — the shared bottleneck of every hierarchical control stack. The more copyable part is the engineering split: the large model runs on an on-robot Mac mini for semantics and orchestration, the real-time policy stays on the robot controller, and the cloud is optional. With code released, reproduction drops from "own a robot" to "own a G1 and a Mac". The next fight is touch and occlusion, not another point of single-task success.<br><b>The other view</b>One data cycle costs 250 H100s for two days, and motion generation another 64 B200s. The more capability depends on synthetic data, the more the bill looks like a model company's, not a robot company's. Who pays to re-collect data for every new task will decide whether this stays a lab demo or becomes a product.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/07 22:16</span>
-          <a class="src" href="https://github.com/Video-Rebirth/hyperflow-h3-flash" target="_blank" rel="noopener noreferrer">GitHub · Video Rebirth ↗</a>
-        </div>
-        <h3>HyperFlow squeezes a 31B video-and-audio model to 13.7B, generating in 4 to 8 steps</h3>
-        <p>Video Rebirth has published HyperFlow H3 Flash on GitHub: a compressed version of MiniMax-H3, a 31B joint video-audio generation model, cut to 13.7B parameters and 4 to 8 inference steps, with INT8 and GGUF builds. The pitch is joint generation — picture and sound emerge from the same denoising loop rather than a video pass followed by a dubbing pass.</p>
-        <p>The repository states parameter count, step count and quantization formats, but gives no head-to-head benchmark against the teacher model, no training-data scale, and no full licence details. This is a community release, not a peer-reviewed paper; every performance figure is the authors' own.</p>
-        <p class="why"><b>Why it matters</b>Distilling 31B into 13.7B and pushing steps into single digits buys memory and latency, and usually charges for it in detail, motion consistency and audio-visual sync. Before trusting it, compare the 4-step and 8-step outputs, check whether lip movements line up with impacts and speech, measure the INT8 drop, and look at real frame rates for the GGUF build on consumer cards. For teams building local generation tools, GGUF means escaping the data centre — but read the licence and commercial terms first.</p>
+        <h3>Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency</h3>
+        <p>A team from Nvidia, NYU, UC Berkeley, Johns Hopkins and Stanford built TacitVLA. It still trains the vision-language backbone to generate reasoning text, but an attention-mask change hides those tokens from the flow-matching action expert. Actions no longer wait for autoregressive decoding, while the reasoning supervision still shapes the backbone.</p>
+        <p>Across RoboMME, RMBench, LIBERO / LIBERO-Plus and PhysicalAI-AV, success matches the explicit-reasoning counterpart while per-call latency falls by up to 3.4x. On LIBERO it takes 147 ms versus 495 ms, inside the 250 ms execution window; in closed-loop driving, 127 ms versus 269 ms. At the same latency as a model trained without reasoning, it gains up to 17.1 points.</p>
+        <p>Absolute results: 82.7% on RoboMME Counting (previous best 66.8%), 77.5% on RMBench (56.5%), 72.9% on LIBERO-Plus, and a 52.5% scene score on PhysicalAI-AV. On RMBench Press Button it scores 74.3% against 7.7% without reasoning; the ledger is correct in 99.7% of episodes. All latency figures are means on a single H100.</p>
+        <p class="why"><b>Why it matters</b>The result separates two jobs of reasoning: writing it during training improves the backbone, while reading the current text at deployment only adds delay. For robotics teams, the minimal change is one attention mask, with no new model or scheduler. What still needs testing is whether act-first, write-the-ledger-during-execution holds over longer horizons, and whether the supervision still pays off across robot bodies.<br><b>Another view</b>Cutting 495 ms to 147 ms buys line throughput and GPU hours. If each robot runs three times as many episodes per day, data return may become the bottleneck before hardware does.</p>
       </article>
 
     </div>
@@ -347,13 +350,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 17:26</span>
-          <a class="src" href="https://news.qq.com/rain/a/20261107A0B22Q00" target="_blank" rel="noopener noreferrer">China News Service ↗</a>
+          <span class="d">11/08</span>
+          <a class="src" href="https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>DeepSeek's web and API partially fail for 45 minutes; status page says fixed</h3>
-        <p>From 15:11 to 15:56 Beijing time on November 7, DeepSeek's web interface and API suffered a partial outage. The hashtag "DeepSeek is down again" reached the top of Weibo's trending list. The company's status page reported the issue resolved and service restored; the same page records 16 incidents in August, eight in July and seven in October.</p>
-        <p>DeepSeek did not say which models, regions or share of requests were affected, nor whether capacity, a dependency or a release caused it. Only the outage window and the recovery are confirmed.</p>
-        <p class="why"><b>Why it matters</b>Forty-five minutes is a refresh for a chat user and a non-replayable failure for a batch agent. Idempotent retries, checkpoints inside long tasks, and a client-side fallback model limit the damage more than any post-mortem. The status page's "partial outage" is also a signal about observability: developers need per-model, per-endpoint success rates and latency curves to decide whether to degrade or wait.</p>
+        <h3>Karpathy builds HackerTube in a weekend: 43m comments distilled into 6,454 videos</h3>
+        <p>Andrej Karpathy used Claude Opus 5.5 to build HackerTube over a weekend, distilling 43 million Hacker News comments from 20 years into 6,454 videos that keep getting recommended there. The site needs no login, shows a single mid-video frame instead of an optimised thumbnail, and stores state locally in the browser.</p>
+        <p>He says Claude Code handled nearly all the work, from data analysis to server setup; his manual steps were a Google Cloud API key, a rented server and buying the domain. He then used Claude Code to one-shot TristanTube in three minutes, with 47,000 videos from a YouTube channel list.</p>
+        <p class="why"><b>Why it matters</b>The point is not another video site but a cost structure: data cleaning, front end and deployment compressed into a weekend. What is reproducible is the task split and acceptance: let the model turn 20 years of comments into a queryable candidate set, and keep only the domain, key and deploy steps for a human. The hard part is evaluation. Recommendation quality rests on the author's judgement and has no benchmark; the more one-person products appear, the more their build logs need to be auditable.</p>
       </article>
 
     </div>
@@ -370,14 +373,38 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07</span>
-          <a class="src" href="https://cybersecuritynews.com/claude-codes-yes-and-dont-ask-again/" target="_blank" rel="noopener noreferrer">Cyber Security News ↗</a>
+          <span class="d">11/08 21:23</span>
+          <a class="src" href="https://www.ithome.com/1/024/001.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
         </div>
-        <h3>Claude Code's "don't ask again" writes passwords into project settings; 1,122 public copies hold secrets</h3>
-        <p>Apiiro's scan found that when a Claude Code user picks "Yes, and don't ask again", the tool saves the entire command verbatim in the project's <code>.claude/settings.local.json</code>. If the command contains a password or token, it lands on disk in plain text. Public GitHub holds 104,185 copies of that file across 103,617 repositories; 1,122 of them — about 1.1% — contain at least one secret, 1,379 in total.</p>
-        <p>The breakdown: 379 database passwords, 43 SSH logins for public servers, 42 GitHub/GitLab/npm tokens and 23 AWS keys, spread across 63 organisations. In 539 of the 1,105 repositories the researchers traced, the file was changed by a commit listing Claude as a co-author. Half of the secret-bearing files had been on the default branch for at least 217 days; there are another 734 historical secrets and 211 forked copies. Counting shared settings, history and agent chat logs, the total reaches 2,539 secrets across 1,994 repositories.</p>
-        <p>Common scanners miss many of them: gitleaks flagged 564 files and TruffleHog 643, and neither flagged 215, mostly passwords typed inside commands. Claude Code adds the file to the user's global git excludes the first time it writes it, but that protection does not travel with the repository and does not rewrite history.</p>
-        <p class="why"><b>Why it matters</b>This is not a model leak; it is a permissions-design failure. To reduce prompts, the tool turned "allow this command" into "store this command in full". The order of repair is rotate first, clean second — deleting the file does not remove it from git history or forks. Agent builders should save allow-rules by command pattern, keep secrets as variable names only, and treat <code>.claude/</code>, <code>.cursor/</code> and similar directories as <code>.env</code> files in secret scanning. One wrong default can cost hundreds of credentials.</p>
+        <h3>Shanghai Jiao Tong's AutoDNA lands in Nature: multi-agent autonomous molecular-biology experiments at micron and microlitre scale</h3>
+        <p>A team from Shanghai Jiao Tong University's IPADS lab and its School of Chemistry and Chemical Engineering built AutoDNA (Siyuan-1), an AI-native scientific lab that performs molecular-biology experiments autonomously. The work was published in Nature and featured on the journal's homepage.</p>
+        <p>The architecture splits experiments across agents for literature search, reagent selection, protocol design, code generation, hardware execution, analysis and iteration. Instrument capabilities are exposed as atomic services with natural-language descriptions and a unified code interface, so the model can compose devices and generate and repair cross-device control code. The hardware provides micron positioning and microlitre liquid handling; the control terminal runs OpenHarmony.</p>
+        <p>The team validated the system on nucleic-acid testing, enzymatic DNA synthesis and cancer detection, and demonstrated end-to-end DNA storage: encoding, writing, storage, reading and decoding. The paper is s41586-026-11228-6.</p>
+        <p class="why"><b>Why it matters</b>The engineering value is the instrument abstraction layer: hiding differences between device models behind a model-callable service interface is what makes cross-device orchestration possible. The failure modes matter more than the demo: drift in micron positioning over long runs, contamination control, and whether a failed experiment can roll back automatically. For lab-automation teams, unify the interface and state machine before letting the model write arbitrary code; one bad call can destroy a batch of samples.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08 16:48</span>
+          <a class="src" href="https://www.ithome.com/1/023/925.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+        </div>
+        <h3>US charges three men over a $129m AI scheme impersonating executives and lawyers</h3>
+        <p>The US Attorney's Office for the Southern District of New York unsealed an indictment against Jacob Saul, Sharon Hazan and Guy Shetrit. Prosecutors say that from 2024 to 2026 they used AI to fake the voices and images of executives and lawyers, persuading employees to wire money, in a scheme worth more than $129m. Saul and Hazan were arrested in Spain this summer; Shetrit was arrested in the UK in September.</p>
+        <p>The playbook had two steps: impersonate an executive to tell an employee about a sensitive financial transaction, then hand the employee to a fake lawyer at an international firm who gave the wiring instructions. Proceeds were converted to cryptocurrency and split among co-conspirators.</p>
+        <p>Disclosed victims include a Missouri hospital group that lost nearly $5m, a Rhode Island bank about $2.7m, a California hospital group about $3m, a Massachusetts mutual-fund company more than $4.6m, a Florida pet-food company about $5m and a UK tech company more than $11m. The three are charged with conspiracy to commit wire fraud, conspiracy to commit money laundering and aggravated identity theft.</p>
+        <p class="why"><b>Why it matters</b>This is not a deepfake-detection problem but an authorisation-chain problem: employees were told to bypass normal payment checks because the caller was "the executive" or "the lawyer". The repair order is two-person approval, a callback to a known number and a payment whitelist, not a detection model. For voice and video product teams, provenance and watermarking should be on by default and verifiable downstream.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08</span>
+          <a class="src" href="https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Co-Design Bench: even the best coding agent fully solves only 26.4% of tasks</h3>
+        <p>Researchers from Alibaba and several Asian universities built Co-Design Bench from real user change requests in coding sessions. Agents must rework existing web apps, sometimes with images, audio, video or documents as input. Across ten models, the best, GPT-6 Astra, meets about 70% of a task's requirements on average but is fully correct in only 26.4% of tasks.</p>
+        <p>By track, GPT-6 Astra fully solves 41% of multimodal tasks and just under 18% of repository-level tasks. Claude Opus 5 and Qwen3.8-Max follow, with Grok 4.6 last. Every model gets worse when a task combines layout, design, interaction and content changes.</p>
+        <p>Grading uses two AI judges: one operates the finished app in a browser, the second reviews every positive verdict and looks for mock-ups or hard-coded results. Only features that actually work score. The harness also matters: on larger overhauls, Qwen3.8-27B can fall from 75% to 56% depending on the environment, enough to change the ranking of two models.</p>
+        <p class="why"><b>Why it matters</b>Near-perfect scores on older benchmarks no longer say whether an agent can ship. 26.4% is closer to the feel of a real project. Teams buying coding agents should test model and harness as a pair, and split acceptance into "it runs, it is not hard-coded, and multiple change types hold at once". For agent builders, the gains may come less from the model than from specs, rollback and verifiable intermediate artefacts.</p>
       </article>
 
     </div>
@@ -394,13 +421,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 12:53</span>
-          <a class="src" href="https://news.qq.com/rain/a/20261107A07AQI00" target="_blank" rel="noopener noreferrer">Beijing Youth Daily ↗</a>
+          <span class="d">11/08 21:15</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202611083925662081.html" target="_blank" rel="noopener noreferrer">Shanghai Securities News ↗</a>
         </div>
-        <h3>Robots get an ID: China's industry ministry consults on a "one machine, one code" rule as Beijing starts deployment</h3>
-        <p>On November 6, the equipment industry department of China's Ministry of Industry and Information Technology opened public consultation on a draft measure for robot product identification codes, with comments due December 5. The code identifies a complete robot and has four segments: manufacturer code, product description code, serial-number code and other codes. It covers industrial, service and special-purpose robots.</p>
-        <p>The draft requires manufacturers to mark each unit in at least three ways — digital storage, human-readable and machine-readable — with consistent information. Marks must be clear, durable, hard to replace, fixed for life, tamper-proof and non-erasable. Annual applications are generally capped at 300% of the previous year's actual output, with extra volume requiring production evidence. Products shipped before the rule takes effect must register their own serial numbers on the platform. Beijing's economy and information technology bureau held a mobilisation meeting on November 4.</p>
-        <p class="why"><b>Why it matters</b>This adds an identity layer to embodied AI: a common primary key for recalls, traceability, incident liability and resale. The real cost sits in production lines and data — an extra marking step per unit, changes to MES, field and API definitions on the platform, and retroactive serial registration for installed machines. For robot-software teams, the code becomes the entry point for device registration, permission binding and firmware updates. Decide now what goes into the code, what stays in the cloud, and how it is verified offline.</p>
+        <h3>Topstar unveils Star, a 172cm bipedal humanoid: 72kg, 10kg per arm, four-hour battery</h3>
+        <p>At its global open day on November 7-8, Topstar presented three industrial scenarios and showed Star, a full-size bipedal industrial humanoid, for the first time. It stands 172 cm, weighs 72 kg, carries 10 kg with both arms, uses seven-axis arms and cross-axis wrists, senses 360 degrees with cameras in the head, chest and back, and runs for more than four hours with fast charging.</p>
+        <p>The company says it visited more than 100 customers over the past year and validated over 30 scenarios and tasks, narrowing them to three directions: high-mix low-volume sorting, multi-process integrated work and smart transport. It also launched the S400, a five-axis machining centre for humanoid joints, arm links and shells.</p>
+        <p>On orders, Lewei Precision has bought 100 of its five-axis machines, and Nandouxing, after a year-long trial of 60 temperature controllers, ordered 290 more in 2026. Kaihang Technology signed a humanoid purchase agreement and Zhejiang Leiwang signed for five-axis machine tools; Topstar is also setting up joint labs with Greater Bay Area University and Nanchang University.</p>
+        <p class="why"><b>Why it matters</b>The 172cm, 72kg, 10kg package is aimed at existing factory lines: no line rebuild, cross-area movement, one shift of work. The hard part is not walking but the process model plus data return: more than 100 customers narrowed to three directions shows how custom the scenarios still are. For embodied-AI teams, get reusable process data before talking about generality; for factories, price the downtime of a four-hour battery and fast charging before the robot.</p>
       </article>
 
     </div>
@@ -417,13 +445,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/07 20:50</span>
-          <a class="src" href="http://k.sina.com.cn/article_5952915705_162d248f906703ss08.html" target="_blank" rel="noopener noreferrer">Tianjin TV ↗</a>
+          <span class="d">11/08 13:21</span>
+          <a class="src" href="https://www.ithome.com/1/023/885.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
         </div>
-        <h3>China Software Conference opens in Tianjin with an open-source community for human-machine-object software</h3>
-        <p>The 2026 China Software Conference opened in Tianjin on November 7, hosted by the China Computer Federation and organised by Tianjin University and Nankai University. More than 3,000 people from universities, research institutes and software firms attended, with over 60 sessions covering basic software, AI software engineering and industrial software.</p>
-        <p>The opening ceremony launched an open-source community for "human-machine-object fusion" intelligent software, developed by teams from Peking University, Tsinghua and Harbin Institute of Technology together with Xiaomi, Kylin Software and Sugon. It offers compute, datasets and development tools for joint algorithm work. Tianjin plans to adapt it with local vendors for smart factories and smart ports.</p>
-        <p class="why"><b>Why it matters</b>The value of such a community is not the launch event but three things: whether compute and data are genuinely open to outside developers, how contributions are reviewed, and whether its components can be depended on by existing toolchains. Without a public issue tracker and a release cadence it becomes a showcase; with reproducible builds and versioned datasets it could become infrastructure for AI software engineering. Check the issue list before the signing photo.</p>
+        <h3>Menlo Ventures: 89% of enterprise open-source model spend goes to Chinese models, Kimi takes 61%</h3>
+        <p>A Menlo Ventures report says Chinese models account for 89% of global enterprise spending on open-source models. Moonshot's Kimi leads with 61%, followed by DeepSeek at 15% and Zhipu's GLM at 11%; Meta's Llama, the leading Western model, has only 7%.</p>
+        <p>In the same report, open-weight models handle only 19% of enterprise token usage, with closed models still dominant; Anthropic and OpenAI together take 86% of spend. The report was first covered by the South China Morning Post and relayed by IT Home on November 8.</p>
+        <p class="why"><b>Why it matters</b>Read the numbers separately: 89% is a share of open-source model spend, not of total enterprise AI spend; 19% is the open-weight share of tokens. For model vendors, Kimi's 61% says price and Chinese-language use cases are still the main levers. For buyers, concentration is higher on the closed side: Anthropic plus OpenAI at 86% means leverage comes less from the number of models than from portable evaluations and exit costs.</p>
       </article>
 
     </div>
@@ -432,9 +460,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between 11:23 on November 7 and 13:08 on November 8, 2026 (UTC+8): 6 items. Compiled at 13:08 on November 8.</p>
+        <p>This issue covers reports published between 13:08 on November 8 and 09:31 on November 9, 2026 (UTC+8): 7 items. Compiled at 09:31 on November 9.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 014 · 24h window · Generated 2026-11-08 13:08</p>
+    <p class="sig">AI Daily · Issue 015 · 24h window · Generated 2026-11-09 09:31</p>
       </div>
     </footer>
       </div>
@@ -459,8 +487,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">08</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-08.html" title="苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%">
+        <summary><span>2026 年 11 月</span><span class="am-count">09</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-09.html" title="英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍">
+          <span class="a-date">2026.11.09 <em>MON</em></span>
+          <span class="a-head">英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-08.html" title="苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%">
           <span class="a-date">2026.11.08 <em>SUN</em></span>
           <span class="a-head">苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%</span>
         </a>
@@ -525,8 +557,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">08</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-08-en.html" title="Apple&#39;s HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1">
+        <summary><span>November 2026</span><span class="am-count">09</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-09-en.html" title="Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency">
+          <span class="a-date">2026.11.09 <em>MON</em></span>
+          <span class="a-head">Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-08-en.html" title="Apple&#39;s HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1">
           <span class="a-date">2026.11.08 <em>SUN</em></span>
           <span class="a-head">Apple&#39;s HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1</span>
         </a>

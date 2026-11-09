@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 9 日</title>
+<meta name="description" content="2026-11-09 AI 日报第 015 期：英伟达 TacitVLA 把推理文本从动作路径摘掉，成功率不变、延迟最多降 3.4 倍；Karpathy 一个周末搭出 HackerTube；上海交大 AutoDNA 登上《自然》；美国司法部起诉三人用 AI 冒充高管与律师，涉案 1.29 亿美元；Co-Design Bench 最好的编码智能体也只完整做对 26.4%；拓斯达发布 172cm 双足人形机器人 Star；Menlo Ventures 称企业开源模型支出 89% 流向中国模型。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 9 日">
+<meta property="og:description" content="2026-11-09 AI 日报第 015 期：英伟达 TacitVLA 把推理文本从动作路径摘掉，成功率不变、延迟最多降 3.4 倍；Karpathy 一个周末搭出 HackerTube；上海交大 AutoDNA 登上《自然》；美国司法部起诉三人用 AI 冒充高管与律师，涉案 1.29 亿美元；Co-Design Bench 最好的编码智能体也只完整做对 26.4%；拓斯达发布 172cm 双足人形机器人 Star；Menlo Ventures 称企业开源模型支出 89% 流向中国模型。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-09.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-08T13:08:00+08:00/2026-11-09T09:31:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-09.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-09.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-09-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=7">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-09-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 015 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 9 日<span class="weekday">MON</span></h1>
+    <p class="deck">今天的主线是「把等待和信任分别拿掉一层」。英伟达把 VLA 的推理文本从动作路径里摘出去，成功率不变、延迟最多降 3.4 倍；同一时间，Menlo Ventures 说企业开源模型支出的 89% 流向中国模型，而美国司法部起诉的 AI 冒充案把 1.29 亿美元的损失摊在了付款授权链上。<em>让动作少等一次解码，和让付款多等一次回拨，是同一个问题的两端。</em></p>
+    <div class="metabar"><span class="pill">第 015 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/08 13:08 – 11/09 09:31</span>
+      <span class="dot"></span>
+      <span>7 条</span>
+      <span class="dot"></span>
+      <span>阅读约 8 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>英伟达 TacitVLA 把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍。</b>LIBERO 上单次调用 147ms，显式推理要 495ms；RoboMME 计数任务成功率 82.7%，此前最好 66.8%。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Menlo Ventures：企业开源模型支出 89% 流向中国模型，Kimi 占 61%。</b>DeepSeek 15%、GLM 11%，Meta Llama 仅 7%；开源权重模型只处理企业 19% 的 token。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>美国司法部起诉三人用 AI 冒充企业高管与律师，涉案 1.29 亿美元。</b>至少 6 家企业受害，英国一家科技公司损失超 1,100 万美元；三人分别在西班牙和英国被捕。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08 19:42</span>
+          <a class="src" href="https://www.163.com/dy/article/LB83S50S0511AQHO.html" target="_blank" rel="noopener noreferrer">机器之心 ↗</a>
+        </div>
+        <h3>英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍</h3>
+        <p>英伟达与纽约大学、UC 伯克利、约翰斯·霍普金斯、斯坦福的团队提出 TacitVLA：训练时照常让视觉语言主干生成推理文本，但在注意力掩码里让动作专家看不到这段文本。动作不再等待自回归解码，推理监督仍然塑造主干表示；论文与项目页已公开，代码标注为即将发布。</p>
+        <p>在 RoboMME、RMBench、LIBERO / LIBERO-Plus 和 PhysicalAI-AV 四个基准上，TacitVLA 的成功率与显式推理版本相当，单次调用延迟最多降低 3.4 倍。LIBERO 上为 147ms 对 495ms，正好卡进 250ms 的执行窗口；闭环驾驶为 127ms 对 269ms。在相同延迟下，它比不做推理训练的同一模型成功率最多高 17.1 个百分点。</p>
+        <p>绝对成绩：RoboMME 计数任务 82.7%（此前最好 66.8%），RMBench 77.5%（此前 56.5%），LIBERO-Plus 72.9%，PhysicalAI-AV 闭环场景分 52.5%。RMBench 的 Press Button 任务上 74.3%，不做推理的版本只有 7.7%，记忆条目正确率 99.7%。所有延迟数字都是单张 H100 上的均值。</p>
+        <p class="why"><b>看点</b>这不是让模型「少想」，而是把推理的两种作用拆开：训练时写推理能改善主干，部署时读当前推理只会增加延迟。对做机器人的团队，最小改动是一行 attention mask，不需要新模型或调度器；真正要验证的是长程记忆任务里「动作先出、日志后写」能否稳定，以及跨机型迁移时推理监督是否还划算。<br><b>另一个视角</b>延迟从 495ms 降到 147ms，省下的是产线节拍和 GPU 时间；如果每台机器人每天多跑三倍回合，数据回流成本会先于硬件成本成为瓶颈。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08</span>
+          <a class="src" href="https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Karpathy 用 Claude 一个周末搭出 HackerTube：4300 万条评论筛出 6,454 个视频</h3>
+        <p>Karpathy 用 Claude Opus 5.5 在一个周末搭出 HackerTube，从 Hacker News 20 年的 4300 万条评论里筛出 6,454 个被反复推荐的视频。页面不需要登录，只显示视频中段的一帧，状态存在浏览器本地。</p>
+        <p>他说 Claude Code 承担了从数据分析到服务器设置的几乎全部工作，自己只做了三件事：申请 Google Cloud API key、租服务器、买域名。随后又用 Claude Code「3 分钟一次成型」搭出 TristanTube，收录 47,000 个视频。</p>
+        <p class="why"><b>看点</b>重点不是又一个视频站，而是「数据清洗 + 前端 + 部署」被压进一个周末的成本结构。可复现的部分是任务拆分与验收：先让模型把 20 年评论变成可查询的候选集，再让人只做域名、密钥和上线三步。难点在评估——推荐质量靠作者的主观判断，没有基准；这类「一人产品」越多，越需要可审计的构建日志。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08 21:23</span>
+          <a class="src" href="https://www.ithome.com/1/024/001.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>上海交大 AutoDNA 登上《自然》：多智能体自主做分子生物学实验，微米级定位、微升级移液</h3>
+        <p>上海交大计算机学院 IPADS 实验室陈海波、王肇国团队与化学化工学院樊春海、王飞团队合作，构建 AI 原生科学实验室 AutoDNA（思源一号），实现自主分子生物学实验操作。成果发表于《自然》，并获该刊官网首页头条报道。</p>
+        <p>架构上，多智能体把实验拆成文献检索、试剂选择、方案设计、代码生成、硬件执行、结果分析和迭代优化；仪器能力被抽象成带自然语言说明和统一代码接口的「原子服务」，模型可以组合设备能力、生成并修正跨设备控制代码。硬件提供微米级定位和微升级液体处理，控制终端基于 OpenHarmony。</p>
+        <p>团队已在核酸检测、酶促 DNA 合成、癌症检测等场景完成验证，并展示端到端 DNA 存储的编码、写入、保存、读取与解码流程。论文编号为 s41586-026-11228-6。</p>
+        <p class="why"><b>看点</b>这条的工程价值在「仪器抽象层」：把不同型号设备的差异藏在一个可被模型调用的服务接口后面，才可能让 agent 跨设备编排。需要看的是失败模式——微米级定位在长时间运行下的漂移、污染控制，以及实验失败后能否自动回滚。对做实验室自动化的团队，先统一接口和状态机，再谈让模型自由生成代码；否则一次错误调用就可能毁掉整批样本。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08 16:48</span>
+          <a class="src" href="https://www.ithome.com/1/023/925.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>美国司法部起诉三人用 AI 冒充高管与律师，涉案 1.29 亿美元</h3>
+        <p>美国纽约南区联邦检察官办公室公布起诉书：三名嫌疑人雅各布·索尔、沙龙·哈赞、盖伊·谢特里特涉嫌自 2024 年至 2026 年用 AI 伪造企业高管和律师的声音、影像，诱骗员工汇款，涉案超过 1.29 亿美元。索尔和哈赞今年夏天在西班牙被捕，谢特里特 9 月在英国落网。</p>
+        <p>手法是两步：先冒充高管联系员工，称有敏感财务交易需要协助；再让员工与「国际律所律师」对接，由假冒律师指示汇款。赃款到账后被兑换成加密货币，再与其他共谋者瓜分。</p>
+        <p>已披露的受害者包括：密苏里州一家医院集团损失近 500 万美元、罗德岛州一家银行约 270 万美元、加州一家医院集团约 300 万美元、马萨诸塞州一家共同基金公司超过 460 万美元、佛罗里达州一家宠物食品公司约 500 万美元、一家英国科技公司超过 1,100 万美元。三人被控共谋电信欺诈、洗钱共谋和加重身份盗用。</p>
+        <p class="why"><b>看点</b>这不是「深度伪造检测」的单点问题，而是授权链问题：员工被要求绕过正常的付款复核，因为对方「是高管、是律师」。修复顺序应是双人复核、回拨已知号码、付款白名单，而不是先买一个检测模型；对做语音和视频产品的团队，水印与来源凭证要默认开启，并且能被下游验证。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08</span>
+          <a class="src" href="https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Co-Design Bench：十个编码智能体最好的也只完整做对 26.4% 的任务</h3>
+        <p>阿里与多所亚洲高校的研究者用真实编码会话中的用户修改请求构建 Co-Design Bench，要求智能体改造现有 Web 应用，输入可以包含图片、音频、视频和文档。十个受测模型中最好的 GPT-6 Astra 平均满足约 70% 的任务要求，但只有 26.4% 的任务完全正确。</p>
+        <p>分轨道看，GPT-6 Astra 在多模态任务上完全做对 41%，在仓库级任务上不到 18%。Claude Opus 5 与 Qwen3.8-Max 紧随其后，Grok 4.6 垫底。任务同时包含布局、设计、交互、内容等多类修改时，所有模型都变差。</p>
+        <p>评测用两个 AI judge：一个在浏览器里操作成品，另一个复核所有正向判定并检查 mock-up 或硬编码；只有真正跑起来的功能才得分。另一个发现是 harness 影响很大：Qwen3.8-27B 在大改任务上，换环境可从 75% 掉到 56%，甚至改变两个模型的排名。</p>
+        <p class="why"><b>看点</b>99% 的旧基准分数已经不能说明「能不能交付」，26.4% 才接近真实项目的体感。对采购编码 agent 的团队，应该把模型和工作环境成对测试，并把验收拆成「能跑、不硬编码、多类修改同时成立」。对做 agent 的人，提升空间可能不在模型本身，而在规格、回滚和可验证的中间产物。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08 21:15</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202611083925662081.html" target="_blank" rel="noopener noreferrer">上海证券报 ↗</a>
+        </div>
+        <h3>拓斯达发布 172cm 双足人形机器人 Star：72kg、双臂 10kg、续航 4 小时</h3>
+        <p>11 月 7 日至 8 日，拓斯达全球开放日发布三套工业场景方案，全尺寸工业双足人形机器人 Star 首次亮相：身高 172cm、重 72kg、双臂负载 10kg，7 轴仿人手臂与十字轴手腕，头部、胸部、背部三相机实现 360 度感知，续航超过 4 小时并支持快充。</p>
+        <p>公司称过去一年多拜访 100 多家客户、完成 30 余个场景与任务验证，收敛出多品种小批量分拣、多工序集成作业、智能搬运三个方向；同时发布人形机器人五轴加工专机 S400，聚焦关节、臂杆、壳体等复杂曲面构件。</p>
+        <p>订单侧，乐维精密累计复购埃弗米五轴设备 100 台；南斗星在采购 60 台模温机验证一年后，2026 年追加 290 台。活动期间凯航科技签人形机器人采购协议，浙江雷旺签五轴联动数控机床采购协议；拓斯达与大湾区大学、南昌大学共建联合实验室。</p>
+        <p class="why"><b>看点</b>172cm、72kg、10kg 这组参数是冲着现有工厂产线去的：不改线、能跨区、能顶一个班次。真正的门槛不是走路，而是「工艺模型 + 数据回流」——100 多家客户只收敛出 3 个方向，说明场景仍高度定制。对做具身智能的团队，先拿到可复用的工艺数据，再谈通用；对工厂，先算清 4 小时续航与换电、快充的停机成本。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/08 13:21</span>
+          <a class="src" href="https://www.ithome.com/1/023/885.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Menlo Ventures：企业开源模型支出 89% 流向中国模型，Kimi 占 61%</h3>
+        <p>Menlo Ventures 的报告称，全球企业开源模型支出中，中国模型占 89%。月之暗面 Kimi 以 61% 居首，DeepSeek 15%，智谱 GLM 11%；西方模型中份额最高的 Meta Llama 仅 7%。</p>
+        <p>同一份报告里，开源权重模型只处理了企业 19% 的 token 使用量，闭源模型仍占主导；Anthropic 与 OpenAI 合计拿走 86% 的支出。报告由《南华早报》最早报道，IT之家 11 月 8 日转述。</p>
+        <p class="why"><b>看点</b>这组数字要分开读：89% 是「开源模型支出」的内部份额，不是企业 AI 总支出的 89%；19% 才是开源权重在 token 用量上的占比。对做模型商业化的团队，Kimi 的 61% 说明价格与中文场景仍是主要杠杆；对采购方，供应商集中度在闭源侧更高——Anthropic 加 OpenAI 86%，议价空间不在模型数量，而在可迁移的评测与退出成本。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 8 日 13:08 至 11 月 9 日 09:31（北京时间）之间发布的报道，共 7 条。检索时间 11/09 09:31。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 015 · 24h window · Generated 2026-11-09 09:31</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>
