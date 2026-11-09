@@ -176,7 +176,7 @@
         <h3>上海交大 AutoDNA 登上《自然》：多智能体自主做分子生物学实验</h3>
         <p>上海交大计算机学院 IPADS 实验室陈海波、王肇国团队与化学化工学院樊春海、王飞团队合作，构建 AI 原生科学实验室 AutoDNA（思源一号），实现自主分子生物学实验操作。成果发表于《自然》，并获该刊官网首页头条报道。</p>
         <p>架构上，多智能体把实验拆成文献检索、试剂选择、方案设计、代码生成、硬件执行、结果分析和迭代优化；仪器能力被抽象成带自然语言说明和统一代码接口的「原子服务」，模型可以组合设备能力、生成并修正跨设备控制代码。硬件提供微米级定位和微升级液体处理，控制终端基于 OpenHarmony。</p>
-        <p>团队已在核酸检测、酶促 DNA 合成、癌症检测等场景完成验证，并展示端到端 DNA 存储的编码、写入、保存、读取与解码流程。论文编号为 s41586-026-11228-6。</p>
+        <p>团队已在核酸检测、酶促 DNA 合成、癌症检测等场景完成验证，并展示端到端 DNA 存储的编码、写入、保存、读取与解码流程。论文编号为 <a href="https://www.nature.com/articles/s41586-026-11228-6" target="_blank" rel="noopener noreferrer">s41586-026-11228-6</a>。</p>
         <p class="why"><b>看点</b>这条的工程价值在「仪器抽象层」：把不同型号设备的差异藏在一个可被模型调用的服务接口后面，才可能让 agent 跨设备编排。需要看的是失败模式——微米级定位在长时间运行下的漂移、污染控制，以及实验失败后能否自动回滚。对做实验室自动化的团队，先统一接口和状态机，再谈让模型自由生成代码；否则一次错误调用就可能毁掉整批样本。</p>
       </article>
 
@@ -379,7 +379,7 @@
         <h3>Shanghai Jiao Tong's AutoDNA lands in Nature: multi-agent autonomous molecular-biology experiments</h3>
         <p>A team from Shanghai Jiao Tong University's IPADS lab and its School of Chemistry and Chemical Engineering built AutoDNA (Siyuan-1), an AI-native scientific lab that performs molecular-biology experiments autonomously. The work was published in Nature and featured on the journal's homepage.</p>
         <p>The architecture splits experiments across agents for literature search, reagent selection, protocol design, code generation, hardware execution, analysis and iteration. Instrument capabilities are exposed as atomic services with natural-language descriptions and a unified code interface, so the model can compose devices and generate and repair cross-device control code. The hardware provides micron positioning and microlitre liquid handling; the control terminal runs OpenHarmony.</p>
-        <p>The team validated the system on nucleic-acid testing, enzymatic DNA synthesis and cancer detection, and demonstrated end-to-end DNA storage: encoding, writing, storage, reading and decoding. The paper is s41586-026-11228-6.</p>
+        <p>The team validated the system on nucleic-acid testing, enzymatic DNA synthesis and cancer detection, and demonstrated end-to-end DNA storage: encoding, writing, storage, reading and decoding. The paper is <a href="https://www.nature.com/articles/s41586-026-11228-6" target="_blank" rel="noopener noreferrer">s41586-026-11228-6</a>.</p>
         <p class="why"><b>Why it matters</b>The engineering value is the instrument abstraction layer: hiding differences between device models behind a model-callable service interface is what makes cross-device orchestration possible. The failure modes matter more than the demo: drift in micron positioning over long runs, contamination control, and whether a failed experiment can roll back automatically. For lab-automation teams, unify the interface and state machine before letting the model write arbitrary code; one bad call can destroy a batch of samples.</p>
       </article>
 
