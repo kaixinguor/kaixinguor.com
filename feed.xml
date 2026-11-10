@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 09 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 10 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-10.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-10.html</guid>
+      <pubDate>Tue, 10 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是「降价和算力账单写在同一张表上」。Anthropic 把最贵一档模型的 API 价格降了两成，同一天的修订版招股书显示三季度算力支出占营收 58%、12 个月内到期的采购承诺约 698 亿美元；Google 把两颗 8i 封进一个封装，Meta 把最小模型压到单任务 0.14 美元。省下来的每一次解码、每一美元，最后都要在别处兑现。 Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 9 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-09.html</link>

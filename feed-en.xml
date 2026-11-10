@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 09 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 10, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-10-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-10-en.html</guid>
+      <pubDate>Tue, 10 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today&#39;s thread is that the price cut and the compute bill are written on the same sheet. Anthropic cut the API price of its most expensive models by a fifth, while its amended filing the same day put compute and infrastructure at 58% of Q3 revenue and $69.8bn of purchase commitments due within 12 months. Google put two 8i dies in one package, and Meta pushed its smallest model to $0.14 a task. Every decode and every dollar saved has to be paid for somewhere else. Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0</description>
+    </item>
     <item>
       <title>AI Daily · November 9, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-09-en.html</link>

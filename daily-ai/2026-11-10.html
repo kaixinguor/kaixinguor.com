@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 10 日</title>
+<meta name="description" content="2026-11-10 AI 日报第 016 期：Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2，API 降价两成、FrontierCode 2.0 拿到 49.1%；同一天修订版招股书显示三季度营收 169.56 亿美元、算力支出占 58%、12 个月内到期承诺约 698 亿美元；OpenAI 上线 Control Room，35 秒内切断模型输出；Google 加发 TPU 8i Max 与 8tx；Meta 最小模型 Muse Ember 单任务 0.14 美元；蚂蚁灵波开源触觉基座 LingBot-Touch；波士顿动力给 Atlas 装上轮子；阿里千问办公 2.0 上线团队 Agent。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 10 日">
+<meta property="og:description" content="2026-11-10 AI 日报第 016 期：Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2，API 降价两成、FrontierCode 2.0 拿到 49.1%；同一天修订版招股书显示三季度营收 169.56 亿美元、算力支出占 58%、12 个月内到期承诺约 698 亿美元；OpenAI 上线 Control Room，35 秒内切断模型输出；Google 加发 TPU 8i Max 与 8tx；Meta 最小模型 Muse Ember 单任务 0.14 美元；蚂蚁灵波开源触觉基座 LingBot-Touch；波士顿动力给 Atlas 装上轮子；阿里千问办公 2.0 上线团队 Agent。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-10.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-09T09:31:00+08:00/2026-11-10T11:15:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-10.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-10.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-10-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../psychology.html">心理学日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-10-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 016 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 10 日<span class="weekday">TUE</span></h1>
+    <p class="deck">今天的主线是「降价和算力账单写在同一张表上」。Anthropic 把最贵一档模型的 API 价格降了两成，同一天的修订版招股书显示三季度算力支出占营收 58%、12 个月内到期的采购承诺约 698 亿美元；Google 把两颗 8i 封进一个封装，Meta 把最小模型压到单任务 0.14 美元。<em>省下来的每一次解码、每一美元，最后都要在别处兑现。</em></p>
+    <div class="metabar"><span class="pill">第 016 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/09 09:31 – 11/10 11:15</span>
+      <span class="dot"></span>
+      <span>8 条</span>
+      <span class="dot"></span>
+      <span>阅读约 9 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%。</b>输出比 5.1 快最多 30%，价格改为每百万 token 输入 8 美元、输出 40 美元；RoboDojo Sim 64.9%，Fable 5.1 只有 27.6%。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Anthropic 修订版招股书：三季度营收 169.56 亿美元，算力支出 98.63 亿美元占 58%。</b>采购与租赁承诺合计 8954 亿美元，其中约 698 亿美元 12 个月内到期；潜在投资者讨论的估值降到 1.2 万亿至 1.3 万亿美元。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>OpenAI 部署 Control Room：判定叫停后 35 秒内切断研究负载的模型输出。</b>每个会做 agentic 推理的研究负载必须挂一个已批准的安全案例；中央服务不可用时按 fail-closed 拒绝推理请求。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/09</span>
+          <a class="src" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Anthropic ↗</a>
+        </div>
+        <h3>Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%</h3>
+        <p>Anthropic 11 月 9 日发布 Claude Fable 5.2 与 Claude Mythos 5.2。两者是同一个底层模型，差别只在安全策略：Fable 带较严的网络安全与生物学防护，因此能对所有人开放；Mythos 放宽这两类限制，只通过 Life Sciences 与 Cyber 两个验证计划放行。输出速度比 5.1 快最多 30%，价格从每百万 token 输入 10 美元、输出 50 美元降到 8 美元与 40 美元；可选的 fast mode 再快最多 2.5 倍，定价 16 美元与 80 美元。</p>
+        <p>基准表里，Fable 5.2 在 Xhigh effort 下把 FrontierCode 2.0 做到 49.1%，高于 Opus 5.5 的 45.5%、GPT-6 Astra 的 42.8% 和 Gemini 4 Carbon 的 41.1%；FrontierSWE v2 69.9%（Opus 5.5 62.3%）；Terminal-Bench-Science 0.1 为 74.6%，Mythos 5.2 是 75.3%；RoboDojo Sim 64.9%，Fable 5.1 只有 27.6%、Opus 5.5 是 39.4%；OSWorld 2.1 89.3%；带工具的 Humanity's Last Exam 74.2%。没有全线领先的是业务工作流：AutomationBench 51.4%，低于 Gemini 4 Carbon 的 53.9%。</p>
+        <p>效率部分的说法更值得注意：在 Medium（Claude 应用与 Claude Code 的默认档）上，完成同一批难题用的 token 比 Fable 5.1 少；FrontierCode 2.0 在 High effort 下与 Opus 5.5 的 Max 档基本打平（45.3% 对 45.5%），每任务成本约为后者一半。官方给出的使用顺序是日常先用 Opus 5.5，按复杂度往上换 Fable 或 Mythos、往下换 Sonnet 5.5 或 Haiku 5.5；Fable 5.2 另外可以当 Advisor（小模型卡住时咨询它一次）或 Orchestrator（把简单任务分给更小的模型）。</p>
+        <p>Anthropic 自己列的案例包括：从零设计三台可工作的电子设备；30 小时完成费马大定理的可机器检查形式化——今年 9 月同一项目用了 11 天，这次靠 1000 个 agent 并行；解决两个黑洞物理的开放问题。据 <a href="https://siliconangle.com/2026/11/09/anthropic-launches-fable-5-2-and-mythos-5-2-with-science-coding-upgrades/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a> 报道，还有一名工程师让它从零搭一个操作系统：同样拉起 1000 个 agent，约八天完成，成品能在笔记本上运行、可联网、带 Claude 侧边栏。据 <a href="https://www.itmedia.co.jp/news/article/2611/10/2000003042/" target="_blank" rel="noopener noreferrer">ITmedia</a> 报道，Fable 5.2 的 cyber/bio 防护误拦比 5.1 少约 55%。</p>
+        <p class="why"><b>看点</b>这不是「更大的模型」，而是「最贵那一档降价」。三个数字要放在一起读：FrontierCode 49.1% 只比 Opus 5.5 高 3.6 个百分点，而真正改变工程选择的是「默认档更省 token」——如果 Medium 就能交活，成本下降来自 token 数而不是单价。要验证的是三件事：Xhigh 那 49.1% 背后的每任务成本（官方只给了 High 档约为 Opus 5.5 一半）、RoboDojo 64.9% 是内部跑分、以及 fast mode 的 2.5 倍速是否拿质量换的。对做 agent 的团队，Advisor 与 Orchestrator 两种角色比分数更值得先试：让贵模型只在小模型卡住时被调用一次，单位任务的成本结构会立刻不一样。<br><b>另一个视角</b>同一天见报的招股书数字正好反过来：三季度算力与基础设施支出 98.63 亿美元，占营收 58%；临时加购的约 50 亿美元短期算力价格高于长期合同；「新模型降价和合同折扣」让当季收入减少约 6 亿美元。单价下调不是让利，是拿算力账单换份额——降价的钱要在长约和规模里找回来。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 09:38</span>
+          <a class="src" href="https://siliconangle.com/2026/11/09/meta-introduces-muse-ember-to-power-cost-efficient-ai-agents/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>Meta 发布最小模型 Muse Ember：单任务 0.14 美元，Intelligence Index 追平 Claude Haiku 5.5</h3>
+        <p>Meta 11 月 9 日发布 Muse Ember，自称家族里最小、最高效的模型，面向 agent 每天重复的工作：工具调用、编码子任务、路由、信息抽取、长文档解析。上下文窗口 100 万 token，单次输出最长 51.2 万 token，支持文本、图像、音频、视频输入。它是第一个用旗舰模型 Muse Wonder（Full）训练出来的公开模型，Meta 没有说明具体用在训练流程的哪一段。</p>
+        <p>Artificial Analysis 的 Intelligence Index 上，Muse Ember 得 36 分，与 Claude Haiku 5.5 的最高推理档持平，高于 GPT-6 Luna 的 28 分；单任务成本约 0.14 美元，Haiku 5.5 约 0.41 美元，Muse Spark 1.3 约 2.39 美元。分项要看是谁测的：Meta 自测的 AutomationBench-AA 为 37.8%（Haiku 13.9%、Luna 20.2%，该基准含 657 项跨 Gmail、Salesforce 等应用的任务），而 <a href="https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index" target="_blank" rel="noopener noreferrer">Artificial Analysis 的独立复测</a>给出 68.1%，与 Muse Wonder、GPT-6 Astra 持平——同一基准差 30 个百分点，引用时必须说清口径。Terminal-Bench 4.0 的 40.9% 同样是 Meta 自测（其 Haiku 为 39.2%；AA 复测 Haiku 为 32.8%）；更接近真实软件开发的 FrontierCode 2.0-AA 只有 27.2%，低于 Haiku 的 34.9%。</p>
+        <p>定价为每百万 token 输入 0.10 美元、输出 0.50 美元；缓存命中的输入 0.004 美元；输入超过 20 万 token 时按 0.30 美元与 1.50 美元计。模型名 muse-ember-1.0，已在 Meta Model API 与编码工具 Muse Code 上线，并同时上 Google Cloud 与 Oracle Cloud。Box 拿它读 13 份文件、处理一笔 1260 万美元私募基金的 capital call，找出 248 万美元的错配和 25 万美元漏记的抵扣。</p>
+        <p class="why"><b>看点</b>0.14 对 0.41 的口径是「每任务成本」而不是每 token 价格——它已经把推理档位和 token 消耗算进去了，所以比价格表更能说明 agent 的经济性。真正的短板在 FrontierCode 27.2%：写代码这类需要长链路一致性的任务，便宜模型仍要多轮返工，返工成本不在 0.14 里。判断该不该换，先看自己 workload 的任务长度分布，再看 AutomationBench 这种多应用流程——Meta 自测里它领先最大，AA 的独立复测也把它放在与旗舰持平的位置，这正是「重复小任务」的定义域。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/09 16:15</span>
+          <a class="src" href="https://www.ithome.com/1/024/350.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>阿里千问办公 2.0 上线：数字员工进工作群，多人与 Agent 同改一份文档</h3>
+        <p>11 月 9 日千问办公 2.0 发布，定位从个人助手改成面向个人与组织协作的 Team Agent。第一个功能叫「协作」：用户组建一个团队与数字员工共同工作的空间，数字员工可以实时关联多个钉钉群聊、文档、AI 表格和 AI 听记，支持多个会话并行，以及任务管理与指派。成员在空间里派活，数字员工结合空间上下文梳理进展、总结共识、创建并跟进待办。</p>
+        <p>另外几项：「自动任务」把 agent 从被动响应改成条件触发——订阅事件、配置规则，条件满足就自动开工，首批支持指定人的消息、群里 @自己的消息和审批任务；「人机共创」把对话、预览与编辑打通，可以在对话框里选中段落、单元格、幻灯片或应用区域，标好多处意见一次提交，由 AI 在原文档上改，在线文档、AI 表格与宜搭应用还支持多人、多 Agent 同时在线编辑；「资料空间」统一收录 AI 生成与用户上传的图片、文档、表格、PPT、网页、应用和本地文件；此外还有「三端互联」。所有功能已在客户端全量上线。</p>
+        <p class="why"><b>看点</b>多 Agent 同时改一份文档，难点不在生成，而在并发：谁的修改先落、冲突怎么合并、撤销粒度是段落还是整次提交。发布会没有给出冲突策略和审计日志的做法，这两点决定它能不能进真实项目。更可复用的是「事件订阅 + 规则」这一层：它把 agent 的触发条件从「人说话」换成「系统状态变化」，成本模型也就从对话轮次变成事件次数——按事件计费和按席位计费是两种生意。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 09:25</span>
+          <a class="src" href="https://interestingengineering.com/ai-robotics/openai-control-room-35-second-model-shutdown" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+        </div>
+        <h3>OpenAI 上线 Control Room：决定叫停后 35 秒内切断模型输出</h3>
+        <p>OpenAI 已在研究基础设施里部署中央控制系统 Control Room，用来跟踪并阻断研究负载的模型输出。它把三类对象连起来：研究负载（强化学习实验、评测、大批量数据处理）、推理引擎，以及中央的 Control Room 服务。每个会做 agentic 推理的研究负载，都必须挂一个已批准的安全案例（safety case）。</p>
+        <p>机制核心是 job ID：研究代码启动时向 Control Room 申请唯一标识，这个标识附在发往推理引擎的每个请求上；中央服务一旦判定需要干预，该负载在 35 秒内就拿不到新的模型输出。设计是 fail-closed 的——中央服务不可用时，推理请求直接被拒绝，而不是放行。自动监控系统在检测到可能不对齐的模型行为时，也可以触发干预。</p>
+        <p>范围上，Control Room 目前覆盖 OpenAI 自己的研究基础设施；对外服务的模型推理更集中，本来就有下线部署的运维手段，不在这次范围内。它与既有的「监控异常行为」系统并行工作，区别是从「标记」变成「阻断」。</p>
+        <p class="why"><b>看点</b>35 秒是个工程指标，不是政策指标：它把「能不能停」变成一个有 SLA 的依赖项，代价是每次推理都多一跳中央鉴权。fail-closed 的选择意味着 Control Room 自己成了可用性单点，这笔账所有做 agent 平台的团队迟早都要付——安全开关与训练吞吐落在同一条关键路径上。真正值得抄的是安全案例与 job ID 的绑定粒度：落在「负载」而不是「模型」或「用户」，回滚时不用猜是哪一次实验。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 10:46</span>
+          <a class="src" href="https://m.ithome.com/html/1024701.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>蚂蚁灵波开源触觉基座 LingBot-Touch：26 项真机任务成功率提升 14 至 26 个百分点</h3>
+        <p>11 月 10 日蚂蚁灵波科技开源触觉基础模型 LingBot-Touch，基于近 5000 小时真实触觉数据预训练，覆盖磁触觉、视触觉与压阻式三类传感原理，把不同原始信号转成同一套触觉表征，目标是跨传感器、跨灵巧手、跨动作模型复用。</p>
+        <p>团队在 Sharpa Wave 与 XHand 两款灵巧手上做了 26 项真机测试（翻书页、拧瓶盖、辨识麻将牌等）。接入这套表征后，LingBot-VLA、π0.5、Diffusion Policy 与 T-Rex 四种动作模型的平均任务成功率，比没有触觉时提高约 14 至 26 个百分点。T-Rex 控制 Sharpa Wave 拧瓶盖：无触觉 56.25%，直接输入传感器原始信号 62.5%，接入 LingBot-Touch 表征后 90%。</p>
+        <p>架构上按传感原理分设编码入口，再把不同触点布局映射到统一的指尖坐标空间，共享模型学习接触位置、受力及其随时间的变化，输出统一的触觉 token；人戴触觉手套与遥操作灵巧手采集的数据可以一起训练。XHand 的磁触觉型号不在预训练数据里，团队冻结 LingBot-Touch 参数、只用 XHand 的操作示范训练动作模型，验证了跨硬件复用。26 项测试全部用约 530 万参数的 Tiny 版，接入 LingBot-VLA、π0.5 与 T-Rex 后参数量只增加约 0.13% 至 0.16%；更大的 Small 版在预训练数据加到近 5000 小时后仍在涨点。</p>
+        <p class="why"><b>看点</b>这条的价值不在 90% 这个数字，而在「冻结触觉编码器、只训动作头」就能换手——它把触觉从某个硬件的标定工作，变成可迁移的预训练产物。要追问三件事：26 项都是短程接触任务，长程插拔与柔性物体上的漂移没测；近 5000 小时数据的传感器分布与目标硬件是否重叠；以及 0.13% 的参数量增加背后，端侧推理延迟加了多少。对整机厂，先确认自家传感器的原始信号能被这套编码入口接住，再谈换手。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 10:32</span>
+          <a class="src" href="https://m.ithome.com/html/1024697.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>波士顿动力给 Atlas 装上滑板车轮：横向冲刺，还能跳起来转一圈</h3>
+        <p>波士顿动力 11 月 9 日发布视频，展示踝关节执行器上装了轮子的 Atlas。改法很轻：用定制转接器把标准电动滑板车的轮子装到踝关节执行器上，没有大改硬件，也没有重写软件模式，只是在仿真环境里把脚换成了轮子。</p>
+        <p>演示里，改装后的 Atlas 可以横向冲刺、跳起来转一圈。横向移动不再靠拖脚，而是控制轮子转向、以滚动方式横移；转圈那一跳由轨迹跟踪控制器完成，跟着记录的人体动作数据走，第一次尝试就成功。工程师还特意从人体动作捕捉里挑出脚部打滑的片段，研究轮子能否做出类似效果。每一次加速、转向和急停，都在持续给执行器加载。波士顿动力明确这不是商品，只作为研究平台使用。</p>
+        <p class="why"><b>看点</b>把脚换成轮子只改了仿真的末端执行器，控制器和动作数据都没动——这说明 Atlas 的软件栈已经把「怎么动」和「用什么动」分开了，换末端执行器接近换一组参数。对做腿足机器人的团队，这比任何 demo 都实用：同一套策略在轮式与足式上各跑一遍，才知道哪些行为来自策略、哪些来自本体。要留意轮式改变了横向加速度的上下限，急停打滑会成为新的失败模式。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/09 19:22</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202611093926414670.html" target="_blank" rel="noopener noreferrer">深圳商报 ↗</a>
+        </div>
+        <h3>Anthropic 修订版招股书：三季度营收 169.56 亿美元，算力支出占 58%</h3>
+        <p>据《深圳商报·读创》报道，Anthropic 最快本周启动 IPO 正式路演，拟在纳斯达克全球精选市场挂牌，代码 ANT，由高盛与摩根士丹利牵头承销，公司尚未公布发行价区间与发行股数。11 月 2 日提交的修订版招股书显示，三季度营收 169.56 亿美元，同比增长 1127%，环比增长约 47%；按美国通用会计准则，从二季度营业盈利 9.74 亿美元转为三季度营业亏损 5.67 亿美元。</p>
+        <p>支出侧，三季度算力及基础设施支出升至 98.63 亿美元，环比增长约 77%，相当于当季营收的 58%。原因是需求超出预期，公司临时采购了约 50 亿美元短期算力，价格高于长期合同；同时新模型降价与合同折扣使当季收入减少约 6 亿美元。剔除股权激励、非现金慈善捐赠等项目后，三季度调整后营业利润 24.63 亿美元，利润率从二季度的 19% 降至 15%。</p>
+        <p>更受关注的是长期承诺：计入 9 月 30 日后新签协议，采购及租赁承诺合计约 8954 亿美元，几乎全部与算力及基础设施有关，付款安排延续到 2045 年；其中约 698 亿美元将在 9 月 30 日后的 12 个月内到期。作为参照，三季度营收按四个季度简单折算约为 678 亿美元。此前有报道称此次 IPO 募资规模一度可能达到 1000 亿美元，而部分潜在投资者讨论的估值已从 1.4 万亿至 1.5 万亿美元降至 1.2 万亿至 1.3 万亿美元。</p>
+        <p class="why"><b>看点</b>三组数字放在一张表上：单季营收 169.56 亿、单季算力 98.63 亿、12 个月内到期承诺 698 亿。第一组说明需求是真的，第二组说明毛利被算力吃掉，第三组说明还款节奏和收入节奏不匹配——698 亿大约相当于四个季度的全部营收。对工程师，这解释了同一天为什么要降价：单价换份额、份额换长约、长约换更便宜的算力，是一条闭环；任何一环断了，就要回到短期市场买高价算力，而三季度已经这么做了一次。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/09 21:00</span>
+          <a class="src" href="https://www.yna.co.kr/view/AKR20261109122200017" target="_blank" rel="noopener noreferrer">韩联社 ↗</a>
+        </div>
+        <h3>Google 加发 TPU 8i Max 与 8tx：算力、SRAM、HBM 带宽各翻一倍</h3>
+        <p>Google 11 月 9 日（当地时间）宣布在第 8 代 TPU 产品线里增加两款系统：TPU 8i Max 与 TPU 8tx。今年 4 月它已发布训练用的 TPU 8t 与实时推理用的 TPU 8i，这次是在既有芯片上做用途化封装。</p>
+        <p>TPU 8i Max 把两颗 TPU 8i 封进同一个封装，算力、片内 SRAM 容量与 HBM 带宽各提升一倍，同样的机架空间能放下更多算力。Google 的说法是面向「多个 agent 同时分析整套源码或数小时视频」这类场景——这时从内存取数据的速度就是瓶颈，8i Max 是为一次吞吐大量数据设计的。</p>
+        <p>TPU 8tx 用与 8t 相同的芯片搭配定制 AMD CPU，在硬件层隔离敏感数据与模型权重，处理过程中也能保持保护，配合低延迟网络后延迟最多降到 8t 的一半。金融与政府机构不必把敏感数据搬到另一台服务器，就能用它做微调与推理。Google 还提到上月开源的 TorchTPU 让开发者不改 PyTorch 代码就能在 TPU 上运行；外部使用 TPU 的客户已接近 100 家，包括 AI 研究机构、金融公司、零售企业和大学。</p>
+        <p class="why"><b>看点</b>8i Max 的思路是把「两颗芯片一个封装」当产品卖，而不是等下一代芯片——对推理成本的影响比分值更直接：同样的机架功率与空间，HBM 带宽翻倍意味着长上下文和视频输入的 prefill 不再被内存带宽卡住。要验证的是封装后的散热与良率，以及 8tx 说的「硬件隔离」边界在哪：是内存加密，还是独立地址空间。对做私有化部署的团队，8tx 的意义大于 8i Max——合规场景第一次有了「不搬数据也能微调」的选项。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 9 日 09:31 至 11 月 10 日 11:15（北京时间）之间发布的报道，共 8 条。检索时间 11/10 11:15。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 016 · 24h window · Generated 2026-11-10 11:15</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../psychology.html">心理学日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

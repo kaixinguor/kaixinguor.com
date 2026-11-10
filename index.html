@@ -70,17 +70,17 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 015 期</span>
+          <span class="issue-tag">第 016 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 9 日<span class="weekday">MON</span></h1>
-        <p class="deck">今天的主线是「把等待和信任分别拿掉一层」。英伟达把 VLA 的推理文本从动作路径里摘出去，成功率不变、延迟最多降 3.4 倍；同一时间，Menlo Ventures 说企业开源模型支出的 89% 流向中国模型，而美国司法部起诉的 AI 冒充案把 1.29 亿美元的损失摊在了付款授权链上。<em>让动作少等一次解码，和让付款多等一次回拨，是同一个问题的两端。</em></p>
-        <div class="metabar"><span class="pill">第 015 期</span>
+        <h1 class="date">2026 年 11 月 10 日<span class="weekday">TUE</span></h1>
+        <p class="deck">今天的主线是「降价和算力账单写在同一张表上」。Anthropic 把最贵一档模型的 API 价格降了两成，同一天的修订版招股书显示三季度算力支出占营收 58%、12 个月内到期的采购承诺约 698 亿美元；Google 把两颗 8i 封进一个封装，Meta 把最小模型压到单任务 0.14 美元。<em>省下来的每一次解码、每一美元，最后都要在别处兑现。</em></p>
+        <div class="metabar"><span class="pill">第 016 期</span>
       <span class="dot"></span>
-      <span>窗口 11/08 13:08 – 11/09 09:31</span>
+      <span>窗口 11/09 09:31 – 11/10 11:15</span>
       <span class="dot"></span>
-      <span>7 条</span>
+      <span>8 条</span>
       <span class="dot"></span>
-      <span>阅读约 8 分钟</span></div>
+      <span>阅读约 9 分钟</span></div>
       </div>
     </header>
 
@@ -101,15 +101,15 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>英伟达 TacitVLA 把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍。</b>LIBERO 上单次调用 147ms，显式推理要 495ms；RoboMME 计数任务成功率 82.7%，此前最好 66.8%。</p>
+      <p><b>Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%。</b>输出比 5.1 快最多 30%，价格改为每百万 token 输入 8 美元、输出 40 美元；RoboDojo Sim 64.9%，Fable 5.1 只有 27.6%。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>Menlo Ventures：企业开源模型支出 89% 流向中国模型，Kimi 占 61%。</b>DeepSeek 15%、GLM 11%，Meta Llama 仅 7%；开源权重模型只处理企业 19% 的 token。</p>
+      <p><b>Anthropic 修订版招股书：三季度营收 169.56 亿美元，算力支出 98.63 亿美元占 58%。</b>采购与租赁承诺合计 8954 亿美元，其中约 698 亿美元 12 个月内到期；潜在投资者讨论的估值降到 1.2 万亿至 1.3 万亿美元。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>美国司法部起诉三人用 AI 冒充企业高管与律师，涉案 1.29 亿美元。</b>至少 6 家企业受害，英国一家科技公司损失超 1,100 万美元；三人分别在西班牙和英国被捕。</p>
+      <p><b>OpenAI 部署 Control Room：判定叫停后 35 秒内切断研究负载的模型输出。</b>每个会做 agentic 推理的研究负载必须挂一个已批准的安全案例；中央服务不可用时按 fail-closed 拒绝推理请求。</p>
     </li>
       </ol>
 
@@ -124,14 +124,27 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08 19:42</span>
-          <a class="src" href="https://www.163.com/dy/article/LB83S50S0511AQHO.html" target="_blank" rel="noopener noreferrer">机器之心 ↗</a>
+          <span class="d">11/09</span>
+          <a class="src" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Anthropic ↗</a>
         </div>
-        <h3>英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍</h3>
-        <p>英伟达与纽约大学、UC 伯克利、约翰斯·霍普金斯、斯坦福的团队提出 TacitVLA：训练时照常让视觉语言主干生成推理文本，但在注意力掩码里让动作专家看不到这段文本。动作不再等待自回归解码，推理监督仍然塑造主干表示；论文与项目页已公开，代码标注为即将发布。</p>
-        <p>在 RoboMME、RMBench、LIBERO / LIBERO-Plus 和 PhysicalAI-AV 四个基准上，TacitVLA 的成功率与显式推理版本相当，单次调用延迟最多降低 3.4 倍。LIBERO 上为 147ms 对 495ms，正好卡进 250ms 的执行窗口；闭环驾驶为 127ms 对 269ms。在相同延迟下，它比不做推理训练的同一模型成功率最多高 17.1 个百分点。</p>
-        <p>绝对成绩：RoboMME 计数任务 82.7%（此前最好 66.8%），RMBench 77.5%（此前 56.5%），LIBERO-Plus 72.9%，PhysicalAI-AV 闭环场景分 52.5%。RMBench 的 Press Button 任务上 74.3%，不做推理的版本只有 7.7%，记忆条目正确率 99.7%。所有延迟数字都是单张 H100 上的均值。</p>
-        <p class="why"><b>看点</b>这不是让模型「少想」，而是把推理的两种作用拆开：训练时写推理能改善主干，部署时读当前推理只会增加延迟。对做机器人的团队，最小改动是一行 attention mask，不需要新模型或调度器；真正要验证的是长程记忆任务里「动作先出、日志后写」能否稳定，以及跨机型迁移时推理监督是否还划算。<br><b>另一个视角</b>延迟从 495ms 降到 147ms，省下的是产线节拍和 GPU 时间；如果每台机器人每天多跑三倍回合，数据回流成本会先于硬件成本成为瓶颈。</p>
+        <h3>Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%</h3>
+        <p>Anthropic 11 月 9 日发布 Claude Fable 5.2 与 Claude Mythos 5.2。两者是同一个底层模型，差别只在安全策略：Fable 带较严的网络安全与生物学防护，因此能对所有人开放；Mythos 放宽这两类限制，只通过 Life Sciences 与 Cyber 两个验证计划放行。输出速度比 5.1 快最多 30%，价格从每百万 token 输入 10 美元、输出 50 美元降到 8 美元与 40 美元；可选的 fast mode 再快最多 2.5 倍，定价 16 美元与 80 美元。</p>
+        <p>基准表里，Fable 5.2 在 Xhigh effort 下把 FrontierCode 2.0 做到 49.1%，高于 Opus 5.5 的 45.5%、GPT-6 Astra 的 42.8% 和 Gemini 4 Carbon 的 41.1%；FrontierSWE v2 69.9%（Opus 5.5 62.3%）；Terminal-Bench-Science 0.1 为 74.6%，Mythos 5.2 是 75.3%；RoboDojo Sim 64.9%，Fable 5.1 只有 27.6%、Opus 5.5 是 39.4%；OSWorld 2.1 89.3%；带工具的 Humanity's Last Exam 74.2%。没有全线领先的是业务工作流：AutomationBench 51.4%，低于 Gemini 4 Carbon 的 53.9%。</p>
+        <p>效率部分的说法更值得注意：在 Medium（Claude 应用与 Claude Code 的默认档）上，完成同一批难题用的 token 比 Fable 5.1 少；FrontierCode 2.0 在 High effort 下与 Opus 5.5 的 Max 档基本打平（45.3% 对 45.5%），每任务成本约为后者一半。官方给出的使用顺序是日常先用 Opus 5.5，按复杂度往上换 Fable 或 Mythos、往下换 Sonnet 5.5 或 Haiku 5.5；Fable 5.2 另外可以当 Advisor（小模型卡住时咨询它一次）或 Orchestrator（把简单任务分给更小的模型）。</p>
+        <p>Anthropic 自己列的案例包括：从零设计三台可工作的电子设备；30 小时完成费马大定理的可机器检查形式化——今年 9 月同一项目用了 11 天，这次靠 1000 个 agent 并行；解决两个黑洞物理的开放问题。据 <a href="https://siliconangle.com/2026/11/09/anthropic-launches-fable-5-2-and-mythos-5-2-with-science-coding-upgrades/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a> 报道，还有一名工程师让它从零搭一个操作系统：同样拉起 1000 个 agent，约八天完成，成品能在笔记本上运行、可联网、带 Claude 侧边栏。据 <a href="https://www.itmedia.co.jp/news/article/2611/10/2000003042/" target="_blank" rel="noopener noreferrer">ITmedia</a> 报道，Fable 5.2 的 cyber/bio 防护误拦比 5.1 少约 55%。</p>
+        <p class="why"><b>看点</b>这不是「更大的模型」，而是「最贵那一档降价」。三个数字要放在一起读：FrontierCode 49.1% 只比 Opus 5.5 高 3.6 个百分点，而真正改变工程选择的是「默认档更省 token」——如果 Medium 就能交活，成本下降来自 token 数而不是单价。要验证的是三件事：Xhigh 那 49.1% 背后的每任务成本（官方只给了 High 档约为 Opus 5.5 一半）、RoboDojo 64.9% 是内部跑分、以及 fast mode 的 2.5 倍速是否拿质量换的。对做 agent 的团队，Advisor 与 Orchestrator 两种角色比分数更值得先试：让贵模型只在小模型卡住时被调用一次，单位任务的成本结构会立刻不一样。<br><b>另一个视角</b>同一天见报的招股书数字正好反过来：三季度算力与基础设施支出 98.63 亿美元，占营收 58%；临时加购的约 50 亿美元短期算力价格高于长期合同；「新模型降价和合同折扣」让当季收入减少约 6 亿美元。单价下调不是让利，是拿算力账单换份额——降价的钱要在长约和规模里找回来。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 09:38</span>
+          <a class="src" href="https://siliconangle.com/2026/11/09/meta-introduces-muse-ember-to-power-cost-efficient-ai-agents/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>Meta 发布最小模型 Muse Ember：单任务 0.14 美元，Intelligence Index 追平 Claude Haiku 5.5</h3>
+        <p>Meta 11 月 9 日发布 Muse Ember，自称家族里最小、最高效的模型，面向 agent 每天重复的工作：工具调用、编码子任务、路由、信息抽取、长文档解析。上下文窗口 100 万 token，单次输出最长 51.2 万 token，支持文本、图像、音频、视频输入。它是第一个用旗舰模型 Muse Wonder（Full）训练出来的公开模型，Meta 没有说明具体用在训练流程的哪一段。</p>
+        <p>Artificial Analysis 的 Intelligence Index 上，Muse Ember 得 36 分，与 Claude Haiku 5.5 的最高推理档持平，高于 GPT-6 Luna 的 28 分；单任务成本约 0.14 美元，Haiku 5.5 约 0.41 美元，Muse Spark 1.3 约 2.39 美元。分项要看是谁测的：Meta 自测的 AutomationBench-AA 为 37.8%（Haiku 13.9%、Luna 20.2%，该基准含 657 项跨 Gmail、Salesforce 等应用的任务），而 <a href="https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index" target="_blank" rel="noopener noreferrer">Artificial Analysis 的独立复测</a>给出 68.1%，与 Muse Wonder、GPT-6 Astra 持平——同一基准差 30 个百分点，引用时必须说清口径。Terminal-Bench 4.0 的 40.9% 同样是 Meta 自测（其 Haiku 为 39.2%；AA 复测 Haiku 为 32.8%）；更接近真实软件开发的 FrontierCode 2.0-AA 只有 27.2%，低于 Haiku 的 34.9%。</p>
+        <p>定价为每百万 token 输入 0.10 美元、输出 0.50 美元；缓存命中的输入 0.004 美元；输入超过 20 万 token 时按 0.30 美元与 1.50 美元计。模型名 muse-ember-1.0，已在 Meta Model API 与编码工具 Muse Code 上线，并同时上 Google Cloud 与 Oracle Cloud。Box 拿它读 13 份文件、处理一笔 1260 万美元私募基金的 capital call，找出 248 万美元的错配和 25 万美元漏记的抵扣。</p>
+        <p class="why"><b>看点</b>0.14 对 0.41 的口径是「每任务成本」而不是每 token 价格——它已经把推理档位和 token 消耗算进去了，所以比价格表更能说明 agent 的经济性。真正的短板在 FrontierCode 27.2%：写代码这类需要长链路一致性的任务，便宜模型仍要多轮返工，返工成本不在 0.14 里。判断该不该换，先看自己 workload 的任务长度分布，再看 AutomationBench 这种多应用流程——Meta 自测里它领先最大，AA 的独立复测也把它放在与旗舰持平的位置，这正是「重复小任务」的定义域。</p>
       </article>
 
     </div>
@@ -148,13 +161,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08</span>
-          <a class="src" href="https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+          <span class="d">11/09 16:15</span>
+          <a class="src" href="https://www.ithome.com/1/024/350.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>Karpathy 用 Claude 一个周末搭出 HackerTube：4300 万条评论筛出 6,454 个视频</h3>
-        <p>Karpathy 用 Claude Opus 5.5 在一个周末搭出 HackerTube，从 Hacker News 20 年的 4300 万条评论里筛出 6,454 个被反复推荐的视频。页面不需要登录，只显示视频中段的一帧，状态存在浏览器本地。</p>
-        <p>他说 Claude Code 承担了从数据分析到服务器设置的几乎全部工作，自己只做了三件事：申请 Google Cloud API key、租服务器、买域名。随后又用 Claude Code「3 分钟一次成型」搭出 TristanTube，收录 47,000 个视频。</p>
-        <p class="why"><b>看点</b>重点不是又一个视频站，而是「数据清洗 + 前端 + 部署」被压进一个周末的成本结构。可复现的部分是任务拆分与验收：先让模型把 20 年评论变成可查询的候选集，再让人只做域名、密钥和上线三步。难点在评估——推荐质量靠作者的主观判断，没有基准；这类「一人产品」越多，越需要可审计的构建日志。</p>
+        <h3>阿里千问办公 2.0 上线：数字员工进工作群，多人与 Agent 同改一份文档</h3>
+        <p>11 月 9 日千问办公 2.0 发布，定位从个人助手改成面向个人与组织协作的 Team Agent。第一个功能叫「协作」：用户组建一个团队与数字员工共同工作的空间，数字员工可以实时关联多个钉钉群聊、文档、AI 表格和 AI 听记，支持多个会话并行，以及任务管理与指派。成员在空间里派活，数字员工结合空间上下文梳理进展、总结共识、创建并跟进待办。</p>
+        <p>另外几项：「自动任务」把 agent 从被动响应改成条件触发——订阅事件、配置规则，条件满足就自动开工，首批支持指定人的消息、群里 @自己的消息和审批任务；「人机共创」把对话、预览与编辑打通，可以在对话框里选中段落、单元格、幻灯片或应用区域，标好多处意见一次提交，由 AI 在原文档上改，在线文档、AI 表格与宜搭应用还支持多人、多 Agent 同时在线编辑；「资料空间」统一收录 AI 生成与用户上传的图片、文档、表格、PPT、网页、应用和本地文件；此外还有「三端互联」。所有功能已在客户端全量上线。</p>
+        <p class="why"><b>看点</b>多 Agent 同时改一份文档，难点不在生成，而在并发：谁的修改先落、冲突怎么合并、撤销粒度是段落还是整次提交。发布会没有给出冲突策略和审计日志的做法，这两点决定它能不能进真实项目。更可复用的是「事件订阅 + 规则」这一层：它把 agent 的触发条件从「人说话」换成「系统状态变化」，成本模型也就从对话轮次变成事件次数——按事件计费和按席位计费是两种生意。</p>
       </article>
 
     </div>
@@ -171,38 +184,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08 21:23</span>
-          <a class="src" href="https://www.ithome.com/1/024/001.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/10 09:25</span>
+          <a class="src" href="https://interestingengineering.com/ai-robotics/openai-control-room-35-second-model-shutdown" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
         </div>
-        <h3>上海交大 AutoDNA 登上《自然》：多智能体自主做分子生物学实验</h3>
-        <p>上海交大计算机学院 IPADS 实验室陈海波、王肇国团队与化学化工学院樊春海、王飞团队合作，构建 AI 原生科学实验室 AutoDNA（思源一号），实现自主分子生物学实验操作。成果发表于《自然》，并获该刊官网首页头条报道。</p>
-        <p>架构上，多智能体把实验拆成文献检索、试剂选择、方案设计、代码生成、硬件执行、结果分析和迭代优化；仪器能力被抽象成带自然语言说明和统一代码接口的「原子服务」，模型可以组合设备能力、生成并修正跨设备控制代码。硬件提供微米级定位和微升级液体处理，控制终端基于 OpenHarmony。</p>
-        <p>团队已在核酸检测、酶促 DNA 合成、癌症检测等场景完成验证，并展示端到端 DNA 存储的编码、写入、保存、读取与解码流程。论文编号为 <a href="https://www.nature.com/articles/s41586-026-11228-6" target="_blank" rel="noopener noreferrer">s41586-026-11228-6</a>。</p>
-        <p class="why"><b>看点</b>这条的工程价值在「仪器抽象层」：把不同型号设备的差异藏在一个可被模型调用的服务接口后面，才可能让 agent 跨设备编排。需要看的是失败模式——微米级定位在长时间运行下的漂移、污染控制，以及实验失败后能否自动回滚。对做实验室自动化的团队，先统一接口和状态机，再谈让模型自由生成代码；否则一次错误调用就可能毁掉整批样本。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/08 16:48</span>
-          <a class="src" href="https://www.ithome.com/1/023/925.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
-        </div>
-        <h3>美国司法部起诉三人用 AI 冒充高管与律师，涉案 1.29 亿美元</h3>
-        <p>美国纽约南区联邦检察官办公室公布起诉书：三名嫌疑人雅各布·索尔、沙龙·哈赞、盖伊·谢特里特涉嫌自 2024 年至 2026 年用 AI 伪造企业高管和律师的声音、影像，诱骗员工汇款，涉案超过 1.29 亿美元。索尔和哈赞今年夏天在西班牙被捕，谢特里特 9 月在英国落网。</p>
-        <p>手法是两步：先冒充高管联系员工，称有敏感财务交易需要协助；再让员工与「国际律所律师」对接，由假冒律师指示汇款。赃款到账后被兑换成加密货币，再与其他共谋者瓜分。</p>
-        <p>已披露的受害者包括：密苏里州一家医院集团损失近 500 万美元、罗德岛州一家银行约 270 万美元、加州一家医院集团约 300 万美元、马萨诸塞州一家共同基金公司超过 460 万美元、佛罗里达州一家宠物食品公司约 500 万美元、一家英国科技公司超过 1,100 万美元。三人被控共谋电信欺诈、洗钱共谋和加重身份盗用。</p>
-        <p class="why"><b>看点</b>这不是「深度伪造检测」的单点问题，而是授权链问题：员工被要求绕过正常的付款复核，因为对方「是高管、是律师」。修复顺序应是双人复核、回拨已知号码、付款白名单，而不是先买一个检测模型；对做语音和视频产品的团队，水印与来源凭证要默认开启，并且能被下游验证。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/08</span>
-          <a class="src" href="https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
-        </div>
-        <h3>Co-Design Bench：十个编码智能体最好的也只完整做对 26.4% 的任务</h3>
-        <p>阿里与多所亚洲高校的研究者用真实编码会话中的用户修改请求构建 Co-Design Bench，要求智能体改造现有 Web 应用，输入可以包含图片、音频、视频和文档。十个受测模型中最好的 GPT-6 Astra 平均满足约 70% 的任务要求，但只有 26.4% 的任务完全正确。</p>
-        <p>分轨道看，GPT-6 Astra 在多模态任务上完全做对 41%，在仓库级任务上不到 18%。Claude Opus 5 与 Qwen3.8-Max 紧随其后，Grok 4.6 垫底。任务同时包含布局、设计、交互、内容等多类修改时，所有模型都变差。</p>
-        <p>评测用两个 AI judge：一个在浏览器里操作成品，另一个复核所有正向判定并检查 mock-up 或硬编码；只有真正跑起来的功能才得分。另一个发现是 harness 影响很大：Qwen3.8-27B 在大改任务上，换环境可从 75% 掉到 56%，甚至改变两个模型的排名。</p>
-        <p class="why"><b>看点</b>99% 的旧基准分数已经不能说明「能不能交付」，26.4% 才接近真实项目的体感。对采购编码 agent 的团队，应该把模型和工作环境成对测试，并把验收拆成「能跑、不硬编码、多类修改同时成立」。对做 agent 的人，提升空间可能不在模型本身，而在规格、回滚和可验证的中间产物。</p>
+        <h3>OpenAI 上线 Control Room：决定叫停后 35 秒内切断模型输出</h3>
+        <p>OpenAI 已在研究基础设施里部署中央控制系统 Control Room，用来跟踪并阻断研究负载的模型输出。它把三类对象连起来：研究负载（强化学习实验、评测、大批量数据处理）、推理引擎，以及中央的 Control Room 服务。每个会做 agentic 推理的研究负载，都必须挂一个已批准的安全案例（safety case）。</p>
+        <p>机制核心是 job ID：研究代码启动时向 Control Room 申请唯一标识，这个标识附在发往推理引擎的每个请求上；中央服务一旦判定需要干预，该负载在 35 秒内就拿不到新的模型输出。设计是 fail-closed 的——中央服务不可用时，推理请求直接被拒绝，而不是放行。自动监控系统在检测到可能不对齐的模型行为时，也可以触发干预。</p>
+        <p>范围上，Control Room 目前覆盖 OpenAI 自己的研究基础设施；对外服务的模型推理更集中，本来就有下线部署的运维手段，不在这次范围内。它与既有的「监控异常行为」系统并行工作，区别是从「标记」变成「阻断」。</p>
+        <p class="why"><b>看点</b>35 秒是个工程指标，不是政策指标：它把「能不能停」变成一个有 SLA 的依赖项，代价是每次推理都多一跳中央鉴权。fail-closed 的选择意味着 Control Room 自己成了可用性单点，这笔账所有做 agent 平台的团队迟早都要付——安全开关与训练吞吐落在同一条关键路径上。真正值得抄的是安全案例与 job ID 的绑定粒度：落在「负载」而不是「模型」或「用户」，回滚时不用猜是哪一次实验。</p>
       </article>
 
     </div>
@@ -219,14 +208,25 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08 21:15</span>
-          <a class="src" href="https://finance.eastmoney.com/a/202611083925662081.html" target="_blank" rel="noopener noreferrer">上海证券报 ↗</a>
+          <span class="d">11/10 10:46</span>
+          <a class="src" href="https://m.ithome.com/html/1024701.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>拓斯达发布 172cm 双足人形机器人 Star：72kg、双臂 10kg、续航 4 小时</h3>
-        <p>11 月 7 日至 8 日，拓斯达全球开放日发布三套工业场景方案，全尺寸工业双足人形机器人 Star 首次亮相：身高 172cm、重 72kg、双臂负载 10kg，7 轴仿人手臂与十字轴手腕，头部、胸部、背部三相机实现 360 度感知，续航超过 4 小时并支持快充。</p>
-        <p>公司称过去一年多拜访 100 多家客户、完成 30 余个场景与任务验证，收敛出多品种小批量分拣、多工序集成作业、智能搬运三个方向；同时发布人形机器人五轴加工专机 S400，聚焦关节、臂杆、壳体等复杂曲面构件。</p>
-        <p>订单侧，乐维精密累计复购埃弗米五轴设备 100 台；南斗星在采购 60 台模温机验证一年后，2026 年追加 290 台。活动期间凯航科技签人形机器人采购协议，浙江雷旺签五轴联动数控机床采购协议；拓斯达与大湾区大学、南昌大学共建联合实验室。</p>
-        <p class="why"><b>看点</b>172cm、72kg、10kg 这组参数是冲着现有工厂产线去的：不改线、能跨区、能顶一个班次。真正的门槛不是走路，而是「工艺模型 + 数据回流」——100 多家客户只收敛出 3 个方向，说明场景仍高度定制。对做具身智能的团队，先拿到可复用的工艺数据，再谈通用；对工厂，先算清 4 小时续航与换电、快充的停机成本。</p>
+        <h3>蚂蚁灵波开源触觉基座 LingBot-Touch：26 项真机任务成功率提升 14 至 26 个百分点</h3>
+        <p>11 月 10 日蚂蚁灵波科技开源触觉基础模型 LingBot-Touch，基于近 5000 小时真实触觉数据预训练，覆盖磁触觉、视触觉与压阻式三类传感原理，把不同原始信号转成同一套触觉表征，目标是跨传感器、跨灵巧手、跨动作模型复用。</p>
+        <p>团队在 Sharpa Wave 与 XHand 两款灵巧手上做了 26 项真机测试（翻书页、拧瓶盖、辨识麻将牌等）。接入这套表征后，LingBot-VLA、π0.5、Diffusion Policy 与 T-Rex 四种动作模型的平均任务成功率，比没有触觉时提高约 14 至 26 个百分点。T-Rex 控制 Sharpa Wave 拧瓶盖：无触觉 56.25%，直接输入传感器原始信号 62.5%，接入 LingBot-Touch 表征后 90%。</p>
+        <p>架构上按传感原理分设编码入口，再把不同触点布局映射到统一的指尖坐标空间，共享模型学习接触位置、受力及其随时间的变化，输出统一的触觉 token；人戴触觉手套与遥操作灵巧手采集的数据可以一起训练。XHand 的磁触觉型号不在预训练数据里，团队冻结 LingBot-Touch 参数、只用 XHand 的操作示范训练动作模型，验证了跨硬件复用。26 项测试全部用约 530 万参数的 Tiny 版，接入 LingBot-VLA、π0.5 与 T-Rex 后参数量只增加约 0.13% 至 0.16%；更大的 Small 版在预训练数据加到近 5000 小时后仍在涨点。</p>
+        <p class="why"><b>看点</b>这条的价值不在 90% 这个数字，而在「冻结触觉编码器、只训动作头」就能换手——它把触觉从某个硬件的标定工作，变成可迁移的预训练产物。要追问三件事：26 项都是短程接触任务，长程插拔与柔性物体上的漂移没测；近 5000 小时数据的传感器分布与目标硬件是否重叠；以及 0.13% 的参数量增加背后，端侧推理延迟加了多少。对整机厂，先确认自家传感器的原始信号能被这套编码入口接住，再谈换手。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 10:32</span>
+          <a class="src" href="https://m.ithome.com/html/1024697.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>波士顿动力给 Atlas 装上滑板车轮：横向冲刺，还能跳起来转一圈</h3>
+        <p>波士顿动力 11 月 9 日发布视频，展示踝关节执行器上装了轮子的 Atlas。改法很轻：用定制转接器把标准电动滑板车的轮子装到踝关节执行器上，没有大改硬件，也没有重写软件模式，只是在仿真环境里把脚换成了轮子。</p>
+        <p>演示里，改装后的 Atlas 可以横向冲刺、跳起来转一圈。横向移动不再靠拖脚，而是控制轮子转向、以滚动方式横移；转圈那一跳由轨迹跟踪控制器完成，跟着记录的人体动作数据走，第一次尝试就成功。工程师还特意从人体动作捕捉里挑出脚部打滑的片段，研究轮子能否做出类似效果。每一次加速、转向和急停，都在持续给执行器加载。波士顿动力明确这不是商品，只作为研究平台使用。</p>
+        <p class="why"><b>看点</b>把脚换成轮子只改了仿真的末端执行器，控制器和动作数据都没动——这说明 Atlas 的软件栈已经把「怎么动」和「用什么动」分开了，换末端执行器接近换一组参数。对做腿足机器人的团队，这比任何 demo 都实用：同一套策略在轮式与足式上各跑一遍，才知道哪些行为来自策略、哪些来自本体。要留意轮式改变了横向加速度的上下限，急停打滑会成为新的失败模式。</p>
       </article>
 
     </div>
@@ -243,13 +243,26 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08 13:21</span>
-          <a class="src" href="https://www.ithome.com/1/023/885.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/09 19:22</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202611093926414670.html" target="_blank" rel="noopener noreferrer">深圳商报 ↗</a>
         </div>
-        <h3>Menlo Ventures：企业开源模型支出 89% 流向中国模型，Kimi 占 61%</h3>
-        <p>Menlo Ventures 的报告称，全球企业开源模型支出中，中国模型占 89%。月之暗面 Kimi 以 61% 居首，DeepSeek 15%，智谱 GLM 11%；西方模型中份额最高的 Meta Llama 仅 7%。</p>
-        <p>同一份报告里，开源权重模型只处理了企业 19% 的 token 使用量，闭源模型仍占主导；Anthropic 与 OpenAI 合计拿走 86% 的支出。据《南华早报》报道，IT之家 11 月 8 日转述。</p>
-        <p class="why"><b>看点</b>这组数字要分开读：89% 是「开源模型支出」的内部份额，不是企业 AI 总支出的 89%；19% 才是开源权重在 token 用量上的占比。对做模型商业化的团队，Kimi 的 61% 说明价格与中文场景仍是主要杠杆；对采购方，供应商集中度在闭源侧更高——Anthropic 加 OpenAI 86%，议价空间不在模型数量，而在可迁移的评测与退出成本。</p>
+        <h3>Anthropic 修订版招股书：三季度营收 169.56 亿美元，算力支出占 58%</h3>
+        <p>据《深圳商报·读创》报道，Anthropic 最快本周启动 IPO 正式路演，拟在纳斯达克全球精选市场挂牌，代码 ANT，由高盛与摩根士丹利牵头承销，公司尚未公布发行价区间与发行股数。11 月 2 日提交的修订版招股书显示，三季度营收 169.56 亿美元，同比增长 1127%，环比增长约 47%；按美国通用会计准则，从二季度营业盈利 9.74 亿美元转为三季度营业亏损 5.67 亿美元。</p>
+        <p>支出侧，三季度算力及基础设施支出升至 98.63 亿美元，环比增长约 77%，相当于当季营收的 58%。原因是需求超出预期，公司临时采购了约 50 亿美元短期算力，价格高于长期合同；同时新模型降价与合同折扣使当季收入减少约 6 亿美元。剔除股权激励、非现金慈善捐赠等项目后，三季度调整后营业利润 24.63 亿美元，利润率从二季度的 19% 降至 15%。</p>
+        <p>更受关注的是长期承诺：计入 9 月 30 日后新签协议，采购及租赁承诺合计约 8954 亿美元，几乎全部与算力及基础设施有关，付款安排延续到 2045 年；其中约 698 亿美元将在 9 月 30 日后的 12 个月内到期。作为参照，三季度营收按四个季度简单折算约为 678 亿美元。此前有报道称此次 IPO 募资规模一度可能达到 1000 亿美元，而部分潜在投资者讨论的估值已从 1.4 万亿至 1.5 万亿美元降至 1.2 万亿至 1.3 万亿美元。</p>
+        <p class="why"><b>看点</b>三组数字放在一张表上：单季营收 169.56 亿、单季算力 98.63 亿、12 个月内到期承诺 698 亿。第一组说明需求是真的，第二组说明毛利被算力吃掉，第三组说明还款节奏和收入节奏不匹配——698 亿大约相当于四个季度的全部营收。对工程师，这解释了同一天为什么要降价：单价换份额、份额换长约、长约换更便宜的算力，是一条闭环；任何一环断了，就要回到短期市场买高价算力，而三季度已经这么做了一次。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/09 21:00</span>
+          <a class="src" href="https://www.yna.co.kr/view/AKR20261109122200017" target="_blank" rel="noopener noreferrer">韩联社 ↗</a>
+        </div>
+        <h3>Google 加发 TPU 8i Max 与 8tx：算力、SRAM、HBM 带宽各翻一倍</h3>
+        <p>Google 11 月 9 日（当地时间）宣布在第 8 代 TPU 产品线里增加两款系统：TPU 8i Max 与 TPU 8tx。今年 4 月它已发布训练用的 TPU 8t 与实时推理用的 TPU 8i，这次是在既有芯片上做用途化封装。</p>
+        <p>TPU 8i Max 把两颗 TPU 8i 封进同一个封装，算力、片内 SRAM 容量与 HBM 带宽各提升一倍，同样的机架空间能放下更多算力。Google 的说法是面向「多个 agent 同时分析整套源码或数小时视频」这类场景——这时从内存取数据的速度就是瓶颈，8i Max 是为一次吞吐大量数据设计的。</p>
+        <p>TPU 8tx 用与 8t 相同的芯片搭配定制 AMD CPU，在硬件层隔离敏感数据与模型权重，处理过程中也能保持保护，配合低延迟网络后延迟最多降到 8t 的一半。金融与政府机构不必把敏感数据搬到另一台服务器，就能用它做微调与推理。Google 还提到上月开源的 TorchTPU 让开发者不改 PyTorch 代码就能在 TPU 上运行；外部使用 TPU 的客户已接近 100 家，包括 AI 研究机构、金融公司、零售企业和大学。</p>
+        <p class="why"><b>看点</b>8i Max 的思路是把「两颗芯片一个封装」当产品卖，而不是等下一代芯片——对推理成本的影响比分值更直接：同样的机架功率与空间，HBM 带宽翻倍意味着长上下文和视频输入的 prefill 不再被内存带宽卡住。要验证的是封装后的散热与良率，以及 8tx 说的「硬件隔离」边界在哪：是内存加密，还是独立地址空间。对做私有化部署的团队，8tx 的意义大于 8i Max——合规场景第一次有了「不搬数据也能微调」的选项。</p>
       </article>
 
     </div>
@@ -258,9 +271,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 8 日 13:08 至 11 月 9 日 09:31（北京时间）之间发布的报道，共 7 条。检索时间 11/09 09:31。</p>
+        <p>本期收录 2026 年 11 月 9 日 09:31 至 11 月 10 日 11:15（北京时间）之间发布的报道，共 8 条。检索时间 11/10 11:15。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 015 · 24h window · Generated 2026-11-09 09:31</p>
+    <p class="sig">AI Daily · Issue 016 · 24h window · Generated 2026-11-10 11:15</p>
       </div>
     </footer>
       </div>
@@ -273,17 +286,17 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 015</span>
+          <span class="issue-tag">Issue 016</span>
         </div>
-        <h1 class="date">November 9, 2026<span class="weekday">MON</span></h1>
-        <p class="deck">Today's thread is about removing one layer of waiting and one layer of trust. Nvidia cut the reasoning text out of the VLA action path, holding success while cutting latency by up to 3.4x. The same day, Menlo Ventures said 89% of enterprise open-source model spend goes to Chinese models, and a US indictment put $129m of AI-impersonation losses on the payment-authorisation chain. <em>Making an action wait one less decode and making a payment wait one more callback are two ends of the same problem.</em></p>
-        <div class="metabar"><span class="pill">Issue 015</span>
+        <h1 class="date">November 10, 2026<span class="weekday">TUE</span></h1>
+        <p class="deck">Today's thread is that the price cut and the compute bill are written on the same sheet. Anthropic cut the API price of its most expensive models by a fifth, while its amended filing the same day put compute and infrastructure at 58% of Q3 revenue and $69.8bn of purchase commitments due within 12 months. Google put two 8i dies in one package, and Meta pushed its smallest model to $0.14 a task. <em>Every decode and every dollar saved has to be paid for somewhere else.</em></p>
+        <div class="metabar"><span class="pill">Issue 016</span>
       <span class="dot"></span>
-      <span>Window Nov 8, 13:08 – Nov 9, 09:31</span>
+      <span>Window Nov 9, 09:31 – Nov 10, 11:15</span>
       <span class="dot"></span>
-      <span>7 stories</span>
+      <span>8 stories</span>
       <span class="dot"></span>
-      <span>8 min read</span></div>
+      <span>9 min read</span></div>
       </div>
     </header>
 
@@ -304,15 +317,15 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>Nvidia's TacitVLA hides the reasoning text from the action expert: same success, up to 3.4x lower latency.</b>On LIBERO a call takes 147 ms instead of 495 ms; on RoboMME Counting it reaches 82.7%, against a previous best of 66.8%.</p>
+      <p><b>Anthropic ships Claude Fable 5.2 and Mythos 5.2: API price down 20%, FrontierCode 2.0 at 49.1%.</b>Output is up to 30% faster than 5.1, and the price is now $8 per million input tokens and $40 per million output. On RoboDojo Sim the new model scores 64.9% against 27.6% for Fable 5.1.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>Menlo Ventures: 89% of enterprise open-source model spend goes to Chinese models, with Kimi at 61%.</b>DeepSeek takes 15% and GLM 11%; Meta's Llama is at 7%. Open-weight models handle only 19% of enterprise tokens.</p>
+      <p><b>Anthropic's amended S-1: Q3 revenue of $16.96bn, with $9.86bn of compute spend, 58% of revenue.</b>Purchase and lease commitments total $895.4bn, about $69.8bn of it due within 12 months. Potential investors are now discussing a valuation of $1.2tn to $1.3tn.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>The US charges three men over an AI impersonation scheme that stole $129m.</b>At least six companies were hit, including a UK tech firm that lost more than $11m; two were arrested in Spain and one in the UK.</p>
+      <p><b>OpenAI deploys Control Room: a research workload stops producing model output within 35 seconds of a stop decision.</b>Every workload doing agentic inference needs an approved safety case, and if the central service is unavailable, inference is refused rather than allowed.</p>
     </li>
       </ol>
 
@@ -327,14 +340,27 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08 19:42</span>
-          <a class="src" href="https://www.163.com/dy/article/LB83S50S0511AQHO.html" target="_blank" rel="noopener noreferrer">Machine Heart ↗</a>
+          <span class="d">11/09</span>
+          <a class="src" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Anthropic ↗</a>
         </div>
-        <h3>Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency</h3>
-        <p>A team from Nvidia, NYU, UC Berkeley, Johns Hopkins and Stanford built TacitVLA. It still trains the vision-language backbone to generate reasoning text, but an attention-mask change hides those tokens from the flow-matching action expert. Actions no longer wait for autoregressive decoding, while the reasoning supervision still shapes the backbone.</p>
-        <p>Across RoboMME, RMBench, LIBERO / LIBERO-Plus and PhysicalAI-AV, success matches the explicit-reasoning counterpart while per-call latency falls by up to 3.4x. On LIBERO it takes 147 ms versus 495 ms, inside the 250 ms execution window; in closed-loop driving, 127 ms versus 269 ms. At the same latency as a model trained without reasoning, it gains up to 17.1 points.</p>
-        <p>Absolute results: 82.7% on RoboMME Counting (previous best 66.8%), 77.5% on RMBench (56.5%), 72.9% on LIBERO-Plus, and a 52.5% scene score on PhysicalAI-AV. On RMBench Press Button it scores 74.3% against 7.7% without reasoning; the ledger is correct in 99.7% of episodes. All latency figures are means on a single H100.</p>
-        <p class="why"><b>Why it matters</b>The result separates two jobs of reasoning: writing it during training improves the backbone, while reading the current text at deployment only adds delay. For robotics teams, the minimal change is one attention mask, with no new model or scheduler. What still needs testing is whether act-first, write-the-ledger-during-execution holds over longer horizons, and whether the supervision still pays off across robot bodies.<br><b>Another view</b>Cutting 495 ms to 147 ms buys line throughput and GPU hours. If each robot runs three times as many episodes per day, data return may become the bottleneck before hardware does.</p>
+        <h3>Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0</h3>
+        <p>Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 on November 9. They are the same underlying model, separated only by safeguards: Fable carries strong cybersecurity and biology protections, which is what lets Anthropic offer it to everyone, while Mythos runs with those loosened and is granted through the Life Sciences and Cyber verification programmes. Output is up to 30% faster than 5.1, and the price drops from $10 per million input tokens and $50 per million output to $8 and $40. An optional fast mode is up to 2.5x faster again, at $16 and $80.</p>
+        <p>The benchmark table puts Fable 5.2 at 49.1% on FrontierCode 2.0 at Xhigh effort, ahead of Opus 5.5 at 45.5%, GPT-6 Astra at 42.8% and Gemini 4 Carbon at 41.1%. It scores 69.9% on FrontierSWE v2 (Opus 5.5: 62.3%), 74.6% on Terminal-Bench-Science 0.1 (Mythos 5.2: 75.3%), 64.9% on RoboDojo Sim against 27.6% for Fable 5.1 and 39.4% for Opus 5.5, 89.3% on OSWorld 2.1 and 74.2% on Humanity's Last Exam with tools. Business workflows are the exception: AutomationBench comes in at 51.4%, below Gemini 4 Carbon's 53.9%.</p>
+        <p>The efficiency claims matter more than the headline score. At Medium effort, the default in the Claude apps and Claude Code, the model finishes hard tasks with fewer tokens than Fable 5.1. On FrontierCode 2.0 at High effort it roughly matches Opus 5.5 at Max (45.3% versus 45.5%) for about half the cost per task. Anthropic's advice is to start with Opus 5.5 for most work, moving up to Fable or Mythos and down to Sonnet 5.5 or Haiku 5.5 as scope demands. Fable 5.2 can also act as an Advisor, consulted once when a smaller model is stuck, or as an Orchestrator that delegates simpler work downward.</p>
+        <p>Anthropic's own list of examples includes three working electronic devices designed from scratch; a machine-checkable formalisation of Fermat's Last Theorem in 30 hours, against 11 days for the same project in September, this time by running 1,000 agents in parallel; and two open problems in black-hole physics. <a href="https://siliconangle.com/2026/11/09/anthropic-launches-fable-5-2-and-mythos-5-2-with-science-coding-upgrades/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a> adds a second demo: an engineer asked the model to build an operating system from scratch, and Fable 5.2 spun up 1,000 agents that finished in about eight days, producing something that boots on a laptop, reaches the network and carries a Claude sidebar. According to <a href="https://www.itmedia.co.jp/news/article/2611/10/2000003042/" target="_blank" rel="noopener noreferrer">ITmedia</a>, unnecessary cyber and biology blocks fell by about 55% compared with Fable 5.1.</p>
+        <p class="why"><b>Why it matters</b>This is not so much a bigger model as a cheaper top tier. Read three numbers together: 49.1% is only 3.6 points above Opus 5.5, and the line that actually changes engineering choices is the token count at the default effort. If Medium ships the work, the saving comes from fewer tokens rather than a lower unit price. Three things still need checking: the cost per task behind that 49.1% run (Anthropic only says High effort costs about half of Opus 5.5), whether RoboDojo is an internal eval (it is), and whether fast mode's 2.5x buys speed with quality. For agent teams, the Advisor and Orchestrator roles are worth trying before the scores: calling the expensive model only when a cheap one stalls changes the cost structure of a task immediately.<br><b>Another view</b>The filing reported the same day points the other way. Compute and infrastructure reached $9.86bn in the quarter, 58% of revenue, after about $5bn of short-term capacity bought above long-term contract prices; "new model price cuts and contract discounts" took roughly $600m off quarterly revenue. The cut is not a gift but a trade of margin for share, and it has to be earned back in volume and longer contracts.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 09:38</span>
+          <a class="src" href="https://siliconangle.com/2026/11/09/meta-introduces-muse-ember-to-power-cost-efficient-ai-agents/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>Meta's smallest model, Muse Ember: $0.14 a task and an Intelligence Index level with Claude Haiku 5.5</h3>
+        <p>Meta introduced Muse Ember on November 9, billing it as the smallest and most efficient model in the family, built for the work agents repeat all day: tool calls, coding subtasks, routing, extraction and long-document parsing. It has a 1m-token context window, generates up to 512,000 tokens in one response, and accepts text, images, audio and video. It is the first public model trained with the flagship Muse Wonder (Full); Meta did not say which part of the training pipeline it automated.</p>
+        <p>On Artificial Analysis' Intelligence Index it scores 36, level with Claude Haiku 5.5 at its highest reasoning setting and above GPT-6 Luna at 28. Cost per task is about $0.14, against roughly $0.41 for Haiku 5.5 and about $2.39 for Muse Spark 1.3. The sub-scores need a label: on Meta's own AutomationBench-AA it claims 37.8%, against 13.9% for Haiku and 20.2% for Luna on a 657-task set spanning apps such as Gmail and Salesforce, while <a href="https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index" target="_blank" rel="noopener noreferrer">Artificial Analysis' independent run</a> puts it at 68.1%, level with Muse Wonder and GPT-6 Astra — a 30-point gap between vendor and third-party numbers. Its 40.9% on Terminal-Bench 4.0 is also Meta's own (Haiku 39.2% there; AA measures Haiku at 32.8%). On FrontierCode 2.0-AA, the closer proxy for real software work, it slips to 27.2% against Haiku's 34.9%.</p>
+        <p>Pricing is $0.10 per million input tokens and $0.50 per million output, with cached input at $0.004; above 200,000 input tokens the rates rise to $0.30 and $1.50. The model ships as muse-ember-1.0 in the Meta Model API and the Muse Code coding agent, and is also available on Google Cloud and Oracle Cloud. Box ran it over 13 documents in a $12.6m private-fund capital call and reported finding a $2.48m misallocation and a missing $250,000 credit.</p>
+        <p class="why"><b>Why it matters</b>The $0.14 against $0.41 is cost per task, not price per token, so it already folds in reasoning effort and token burn, which makes it a better guide to agent economics than a price list. The real gap is FrontierCode at 27.2%: code needs long-horizon consistency, and a cheap model still needs rework, which is not in the $0.14. Before switching, look at your own distribution of task lengths, then at multi-application flows like AutomationBench, where Meta's own run shows the widest lead and AA's independent run puts it level with the flagship — the place where "repeated small tasks" is actually defined.</p>
       </article>
 
     </div>
@@ -351,13 +377,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08</span>
-          <a class="src" href="https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+          <span class="d">11/09 16:15</span>
+          <a class="src" href="https://www.ithome.com/1/024/350.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
         </div>
-        <h3>Karpathy builds HackerTube in a weekend: 43m comments distilled into 6,454 videos</h3>
-        <p>Andrej Karpathy used Claude Opus 5.5 to build HackerTube over a weekend, distilling 43 million Hacker News comments from 20 years into 6,454 videos that keep getting recommended there. The site needs no login, shows a single mid-video frame instead of an optimised thumbnail, and stores state locally in the browser.</p>
-        <p>He says Claude Code handled nearly all the work, from data analysis to server setup; his manual steps were a Google Cloud API key, a rented server and buying the domain. He then used Claude Code to one-shot TristanTube in three minutes, with 47,000 videos from a YouTube channel list.</p>
-        <p class="why"><b>Why it matters</b>The point is not another video site but a cost structure: data cleaning, front end and deployment compressed into a weekend. What is reproducible is the task split and acceptance: let the model turn 20 years of comments into a queryable candidate set, and keep only the domain, key and deploy steps for a human. The hard part is evaluation. Recommendation quality rests on the author's judgement and has no benchmark; the more one-person products appear, the more their build logs need to be auditable.</p>
+        <h3>Qwen Office 2.0 puts a digital employee inside the group chat, editing alongside people</h3>
+        <p>Announced by DingTalk on November 9, Qwen Office 2.0 moves the product from a personal assistant to a Team Agent for groups. Its first feature, called Collaboration, lets a user set up a shared space where a digital employee works alongside the team. The agent can pull in multiple DingTalk group chats, documents, AI spreadsheets and AI meeting notes at once, run several sessions in parallel, and manage and assign tasks. Members hand out work inside the space; the agent reads the space's context to summarise progress, capture what was agreed, and create and follow up on to-dos.</p>
+        <p>Four other pieces ship with it. Automated Tasks turns the agent from reactive to triggered: users subscribe to events and set rules, and the agent starts when a condition is met, initially for messages from a named person, messages that @ the user in a group, and approval tasks. Co-creation connects chat, preview and editing, so a user can select paragraphs, cells, slides or app regions, mark several comments and submit them in one go for the AI to apply in the original file; documents, AI spreadsheets and Yida apps also accept several people and several agents editing at once. A materials space collects generated and uploaded images, documents, spreadsheets, decks, web pages, apps and local files, and the release adds three-device sync. All features are live in the client.</p>
+        <p class="why"><b>Why it matters</b>The hard part of several agents editing one document is not generation but concurrency: whose edit lands first, how conflicts merge, and whether undo works at paragraph or submission granularity. The announcement gives no conflict policy and no audit log, and those two decide whether it survives a real project. The more reusable layer is event subscriptions plus rules, which moves the trigger from a person speaking to system state changing. That also moves the cost model from conversation turns to event counts, and per-event and per-seat are two different businesses.</p>
       </article>
 
     </div>
@@ -374,38 +400,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08 21:23</span>
-          <a class="src" href="https://www.ithome.com/1/024/001.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+          <span class="d">11/10 09:25</span>
+          <a class="src" href="https://interestingengineering.com/ai-robotics/openai-control-room-35-second-model-shutdown" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
         </div>
-        <h3>Shanghai Jiao Tong's AutoDNA lands in Nature: multi-agent autonomous molecular-biology experiments</h3>
-        <p>A team from Shanghai Jiao Tong University's IPADS lab and its School of Chemistry and Chemical Engineering built AutoDNA (Siyuan-1), an AI-native scientific lab that performs molecular-biology experiments autonomously. The work was published in Nature and featured on the journal's homepage.</p>
-        <p>The architecture splits experiments across agents for literature search, reagent selection, protocol design, code generation, hardware execution, analysis and iteration. Instrument capabilities are exposed as atomic services with natural-language descriptions and a unified code interface, so the model can compose devices and generate and repair cross-device control code. The hardware provides micron positioning and microlitre liquid handling; the control terminal runs OpenHarmony.</p>
-        <p>The team validated the system on nucleic-acid testing, enzymatic DNA synthesis and cancer detection, and demonstrated end-to-end DNA storage: encoding, writing, storage, reading and decoding. The paper is <a href="https://www.nature.com/articles/s41586-026-11228-6" target="_blank" rel="noopener noreferrer">s41586-026-11228-6</a>.</p>
-        <p class="why"><b>Why it matters</b>The engineering value is the instrument abstraction layer: hiding differences between device models behind a model-callable service interface is what makes cross-device orchestration possible. The failure modes matter more than the demo: drift in micron positioning over long runs, contamination control, and whether a failed experiment can roll back automatically. For lab-automation teams, unify the interface and state machine before letting the model write arbitrary code; one bad call can destroy a batch of samples.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/08 16:48</span>
-          <a class="src" href="https://www.ithome.com/1/023/925.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
-        </div>
-        <h3>US charges three men over a $129m AI scheme impersonating executives and lawyers</h3>
-        <p>The US Attorney's Office for the Southern District of New York unsealed an indictment against Jacob Saul, Sharon Hazan and Guy Shetrit. Prosecutors say that from 2024 to 2026 they used AI to fake the voices and images of executives and lawyers, persuading employees to wire money, in a scheme worth more than $129m. Saul and Hazan were arrested in Spain this summer; Shetrit was arrested in the UK in September.</p>
-        <p>The playbook had two steps: impersonate an executive to tell an employee about a sensitive financial transaction, then hand the employee to a fake lawyer at an international firm who gave the wiring instructions. Proceeds were converted to cryptocurrency and split among co-conspirators.</p>
-        <p>Disclosed victims include a Missouri hospital group that lost nearly $5m, a Rhode Island bank about $2.7m, a California hospital group about $3m, a Massachusetts mutual-fund company more than $4.6m, a Florida pet-food company about $5m and a UK tech company more than $11m. The three are charged with conspiracy to commit wire fraud, conspiracy to commit money laundering and aggravated identity theft.</p>
-        <p class="why"><b>Why it matters</b>This is not a deepfake-detection problem but an authorisation-chain problem: employees were told to bypass normal payment checks because the caller was "the executive" or "the lawyer". The repair order is two-person approval, a callback to a known number and a payment whitelist, not a detection model. For voice and video product teams, provenance and watermarking should be on by default and verifiable downstream.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/08</span>
-          <a class="src" href="https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
-        </div>
-        <h3>Co-Design Bench: even the best coding agent fully solves only 26.4% of tasks</h3>
-        <p>Researchers from Alibaba and several Asian universities built Co-Design Bench from real user change requests in coding sessions. Agents must rework existing web apps, sometimes with images, audio, video or documents as input. Across ten models, the best, GPT-6 Astra, meets about 70% of a task's requirements on average but is fully correct in only 26.4% of tasks.</p>
-        <p>By track, GPT-6 Astra fully solves 41% of multimodal tasks and just under 18% of repository-level tasks. Claude Opus 5 and Qwen3.8-Max follow, with Grok 4.6 last. Every model gets worse when a task combines layout, design, interaction and content changes.</p>
-        <p>Grading uses two AI judges: one operates the finished app in a browser, the second reviews every positive verdict and looks for mock-ups or hard-coded results. Only features that actually work score. The harness also matters: on larger overhauls, Qwen3.8-27B can fall from 75% to 56% depending on the environment, enough to change the ranking of two models.</p>
-        <p class="why"><b>Why it matters</b>Near-perfect scores on older benchmarks no longer say whether an agent can ship. 26.4% is closer to the feel of a real project. Teams buying coding agents should test model and harness as a pair, and split acceptance into "it runs, it is not hard-coded, and multiple change types hold at once". For agent builders, the gains may come less from the model than from specs, rollback and verifiable intermediate artefacts.</p>
+        <h3>OpenAI's Control Room cuts model output within 35 seconds of a stop decision</h3>
+        <p>OpenAI has deployed a central system called Control Room across its research infrastructure to track workloads and stop them from producing more model output. It links three things: the research workload, such as a reinforcement-learning run, an evaluation or a high-volume data-processing job; the inference engine; and the central Control Room service. Every workload that performs agentic inference must be tied to an approved safety case.</p>
+        <p>The mechanism is a job ID. Research code asks Control Room for a unique identifier at launch, and that identifier rides on every request sent to the inference engines. Once the central service decides to intervene, the workload cannot obtain new model outputs within 35 seconds. The design is fail-closed: if the central service is unavailable, inference requests are refused rather than allowed through. Automated monitoring can also trigger an intervention when it detects behaviour that looks misaligned.</p>
+        <p>In scope, Control Room covers OpenAI's own research infrastructure. Its external model serving is more centralised and already has operational ways to take deployments down, so it sits outside this system. Control Room runs alongside the existing monitoring for misaligned behaviour; the difference is that it blocks rather than flags.</p>
+        <p class="why"><b>Why it matters</b>Thirty-five seconds is an engineering number, not a policy one. It turns "can we stop it" into a dependency with an SLA, at the cost of one more central authorisation hop on every inference call. Fail-closed makes Control Room itself a single point of availability, a bill every agent platform will eventually pay, because the safety switch and training throughput end up on the same critical path. What is worth copying is the granularity of the safety case: it binds to a workload, not a model or a user, so a rollback does not require guessing which experiment went wrong.</p>
       </article>
 
     </div>
@@ -422,14 +424,25 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08 21:15</span>
-          <a class="src" href="https://finance.eastmoney.com/a/202611083925662081.html" target="_blank" rel="noopener noreferrer">Shanghai Securities News ↗</a>
+          <span class="d">11/10 10:46</span>
+          <a class="src" href="https://m.ithome.com/html/1024701.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
         </div>
-        <h3>Topstar unveils Star, a 172cm bipedal humanoid: 72kg, 10kg per arm, four-hour battery</h3>
-        <p>At its global open day on November 7-8, Topstar presented three industrial scenarios and showed Star, a full-size bipedal industrial humanoid, for the first time. It stands 172 cm, weighs 72 kg, carries 10 kg with both arms, uses seven-axis arms and cross-axis wrists, senses 360 degrees with cameras in the head, chest and back, and runs for more than four hours with fast charging.</p>
-        <p>The company says it visited more than 100 customers over the past year and validated over 30 scenarios and tasks, narrowing them to three directions: high-mix low-volume sorting, multi-process integrated work and smart transport. It also launched the S400, a five-axis machining centre for humanoid joints, arm links and shells.</p>
-        <p>On orders, Lewei Precision has bought 100 of its five-axis machines, and Nandouxing, after a year-long trial of 60 temperature controllers, ordered 290 more in 2026. Kaihang Technology signed a humanoid purchase agreement and Zhejiang Leiwang signed for five-axis machine tools; Topstar is also setting up joint labs with Greater Bay Area University and Nanchang University.</p>
-        <p class="why"><b>Why it matters</b>The 172cm, 72kg, 10kg package is aimed at existing factory lines: no line rebuild, cross-area movement, one shift of work. The hard part is not walking but the process model plus data return: more than 100 customers narrowed to three directions shows how custom the scenarios still are. For embodied-AI teams, get reusable process data before talking about generality; for factories, price the downtime of a four-hour battery and fast charging before the robot.</p>
+        <h3>Ant Lingbo open-sources LingBot-Touch, a tactile model that lifts 26 real-robot tasks by 14 to 26 points</h3>
+        <p>Ant Lingbo Technology open-sourced LingBot-Touch on November 10, a tactile foundation model pretrained on nearly 5,000 hours of real touch data. It covers three sensing principles, magnetic, vision-based and piezoresistive, and converts their different raw signals into one tactile representation meant to carry across sensors, dexterous hands, action models and tasks.</p>
+        <p>The team ran 26 real-robot tests on two hands, Sharpa Wave and XHand, covering tasks such as turning a page, unscrewing a bottle cap and identifying mahjong tiles. With the representation attached, the average success rate of four action models, LingBot-VLA, π0.5, Diffusion Policy and T-Rex, rose by roughly 14 to 26 percentage points over the no-touch baseline. On the bottle cap with T-Rex driving Sharpa Wave: 56.25% without touch, 62.5% when raw sensor signals were fed in directly, and 90% with the LingBot-Touch representation.</p>
+        <p>Architecturally, each sensing principle gets its own encoder input, different contact layouts are mapped into a shared fingertip coordinate space, and a shared model learns contact position, force and how both change over time, emitting a tactile token. Data from tactile gloves and teleoperated hands can be trained together. XHand's magnetic sensors were absent from pretraining, so the team froze LingBot-Touch and trained only the action model on XHand demonstrations, which is the cross-hardware result. All 26 tests used the roughly 5.3m-parameter Tiny version, adding only about 0.13% to 0.16% to LingBot-VLA, π0.5 and T-Rex; the larger Small version was still gaining from data as pretraining approached 5,000 hours.</p>
+        <p class="why"><b>Why it matters</b>The value is not the 90% but the ability to freeze the tactile encoder and train only the action head when the hand changes, which turns touch from calibration work for one device into a transferable pretrained artefact. Three questions remain: all 26 tasks involve short contact, so long insertion sequences and drift on soft objects are untested; whether the sensor mix in 5,000 hours overlaps the target hardware; and what the 0.13% parameter bump costs in on-device latency. For a robot builder, first check that your sensor's raw signal can enter these encoders at all.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 10:32</span>
+          <a class="src" href="https://m.ithome.com/html/1024697.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+        </div>
+        <h3>Boston Dynamics puts scooter wheels on Atlas: lateral sprints and a spinning jump</h3>
+        <p>Boston Dynamics published a video on November 9 showing Atlas with wheels bolted to its ankle actuators. The change is deliberately small: custom adapters mount standard electric-scooter wheels on the ankle actuators, with no major hardware redesign and no rewrite of the software stack, just swapping feet for wheels in simulation.</p>
+        <p>In the video the wheeled Atlas sprints sideways and jumps while spinning a full turn. It no longer drags its feet to move laterally, instead steering the wheels and rolling across the floor; the spin comes from a trajectory-tracking controller following recorded human motion data, and it worked on the first attempt. Engineers also picked foot-sliding segments from motion capture to see whether wheels could reproduce them. Every acceleration, turn and stop keeps loading the actuators. Boston Dynamics is explicit that this is a research platform, not a product.</p>
+        <p class="why"><b>Why it matters</b>Swapping feet for wheels touched only the simulated end effector, with no change to the controller or the motion data, which suggests Atlas' stack already separates how to move from what to move on; changing the end effector is close to changing a set of parameters. For legged-robot teams that is more useful than any demo: run one policy on wheels and on feet, and you learn which behaviours come from the policy and which from the body. Watch for the new limits: wheels change the lateral acceleration envelope, and slipping under hard braking becomes a new failure mode.</p>
       </article>
 
     </div>
@@ -446,13 +459,26 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/08 13:21</span>
-          <a class="src" href="https://www.ithome.com/1/023/885.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+          <span class="d">11/09 19:22</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202611093926414670.html" target="_blank" rel="noopener noreferrer">Shenzhen Economic Daily ↗</a>
         </div>
-        <h3>Menlo Ventures: 89% of enterprise open-source model spend goes to Chinese models, Kimi takes 61%</h3>
-        <p>A Menlo Ventures report says Chinese models account for 89% of global enterprise spending on open-source models. Moonshot's Kimi leads with 61%, followed by DeepSeek at 15% and Zhipu's GLM at 11%; Meta's Llama, the leading Western model, has only 7%.</p>
-        <p>In the same report, open-weight models handle only 19% of enterprise token usage, with closed models still dominant; Anthropic and OpenAI together take 86% of spend. The report was covered by the South China Morning Post and relayed by IT Home on November 8.</p>
-        <p class="why"><b>Why it matters</b>Read the numbers separately: 89% is a share of open-source model spend, not of total enterprise AI spend; 19% is the open-weight share of tokens. For model vendors, Kimi's 61% says price and Chinese-language use cases are still the main levers. For buyers, concentration is higher on the closed side: Anthropic plus OpenAI at 86% means leverage comes less from the number of models than from portable evaluations and exit costs.</p>
+        <h3>Anthropic's amended S-1: $16.96bn in Q3 revenue, with compute at 58% of it</h3>
+        <p>Anthropic could start its formal IPO roadshow this week, according to Shenzhen Economic Daily, listing on Nasdaq Global Select under the ticker ANT with Goldman Sachs and Morgan Stanley leading. No price range or share count has been published. The amended S-1 filed on November 2 shows third-quarter revenue of $16.96bn, up 1,127% year on year and about 47% quarter on quarter, while GAAP operating income swung from a $974m profit in the second quarter to a $567m loss.</p>
+        <p>On the cost side, compute and infrastructure spending rose to $9.86bn, up about 77% quarter on quarter and equal to 58% of revenue. Demand outran forecasts, so the company bought about $5bn of short-term capacity at prices above its long-term contracts, while new model price cuts and contract discounts took roughly $600m off revenue. Stripping out stock compensation and non-cash charitable donations, adjusted operating income was $2.463bn, with the margin falling from 19% to 15%.</p>
+        <p>The commitments drew more attention than the quarter. Including agreements signed after September 30, purchase and lease obligations total about $895.4bn, almost all of it compute and infrastructure, with payments running to 2045. About $69.8bn falls due within 12 months of September 30; for scale, four quarters of the latest revenue annualises to roughly $67.8bn. Reports had once put the raise as high as $100bn, while potential investors are now discussing a valuation of $1.2tn to $1.3tn, down from $1.4tn to $1.5tn.</p>
+        <p class="why"><b>Why it matters</b>Put three numbers on one sheet: $16.96bn of quarterly revenue, $9.86bn of quarterly compute, and $69.8bn due within a year. The first says demand is real, the second says compute eats the margin, and the third says repayment and revenue are on different clocks, since $69.8bn is about four quarters of everything the company bills. For engineers it explains the price cut shipped the same day: lower prices buy share, share buys long contracts, long contracts buy cheaper compute. Break any link and you are back buying expensive short-term capacity, as happened once already this quarter.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/09 21:00</span>
+          <a class="src" href="https://www.yna.co.kr/view/AKR20261109122200017" target="_blank" rel="noopener noreferrer">Yonhap ↗</a>
+        </div>
+        <h3>Google adds TPU 8i Max and 8tx: double the compute, SRAM and HBM bandwidth</h3>
+        <p>Google announced on November 9 local time that it is adding two systems to its eighth-generation TPU line, TPU 8i Max and TPU 8tx. It had already launched the TPU 8t for large-scale training and the TPU 8i for real-time inference in April; the new parts are purpose-built systems around existing silicon.</p>
+        <p>TPU 8i Max combines two TPU 8i chips in a single package, doubling compute, on-chip SRAM capacity and HBM bandwidth, so more compute fits in the same server-rack footprint. Google frames it around agents analysing an entire source tree or hours of video at once, work where the speed of reading from memory sets the ceiling and where the part is designed to move large amounts of data in one go.</p>
+        <p>TPU 8tx pairs the same chip as the 8t with a custom AMD CPU and isolates sensitive data and model weights at the hardware level, keeping them protected while being processed; with a low-latency network, latency falls by up to half compared with the 8t. Banks and government agencies can fine-tune and run inference without moving sensitive data to a separate server. Google also noted that TorchTPU, open-sourced last month, lets developers run PyTorch code on TPUs without changes, and that close to 100 outside customers now use its TPUs, among them AI research groups, financial firms, retailers and universities.</p>
+        <p class="why"><b>Why it matters</b>The 8i Max idea is to sell two dies in one package as a product instead of waiting for the next chip, and that hits inference cost more directly than any score: at the same rack power and space, doubling HBM bandwidth means prefill for long contexts and video stops being pinned to memory bandwidth. What needs proof is thermals and yield after packaging, and where exactly 8tx draws the isolation boundary, whether memory encryption or separate address spaces. For teams doing private deployments, 8tx matters more than 8i Max: regulated buyers finally have an option to fine-tune without shipping the data out.</p>
       </article>
 
     </div>
@@ -461,9 +487,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between 13:08 on November 8 and 09:31 on November 9, 2026 (UTC+8): 7 items. Compiled at 09:31 on November 9.</p>
+        <p>This issue covers reports published between Nov 9, 09:31 and Nov 10, 11:15 (Beijing time), 8 stories. Searched Nov 10, 11:15.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 015 · 24h window · Generated 2026-11-09 09:31</p>
+    <p class="sig">AI Daily · Issue 016 · 24h window · Generated 2026-11-10 11:15</p>
       </div>
     </footer>
       </div>
@@ -488,8 +514,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">09</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-09.html" title="英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍">
+        <summary><span>2026 年 11 月</span><span class="am-count">10</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-10.html" title="Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%">
+          <span class="a-date">2026.11.10 <em>TUE</em></span>
+          <span class="a-head">Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-09.html" title="英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍">
           <span class="a-date">2026.11.09 <em>MON</em></span>
           <span class="a-head">英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍</span>
         </a>
@@ -558,8 +588,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">09</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-09-en.html" title="Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency">
+        <summary><span>November 2026</span><span class="am-count">10</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-10-en.html" title="Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0">
+          <span class="a-date">2026.11.10 <em>TUE</em></span>
+          <span class="a-head">Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-09-en.html" title="Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency">
           <span class="a-date">2026.11.09 <em>MON</em></span>
           <span class="a-head">Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency</span>
         </a>
