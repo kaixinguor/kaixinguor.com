@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 11, 2026</title>
+<meta name="description" content="AI Daily, November 11, 2026, Issue 017: Google ships Gemini 4 Carbon, first on CursorBench 4.0 and two other agent benchmarks at under half the cost per task; Anthropic launches Claude Meetings, Sheets and Whiteboards; New York opens RAISE Act registration with 72-hour incident reporting; NVIDIA&#39;s GR00T 2 learns from human video; Gemini Robotics 2.5 hits 96% sorting metal parts in a Mercedes-Benz pilot; CoreWeave posts $3.66bn of Q3 revenue, up 168%; Anthropic sets its IPO range at $70-78.">
+<meta property="og:title" content="AI Daily · November 11, 2026">
+<meta property="og:description" content="AI Daily, November 11, 2026, Issue 017: Google ships Gemini 4 Carbon, first on CursorBench 4.0 and two other agent benchmarks at under half the cost per task; Anthropic launches Claude Meetings, Sheets and Whiteboards; New York opens RAISE Act registration with 72-hour incident reporting; NVIDIA&#39;s GR00T 2 learns from human video; Gemini Robotics 2.5 hits 96% sorting metal parts in a Mercedes-Benz pilot; CoreWeave posts $3.66bn of Q3 revenue, up 168%; Anthropic sets its IPO range at $70-78.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-11-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-10T11:15:00+08:00/2026-11-11T09:12:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-11-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-11.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-11-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../education.html">Education Daily</a>
+      <a href="../psychology.html">Psychology Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-11.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 017</span>
+    </div>
+    <h1 class="date">November 11, 2026<span class="weekday">WED</span></h1>
+    <p class="deck">Today's thread is that capability got stronger while the unit price got cheaper. Google shipped its strongest model at Argon's price by cutting rework rather than token cost; CoreWeave replaced unsecured debt with customer prepayments, pushing financing risk downstream; Anthropic set its IPO range at $70 to $78, a top valuation of $1.405 trillion, only about 45% above its May round. <em>Capability is getting dearer, money is getting more expensive, and someone has to pay the difference.</em></p>
+    <div class="metabar"><span class="pill">Issue 017</span>
+      <span class="dot"></span>
+      <span>Window Nov 10, 11:15 – Nov 11, 09:12</span>
+      <span class="dot"></span>
+      <span>7 stories</span>
+      <span class="dot"></span>
+      <span>8 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Google ships Gemini 4 Carbon: first on CursorBench 4.0, Perplexity's WANDR and Zapier's AutomationBench, at less than half the cost per task of the best external model.</b>Pricing matches Argon ($2 input / $10 output per million tokens), with a /swarm multi-agent preview in Antigravity and leading score on cyber benchmarks.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>CoreWeave posts $3.66bn of Q3 revenue, up 168%, as its net loss widens to $709m.</b>2026 revenue guidance rises to $13.0–13.3bn; the CFO says no more parent-level unsecured debt through 2027, while some existing bonds yield above 16%.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>New York opens registration under the RAISE Act: frontier AI developers with more than $500m in revenue must register by January 1, 2027.</b>They must publish safety frameworks, report critical incidents within 72 hours and issue model transparency reports; fines reach $1m per violation.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10</span>
+          <a class="src" href="https://deepmind.google/blog/gemini-4-carbon-is-now-available" target="_blank" rel="noopener noreferrer">Google DeepMind ↗</a>
+        </div>
+        <h3>Google releases Gemini 4 Carbon: top on three agent benchmarks, under half the cost per task</h3>
+        <p>Google DeepMind made Gemini 4 Carbon available on November 10 to developers, enterprises, scientists and consumers. It is pitched as the company's strongest model for cybersecurity work and long-horizon agentic workflows, while Gemini 4 Argon remains the default for most software engineering and knowledge work; Carbon is for tasks that need exhaustive exploration, deeper reasoning and extended verification loops, and it spends more tokens to get there. It was opened two weeks earlier to a set of cyber defenders through the Fairwind program. Pricing is the same as Argon: $2 per million input tokens and $10 per million output tokens, across the Gemini API, Gemini for business and AI Ultra subscriptions (Antigravity, the Gemini app, AI Mode in Search).</p>
+        <p>On benchmarks, Carbon ranks first on CursorBench 4.0, Perplexity's WANDR and Zapier's AutomationBench, at less than half the cost per task of the next best external model by Google's count. On the new Multimodal Knowledge Agent benchmark built with Artificial Analysis it ranks second at more than 6x lower average cost per task. In finance it matches the best model on Hebbia's E2E Financial Agentic evaluation and ranks first among 23 frontier configurations on Balyasny's General Financial Intelligence benchmark. The engineering story is /swarm in Antigravity: one prompt becomes a tracked team of agents, with Carbon assigned architecture, coordination and auditing while lighter models work in parallel isolated workspaces. Google's demo: seven city-planning PDFs with 206 engineering drawing views, rebuilt into a 906K-triangle Three.js scene over 10 overnight loops.</p>
+        <p>Cybersecurity is the headline. Carbon leads on SEC-bench Pro, ExploitGym and CWE-bench v1; on Google's internal Project Fortify benchmark it hit 100% scanning recall and 95% triage precision, and on open-source repositories it improved recall by more than 25% relative to Argon. Wiz's Scan for Good used it on two major SaaS providers and found zero-days in under two hours. On safety, Carbon blocked 99% of attack trajectories from an adaptive red team in simulated cyberspace, cutting the per-attempt breach rate to 0.8% from Argon's 3.1%; in Gray Swan's testing the automated attack success rate fell to 2.17% from 9.86%; on Gray Swan's indirect prompt-injection benchmark it scored a 0% attack success rate, the first model to do so; and it passed 92% of a 375-task agentic honesty benchmark versus 70% for Argon.</p>
+        <p class="why"><b>Why it matters</b>The price did not move; the number of tokens needed to get an answer right did. Google says Carbon spends more tokens than Argon, so "half the cost per task" depends on one-shot correctness rather than fewer rounds of rework — good news for agent pipelines, a cost re-model for products billed per conversation. All three first-place benchmarks are defined with the vendors whose workflows they test (Cursor, Perplexity, Zapier), and MKA was created for this launch; state the source of each number. The 0% prompt-injection figure comes from a single benchmark, and the same blog admits sophisticated attacks in some distributions still get through.<br><b>Another angle</b>Same price, more capability moves competition from the per-token price to token efficiency: if customers pay per task, margin comes from fewer rounds; if they pay per token, Carbon's longer traces raise the bill. The two sets of customers will read this launch very differently.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 01:30</span>
+          <a class="src" href="https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now" target="_blank" rel="noopener noreferrer">The Verge ↗</a>
+        </div>
+        <h3>Anthropic launches an office suite: meetings, sheets and whiteboards inside Claude</h3>
+        <p>At an event in San Francisco on November 10, Anthropic unveiled tools for non-technical workers: Claude Meetings joins calls and takes notes, Claude Sheets edits spreadsheets alongside employees, and Claude Whiteboards lays out ideas on a shared canvas. All three are in beta — Whiteboards and Sheets for every paid plan, Meetings for Teams and Enterprise. Claude Data (formerly Dashboards) is now generally available, and the new Artifacts turn output into an interactive interface that can, among other things, convert a deck into a one-minute explainer video; Claude Docs, Slides, Design and Motion remain.</p>
+        <p>The more consequential piece is connectors: apps from partners such as HubSpot, Adobe and Atlassian can be opened inside Claude rather than in another tab. Anthropic launched its Model Context Protocol about two years ago, and its plugin marketplace now lists more than 9,000 options. Product lead Nicholas Lin told The Verge that Claude Code changed how engineers work a year ago, and that the gap now is friction for non-developers adopting AI.</p>
+        <p class="why"><b>Why it matters</b>The hard engineering is not generation but keeping three views of one object in sync in real time: the meeting note, the whiteboard and the sheet are the same artifact, and Anthropic has not described conflict merging or undo granularity. The reusable pattern is "embed, don't switch tabs": once third-party apps sit inside the model's context, the permission model has to be record-level, or one over-share loses the customer. Shipping before the IPO roadshow also signals a revenue mix that has to move beyond the API toward seats.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 04:52</span>
+          <a class="src" href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
+        </div>
+        <h3>New York's RAISE Act opens registration: frontier AI firms above $500m in revenue must sign up by January 1</h3>
+        <p>New York opened a registration portal on November 10 for frontier AI developers. Under the RAISE Act, large frontier developers — firms with more than $500 million in annual revenue, such as OpenAI and Anthropic — must register by January 1, 2027. The law takes effect at the start of the year and requires companies to publish safety frameworks on their websites, report critical safety incidents within 72 hours, and issue public model transparency reports. A new Office of Digital Innovation, Governance, Integrity, and Trust (DIGIT) will implement and oversee it.</p>
+        <p>The penalties are explicit: up to $1 million for a single violation and up to $3 million for subsequent ones, and the state can bring enforcement actions against firms that fail to register, though a spokesperson declined to detail how. Governor Kathy Hochul also launched the New York Center for AI Responsibility and Research at Binghamton University, which will independently evaluate advanced AI systems and review companies' safety frameworks with DIGIT; it was first announced in January with $55 million in donations and capital. New York already enforces a rule that AI companions must tell users they are bots and make reasonable efforts to detect suicidal ideation, and a separate chatbot safety law for minors takes effect June 1, 2027.</p>
+        <p class="why"><b>Why it matters</b>A 72-hour incident report is an operations requirement, not a slogan: it forces incident grading, log retention and disclosure workflows to exist before the first accident, or one event triggers both a fine and a trust loss. The $500 million revenue threshold shields most startups, but state-by-state fragmentation means designing for the strictest state is cheaper than designing for the one you register in. Watch how DIGIT reviews safety frameworks: if it wants verifiable evaluations, vendor self-reports will not be enough.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10</span>
+          <a class="src" href="https://the-decoder.com/nvidias-model-gr00t-2-watches-humans-on-video-then-imagines-itself-as-the-robot" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>NVIDIA's GR00T 2 learns from human video: 10–80% success, and three demos lift 40% to 95%</h3>
+        <p>NVIDIA's research report introduces GR00T 2, which is no longer a vision-language-action model but what the company calls a world-action model: it predicts the next movement and a short video of the immediate future at the same time, so a robot arm's view of picking up an object becomes a training signal. That video prediction is meant to let motion sequences transfer across robot form factors. Training ran on a cluster of more than 1,000 GB300 chips on roughly 400,000 hours of first-person human video from head-mounted cameras.</p>
+        <p>To teach a task, a person demonstrates it with data gloves, grippers or a finger exoskeleton; combined with the target robot's general motion data, the model generates the robot arm instead of the human arm in its video prediction and derives control commands. In the lab, a five-fingered robot learned to light a match, slice a banana and toss packages onto a conveyor belt without teleoperation for those tasks, with success rates between 10% and 80% depending on the task. On 50 tasks the model already handled after a few examples, under three minutes of conventional training lifted success from 40% to 95%.</p>
+        <p>Longer assembly tasks pair GR00T 2 with a high-level language model such as GPT-6 Astra: the language model splits the job into steps, color-codes grip points and launches recovery routines when a part drops. With loose toy parts on a table, the combined system assembled them in at least 97% of trials; without the corrective model and extra fine-tuning, 23 out of 100. A slimmed-down GR00T 2 Turbo runs on the Jetson Thor onboard computer and can scoop popcorn, clear tables and wipe liquids with a towel under its foot — the last succeeding just under half the time. The team lists real limits: no direct touch-sensor input, missed half-turned screws, and an average wait of more than seven seconds for the planner, leaving the robot idle about a third of the time during trash sorting.</p>
+        <p class="why"><b>Why it matters</b>The shift is from teleoperation to human video, which cuts data cost by an order of magnitude and widens the variance: 10% means it is not production-ready, 80% means some tasks already are. Judge a task by contact complexity, not by the average. For data teams, first-person video and glove capture with consistent annotation will be the moat; for control teams, the video-prediction head costs compute that has to fit an onboard budget, which is exactly what Turbo trims.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10</span>
+          <a class="src" href="https://the-decoder.com/google-deepminds-gemini-robotics-2-5-scores-96-percent-sorting-metal-parts-in-a-mercedes-benz-assembly-pilot" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Gemini Robotics 2.5 in a Mercedes-Benz pilot: 96% on metal-part kitting, safer around people</h3>
+        <p>Google DeepMind released Gemini Robotics 2.5, a vision-language-action model that reads images, understands instructions and turns them into robot motion. The company says it beats its own previous baselines by 30% to 100% across more than 200 tasks, including serving food with tongs and pipetting liquids, and finishes tasks 20% to 30% faster. It works with Apptronik's Apollo 2, whose five-fingered hand has 22 degrees of freedom, and with the Franka Duo dual-arm platform's two-finger grippers.</p>
+        <p>The harder result is on active production lines in Kecskemét, Hungary, and Sindelfingen, Germany, where Apollo 2 handled kitting: sorting metal parts from bulk bins into trays in the order each vehicle needs. Two models worked in tandem — Gemini Robotics ER monitored the workflow while Gemini Robotics 2.5 controlled hands and arms. Google reports a 96% success rate for the pilot; Apptronik CEO Jeff Cardenas said the models improved significantly within a few weeks of post-training and moved to Mercedes production with minimal performance loss.</p>
+        <p>On safety, the model uses real-time control to avoid physical hazards, improving safe task completion by 33% near obstacles and 43% near people in Google's own evaluations. DeepMind also open-sourced the ASIMOV-Jailbreak benchmark on Hugging Face: hundreds of prompts that disguise unsafe requests in dozens of scenes. By Google's numbers, Gemini 4 Argon resists 99.5% of them, versus 82% for the previous Gemini Robotics ER 2. On the training side, Argon acts as a simulation engine, generating thousands of simulated runs and a digital twin from one real camera scene, and testing hypotheses about errors found in video.</p>
+        <p class="why"><b>Why it matters</b>96% is for structured kitting from bulk bins, not for final assembly; the real claim is that a monitor-model plus control-model split can run on a live line. The reusable trick is using a language model to generate simulation data, which addresses the long tail that cannot be captured physically. ASIMOV-Jailbreak finally gives robot safety a public test set, but 99.5% is vendor-tested and measures refusal of dangerous instructions, not physical harm avoidance.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 05:19</span>
+          <a class="src" href="https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
+        </div>
+        <h3>CoreWeave posts $3.66bn in Q3 revenue, up 168%, as net loss widens to $709m</h3>
+        <p>CoreWeave reported third-quarter results after the close on November 10: revenue of $3.66 billion against expectations of $3.55 billion, up 168% from $1.36 billion a year earlier. Net loss widened to $709 million, or $1.27 a share, from $110 million a year earlier, while the adjusted loss of 95 cents a share beat the expected $1.16. The company raised its 2026 guidance to $1.275–1.375 billion in adjusted operating income on $13.0–13.3 billion of revenue, up from August's $960 million–$1.15 billion and $12.4–13.2 billion.</p>
+        <p>The question for investors is not growth but funding. CoreWeave shares have lost more than 40% in a month and some of its bonds have yielded above 16%. CEO Mike Intrator told analysts that most of the capital for 2027 will come from customer prepayments and hardware-partner financing, with only "a limited amount" raised by the company; CFO Nitin Agrawal said that at current yields it does not intend to issue more parent-level unsecured debt through 2027, that the asset-level secured debt market remains stable with loans trading near par, and that parent-level debt financing should stay under $5 billion through 2027. The stock rose as much as 11% after the release and turned 4% lower during the call.</p>
+        <p class="why"><b>Why it matters</b>Revenue doubling while losses widen says depreciation and interest are eating margin: the constraint for this class of company is the cost of capital, not demand. Replacing unsecured debt with customer prepayments shifts financing risk downstream and locks customers into long contracts; a 16% bond yield is a harder statement about its cost of money than any guidance. For teams buying compute, it means supply through 2028 is already contracted, and spot-price leverage is shrinking.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 19:40</span>
+          <a class="src" href="https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
+        </div>
+        <h3>Anthropic sets IPO range at $70–78 a share: 825 million shares, up to $64.35bn raised</h3>
+        <p>Anthropic's updated filing on November 10 set an IPO price range of $70 to $78 a share for 825 million shares. At the top of the range the company would raise up to $64.35 billion and be worth up to $1.405 trillion on a fully diluted basis, up from the $965 billion valuation announced with its May funding round. It plans to trade on Nasdaq under the ticker "ANT", pricing on November 18 and starting trading on November 19, according to people familiar with the plans; retail investors would get about 20% of the offering, far above the usual 5% to 10%.</p>
+        <p>The same filing discloses a private placement: AMD, Broadcom, Google, Micron, Microsoft, NVIDIA and TSMC agreed to buy $26 billion of Class N common stock at the IPO price, unregistered and not subject to underwriter lock-ups. TechCrunch reported separately that each of the seven co-founders will sell 3,378,378 shares — nearly $250 million each at the $74 midpoint. The roadshow starts against a rough backdrop: political uncertainty after the midterms and a public market increasingly skeptical of the AI trade, with one investor telling CNBC that even a $1.5 trillion valuation now looks like "a stretch".</p>
+        <p class="why"><b>Why it matters</b>The 20% retail allocation is the odd number here: it buys first-day liquidity and attention at the cost of a more dispersed shareholder base. Seven chip and cloud vendors buying $26 billion at the IPO price with no lock-up mixes strategic investment with stock that can be sold at any time — how that block is handled after listing will set the price. For public-market investors, the compute commitments and revenue-recognition language in the S-1 matter more than the $1.4 trillion headline.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 10, 11:15 and November 11, 09:12 (Beijing time): 7 stories. Compiled at 11/11 09:12.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 017 · 24h window · Generated 2026-11-11 09:12</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../education.html">Education Daily</a>
+        <a href="../psychology.html">Psychology Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

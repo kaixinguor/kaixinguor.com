@@ -70,17 +70,17 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 016 期</span>
+          <span class="issue-tag">第 017 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 10 日<span class="weekday">TUE</span></h1>
-        <p class="deck">今天的主线是「降价和算力账单写在同一张表上」。Anthropic 把最贵一档模型的 API 价格降了两成，同一天的修订版招股书显示三季度算力支出占营收 58%、12 个月内到期的采购承诺约 698 亿美元；Google 把两颗 8i 封进一个封装，Meta 把最小模型压到单任务 0.14 美元。<em>省下来的每一次解码、每一美元，最后都要在别处兑现。</em></p>
-        <div class="metabar"><span class="pill">第 016 期</span>
+        <h1 class="date">2026 年 11 月 11 日<span class="weekday">WED</span></h1>
+        <p class="deck">今天的主线是「更强的能力，更便宜的单价」。Google 把最强模型按 Argon 的价格放出来，靠的是少返工而不是降 token 单价；CoreWeave 用客户预付款替掉无担保债，把融资风险推给下游；Anthropic 把上市区间压在 70 到 78 美元，最高估值 1.4 万亿美元，只比 5 月那轮高出四成多。<em>能力在涨价，钱在变贵，中间那层差价要有人付。</em></p>
+        <div class="metabar"><span class="pill">第 017 期</span>
       <span class="dot"></span>
-      <span>窗口 11/09 09:31 – 11/10 11:15</span>
+      <span>窗口 11/10 11:15 – 11/11 09:12</span>
       <span class="dot"></span>
-      <span>8 条</span>
+      <span>7 条</span>
       <span class="dot"></span>
-      <span>阅读约 9 分钟</span></div>
+      <span>阅读约 8 分钟</span></div>
       </div>
     </header>
 
@@ -101,15 +101,15 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%。</b>输出比 5.1 快最多 30%，价格改为每百万 token 输入 8 美元、输出 40 美元；RoboDojo Sim 64.9%，Fable 5.1 只有 27.6%。</p>
+      <p><b>Google 上线 Gemini 4 Carbon：CursorBench 4.0、Perplexity WANDR、Zapier AutomationBench 三项第一，每任务成本不到最强外部模型的一半。</b>定价与 Argon 相同（输入 2 美元、输出 10 美元 / 百万 token），另在 Antigravity 预览 /swarm 多智能体协作；网络安全基准上一并领先。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>Anthropic 修订版招股书：三季度营收 169.56 亿美元，算力支出 98.63 亿美元占 58%。</b>采购与租赁承诺合计 8954 亿美元，其中约 698 亿美元 12 个月内到期；潜在投资者讨论的估值降到 1.2 万亿至 1.3 万亿美元。</p>
+      <p><b>CoreWeave 三季度营收 36.6 亿美元、同比增 168%，净亏损扩大到 7.09 亿美元。</b>2026 年营收指引上调到 130–133 亿美元；CFO 称 2027 年前不再发母公司级无担保债，部分存量债券收益率已超 16%。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>OpenAI 部署 Control Room：判定叫停后 35 秒内切断研究负载的模型输出。</b>每个会做 agentic 推理的研究负载必须挂一个已批准的安全案例；中央服务不可用时按 fail-closed 拒绝推理请求。</p>
+      <p><b>纽约州 RAISE Act 开放注册：年营收超 5 亿美元的前沿 AI 公司须在 2027 年 1 月 1 日前登记。</b>要公开安全框架、72 小时内报告重大安全事件、发布模型透明度报告；单次违规罚款最高 100 万美元。</p>
     </li>
       </ol>
 
@@ -124,27 +124,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/09</span>
-          <a class="src" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Anthropic ↗</a>
+          <span class="d">11/10</span>
+          <a class="src" href="https://deepmind.google/blog/gemini-4-carbon-is-now-available" target="_blank" rel="noopener noreferrer">Google DeepMind ↗</a>
         </div>
-        <h3>Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%</h3>
-        <p>Anthropic 11 月 9 日发布 Claude Fable 5.2 与 Claude Mythos 5.2。两者是同一个底层模型，差别只在安全策略：Fable 带较严的网络安全与生物学防护，因此能对所有人开放；Mythos 放宽这两类限制，只通过 Life Sciences 与 Cyber 两个验证计划放行。输出速度比 5.1 快最多 30%，价格从每百万 token 输入 10 美元、输出 50 美元降到 8 美元与 40 美元；可选的 fast mode 再快最多 2.5 倍，定价 16 美元与 80 美元。</p>
-        <p>基准表里，Fable 5.2 在 Xhigh effort 下把 FrontierCode 2.0 做到 49.1%，高于 Opus 5.5 的 45.5%、GPT-6 Astra 的 42.8% 和 Gemini 4 Carbon 的 41.1%；FrontierSWE v2 69.9%（Opus 5.5 62.3%）；Terminal-Bench-Science 0.1 为 74.6%，Mythos 5.2 是 75.3%；RoboDojo Sim 64.9%，Fable 5.1 只有 27.6%、Opus 5.5 是 39.4%；OSWorld 2.1 89.3%；带工具的 Humanity's Last Exam 74.2%。没有全线领先的是业务工作流：AutomationBench 51.4%，低于 Gemini 4 Carbon 的 53.9%。</p>
-        <p>效率部分的说法更值得注意：在 Medium（Claude 应用与 Claude Code 的默认档）上，完成同一批难题用的 token 比 Fable 5.1 少；FrontierCode 2.0 在 High effort 下与 Opus 5.5 的 Max 档基本打平（45.3% 对 45.5%），每任务成本约为后者一半。官方给出的使用顺序是日常先用 Opus 5.5，按复杂度往上换 Fable 或 Mythos、往下换 Sonnet 5.5 或 Haiku 5.5；Fable 5.2 另外可以当 Advisor（小模型卡住时咨询它一次）或 Orchestrator（把简单任务分给更小的模型）。</p>
-        <p>Anthropic 自己列的案例包括：从零设计三台可工作的电子设备；30 小时完成费马大定理的可机器检查形式化——今年 9 月同一项目用了 11 天，这次靠 1000 个 agent 并行；解决两个黑洞物理的开放问题。据 <a href="https://siliconangle.com/2026/11/09/anthropic-launches-fable-5-2-and-mythos-5-2-with-science-coding-upgrades/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a> 报道，还有一名工程师让它从零搭一个操作系统：同样拉起 1000 个 agent，约八天完成，成品能在笔记本上运行、可联网、带 Claude 侧边栏。据 <a href="https://www.itmedia.co.jp/news/article/2611/10/2000003042/" target="_blank" rel="noopener noreferrer">ITmedia</a> 报道，Fable 5.2 的 cyber/bio 防护误拦比 5.1 少约 55%。</p>
-        <p class="why"><b>看点</b>这不是「更大的模型」，而是「最贵那一档降价」。三个数字要放在一起读：FrontierCode 49.1% 只比 Opus 5.5 高 3.6 个百分点，而真正改变工程选择的是「默认档更省 token」——如果 Medium 就能交活，成本下降来自 token 数而不是单价。要验证的是三件事：Xhigh 那 49.1% 背后的每任务成本（官方只给了 High 档约为 Opus 5.5 一半）、RoboDojo 64.9% 是内部跑分、以及 fast mode 的 2.5 倍速是否拿质量换的。对做 agent 的团队，Advisor 与 Orchestrator 两种角色比分数更值得先试：让贵模型只在小模型卡住时被调用一次，单位任务的成本结构会立刻不一样。<br><b>另一个视角</b>同一天见报的招股书数字正好反过来：三季度算力与基础设施支出 98.63 亿美元，占营收 58%；临时加购的约 50 亿美元短期算力价格高于长期合同；「新模型降价和合同折扣」让当季收入减少约 6 亿美元。单价下调不是让利，是拿算力账单换份额——降价的钱要在长约和规模里找回来。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/10 09:38</span>
-          <a class="src" href="https://siliconangle.com/2026/11/09/meta-introduces-muse-ember-to-power-cost-efficient-ai-agents/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
-        </div>
-        <h3>Meta 发布最小模型 Muse Ember：单任务 0.14 美元，Intelligence Index 追平 Claude Haiku 5.5</h3>
-        <p>Meta 11 月 9 日发布 Muse Ember，自称家族里最小、最高效的模型，面向 agent 每天重复的工作：工具调用、编码子任务、路由、信息抽取、长文档解析。上下文窗口 100 万 token，单次输出最长 51.2 万 token，支持文本、图像、音频、视频输入。它是第一个用旗舰模型 Muse Wonder（Full）训练出来的公开模型，Meta 没有说明具体用在训练流程的哪一段。</p>
-        <p>Artificial Analysis 的 Intelligence Index 上，Muse Ember 得 36 分，与 Claude Haiku 5.5 的最高推理档持平，高于 GPT-6 Luna 的 28 分；单任务成本约 0.14 美元，Haiku 5.5 约 0.41 美元，Muse Spark 1.3 约 2.39 美元。分项要看是谁测的：Meta 自测的 AutomationBench-AA 为 37.8%（Haiku 13.9%、Luna 20.2%，该基准含 657 项跨 Gmail、Salesforce 等应用的任务），而 <a href="https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index" target="_blank" rel="noopener noreferrer">Artificial Analysis 的独立复测</a>给出 68.1%，与 Muse Wonder、GPT-6 Astra 持平——同一基准差 30 个百分点，引用时必须说清口径。Terminal-Bench 4.0 的 40.9% 同样是 Meta 自测（其 Haiku 为 39.2%；AA 复测 Haiku 为 32.8%）；更接近真实软件开发的 FrontierCode 2.0-AA 只有 27.2%，低于 Haiku 的 34.9%。</p>
-        <p>定价为每百万 token 输入 0.10 美元、输出 0.50 美元；缓存命中的输入 0.004 美元；输入超过 20 万 token 时按 0.30 美元与 1.50 美元计。模型名 muse-ember-1.0，已在 Meta Model API 与编码工具 Muse Code 上线，并同时上 Google Cloud 与 Oracle Cloud。Box 拿它读 13 份文件、处理一笔 1260 万美元私募基金的 capital call，找出 248 万美元的错配和 25 万美元漏记的抵扣。</p>
-        <p class="why"><b>看点</b>0.14 对 0.41 的口径是「每任务成本」而不是每 token 价格——它已经把推理档位和 token 消耗算进去了，所以比价格表更能说明 agent 的经济性。真正的短板在 FrontierCode 27.2%：写代码这类需要长链路一致性的任务，便宜模型仍要多轮返工，返工成本不在 0.14 里。判断该不该换，先看自己 workload 的任务长度分布，再看 AutomationBench 这种多应用流程——Meta 自测里它领先最大，AA 的独立复测也把它放在与旗舰持平的位置，这正是「重复小任务」的定义域。</p>
+        <h3>Google 发布 Gemini 4 Carbon：三项 agent 基准登顶，每任务成本不到对手一半</h3>
+        <p>Google DeepMind 11 月 10 日上线 Gemini 4 Carbon，向开发者、企业、科研人员和消费者开放。官方给它的定位是「网络安全能力与长周期 agent 工作流最强的一代」，并明确 Gemini 4 Argon 仍是多数软件工程与知识工作的默认选择：Carbon 面向「需要彻底探索、深度推理、反复验证」的任务，代价是比 Argon 消耗更多 token。两周前它先通过 Fairwind 计划开放给一批网络安全防守方。价格与 Argon 相同：每百万 token 输入 2 美元、输出 10 美元，Gemini API、Gemini for business、AI Ultra 订阅（Antigravity、Gemini 应用、搜索 AI Mode）同步可用。</p>
+        <p>基准方面，Carbon 在 CursorBench 4.0、Perplexity 的 WANDR 和 Zapier 的 AutomationBench 上排第一，官方称每任务成本不到最强外部模型的一半。与 Artificial Analysis 合作新建的 Multimodal Knowledge Agent 基准上它排第二，平均每任务成本比第一名低 6 倍以上；金融场景里，它自称在 Hebbia 的 E2E Financial Agentic 评测上追平最强模型，在 Balyasny 的通用金融智能基准上于 23 个前沿配置中排第一。工程侧的新东西是 Antigravity 里的 /swarm：一条 prompt 展开成一支可实时跟踪的 agent 团队，开发者把架构设计、协调、审计这些最费推理的活交给 Carbon，把并行工作区交给更轻的模型。官方例子是 7 份市政规划 PDF（含 206 个工程图视图）在 10 个夜间循环里重建出 90.6 万三角形的 Three.js 场景。</p>
+        <p>网络安全是这一代的卖点。Carbon 在 SEC-bench Pro（找洞）、ExploitGym（利用）、CWE-bench v1（打补丁）上领先；Project Fortify 内部基准上扫描召回 100%、分诊精确率 95%，开源仓库测试里相对 Argon 召回提升逾 25%。Wiz 的 Scan for Good 用它扫两家主要 SaaS 供应商，两小时内挖出 0-day，把原本数周的漏洞研究压到一个下午。安全侧：ExploitBench 与 CyScenarioBench 的模拟攻击里，自适应红队 99% 的攻击轨迹被拦下，单次尝试突破率降到 0.8%（Argon 3.1%）；Gray Swan 测试中自动攻击查询成功率 2.17%（Argon 9.86%）；Gray Swan 的间接提示注入基准上攻击成功率 0%，是首个达到该数字的模型；375 项 agent 诚实性基准通过 92%（Argon 70%）。</p>
+        <p class="why"><b>看点</b>价格没降，降的是「做对一件事要花多少 token」。官方自己说 Carbon 比 Argon 用更多 token，所以「每任务成本减半」成立的前提是它一次做对、少返工——这条对 agent 流水线是利好，对按对话轮次计费的产品是成本重算。三个「第一」都出自厂商联合定义的基准（Cursor、Perplexity、Zapier 各测自家场景），MKA 更是这次新造的；引用时该写清是谁的榜。0% 提示注入攻击成功率来自单一基准，官方同一段也承认复杂分布下仍有提升空间，别把它读成「注入问题已解决」。<br><b>另一个视角</b>同价换更强，等于把竞争从单价转到 token 效率：若下游按任务付费，毛利来自「更少轮次」；若按 token 付费，Carbon 更长的轨迹反而抬高账单——两类客户对这次发布的感受会完全相反。</p>
       </article>
 
     </div>
@@ -161,13 +148,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/09 16:15</span>
-          <a class="src" href="https://www.ithome.com/1/024/350.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/11 01:30</span>
+          <a class="src" href="https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now" target="_blank" rel="noopener noreferrer">The Verge ↗</a>
         </div>
-        <h3>阿里千问办公 2.0 上线：数字员工进工作群，多人与 Agent 同改一份文档</h3>
-        <p>11 月 9 日千问办公 2.0 发布，定位从个人助手改成面向个人与组织协作的 Team Agent。第一个功能叫「协作」：用户组建一个团队与数字员工共同工作的空间，数字员工可以实时关联多个钉钉群聊、文档、AI 表格和 AI 听记，支持多个会话并行，以及任务管理与指派。成员在空间里派活，数字员工结合空间上下文梳理进展、总结共识、创建并跟进待办。</p>
-        <p>另外几项：「自动任务」把 agent 从被动响应改成条件触发——订阅事件、配置规则，条件满足就自动开工，首批支持指定人的消息、群里 @自己的消息和审批任务；「人机共创」把对话、预览与编辑打通，可以在对话框里选中段落、单元格、幻灯片或应用区域，标好多处意见一次提交，由 AI 在原文档上改，在线文档、AI 表格与宜搭应用还支持多人、多 Agent 同时在线编辑；「资料空间」统一收录 AI 生成与用户上传的图片、文档、表格、PPT、网页、应用和本地文件；此外还有「三端互联」。所有功能已在客户端全量上线。</p>
-        <p class="why"><b>看点</b>多 Agent 同时改一份文档，难点不在生成，而在并发：谁的修改先落、冲突怎么合并、撤销粒度是段落还是整次提交。发布会没有给出冲突策略和审计日志的做法，这两点决定它能不能进真实项目。更可复用的是「事件订阅 + 规则」这一层：它把 agent 的触发条件从「人说话」换成「系统状态变化」，成本模型也就从对话轮次变成事件次数——按事件计费和按席位计费是两种生意。</p>
+        <h3>Anthropic 推出办公套件：会议、表格、白板都进 Claude，瞄准非技术知识工作者</h3>
+        <p>Anthropic 11 月 10 日在旧金山发布面向非技术岗位的办公工具：Claude Meetings 进会议、记笔记、整理待办；Claude Sheets 和员工并排改表格；Claude Whiteboards 在共享白板上铺想法。三件套都进入 beta：Whiteboards 与 Sheets 对所有付费计划开放，Meetings 只给 Teams 与 Enterprise。同时，此前的 Claude Data（beta 时叫 Dashboards）转为正式可用，Claude 的 Artifacts 也升级成可交互的图形界面，能把一份演示文稿转成一分钟讲解视频；Claude Docs、Slides、Design、Motion 继续保留。</p>
+        <p>更值得注意的是连接器：HubSpot、Adobe、Atlassian 等合作方的应用可以直接嵌进 Claude 里打开，用户不必再切标签页。Anthropic 两年前发布的 MCP 协议，如今插件市场已有 9000 多个条目。产品负责人 Nicholas Lin 对 The Verge 说，Claude Code 一年前改变了工程师的工作方式，现在要补的是「非开发者用 AI 仍有很大摩擦」这个缺口。</p>
+        <p class="why"><b>看点</b>三件套真正的工程难点不在生成，而在同一份内容的三种视图要实时同步：会议记录、白板、表格改的是同一个对象，冲突合并与撤销粒度都没公开。对做 agent 产品的团队，可抄的是「嵌入而非跳转」：把第三方应用放进模型上下文，权限模型必须细到记录级，否则一次越权就丢客户。发布时间选在 IPO 路演前，也在说明收入结构要从 API 往席位走。</p>
       </article>
 
     </div>
@@ -184,14 +171,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/10 09:25</span>
-          <a class="src" href="https://interestingengineering.com/ai-robotics/openai-control-room-35-second-model-shutdown" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+          <span class="d">11/11 04:52</span>
+          <a class="src" href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
         </div>
-        <h3>OpenAI 上线 Control Room：决定叫停后 35 秒内切断模型输出</h3>
-        <p>OpenAI 已在研究基础设施里部署中央控制系统 Control Room，用来跟踪并阻断研究负载的模型输出。它把三类对象连起来：研究负载（强化学习实验、评测、大批量数据处理）、推理引擎，以及中央的 Control Room 服务。每个会做 agentic 推理的研究负载，都必须挂一个已批准的安全案例（safety case）。</p>
-        <p>机制核心是 job ID：研究代码启动时向 Control Room 申请唯一标识，这个标识附在发往推理引擎的每个请求上；中央服务一旦判定需要干预，该负载在 35 秒内就拿不到新的模型输出。设计是 fail-closed 的——中央服务不可用时，推理请求直接被拒绝，而不是放行。自动监控系统在检测到可能不对齐的模型行为时，也可以触发干预。</p>
-        <p>范围上，Control Room 目前覆盖 OpenAI 自己的研究基础设施；对外服务的模型推理更集中，本来就有下线部署的运维手段，不在这次范围内。它与既有的「监控异常行为」系统并行工作，区别是从「标记」变成「阻断」。</p>
-        <p class="why"><b>看点</b>35 秒是个工程指标，不是政策指标：它把「能不能停」变成一个有 SLA 的依赖项，代价是每次推理都多一跳中央鉴权。fail-closed 的选择意味着 Control Room 自己成了可用性单点，这笔账所有做 agent 平台的团队迟早都要付——安全开关与训练吞吐落在同一条关键路径上。真正值得抄的是安全案例与 job ID 的绑定粒度：落在「负载」而不是「模型」或「用户」，回滚时不用猜是哪一次实验。</p>
+        <h3>纽约州 RAISE Act 开放注册：年营收超 5 亿美元的前沿 AI 公司，明年 1 月 1 日前必须登记</h3>
+        <p>纽约州 11 月 10 日开放前沿 AI 开发者注册门户。按《RAISE Act》，年营收超过 5 亿美元的大型前沿开发商——OpenAI、Anthropic 这类公司——须在 2027 年 1 月 1 日前完成登记。法案从明年年初生效，要求企业：在官网公开安全框架，发生重大安全事件后 72 小时内报告，并发布公开的模型透明度报告。新成立的数字创新、治理、诚信与信任办公室（DIGIT）负责执行。</p>
+        <p>罚则写得很具体：单次违规最高 100 万美元，后续违规最高 300 万美元；不注册也可能被执法，但州政府发言人没有说明具体手段。州长 Hochul 同一天启动纽约 AI 责任与研究中心，设在纽约州立大学宾汉姆顿分校，独立评估先进 AI 系统的安全、安保与运行，并与 DIGIT 一起审阅企业的安全框架；该中心今年 1 月宣布时拿到 5500 万美元捐赠与资本。纽约此前还执行了 AI 伴侣须告知「你在和机器人说话」并检测自杀意念的法规，以及 2027 年 6 月 1 日生效的未成年人聊天机器人安全法，限制拟人化欺骗、谄媚式回应和鼓励自残等内容。</p>
+        <p class="why"><b>看点</b>72 小时报告是个运维指标，不是法律口号：它逼着公司把事件分级、日志留存、对外披露做成流水线，没有这些，一次事故就会同时触发罚款和信任损失。5 亿美元营收的门槛把大多数创业公司挡在外面，但州级立法正在碎片化，「按最严的州设计」比「按注册地设计」便宜。真正值得盯的是 DIGIT 如何审安全框架——如果它要求可验证的评测方法，厂商自测报告就不够用了。</p>
       </article>
 
     </div>
@@ -208,25 +194,26 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/10 10:46</span>
-          <a class="src" href="https://m.ithome.com/html/1024701.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/10</span>
+          <a class="src" href="https://the-decoder.com/nvidias-model-gr00t-2-watches-humans-on-video-then-imagines-itself-as-the-robot" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>蚂蚁灵波开源触觉基座 LingBot-Touch：26 项真机任务成功率提升 14 至 26 个百分点</h3>
-        <p>11 月 10 日蚂蚁灵波科技开源触觉基础模型 LingBot-Touch，基于近 5000 小时真实触觉数据预训练，覆盖磁触觉、视触觉与压阻式三类传感原理，把不同原始信号转成同一套触觉表征，目标是跨传感器、跨灵巧手、跨动作模型复用。</p>
-        <p>团队在 Sharpa Wave 与 XHand 两款灵巧手上做了 26 项真机测试（翻书页、拧瓶盖、辨识麻将牌等）。接入这套表征后，LingBot-VLA、π0.5、Diffusion Policy 与 T-Rex 四种动作模型的平均任务成功率，比没有触觉时提高约 14 至 26 个百分点。T-Rex 控制 Sharpa Wave 拧瓶盖：无触觉 56.25%，直接输入传感器原始信号 62.5%，接入 LingBot-Touch 表征后 90%。</p>
-        <p>架构上按传感原理分设编码入口，再把不同触点布局映射到统一的指尖坐标空间，共享模型学习接触位置、受力及其随时间的变化，输出统一的触觉 token；人戴触觉手套与遥操作灵巧手采集的数据可以一起训练。XHand 的磁触觉型号不在预训练数据里，团队冻结 LingBot-Touch 参数、只用 XHand 的操作示范训练动作模型，验证了跨硬件复用。26 项测试全部用约 530 万参数的 Tiny 版，接入 LingBot-VLA、π0.5 与 T-Rex 后参数量只增加约 0.13% 至 0.16%；更大的 Small 版在预训练数据加到近 5000 小时后仍在涨点。</p>
-        <p class="why"><b>看点</b>这条的价值不在 90% 这个数字，而在「冻结触觉编码器、只训动作头」就能换手——它把触觉从某个硬件的标定工作，变成可迁移的预训练产物。要追问三件事：26 项都是短程接触任务，长程插拔与柔性物体上的漂移没测；近 5000 小时数据的传感器分布与目标硬件是否重叠；以及 0.13% 的参数量增加背后，端侧推理延迟加了多少。对整机厂，先确认自家传感器的原始信号能被这套编码入口接住，再谈换手。</p>
+        <h3>NVIDIA 的 GR00T 2 看人类视频学动作：成功率 10%–80%，三次演示能把 40% 提到 95%</h3>
+        <p>NVIDIA 在研究报告中介绍 GR00T 2。它不再是视觉-语言-动作（VLA）模型，而是公司所称的世界-动作模型（WAM）：同时计算下一个动作和一小段「未来视频」，预测机械臂抓起物体时画面该怎么变。这样做的好处是动作序列可以在不同机器人形态之间迁移。训练用了 1000 多块 GB300 组成的集群，数据约 40 万小时——人戴头戴相机做各种任务的第一视角视频。</p>
+        <p>教新任务时，人只要戴数据手套、专用夹爪或手指外骨骼演示一遍，训练时把这些记录和目标机器人的通用运动数据合在一起，模型就会在视频预测里把人的手「换成」机械臂，再反解出控制指令。实验室里，五指手的机器人用这种方式学会了点烟、切香蕉、把包裹抛上传送带，没为这些任务做过遥操作；成功率按任务在 10% 到 80% 之间。在 50 个「看几次就会」的任务上，不到 3 分钟的常规训练就把成功率从 40% 拉到 95%。</p>
+        <p>长程装配要配一个高层语言模型（论文里用 GPT-6 Astra）：GR00T 2 管抓取，语言模型把任务拆成步骤、在相机画面里给抓取点标色、零件掉了就启动补救程序。桌上散放零件时，这套组合在至少 97% 的试验里装好了玩具车；去掉语言模型纠错和额外微调，只有 23/100。面向双足机器人的精简版 GR00T 2 Turbo 直接跑在 Jetson Thor 上，能舀爆米花、收桌子、用脚上的毛巾擦液体（最后这项成功率不到一半）。团队自己列了短板：不处理触觉传感器数据，会漏掉半拧的螺丝；高层规划模型平均要等 7 秒以上，垃圾分拣时机器人有约三分之一时间在空转。</p>
+        <p class="why"><b>看点</b>这条的路线变化是「用人类视频替代遥操作」：数据成本降一个量级，换来的是成功率方差极大（10%–80%）。10% 意味着它还不能进产线，80% 说明部分任务已经可用——判断能不能用，要看目标任务的接触复杂度，而不是平均值。对做数据采集的团队，第一视角视频与手套数据的标注口径会是护城河；对做控制的团队，WAM 的视频预测头多花的算力要算进端侧预算，Turbo 版砍掉的正是这部分细节。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/10 10:32</span>
-          <a class="src" href="https://m.ithome.com/html/1024697.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/10</span>
+          <a class="src" href="https://the-decoder.com/google-deepminds-gemini-robotics-2-5-scores-96-percent-sorting-metal-parts-in-a-mercedes-benz-assembly-pilot" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>波士顿动力给 Atlas 装上滑板车轮：横向冲刺，还能跳起来转一圈</h3>
-        <p>波士顿动力 11 月 9 日发布视频，展示踝关节执行器上装了轮子的 Atlas。改法很轻：用定制转接器把标准电动滑板车的轮子装到踝关节执行器上，没有大改硬件，也没有重写软件模式，只是在仿真环境里把脚换成了轮子。</p>
-        <p>演示里，改装后的 Atlas 可以横向冲刺、跳起来转一圈。横向移动不再靠拖脚，而是控制轮子转向、以滚动方式横移；转圈那一跳由轨迹跟踪控制器完成，跟着记录的人体动作数据走，第一次尝试就成功。工程师还特意从人体动作捕捉里挑出脚部打滑的片段，研究轮子能否做出类似效果。每一次加速、转向和急停，都在持续给执行器加载。波士顿动力明确这不是商品，只作为研究平台使用。</p>
-        <p class="why"><b>看点</b>把脚换成轮子只改了仿真的末端执行器，控制器和动作数据都没动——这说明 Atlas 的软件栈已经把「怎么动」和「用什么动」分开了，换末端执行器接近换一组参数。对做腿足机器人的团队，这比任何 demo 都实用：同一套策略在轮式与足式上各跑一遍，才知道哪些行为来自策略、哪些来自本体。要留意轮式改变了横向加速度的上下限，急停打滑会成为新的失败模式。</p>
+        <h3>Gemini Robotics 2.5 进奔驰产线试点：分拣金属件成功率 96%，安全完成率提升三到四成</h3>
+        <p>Google DeepMind 发布 Gemini Robotics 2.5，一个视觉-语言-动作模型：看懂画面、听懂指令、转成机器人动作。官方说它在 200 多个任务上（夹子分餐、移液等）比自家上一代基线成功率高 30% 到 100%，完成任务快 20% 到 30%；支持 Apptronik 的 Apollo 2（五指手、22 个自由度）和 Franka Duo 双臂平台（两指夹爪）。</p>
+        <p>更硬的结果在奔驰产线：匈牙利 Kecskemét 和德国 Sindelfingen 的现役装配线上，Apollo 2 做 kitting——从散料箱里分拣金属件，按每辆车的装配顺序放进托盘。两个模型分工：Gemini Robotics ER 盯流程，Gemini Robotics 2.5 控手和臂。官方给的试点成功率是 96%；Apptronik CEO Jeff Cardenas 说，后训练几周内模型提升明显，转到奔驰生产环境后性能损失很小。</p>
+        <p>安全方面，模型用实时控制做避障，官方评测里障碍物附近的安全完成率提升 33%、人员附近提升 43%。DeepMind 同时开源了 ASIMOV-Jailbreak 基准（放在 Hugging Face）：数百条把危险请求伪装进几十种场景的 prompt，用来测机器人模型会不会被诱导做危险动作。按官方数据，Gemini 4 Argon 的抗越狱率 99.5%，上一代 Gemini Robotics ER 2 是 82%。训练侧，Argon 被当作仿真引擎：从一张真实相机画面生成上千次仿真训练、建数字孪生，也能从录像里推断错误原因并在仿真与真机上验证改进。</p>
+        <p class="why"><b>看点</b>96% 是「从散料箱分拣金属件」这种结构化任务，别外推到总装；它的价值在于证明「监控模型 + 控制模型」的分工能在现役产线跑，而不是某个分数。可复用的是用语言模型做仿真数据生成——这解决的是长尾场景采不到数据的问题，比再训一个更大的 VLA 便宜。ASIMOV-Jailbreak 的意义是机器人安全终于有了公开测试集，但 99.5% 是厂商自测，且测的是「拒绝危险指令」，不是「物理上不伤人」。</p>
       </article>
 
     </div>
@@ -243,26 +230,24 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/09 19:22</span>
-          <a class="src" href="https://finance.eastmoney.com/a/202611093926414670.html" target="_blank" rel="noopener noreferrer">深圳商报 ↗</a>
+          <span class="d">11/11 05:19</span>
+          <a class="src" href="https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
         </div>
-        <h3>Anthropic 修订版招股书：三季度营收 169.56 亿美元，算力支出占 58%</h3>
-        <p>据《深圳商报·读创》报道，Anthropic 最快本周启动 IPO 正式路演，拟在纳斯达克全球精选市场挂牌，代码 ANT，由高盛与摩根士丹利牵头承销，公司尚未公布发行价区间与发行股数。11 月 2 日提交的修订版招股书显示，三季度营收 169.56 亿美元，同比增长 1127%，环比增长约 47%；按美国通用会计准则，从二季度营业盈利 9.74 亿美元转为三季度营业亏损 5.67 亿美元。</p>
-        <p>支出侧，三季度算力及基础设施支出升至 98.63 亿美元，环比增长约 77%，相当于当季营收的 58%。原因是需求超出预期，公司临时采购了约 50 亿美元短期算力，价格高于长期合同；同时新模型降价与合同折扣使当季收入减少约 6 亿美元。剔除股权激励、非现金慈善捐赠等项目后，三季度调整后营业利润 24.63 亿美元，利润率从二季度的 19% 降至 15%。</p>
-        <p>更受关注的是长期承诺：计入 9 月 30 日后新签协议，采购及租赁承诺合计约 8954 亿美元，几乎全部与算力及基础设施有关，付款安排延续到 2045 年；其中约 698 亿美元将在 9 月 30 日后的 12 个月内到期。作为参照，三季度营收按四个季度简单折算约为 678 亿美元。此前有报道称此次 IPO 募资规模一度可能达到 1000 亿美元，而部分潜在投资者讨论的估值已从 1.4 万亿至 1.5 万亿美元降至 1.2 万亿至 1.3 万亿美元。</p>
-        <p class="why"><b>看点</b>三组数字放在一张表上：单季营收 169.56 亿、单季算力 98.63 亿、12 个月内到期承诺 698 亿。第一组说明需求是真的，第二组说明毛利被算力吃掉，第三组说明还款节奏和收入节奏不匹配——698 亿大约相当于四个季度的全部营收。对工程师，这解释了同一天为什么要降价：单价换份额、份额换长约、长约换更便宜的算力，是一条闭环；任何一环断了，就要回到短期市场买高价算力，而三季度已经这么做了一次。</p>
+        <h3>CoreWeave 三季度营收 36.6 亿美元、同比增 168%，净亏损扩大到 7.09 亿美元</h3>
+        <p>CoreWeave 11 月 10 日盘后公布三季度业绩：营收 36.6 亿美元，高于市场预期的 35.5 亿，比去年同期的 13.6 亿增长 168%；净亏损 7.09 亿美元（每股 1.27 美元），去年同期亏损 1.10 亿美元；调整后每股亏损 0.95 美元，好于预期的 1.16 美元。公司同时上调 2026 年指引：调整后运营利润 12.75 亿至 13.75 亿美元、营收 130 亿至 133 亿美元；8 月给的数字是 9.6 亿至 11.5 亿、124 亿至 132 亿。</p>
+        <p>市场关心的不是增速而是钱从哪来。CoreWeave 股价过去一个月跌掉四成以上，部分债券收益率一度超过 16%。CEO Mike Intrator 在电话会上说，2027 年所需资金主要来自客户预付款和硬件伙伴的融资，公司自己只再融「有限金额」；CFO Nitin Agrawal 说，按当前收益率，2027 年前不打算再发母公司级无担保债，而资产级担保债市场稳定，贷款仍在面值附近交易，母公司级债务融资总额预计低于 50 亿美元。财报发布后股价一度涨 11%，电话会期间转跌 4%。</p>
+        <p class="why"><b>看点</b>营收翻倍、亏损同时扩大，说明折旧和利息正在吃毛利——这类公司真正的瓶颈是资本成本，不是需求。用客户预付款替代无担保债，等于把融资风险转给下游，也把客户锁进长约；16% 的债券收益率就是市场给它的资金价格，比任何一份指引都硬。对采购算力的团队，这条意味着 2028 年前的供给已经被长约锁定，现货价格谈判空间在缩小。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/09 21:00</span>
-          <a class="src" href="https://www.yna.co.kr/view/AKR20261109122200017" target="_blank" rel="noopener noreferrer">韩联社 ↗</a>
+          <span class="d">11/10 19:40</span>
+          <a class="src" href="https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
         </div>
-        <h3>Google 加发 TPU 8i Max 与 8tx：算力、SRAM、HBM 带宽各翻一倍</h3>
-        <p>Google 11 月 9 日（当地时间）宣布在第 8 代 TPU 产品线里增加两款系统：TPU 8i Max 与 TPU 8tx。今年 4 月它已发布训练用的 TPU 8t 与实时推理用的 TPU 8i，这次是在既有芯片上做用途化封装。</p>
-        <p>TPU 8i Max 把两颗 TPU 8i 封进同一个封装，算力、片内 SRAM 容量与 HBM 带宽各提升一倍，同样的机架空间能放下更多算力。Google 的说法是面向「多个 agent 同时分析整套源码或数小时视频」这类场景——这时从内存取数据的速度就是瓶颈，8i Max 是为一次吞吐大量数据设计的。</p>
-        <p>TPU 8tx 用与 8t 相同的芯片搭配定制 AMD CPU，在硬件层隔离敏感数据与模型权重，处理过程中也能保持保护，配合低延迟网络后延迟最多降到 8t 的一半。金融与政府机构不必把敏感数据搬到另一台服务器，就能用它做微调与推理。Google 还提到上月开源的 TorchTPU 让开发者不改 PyTorch 代码就能在 TPU 上运行；外部使用 TPU 的客户已接近 100 家，包括 AI 研究机构、金融公司、零售企业和大学。</p>
-        <p class="why"><b>看点</b>8i Max 的思路是把「两颗芯片一个封装」当产品卖，而不是等下一代芯片——对推理成本的影响比分值更直接：同样的机架功率与空间，HBM 带宽翻倍意味着长上下文和视频输入的 prefill 不再被内存带宽卡住。要验证的是封装后的散热与良率，以及 8tx 说的「硬件隔离」边界在哪：是内存加密，还是独立地址空间。对做私有化部署的团队，8tx 的意义大于 8i Max——合规场景第一次有了「不搬数据也能微调」的选项。</p>
+        <h3>Anthropic 确定 IPO 定价区间 70–78 美元：发行 8.25 亿股，最高募资 643.5 亿美元</h3>
+        <p>Anthropic 在 11 月 10 日更新的招股书里给出 IPO 定价区间：每股 70 至 78 美元，发行 8.25 亿股。按上限计算，公司最多募资 643.5 亿美元；完全稀释估值最高约 1.405 万亿美元，而今年 5 月一轮融资时的估值是 9650 亿美元。公司计划在纳斯达克以代码「ANT」交易，11 月 18 日定价、11 月 19 日开始交易；据知情人士，面向散户的配售比例约 20%，远高于 IPO 常见的 5% 至 10%。</p>
+        <p>同一份文件还披露了一笔私募配售：AMD、博通、Google、Micron、微软、NVIDIA 和台积电七家公司同意按 IPO 发行价购买 260 亿美元 Class N 普通股，这部分股份不在发行中注册，也不受承销商锁定期约束。TechCrunch 另外报道，七位联合创始人每人将卖出 3,378,378 股，按区间中值 74 美元算，每人套现近 2.5 亿美元。路演启动的背景并不轻松：中期选举后政策不确定性上升，公开市场对 AI 交易的怀疑在加深，有投资者对 CNBC 表示，1.5 万亿美元估值都已算「勉强」。</p>
+        <p class="why"><b>看点</b>20% 的散户配售比例是这次最反常的数字：它换的是上市首日的流动性与关注度，代价是筹码结构更散、波动更大。七家芯片与云厂商按发行价认购 260 亿美元且不受锁定期约束，等于把「战略投资」和「可随时卖出的股票」放在一起——上市后这批股份的处置节奏会直接影响价格。对二级市场投资者，真正该看的是招股书里的算力承诺与收入确认口径，而不是 1.4 万亿这个数字。</p>
       </article>
 
     </div>
@@ -271,9 +256,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 9 日 09:31 至 11 月 10 日 11:15（北京时间）之间发布的报道，共 8 条。检索时间 11/10 11:15。</p>
+        <p>本期收录 2026 年 11 月 10 日 11:15 至 11 月 11 日 09:12（北京时间）之间发布的报道，共 7 条。检索时间 11/11 09:12。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 016 · 24h window · Generated 2026-11-10 11:15</p>
+    <p class="sig">AI Daily · Issue 017 · 24h window · Generated 2026-11-11 09:12</p>
       </div>
     </footer>
       </div>
@@ -286,17 +271,17 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 016</span>
+          <span class="issue-tag">Issue 017</span>
         </div>
-        <h1 class="date">November 10, 2026<span class="weekday">TUE</span></h1>
-        <p class="deck">Today's thread is that the price cut and the compute bill are written on the same sheet. Anthropic cut the API price of its most expensive models by a fifth, while its amended filing the same day put compute and infrastructure at 58% of Q3 revenue and $69.8bn of purchase commitments due within 12 months. Google put two 8i dies in one package, and Meta pushed its smallest model to $0.14 a task. <em>Every decode and every dollar saved has to be paid for somewhere else.</em></p>
-        <div class="metabar"><span class="pill">Issue 016</span>
+        <h1 class="date">November 11, 2026<span class="weekday">WED</span></h1>
+        <p class="deck">Today's thread is that capability got stronger while the unit price got cheaper. Google shipped its strongest model at Argon's price by cutting rework rather than token cost; CoreWeave replaced unsecured debt with customer prepayments, pushing financing risk downstream; Anthropic set its IPO range at $70 to $78, a top valuation of $1.405 trillion, only about 45% above its May round. <em>Capability is getting dearer, money is getting more expensive, and someone has to pay the difference.</em></p>
+        <div class="metabar"><span class="pill">Issue 017</span>
       <span class="dot"></span>
-      <span>Window Nov 9, 09:31 – Nov 10, 11:15</span>
+      <span>Window Nov 10, 11:15 – Nov 11, 09:12</span>
       <span class="dot"></span>
-      <span>8 stories</span>
+      <span>7 stories</span>
       <span class="dot"></span>
-      <span>9 min read</span></div>
+      <span>8 min read</span></div>
       </div>
     </header>
 
@@ -317,15 +302,15 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>Anthropic ships Claude Fable 5.2 and Mythos 5.2: API price down 20%, FrontierCode 2.0 at 49.1%.</b>Output is up to 30% faster than 5.1, and the price is now $8 per million input tokens and $40 per million output. On RoboDojo Sim the new model scores 64.9% against 27.6% for Fable 5.1.</p>
+      <p><b>Google ships Gemini 4 Carbon: first on CursorBench 4.0, Perplexity's WANDR and Zapier's AutomationBench, at less than half the cost per task of the best external model.</b>Pricing matches Argon ($2 input / $10 output per million tokens), with a /swarm multi-agent preview in Antigravity and leading score on cyber benchmarks.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>Anthropic's amended S-1: Q3 revenue of $16.96bn, with $9.86bn of compute spend, 58% of revenue.</b>Purchase and lease commitments total $895.4bn, about $69.8bn of it due within 12 months. Potential investors are now discussing a valuation of $1.2tn to $1.3tn.</p>
+      <p><b>CoreWeave posts $3.66bn of Q3 revenue, up 168%, as its net loss widens to $709m.</b>2026 revenue guidance rises to $13.0–13.3bn; the CFO says no more parent-level unsecured debt through 2027, while some existing bonds yield above 16%.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>OpenAI deploys Control Room: a research workload stops producing model output within 35 seconds of a stop decision.</b>Every workload doing agentic inference needs an approved safety case, and if the central service is unavailable, inference is refused rather than allowed.</p>
+      <p><b>New York opens registration under the RAISE Act: frontier AI developers with more than $500m in revenue must register by January 1, 2027.</b>They must publish safety frameworks, report critical incidents within 72 hours and issue model transparency reports; fines reach $1m per violation.</p>
     </li>
       </ol>
 
@@ -340,27 +325,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/09</span>
-          <a class="src" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Anthropic ↗</a>
+          <span class="d">11/10</span>
+          <a class="src" href="https://deepmind.google/blog/gemini-4-carbon-is-now-available" target="_blank" rel="noopener noreferrer">Google DeepMind ↗</a>
         </div>
-        <h3>Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0</h3>
-        <p>Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 on November 9. They are the same underlying model, separated only by safeguards: Fable carries strong cybersecurity and biology protections, which is what lets Anthropic offer it to everyone, while Mythos runs with those loosened and is granted through the Life Sciences and Cyber verification programmes. Output is up to 30% faster than 5.1, and the price drops from $10 per million input tokens and $50 per million output to $8 and $40. An optional fast mode is up to 2.5x faster again, at $16 and $80.</p>
-        <p>The benchmark table puts Fable 5.2 at 49.1% on FrontierCode 2.0 at Xhigh effort, ahead of Opus 5.5 at 45.5%, GPT-6 Astra at 42.8% and Gemini 4 Carbon at 41.1%. It scores 69.9% on FrontierSWE v2 (Opus 5.5: 62.3%), 74.6% on Terminal-Bench-Science 0.1 (Mythos 5.2: 75.3%), 64.9% on RoboDojo Sim against 27.6% for Fable 5.1 and 39.4% for Opus 5.5, 89.3% on OSWorld 2.1 and 74.2% on Humanity's Last Exam with tools. Business workflows are the exception: AutomationBench comes in at 51.4%, below Gemini 4 Carbon's 53.9%.</p>
-        <p>The efficiency claims matter more than the headline score. At Medium effort, the default in the Claude apps and Claude Code, the model finishes hard tasks with fewer tokens than Fable 5.1. On FrontierCode 2.0 at High effort it roughly matches Opus 5.5 at Max (45.3% versus 45.5%) for about half the cost per task. Anthropic's advice is to start with Opus 5.5 for most work, moving up to Fable or Mythos and down to Sonnet 5.5 or Haiku 5.5 as scope demands. Fable 5.2 can also act as an Advisor, consulted once when a smaller model is stuck, or as an Orchestrator that delegates simpler work downward.</p>
-        <p>Anthropic's own list of examples includes three working electronic devices designed from scratch; a machine-checkable formalisation of Fermat's Last Theorem in 30 hours, against 11 days for the same project in September, this time by running 1,000 agents in parallel; and two open problems in black-hole physics. <a href="https://siliconangle.com/2026/11/09/anthropic-launches-fable-5-2-and-mythos-5-2-with-science-coding-upgrades/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a> adds a second demo: an engineer asked the model to build an operating system from scratch, and Fable 5.2 spun up 1,000 agents that finished in about eight days, producing something that boots on a laptop, reaches the network and carries a Claude sidebar. According to <a href="https://www.itmedia.co.jp/news/article/2611/10/2000003042/" target="_blank" rel="noopener noreferrer">ITmedia</a>, unnecessary cyber and biology blocks fell by about 55% compared with Fable 5.1.</p>
-        <p class="why"><b>Why it matters</b>This is not so much a bigger model as a cheaper top tier. Read three numbers together: 49.1% is only 3.6 points above Opus 5.5, and the line that actually changes engineering choices is the token count at the default effort. If Medium ships the work, the saving comes from fewer tokens rather than a lower unit price. Three things still need checking: the cost per task behind that 49.1% run (Anthropic only says High effort costs about half of Opus 5.5), whether RoboDojo is an internal eval (it is), and whether fast mode's 2.5x buys speed with quality. For agent teams, the Advisor and Orchestrator roles are worth trying before the scores: calling the expensive model only when a cheap one stalls changes the cost structure of a task immediately.<br><b>Another view</b>The filing reported the same day points the other way. Compute and infrastructure reached $9.86bn in the quarter, 58% of revenue, after about $5bn of short-term capacity bought above long-term contract prices; "new model price cuts and contract discounts" took roughly $600m off quarterly revenue. The cut is not a gift but a trade of margin for share, and it has to be earned back in volume and longer contracts.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/10 09:38</span>
-          <a class="src" href="https://siliconangle.com/2026/11/09/meta-introduces-muse-ember-to-power-cost-efficient-ai-agents/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
-        </div>
-        <h3>Meta's smallest model, Muse Ember: $0.14 a task and an Intelligence Index level with Claude Haiku 5.5</h3>
-        <p>Meta introduced Muse Ember on November 9, billing it as the smallest and most efficient model in the family, built for the work agents repeat all day: tool calls, coding subtasks, routing, extraction and long-document parsing. It has a 1m-token context window, generates up to 512,000 tokens in one response, and accepts text, images, audio and video. It is the first public model trained with the flagship Muse Wonder (Full); Meta did not say which part of the training pipeline it automated.</p>
-        <p>On Artificial Analysis' Intelligence Index it scores 36, level with Claude Haiku 5.5 at its highest reasoning setting and above GPT-6 Luna at 28. Cost per task is about $0.14, against roughly $0.41 for Haiku 5.5 and about $2.39 for Muse Spark 1.3. The sub-scores need a label: on Meta's own AutomationBench-AA it claims 37.8%, against 13.9% for Haiku and 20.2% for Luna on a 657-task set spanning apps such as Gmail and Salesforce, while <a href="https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index" target="_blank" rel="noopener noreferrer">Artificial Analysis' independent run</a> puts it at 68.1%, level with Muse Wonder and GPT-6 Astra — a 30-point gap between vendor and third-party numbers. Its 40.9% on Terminal-Bench 4.0 is also Meta's own (Haiku 39.2% there; AA measures Haiku at 32.8%). On FrontierCode 2.0-AA, the closer proxy for real software work, it slips to 27.2% against Haiku's 34.9%.</p>
-        <p>Pricing is $0.10 per million input tokens and $0.50 per million output, with cached input at $0.004; above 200,000 input tokens the rates rise to $0.30 and $1.50. The model ships as muse-ember-1.0 in the Meta Model API and the Muse Code coding agent, and is also available on Google Cloud and Oracle Cloud. Box ran it over 13 documents in a $12.6m private-fund capital call and reported finding a $2.48m misallocation and a missing $250,000 credit.</p>
-        <p class="why"><b>Why it matters</b>The $0.14 against $0.41 is cost per task, not price per token, so it already folds in reasoning effort and token burn, which makes it a better guide to agent economics than a price list. The real gap is FrontierCode at 27.2%: code needs long-horizon consistency, and a cheap model still needs rework, which is not in the $0.14. Before switching, look at your own distribution of task lengths, then at multi-application flows like AutomationBench, where Meta's own run shows the widest lead and AA's independent run puts it level with the flagship — the place where "repeated small tasks" is actually defined.</p>
+        <h3>Google releases Gemini 4 Carbon: top on three agent benchmarks, under half the cost per task</h3>
+        <p>Google DeepMind made Gemini 4 Carbon available on November 10 to developers, enterprises, scientists and consumers. It is pitched as the company's strongest model for cybersecurity work and long-horizon agentic workflows, while Gemini 4 Argon remains the default for most software engineering and knowledge work; Carbon is for tasks that need exhaustive exploration, deeper reasoning and extended verification loops, and it spends more tokens to get there. It was opened two weeks earlier to a set of cyber defenders through the Fairwind program. Pricing is the same as Argon: $2 per million input tokens and $10 per million output tokens, across the Gemini API, Gemini for business and AI Ultra subscriptions (Antigravity, the Gemini app, AI Mode in Search).</p>
+        <p>On benchmarks, Carbon ranks first on CursorBench 4.0, Perplexity's WANDR and Zapier's AutomationBench, at less than half the cost per task of the next best external model by Google's count. On the new Multimodal Knowledge Agent benchmark built with Artificial Analysis it ranks second at more than 6x lower average cost per task. In finance it matches the best model on Hebbia's E2E Financial Agentic evaluation and ranks first among 23 frontier configurations on Balyasny's General Financial Intelligence benchmark. The engineering story is /swarm in Antigravity: one prompt becomes a tracked team of agents, with Carbon assigned architecture, coordination and auditing while lighter models work in parallel isolated workspaces. Google's demo: seven city-planning PDFs with 206 engineering drawing views, rebuilt into a 906K-triangle Three.js scene over 10 overnight loops.</p>
+        <p>Cybersecurity is the headline. Carbon leads on SEC-bench Pro, ExploitGym and CWE-bench v1; on Google's internal Project Fortify benchmark it hit 100% scanning recall and 95% triage precision, and on open-source repositories it improved recall by more than 25% relative to Argon. Wiz's Scan for Good used it on two major SaaS providers and found zero-days in under two hours. On safety, Carbon blocked 99% of attack trajectories from an adaptive red team in simulated cyberspace, cutting the per-attempt breach rate to 0.8% from Argon's 3.1%; in Gray Swan's testing the automated attack success rate fell to 2.17% from 9.86%; on Gray Swan's indirect prompt-injection benchmark it scored a 0% attack success rate, the first model to do so; and it passed 92% of a 375-task agentic honesty benchmark versus 70% for Argon.</p>
+        <p class="why"><b>Why it matters</b>The price did not move; the number of tokens needed to get an answer right did. Google says Carbon spends more tokens than Argon, so "half the cost per task" depends on one-shot correctness rather than fewer rounds of rework — good news for agent pipelines, a cost re-model for products billed per conversation. All three first-place benchmarks are defined with the vendors whose workflows they test (Cursor, Perplexity, Zapier), and MKA was created for this launch; state the source of each number. The 0% prompt-injection figure comes from a single benchmark, and the same blog admits sophisticated attacks in some distributions still get through.<br><b>Another angle</b>Same price, more capability moves competition from the per-token price to token efficiency: if customers pay per task, margin comes from fewer rounds; if they pay per token, Carbon's longer traces raise the bill. The two sets of customers will read this launch very differently.</p>
       </article>
 
     </div>
@@ -377,13 +349,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/09 16:15</span>
-          <a class="src" href="https://www.ithome.com/1/024/350.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+          <span class="d">11/11 01:30</span>
+          <a class="src" href="https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now" target="_blank" rel="noopener noreferrer">The Verge ↗</a>
         </div>
-        <h3>Qwen Office 2.0 puts a digital employee inside the group chat, editing alongside people</h3>
-        <p>Announced by DingTalk on November 9, Qwen Office 2.0 moves the product from a personal assistant to a Team Agent for groups. Its first feature, called Collaboration, lets a user set up a shared space where a digital employee works alongside the team. The agent can pull in multiple DingTalk group chats, documents, AI spreadsheets and AI meeting notes at once, run several sessions in parallel, and manage and assign tasks. Members hand out work inside the space; the agent reads the space's context to summarise progress, capture what was agreed, and create and follow up on to-dos.</p>
-        <p>Four other pieces ship with it. Automated Tasks turns the agent from reactive to triggered: users subscribe to events and set rules, and the agent starts when a condition is met, initially for messages from a named person, messages that @ the user in a group, and approval tasks. Co-creation connects chat, preview and editing, so a user can select paragraphs, cells, slides or app regions, mark several comments and submit them in one go for the AI to apply in the original file; documents, AI spreadsheets and Yida apps also accept several people and several agents editing at once. A materials space collects generated and uploaded images, documents, spreadsheets, decks, web pages, apps and local files, and the release adds three-device sync. All features are live in the client.</p>
-        <p class="why"><b>Why it matters</b>The hard part of several agents editing one document is not generation but concurrency: whose edit lands first, how conflicts merge, and whether undo works at paragraph or submission granularity. The announcement gives no conflict policy and no audit log, and those two decide whether it survives a real project. The more reusable layer is event subscriptions plus rules, which moves the trigger from a person speaking to system state changing. That also moves the cost model from conversation turns to event counts, and per-event and per-seat are two different businesses.</p>
+        <h3>Anthropic launches an office suite: meetings, sheets and whiteboards inside Claude</h3>
+        <p>At an event in San Francisco on November 10, Anthropic unveiled tools for non-technical workers: Claude Meetings joins calls and takes notes, Claude Sheets edits spreadsheets alongside employees, and Claude Whiteboards lays out ideas on a shared canvas. All three are in beta — Whiteboards and Sheets for every paid plan, Meetings for Teams and Enterprise. Claude Data (formerly Dashboards) is now generally available, and the new Artifacts turn output into an interactive interface that can, among other things, convert a deck into a one-minute explainer video; Claude Docs, Slides, Design and Motion remain.</p>
+        <p>The more consequential piece is connectors: apps from partners such as HubSpot, Adobe and Atlassian can be opened inside Claude rather than in another tab. Anthropic launched its Model Context Protocol about two years ago, and its plugin marketplace now lists more than 9,000 options. Product lead Nicholas Lin told The Verge that Claude Code changed how engineers work a year ago, and that the gap now is friction for non-developers adopting AI.</p>
+        <p class="why"><b>Why it matters</b>The hard engineering is not generation but keeping three views of one object in sync in real time: the meeting note, the whiteboard and the sheet are the same artifact, and Anthropic has not described conflict merging or undo granularity. The reusable pattern is "embed, don't switch tabs": once third-party apps sit inside the model's context, the permission model has to be record-level, or one over-share loses the customer. Shipping before the IPO roadshow also signals a revenue mix that has to move beyond the API toward seats.</p>
       </article>
 
     </div>
@@ -400,14 +372,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/10 09:25</span>
-          <a class="src" href="https://interestingengineering.com/ai-robotics/openai-control-room-35-second-model-shutdown" target="_blank" rel="noopener noreferrer">Interesting Engineering ↗</a>
+          <span class="d">11/11 04:52</span>
+          <a class="src" href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
         </div>
-        <h3>OpenAI's Control Room cuts model output within 35 seconds of a stop decision</h3>
-        <p>OpenAI has deployed a central system called Control Room across its research infrastructure to track workloads and stop them from producing more model output. It links three things: the research workload, such as a reinforcement-learning run, an evaluation or a high-volume data-processing job; the inference engine; and the central Control Room service. Every workload that performs agentic inference must be tied to an approved safety case.</p>
-        <p>The mechanism is a job ID. Research code asks Control Room for a unique identifier at launch, and that identifier rides on every request sent to the inference engines. Once the central service decides to intervene, the workload cannot obtain new model outputs within 35 seconds. The design is fail-closed: if the central service is unavailable, inference requests are refused rather than allowed through. Automated monitoring can also trigger an intervention when it detects behaviour that looks misaligned.</p>
-        <p>In scope, Control Room covers OpenAI's own research infrastructure. Its external model serving is more centralised and already has operational ways to take deployments down, so it sits outside this system. Control Room runs alongside the existing monitoring for misaligned behaviour; the difference is that it blocks rather than flags.</p>
-        <p class="why"><b>Why it matters</b>Thirty-five seconds is an engineering number, not a policy one. It turns "can we stop it" into a dependency with an SLA, at the cost of one more central authorisation hop on every inference call. Fail-closed makes Control Room itself a single point of availability, a bill every agent platform will eventually pay, because the safety switch and training throughput end up on the same critical path. What is worth copying is the granularity of the safety case: it binds to a workload, not a model or a user, so a rollback does not require guessing which experiment went wrong.</p>
+        <h3>New York's RAISE Act opens registration: frontier AI firms above $500m in revenue must sign up by January 1</h3>
+        <p>New York opened a registration portal on November 10 for frontier AI developers. Under the RAISE Act, large frontier developers — firms with more than $500 million in annual revenue, such as OpenAI and Anthropic — must register by January 1, 2027. The law takes effect at the start of the year and requires companies to publish safety frameworks on their websites, report critical safety incidents within 72 hours, and issue public model transparency reports. A new Office of Digital Innovation, Governance, Integrity, and Trust (DIGIT) will implement and oversee it.</p>
+        <p>The penalties are explicit: up to $1 million for a single violation and up to $3 million for subsequent ones, and the state can bring enforcement actions against firms that fail to register, though a spokesperson declined to detail how. Governor Kathy Hochul also launched the New York Center for AI Responsibility and Research at Binghamton University, which will independently evaluate advanced AI systems and review companies' safety frameworks with DIGIT; it was first announced in January with $55 million in donations and capital. New York already enforces a rule that AI companions must tell users they are bots and make reasonable efforts to detect suicidal ideation, and a separate chatbot safety law for minors takes effect June 1, 2027.</p>
+        <p class="why"><b>Why it matters</b>A 72-hour incident report is an operations requirement, not a slogan: it forces incident grading, log retention and disclosure workflows to exist before the first accident, or one event triggers both a fine and a trust loss. The $500 million revenue threshold shields most startups, but state-by-state fragmentation means designing for the strictest state is cheaper than designing for the one you register in. Watch how DIGIT reviews safety frameworks: if it wants verifiable evaluations, vendor self-reports will not be enough.</p>
       </article>
 
     </div>
@@ -424,25 +395,26 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/10 10:46</span>
-          <a class="src" href="https://m.ithome.com/html/1024701.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+          <span class="d">11/10</span>
+          <a class="src" href="https://the-decoder.com/nvidias-model-gr00t-2-watches-humans-on-video-then-imagines-itself-as-the-robot" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>Ant Lingbo open-sources LingBot-Touch, a tactile model that lifts 26 real-robot tasks by 14 to 26 points</h3>
-        <p>Ant Lingbo Technology open-sourced LingBot-Touch on November 10, a tactile foundation model pretrained on nearly 5,000 hours of real touch data. It covers three sensing principles, magnetic, vision-based and piezoresistive, and converts their different raw signals into one tactile representation meant to carry across sensors, dexterous hands, action models and tasks.</p>
-        <p>The team ran 26 real-robot tests on two hands, Sharpa Wave and XHand, covering tasks such as turning a page, unscrewing a bottle cap and identifying mahjong tiles. With the representation attached, the average success rate of four action models, LingBot-VLA, π0.5, Diffusion Policy and T-Rex, rose by roughly 14 to 26 percentage points over the no-touch baseline. On the bottle cap with T-Rex driving Sharpa Wave: 56.25% without touch, 62.5% when raw sensor signals were fed in directly, and 90% with the LingBot-Touch representation.</p>
-        <p>Architecturally, each sensing principle gets its own encoder input, different contact layouts are mapped into a shared fingertip coordinate space, and a shared model learns contact position, force and how both change over time, emitting a tactile token. Data from tactile gloves and teleoperated hands can be trained together. XHand's magnetic sensors were absent from pretraining, so the team froze LingBot-Touch and trained only the action model on XHand demonstrations, which is the cross-hardware result. All 26 tests used the roughly 5.3m-parameter Tiny version, adding only about 0.13% to 0.16% to LingBot-VLA, π0.5 and T-Rex; the larger Small version was still gaining from data as pretraining approached 5,000 hours.</p>
-        <p class="why"><b>Why it matters</b>The value is not the 90% but the ability to freeze the tactile encoder and train only the action head when the hand changes, which turns touch from calibration work for one device into a transferable pretrained artefact. Three questions remain: all 26 tasks involve short contact, so long insertion sequences and drift on soft objects are untested; whether the sensor mix in 5,000 hours overlaps the target hardware; and what the 0.13% parameter bump costs in on-device latency. For a robot builder, first check that your sensor's raw signal can enter these encoders at all.</p>
+        <h3>NVIDIA's GR00T 2 learns from human video: 10–80% success, and three demos lift 40% to 95%</h3>
+        <p>NVIDIA's research report introduces GR00T 2, which is no longer a vision-language-action model but what the company calls a world-action model: it predicts the next movement and a short video of the immediate future at the same time, so a robot arm's view of picking up an object becomes a training signal. That video prediction is meant to let motion sequences transfer across robot form factors. Training ran on a cluster of more than 1,000 GB300 chips on roughly 400,000 hours of first-person human video from head-mounted cameras.</p>
+        <p>To teach a task, a person demonstrates it with data gloves, grippers or a finger exoskeleton; combined with the target robot's general motion data, the model generates the robot arm instead of the human arm in its video prediction and derives control commands. In the lab, a five-fingered robot learned to light a match, slice a banana and toss packages onto a conveyor belt without teleoperation for those tasks, with success rates between 10% and 80% depending on the task. On 50 tasks the model already handled after a few examples, under three minutes of conventional training lifted success from 40% to 95%.</p>
+        <p>Longer assembly tasks pair GR00T 2 with a high-level language model such as GPT-6 Astra: the language model splits the job into steps, color-codes grip points and launches recovery routines when a part drops. With loose toy parts on a table, the combined system assembled them in at least 97% of trials; without the corrective model and extra fine-tuning, 23 out of 100. A slimmed-down GR00T 2 Turbo runs on the Jetson Thor onboard computer and can scoop popcorn, clear tables and wipe liquids with a towel under its foot — the last succeeding just under half the time. The team lists real limits: no direct touch-sensor input, missed half-turned screws, and an average wait of more than seven seconds for the planner, leaving the robot idle about a third of the time during trash sorting.</p>
+        <p class="why"><b>Why it matters</b>The shift is from teleoperation to human video, which cuts data cost by an order of magnitude and widens the variance: 10% means it is not production-ready, 80% means some tasks already are. Judge a task by contact complexity, not by the average. For data teams, first-person video and glove capture with consistent annotation will be the moat; for control teams, the video-prediction head costs compute that has to fit an onboard budget, which is exactly what Turbo trims.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/10 10:32</span>
-          <a class="src" href="https://m.ithome.com/html/1024697.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+          <span class="d">11/10</span>
+          <a class="src" href="https://the-decoder.com/google-deepminds-gemini-robotics-2-5-scores-96-percent-sorting-metal-parts-in-a-mercedes-benz-assembly-pilot" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>Boston Dynamics puts scooter wheels on Atlas: lateral sprints and a spinning jump</h3>
-        <p>Boston Dynamics published a video on November 9 showing Atlas with wheels bolted to its ankle actuators. The change is deliberately small: custom adapters mount standard electric-scooter wheels on the ankle actuators, with no major hardware redesign and no rewrite of the software stack, just swapping feet for wheels in simulation.</p>
-        <p>In the video the wheeled Atlas sprints sideways and jumps while spinning a full turn. It no longer drags its feet to move laterally, instead steering the wheels and rolling across the floor; the spin comes from a trajectory-tracking controller following recorded human motion data, and it worked on the first attempt. Engineers also picked foot-sliding segments from motion capture to see whether wheels could reproduce them. Every acceleration, turn and stop keeps loading the actuators. Boston Dynamics is explicit that this is a research platform, not a product.</p>
-        <p class="why"><b>Why it matters</b>Swapping feet for wheels touched only the simulated end effector, with no change to the controller or the motion data, which suggests Atlas' stack already separates how to move from what to move on; changing the end effector is close to changing a set of parameters. For legged-robot teams that is more useful than any demo: run one policy on wheels and on feet, and you learn which behaviours come from the policy and which from the body. Watch for the new limits: wheels change the lateral acceleration envelope, and slipping under hard braking becomes a new failure mode.</p>
+        <h3>Gemini Robotics 2.5 in a Mercedes-Benz pilot: 96% on metal-part kitting, safer around people</h3>
+        <p>Google DeepMind released Gemini Robotics 2.5, a vision-language-action model that reads images, understands instructions and turns them into robot motion. The company says it beats its own previous baselines by 30% to 100% across more than 200 tasks, including serving food with tongs and pipetting liquids, and finishes tasks 20% to 30% faster. It works with Apptronik's Apollo 2, whose five-fingered hand has 22 degrees of freedom, and with the Franka Duo dual-arm platform's two-finger grippers.</p>
+        <p>The harder result is on active production lines in Kecskemét, Hungary, and Sindelfingen, Germany, where Apollo 2 handled kitting: sorting metal parts from bulk bins into trays in the order each vehicle needs. Two models worked in tandem — Gemini Robotics ER monitored the workflow while Gemini Robotics 2.5 controlled hands and arms. Google reports a 96% success rate for the pilot; Apptronik CEO Jeff Cardenas said the models improved significantly within a few weeks of post-training and moved to Mercedes production with minimal performance loss.</p>
+        <p>On safety, the model uses real-time control to avoid physical hazards, improving safe task completion by 33% near obstacles and 43% near people in Google's own evaluations. DeepMind also open-sourced the ASIMOV-Jailbreak benchmark on Hugging Face: hundreds of prompts that disguise unsafe requests in dozens of scenes. By Google's numbers, Gemini 4 Argon resists 99.5% of them, versus 82% for the previous Gemini Robotics ER 2. On the training side, Argon acts as a simulation engine, generating thousands of simulated runs and a digital twin from one real camera scene, and testing hypotheses about errors found in video.</p>
+        <p class="why"><b>Why it matters</b>96% is for structured kitting from bulk bins, not for final assembly; the real claim is that a monitor-model plus control-model split can run on a live line. The reusable trick is using a language model to generate simulation data, which addresses the long tail that cannot be captured physically. ASIMOV-Jailbreak finally gives robot safety a public test set, but 99.5% is vendor-tested and measures refusal of dangerous instructions, not physical harm avoidance.</p>
       </article>
 
     </div>
@@ -459,26 +431,24 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/09 19:22</span>
-          <a class="src" href="https://finance.eastmoney.com/a/202611093926414670.html" target="_blank" rel="noopener noreferrer">Shenzhen Economic Daily ↗</a>
+          <span class="d">11/11 05:19</span>
+          <a class="src" href="https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
         </div>
-        <h3>Anthropic's amended S-1: $16.96bn in Q3 revenue, with compute at 58% of it</h3>
-        <p>Anthropic could start its formal IPO roadshow this week, according to Shenzhen Economic Daily, listing on Nasdaq Global Select under the ticker ANT with Goldman Sachs and Morgan Stanley leading. No price range or share count has been published. The amended S-1 filed on November 2 shows third-quarter revenue of $16.96bn, up 1,127% year on year and about 47% quarter on quarter, while GAAP operating income swung from a $974m profit in the second quarter to a $567m loss.</p>
-        <p>On the cost side, compute and infrastructure spending rose to $9.86bn, up about 77% quarter on quarter and equal to 58% of revenue. Demand outran forecasts, so the company bought about $5bn of short-term capacity at prices above its long-term contracts, while new model price cuts and contract discounts took roughly $600m off revenue. Stripping out stock compensation and non-cash charitable donations, adjusted operating income was $2.463bn, with the margin falling from 19% to 15%.</p>
-        <p>The commitments drew more attention than the quarter. Including agreements signed after September 30, purchase and lease obligations total about $895.4bn, almost all of it compute and infrastructure, with payments running to 2045. About $69.8bn falls due within 12 months of September 30; for scale, four quarters of the latest revenue annualises to roughly $67.8bn. Reports had once put the raise as high as $100bn, while potential investors are now discussing a valuation of $1.2tn to $1.3tn, down from $1.4tn to $1.5tn.</p>
-        <p class="why"><b>Why it matters</b>Put three numbers on one sheet: $16.96bn of quarterly revenue, $9.86bn of quarterly compute, and $69.8bn due within a year. The first says demand is real, the second says compute eats the margin, and the third says repayment and revenue are on different clocks, since $69.8bn is about four quarters of everything the company bills. For engineers it explains the price cut shipped the same day: lower prices buy share, share buys long contracts, long contracts buy cheaper compute. Break any link and you are back buying expensive short-term capacity, as happened once already this quarter.</p>
+        <h3>CoreWeave posts $3.66bn in Q3 revenue, up 168%, as net loss widens to $709m</h3>
+        <p>CoreWeave reported third-quarter results after the close on November 10: revenue of $3.66 billion against expectations of $3.55 billion, up 168% from $1.36 billion a year earlier. Net loss widened to $709 million, or $1.27 a share, from $110 million a year earlier, while the adjusted loss of 95 cents a share beat the expected $1.16. The company raised its 2026 guidance to $1.275–1.375 billion in adjusted operating income on $13.0–13.3 billion of revenue, up from August's $960 million–$1.15 billion and $12.4–13.2 billion.</p>
+        <p>The question for investors is not growth but funding. CoreWeave shares have lost more than 40% in a month and some of its bonds have yielded above 16%. CEO Mike Intrator told analysts that most of the capital for 2027 will come from customer prepayments and hardware-partner financing, with only "a limited amount" raised by the company; CFO Nitin Agrawal said that at current yields it does not intend to issue more parent-level unsecured debt through 2027, that the asset-level secured debt market remains stable with loans trading near par, and that parent-level debt financing should stay under $5 billion through 2027. The stock rose as much as 11% after the release and turned 4% lower during the call.</p>
+        <p class="why"><b>Why it matters</b>Revenue doubling while losses widen says depreciation and interest are eating margin: the constraint for this class of company is the cost of capital, not demand. Replacing unsecured debt with customer prepayments shifts financing risk downstream and locks customers into long contracts; a 16% bond yield is a harder statement about its cost of money than any guidance. For teams buying compute, it means supply through 2028 is already contracted, and spot-price leverage is shrinking.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/09 21:00</span>
-          <a class="src" href="https://www.yna.co.kr/view/AKR20261109122200017" target="_blank" rel="noopener noreferrer">Yonhap ↗</a>
+          <span class="d">11/10 19:40</span>
+          <a class="src" href="https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
         </div>
-        <h3>Google adds TPU 8i Max and 8tx: double the compute, SRAM and HBM bandwidth</h3>
-        <p>Google announced on November 9 local time that it is adding two systems to its eighth-generation TPU line, TPU 8i Max and TPU 8tx. It had already launched the TPU 8t for large-scale training and the TPU 8i for real-time inference in April; the new parts are purpose-built systems around existing silicon.</p>
-        <p>TPU 8i Max combines two TPU 8i chips in a single package, doubling compute, on-chip SRAM capacity and HBM bandwidth, so more compute fits in the same server-rack footprint. Google frames it around agents analysing an entire source tree or hours of video at once, work where the speed of reading from memory sets the ceiling and where the part is designed to move large amounts of data in one go.</p>
-        <p>TPU 8tx pairs the same chip as the 8t with a custom AMD CPU and isolates sensitive data and model weights at the hardware level, keeping them protected while being processed; with a low-latency network, latency falls by up to half compared with the 8t. Banks and government agencies can fine-tune and run inference without moving sensitive data to a separate server. Google also noted that TorchTPU, open-sourced last month, lets developers run PyTorch code on TPUs without changes, and that close to 100 outside customers now use its TPUs, among them AI research groups, financial firms, retailers and universities.</p>
-        <p class="why"><b>Why it matters</b>The 8i Max idea is to sell two dies in one package as a product instead of waiting for the next chip, and that hits inference cost more directly than any score: at the same rack power and space, doubling HBM bandwidth means prefill for long contexts and video stops being pinned to memory bandwidth. What needs proof is thermals and yield after packaging, and where exactly 8tx draws the isolation boundary, whether memory encryption or separate address spaces. For teams doing private deployments, 8tx matters more than 8i Max: regulated buyers finally have an option to fine-tune without shipping the data out.</p>
+        <h3>Anthropic sets IPO range at $70–78 a share: 825 million shares, up to $64.35bn raised</h3>
+        <p>Anthropic's updated filing on November 10 set an IPO price range of $70 to $78 a share for 825 million shares. At the top of the range the company would raise up to $64.35 billion and be worth up to $1.405 trillion on a fully diluted basis, up from the $965 billion valuation announced with its May funding round. It plans to trade on Nasdaq under the ticker "ANT", pricing on November 18 and starting trading on November 19, according to people familiar with the plans; retail investors would get about 20% of the offering, far above the usual 5% to 10%.</p>
+        <p>The same filing discloses a private placement: AMD, Broadcom, Google, Micron, Microsoft, NVIDIA and TSMC agreed to buy $26 billion of Class N common stock at the IPO price, unregistered and not subject to underwriter lock-ups. TechCrunch reported separately that each of the seven co-founders will sell 3,378,378 shares — nearly $250 million each at the $74 midpoint. The roadshow starts against a rough backdrop: political uncertainty after the midterms and a public market increasingly skeptical of the AI trade, with one investor telling CNBC that even a $1.5 trillion valuation now looks like "a stretch".</p>
+        <p class="why"><b>Why it matters</b>The 20% retail allocation is the odd number here: it buys first-day liquidity and attention at the cost of a more dispersed shareholder base. Seven chip and cloud vendors buying $26 billion at the IPO price with no lock-up mixes strategic investment with stock that can be sold at any time — how that block is handled after listing will set the price. For public-market investors, the compute commitments and revenue-recognition language in the S-1 matter more than the $1.4 trillion headline.</p>
       </article>
 
     </div>
@@ -487,9 +457,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between Nov 9, 09:31 and Nov 10, 11:15 (Beijing time), 8 stories. Searched Nov 10, 11:15.</p>
+        <p>This issue covers reports published between November 10, 11:15 and November 11, 09:12 (Beijing time): 7 stories. Compiled at 11/11 09:12.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 016 · 24h window · Generated 2026-11-10 11:15</p>
+    <p class="sig">AI Daily · Issue 017 · 24h window · Generated 2026-11-11 09:12</p>
       </div>
     </footer>
       </div>
@@ -514,8 +484,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">10</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-10.html" title="Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%">
+        <summary><span>2026 年 11 月</span><span class="am-count">11</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-11.html" title="Google 发布 Gemini 4 Carbon：三项 agent 基准登顶，每任务成本不到对手一半">
+          <span class="a-date">2026.11.11 <em>WED</em></span>
+          <span class="a-head">Google 发布 Gemini 4 Carbon：三项 agent 基准登顶，每任务成本不到对手一半</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-10.html" title="Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%">
           <span class="a-date">2026.11.10 <em>TUE</em></span>
           <span class="a-head">Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%</span>
         </a>
@@ -588,8 +562,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">10</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-10-en.html" title="Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0">
+        <summary><span>November 2026</span><span class="am-count">11</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-11-en.html" title="Google releases Gemini 4 Carbon: top on three agent benchmarks, under half the cost per task">
+          <span class="a-date">2026.11.11 <em>WED</em></span>
+          <span class="a-head">Google releases Gemini 4 Carbon: top on three agent benchmarks, under half the cost per task</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-10-en.html" title="Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0">
           <span class="a-date">2026.11.10 <em>TUE</em></span>
           <span class="a-head">Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0</span>
         </a>

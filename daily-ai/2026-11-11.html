@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 11 日</title>
+<meta name="description" content="2026-11-11 AI 日报第 017 期：Google 上线 Gemini 4 Carbon，CursorBench 4.0 等三项 agent 基准第一、每任务成本不到最强外部模型一半；Anthropic 推出会议、表格、白板办公套件；纽约 RAISE Act 开放注册，年营收超 5 亿美元须登记、72 小时内报告安全事件；NVIDIA GR00T 2 用人类视频学动作；Gemini Robotics 2.5 在奔驰产线分拣金属件成功率 96%；CoreWeave 三季度营收 36.6 亿美元、同比增 168%；Anthropic IPO 定价区间 70–78 美元。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 11 日">
+<meta property="og:description" content="2026-11-11 AI 日报第 017 期：Google 上线 Gemini 4 Carbon，CursorBench 4.0 等三项 agent 基准第一、每任务成本不到最强外部模型一半；Anthropic 推出会议、表格、白板办公套件；纽约 RAISE Act 开放注册，年营收超 5 亿美元须登记、72 小时内报告安全事件；NVIDIA GR00T 2 用人类视频学动作；Gemini Robotics 2.5 在奔驰产线分拣金属件成功率 96%；CoreWeave 三季度营收 36.6 亿美元、同比增 168%；Anthropic IPO 定价区间 70–78 美元。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-11.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-10T11:15:00+08:00/2026-11-11T09:12:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-11.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-11.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-11-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../psychology.html">心理学日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-11-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 017 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 11 日<span class="weekday">WED</span></h1>
+    <p class="deck">今天的主线是「更强的能力，更便宜的单价」。Google 把最强模型按 Argon 的价格放出来，靠的是少返工而不是降 token 单价；CoreWeave 用客户预付款替掉无担保债，把融资风险推给下游；Anthropic 把上市区间压在 70 到 78 美元，最高估值 1.4 万亿美元，只比 5 月那轮高出四成多。<em>能力在涨价，钱在变贵，中间那层差价要有人付。</em></p>
+    <div class="metabar"><span class="pill">第 017 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/10 11:15 – 11/11 09:12</span>
+      <span class="dot"></span>
+      <span>7 条</span>
+      <span class="dot"></span>
+      <span>阅读约 8 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Google 上线 Gemini 4 Carbon：CursorBench 4.0、Perplexity WANDR、Zapier AutomationBench 三项第一，每任务成本不到最强外部模型的一半。</b>定价与 Argon 相同（输入 2 美元、输出 10 美元 / 百万 token），另在 Antigravity 预览 /swarm 多智能体协作；网络安全基准上一并领先。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>CoreWeave 三季度营收 36.6 亿美元、同比增 168%，净亏损扩大到 7.09 亿美元。</b>2026 年营收指引上调到 130–133 亿美元；CFO 称 2027 年前不再发母公司级无担保债，部分存量债券收益率已超 16%。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>纽约州 RAISE Act 开放注册：年营收超 5 亿美元的前沿 AI 公司须在 2027 年 1 月 1 日前登记。</b>要公开安全框架、72 小时内报告重大安全事件、发布模型透明度报告；单次违规罚款最高 100 万美元。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10</span>
+          <a class="src" href="https://deepmind.google/blog/gemini-4-carbon-is-now-available" target="_blank" rel="noopener noreferrer">Google DeepMind ↗</a>
+        </div>
+        <h3>Google 发布 Gemini 4 Carbon：三项 agent 基准登顶，每任务成本不到对手一半</h3>
+        <p>Google DeepMind 11 月 10 日上线 Gemini 4 Carbon，向开发者、企业、科研人员和消费者开放。官方给它的定位是「网络安全能力与长周期 agent 工作流最强的一代」，并明确 Gemini 4 Argon 仍是多数软件工程与知识工作的默认选择：Carbon 面向「需要彻底探索、深度推理、反复验证」的任务，代价是比 Argon 消耗更多 token。两周前它先通过 Fairwind 计划开放给一批网络安全防守方。价格与 Argon 相同：每百万 token 输入 2 美元、输出 10 美元，Gemini API、Gemini for business、AI Ultra 订阅（Antigravity、Gemini 应用、搜索 AI Mode）同步可用。</p>
+        <p>基准方面，Carbon 在 CursorBench 4.0、Perplexity 的 WANDR 和 Zapier 的 AutomationBench 上排第一，官方称每任务成本不到最强外部模型的一半。与 Artificial Analysis 合作新建的 Multimodal Knowledge Agent 基准上它排第二，平均每任务成本比第一名低 6 倍以上；金融场景里，它自称在 Hebbia 的 E2E Financial Agentic 评测上追平最强模型，在 Balyasny 的通用金融智能基准上于 23 个前沿配置中排第一。工程侧的新东西是 Antigravity 里的 /swarm：一条 prompt 展开成一支可实时跟踪的 agent 团队，开发者把架构设计、协调、审计这些最费推理的活交给 Carbon，把并行工作区交给更轻的模型。官方例子是 7 份市政规划 PDF（含 206 个工程图视图）在 10 个夜间循环里重建出 90.6 万三角形的 Three.js 场景。</p>
+        <p>网络安全是这一代的卖点。Carbon 在 SEC-bench Pro（找洞）、ExploitGym（利用）、CWE-bench v1（打补丁）上领先；Project Fortify 内部基准上扫描召回 100%、分诊精确率 95%，开源仓库测试里相对 Argon 召回提升逾 25%。Wiz 的 Scan for Good 用它扫两家主要 SaaS 供应商，两小时内挖出 0-day，把原本数周的漏洞研究压到一个下午。安全侧：ExploitBench 与 CyScenarioBench 的模拟攻击里，自适应红队 99% 的攻击轨迹被拦下，单次尝试突破率降到 0.8%（Argon 3.1%）；Gray Swan 测试中自动攻击查询成功率 2.17%（Argon 9.86%）；Gray Swan 的间接提示注入基准上攻击成功率 0%，是首个达到该数字的模型；375 项 agent 诚实性基准通过 92%（Argon 70%）。</p>
+        <p class="why"><b>看点</b>价格没降，降的是「做对一件事要花多少 token」。官方自己说 Carbon 比 Argon 用更多 token，所以「每任务成本减半」成立的前提是它一次做对、少返工——这条对 agent 流水线是利好，对按对话轮次计费的产品是成本重算。三个「第一」都出自厂商联合定义的基准（Cursor、Perplexity、Zapier 各测自家场景），MKA 更是这次新造的；引用时该写清是谁的榜。0% 提示注入攻击成功率来自单一基准，官方同一段也承认复杂分布下仍有提升空间，别把它读成「注入问题已解决」。<br><b>另一个视角</b>同价换更强，等于把竞争从单价转到 token 效率：若下游按任务付费，毛利来自「更少轮次」；若按 token 付费，Carbon 更长的轨迹反而抬高账单——两类客户对这次发布的感受会完全相反。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 01:30</span>
+          <a class="src" href="https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now" target="_blank" rel="noopener noreferrer">The Verge ↗</a>
+        </div>
+        <h3>Anthropic 推出办公套件：会议、表格、白板都进 Claude，瞄准非技术知识工作者</h3>
+        <p>Anthropic 11 月 10 日在旧金山发布面向非技术岗位的办公工具：Claude Meetings 进会议、记笔记、整理待办；Claude Sheets 和员工并排改表格；Claude Whiteboards 在共享白板上铺想法。三件套都进入 beta：Whiteboards 与 Sheets 对所有付费计划开放，Meetings 只给 Teams 与 Enterprise。同时，此前的 Claude Data（beta 时叫 Dashboards）转为正式可用，Claude 的 Artifacts 也升级成可交互的图形界面，能把一份演示文稿转成一分钟讲解视频；Claude Docs、Slides、Design、Motion 继续保留。</p>
+        <p>更值得注意的是连接器：HubSpot、Adobe、Atlassian 等合作方的应用可以直接嵌进 Claude 里打开，用户不必再切标签页。Anthropic 两年前发布的 MCP 协议，如今插件市场已有 9000 多个条目。产品负责人 Nicholas Lin 对 The Verge 说，Claude Code 一年前改变了工程师的工作方式，现在要补的是「非开发者用 AI 仍有很大摩擦」这个缺口。</p>
+        <p class="why"><b>看点</b>三件套真正的工程难点不在生成，而在同一份内容的三种视图要实时同步：会议记录、白板、表格改的是同一个对象，冲突合并与撤销粒度都没公开。对做 agent 产品的团队，可抄的是「嵌入而非跳转」：把第三方应用放进模型上下文，权限模型必须细到记录级，否则一次越权就丢客户。发布时间选在 IPO 路演前，也在说明收入结构要从 API 往席位走。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 04:52</span>
+          <a class="src" href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
+        </div>
+        <h3>纽约州 RAISE Act 开放注册：年营收超 5 亿美元的前沿 AI 公司，明年 1 月 1 日前必须登记</h3>
+        <p>纽约州 11 月 10 日开放前沿 AI 开发者注册门户。按《RAISE Act》，年营收超过 5 亿美元的大型前沿开发商——OpenAI、Anthropic 这类公司——须在 2027 年 1 月 1 日前完成登记。法案从明年年初生效，要求企业：在官网公开安全框架，发生重大安全事件后 72 小时内报告，并发布公开的模型透明度报告。新成立的数字创新、治理、诚信与信任办公室（DIGIT）负责执行。</p>
+        <p>罚则写得很具体：单次违规最高 100 万美元，后续违规最高 300 万美元；不注册也可能被执法，但州政府发言人没有说明具体手段。州长 Hochul 同一天启动纽约 AI 责任与研究中心，设在纽约州立大学宾汉姆顿分校，独立评估先进 AI 系统的安全、安保与运行，并与 DIGIT 一起审阅企业的安全框架；该中心今年 1 月宣布时拿到 5500 万美元捐赠与资本。纽约此前还执行了 AI 伴侣须告知「你在和机器人说话」并检测自杀意念的法规，以及 2027 年 6 月 1 日生效的未成年人聊天机器人安全法，限制拟人化欺骗、谄媚式回应和鼓励自残等内容。</p>
+        <p class="why"><b>看点</b>72 小时报告是个运维指标，不是法律口号：它逼着公司把事件分级、日志留存、对外披露做成流水线，没有这些，一次事故就会同时触发罚款和信任损失。5 亿美元营收的门槛把大多数创业公司挡在外面，但州级立法正在碎片化，「按最严的州设计」比「按注册地设计」便宜。真正值得盯的是 DIGIT 如何审安全框架——如果它要求可验证的评测方法，厂商自测报告就不够用了。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10</span>
+          <a class="src" href="https://the-decoder.com/nvidias-model-gr00t-2-watches-humans-on-video-then-imagines-itself-as-the-robot" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>NVIDIA 的 GR00T 2 看人类视频学动作：成功率 10%–80%，三次演示能把 40% 提到 95%</h3>
+        <p>NVIDIA 在研究报告中介绍 GR00T 2。它不再是视觉-语言-动作（VLA）模型，而是公司所称的世界-动作模型（WAM）：同时计算下一个动作和一小段「未来视频」，预测机械臂抓起物体时画面该怎么变。这样做的好处是动作序列可以在不同机器人形态之间迁移。训练用了 1000 多块 GB300 组成的集群，数据约 40 万小时——人戴头戴相机做各种任务的第一视角视频。</p>
+        <p>教新任务时，人只要戴数据手套、专用夹爪或手指外骨骼演示一遍，训练时把这些记录和目标机器人的通用运动数据合在一起，模型就会在视频预测里把人的手「换成」机械臂，再反解出控制指令。实验室里，五指手的机器人用这种方式学会了点烟、切香蕉、把包裹抛上传送带，没为这些任务做过遥操作；成功率按任务在 10% 到 80% 之间。在 50 个「看几次就会」的任务上，不到 3 分钟的常规训练就把成功率从 40% 拉到 95%。</p>
+        <p>长程装配要配一个高层语言模型（论文里用 GPT-6 Astra）：GR00T 2 管抓取，语言模型把任务拆成步骤、在相机画面里给抓取点标色、零件掉了就启动补救程序。桌上散放零件时，这套组合在至少 97% 的试验里装好了玩具车；去掉语言模型纠错和额外微调，只有 23/100。面向双足机器人的精简版 GR00T 2 Turbo 直接跑在 Jetson Thor 上，能舀爆米花、收桌子、用脚上的毛巾擦液体（最后这项成功率不到一半）。团队自己列了短板：不处理触觉传感器数据，会漏掉半拧的螺丝；高层规划模型平均要等 7 秒以上，垃圾分拣时机器人有约三分之一时间在空转。</p>
+        <p class="why"><b>看点</b>这条的路线变化是「用人类视频替代遥操作」：数据成本降一个量级，换来的是成功率方差极大（10%–80%）。10% 意味着它还不能进产线，80% 说明部分任务已经可用——判断能不能用，要看目标任务的接触复杂度，而不是平均值。对做数据采集的团队，第一视角视频与手套数据的标注口径会是护城河；对做控制的团队，WAM 的视频预测头多花的算力要算进端侧预算，Turbo 版砍掉的正是这部分细节。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10</span>
+          <a class="src" href="https://the-decoder.com/google-deepminds-gemini-robotics-2-5-scores-96-percent-sorting-metal-parts-in-a-mercedes-benz-assembly-pilot" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Gemini Robotics 2.5 进奔驰产线试点：分拣金属件成功率 96%，安全完成率提升三到四成</h3>
+        <p>Google DeepMind 发布 Gemini Robotics 2.5，一个视觉-语言-动作模型：看懂画面、听懂指令、转成机器人动作。官方说它在 200 多个任务上（夹子分餐、移液等）比自家上一代基线成功率高 30% 到 100%，完成任务快 20% 到 30%；支持 Apptronik 的 Apollo 2（五指手、22 个自由度）和 Franka Duo 双臂平台（两指夹爪）。</p>
+        <p>更硬的结果在奔驰产线：匈牙利 Kecskemét 和德国 Sindelfingen 的现役装配线上，Apollo 2 做 kitting——从散料箱里分拣金属件，按每辆车的装配顺序放进托盘。两个模型分工：Gemini Robotics ER 盯流程，Gemini Robotics 2.5 控手和臂。官方给的试点成功率是 96%；Apptronik CEO Jeff Cardenas 说，后训练几周内模型提升明显，转到奔驰生产环境后性能损失很小。</p>
+        <p>安全方面，模型用实时控制做避障，官方评测里障碍物附近的安全完成率提升 33%、人员附近提升 43%。DeepMind 同时开源了 ASIMOV-Jailbreak 基准（放在 Hugging Face）：数百条把危险请求伪装进几十种场景的 prompt，用来测机器人模型会不会被诱导做危险动作。按官方数据，Gemini 4 Argon 的抗越狱率 99.5%，上一代 Gemini Robotics ER 2 是 82%。训练侧，Argon 被当作仿真引擎：从一张真实相机画面生成上千次仿真训练、建数字孪生，也能从录像里推断错误原因并在仿真与真机上验证改进。</p>
+        <p class="why"><b>看点</b>96% 是「从散料箱分拣金属件」这种结构化任务，别外推到总装；它的价值在于证明「监控模型 + 控制模型」的分工能在现役产线跑，而不是某个分数。可复用的是用语言模型做仿真数据生成——这解决的是长尾场景采不到数据的问题，比再训一个更大的 VLA 便宜。ASIMOV-Jailbreak 的意义是机器人安全终于有了公开测试集，但 99.5% 是厂商自测，且测的是「拒绝危险指令」，不是「物理上不伤人」。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 05:19</span>
+          <a class="src" href="https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
+        </div>
+        <h3>CoreWeave 三季度营收 36.6 亿美元、同比增 168%，净亏损扩大到 7.09 亿美元</h3>
+        <p>CoreWeave 11 月 10 日盘后公布三季度业绩：营收 36.6 亿美元，高于市场预期的 35.5 亿，比去年同期的 13.6 亿增长 168%；净亏损 7.09 亿美元（每股 1.27 美元），去年同期亏损 1.10 亿美元；调整后每股亏损 0.95 美元，好于预期的 1.16 美元。公司同时上调 2026 年指引：调整后运营利润 12.75 亿至 13.75 亿美元、营收 130 亿至 133 亿美元；8 月给的数字是 9.6 亿至 11.5 亿、124 亿至 132 亿。</p>
+        <p>市场关心的不是增速而是钱从哪来。CoreWeave 股价过去一个月跌掉四成以上，部分债券收益率一度超过 16%。CEO Mike Intrator 在电话会上说，2027 年所需资金主要来自客户预付款和硬件伙伴的融资，公司自己只再融「有限金额」；CFO Nitin Agrawal 说，按当前收益率，2027 年前不打算再发母公司级无担保债，而资产级担保债市场稳定，贷款仍在面值附近交易，母公司级债务融资总额预计低于 50 亿美元。财报发布后股价一度涨 11%，电话会期间转跌 4%。</p>
+        <p class="why"><b>看点</b>营收翻倍、亏损同时扩大，说明折旧和利息正在吃毛利——这类公司真正的瓶颈是资本成本，不是需求。用客户预付款替代无担保债，等于把融资风险转给下游，也把客户锁进长约；16% 的债券收益率就是市场给它的资金价格，比任何一份指引都硬。对采购算力的团队，这条意味着 2028 年前的供给已经被长约锁定，现货价格谈判空间在缩小。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/10 19:40</span>
+          <a class="src" href="https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a>
+        </div>
+        <h3>Anthropic 确定 IPO 定价区间 70–78 美元：发行 8.25 亿股，最高募资 643.5 亿美元</h3>
+        <p>Anthropic 在 11 月 10 日更新的招股书里给出 IPO 定价区间：每股 70 至 78 美元，发行 8.25 亿股。按上限计算，公司最多募资 643.5 亿美元；完全稀释估值最高约 1.405 万亿美元，而今年 5 月一轮融资时的估值是 9650 亿美元。公司计划在纳斯达克以代码「ANT」交易，11 月 18 日定价、11 月 19 日开始交易；据知情人士，面向散户的配售比例约 20%，远高于 IPO 常见的 5% 至 10%。</p>
+        <p>同一份文件还披露了一笔私募配售：AMD、博通、Google、Micron、微软、NVIDIA 和台积电七家公司同意按 IPO 发行价购买 260 亿美元 Class N 普通股，这部分股份不在发行中注册，也不受承销商锁定期约束。TechCrunch 另外报道，七位联合创始人每人将卖出 3,378,378 股，按区间中值 74 美元算，每人套现近 2.5 亿美元。路演启动的背景并不轻松：中期选举后政策不确定性上升，公开市场对 AI 交易的怀疑在加深，有投资者对 CNBC 表示，1.5 万亿美元估值都已算「勉强」。</p>
+        <p class="why"><b>看点</b>20% 的散户配售比例是这次最反常的数字：它换的是上市首日的流动性与关注度，代价是筹码结构更散、波动更大。七家芯片与云厂商按发行价认购 260 亿美元且不受锁定期约束，等于把「战略投资」和「可随时卖出的股票」放在一起——上市后这批股份的处置节奏会直接影响价格。对二级市场投资者，真正该看的是招股书里的算力承诺与收入确认口径，而不是 1.4 万亿这个数字。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 10 日 11:15 至 11 月 11 日 09:12（北京时间）之间发布的报道，共 7 条。检索时间 11/11 09:12。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 017 · 24h window · Generated 2026-11-11 09:12</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../psychology.html">心理学日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

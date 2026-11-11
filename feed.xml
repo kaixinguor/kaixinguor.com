@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 10 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 11 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-11.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-11.html</guid>
+      <pubDate>Wed, 11 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的主线是「更强的能力，更便宜的单价」。Google 把最强模型按 Argon 的价格放出来，靠的是少返工而不是降 token 单价；CoreWeave 用客户预付款替掉无担保债，把融资风险推给下游；Anthropic 把上市区间压在 70 到 78 美元，最高估值 1.4 万亿美元，只比 5 月那轮高出四成多。能力在涨价，钱在变贵，中间那层差价要有人付。 Google 发布 Gemini 4 Carbon：三项 agent 基准登顶，每任务成本不到对手一半</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 10 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-10.html</link>
