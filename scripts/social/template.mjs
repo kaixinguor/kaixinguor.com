@@ -47,41 +47,55 @@ export function protectCjk(text = "") {
   return String(text).replace(CJK_RE, (match) => Array.from(match).join("\u2060"));
 }
 
-/** 标题截断：不留半句和悬空标点，统一补省略号。 */
+/** 统一的截断省略号：中文用六点，避免“…”像句号又像没写完。 */
+const ELLIPSIS = "……";
+
+/** 标题截断：不留半句和悬空标点；英文单词不切两半，统一补“……”。 */
 export function clipTitle(text = "", max = 60) {
   const src = String(text).replace(/\s+/g, " ").trim();
   if (src.length <= max) return src;
-  return src.slice(0, max).replace(/[，。；：、,.;:\s]+$/, "") + "…";
+  let head = src.slice(0, max);
+  /* 切在英文/数字词中间时，退到上一个空格 */
+  if (/[A-Za-z0-9]$/.test(head) && /[A-Za-z0-9]/.test(src.charAt(max))) {
+    const space = head.lastIndexOf(" ");
+    if (space > max * 0.6) head = head.slice(0, space);
+  }
+  head = head.replace(/[，。；：、,.;:\s]+$/, "");
+  return head + ELLIPSIS;
 }
 
-/** 正文截断：优先在句号处收尾；做不到才补省略号，避免 "…认购，" 这种断法。 */
-export function clipProse(text = "", max = 160) {
+/** 正文截断：优先整句；退而求其次在分号、逗号处收尾，最后才补省略号。 */
+export function clipProse(text = "", max = 175) {
   const src = String(text).replace(/\s+/g, " ").trim();
   if (src.length <= max) return src;
   const head = src.slice(0, max);
-  const marks = ["。", "！", "？", "!", "?"];
+  const sentence = ["。", "！", "？", "!", "?"];
   let at = -1;
-  for (const mark of marks) at = Math.max(at, head.lastIndexOf(mark));
-  if (at > max * 0.55) return head.slice(0, at + 1);
-  return head.replace(/[，。；：、,.;:\s]+$/, "") + "…";
+  for (const mark of sentence) at = Math.max(at, head.lastIndexOf(mark));
+  if (at > max * 0.45) return head.slice(0, at + 1);
+  const soft = ["；", ";", "，", ","];
+  let softAt = -1;
+  for (const mark of soft) softAt = Math.max(softAt, head.lastIndexOf(mark));
+  if (softAt > max * 0.35) return head.slice(0, softAt).replace(/[，,；;\s]+$/, "") + ELLIPSIS;
+  const cut = head.lastIndexOf(" ");
+  return (cut > max * 0.6 ? head.slice(0, cut) : head).replace(/[，。；：、,.;:\s]+$/, "") + ELLIPSIS;
 }
 
-/** 看点截断：优先在句号处收尾，其次在分号/逗号处收尾，最后才补省略号。
-    上限按 4 行 × 约 29 字估算，保证排版不被 CSS 从句子中间切掉。 */
-export function clipWhy(text = "", max = 172) {
+/** 看点截断：优先整句，其次分号/逗号；上限按 8 行 × 约 28 字估算。 */
+export function clipWhy(text = "", max = 180) {
   const src = String(text).replace(/\s+/g, " ").trim();
   if (src.length <= max) return src;
   const head = src.slice(0, max);
   const stops = ["。", "！", "？", "!", "?"];
   let at = -1;
   for (const mark of stops) at = Math.max(at, head.lastIndexOf(mark));
-  if (at > max * 0.45) return head.slice(0, at + 1);
+  if (at > max * 0.4) return head.slice(0, at + 1);
   const soft = ["；", ";", "，", ","];
   let softAt = -1;
   for (const mark of soft) softAt = Math.max(softAt, head.lastIndexOf(mark));
-  if (softAt > max * 0.6) return head.slice(0, softAt).replace(/[，,；;\s]+$/, "") + "…";
+  if (softAt > max * 0.35) return head.slice(0, softAt).replace(/[，,；;\s]+$/, "") + ELLIPSIS;
   const cut = head.lastIndexOf(" ");
-  return (cut > max * 0.6 ? head.slice(0, cut) : head).replace(/[，。；：、,.;:\s]+$/, "") + "…";
+  return (cut > max * 0.6 ? head.slice(0, cut) : head).replace(/[，。；：、,.;:\s]+$/, "") + ELLIPSIS;
 }
 
 function dateParts(iso) {
@@ -186,8 +200,8 @@ body{
 .cover-index .ci-item{display:flex;align-items:baseline;gap:15px;padding:13px 0;border-bottom:1px solid var(--line-soft)}
 .cover-index .ci-n{font-family:var(--mono);font-size:15px;color:var(--accent);flex:none;width:26px;letter-spacing:.04em}
 .cover-index .ci-t{
-  font-family:var(--serif);font-size:31px;line-height:1.5;font-weight:700;color:var(--ink);
-  max-height:3em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  font-family:var(--serif);font-size:28px;line-height:1.48;font-weight:700;color:var(--ink);
+  max-height:2.96em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
   text-wrap:balance;
 }
 .watermark{
@@ -213,13 +227,13 @@ body{
 .cmeta .src{color:var(--ink-2)}
 .cmeta .dot{width:4px;height:4px;border-radius:50%;background:var(--accent)}
 .story-title{
-  font-family:var(--serif);font-weight:700;font-size:76px;line-height:1.21;margin-top:16px;
-  max-height:3.63em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+  font-family:var(--serif);font-weight:700;font-size:70px;line-height:1.22;margin-top:16px;
+  max-height:4.88em;overflow:hidden;
   text-wrap:balance;
 }
 .story-sum{
   font-size:33px;line-height:1.78;color:var(--ink-2);margin-top:26px;
-  overflow:hidden;display:-webkit-box;-webkit-line-clamp:6;
+  max-height:12.46em;overflow:hidden;
   text-wrap:pretty;
 }
 .why{
@@ -229,16 +243,8 @@ body{
 .why .lab{font-family:var(--mono);font-size:15px;letter-spacing:.2em;color:var(--c);font-weight:700;margin-bottom:10px}
 .why p{
   font-size:30px;line-height:1.74;color:var(--ink-2);
-  overflow:hidden;display:-webkit-box;-webkit-line-clamp:6;
+  max-height:13.92em;overflow:hidden;
   text-wrap:pretty;
-}
-.also{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
-.also-h{font-family:var(--mono);font-size:14px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:12px}
-.also-item{display:flex;gap:14px;align-items:baseline;padding:7px 0}
-.also-item .k{font-family:var(--mono);font-size:14px;color:var(--muted);flex:none}
-.also-item .t{
-  font-family:var(--serif);font-size:25px;line-height:1.5;font-weight:600;color:var(--ink-2);
-  overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;
 }
 .story-wm{
   position:absolute;z-index:0;right:-18px;bottom:118px;font-family:var(--serif);font-weight:700;
@@ -259,8 +265,8 @@ body{
 .list .bar{width:5px;background:var(--c);flex:none;border-radius:1px}
 .list .body{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
 .list .lt{
-  font-family:var(--serif);font-size:33px;line-height:1.42;font-weight:700;
-  max-height:2.84em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  font-family:var(--serif);font-size:31px;line-height:1.4;font-weight:700;
+  max-height:4.2em;overflow:hidden;
   text-wrap:balance;
 }
 .list .lm{margin-top:7px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
@@ -309,7 +315,7 @@ export function renderCover(issue, stories = []) {
   const index = stories.length
     ? `<div class="cover-index">
       <div class="ci-h">今 日 三 条</div>
-      ${stories.map((story, i) => `<div class="ci-item"><span class="ci-n">${String(i + 1).padStart(2, "0")}</span><span class="ci-t">${escapeHtml(protectCjk(tightenLatin(clipTitle(story.card.titleText, 56))))}</span></div>`).join("\n      ")}
+      ${stories.map((story, i) => `<div class="ci-item"><span class="ci-n">${String(i + 1).padStart(2, "0")}</span><span class="ci-t">${escapeHtml(protectCjk(tightenLatin(clipTitle(story.card.titleText, 80))))}</span></div>`).join("\n      ")}
     </div>`
     : "";
   const body = `
@@ -340,7 +346,7 @@ export function renderCover(issue, stories = []) {
   });
 }
 
-export function renderStory(issue, story, index, total, others = []) {
+export function renderStory(issue, story, index, total) {
   const d = dateParts(issue.dateISO);
   const { card, summary } = story;
   const why = card.why ? stripTags(card.why.html) : "";
@@ -356,13 +362,9 @@ export function renderStory(issue, story, index, total, others = []) {
   </div>
   <main class="story-body">
     <div class="cmeta"><span>${escapeHtml(card.time || d.month + "/" + d.day)}</span><span class="dot"></span><span class="src">${escapeHtml(card.sourceName || "综合报道")}</span></div>
-    <h1 class="story-title">${escapeHtml(protectCjk(tightenLatin(clipTitle(card.titleText, 64))))}</h1>
-    <p class="story-sum">${escapeHtml(tightenLatin(clipProse(summary, 166)))}</p>
-    ${why ? `<div class="why"><div class="lab">看点 / WHY IT MATTERS</div><p>${escapeHtml(tightenLatin(clipWhy(why, 172)))}</p></div>` : ""}
-    ${others.length ? `<div class="also">
-      <div class="also-h">本 期 还 有</div>
-      ${others.map((item) => `<div class="also-item"><span class="k">${String(item.rank).padStart(2, "0")}</span><span class="t">${escapeHtml(protectCjk(tightenLatin(clipTitle(item.title, 40))))}</span></div>`).join("\n      ")}
-    </div>` : ""}
+    <h1 class="story-title">${escapeHtml(protectCjk(tightenLatin(clipTitle(card.titleText, 80))))}</h1>
+    <p class="story-sum">${escapeHtml(tightenLatin(clipProse(summary, 210)))}</p>
+    ${why ? `<div class="why"><div class="lab">看点 / WHY IT MATTERS</div><p>${escapeHtml(tightenLatin(clipWhy(why, 230)))}</p></div>` : ""}
   </main>
   <div class="story-wm">${escapeHtml(card.cnum)}</div>`;
   return shell(issue, {
@@ -382,7 +384,7 @@ export function renderOverview(issue) {
       <span class="n">${String(i + 1).padStart(2, "0")}</span>
       <span class="bar"></span>
       <span class="body">
-        <span class="lt">${escapeHtml(protectCjk(tightenLatin(clipTitle(card.titleText, 60))))}</span>
+        <span class="lt">${escapeHtml(protectCjk(tightenLatin(clipTitle(card.titleText, 72))))}</span>
         <span class="lm"><span class="c">${escapeHtml(card.chapterName)}</span> · ${escapeHtml(card.time || d.month + "/" + d.day)} · ${escapeHtml(card.sourceName || "")}</span>
       </span>
     </li>`;

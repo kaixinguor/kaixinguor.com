@@ -251,12 +251,9 @@ fs.mkdirSync(buildDir, { recursive: true });
 
 const designs = [{ name: "01-cover", html: renderCover(issue, stories) }];
 stories.forEach((story, index) => {
-  const others = stories
-    .map((item, order) => ({ rank: order + 1, title: item.card.titleText }))
-    .filter((_, order) => order !== index);
   designs.push({
     name: `0${index + 2}-story-${index + 1}`,
-    html: renderStory(issue, story, index, stories.length, others)
+    html: renderStory(issue, story, index, stories.length)
   });
 });
 const overviewName = `${String(stories.length + 2).padStart(2, "0")}-overview`;
@@ -399,7 +396,7 @@ const captions = [
 ];
 stories.forEach((story, index) => {
   captions.push(`**0${index + 2} · 重点 ${index + 1}**`);
-  captions.push(`> ${clipTitle(story.card.titleText, 60)}`);
+  captions.push(`> ${clipTitle(story.card.titleText, 90)}`);
   captions.push(``);
 });
 captions.push(`**${overviewNo} · 速览**`);
