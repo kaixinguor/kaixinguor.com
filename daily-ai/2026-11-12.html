@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 12 日</title>
+<meta name="description" content="2026-11-12 AI 日报第 018 期：阿里上线 Qwen4-Max 预览版，100 万 token 上下文、39 万 token 输出，只走 Token Plan、两周后下线；百度文心 5.5 Flash Preview 用 2800 亿总参数、140 亿激活，忙时输入 2 元 / 百万 token；MiniMax 开源 H3-Image，4K 图 10 秒内出；腾讯上线元宝搜索，索引覆盖公众号与视频号；DeepMind 发布 AlphaGenome 2，因果变异召回率从 16% 提到 30%；均胜向宇树交付首台机器人高算力大脑背包；英国 Fractile 以 70 亿美元估值融资 7.2 亿美元。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 12 日">
+<meta property="og:description" content="2026-11-12 AI 日报第 018 期：阿里上线 Qwen4-Max 预览版，100 万 token 上下文、39 万 token 输出，只走 Token Plan、两周后下线；百度文心 5.5 Flash Preview 用 2800 亿总参数、140 亿激活，忙时输入 2 元 / 百万 token；MiniMax 开源 H3-Image，4K 图 10 秒内出；腾讯上线元宝搜索，索引覆盖公众号与视频号；DeepMind 发布 AlphaGenome 2，因果变异召回率从 16% 提到 30%；均胜向宇树交付首台机器人高算力大脑背包；英国 Fractile 以 70 亿美元估值融资 7.2 亿美元。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-12.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-11T09:12:00+08:00/2026-11-12T09:17:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-12.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-12.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-12-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../psychology.html">心理学日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-12-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 018 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 12 日<span class="weekday">THU</span></h1>
+    <p class="deck">同一天，三家中国模型厂商各推了一步：阿里把 Qwen4-Max 的上下文拉到 100 万 token、输出上限 39 万 token，只放在 Token Plan 里两周；百度用 2800 亿总参数、140 亿激活换 200 token/s 的出词速度；MiniMax 把 4K 图像生成压进 10 秒并开放权重。海外的两条线是「往下游走」：DeepMind 把基因模型做到单细胞分辨率，Fractile 拿 7.2 亿美元押一条不依赖 HBM 的芯片路线。<em>上下文、单价、带宽，三条曲线今天同时拐了一下。</em></p>
+    <div class="metabar"><span class="pill">第 018 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/11 09:12 – 11/12 09:17</span>
+      <span class="dot"></span>
+      <span>7 条</span>
+      <span class="dot"></span>
+      <span>阅读约 8 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>阿里上线 Qwen4-Max 预览版：100 万 token 上下文、393,216 token 输出上限，只卖 Token Plan，11 月 25 日后下线。</b>兼容 OpenAI 与 Anthropic 两套接口，思考默认开启；官方文档没给参数量、跑分和单价，只给了一个两周的预览窗口。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>百度文心 5.5 Flash Preview 发布：2800 亿总参数、每 token 激活 140 亿，API 忙时输入 2 元、闲时 1 元 / 百万 token。</b>MiniMax 同一天开源 H3-Image，4096×4096 图 10 秒内生成、最多 16 张参考图，权重已上 Hugging Face。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>DeepMind 发布 AlphaGenome 2：按细胞类型条件化预测，在 TenK10K 的 28 种免疫细胞上把因果变异召回率从 16% 提到 30%。</b>模型用 1.07 亿个单细胞剖面训练，新增 DNA 甲基化读出，非商业研究免费、商业走私有预览。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 10:00</span>
+          <a class="src" href="https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview" target="_blank" rel="noopener noreferrer">阿里云百炼 ↗</a>
+        </div>
+        <h3>阿里上线 Qwen4-Max 预览版：100 万 token 上下文、39 万 token 输出，只卖 Token Plan</h3>
+        <p>阿里云 11 月 11 日 10:00 起开放 Qwen4-Max-Preview。它是 Qwen 家族的旗舰多模态模型，同时处理文本、图像和视频，支持函数调用、联网搜索、JSON Schema 结构化输出，并兼容 OpenAI 的 Chat Completions / Responses 与 Anthropic 的 Messages 接口。与以往不同，这一版只通过 Token Plan 提供，不支持按量付费；预览期到 11 月 25 日 24:00 结束，期间不再改动，到期后模型直接下线。调用走新加坡的专用端点，不在常规百炼按量计费链路上。</p>
+        <p>规格上，上下文 1,000,000 token，最大输出 393,216 token，且思考与最终答案共用这一份预算。思考默认开启，reasoning_effort 可选 low、medium、xhigh，默认 xhigh，不能再和 thinking_budget 同时设置。官方还改了一个容易踩的语义：从这一版起，OpenAI Chat Completions 里的 max_tokens 等同 max_completion_tokens，只限「思考 + 回答」的总量；过去按纯回答长度设的上限，现在可能把答案截断。多轮对话默认保留历史思考，要求客户端回传 assistant 消息里的 reasoning_content 字段。</p>
+        <p>文档没有给参数量、激活参数、基准分数或每百万 token 价格，只说明按 Token Plan 的 credits 计费。对开发者来说，这是一次「先试用、再选型」的发布：能测 1M 上下文里的长程检索、跨文件代码修改和多模态输入，但不能把它写进需要长期稳定的生产依赖。</p>
+        <p class="why"><b>看点</b>1M 上下文配 39 万输出，明显是给长轨迹 agent 用的：一次任务里要放进去的代码库、日志、工具返回，都在这两个数字的预算内。真正要压测的是有效召回而不是「能塞多少」——把 80 万 token 的仓库丢进去，看它在第 60 万 token 处还能不能引用对文件；再测 thinking 预算被 xhigh 吃掉后，留给答案的 token 还剩多少。max_tokens 语义变化会静默破坏现有 SDK 的截断逻辑，升级前先跑回归。<br><b>另一个视角</b>两周后下线意味着采购方无法把它列入年度预算，只能当作一次付费评测；真正的采购决策会被推到 Qwen4 正式版，而正式版的定价要等预览结束后才公布。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 14:18</span>
+          <a class="src" href="https://www3.xinhuanet.com/tech/20261111/183aa161e70b4942b622e10b5e3da605/c.html" target="_blank" rel="noopener noreferrer">新华网 ↗</a>
+        </div>
+        <h3>百度发布文心 5.5 Flash Preview：2800 亿总参数、140 亿激活，忙时输入 2 元 / 百万 token</h3>
+        <p>百度 11 月 11 日发布文心 5.5 Flash Preview：总参数 2800 亿，每个 token 激活 140 亿，支持最长 100 万 token 上下文，生成速度超过 200 token/s。底层用了新的混合稀疏注意力、多路由器 MoE 和 ECHO 多 token 预测，官方称在提升能力的同时降低计算与显存开销；这一版还首次把自研的 RSI 技术用在推理优化上，由 ERNIE Evolve 参与模型推理。</p>
+        <p>能力侧重点有三个。编程覆盖从真实代码库修 bug 到完整搭建应用，并针对游戏开发做了专项训练；3D 建模强化了 Blender 和 CAD 的工具使用，能从文本推断形状、比例与空间关系，再转成程序化模型；知识工作要求多步交付表格、文档和演示文稿，官方给了 30 万个工作空间、1000 万份参考文件、40 多种文件类型的训练环境。视频创作侧则搭了 15 万个创作环境，覆盖创意、剧本、分镜、素材与配音，累计成片约 5300 分钟。</p>
+        <p>开发者今天就能在百度智能云千帆上通过 API 调用。定价为每百万 token 输入忙时 2 元、闲时 1 元，输出忙时 8 元、闲时 4 元，限时五折。模型权重计划在 11 月 25 日面向全球开源社区发布。</p>
+        <p class="why"><b>看点</b>140 亿激活参数是这条发布里最硬的数字：它决定单卡能扛多少并发，也决定 200 token/s 是在什么 batch 下测出来的。1M 上下文靠稀疏注意力省算力，但稀疏模式会不会漏掉长文档中段的细节，要看检索类评测，而不是 Terminal-Bench。官方对基准只写「具有竞争力」，没给分数和对比对象——在权重 11 月 25 日开放之前，任何「追平某某」的说法都只能算厂商口径。对做私有化部署的团队，真正的时点是权重开放那天：能不能在两张 80GB 卡上跑起来，比 API 便宜几分钱更重要。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 15:44</span>
+          <a class="src" href="https://www.minimax.io/blog/minimax-h3-image" target="_blank" rel="noopener noreferrer">MiniMax ↗</a>
+        </div>
+        <h3>MiniMax 开源 H3-Image：4K 图 10 秒内出，权重已上 Hugging Face</h3>
+        <p>MiniMax 11 月 11 日发布 H3-Image，一个基于 H3 的开源权重图像模型，支持文生图、参考图生成和图像编辑。官方称它能在 10 秒内生成一张 4096×4096（约 1600 万像素）的 4K 图，速度最高是主流方案的 5 倍；最多可同时理解 16 张参考图，用来保持主体、风格或构图的一致性。权重已经放到 Hugging Face，API、MiniMax Code 和 Hailuo 同步上线。</p>
+        <p>速度来自整条后训练链路的调整，而不是单点技巧：数据、强化学习、采样步数压缩、PE 和部署优化一起改。官方给的对比是，Standard 模式比主流方案快 1.5–2 倍，Highspeed 模式快 3–4 倍；价格是同类主流产品的 50%–70%，发布首周 4K 及以上分辨率再打五折。模型卡和定价表都放在博客里，但没有给 FID、人工偏好或提示词遵循度的第三方分数。</p>
+        <p class="why"><b>看点</b>4K/10 秒改变的是工作流而不是单张成本：设计师可以在一次会话里连出十几版，再挑一张放大，迭代次数上去了，单张价格反而没那么重要。16 张参考图是更难的部分——参考越多，身份泄漏和构图冲突越容易发生，官方没公开是怎么做 reference dropout 的。开源权重意味着可以把编辑链放进本地流水线，按 GPU 小时而不是按张计费；代价是要自己承担量化后的画质损失和 4K 显存占用。「快 5 倍」「50%–70% 价格」都是厂商自测，等第三方复现再写进采购对比表。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11</span>
+          <a class="src" href="https://www.jiemian.com/article/15321028.html" target="_blank" rel="noopener noreferrer">界面新闻 ↗</a>
+        </div>
+        <h3>腾讯上线元宝搜索：so.qq.com 独立入口，索引覆盖公众号与视频号</h3>
+        <p>腾讯 11 月 11 日正式上线「元宝搜索」。用户在任意浏览器地址栏输入 so.qq.com 就能使用，也可以把 QQ 浏览器升级到最新版，在引擎设置里切换为元宝搜索。它不是给元宝加一个搜索框，而是用元宝的大模型能力重做了「理解—检索—排序—答案组织」整条链路，依托千亿级索引，覆盖全网网页、公众号、视频号等腾讯生态内容和学术文献。</p>
+        <p>结果呈现上，官方说会优先展示权威机构与官方来源，并把广告与答案明确区分。对中文互联网来说，公众号和视频号一直是搜索引擎抓不到、或者抓不全的封闭语料；腾讯自己把它们接进索引，等于把独有数据变成了搜索质量的差异点。</p>
+        <p class="why"><b>看点</b>搜索正在变成 agent 的检索层：模型再强，拿不到对的材料也答不对。腾讯的护城河不在模型分数，而在「公众号 + 视频号」这批别人拿不到的语料，以及 QQ 浏览器这个默认入口。「广告与答案分开」是产品承诺，不是技术保证——真正要看的是排序权重里商业内容占多少、标注是否稳定。对做 RAG 的团队，so.qq.com 会不会开放可引用的结构化结果，比它今天排第几更重要；如果不开放，它只是多了一个封闭的高质量中文源。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12</span>
+          <a class="src" href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/" target="_blank" rel="noopener noreferrer">Google DeepMind ↗</a>
+        </div>
+        <h3>DeepMind 发布 AlphaGenome 2：按细胞类型条件化预测，因果变异召回率从 16% 提到 30%</h3>
+        <p>Google DeepMind 当地时间 11 月 11 日发布 AlphaGenome 2，把上一代的「并行预测」改成了「条件模型」：输入一段 100 万字母的 DNA 序列，再指定一个生物条件——组织、细胞类型或细胞状态，模型每次只预测这一种条件下的结果。条件可以来自参考目录，也可以由科学家用自己的单细胞实验现场生成。上一代一次预测多种组织的数千个实验，效率高但容量被摊薄，难以分辨亲缘很近的细胞类型之间的细微差异。</p>
+        <p>训练数据包含人与小鼠的 bulk 与单细胞数据，合计超过 1.07 亿个单细胞剖面。输出覆盖基因表达、组蛋白修饰、染色质可及性，并新增了 DNA 甲基化。在 TenK10K 的 28 种原代免疫细胞上，AlphaGenome 2 找到的因果变异接近上一代在单细胞数据上微调后的两倍（30% 对 16%），方向性基因效应为 43% 对 23%；它还复现了一项 IBD 研究——远端调控开关上的变异通过过度激活肠道巨噬细胞里的 ETS2 基因致病，并指出该变异只影响这一种细胞。条件化结构还带来跨模态补全：输入单细胞基因活性一项测量，就能预测未测的染色质可及性。</p>
+        <p>可用性上，AlphaGenome 2 对非商业研究免费开放，商业研究走私有预览。代价是算力：细胞级精确推断比上一代更贵，DeepMind 的建议是分工——第一代模型负责构建覆盖全基因组 90 亿个变异的数据库，第二代只对候选位点做细胞级归因和靶点发现。</p>
+        <p class="why"><b>看点</b>把「组织平均」换成「单细胞状态」，解决的是 GWAS 里最常见的一种失败：信号落在没有对应细胞类型的平均表达上，看起来显著，却找不到真正起作用的细胞。30% 的召回率值得记住，但它仍是召回率——七成的因果变异还是找不到；论文里更该看的是精度和校准，而不是单一召回数字。计算成本上升意味着它不适合全基因组扫描，适合做二阶段筛选：先用第一代把候选缩到几千个，再用第二代逐个细胞类型归因。对做生物基础模型的团队，cell encoder 能零样本迁移到新数据，这一条比跑分更有复用价值。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 19:21</span>
+          <a class="src" href="https://stcn.com/article/detail/4332469.html" target="_blank" rel="noopener noreferrer">证券时报 ↗</a>
+        </div>
+        <h3>均胜电子向宇树交付首台机器人「高算力大脑背包」：外挂端侧算力，兼容人形、四足与轮式</h3>
+        <p>均胜电子 11 月 10 日对外披露，旗下宁波超平面机器人科技已向宇树科技交付首台机器人高算力大脑背包，双方合作从框架协议进入产品交付阶段，年内还会有更多项目进展。这个背包是均胜具身智能「大脑软硬一体」方案的核心产品：把高算力端侧平台和高能效能源系统做成可外挂的独立模块，兼容宇树的人形、四足和轮式多款机器人。</p>
+        <p>按公司说法，背包用于增强环境感知、数据采集、自主决策与运动控制，可跑端侧具身模型的实时推理，支持「物理 Agent」的自进化迭代，同时通过能源管理延长连续作业时间。除了背包，双方还在联合攻关灵巧手、高性能固态电池能源管理系统等部件，目标是把它们做成可批量量产、适配多种机器人的标准化件。工业场景上，双方围绕汽车零部件产线做数据采集、软硬件适配、工业大模型训练和产线试点，再向规模化复制。</p>
+        <p class="why"><b>看点</b>外挂背包是「算力与本体解耦」的工程折中：机器人本体不必为最高算力预留功耗、散热和结构空间，代价是多了一根供电/数据接口、一份配重，以及接口带宽这个新瓶颈。对做具身的团队，该看的是持续功耗、满载散热和端到端延迟，而不是 TOPS 数字——背包里的芯片再强，传感器数据传不进去、推理结果传不回来，闭环照样跑不起来。对均胜，这是把汽车 Tier 1 的制造能力平移到机器人部件；对宇树，拿到的是可批量复制的算力方案，而不是一次性的定制件。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11</span>
+          <a class="src" href="https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
+        </div>
+        <h3>英国芯片公司 Fractile 融资 7.2 亿美元、估值 70 亿美元：把 DRAM 堆在逻辑上跑长上下文</h3>
+        <p>英国 AI 芯片公司 Fractile 完成 7.2 亿美元融资，投后估值 70 亿美元。本轮由 Thrive、Founders Fund、Lightspeed 和 Redpoint 联合领投，Balderton 参投。公司 2022 年成立，做的不只是芯片：自研芯片、系统、软件，也自己做 ML 研究，属于少见的全栈型硅片公司。</p>
+        <p>技术路线与主流 AI 芯片不同。多数 AI 芯片依赖 HBM，设计趋同；Fractile 把 DRAM 直接封装在逻辑晶圆之上，官方称这样能拿到比 HBM 更高的内存带宽、比 SRAM 更大的容量，让大模型在很长的上下文下仍能跑到每秒数千 token。这个数字是公司口径，没有第三方复测。Fractile 押的是「前沿模型的瓶颈会从算力转向出词速度」，而解决它必须重做芯片。</p>
+        <p class="why"><b>看点</b>长上下文推理的瓶颈是内存带宽和容量，不是 FLOPs：KV cache 随上下文线性增长，HBM 的带宽和容量一起卡住 batch。DRAM-on-logic 是拿先进封装换带宽，工程代价在良率、散热和 DRAM 产能——这三项都不是靠一轮融资能解决的。7.2 亿美元说明资本愿意为「非 HBM 路线」下注，但真正的验证是客户流片、量产良率和实测 token/s，而不是 70 亿美元估值。对云厂商，多一条内存路线意味着议价空间；对 NVIDIA，这是封装层面而不是制程层面的竞争。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 11 日 09:12 至 11 月 12 日 09:17（北京时间）之间发布的报道，共 7 条。检索时间 11/12 09:17。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 018 · 24h window · Generated 2026-11-12 09:17</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../psychology.html">心理学日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

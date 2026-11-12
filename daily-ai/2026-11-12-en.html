@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 12, 2026</title>
+<meta name="description" content="AI Daily, November 12, 2026, Issue 018: Alibaba opens Qwen4-Max-Preview with a 1M-token context and 393,216-token output cap, available only through Token Plan for two weeks; Baidu&#39;s ERNIE 5.5 Flash Preview packs 280B total and 14B active parameters at 2 yuan per million input tokens; MiniMax open-sources H3-Image for 4K images in under 10 seconds; Tencent launches Yuanbao Search over WeChat articles and video; DeepMind&#39;s AlphaGenome 2 lifts causal-variant recall from 16% to 30%; Joyson delivers a high-compute brain backpack to Unitree; Fractile raises $720m at a $7bn valuation.">
+<meta property="og:title" content="AI Daily · November 12, 2026">
+<meta property="og:description" content="AI Daily, November 12, 2026, Issue 018: Alibaba opens Qwen4-Max-Preview with a 1M-token context and 393,216-token output cap, available only through Token Plan for two weeks; Baidu&#39;s ERNIE 5.5 Flash Preview packs 280B total and 14B active parameters at 2 yuan per million input tokens; MiniMax open-sources H3-Image for 4K images in under 10 seconds; Tencent launches Yuanbao Search over WeChat articles and video; DeepMind&#39;s AlphaGenome 2 lifts causal-variant recall from 16% to 30%; Joyson delivers a high-compute brain backpack to Unitree; Fractile raises $720m at a $7bn valuation.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-12-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-11T09:12:00+08:00/2026-11-12T09:17:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-12-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-12.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-12-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../education.html">Education Daily</a>
+      <a href="../psychology.html">Psychology Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-12.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 018</span>
+    </div>
+    <h1 class="date">November 12, 2026<span class="weekday">THU</span></h1>
+    <p class="deck">Three Chinese model makers moved the frontier on the same day: Alibaba pushed Qwen4-Max to a 1M-token context and a 393,216-token output cap, available for two weeks through Token Plan only; Baidu paired 280B total parameters with 14B active to reach 200 tokens a second; MiniMax squeezed 4K image generation under ten seconds and opened the weights. Abroad, the movement was downstream: DeepMind took genomic prediction to single-cell resolution, and Fractile raised $720m for a chip path that does not rely on HBM. <em>Context, unit price and bandwidth all bent at once.</em></p>
+    <div class="metabar"><span class="pill">Issue 018</span>
+      <span class="dot"></span>
+      <span>Window Nov 11, 09:12 – Nov 12, 09:17</span>
+      <span class="dot"></span>
+      <span>7 stories</span>
+      <span class="dot"></span>
+      <span>8 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Alibaba opens Qwen4-Max-Preview with a 1M-token context and a 393,216-token output cap, sold only through Token Plan and retired after November 25.</b> It speaks both OpenAI and Anthropic API dialects and has thinking on by default. The docs give no parameter count, benchmark score or per-token price, only a two-week window.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Baidu ships ERNIE 5.5 Flash Preview: 280B total parameters, 14B active per token, and an API price of 2 yuan per million input tokens at peak, 1 yuan off-peak.</b> MiniMax open-sources H3-Image the same day, generating a 4096×4096 image in under ten seconds with up to 16 reference images, weights on Hugging Face.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>DeepMind releases AlphaGenome 2, a conditional model that lifts causal-variant recall from 16% to 30% across 28 immune cell types in TenK10K.</b> It was trained on more than 107 million single-cell profiles, adds DNA methylation readouts, is free for non-commercial research and in private preview for commercial use.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 10:00</span>
+          <a class="src" href="https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview" target="_blank" rel="noopener noreferrer">Alibaba Cloud ↗</a>
+        </div>
+        <h3>Alibaba opens Qwen4-Max-Preview: a 1M-token context and 393,216-token output, Token Plan only</h3>
+        <p>Alibaba Cloud opened Qwen4-Max-Preview at 10:00 Beijing time on November 11. It is the flagship multimodal model in the Qwen family, handling text, images and video, with function calling, web search and JSON Schema output; it is compatible with OpenAI's Chat Completions and Responses APIs and with Anthropic's Messages API. This release is different in one structural way: it is offered only through Token Plan, with no pay-as-you-go access. The preview runs until 24:00 on November 25, is frozen during that period, and the model is retired when it ends. Calls go through a dedicated Singapore endpoint rather than the normal metered Model Studio path.</p>
+        <p>The spec sheet lists a 1,000,000-token context and a maximum output of 393,216 tokens, with thinking and the final answer sharing that budget. Thinking is on by default; reasoning_effort accepts low, medium or xhigh, with xhigh as the default, and it cannot be combined with thinking_budget. Alibaba also changed a semantic that is easy to miss: from this model on, max_tokens in OpenAI Chat Completions equals max_completion_tokens and caps thinking plus answer together. A limit sized for the answer alone can now truncate it. Multi-turn chats keep historical thinking by default and expect the client to pass back the reasoning_content field on assistant messages.</p>
+        <p>The documentation gives no parameter count, no active-parameter figure, no benchmark scores and no per-token price; billing runs on Token Plan credits. For developers this is a trial-and-select release: you can test long-horizon retrieval across a 1M context, multi-file code changes and multimodal input, but you cannot make it a long-lived production dependency.</p>
+        <p class="why"><b>Why it matters</b>A 1M context with a 393,216-token output is clearly aimed at long-trajectory agents: the repository, the logs and the tool returns of one task all have to fit inside those two numbers. The thing to stress-test is effective recall, not raw capacity. Drop an 800k-token repo in and see whether it still cites the right file at token 600k; then measure how much of the answer budget survives after xhigh thinking takes its share. The max_tokens change will silently break truncation logic in existing SDK wrappers, so run a regression before upgrading.<br><b>The other view</b>Retiring the model after two weeks means procurement cannot put it in an annual budget; it is a paid evaluation, and the real purchase decision moves to the GA release, whose price will only be published after the preview ends.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 14:18</span>
+          <a class="src" href="https://www3.xinhuanet.com/tech/20261111/183aa161e70b4942b622e10b5e3da605/c.html" target="_blank" rel="noopener noreferrer">Xinhua ↗</a>
+        </div>
+        <h3>Baidu releases ERNIE 5.5 Flash Preview: 280B total parameters, 14B active, 2 yuan per million input tokens</h3>
+        <p>Baidu released ERNIE 5.5 Flash Preview on November 11: 280 billion total parameters, 14 billion activated per token, a context of up to one million tokens and a generation speed above 200 tokens per second. Under the hood are a new hybrid sparse attention scheme, a multi-router MoE and ECHO multi-token prediction, which Baidu says cut compute and memory cost while raising capability. The release also marks the first use of Baidu's in-house RSI technique in inference optimization, with ERNIE Evolve participating in inference.</p>
+        <p>The capability push lands in three places. Coding spans fixing bugs in real repositories to building whole applications, with extra training for game development. 3D modelling leans on Blender and CAD tool use: the model infers shape, scale and spatial relations from text and turns them into procedural models. Knowledge work targets multi-step deliverables such as spreadsheets, documents and decks, trained on 300,000 workspaces, 10 million reference files and more than 40 file types. On the video side Baidu built 150,000 creation environments covering ideas, scripts, storyboards, assets and voice-over, with roughly 5,300 minutes of finished video in total.</p>
+        <p>Developers can call it today through the Qianfan API. Pricing is 2 yuan per million input tokens at peak and 1 yuan off-peak; output is 8 yuan at peak and 4 yuan off-peak, with a limited-time 50% discount. The weights are scheduled to be released to the open-source community on November 25.</p>
+        <p class="why"><b>Why it matters</b>The 14B active-parameter figure is the hardest number in the release: it decides how much concurrency one card can hold, and it frames the conditions under which 200 tokens a second was measured. Sparse attention is what makes a 1M context affordable, but whether the sparse pattern drops details in the middle of a long document is a retrieval question, not a Terminal-Bench question. Baidu describes its benchmark results only as &quot;competitive&quot; and publishes neither scores nor baselines; until the weights land on November 25, any claim of parity is vendor framing. For teams planning private deployment, the date that matters is weights day: whether it runs on two 80GB cards will decide more than a few fen of API price.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 15:44</span>
+          <a class="src" href="https://www.minimax.io/blog/minimax-h3-image" target="_blank" rel="noopener noreferrer">MiniMax ↗</a>
+        </div>
+        <h3>MiniMax open-sources H3-Image: 4K images in under ten seconds, weights on Hugging Face</h3>
+        <p>MiniMax released H3-Image on November 11, an open-weight image model built on H3 that supports text-to-image, reference-based generation and editing. The company says it produces a 4096×4096 image — about 16 megapixels — in under ten seconds, up to five times faster than mainstream alternatives, and can reason over as many as 16 reference images at once to hold a subject, style or composition consistent. The weights are on Hugging Face, and the model is live in the API, MiniMax Code and Hailuo.</p>
+        <p>The speed comes from retuning the whole post-training pipeline rather than one trick: data, reinforcement learning, fewer sampling steps, PE and deployment optimization were changed together. MiniMax's comparison is 1.5–2× faster than mainstream in Standard mode and 3–4× in Highspeed mode, at 50–70% of comparable products' prices, with a further 50% off 4K-and-above requests during launch week. The blog includes a model card and a price chart but no FID, human-preference or prompt-adherence scores from a third party.</p>
+        <p class="why"><b>Why it matters</b>4K in ten seconds changes the workflow rather than the cost of a single image: a designer can produce a dozen variants in one session, pick one and upscale, so iteration count rises and per-image price matters less. The harder engineering is the 16 reference images — the more references, the easier identity leakage and composition conflicts become, and MiniMax does not disclose its reference-dropout scheme. Open weights let teams put the edit chain inside a local pipeline and pay by GPU-hour instead of per image, at the cost of quantization loss and 4K VRAM. &quot;Five times faster&quot; and &quot;50–70% of the price&quot; are vendor measurements; wait for independent reproduction before putting them in a procurement table.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11</span>
+          <a class="src" href="https://www.jiemian.com/article/15321028.html" target="_blank" rel="noopener noreferrer">Jiemian ↗</a>
+        </div>
+        <h3>Tencent launches Yuanbao Search at so.qq.com, indexing WeChat articles and video</h3>
+        <p>Tencent launched Yuanbao Search on November 11. Users can reach it by typing so.qq.com into any browser's address bar, or by upgrading QQ Browser and switching the search engine to Yuanbao Search in settings. This is not a search box bolted onto the Yuanbao assistant: Tencent rebuilt the entire understand–retrieve–rank–answer chain on Yuanbao's model, backed by a trillion-scale index that covers the open web, WeChat official accounts, WeChat Channels and academic literature.</p>
+        <p>On presentation, Tencent says it prioritises authoritative institutions and official sources and clearly separates ads from answers. For the Chinese internet, WeChat official accounts and Channels have long been closed corpora that general search engines cannot crawl, or cannot crawl fully; bringing them into its own index turns that exclusive data into a quality differentiator.</p>
+        <p class="why"><b>Why it matters</b>Search is becoming the retrieval layer for agents: a stronger model still answers wrong if it cannot fetch the right material. Tencent's moat is not a benchmark score but the WeChat article and video corpus that others cannot get, plus QQ Browser as a default entrance. &quot;Ads separated from answers&quot; is a product promise, not a technical guarantee; what matters is how much commercial content sits in the ranking weights and whether the labels stay stable. For RAG teams, the question is whether so.qq.com will expose citable structured results — if not, it is one more closed, high-quality Chinese source.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12</span>
+          <a class="src" href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/" target="_blank" rel="noopener noreferrer">Google DeepMind ↗</a>
+        </div>
+        <h3>DeepMind's AlphaGenome 2 conditions on cell type, lifting causal-variant recall from 16% to 30%</h3>
+        <p>Google DeepMind released AlphaGenome 2 on November 11 local time, replacing the previous generation's parallel prediction with a conditional model. It takes a million-letter DNA sequence plus one biological condition — a tissue, cell type or cell state — and predicts that condition alone. The condition can come from a reference catalogue or be generated on the fly from a scientist's own single-cell experiment. The first model predicted thousands of experiments across many tissues at once; efficient, but it spread capacity thin and struggled to separate closely related cell types.</p>
+        <p>Training covered human and mouse bulk and single-cell data, more than 107 million individual cell profiles in total. Outputs cover gene expression, histone modifications and chromatin accessibility, and now DNA methylation as well. On the 28 primary immune cell types in TenK10K, AlphaGenome 2 identified nearly twice as many causal variants as the original fine-tuned on single-cell data (30% versus 16%) and directional gene effects of 43% versus 23%. It also reproduced an IBD study in which a variant in a distant regulatory switch overactivates ETS2 in gut macrophages, singling out the causal variant and showing the effect is confined to that cell type. The conditional design also enables cross-modality imputation: from one measurement, such as single-cell gene activity, it predicts unmeasured chromatin accessibility.</p>
+        <p>AlphaGenome 2 is free for non-commercial research and in private preview for commercial work. The cost is compute: cell-level inference is more expensive than the previous generation, and DeepMind suggests a division of labour — the first model for genome-wide databases over all 9 billion variants, the second for cell-level attribution and target discovery on candidate sites.</p>
+        <p class="why"><b>Why it matters</b>Swapping a tissue average for a single-cell state addresses a common GWAS failure: a signal shows up on an average expression profile that no relevant cell type actually has, so it looks significant while pointing at the wrong cells. The 30% recall figure is worth remembering, but it is still recall — seven in ten causal variants remain unfound, and the paper's precision and calibration matter more than the headline number. Higher compute means it is not built for genome-wide scans; it fits a second-stage filter, after the first model narrows candidates to a few thousand. For teams building biological foundation models, the cell encoder's zero-shot transfer to new data is more reusable than any benchmark.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11 19:21</span>
+          <a class="src" href="https://stcn.com/article/detail/4332469.html" target="_blank" rel="noopener noreferrer">Securities Times ↗</a>
+        </div>
+        <h3>Joyson delivers its first high-compute &quot;brain backpack&quot; to Unitree, compatible with humanoid, quadruped and wheeled robots</h3>
+        <p>Joyson Electronics said on November 10 that its Ningbo Hyperplane Robotics unit had delivered the first high-compute robot brain backpack to Unitree, moving the partnership from a framework agreement to product delivery, with more projects expected this year. The backpack is the core product of Joyson's embodied-AI hardware-software stack: a high-compute edge platform plus an energy system packaged as an external module compatible with several Unitree humanoid, quadruped and wheeled robots.</p>
+        <p>According to the company, it strengthens perception, data collection, autonomous decision-making and motion control, runs real-time inference for on-device embodied models, supports self-evolution of &quot;physical agents&quot; and extends continuous operating time through energy management. The two companies are also co-developing dexterous hands and a solid-state battery energy-management system, aiming at standardised parts that can be mass-produced across robot types. Industrially, they are working on automotive-parts lines: data collection, hardware and software adaptation, industrial model training, line pilots and then replication at scale.</p>
+        <p class="why"><b>Why it matters</b>A backpack is an engineering compromise that decouples compute from the body: the robot does not have to reserve power, cooling and structure for peak compute, at the cost of a power/data cable, extra weight and interface bandwidth as a new bottleneck. For embodied teams, the numbers to watch are sustained power draw, cooling at load and end-to-end latency, not TOPS — a powerful chip is useless if sensor data cannot get in and actions cannot get out fast enough. For Joyson, this ports automotive Tier-1 manufacturing into robot components; for Unitree, it buys a replicable compute module rather than a one-off custom build.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/11</span>
+          <a class="src" href="https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
+        </div>
+        <h3>UK chip company Fractile raises $720m at a $7bn valuation, stacking DRAM on logic for long contexts</h3>
+        <p>Fractile, a UK AI chip company, raised $720 million at a $7 billion post-money valuation. The round was co-led by Thrive, Founders Fund, Lightspeed and Redpoint, with Balderton joining. Founded in 2022, Fractile is unusually full-stack for a silicon company: it designs its own chips, systems and software, and does its own machine-learning research.</p>
+        <p>Its technical path differs from mainstream AI chips. Most rely on HBM and near-identical designs; Fractile packages DRAM directly on top of its logic die, which it says delivers far more memory bandwidth than HBM and more capacity than SRAM, so large models can run at thousands of tokens per second even at very long contexts. That figure is the company's own and has not been independently reproduced. The bet, as Fractile frames it, is that the bottleneck for frontier models moves from raw compute to how fast they produce useful output, and that fixing it requires rebuilding the hardware.</p>
+        <p class="why"><b>Why it matters</b>The bottleneck in long-context inference is memory bandwidth and capacity, not FLOPs: the KV cache grows linearly with context, and HBM bandwidth and capacity bind together as batch rises. DRAM-on-logic trades advanced packaging for bandwidth, and the engineering bill arrives as yield, heat and DRAM supply — none of which a funding round solves. $720 million shows capital will back a non-HBM path, but the real validation is customer tape-outs, production yield and measured tokens per second, not a $7 billion mark. For cloud providers, a second memory path means bargaining power; for Nvidia, this is competition at the packaging layer rather than the process node.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 11, 09:12 and November 12, 09:17 (Beijing time): 7 stories. Compiled at 11/12 09:17.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 018 · 24h window · Generated 2026-11-12 09:17</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../education.html">Education Daily</a>
+        <a href="../psychology.html">Psychology Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

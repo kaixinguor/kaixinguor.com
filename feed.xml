@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 11 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 12 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-12.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-12.html</guid>
+      <pubDate>Thu, 12 Nov 2026 01:00:00 GMT</pubDate>
+      <description>同一天，三家中国模型厂商各推了一步：阿里把 Qwen4-Max 的上下文拉到 100 万 token、输出上限 39 万 token，只放在 Token Plan 里两周；百度用 2800 亿总参数、140 亿激活换 200 token/s 的出词速度；MiniMax 把 4K 图像生成压进 10 秒并开放权重。海外的两条线是「往下游走」：DeepMind 把基因模型做到单细胞分辨率，Fractile 拿 7.2 亿美元押一条不依赖 HBM 的芯片路线。上下文、单价、带宽，三条曲线今天同时拐了一下。 阿里上线 Qwen4-Max 预览版：100 万 token 上下文、39 万 token 输出，只卖 Token Plan</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 11 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-11.html</link>

@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 11 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 12, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-12-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-12-en.html</guid>
+      <pubDate>Thu, 12 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Three Chinese model makers moved the frontier on the same day: Alibaba pushed Qwen4-Max to a 1M-token context and a 393,216-token output cap, available for two weeks through Token Plan only; Baidu paired 280B total parameters with 14B active to reach 200 tokens a second; MiniMax squeezed 4K image generation under ten seconds and opened the weights. Abroad, the movement was downstream: DeepMind took genomic prediction to single-cell resolution, and Fractile raised $720m for a chip path that does not rely on HBM. Context, unit price and bandwidth all bent at once. Alibaba opens Qwen4-Max-Preview: a 1M-token context and 393,216-token output, Token Plan only</description>
+    </item>
     <item>
       <title>AI Daily · November 11, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-11-en.html</link>
