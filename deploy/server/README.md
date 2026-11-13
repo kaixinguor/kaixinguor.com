@@ -10,7 +10,10 @@
 
 ## 0. 备案状态（决定现在能不能切 DNS）
 
-**当前：`kaixinguor.com` 在管局审核中。**
+**当前（2026-11-09）：`kaixinguor.com` 备案已通过，尚未切换 —— 按 [切换当天.md](切换当天.md) 逐条执行。**
+
+> 切换前核对过：服务器 443 对 `kaixinguor.com` 仍只吐 `mathster.cn` 的证书，
+> 说明下面第 1～3 步还没做完（或 vhost 未启用）。
 
 这台是**华北 2（北京）** ECS，未备案域名解析过来会被拦截 80/443。
 
@@ -49,7 +52,7 @@ bash deploy/server/deploy.sh --dry-run   # 先看会传什么
 bash deploy/server/deploy.sh             # 构建 + 同步
 ```
 
-约 1.2 MB、30 来个文件。首次跑完检查：
+约 55 MB、268 个文件（日报归档和配图攒出来的，早先写的“1.2 MB、30 个文件”已过时）。首次跑完检查：
 
 ```bash
 ssh root@39.107.233.27 'ls /home/project/kaixinguor.com | head; du -sh /home/project/kaixinguor.com'
@@ -104,6 +107,9 @@ sudo systemctl list-timers | grep certbot     # 确认自动续期
 ```
 
 certbot 会自己往 vhost 里写 443 块和证书路径，**不要再用仓库里的模板覆盖它**。
+
+> 切换后**许愿池表单会 404**：`POST /api/wish` 只存在于 Cloudflare Worker。
+> 处理方式见 [切换当天.md](切换当天.md) 附录 A。
 
 ---
 
@@ -243,7 +249,7 @@ sudo rm /etc/nginx/sites-enabled/kaixinguor.com && sudo nginx -t && sudo systemc
 注意两点：
 
 - `daily-ai/*.html` 是 `templates/issue.html` 生成的，**改模板**，否则下一期日报就把备案号冲掉；
-- 首页 / 经济日报页 / 教育日报页的页脚由 `scripts/build.mjs` 维护，改完跑一次 `node scripts/build.mjs --check` 确认没被覆盖。
+- 首页 / 经济日报页 / 教育日报页 / 心理学日报页的页脚由 `scripts/build.mjs` 维护，改完跑一次 `node scripts/build.mjs --check` 确认没被覆盖。
 
 **公安联网备案**：网站上线后 30 日内到 <https://beian.mps.gov.cn/> 办理，通过后页脚同样要挂公安备案号（`mathster.cn` 的 Aiseum 页脚已有示例）。
 
