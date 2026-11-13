@@ -14,7 +14,7 @@
 /* 在渲染前就定好语言，避免先闪中文再变英文 */
 (function () {
   try {
-    var l = localStorage.getItem("kaixinguor.lang") || "zh";
+    var l = localStorage.getItem("kaixinguor.lang") || "en";
     var en = l === "en";
     document.documentElement.lang = en ? "en" : "zh-CN";
     if (en) {
@@ -186,7 +186,7 @@
   </div>
 </footer>
 
-<script src="lang.js?v=7"></script>
+<script src="lang.js?v=9"></script>
 <script src="site.js?v=6"></script>
 </body>
 </html>
