@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 12 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 13, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-13-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-13-en.html</guid>
+      <pubDate>Fri, 13 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Nvidia changed leaders in four days: Jensen Huang resigned as president, CEO and director, CFO Colette Kress is interim CEO, and the board has a chair for the first time. The same day, Google pulled decision-making out of text generation and shipped it as an API; Baidu squeezed search inference with sparse attention and video cost with tri-modal modelling; Volcano Engine pushed Seedance to 0.99 yuan a second. The cautionary tale sits on the safety side: 37,000 Grok-built apps left on “anyone with the link”. Compute, unit price and permissions — three defaults were reset at once. NVIDIA says Jensen Huang has resigned as CEO and director, effective immediately; CFO Kress steps in, board gets its first chair</description>
+    </item>
     <item>
       <title>AI Daily · November 12, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-12-en.html</link>

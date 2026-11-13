@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 12 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 13 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-13.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-13.html</guid>
+      <pubDate>Fri, 13 Nov 2026 01:00:00 GMT</pubDate>
+      <description>英伟达在四天内完成换帅：黄仁勋辞去总裁、CEO 与董事职务，CFO 克雷斯接任临时 CEO，董事会首次设主席。同一天，谷歌把「决策」从生成里拆出来做成一个 API；百度用稀疏注意力压搜索推理成本、用三态建模压视频成本；火山引擎把 Seedance 打进 0.99 元/秒。安全侧的反面教材是 3.7 万个 Grok 生成的应用：默认「知道链接就能进」，等于把内部工具挂上公网。算力、单价、权限，三个默认值今天同时被重设。 英伟达宣布黄仁勋辞去 CEO 与董事职务、即刻生效：CFO 克雷斯任临时 CEO，董事会首次设主席</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 12 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-12.html</link>

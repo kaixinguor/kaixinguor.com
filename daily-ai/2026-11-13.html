@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 13 日</title>
+<meta name="description" content="2026-11-13 AI 日报第 019 期：英伟达宣布黄仁勋辞去 CEO 与董事职务、即刻生效，CFO 克雷斯出任临时 CEO，新思科技前 CEO 哈维·琼斯出任首位董事会主席；谷歌发布 Gemini Decision 1，单次最多 1000 个问题、输入每百万 token 0.10 美元；火山引擎上线 Seedance 2.5 flash，720P 视频约 0.99 元/秒；百度发布文心闪电与文心一镜两款应用模型；Grok Bot 升级 1.0，主动领活并进入会议；永达汽车采购 400 台优必选 U1 Pro；3.7 万个 Grok 生成应用里 94.7% 无需登录即可访问。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 13 日">
+<meta property="og:description" content="2026-11-13 AI 日报第 019 期：英伟达宣布黄仁勋辞去 CEO 与董事职务、即刻生效，CFO 克雷斯出任临时 CEO，新思科技前 CEO 哈维·琼斯出任首位董事会主席；谷歌发布 Gemini Decision 1，单次最多 1000 个问题、输入每百万 token 0.10 美元；火山引擎上线 Seedance 2.5 flash，720P 视频约 0.99 元/秒；百度发布文心闪电与文心一镜两款应用模型；Grok Bot 升级 1.0，主动领活并进入会议；永达汽车采购 400 台优必选 U1 Pro；3.7 万个 Grok 生成应用里 94.7% 无需登录即可访问。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-13.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-12T09:17:00+08:00/2026-11-13T09:16:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-13.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-13.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-13-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../psychology.html">心理学日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-13-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 019 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 13 日<span class="weekday">FRI</span></h1>
+    <p class="deck">英伟达在四天内完成换帅：黄仁勋辞去总裁、CEO 与董事职务，CFO 克雷斯接任临时 CEO，董事会首次设主席。同一天，谷歌把「决策」从生成里拆出来做成一个 API；百度用稀疏注意力压搜索推理成本、用三态建模压视频成本；火山引擎把 Seedance 打进 0.99 元/秒。安全侧的反面教材是 3.7 万个 Grok 生成的应用：默认「知道链接就能进」，等于把内部工具挂上公网。<em>算力、单价、权限，三个默认值今天同时被重设。</em></p>
+    <div class="metabar"><span class="pill">第 019 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/12 09:17 – 11/13 09:16</span>
+      <span class="dot"></span>
+      <span>7 条</span>
+      <span class="dot"></span>
+      <span>阅读约 9 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#capital"><span class="n">01</span>行业与资本</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#products"><span class="n">03</span>产品与智能体</a>
+        <a href="#research"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied"><span class="n">05</span>具身智能</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>英伟达董事会 11 月 12 日宣布黄仁勋辞去总裁、CEO 与董事职务，即刻生效；CFO 科莱特·克雷斯出任临时 CEO，董事会启动正式遴选，新思科技前 CEO 哈维·琼斯出任公司史上首位董事会主席。</b>公告未说明辞职原因；三季报按原计划于 11 月 17 日发布，克雷斯将首次以临时 CEO 身份出席。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>谷歌发布 Gemini Decision 1：一次最多 1000 个问题、256K token 多模态输入，输入每百万 token 0.10 美元、输出免费，端到端延迟 150–250 毫秒。</b>同一天火山引擎上线 Seedance 2.5 flash，720P 视频约 0.99 元/秒，比 Seedance 2.5 低约 34%。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>安全公司 Claroc 发现，37,571 个仍在运营的 Grok Build 应用里 35,578 个（94.7%）无需登录即可访问，含 X 与 SpaceXSI 员工自建的 24 个。</b>默认「知道链接即可访问」加上可被 Passive DNS 枚举的 grok.me 子域是主因，AI 生成的鉴权代码还有校验顺序错误。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 22:07</span>
+          <a class="src" href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener noreferrer">NVIDIA Newsroom ↗</a>
+        </div>
+        <h3>英伟达宣布黄仁勋辞去 CEO 与董事职务、即刻生效：CFO 克雷斯任临时 CEO，董事会首次设主席</h3>
+        <p>11 月 12 日，英伟达董事会公告：联合创始人黄仁勋辞去总裁、首席执行官及董事会成员职务，即刻生效。执行副总裁兼首席财务官科莱特·克雷斯（Colette Kress）出任临时 CEO，同时继续兼任 CFO，直至正式继任者确定；董事会已启动遴选程序，内部与外部候选人都在考虑之列。公告没有说明辞职原因。</p>
+        <p>董事会同时任命哈维·琼斯（Harvey C. Jones）为公司史上首位董事会主席。琼斯有 30 多年科技行业经营与投资经历，曾任新思科技（Synopsys）CEO 与执行董事长。他在公告中表示，克雷斯「深度了解公司的业务、客户、运营与财务状况」，董事会预计「公司运营、客户承诺与产品路线图不会中断」。克雷斯则称，将与管理团队一起在黄仁勋过去 33 年建立的基础上继续推进。</p>
+        <p>这场交接在四天内走完：11 月 8 日董事会宣布就媒体关于黄仁勋的报道启动独立调查，由独立董事组成委员会；11 月 10 日聘请美国纽约南区前代理联邦检察官 Joon H. Kim 及其所在的 Wachtell, Lipton, Rosen &amp; Katz 开展调查；12 日即宣布辞职。据 Bernama 援引安纳杜卢通讯社报道，调查针对的是「他成为外国情报行动目标」的相关报道；黄仁勋 8 日向员工承认对婚姻不忠，并表示将配合调查。</p>
+        <p>公司称 2027 财年第三季度财报按原计划于 11 月 17 日发布，克雷斯将首次以临时 CEO 身份出席业绩电话会。</p>
+        <p class="why"><b>看点</b>对算力采购方，这份公告能拿到的保证只有一句「路线图不中断」，真正的变量在资本配置：黄仁勋过去几年把英伟达从卖 GPU 推到卖整机柜、卖网络、投生态、做算力融资安排，这套扩张靠的是创始人权威；换成财务背景的临时 CEO 加一位职业经理人董事长，最先被重新审视的通常不是份额而是回报率。11 月 17 日的电话会看三件事：四季度指引、下一代平台的出货节奏、对客户算力承诺的口径有没有变。<br><b>另一个视角</b>已签合同不会因为换人失效，但供应商在长约谈判中的姿态会变——云厂商会试探新管理层是否愿意在价格和产能锁定上让步，这直接决定明年的单位算力成本。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 11:55</span>
+          <a class="src" href="https://gigazine.net/gsc_news/en/20261112-gemini-decisions-1" target="_blank" rel="noopener noreferrer">GIGAZINE ↗</a>
+        </div>
+        <h3>谷歌发布 Gemini Decision 1：单次最多 1000 个问题，输入每百万 token 0.10 美元、输出免费</h3>
+        <p>谷歌发布 Gemini Decision 1，并在 AI Studio 开放 Gemini Decisions API 的预览。它不逐 token 生成文本，而是一次前向对候选选项打分，返回概率与置信度，面向的是「闭集判断」——分类、路由、排序、评分这类必须给出确定答案、而不是一段话的任务。</p>
+        <p>接口一次可传入最多 256K token 的多模态材料（文本、图像、音频、视频、PDF），并附带最多 1000 个彼此独立的问题。延迟上，模型自身计算的中位数是 50–100 毫秒，端到端 150–250 毫秒；官方称问题数从 1 增加到 100，延迟几乎不变。定价是每百万输入 token 0.10 美元，输出不计费——按谷歌的说法，约为走 Interactions API 的 Gemini 3.5 Flash-Lite 成本的五分之一。</p>
+        <p>外部评测要分开看。Artificial Analysis 的 Decision Index v2.1 给它 66 分，与 Elephant 9B、Jev 1.14 相当，比 Drex Max v1.1 和 GLiDE v1.2 低 7 分；谷歌自己强调的是最低校准误差和测试全项领先。目前它已在 AI Studio、Gemini API 与演示应用中可用。</p>
+        <p class="why"><b>看点</b>把 decode 从链路里拿掉，是这一代最直接的成本杠杆：1000 个问题共享一次前向，等于把批量打标、批量评测的吞吐抬高一到两个数量级。门槛在闭集假设——选项里没有正确答案时，它不会像生成模型那样含糊其辞，而会给出一个高置信度的错答案；上线前该做的是校准曲线与拒答阈值，不是刷准确率。对 agent 路由和质检流水线，这类模型比通用大模型更划算；对开放式写作，它没有用武之地。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 14:54</span>
+          <a class="src" href="https://finance.sina.com.cn/roll/2026-11-12/doc-iniynife8484368.shtml" target="_blank" rel="noopener noreferrer">新浪科技 ↗</a>
+        </div>
+        <h3>火山引擎上线 Seedance 2.5 flash：720P 视频约 0.99 元/秒，比 2.5 便宜约 34%</h3>
+        <p>11 月 12 日下午，火山引擎发布视频生成模型 Seedance 2.5 flash。官方称它在生成效果接近 Seedance 2.5 的同时，生成速度提升一倍，定价与上一代 Seedance 2.0 持平：以 720P 文生视频、图生视频为例，约 0.99 元/秒，比 Seedance 2.5 低约 34%。</p>
+        <p>规格上，单段最长 30 秒，单次最多输入 10 张图片、5 段视频和 5 段音频，输出提供 480P 与 720P 两档。即日起陆续在即梦、LibTV、Updream、Creao AI、TapNow 等平台上线，API 计划 11 月 15 日在火山方舟开放。</p>
+        <p>Seedance 2.5 系列由此分成两条：旗舰版强调视听品质，配 Draft 样片模式——先出样片再生成 1080P 正片，并计划上线 4K；flash 版强调速度与成本，面向高频创作和批量生产。</p>
+        <p class="why"><b>看点</b>按秒计价把视频生成拉回「素材成本」的算法：30 秒成片约 30 元，制作方第一次能像算素材费一样算生成费。速度翻倍通常来自蒸馏与采样步数压缩，代价往往落在细节一致性和长镜头稳定性上；官方说「效果接近 2.5」，但没有公开第三方偏好分数，批量生产前应固定一组 seed 做 A/B。真正限制工作流的是 30 秒上限：更长的片子仍要拼接，接缝处的一致性才是产能瓶颈。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 20:47</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/12/content_612433.html" target="_blank" rel="noopener noreferrer">科技日报 ↗</a>
+        </div>
+        <h3>百度发布文心闪电与文心一镜：一个压搜索推理成本，一个压视频成本</h3>
+        <p>11 月 12 日百度世界 2026 主论坛上，百度发布两款「应用模型」并同步上线百度智能云千帆，面向企业客户与合作伙伴开放 API：文心闪电深度思考模型与文心一镜微表情大模型。</p>
+        <p>文心闪电最初是为百度搜索做的。搜索要同时处理语音、图像、文字输入，既要理解复杂需求、做推理与工具调用，又要撑住海量并发。百度称对 Transformer 架构做了改造，提出稀疏注意力 BSA，在解码过程中按历史输出与状态做反馈式 KV 压缩，在效果与历史记忆存储开销之间取折中；配合昆仑芯可在单机八卡上做高速推理，推理引擎成本降低 30% 以上。</p>
+        <p>文心一镜面向高情感表现力的视频创作：文本、视觉、语音三态一体建模，支持最长 4000 字文本驱动，刻画面部表情、肢体动作与情绪变化，并做了篇章级配音，主攻播客与短漫剧。百度称其视频生成成本较业界低 50%，支持分钟级生产，极速版可做到 1:1 实时——1 分钟视频在 1 分钟内生成。</p>
+        <p class="why"><b>看点</b>两个数字最值得追：BSA 的压缩率与长上下文保真度之间的曲线，以及「单机八卡」对应的具体型号与并发数。KV 压缩换成本是通用做法，难点在压缩之后检索类任务会不会掉点，这要拿长文档问答去测，而不是短 prompt。1:1 实时意味着推理吞吐必须跟上视频时长，瓶颈在显存带宽与解码器调度而非参数量；如果这个指标在客户侧能复现，短剧和口播生产线的成本结构会被改写。成本降幅都是厂商口径，采购前应按自己的片单跑一轮。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 10:47</span>
+          <a class="src" href="https://eu.36kr.com/en/p/4066127028574089" target="_blank" rel="noopener noreferrer">36 氪 ↗</a>
+        </div>
+        <h3>Grok Bot 升级 1.0：主动领活、进会议、按席位收费</h3>
+        <p>11 月 12 日凌晨，SpaceXSI（原 xAI）发布 Grok Bot 1.0，三条主线：Bot 会主动发现需要处理的工作，而不是等人派活；能进入 Google Meet、Zoom、Microsoft Teams 会议；团队可以共享同一个 Bot，多个 Bot 之间能互相派活。</p>
+        <p>会议能力目前是「文本参与」：把会议链接发给 Bot、由主持人放行后，它旁听讨论、在聊天窗口回答问题，会后整理纪要与待办；接上日历后还能自动加入排期会议。官方文档没有说它可以像人一样语音发言。团队 Bot 可加进 Slack 或 Teams 群，跟着多人讨论了解分工，在合适时机补信息或接手任务；Bot 从普通成员那里学到的新经验，要经创建者或管理员审批，才会更新为团队共享知识。</p>
+        <p>价格按席位分三档：Premium 30 美元、Super 100 美元、Ultra 200 美元每人每月；Team Bot 只对企业用户开放，会议功能个人 Ultra 也能用。官方没有披露任务成功率、提速幅度或资源消耗的对比数据。</p>
+        <p class="why"><b>看点</b>主动型 agent 的核心不是能力而是权限：谁批准它「自己接活」、哪些操作必须人工确认、它记住的东西算谁的。1.0 把「先问再执行」和「学习内容需审批」做成了产品机制，这两层既是护栏也是摩擦点——审批太松等于给 agent 一张空白授权，太紧就退化成聊天机器人。按席位收费、谁被回复谁扣额度，让成本可归因，这是企业采购最在意的部分。真正要压测的是跨会话记忆：这次记住的是本团队的规范，下次会不会被带到不该用的场景里去。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12</span>
+          <a class="src" href="https://www.thaicert.or.th/en/2026/11/12/more-than-35000-grok-ai-built-applications-publicly-exposed-putting-corporate-data-and-passwords-at-risk/" target="_blank" rel="noopener noreferrer">ThaiCERT ↗</a>
+        </div>
+        <h3>3.7 万个 Grok 生成的应用里，94.7% 不用登录就能打开</h3>
+        <p>据 The Hacker News 报道，安全公司 Claroc 调查了用 SpaceXSI 的 Grok Build 生成的应用：在仍处于活跃状态的 37,571 个应用里，35,578 个（94.7%）无需任何身份验证即可公开访问。其中包括 X 与 SpaceXSI 员工自己创建的 24 个应用，以及至少 30 家其他机构的内部信息，涉及建筑、能源、医疗与国防，其中 6 家是财富 500 强。</p>
+        <p>原因有两层。一层是默认值：发布时访问设置默认为「Anyone with the link」，而每个应用都挂在 grok.me 的子域下，子域解析会进入 Passive DNS 数据库，第三方可以按模式枚举出来——链接「不好猜」并不等于「找不到」。另一层是 AI 生成的鉴权代码本身：研究者自建测试应用时发现，Grok 写的登录逻辑会在校验之前先把登录者加入团队，于是校验永远通过，一个外部 Google 账号就能查看、修改、删除记录。</p>
+        <p>暴露内容的构成，据研究者统计，约十分之一的应用含商业或个人信息，约 2% 属于高到严重风险，包括一家医院集团 3500 多名员工的名单、一份重症患者简报、消防部门的实时排班表，以及一个把全体员工口令明文写在代码里的工时系统。SpaceXSI 在接到报告后下架了自家员工的 24 个应用，其他用户的应用据报道仍在线上。</p>
+        <p class="why"><b>看点</b>「链接即权限」在可枚举的子域上等价于公开，这是把内部工具放上公网时最容易漏掉的一步。对做 AI 生成应用的团队，三条检查比看演示有用：默认权限改成「仅自己」、用公司域外账号实测一次鉴权、扫一遍前端脚本里的口令与邮箱。更值得记住的是那个鉴权顺序错误——页面上有「用 Google 登录」的按钮，看起来像做了鉴权，实际把校验写在了授权之后；AI 生成的代码最容易栽在这种控制流顺序上，而这类错误不会被「能跑通」的测试发现。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 10:55</span>
+          <a class="src" href="https://stcn.com/article/detail/4333339.html" target="_blank" rel="noopener noreferrer">证券时报 ↗</a>
+        </div>
+        <h3>永达汽车采购 400 台优必选 U1 Pro，优必选计划年内交付</h3>
+        <p>11 月 11 日，优必选与永达汽车签署战略合作协议。按协议，永达将采购 400 台优必选超仿生人形机器人 U1 Pro，优必选计划于今年内完成交付。永达汽车是豪华车与新能源汽车的经销服务商，在港交所上市。</p>
+        <p class="why"><b>看点</b>这是一张渠道侧的订单，不是产线试点：4S 店、展厅、售后接待是天然的人形机器人场景——动作相对标准化、话术可编排、客户对新奇体验的容忍度高。400 台的关键不在数字，而在年内交付意味着产能与验收节奏必须同时成立：超仿生面部的良率、交互延迟、门店网络的部署与运维，任何一环掉链子都会把交付推到明年。对人形机器人公司，渠道订单比 demo 更能验证单位经济；对采购方，真正的账是「一台机器人替掉多少接待工时」，这要等首批门店跑完一个季度才有答案。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 12 日 09:17 至 11 月 13 日 09:16（北京时间）之间发布的报道，共 7 条。检索时间 11/13 09:16。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 019 · 24h window · Generated 2026-11-13 09:16</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../psychology.html">心理学日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

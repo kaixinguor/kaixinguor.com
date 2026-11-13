@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 13, 2026</title>
+<meta name="description" content="AI Daily, November 13, 2026, Issue 019: NVIDIA says Jensen Huang has resigned as president, CEO and director effective immediately; CFO Colette Kress is interim CEO and Harvey Jones becomes the board&#39;s first chair. Google ships Gemini Decision 1, scoring up to 1,000 questions per call at $0.10 per million input tokens. Volcano Engine cuts Seedance 2.5 flash to about 0.99 yuan per second of 720p video. Baidu releases ERNIE Lightning and ERNIE Yijing. Grok Bot 1.0 takes on work, joins meetings and bills per seat. Yongda orders 400 Unitree U1 Pro humanoids. And 94.7% of 37,571 Grok-built apps can be opened without signing in.">
+<meta property="og:title" content="AI Daily · November 13, 2026">
+<meta property="og:description" content="AI Daily, November 13, 2026, Issue 019: NVIDIA says Jensen Huang has resigned as president, CEO and director effective immediately; CFO Colette Kress is interim CEO and Harvey Jones becomes the board&#39;s first chair. Google ships Gemini Decision 1, scoring up to 1,000 questions per call at $0.10 per million input tokens. Volcano Engine cuts Seedance 2.5 flash to about 0.99 yuan per second of 720p video. Baidu releases ERNIE Lightning and ERNIE Yijing. Grok Bot 1.0 takes on work, joins meetings and bills per seat. Yongda orders 400 Unitree U1 Pro humanoids. And 94.7% of 37,571 Grok-built apps can be opened without signing in.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-13-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-12T09:17:00+08:00/2026-11-13T09:16:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-13-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-13.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-13-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../education.html">Education Daily</a>
+      <a href="../psychology.html">Psychology Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-13.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 019</span>
+    </div>
+    <h1 class="date">November 13, 2026<span class="weekday">FRI</span></h1>
+    <p class="deck">Nvidia changed leaders in four days: Jensen Huang resigned as president, CEO and director, CFO Colette Kress is interim CEO, and the board has a chair for the first time. The same day, Google pulled decision-making out of text generation and shipped it as an API; Baidu squeezed search inference with sparse attention and video cost with tri-modal modelling; Volcano Engine pushed Seedance to 0.99 yuan a second. The cautionary tale sits on the safety side: 37,000 Grok-built apps left on &ldquo;anyone with the link&rdquo;. <em>Compute, unit price and permissions — three defaults were reset at once.</em></p>
+    <div class="metabar"><span class="pill">Issue 019</span>
+      <span class="dot"></span>
+      <span>Window Nov 12, 09:17 – Nov 13, 09:16</span>
+      <span class="dot"></span>
+      <span>7 stories</span>
+      <span class="dot"></span>
+      <span>9 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#capital"><span class="n">01</span>Industry &amp; Capital</a>
+        <a href="#models"><span class="n">02</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">04</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">05</span>Embodied AI</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>NVIDIA&rsquo;s board said on November 12 that Jensen Huang has resigned as president, CEO and director, effective immediately; CFO Colette Kress becomes interim CEO while the board searches for a permanent successor, and former Synopsys chief Harvey C. Jones becomes the company&rsquo;s first board chair.</b> The announcement gives no reason. Third-quarter results stay scheduled for November 17, when Kress will face investors for the first time in the role.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Google releases Gemini Decision 1: up to 1,000 questions per call over 256K tokens of mixed media, $0.10 per million input tokens, free output, 150&ndash;250ms end to end.</b> The same afternoon, Volcano Engine put Seedance 2.5 flash on sale at roughly 0.99 yuan per second of 720p video, about 34% below Seedance 2.5.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Security firm Claroc found that 35,578 of 37,571 live Grok Build apps — 94.7% — could be opened without signing in, including 24 built by X and SpaceXSI staff.</b> The default &ldquo;anyone with the link&rdquo; setting plus enumerable grok.me subdomains is the main cause, and AI-written auth code also checks membership after adding the visitor.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 22:07</span>
+          <a class="src" href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener noreferrer">NVIDIA Newsroom ↗</a>
+        </div>
+        <h3>NVIDIA says Jensen Huang has resigned as CEO and director, effective immediately; CFO Kress steps in, board gets its first chair</h3>
+        <p>On November 12 NVIDIA&rsquo;s board announced that co-founder Jensen Huang has resigned as president, chief executive officer and a member of the board, effective immediately. Executive Vice President and Chief Financial Officer Colette Kress will serve as interim CEO while keeping her CFO duties until a permanent successor is named. The board has begun a search and will consider internal and external candidates. The announcement gives no reason for the resignation.</p>
+        <p>The board also appointed Harvey C. Jones as its first-ever chair. Jones has more than 30 years of operating and investing experience in technology, including stints as CEO and executive chairman of Synopsys. In the release he said Kress has a deep understanding of the business, customers, operations and financial position, and that the board expects &ldquo;the company&rsquo;s operations, customer commitments and product roadmap to continue without interruption&rdquo;. Kress said she would build on the foundation Huang laid over 33 years.</p>
+        <p>The handover took four days. On November 8 the board announced an independent investigation into media reports about Huang, run by a committee of independent directors; on November 10 it retained former acting U.S. Attorney for the Southern District of New York Joon H. Kim and Wachtell, Lipton, Rosen &amp; Katz; on the 12th Huang was gone. According to Bernama, citing Anadolu Agency, the inquiry concerns reports that he had been targeted by a foreign intelligence operation. Huang told employees on the 8th that he had been unfaithful to his wife and would cooperate with the investigation.</p>
+        <p>NVIDIA said its fiscal 2027 third-quarter results will be published on November 17 as previously scheduled, followed by an earnings call at which Kress will speak as interim CEO.</p>
+        <p class="why"><b>Why it matters</b>For anyone buying compute, the only guarantee in the release is that the roadmap continues. The real variable is capital allocation. Huang spent the last few years pushing NVIDIA from selling GPUs to selling whole racks, networking, ecosystem stakes and compute-financing arrangements, and that expansion ran on founder authority. With a finance chief as interim CEO and a career operator as chair, the first thing that gets re-examined is usually return on capital, not share. Watch three things on the 17th: fourth-quarter guidance, the shipping cadence of the next platform, and whether the language around customer compute commitments shifts.<br><b>The other angle</b>Signed contracts survive a change at the top, but a supplier&rsquo;s posture in long-term negotiations does not. Cloud buyers will test whether the new management will concede on price and capacity lock-ins, and that feeds straight into next year&rsquo;s cost per unit of compute.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 11:55</span>
+          <a class="src" href="https://gigazine.net/gsc_news/en/20261112-gemini-decisions-1" target="_blank" rel="noopener noreferrer">GIGAZINE ↗</a>
+        </div>
+        <h3>Google ships Gemini Decision 1: up to 1,000 questions per call, $0.10 per million input tokens and free output</h3>
+        <p>Google has released Gemini Decision 1 and opened a preview of the Gemini Decisions API in AI Studio. Instead of generating text token by token, it scores candidate options in a single forward pass and returns probabilities and confidence. It is built for closed-set decisions — classification, routing, ranking, grading — tasks that need one answer rather than a paragraph.</p>
+        <p>A single call can carry up to 256K tokens of mixed material (text, images, audio, video, PDF) plus up to 1,000 independent questions. Model compute sits at a 50&ndash;100ms median and 150&ndash;250ms end to end, and Google says latency barely moves when the question count rises from 1 to 100. Pricing is $0.10 per million input tokens with output billed at nothing — by Google&rsquo;s account about one-fifth the cost of Gemini 3.5 Flash-Lite through the Interactions API.</p>
+        <p>Outside scores need context. Artificial Analysis puts it at 66 on its Decision Index v2.1, level with Elephant 9B and Jev 1.14 and seven points behind Drex Max v1.1 and GLiDE v1.2; Google itself emphasises the lowest calibration error and top scores across the suite. It is available in AI Studio, the Gemini API and a set of demo apps.</p>
+        <p class="why"><b>Why it matters</b>Removing decoding is the bluntest cost lever in this generation: 1,000 questions riding on one forward pass lifts the throughput of bulk labelling and bulk evaluation by one to two orders of magnitude. The catch is the closed-set assumption. When the right answer is not among the options, it will not hedge the way a generative model does — it will return a confident wrong one. So the work before deployment is calibration curves and rejection thresholds, not leaderboard chasing. For agent routing and QA pipelines this beats a general model on price; for open-ended writing it has nothing to offer.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 14:54</span>
+          <a class="src" href="https://finance.sina.com.cn/roll/2026-11-12/doc-iniynife8484368.shtml" target="_blank" rel="noopener noreferrer">Sina Tech ↗</a>
+        </div>
+        <h3>Volcano Engine puts Seedance 2.5 flash on sale at about 0.99 yuan per second of 720p video, roughly 34% below 2.5</h3>
+        <p>On the afternoon of November 12 Volcano Engine released Seedance 2.5 flash, a video generation model it says matches Seedance 2.5 on quality while doubling generation speed, at the same price as the previous flagship Seedance 2.0: about 0.99 yuan per second for 720p text-to-video and image-to-video, some 34% below Seedance 2.5.</p>
+        <p>Clips run up to 30 seconds. A single request accepts up to 10 images, five videos and five audio tracks, and output comes in 480p or 720p. The model is rolling out on platforms including Jimeng, LibTV, Updream, Creao AI and TapNow, with the API scheduled to open on Volcano Ark on November 15.</p>
+        <p>The Seedance 2.5 line now splits in two. The flagship keeps the emphasis on audiovisual quality, with a Draft mode that renders a sample before a 1080p final and 4K on the roadmap. The flash version trades that for speed and cost, aimed at high-volume production and frequent iteration.</p>
+        <p class="why"><b>Why it matters</b>Per-second pricing drags video generation back to the arithmetic of stock footage: a 30-second cut costs about 30 yuan, so for the first time a production house can budget generation the way it budgets assets. Doubling speed usually comes from distillation and fewer sampling steps, and the bill tends to land on fine detail and long-shot stability. &ldquo;Close to 2.5&rdquo; is the vendor&rsquo;s own framing with no third-party preference score published, so fix a seed set and A/B before committing a pipeline. The harder ceiling is the 30-second limit: anything longer still needs stitching, and consistency across the seam is where capacity actually runs out.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 20:47</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/12/content_612433.html" target="_blank" rel="noopener noreferrer">Science and Technology Daily ↗</a>
+        </div>
+        <h3>Baidu releases ERNIE Lightning and ERNIE Yijing, one to cut inference cost and one to cut video cost</h3>
+        <p>At its Baidu World 2026 keynote on November 12, Baidu released two application models on Baidu AI Cloud&rsquo;s Qianfan platform with APIs opened to enterprise customers and partners: ERNIE Lightning, a deep-reasoning model, and ERNIE Yijing, a micro-expression video model.</p>
+        <p>ERNIE Lightning was built for Baidu Search, which has to take voice, image and text input, understand complex requests, reason and call tools, and still absorb enormous concurrency. Baidu says it reworked the Transformer with a sparse attention scheme it calls BSA that compresses the KV history during decoding based on prior outputs and state, trading off between quality and the memory cost of keeping that history. Paired with Kunlun chips it runs high-speed inference on a single eight-card node, cutting inference engine cost by more than 30%.</p>
+        <p>ERNIE Yijing targets expressive video: text, vision and speech modelled together, driven by scripts of up to 4,000 characters, rendering facial expression, body movement and emotional shifts, with chapter-level dubbing aimed at podcasts and short-form drama. Baidu says video generation costs about 50% less than the industry norm, supports minute-level production, and that its fastest tier runs at 1:1 real time — a one-minute clip generated in one minute.</p>
+        <p class="why"><b>Why it matters</b>Two numbers are worth chasing: the curve between BSA&rsquo;s compression ratio and long-context fidelity, and what &ldquo;a single eight-card node&rdquo; actually means in chip model and concurrency. Compressing KV cache to save money is standard practice; the difficulty is whether retrieval-style tasks lose accuracy after compression, which needs long-document question answering to test, not short prompts. 1:1 real time means throughput must keep pace with clip length, and the bottleneck there is memory bandwidth and decoder scheduling rather than parameter count. If customers can reproduce that figure, the cost structure of short-drama and talking-head pipelines changes. The cost reductions are vendor claims; run your own shot list through the model before signing.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 10:47</span>
+          <a class="src" href="https://eu.36kr.com/en/p/4066127028574089" target="_blank" rel="noopener noreferrer">36Kr ↗</a>
+        </div>
+        <h3>Grok Bot 1.0 finds work on its own, sits in meetings and bills per seat</h3>
+        <p>Early on November 12 SpaceXSI, formerly xAI, released Grok Bot 1.0 with three threads: the bot identifies work that needs doing instead of waiting to be assigned, it can join Google Meet, Zoom and Microsoft Teams calls, and teams can share one bot while several bots hand tasks to each other.</p>
+        <p>Meeting attendance is textual for now. Send the bot a meeting link, the host admits it, and it follows the discussion, answers questions in the chat window and writes up decisions and to-dos afterwards; once connected to a calendar it joins scheduled meetings on its own. The documentation does not claim it speaks aloud like a person. Team bots can be added to Slack or Teams channels, follow multi-person discussions to learn who owns what, and offer information or take over tasks at the right moment. Anything a bot learns from an ordinary member has to be approved by its creator or an administrator before it becomes shared team knowledge.</p>
+        <p>Pricing runs in three per-seat tiers: Premium at $30, Super at $100 and Ultra at $200 per person per month. Team bots are limited to team and enterprise accounts, while the meeting feature is also available to individual Ultra subscribers. The company has not published comparative data on task success rates, speed gains or resource consumption.</p>
+        <p class="why"><b>Why it matters</b>The hard part of a proactive agent is not capability but permission: who approves it taking work, which actions still require a human, and whose memory it is holding. Version 1.0 turns &ldquo;ask before acting&rdquo; and &ldquo;learning needs sign-off&rdquo; into product mechanics, which are both guardrails and friction — too loose and you have handed the agent a blank mandate; too tight and it degrades into a chatbot. Per-seat pricing where the bot&rsquo;s reply is charged to the person who asked makes cost attributable, which is what enterprise buyers care about most. What needs stress testing is cross-session memory: this time it learned your team&rsquo;s conventions, and next time it may carry them somewhere they do not belong.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12</span>
+          <a class="src" href="https://www.thaicert.or.th/en/2026/11/12/more-than-35000-grok-ai-built-applications-publicly-exposed-putting-corporate-data-and-passwords-at-risk/" target="_blank" rel="noopener noreferrer">ThaiCERT ↗</a>
+        </div>
+        <h3>94.7% of 37,571 Grok-built apps open without a login</h3>
+        <p>According to The Hacker News, security firm Claroc examined apps built with SpaceXSI&rsquo;s Grok Build: of 37,571 that were still live, 35,578 — 94.7% — could be reached publicly with no authentication at all. They included 24 apps built by staff at X and at SpaceXSI itself, plus internal information from at least 30 other organisations across construction, energy, healthcare and defence, six of them Fortune 500 companies.</p>
+        <p>Two things went wrong. The first is a default: publishing left access set to &ldquo;anyone with the link&rdquo;, and every app sits on a grok.me subdomain whose resolution lands in passive DNS databases that outsiders can enumerate by pattern — an address being hard to guess is not the same as being unfindable. The second is the AI-written auth code itself. Building their own test apps, the researchers found Grok&rsquo;s sign-in flow added each visitor to the team before checking whether they belonged, so the check always passed and an outside Google account could view, edit and delete records.</p>
+        <p>By the researchers&rsquo; estimate about one in ten of the open apps held business or personal information and roughly 2% rated high to critical, including a hospital group&rsquo;s searchable list of more than 3,500 employees, an intensive-care briefing on one patient, a fire department&rsquo;s live shift board, and a contractor&rsquo;s timesheet with every employee password in plain text. SpaceXSI took down the 24 staff apps after being notified; other users&rsquo; apps reportedly stayed online.</p>
+        <p class="why"><b>Why it matters</b>&ldquo;Link equals permission&rdquo; is equivalent to public once the subdomain is enumerable, and that is the step most often missed when an internal tool is pushed onto the open web. For teams using AI app builders, three checks beat any demo: set the default to owner-only, test authentication with an account outside your domain, and scan front-end scripts for passwords and email addresses. The lesson worth keeping is the ordering bug — the page had a &ldquo;continue with Google&rdquo; button and looked authenticated, while the membership check ran after the user was already added. AI-written code fails on control-flow order more than on syntax, and no smoke test that only proves the app runs will catch it.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 10:55</span>
+          <a class="src" href="https://stcn.com/article/detail/4333339.html" target="_blank" rel="noopener noreferrer">Securities Times ↗</a>
+        </div>
+        <h3>Yongda Auto orders 400 Unitree U1 Pro humanoids, with delivery planned this year</h3>
+        <p>On November 11 Unitree Robotics and Yongda Auto signed a strategic cooperation agreement under which Yongda will buy 400 Unitree U1 Pro bionic humanoid robots, with Unitree planning to deliver within this year. Yongda Auto is a Hong Kong-listed dealer group for luxury and new-energy vehicles.</p>
+        <p class="why"><b>Why it matters</b>This is a channel-side order, not a factory pilot. Showrooms, dealership floors and service reception are natural settings for a humanoid: the motions are fairly standardised, the scripts can be authored, and customers tolerate novelty. The number is not the point; delivering 400 units inside the year means production capacity and acceptance both have to hold at once — yield on the bionic face, interaction latency, and deployment and maintenance across a dealer network, any one of which pushes delivery into next year. For a humanoid maker, a channel order tests unit economics far better than a demo. For the buyer, the real question is how many reception hours one robot replaces, and that answer only arrives after the first stores have run a full quarter.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 12, 09:17 and November 13, 09:16 (Beijing time): 7 stories. Compiled at 11/13 09:16.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 019 · 24h window · Generated 2026-11-13 09:16</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../education.html">Education Daily</a>
+        <a href="../psychology.html">Psychology Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

@@ -70,17 +70,17 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 018 期</span>
+          <span class="issue-tag">第 019 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 12 日<span class="weekday">THU</span></h1>
-        <p class="deck">同一天，三家中国模型厂商各推了一步：阿里把 Qwen4-Max 的上下文拉到 100 万 token、输出上限 39 万 token，只放在 Token Plan 里两周；百度用 2800 亿总参数、140 亿激活换 200 token/s 的出词速度；MiniMax 把 4K 图像生成压进 10 秒并开放权重。海外的两条线是「往下游走」：DeepMind 把基因模型做到单细胞分辨率，Fractile 拿 7.2 亿美元押一条不依赖 HBM 的芯片路线。<em>上下文、单价、带宽，三条曲线今天同时拐了一下。</em></p>
-        <div class="metabar"><span class="pill">第 018 期</span>
+        <h1 class="date">2026 年 11 月 13 日<span class="weekday">FRI</span></h1>
+        <p class="deck">英伟达在四天内完成换帅：黄仁勋辞去总裁、CEO 与董事职务，CFO 克雷斯接任临时 CEO，董事会首次设主席。同一天，谷歌把「决策」从生成里拆出来做成一个 API；百度用稀疏注意力压搜索推理成本、用三态建模压视频成本；火山引擎把 Seedance 打进 0.99 元/秒。安全侧的反面教材是 3.7 万个 Grok 生成的应用：默认「知道链接就能进」，等于把内部工具挂上公网。<em>算力、单价、权限，三个默认值今天同时被重设。</em></p>
+        <div class="metabar"><span class="pill">第 019 期</span>
       <span class="dot"></span>
-      <span>窗口 11/11 09:12 – 11/12 09:17</span>
+      <span>窗口 11/12 09:17 – 11/13 09:16</span>
       <span class="dot"></span>
       <span>7 条</span>
       <span class="dot"></span>
-      <span>阅读约 8 分钟</span></div>
+      <span>阅读约 9 分钟</span></div>
       </div>
     </header>
 
@@ -88,11 +88,11 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-zh"><span class="n">00</span>速览</a>
-        <a href="#models-zh"><span class="n">01</span>模型与能力</a>
-        <a href="#products-zh"><span class="n">02</span>产品与智能体</a>
-        <a href="#research-zh"><span class="n">03</span>研究与安全</a>
-        <a href="#embodied-zh"><span class="n">04</span>具身智能</a>
-        <a href="#capital-zh"><span class="n">05</span>行业与资本</a>
+        <a href="#capital-zh"><span class="n">01</span>行业与资本</a>
+        <a href="#models-zh"><span class="n">02</span>模型与能力</a>
+        <a href="#products-zh"><span class="n">03</span>产品与智能体</a>
+        <a href="#research-zh"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied-zh"><span class="n">05</span>具身智能</a>
         </div>
       </div>
     </nav>
@@ -101,21 +101,46 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>阿里上线 Qwen4-Max 预览版：100 万 token 上下文、393,216 token 输出上限，只卖 Token Plan，11 月 25 日后下线。</b>兼容 OpenAI 与 Anthropic 两套接口，思考默认开启；官方文档没给参数量、跑分和单价，只给了一个两周的预览窗口。</p>
+      <p><b>英伟达董事会 11 月 12 日宣布黄仁勋辞去总裁、CEO 与董事职务，即刻生效；CFO 科莱特·克雷斯出任临时 CEO，董事会启动正式遴选，新思科技前 CEO 哈维·琼斯出任公司史上首位董事会主席。</b>公告未说明辞职原因；三季报按原计划于 11 月 17 日发布，克雷斯将首次以临时 CEO 身份出席。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>百度文心 5.5 Flash Preview 发布：2800 亿总参数、每 token 激活 140 亿，API 忙时输入 2 元、闲时 1 元 / 百万 token。</b>MiniMax 同一天开源 H3-Image，4096×4096 图 10 秒内生成、最多 16 张参考图，权重已上 Hugging Face。</p>
+      <p><b>谷歌发布 Gemini Decision 1：一次最多 1000 个问题、256K token 多模态输入，输入每百万 token 0.10 美元、输出免费，端到端延迟 150–250 毫秒。</b>同一天火山引擎上线 Seedance 2.5 flash，720P 视频约 0.99 元/秒，比 Seedance 2.5 低约 34%。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>DeepMind 发布 AlphaGenome 2：按细胞类型条件化预测，在 TenK10K 的 28 种免疫细胞上把因果变异召回率从 16% 提到 30%。</b>模型用 1.07 亿个单细胞剖面训练，新增 DNA 甲基化读出，非商业研究免费、商业走私有预览。</p>
+      <p><b>安全公司 Claroc 发现，37,571 个仍在运营的 Grok Build 应用里 35,578 个（94.7%）无需登录即可访问，含 X 与 SpaceXSI 员工自建的 24 个。</b>默认「知道链接即可访问」加上可被 Passive DNS 枚举的 grok.me 子域是主因，AI 生成的鉴权代码还有校验顺序错误。</p>
     </li>
       </ol>
 
-  <section class="chapter" id="models-zh" data-c="models">
+  <section class="chapter" id="capital-zh" data-c="capital">
     <div class="chead">
       <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 22:07</span>
+          <a class="src" href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener noreferrer">NVIDIA Newsroom ↗</a>
+        </div>
+        <h3>英伟达宣布黄仁勋辞去 CEO 与董事职务、即刻生效：CFO 克雷斯任临时 CEO，董事会首次设主席</h3>
+        <p>11 月 12 日，英伟达董事会公告：联合创始人黄仁勋辞去总裁、首席执行官及董事会成员职务，即刻生效。执行副总裁兼首席财务官科莱特·克雷斯（Colette Kress）出任临时 CEO，同时继续兼任 CFO，直至正式继任者确定；董事会已启动遴选程序，内部与外部候选人都在考虑之列。公告没有说明辞职原因。</p>
+        <p>董事会同时任命哈维·琼斯（Harvey C. Jones）为公司史上首位董事会主席。琼斯有 30 多年科技行业经营与投资经历，曾任新思科技（Synopsys）CEO 与执行董事长。他在公告中表示，克雷斯「深度了解公司的业务、客户、运营与财务状况」，董事会预计「公司运营、客户承诺与产品路线图不会中断」。克雷斯则称，将与管理团队一起在黄仁勋过去 33 年建立的基础上继续推进。</p>
+        <p>这场交接在四天内走完：11 月 8 日董事会宣布就媒体关于黄仁勋的报道启动独立调查，由独立董事组成委员会；11 月 10 日聘请美国纽约南区前代理联邦检察官 Joon H. Kim 及其所在的 Wachtell, Lipton, Rosen &amp; Katz 开展调查；12 日即宣布辞职。据 Bernama 援引安纳杜卢通讯社报道，调查针对的是「他成为外国情报行动目标」的相关报道；黄仁勋 8 日向员工承认对婚姻不忠，并表示将配合调查。</p>
+        <p>公司称 2027 财年第三季度财报按原计划于 11 月 17 日发布，克雷斯将首次以临时 CEO 身份出席业绩电话会。</p>
+        <p class="why"><b>看点</b>对算力采购方，这份公告能拿到的保证只有一句「路线图不中断」，真正的变量在资本配置：黄仁勋过去几年把英伟达从卖 GPU 推到卖整机柜、卖网络、投生态、做算力融资安排，这套扩张靠的是创始人权威；换成财务背景的临时 CEO 加一位职业经理人董事长，最先被重新审视的通常不是份额而是回报率。11 月 17 日的电话会看三件事：四季度指引、下一代平台的出货节奏、对客户算力承诺的口径有没有变。<br><b>另一个视角</b>已签合同不会因为换人失效，但供应商在长约谈判中的姿态会变——云厂商会试探新管理层是否愿意在价格和产能锁定上让步，这直接决定明年的单位算力成本。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models-zh" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
       <h2>模型与能力</h2>
       <span class="cen">Models &amp; Capability</span>
       <span class="crule"></span>
@@ -124,37 +149,38 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11 10:00</span>
-          <a class="src" href="https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview" target="_blank" rel="noopener noreferrer">阿里云百炼 ↗</a>
+          <span class="d">11/12 11:55</span>
+          <a class="src" href="https://gigazine.net/gsc_news/en/20261112-gemini-decisions-1" target="_blank" rel="noopener noreferrer">GIGAZINE ↗</a>
         </div>
-        <h3>阿里上线 Qwen4-Max 预览版：100 万 token 上下文、39 万 token 输出，只卖 Token Plan</h3>
-        <p>阿里云 11 月 11 日 10:00 起开放 Qwen4-Max-Preview。它是 Qwen 家族的旗舰多模态模型，同时处理文本、图像和视频，支持函数调用、联网搜索、JSON Schema 结构化输出，并兼容 OpenAI 的 Chat Completions / Responses 与 Anthropic 的 Messages 接口。与以往不同，这一版只通过 Token Plan 提供，不支持按量付费；预览期到 11 月 25 日 24:00 结束，期间不再改动，到期后模型直接下线。调用走新加坡的专用端点，不在常规百炼按量计费链路上。</p>
-        <p>规格上，上下文 1,000,000 token，最大输出 393,216 token，且思考与最终答案共用这一份预算。思考默认开启，reasoning_effort 可选 low、medium、xhigh，默认 xhigh，不能再和 thinking_budget 同时设置。官方还改了一个容易踩的语义：从这一版起，OpenAI Chat Completions 里的 max_tokens 等同 max_completion_tokens，只限「思考 + 回答」的总量；过去按纯回答长度设的上限，现在可能把答案截断。多轮对话默认保留历史思考，要求客户端回传 assistant 消息里的 reasoning_content 字段。</p>
-        <p>文档没有给参数量、激活参数、基准分数或每百万 token 价格，只说明按 Token Plan 的 credits 计费。对开发者来说，这是一次「先试用、再选型」的发布：能测 1M 上下文里的长程检索、跨文件代码修改和多模态输入，但不能把它写进需要长期稳定的生产依赖。</p>
-        <p class="why"><b>看点</b>1M 上下文配 39 万输出，明显是给长轨迹 agent 用的：一次任务里要放进去的代码库、日志、工具返回，都在这两个数字的预算内。真正要压测的是有效召回而不是「能塞多少」——把 80 万 token 的仓库丢进去，看它在第 60 万 token 处还能不能引用对文件；再测 thinking 预算被 xhigh 吃掉后，留给答案的 token 还剩多少。max_tokens 语义变化会静默破坏现有 SDK 的截断逻辑，升级前先跑回归。<br><b>另一个视角</b>两周后下线意味着采购方无法把它列入年度预算，只能当作一次付费评测；真正的采购决策会被推到 Qwen4 正式版，而正式版的定价要等预览结束后才公布。</p>
+        <h3>谷歌发布 Gemini Decision 1：单次最多 1000 个问题，输入每百万 token 0.10 美元、输出免费</h3>
+        <p>谷歌发布 Gemini Decision 1，并在 AI Studio 开放 Gemini Decisions API 的预览。它不逐 token 生成文本，而是一次前向对候选选项打分，返回概率与置信度，面向的是「闭集判断」——分类、路由、排序、评分这类必须给出确定答案、而不是一段话的任务。</p>
+        <p>接口一次可传入最多 256K token 的多模态材料（文本、图像、音频、视频、PDF），并附带最多 1000 个彼此独立的问题。延迟上，模型自身计算的中位数是 50–100 毫秒，端到端 150–250 毫秒；官方称问题数从 1 增加到 100，延迟几乎不变。定价是每百万输入 token 0.10 美元，输出不计费——按谷歌的说法，约为走 Interactions API 的 Gemini 3.5 Flash-Lite 成本的五分之一。</p>
+        <p>外部评测要分开看。Artificial Analysis 的 Decision Index v2.1 给它 66 分，与 Elephant 9B、Jev 1.14 相当，比 Drex Max v1.1 和 GLiDE v1.2 低 7 分；谷歌自己强调的是最低校准误差和测试全项领先。目前它已在 AI Studio、Gemini API 与演示应用中可用。</p>
+        <p class="why"><b>看点</b>把 decode 从链路里拿掉，是这一代最直接的成本杠杆：1000 个问题共享一次前向，等于把批量打标、批量评测的吞吐抬高一到两个数量级。门槛在闭集假设——选项里没有正确答案时，它不会像生成模型那样含糊其辞，而会给出一个高置信度的错答案；上线前该做的是校准曲线与拒答阈值，不是刷准确率。对 agent 路由和质检流水线，这类模型比通用大模型更划算；对开放式写作，它没有用武之地。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11 14:18</span>
-          <a class="src" href="https://www3.xinhuanet.com/tech/20261111/183aa161e70b4942b622e10b5e3da605/c.html" target="_blank" rel="noopener noreferrer">新华网 ↗</a>
+          <span class="d">11/12 14:54</span>
+          <a class="src" href="https://finance.sina.com.cn/roll/2026-11-12/doc-iniynife8484368.shtml" target="_blank" rel="noopener noreferrer">新浪科技 ↗</a>
         </div>
-        <h3>百度发布文心 5.5 Flash Preview：2800 亿总参数、140 亿激活，忙时输入 2 元 / 百万 token</h3>
-        <p>百度 11 月 11 日发布文心 5.5 Flash Preview：总参数 2800 亿，每个 token 激活 140 亿，支持最长 100 万 token 上下文，生成速度超过 200 token/s。底层用了新的混合稀疏注意力、多路由器 MoE 和 ECHO 多 token 预测，官方称在提升能力的同时降低计算与显存开销；这一版还首次把自研的 RSI 技术用在推理优化上，由 ERNIE Evolve 参与模型推理。</p>
-        <p>能力侧重点有三个。编程覆盖从真实代码库修 bug 到完整搭建应用，并针对游戏开发做了专项训练；3D 建模强化了 Blender 和 CAD 的工具使用，能从文本推断形状、比例与空间关系，再转成程序化模型；知识工作要求多步交付表格、文档和演示文稿，官方给了 30 万个工作空间、1000 万份参考文件、40 多种文件类型的训练环境。视频创作侧则搭了 15 万个创作环境，覆盖创意、剧本、分镜、素材与配音，累计成片约 5300 分钟。</p>
-        <p>开发者今天就能在百度智能云千帆上通过 API 调用。定价为每百万 token 输入忙时 2 元、闲时 1 元，输出忙时 8 元、闲时 4 元，限时五折。模型权重计划在 11 月 25 日面向全球开源社区发布。</p>
-        <p class="why"><b>看点</b>140 亿激活参数是这条发布里最硬的数字：它决定单卡能扛多少并发，也决定 200 token/s 是在什么 batch 下测出来的。1M 上下文靠稀疏注意力省算力，但稀疏模式会不会漏掉长文档中段的细节，要看检索类评测，而不是 Terminal-Bench。官方对基准只写「具有竞争力」，没给分数和对比对象——在权重 11 月 25 日开放之前，任何「追平某某」的说法都只能算厂商口径。对做私有化部署的团队，真正的时点是权重开放那天：能不能在两张 80GB 卡上跑起来，比 API 便宜几分钱更重要。</p>
+        <h3>火山引擎上线 Seedance 2.5 flash：720P 视频约 0.99 元/秒，比 2.5 便宜约 34%</h3>
+        <p>11 月 12 日下午，火山引擎发布视频生成模型 Seedance 2.5 flash。官方称它在生成效果接近 Seedance 2.5 的同时，生成速度提升一倍，定价与上一代 Seedance 2.0 持平：以 720P 文生视频、图生视频为例，约 0.99 元/秒，比 Seedance 2.5 低约 34%。</p>
+        <p>规格上，单段最长 30 秒，单次最多输入 10 张图片、5 段视频和 5 段音频，输出提供 480P 与 720P 两档。即日起陆续在即梦、LibTV、Updream、Creao AI、TapNow 等平台上线，API 计划 11 月 15 日在火山方舟开放。</p>
+        <p>Seedance 2.5 系列由此分成两条：旗舰版强调视听品质，配 Draft 样片模式——先出样片再生成 1080P 正片，并计划上线 4K；flash 版强调速度与成本，面向高频创作和批量生产。</p>
+        <p class="why"><b>看点</b>按秒计价把视频生成拉回「素材成本」的算法：30 秒成片约 30 元，制作方第一次能像算素材费一样算生成费。速度翻倍通常来自蒸馏与采样步数压缩，代价往往落在细节一致性和长镜头稳定性上；官方说「效果接近 2.5」，但没有公开第三方偏好分数，批量生产前应固定一组 seed 做 A/B。真正限制工作流的是 30 秒上限：更长的片子仍要拼接，接缝处的一致性才是产能瓶颈。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11 15:44</span>
-          <a class="src" href="https://www.minimax.io/blog/minimax-h3-image" target="_blank" rel="noopener noreferrer">MiniMax ↗</a>
+          <span class="d">11/12 20:47</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/12/content_612433.html" target="_blank" rel="noopener noreferrer">科技日报 ↗</a>
         </div>
-        <h3>MiniMax 开源 H3-Image：4K 图 10 秒内出，权重已上 Hugging Face</h3>
-        <p>MiniMax 11 月 11 日发布 H3-Image，一个基于 H3 的开源权重图像模型，支持文生图、参考图生成和图像编辑。官方称它能在 10 秒内生成一张 4096×4096（约 1600 万像素）的 4K 图，速度最高是主流方案的 5 倍；最多可同时理解 16 张参考图，用来保持主体、风格或构图的一致性。权重已经放到 Hugging Face，API、MiniMax Code 和 Hailuo 同步上线。</p>
-        <p>速度来自整条后训练链路的调整，而不是单点技巧：数据、强化学习、采样步数压缩、PE 和部署优化一起改。官方给的对比是，Standard 模式比主流方案快 1.5–2 倍，Highspeed 模式快 3–4 倍；价格是同类主流产品的 50%–70%，发布首周 4K 及以上分辨率再打五折。模型卡和定价表都放在博客里，但没有给 FID、人工偏好或提示词遵循度的第三方分数。</p>
-        <p class="why"><b>看点</b>4K/10 秒改变的是工作流而不是单张成本：设计师可以在一次会话里连出十几版，再挑一张放大，迭代次数上去了，单张价格反而没那么重要。16 张参考图是更难的部分——参考越多，身份泄漏和构图冲突越容易发生，官方没公开是怎么做 reference dropout 的。开源权重意味着可以把编辑链放进本地流水线，按 GPU 小时而不是按张计费；代价是要自己承担量化后的画质损失和 4K 显存占用。「快 5 倍」「50%–70% 价格」都是厂商自测，等第三方复现再写进采购对比表。</p>
+        <h3>百度发布文心闪电与文心一镜：一个压搜索推理成本，一个压视频成本</h3>
+        <p>11 月 12 日百度世界 2026 主论坛上，百度发布两款「应用模型」并同步上线百度智能云千帆，面向企业客户与合作伙伴开放 API：文心闪电深度思考模型与文心一镜微表情大模型。</p>
+        <p>文心闪电最初是为百度搜索做的。搜索要同时处理语音、图像、文字输入，既要理解复杂需求、做推理与工具调用，又要撑住海量并发。百度称对 Transformer 架构做了改造，提出稀疏注意力 BSA，在解码过程中按历史输出与状态做反馈式 KV 压缩，在效果与历史记忆存储开销之间取折中；配合昆仑芯可在单机八卡上做高速推理，推理引擎成本降低 30% 以上。</p>
+        <p>文心一镜面向高情感表现力的视频创作：文本、视觉、语音三态一体建模，支持最长 4000 字文本驱动，刻画面部表情、肢体动作与情绪变化，并做了篇章级配音，主攻播客与短漫剧。百度称其视频生成成本较业界低 50%，支持分钟级生产，极速版可做到 1:1 实时——1 分钟视频在 1 分钟内生成。</p>
+        <p class="why"><b>看点</b>两个数字最值得追：BSA 的压缩率与长上下文保真度之间的曲线，以及「单机八卡」对应的具体型号与并发数。KV 压缩换成本是通用做法，难点在压缩之后检索类任务会不会掉点，这要拿长文档问答去测，而不是短 prompt。1:1 实时意味着推理吞吐必须跟上视频时长，瓶颈在显存带宽与解码器调度而非参数量；如果这个指标在客户侧能复现，短剧和口播生产线的成本结构会被改写。成本降幅都是厂商口径，采购前应按自己的片单跑一轮。</p>
       </article>
 
     </div>
@@ -162,7 +188,7 @@
 
   <section class="chapter" id="products-zh" data-c="products">
     <div class="chead">
-      <span class="cnum">02</span>
+      <span class="cnum">03</span>
       <h2>产品与智能体</h2>
       <span class="cen">Products &amp; Agents</span>
       <span class="crule"></span>
@@ -171,13 +197,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11</span>
-          <a class="src" href="https://www.jiemian.com/article/15321028.html" target="_blank" rel="noopener noreferrer">界面新闻 ↗</a>
+          <span class="d">11/12 10:47</span>
+          <a class="src" href="https://eu.36kr.com/en/p/4066127028574089" target="_blank" rel="noopener noreferrer">36 氪 ↗</a>
         </div>
-        <h3>腾讯上线元宝搜索：so.qq.com 独立入口，索引覆盖公众号与视频号</h3>
-        <p>腾讯 11 月 11 日正式上线「元宝搜索」。用户在任意浏览器地址栏输入 so.qq.com 就能使用，也可以把 QQ 浏览器升级到最新版，在引擎设置里切换为元宝搜索。它不是给元宝加一个搜索框，而是用元宝的大模型能力重做了「理解—检索—排序—答案组织」整条链路，依托千亿级索引，覆盖全网网页、公众号、视频号等腾讯生态内容和学术文献。</p>
-        <p>结果呈现上，官方说会优先展示权威机构与官方来源，并把广告与答案明确区分。对中文互联网来说，公众号和视频号一直是搜索引擎抓不到、或者抓不全的封闭语料；腾讯自己把它们接进索引，等于把独有数据变成了搜索质量的差异点。</p>
-        <p class="why"><b>看点</b>搜索正在变成 agent 的检索层：模型再强，拿不到对的材料也答不对。腾讯的护城河不在模型分数，而在「公众号 + 视频号」这批别人拿不到的语料，以及 QQ 浏览器这个默认入口。「广告与答案分开」是产品承诺，不是技术保证——真正要看的是排序权重里商业内容占多少、标注是否稳定。对做 RAG 的团队，so.qq.com 会不会开放可引用的结构化结果，比它今天排第几更重要；如果不开放，它只是多了一个封闭的高质量中文源。</p>
+        <h3>Grok Bot 升级 1.0：主动领活、进会议、按席位收费</h3>
+        <p>11 月 12 日凌晨，SpaceXSI（原 xAI）发布 Grok Bot 1.0，三条主线：Bot 会主动发现需要处理的工作，而不是等人派活；能进入 Google Meet、Zoom、Microsoft Teams 会议；团队可以共享同一个 Bot，多个 Bot 之间能互相派活。</p>
+        <p>会议能力目前是「文本参与」：把会议链接发给 Bot、由主持人放行后，它旁听讨论、在聊天窗口回答问题，会后整理纪要与待办；接上日历后还能自动加入排期会议。官方文档没有说它可以像人一样语音发言。团队 Bot 可加进 Slack 或 Teams 群，跟着多人讨论了解分工，在合适时机补信息或接手任务；Bot 从普通成员那里学到的新经验，要经创建者或管理员审批，才会更新为团队共享知识。</p>
+        <p>价格按席位分三档：Premium 30 美元、Super 100 美元、Ultra 200 美元每人每月；Team Bot 只对企业用户开放，会议功能个人 Ultra 也能用。官方没有披露任务成功率、提速幅度或资源消耗的对比数据。</p>
+        <p class="why"><b>看点</b>主动型 agent 的核心不是能力而是权限：谁批准它「自己接活」、哪些操作必须人工确认、它记住的东西算谁的。1.0 把「先问再执行」和「学习内容需审批」做成了产品机制，这两层既是护栏也是摩擦点——审批太松等于给 agent 一张空白授权，太紧就退化成聊天机器人。按席位收费、谁被回复谁扣额度，让成本可归因，这是企业采购最在意的部分。真正要压测的是跨会话记忆：这次记住的是本团队的规范，下次会不会被带到不该用的场景里去。</p>
       </article>
 
     </div>
@@ -185,7 +212,7 @@
 
   <section class="chapter" id="research-zh" data-c="research">
     <div class="chead">
-      <span class="cnum">03</span>
+      <span class="cnum">04</span>
       <h2>研究与安全</h2>
       <span class="cen">Research &amp; Safety</span>
       <span class="crule"></span>
@@ -195,13 +222,13 @@
       <article class="card">
         <div class="cmeta">
           <span class="d">11/12</span>
-          <a class="src" href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/" target="_blank" rel="noopener noreferrer">Google DeepMind ↗</a>
+          <a class="src" href="https://www.thaicert.or.th/en/2026/11/12/more-than-35000-grok-ai-built-applications-publicly-exposed-putting-corporate-data-and-passwords-at-risk/" target="_blank" rel="noopener noreferrer">ThaiCERT ↗</a>
         </div>
-        <h3>DeepMind 发布 AlphaGenome 2：按细胞类型条件化预测，因果变异召回率从 16% 提到 30%</h3>
-        <p>Google DeepMind 当地时间 11 月 11 日发布 AlphaGenome 2，把上一代的「并行预测」改成了「条件模型」：输入一段 100 万字母的 DNA 序列，再指定一个生物条件——组织、细胞类型或细胞状态，模型每次只预测这一种条件下的结果。条件可以来自参考目录，也可以由科学家用自己的单细胞实验现场生成。上一代一次预测多种组织的数千个实验，效率高但容量被摊薄，难以分辨亲缘很近的细胞类型之间的细微差异。</p>
-        <p>训练数据包含人与小鼠的 bulk 与单细胞数据，合计超过 1.07 亿个单细胞剖面。输出覆盖基因表达、组蛋白修饰、染色质可及性，并新增了 DNA 甲基化。在 TenK10K 的 28 种原代免疫细胞上，AlphaGenome 2 找到的因果变异接近上一代在单细胞数据上微调后的两倍（30% 对 16%），方向性基因效应为 43% 对 23%；它还复现了一项 IBD 研究——远端调控开关上的变异通过过度激活肠道巨噬细胞里的 ETS2 基因致病，并指出该变异只影响这一种细胞。条件化结构还带来跨模态补全：输入单细胞基因活性一项测量，就能预测未测的染色质可及性。</p>
-        <p>可用性上，AlphaGenome 2 对非商业研究免费开放，商业研究走私有预览。代价是算力：细胞级精确推断比上一代更贵，DeepMind 的建议是分工——第一代模型负责构建覆盖全基因组 90 亿个变异的数据库，第二代只对候选位点做细胞级归因和靶点发现。</p>
-        <p class="why"><b>看点</b>把「组织平均」换成「单细胞状态」，解决的是 GWAS 里最常见的一种失败：信号落在没有对应细胞类型的平均表达上，看起来显著，却找不到真正起作用的细胞。30% 的召回率值得记住，但它仍是召回率——七成的因果变异还是找不到；论文里更该看的是精度和校准，而不是单一召回数字。计算成本上升意味着它不适合全基因组扫描，适合做二阶段筛选：先用第一代把候选缩到几千个，再用第二代逐个细胞类型归因。对做生物基础模型的团队，cell encoder 能零样本迁移到新数据，这一条比跑分更有复用价值。</p>
+        <h3>3.7 万个 Grok 生成的应用里，94.7% 不用登录就能打开</h3>
+        <p>据 The Hacker News 报道，安全公司 Claroc 调查了用 SpaceXSI 的 Grok Build 生成的应用：在仍处于活跃状态的 37,571 个应用里，35,578 个（94.7%）无需任何身份验证即可公开访问。其中包括 X 与 SpaceXSI 员工自己创建的 24 个应用，以及至少 30 家其他机构的内部信息，涉及建筑、能源、医疗与国防，其中 6 家是财富 500 强。</p>
+        <p>原因有两层。一层是默认值：发布时访问设置默认为「Anyone with the link」，而每个应用都挂在 grok.me 的子域下，子域解析会进入 Passive DNS 数据库，第三方可以按模式枚举出来——链接「不好猜」并不等于「找不到」。另一层是 AI 生成的鉴权代码本身：研究者自建测试应用时发现，Grok 写的登录逻辑会在校验之前先把登录者加入团队，于是校验永远通过，一个外部 Google 账号就能查看、修改、删除记录。</p>
+        <p>暴露内容的构成，据研究者统计，约十分之一的应用含商业或个人信息，约 2% 属于高到严重风险，包括一家医院集团 3500 多名员工的名单、一份重症患者简报、消防部门的实时排班表，以及一个把全体员工口令明文写在代码里的工时系统。SpaceXSI 在接到报告后下架了自家员工的 24 个应用，其他用户的应用据报道仍在线上。</p>
+        <p class="why"><b>看点</b>「链接即权限」在可枚举的子域上等价于公开，这是把内部工具放上公网时最容易漏掉的一步。对做 AI 生成应用的团队，三条检查比看演示有用：默认权限改成「仅自己」、用公司域外账号实测一次鉴权、扫一遍前端脚本里的口令与邮箱。更值得记住的是那个鉴权顺序错误——页面上有「用 Google 登录」的按钮，看起来像做了鉴权，实际把校验写在了授权之后；AI 生成的代码最容易栽在这种控制流顺序上，而这类错误不会被「能跑通」的测试发现。</p>
       </article>
 
     </div>
@@ -209,7 +236,7 @@
 
   <section class="chapter" id="embodied-zh" data-c="embodied">
     <div class="chead">
-      <span class="cnum">04</span>
+      <span class="cnum">05</span>
       <h2>具身智能</h2>
       <span class="cen">Embodied AI</span>
       <span class="crule"></span>
@@ -218,36 +245,12 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11 19:21</span>
-          <a class="src" href="https://stcn.com/article/detail/4332469.html" target="_blank" rel="noopener noreferrer">证券时报 ↗</a>
+          <span class="d">11/12 10:55</span>
+          <a class="src" href="https://stcn.com/article/detail/4333339.html" target="_blank" rel="noopener noreferrer">证券时报 ↗</a>
         </div>
-        <h3>均胜电子向宇树交付首台机器人「高算力大脑背包」：外挂端侧算力，兼容人形、四足与轮式</h3>
-        <p>均胜电子 11 月 10 日对外披露，旗下宁波超平面机器人科技已向宇树科技交付首台机器人高算力大脑背包，双方合作从框架协议进入产品交付阶段，年内还会有更多项目进展。这个背包是均胜具身智能「大脑软硬一体」方案的核心产品：把高算力端侧平台和高能效能源系统做成可外挂的独立模块，兼容宇树的人形、四足和轮式多款机器人。</p>
-        <p>按公司说法，背包用于增强环境感知、数据采集、自主决策与运动控制，可跑端侧具身模型的实时推理，支持「物理 Agent」的自进化迭代，同时通过能源管理延长连续作业时间。除了背包，双方还在联合攻关灵巧手、高性能固态电池能源管理系统等部件，目标是把它们做成可批量量产、适配多种机器人的标准化件。工业场景上，双方围绕汽车零部件产线做数据采集、软硬件适配、工业大模型训练和产线试点，再向规模化复制。</p>
-        <p class="why"><b>看点</b>外挂背包是「算力与本体解耦」的工程折中：机器人本体不必为最高算力预留功耗、散热和结构空间，代价是多了一根供电/数据接口、一份配重，以及接口带宽这个新瓶颈。对做具身的团队，该看的是持续功耗、满载散热和端到端延迟，而不是 TOPS 数字——背包里的芯片再强，传感器数据传不进去、推理结果传不回来，闭环照样跑不起来。对均胜，这是把汽车 Tier 1 的制造能力平移到机器人部件；对宇树，拿到的是可批量复制的算力方案，而不是一次性的定制件。</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="capital-zh" data-c="capital">
-    <div class="chead">
-      <span class="cnum">05</span>
-      <h2>行业与资本</h2>
-      <span class="cen">Industry &amp; Capital</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/11</span>
-          <a class="src" href="https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
-        </div>
-        <h3>英国芯片公司 Fractile 融资 7.2 亿美元、估值 70 亿美元：把 DRAM 堆在逻辑上跑长上下文</h3>
-        <p>英国 AI 芯片公司 Fractile 完成 7.2 亿美元融资，投后估值 70 亿美元。本轮由 Thrive、Founders Fund、Lightspeed 和 Redpoint 联合领投，Balderton 参投。公司 2022 年成立，做的不只是芯片：自研芯片、系统、软件，也自己做 ML 研究，属于少见的全栈型硅片公司。</p>
-        <p>技术路线与主流 AI 芯片不同。多数 AI 芯片依赖 HBM，设计趋同；Fractile 把 DRAM 直接封装在逻辑晶圆之上，官方称这样能拿到比 HBM 更高的内存带宽、比 SRAM 更大的容量，让大模型在很长的上下文下仍能跑到每秒数千 token。这个数字是公司口径，没有第三方复测。Fractile 押的是「前沿模型的瓶颈会从算力转向出词速度」，而解决它必须重做芯片。</p>
-        <p class="why"><b>看点</b>长上下文推理的瓶颈是内存带宽和容量，不是 FLOPs：KV cache 随上下文线性增长，HBM 的带宽和容量一起卡住 batch。DRAM-on-logic 是拿先进封装换带宽，工程代价在良率、散热和 DRAM 产能——这三项都不是靠一轮融资能解决的。7.2 亿美元说明资本愿意为「非 HBM 路线」下注，但真正的验证是客户流片、量产良率和实测 token/s，而不是 70 亿美元估值。对云厂商，多一条内存路线意味着议价空间；对 NVIDIA，这是封装层面而不是制程层面的竞争。</p>
+        <h3>永达汽车采购 400 台优必选 U1 Pro，优必选计划年内交付</h3>
+        <p>11 月 11 日，优必选与永达汽车签署战略合作协议。按协议，永达将采购 400 台优必选超仿生人形机器人 U1 Pro，优必选计划于今年内完成交付。永达汽车是豪华车与新能源汽车的经销服务商，在港交所上市。</p>
+        <p class="why"><b>看点</b>这是一张渠道侧的订单，不是产线试点：4S 店、展厅、售后接待是天然的人形机器人场景——动作相对标准化、话术可编排、客户对新奇体验的容忍度高。400 台的关键不在数字，而在年内交付意味着产能与验收节奏必须同时成立：超仿生面部的良率、交互延迟、门店网络的部署与运维，任何一环掉链子都会把交付推到明年。对人形机器人公司，渠道订单比 demo 更能验证单位经济；对采购方，真正的账是「一台机器人替掉多少接待工时」，这要等首批门店跑完一个季度才有答案。</p>
       </article>
 
     </div>
@@ -256,9 +259,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 11 日 09:12 至 11 月 12 日 09:17（北京时间）之间发布的报道，共 7 条。检索时间 11/12 09:17。</p>
+        <p>本期收录 2026 年 11 月 12 日 09:17 至 11 月 13 日 09:16（北京时间）之间发布的报道，共 7 条。检索时间 11/13 09:16。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 018 · 24h window · Generated 2026-11-12 09:17</p>
+    <p class="sig">AI Daily · Issue 019 · 24h window · Generated 2026-11-13 09:16</p>
       </div>
     </footer>
       </div>
@@ -271,17 +274,17 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 018</span>
+          <span class="issue-tag">Issue 019</span>
         </div>
-        <h1 class="date">November 12, 2026<span class="weekday">THU</span></h1>
-        <p class="deck">Three Chinese model makers moved the frontier on the same day: Alibaba pushed Qwen4-Max to a 1M-token context and a 393,216-token output cap, available for two weeks through Token Plan only; Baidu paired 280B total parameters with 14B active to reach 200 tokens a second; MiniMax squeezed 4K image generation under ten seconds and opened the weights. Abroad, the movement was downstream: DeepMind took genomic prediction to single-cell resolution, and Fractile raised $720m for a chip path that does not rely on HBM. <em>Context, unit price and bandwidth all bent at once.</em></p>
-        <div class="metabar"><span class="pill">Issue 018</span>
+        <h1 class="date">November 13, 2026<span class="weekday">FRI</span></h1>
+        <p class="deck">Nvidia changed leaders in four days: Jensen Huang resigned as president, CEO and director, CFO Colette Kress is interim CEO, and the board has a chair for the first time. The same day, Google pulled decision-making out of text generation and shipped it as an API; Baidu squeezed search inference with sparse attention and video cost with tri-modal modelling; Volcano Engine pushed Seedance to 0.99 yuan a second. The cautionary tale sits on the safety side: 37,000 Grok-built apps left on &ldquo;anyone with the link&rdquo;. <em>Compute, unit price and permissions — three defaults were reset at once.</em></p>
+        <div class="metabar"><span class="pill">Issue 019</span>
       <span class="dot"></span>
-      <span>Window Nov 11, 09:12 – Nov 12, 09:17</span>
+      <span>Window Nov 12, 09:17 – Nov 13, 09:16</span>
       <span class="dot"></span>
       <span>7 stories</span>
       <span class="dot"></span>
-      <span>8 min read</span></div>
+      <span>9 min read</span></div>
       </div>
     </header>
 
@@ -289,11 +292,11 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-en"><span class="n">00</span>At a glance</a>
-        <a href="#models-en"><span class="n">01</span>Models &amp; Capability</a>
-        <a href="#products-en"><span class="n">02</span>Products &amp; Agents</a>
-        <a href="#research-en"><span class="n">03</span>Research &amp; Safety</a>
-        <a href="#embodied-en"><span class="n">04</span>Embodied AI</a>
-        <a href="#capital-en"><span class="n">05</span>Industry &amp; Capital</a>
+        <a href="#capital-en"><span class="n">01</span>Industry &amp; Capital</a>
+        <a href="#models-en"><span class="n">02</span>Models &amp; Capability</a>
+        <a href="#products-en"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#research-en"><span class="n">04</span>Research &amp; Safety</a>
+        <a href="#embodied-en"><span class="n">05</span>Embodied AI</a>
         </div>
       </div>
     </nav>
@@ -302,21 +305,46 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>Alibaba opens Qwen4-Max-Preview with a 1M-token context and a 393,216-token output cap, sold only through Token Plan and retired after November 25.</b> It speaks both OpenAI and Anthropic API dialects and has thinking on by default. The docs give no parameter count, benchmark score or per-token price, only a two-week window.</p>
+      <p><b>NVIDIA&rsquo;s board said on November 12 that Jensen Huang has resigned as president, CEO and director, effective immediately; CFO Colette Kress becomes interim CEO while the board searches for a permanent successor, and former Synopsys chief Harvey C. Jones becomes the company&rsquo;s first board chair.</b> The announcement gives no reason. Third-quarter results stay scheduled for November 17, when Kress will face investors for the first time in the role.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>Baidu ships ERNIE 5.5 Flash Preview: 280B total parameters, 14B active per token, and an API price of 2 yuan per million input tokens at peak, 1 yuan off-peak.</b> MiniMax open-sources H3-Image the same day, generating a 4096×4096 image in under ten seconds with up to 16 reference images, weights on Hugging Face.</p>
+      <p><b>Google releases Gemini Decision 1: up to 1,000 questions per call over 256K tokens of mixed media, $0.10 per million input tokens, free output, 150&ndash;250ms end to end.</b> The same afternoon, Volcano Engine put Seedance 2.5 flash on sale at roughly 0.99 yuan per second of 720p video, about 34% below Seedance 2.5.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>DeepMind releases AlphaGenome 2, a conditional model that lifts causal-variant recall from 16% to 30% across 28 immune cell types in TenK10K.</b> It was trained on more than 107 million single-cell profiles, adds DNA methylation readouts, is free for non-commercial research and in private preview for commercial use.</p>
+      <p><b>Security firm Claroc found that 35,578 of 37,571 live Grok Build apps — 94.7% — could be opened without signing in, including 24 built by X and SpaceXSI staff.</b> The default &ldquo;anyone with the link&rdquo; setting plus enumerable grok.me subdomains is the main cause, and AI-written auth code also checks membership after adding the visitor.</p>
     </li>
       </ol>
 
-  <section class="chapter" id="models-en" data-c="models">
+  <section class="chapter" id="capital-en" data-c="capital">
     <div class="chead">
       <span class="cnum">01</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/12 22:07</span>
+          <a class="src" href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener noreferrer">NVIDIA Newsroom ↗</a>
+        </div>
+        <h3>NVIDIA says Jensen Huang has resigned as CEO and director, effective immediately; CFO Kress steps in, board gets its first chair</h3>
+        <p>On November 12 NVIDIA&rsquo;s board announced that co-founder Jensen Huang has resigned as president, chief executive officer and a member of the board, effective immediately. Executive Vice President and Chief Financial Officer Colette Kress will serve as interim CEO while keeping her CFO duties until a permanent successor is named. The board has begun a search and will consider internal and external candidates. The announcement gives no reason for the resignation.</p>
+        <p>The board also appointed Harvey C. Jones as its first-ever chair. Jones has more than 30 years of operating and investing experience in technology, including stints as CEO and executive chairman of Synopsys. In the release he said Kress has a deep understanding of the business, customers, operations and financial position, and that the board expects &ldquo;the company&rsquo;s operations, customer commitments and product roadmap to continue without interruption&rdquo;. Kress said she would build on the foundation Huang laid over 33 years.</p>
+        <p>The handover took four days. On November 8 the board announced an independent investigation into media reports about Huang, run by a committee of independent directors; on November 10 it retained former acting U.S. Attorney for the Southern District of New York Joon H. Kim and Wachtell, Lipton, Rosen &amp; Katz; on the 12th Huang was gone. According to Bernama, citing Anadolu Agency, the inquiry concerns reports that he had been targeted by a foreign intelligence operation. Huang told employees on the 8th that he had been unfaithful to his wife and would cooperate with the investigation.</p>
+        <p>NVIDIA said its fiscal 2027 third-quarter results will be published on November 17 as previously scheduled, followed by an earnings call at which Kress will speak as interim CEO.</p>
+        <p class="why"><b>Why it matters</b>For anyone buying compute, the only guarantee in the release is that the roadmap continues. The real variable is capital allocation. Huang spent the last few years pushing NVIDIA from selling GPUs to selling whole racks, networking, ecosystem stakes and compute-financing arrangements, and that expansion ran on founder authority. With a finance chief as interim CEO and a career operator as chair, the first thing that gets re-examined is usually return on capital, not share. Watch three things on the 17th: fourth-quarter guidance, the shipping cadence of the next platform, and whether the language around customer compute commitments shifts.<br><b>The other angle</b>Signed contracts survive a change at the top, but a supplier&rsquo;s posture in long-term negotiations does not. Cloud buyers will test whether the new management will concede on price and capacity lock-ins, and that feeds straight into next year&rsquo;s cost per unit of compute.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models-en" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
       <h2>Models &amp; Capability</h2>
       <span class="cen">模型与能力</span>
       <span class="crule"></span>
@@ -325,37 +353,38 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11 10:00</span>
-          <a class="src" href="https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview" target="_blank" rel="noopener noreferrer">Alibaba Cloud ↗</a>
+          <span class="d">11/12 11:55</span>
+          <a class="src" href="https://gigazine.net/gsc_news/en/20261112-gemini-decisions-1" target="_blank" rel="noopener noreferrer">GIGAZINE ↗</a>
         </div>
-        <h3>Alibaba opens Qwen4-Max-Preview: a 1M-token context and 393,216-token output, Token Plan only</h3>
-        <p>Alibaba Cloud opened Qwen4-Max-Preview at 10:00 Beijing time on November 11. It is the flagship multimodal model in the Qwen family, handling text, images and video, with function calling, web search and JSON Schema output; it is compatible with OpenAI's Chat Completions and Responses APIs and with Anthropic's Messages API. This release is different in one structural way: it is offered only through Token Plan, with no pay-as-you-go access. The preview runs until 24:00 on November 25, is frozen during that period, and the model is retired when it ends. Calls go through a dedicated Singapore endpoint rather than the normal metered Model Studio path.</p>
-        <p>The spec sheet lists a 1,000,000-token context and a maximum output of 393,216 tokens, with thinking and the final answer sharing that budget. Thinking is on by default; reasoning_effort accepts low, medium or xhigh, with xhigh as the default, and it cannot be combined with thinking_budget. Alibaba also changed a semantic that is easy to miss: from this model on, max_tokens in OpenAI Chat Completions equals max_completion_tokens and caps thinking plus answer together. A limit sized for the answer alone can now truncate it. Multi-turn chats keep historical thinking by default and expect the client to pass back the reasoning_content field on assistant messages.</p>
-        <p>The documentation gives no parameter count, no active-parameter figure, no benchmark scores and no per-token price; billing runs on Token Plan credits. For developers this is a trial-and-select release: you can test long-horizon retrieval across a 1M context, multi-file code changes and multimodal input, but you cannot make it a long-lived production dependency.</p>
-        <p class="why"><b>Why it matters</b>A 1M context with a 393,216-token output is clearly aimed at long-trajectory agents: the repository, the logs and the tool returns of one task all have to fit inside those two numbers. The thing to stress-test is effective recall, not raw capacity. Drop an 800k-token repo in and see whether it still cites the right file at token 600k; then measure how much of the answer budget survives after xhigh thinking takes its share. The max_tokens change will silently break truncation logic in existing SDK wrappers, so run a regression before upgrading.<br><b>The other view</b>Retiring the model after two weeks means procurement cannot put it in an annual budget; it is a paid evaluation, and the real purchase decision moves to the GA release, whose price will only be published after the preview ends.</p>
+        <h3>Google ships Gemini Decision 1: up to 1,000 questions per call, $0.10 per million input tokens and free output</h3>
+        <p>Google has released Gemini Decision 1 and opened a preview of the Gemini Decisions API in AI Studio. Instead of generating text token by token, it scores candidate options in a single forward pass and returns probabilities and confidence. It is built for closed-set decisions — classification, routing, ranking, grading — tasks that need one answer rather than a paragraph.</p>
+        <p>A single call can carry up to 256K tokens of mixed material (text, images, audio, video, PDF) plus up to 1,000 independent questions. Model compute sits at a 50&ndash;100ms median and 150&ndash;250ms end to end, and Google says latency barely moves when the question count rises from 1 to 100. Pricing is $0.10 per million input tokens with output billed at nothing — by Google&rsquo;s account about one-fifth the cost of Gemini 3.5 Flash-Lite through the Interactions API.</p>
+        <p>Outside scores need context. Artificial Analysis puts it at 66 on its Decision Index v2.1, level with Elephant 9B and Jev 1.14 and seven points behind Drex Max v1.1 and GLiDE v1.2; Google itself emphasises the lowest calibration error and top scores across the suite. It is available in AI Studio, the Gemini API and a set of demo apps.</p>
+        <p class="why"><b>Why it matters</b>Removing decoding is the bluntest cost lever in this generation: 1,000 questions riding on one forward pass lifts the throughput of bulk labelling and bulk evaluation by one to two orders of magnitude. The catch is the closed-set assumption. When the right answer is not among the options, it will not hedge the way a generative model does — it will return a confident wrong one. So the work before deployment is calibration curves and rejection thresholds, not leaderboard chasing. For agent routing and QA pipelines this beats a general model on price; for open-ended writing it has nothing to offer.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11 14:18</span>
-          <a class="src" href="https://www3.xinhuanet.com/tech/20261111/183aa161e70b4942b622e10b5e3da605/c.html" target="_blank" rel="noopener noreferrer">Xinhua ↗</a>
+          <span class="d">11/12 14:54</span>
+          <a class="src" href="https://finance.sina.com.cn/roll/2026-11-12/doc-iniynife8484368.shtml" target="_blank" rel="noopener noreferrer">Sina Tech ↗</a>
         </div>
-        <h3>Baidu releases ERNIE 5.5 Flash Preview: 280B total parameters, 14B active, 2 yuan per million input tokens</h3>
-        <p>Baidu released ERNIE 5.5 Flash Preview on November 11: 280 billion total parameters, 14 billion activated per token, a context of up to one million tokens and a generation speed above 200 tokens per second. Under the hood are a new hybrid sparse attention scheme, a multi-router MoE and ECHO multi-token prediction, which Baidu says cut compute and memory cost while raising capability. The release also marks the first use of Baidu's in-house RSI technique in inference optimization, with ERNIE Evolve participating in inference.</p>
-        <p>The capability push lands in three places. Coding spans fixing bugs in real repositories to building whole applications, with extra training for game development. 3D modelling leans on Blender and CAD tool use: the model infers shape, scale and spatial relations from text and turns them into procedural models. Knowledge work targets multi-step deliverables such as spreadsheets, documents and decks, trained on 300,000 workspaces, 10 million reference files and more than 40 file types. On the video side Baidu built 150,000 creation environments covering ideas, scripts, storyboards, assets and voice-over, with roughly 5,300 minutes of finished video in total.</p>
-        <p>Developers can call it today through the Qianfan API. Pricing is 2 yuan per million input tokens at peak and 1 yuan off-peak; output is 8 yuan at peak and 4 yuan off-peak, with a limited-time 50% discount. The weights are scheduled to be released to the open-source community on November 25.</p>
-        <p class="why"><b>Why it matters</b>The 14B active-parameter figure is the hardest number in the release: it decides how much concurrency one card can hold, and it frames the conditions under which 200 tokens a second was measured. Sparse attention is what makes a 1M context affordable, but whether the sparse pattern drops details in the middle of a long document is a retrieval question, not a Terminal-Bench question. Baidu describes its benchmark results only as &quot;competitive&quot; and publishes neither scores nor baselines; until the weights land on November 25, any claim of parity is vendor framing. For teams planning private deployment, the date that matters is weights day: whether it runs on two 80GB cards will decide more than a few fen of API price.</p>
+        <h3>Volcano Engine puts Seedance 2.5 flash on sale at about 0.99 yuan per second of 720p video, roughly 34% below 2.5</h3>
+        <p>On the afternoon of November 12 Volcano Engine released Seedance 2.5 flash, a video generation model it says matches Seedance 2.5 on quality while doubling generation speed, at the same price as the previous flagship Seedance 2.0: about 0.99 yuan per second for 720p text-to-video and image-to-video, some 34% below Seedance 2.5.</p>
+        <p>Clips run up to 30 seconds. A single request accepts up to 10 images, five videos and five audio tracks, and output comes in 480p or 720p. The model is rolling out on platforms including Jimeng, LibTV, Updream, Creao AI and TapNow, with the API scheduled to open on Volcano Ark on November 15.</p>
+        <p>The Seedance 2.5 line now splits in two. The flagship keeps the emphasis on audiovisual quality, with a Draft mode that renders a sample before a 1080p final and 4K on the roadmap. The flash version trades that for speed and cost, aimed at high-volume production and frequent iteration.</p>
+        <p class="why"><b>Why it matters</b>Per-second pricing drags video generation back to the arithmetic of stock footage: a 30-second cut costs about 30 yuan, so for the first time a production house can budget generation the way it budgets assets. Doubling speed usually comes from distillation and fewer sampling steps, and the bill tends to land on fine detail and long-shot stability. &ldquo;Close to 2.5&rdquo; is the vendor&rsquo;s own framing with no third-party preference score published, so fix a seed set and A/B before committing a pipeline. The harder ceiling is the 30-second limit: anything longer still needs stitching, and consistency across the seam is where capacity actually runs out.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11 15:44</span>
-          <a class="src" href="https://www.minimax.io/blog/minimax-h3-image" target="_blank" rel="noopener noreferrer">MiniMax ↗</a>
+          <span class="d">11/12 20:47</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/12/content_612433.html" target="_blank" rel="noopener noreferrer">Science and Technology Daily ↗</a>
         </div>
-        <h3>MiniMax open-sources H3-Image: 4K images in under ten seconds, weights on Hugging Face</h3>
-        <p>MiniMax released H3-Image on November 11, an open-weight image model built on H3 that supports text-to-image, reference-based generation and editing. The company says it produces a 4096×4096 image — about 16 megapixels — in under ten seconds, up to five times faster than mainstream alternatives, and can reason over as many as 16 reference images at once to hold a subject, style or composition consistent. The weights are on Hugging Face, and the model is live in the API, MiniMax Code and Hailuo.</p>
-        <p>The speed comes from retuning the whole post-training pipeline rather than one trick: data, reinforcement learning, fewer sampling steps, PE and deployment optimization were changed together. MiniMax's comparison is 1.5–2× faster than mainstream in Standard mode and 3–4× in Highspeed mode, at 50–70% of comparable products' prices, with a further 50% off 4K-and-above requests during launch week. The blog includes a model card and a price chart but no FID, human-preference or prompt-adherence scores from a third party.</p>
-        <p class="why"><b>Why it matters</b>4K in ten seconds changes the workflow rather than the cost of a single image: a designer can produce a dozen variants in one session, pick one and upscale, so iteration count rises and per-image price matters less. The harder engineering is the 16 reference images — the more references, the easier identity leakage and composition conflicts become, and MiniMax does not disclose its reference-dropout scheme. Open weights let teams put the edit chain inside a local pipeline and pay by GPU-hour instead of per image, at the cost of quantization loss and 4K VRAM. &quot;Five times faster&quot; and &quot;50–70% of the price&quot; are vendor measurements; wait for independent reproduction before putting them in a procurement table.</p>
+        <h3>Baidu releases ERNIE Lightning and ERNIE Yijing, one to cut inference cost and one to cut video cost</h3>
+        <p>At its Baidu World 2026 keynote on November 12, Baidu released two application models on Baidu AI Cloud&rsquo;s Qianfan platform with APIs opened to enterprise customers and partners: ERNIE Lightning, a deep-reasoning model, and ERNIE Yijing, a micro-expression video model.</p>
+        <p>ERNIE Lightning was built for Baidu Search, which has to take voice, image and text input, understand complex requests, reason and call tools, and still absorb enormous concurrency. Baidu says it reworked the Transformer with a sparse attention scheme it calls BSA that compresses the KV history during decoding based on prior outputs and state, trading off between quality and the memory cost of keeping that history. Paired with Kunlun chips it runs high-speed inference on a single eight-card node, cutting inference engine cost by more than 30%.</p>
+        <p>ERNIE Yijing targets expressive video: text, vision and speech modelled together, driven by scripts of up to 4,000 characters, rendering facial expression, body movement and emotional shifts, with chapter-level dubbing aimed at podcasts and short-form drama. Baidu says video generation costs about 50% less than the industry norm, supports minute-level production, and that its fastest tier runs at 1:1 real time — a one-minute clip generated in one minute.</p>
+        <p class="why"><b>Why it matters</b>Two numbers are worth chasing: the curve between BSA&rsquo;s compression ratio and long-context fidelity, and what &ldquo;a single eight-card node&rdquo; actually means in chip model and concurrency. Compressing KV cache to save money is standard practice; the difficulty is whether retrieval-style tasks lose accuracy after compression, which needs long-document question answering to test, not short prompts. 1:1 real time means throughput must keep pace with clip length, and the bottleneck there is memory bandwidth and decoder scheduling rather than parameter count. If customers can reproduce that figure, the cost structure of short-drama and talking-head pipelines changes. The cost reductions are vendor claims; run your own shot list through the model before signing.</p>
       </article>
 
     </div>
@@ -363,7 +392,7 @@
 
   <section class="chapter" id="products-en" data-c="products">
     <div class="chead">
-      <span class="cnum">02</span>
+      <span class="cnum">03</span>
       <h2>Products &amp; Agents</h2>
       <span class="cen">产品与智能体</span>
       <span class="crule"></span>
@@ -372,13 +401,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11</span>
-          <a class="src" href="https://www.jiemian.com/article/15321028.html" target="_blank" rel="noopener noreferrer">Jiemian ↗</a>
+          <span class="d">11/12 10:47</span>
+          <a class="src" href="https://eu.36kr.com/en/p/4066127028574089" target="_blank" rel="noopener noreferrer">36Kr ↗</a>
         </div>
-        <h3>Tencent launches Yuanbao Search at so.qq.com, indexing WeChat articles and video</h3>
-        <p>Tencent launched Yuanbao Search on November 11. Users can reach it by typing so.qq.com into any browser's address bar, or by upgrading QQ Browser and switching the search engine to Yuanbao Search in settings. This is not a search box bolted onto the Yuanbao assistant: Tencent rebuilt the entire understand–retrieve–rank–answer chain on Yuanbao's model, backed by a trillion-scale index that covers the open web, WeChat official accounts, WeChat Channels and academic literature.</p>
-        <p>On presentation, Tencent says it prioritises authoritative institutions and official sources and clearly separates ads from answers. For the Chinese internet, WeChat official accounts and Channels have long been closed corpora that general search engines cannot crawl, or cannot crawl fully; bringing them into its own index turns that exclusive data into a quality differentiator.</p>
-        <p class="why"><b>Why it matters</b>Search is becoming the retrieval layer for agents: a stronger model still answers wrong if it cannot fetch the right material. Tencent's moat is not a benchmark score but the WeChat article and video corpus that others cannot get, plus QQ Browser as a default entrance. &quot;Ads separated from answers&quot; is a product promise, not a technical guarantee; what matters is how much commercial content sits in the ranking weights and whether the labels stay stable. For RAG teams, the question is whether so.qq.com will expose citable structured results — if not, it is one more closed, high-quality Chinese source.</p>
+        <h3>Grok Bot 1.0 finds work on its own, sits in meetings and bills per seat</h3>
+        <p>Early on November 12 SpaceXSI, formerly xAI, released Grok Bot 1.0 with three threads: the bot identifies work that needs doing instead of waiting to be assigned, it can join Google Meet, Zoom and Microsoft Teams calls, and teams can share one bot while several bots hand tasks to each other.</p>
+        <p>Meeting attendance is textual for now. Send the bot a meeting link, the host admits it, and it follows the discussion, answers questions in the chat window and writes up decisions and to-dos afterwards; once connected to a calendar it joins scheduled meetings on its own. The documentation does not claim it speaks aloud like a person. Team bots can be added to Slack or Teams channels, follow multi-person discussions to learn who owns what, and offer information or take over tasks at the right moment. Anything a bot learns from an ordinary member has to be approved by its creator or an administrator before it becomes shared team knowledge.</p>
+        <p>Pricing runs in three per-seat tiers: Premium at $30, Super at $100 and Ultra at $200 per person per month. Team bots are limited to team and enterprise accounts, while the meeting feature is also available to individual Ultra subscribers. The company has not published comparative data on task success rates, speed gains or resource consumption.</p>
+        <p class="why"><b>Why it matters</b>The hard part of a proactive agent is not capability but permission: who approves it taking work, which actions still require a human, and whose memory it is holding. Version 1.0 turns &ldquo;ask before acting&rdquo; and &ldquo;learning needs sign-off&rdquo; into product mechanics, which are both guardrails and friction — too loose and you have handed the agent a blank mandate; too tight and it degrades into a chatbot. Per-seat pricing where the bot&rsquo;s reply is charged to the person who asked makes cost attributable, which is what enterprise buyers care about most. What needs stress testing is cross-session memory: this time it learned your team&rsquo;s conventions, and next time it may carry them somewhere they do not belong.</p>
       </article>
 
     </div>
@@ -386,7 +416,7 @@
 
   <section class="chapter" id="research-en" data-c="research">
     <div class="chead">
-      <span class="cnum">03</span>
+      <span class="cnum">04</span>
       <h2>Research &amp; Safety</h2>
       <span class="cen">研究与安全</span>
       <span class="crule"></span>
@@ -396,13 +426,13 @@
       <article class="card">
         <div class="cmeta">
           <span class="d">11/12</span>
-          <a class="src" href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/" target="_blank" rel="noopener noreferrer">Google DeepMind ↗</a>
+          <a class="src" href="https://www.thaicert.or.th/en/2026/11/12/more-than-35000-grok-ai-built-applications-publicly-exposed-putting-corporate-data-and-passwords-at-risk/" target="_blank" rel="noopener noreferrer">ThaiCERT ↗</a>
         </div>
-        <h3>DeepMind's AlphaGenome 2 conditions on cell type, lifting causal-variant recall from 16% to 30%</h3>
-        <p>Google DeepMind released AlphaGenome 2 on November 11 local time, replacing the previous generation's parallel prediction with a conditional model. It takes a million-letter DNA sequence plus one biological condition — a tissue, cell type or cell state — and predicts that condition alone. The condition can come from a reference catalogue or be generated on the fly from a scientist's own single-cell experiment. The first model predicted thousands of experiments across many tissues at once; efficient, but it spread capacity thin and struggled to separate closely related cell types.</p>
-        <p>Training covered human and mouse bulk and single-cell data, more than 107 million individual cell profiles in total. Outputs cover gene expression, histone modifications and chromatin accessibility, and now DNA methylation as well. On the 28 primary immune cell types in TenK10K, AlphaGenome 2 identified nearly twice as many causal variants as the original fine-tuned on single-cell data (30% versus 16%) and directional gene effects of 43% versus 23%. It also reproduced an IBD study in which a variant in a distant regulatory switch overactivates ETS2 in gut macrophages, singling out the causal variant and showing the effect is confined to that cell type. The conditional design also enables cross-modality imputation: from one measurement, such as single-cell gene activity, it predicts unmeasured chromatin accessibility.</p>
-        <p>AlphaGenome 2 is free for non-commercial research and in private preview for commercial work. The cost is compute: cell-level inference is more expensive than the previous generation, and DeepMind suggests a division of labour — the first model for genome-wide databases over all 9 billion variants, the second for cell-level attribution and target discovery on candidate sites.</p>
-        <p class="why"><b>Why it matters</b>Swapping a tissue average for a single-cell state addresses a common GWAS failure: a signal shows up on an average expression profile that no relevant cell type actually has, so it looks significant while pointing at the wrong cells. The 30% recall figure is worth remembering, but it is still recall — seven in ten causal variants remain unfound, and the paper's precision and calibration matter more than the headline number. Higher compute means it is not built for genome-wide scans; it fits a second-stage filter, after the first model narrows candidates to a few thousand. For teams building biological foundation models, the cell encoder's zero-shot transfer to new data is more reusable than any benchmark.</p>
+        <h3>94.7% of 37,571 Grok-built apps open without a login</h3>
+        <p>According to The Hacker News, security firm Claroc examined apps built with SpaceXSI&rsquo;s Grok Build: of 37,571 that were still live, 35,578 — 94.7% — could be reached publicly with no authentication at all. They included 24 apps built by staff at X and at SpaceXSI itself, plus internal information from at least 30 other organisations across construction, energy, healthcare and defence, six of them Fortune 500 companies.</p>
+        <p>Two things went wrong. The first is a default: publishing left access set to &ldquo;anyone with the link&rdquo;, and every app sits on a grok.me subdomain whose resolution lands in passive DNS databases that outsiders can enumerate by pattern — an address being hard to guess is not the same as being unfindable. The second is the AI-written auth code itself. Building their own test apps, the researchers found Grok&rsquo;s sign-in flow added each visitor to the team before checking whether they belonged, so the check always passed and an outside Google account could view, edit and delete records.</p>
+        <p>By the researchers&rsquo; estimate about one in ten of the open apps held business or personal information and roughly 2% rated high to critical, including a hospital group&rsquo;s searchable list of more than 3,500 employees, an intensive-care briefing on one patient, a fire department&rsquo;s live shift board, and a contractor&rsquo;s timesheet with every employee password in plain text. SpaceXSI took down the 24 staff apps after being notified; other users&rsquo; apps reportedly stayed online.</p>
+        <p class="why"><b>Why it matters</b>&ldquo;Link equals permission&rdquo; is equivalent to public once the subdomain is enumerable, and that is the step most often missed when an internal tool is pushed onto the open web. For teams using AI app builders, three checks beat any demo: set the default to owner-only, test authentication with an account outside your domain, and scan front-end scripts for passwords and email addresses. The lesson worth keeping is the ordering bug — the page had a &ldquo;continue with Google&rdquo; button and looked authenticated, while the membership check ran after the user was already added. AI-written code fails on control-flow order more than on syntax, and no smoke test that only proves the app runs will catch it.</p>
       </article>
 
     </div>
@@ -410,7 +440,7 @@
 
   <section class="chapter" id="embodied-en" data-c="embodied">
     <div class="chead">
-      <span class="cnum">04</span>
+      <span class="cnum">05</span>
       <h2>Embodied AI</h2>
       <span class="cen">具身智能</span>
       <span class="crule"></span>
@@ -419,36 +449,12 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/11 19:21</span>
-          <a class="src" href="https://stcn.com/article/detail/4332469.html" target="_blank" rel="noopener noreferrer">Securities Times ↗</a>
+          <span class="d">11/12 10:55</span>
+          <a class="src" href="https://stcn.com/article/detail/4333339.html" target="_blank" rel="noopener noreferrer">Securities Times ↗</a>
         </div>
-        <h3>Joyson delivers its first high-compute &quot;brain backpack&quot; to Unitree, compatible with humanoid, quadruped and wheeled robots</h3>
-        <p>Joyson Electronics said on November 10 that its Ningbo Hyperplane Robotics unit had delivered the first high-compute robot brain backpack to Unitree, moving the partnership from a framework agreement to product delivery, with more projects expected this year. The backpack is the core product of Joyson's embodied-AI hardware-software stack: a high-compute edge platform plus an energy system packaged as an external module compatible with several Unitree humanoid, quadruped and wheeled robots.</p>
-        <p>According to the company, it strengthens perception, data collection, autonomous decision-making and motion control, runs real-time inference for on-device embodied models, supports self-evolution of &quot;physical agents&quot; and extends continuous operating time through energy management. The two companies are also co-developing dexterous hands and a solid-state battery energy-management system, aiming at standardised parts that can be mass-produced across robot types. Industrially, they are working on automotive-parts lines: data collection, hardware and software adaptation, industrial model training, line pilots and then replication at scale.</p>
-        <p class="why"><b>Why it matters</b>A backpack is an engineering compromise that decouples compute from the body: the robot does not have to reserve power, cooling and structure for peak compute, at the cost of a power/data cable, extra weight and interface bandwidth as a new bottleneck. For embodied teams, the numbers to watch are sustained power draw, cooling at load and end-to-end latency, not TOPS — a powerful chip is useless if sensor data cannot get in and actions cannot get out fast enough. For Joyson, this ports automotive Tier-1 manufacturing into robot components; for Unitree, it buys a replicable compute module rather than a one-off custom build.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="capital-en" data-c="capital">
-    <div class="chead">
-      <span class="cnum">05</span>
-      <h2>Industry &amp; Capital</h2>
-      <span class="cen">行业与资本</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/11</span>
-          <a class="src" href="https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
-        </div>
-        <h3>UK chip company Fractile raises $720m at a $7bn valuation, stacking DRAM on logic for long contexts</h3>
-        <p>Fractile, a UK AI chip company, raised $720 million at a $7 billion post-money valuation. The round was co-led by Thrive, Founders Fund, Lightspeed and Redpoint, with Balderton joining. Founded in 2022, Fractile is unusually full-stack for a silicon company: it designs its own chips, systems and software, and does its own machine-learning research.</p>
-        <p>Its technical path differs from mainstream AI chips. Most rely on HBM and near-identical designs; Fractile packages DRAM directly on top of its logic die, which it says delivers far more memory bandwidth than HBM and more capacity than SRAM, so large models can run at thousands of tokens per second even at very long contexts. That figure is the company's own and has not been independently reproduced. The bet, as Fractile frames it, is that the bottleneck for frontier models moves from raw compute to how fast they produce useful output, and that fixing it requires rebuilding the hardware.</p>
-        <p class="why"><b>Why it matters</b>The bottleneck in long-context inference is memory bandwidth and capacity, not FLOPs: the KV cache grows linearly with context, and HBM bandwidth and capacity bind together as batch rises. DRAM-on-logic trades advanced packaging for bandwidth, and the engineering bill arrives as yield, heat and DRAM supply — none of which a funding round solves. $720 million shows capital will back a non-HBM path, but the real validation is customer tape-outs, production yield and measured tokens per second, not a $7 billion mark. For cloud providers, a second memory path means bargaining power; for Nvidia, this is competition at the packaging layer rather than the process node.</p>
+        <h3>Yongda Auto orders 400 Unitree U1 Pro humanoids, with delivery planned this year</h3>
+        <p>On November 11 Unitree Robotics and Yongda Auto signed a strategic cooperation agreement under which Yongda will buy 400 Unitree U1 Pro bionic humanoid robots, with Unitree planning to deliver within this year. Yongda Auto is a Hong Kong-listed dealer group for luxury and new-energy vehicles.</p>
+        <p class="why"><b>Why it matters</b>This is a channel-side order, not a factory pilot. Showrooms, dealership floors and service reception are natural settings for a humanoid: the motions are fairly standardised, the scripts can be authored, and customers tolerate novelty. The number is not the point; delivering 400 units inside the year means production capacity and acceptance both have to hold at once — yield on the bionic face, interaction latency, and deployment and maintenance across a dealer network, any one of which pushes delivery into next year. For a humanoid maker, a channel order tests unit economics far better than a demo. For the buyer, the real question is how many reception hours one robot replaces, and that answer only arrives after the first stores have run a full quarter.</p>
       </article>
 
     </div>
@@ -457,9 +463,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between November 11, 09:12 and November 12, 09:17 (Beijing time): 7 stories. Compiled at 11/12 09:17.</p>
+        <p>This issue covers reports published between November 12, 09:17 and November 13, 09:16 (Beijing time): 7 stories. Compiled at 11/13 09:16.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 018 · 24h window · Generated 2026-11-12 09:17</p>
+    <p class="sig">AI Daily · Issue 019 · 24h window · Generated 2026-11-13 09:16</p>
       </div>
     </footer>
       </div>
@@ -484,8 +490,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">12</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-12.html" title="阿里上线 Qwen4-Max 预览版：100 万 token 上下文、39 万 token 输出，只卖 Token Plan">
+        <summary><span>2026 年 11 月</span><span class="am-count">13</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-13.html" title="英伟达宣布黄仁勋辞去 CEO 与董事职务、即刻生效：CFO 克雷斯任临时 CEO，董事会首次设主席">
+          <span class="a-date">2026.11.13 <em>FRI</em></span>
+          <span class="a-head">英伟达宣布黄仁勋辞去 CEO 与董事职务、即刻生效：CFO 克雷斯任临时 CEO，董事会首次设主席</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-12.html" title="阿里上线 Qwen4-Max 预览版：100 万 token 上下文、39 万 token 输出，只卖 Token Plan">
           <span class="a-date">2026.11.12 <em>THU</em></span>
           <span class="a-head">阿里上线 Qwen4-Max 预览版：100 万 token 上下文、39 万 token 输出，只卖 Token Plan</span>
         </a>
@@ -566,8 +576,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">12</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-12-en.html" title="Alibaba opens Qwen4-Max-Preview: a 1M-token context and 393,216-token output, Token Plan only">
+        <summary><span>November 2026</span><span class="am-count">13</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-13-en.html" title="NVIDIA says Jensen Huang has resigned as CEO and director, effective immediately; CFO Kress steps in, board gets its first chair">
+          <span class="a-date">2026.11.13 <em>FRI</em></span>
+          <span class="a-head">NVIDIA says Jensen Huang has resigned as CEO and director, effective immediately; CFO Kress steps in, board gets its first chair</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-12-en.html" title="Alibaba opens Qwen4-Max-Preview: a 1M-token context and 393,216-token output, Token Plan only">
           <span class="a-date">2026.11.12 <em>THU</em></span>
           <span class="a-head">Alibaba opens Qwen4-Max-Preview: a 1M-token context and 393,216-token output, Token Plan only</span>
         </a>
