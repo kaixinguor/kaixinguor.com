@@ -70,15 +70,15 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 020 期</span>
+          <span class="issue-tag">第 021 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 15 日<span class="weekday">SUN</span></h1>
-        <p class="deck">谷歌用一群会互相质疑的智能体，把韦伊猜想写成约 180 万行 Lean 证明；同一天，Cursor 把供应链攻击的账算清了——一家推理平台泄露的密钥，顺着扩展市场摸到了 5000 名开发者。产品侧，OpenAI 开始让智能体替你付钱，Meta 让它替你打电话，Cloudflare 干脆给它造了个不要 Chromium 的浏览器。能力与成本两端同时在动：腾讯把工具调用塞进实时语音，llama.cpp 用 1.0.0 给本地推理立下版本契约，超聚变带着 435 亿元营收走到创业板门口。<em>「能做事」之后，下一道门槛是「谁为它做的事负责」。</em></p>
-        <div class="metabar"><span class="pill">第 020 期</span>
+        <h1 class="date">2026 年 11 月 16 日<span class="weekday">MON</span></h1>
+        <p class="deck">同一个周末，中国两家公司把「国产卡 + 长上下文」推到台前：美团开源 1.6 万亿参数的 LongCat-2.5，样例部署跑在 194 颗昇腾上；华为云把 512K 上下文的 openPangu-2.1-Pro 放上 MaaS，缓存命中输入降到每百万 token 0.016 元。另一侧，华盛顿把英伟达的治理危机变成出口合规问题，OpenAI 则用一篇 123 页的格点论文为「AI 做科学」开了个新版面。<em>模型在降价，算力在换轨，监管在收紧——三件事正在同一周发生。</em></p>
+        <div class="metabar"><span class="pill">第 021 期</span>
       <span class="dot"></span>
-      <span>窗口 11/13 09:16 – 11/15 08:05</span>
+      <span>窗口 11/15 08:05 – 11/16 07:41</span>
       <span class="dot"></span>
-      <span>9 条</span>
+      <span>8 条</span>
       <span class="dot"></span>
       <span>阅读约 11 分钟</span></div>
       </div>
@@ -88,11 +88,10 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-zh"><span class="n">00</span>速览</a>
-        <a href="#research-zh"><span class="n">01</span>研究与安全</a>
+        <a href="#models-zh"><span class="n">01</span>模型与能力</a>
         <a href="#products-zh"><span class="n">02</span>产品与智能体</a>
-        <a href="#models-zh"><span class="n">03</span>模型与能力</a>
-        <a href="#embodied-zh"><span class="n">04</span>具身智能</a>
-        <a href="#capital-zh"><span class="n">05</span>行业与资本</a>
+        <a href="#research-zh"><span class="n">03</span>研究与安全</a>
+        <a href="#capital-zh"><span class="n">04</span>行业与资本</a>
         </div>
       </div>
     </nav>
@@ -101,50 +100,51 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>谷歌 Teamwork 用约 2.88 万次子智能体调用、约 180 万行 Lean 代码完成韦伊猜想的形式化，并复现三维纳维-斯托克斯方程有限时间爆破的形式化证明；同一套系统还把 libgav1 解码器从 C++ 重写为约 17 万行 Rust。</b>每个专业智能体只拿到完成任务所需的文件与工具，另设独立质疑者与审查者，不依赖原智能体的推理链。</p>
+      <p><b>美团开源 LongCat-2.5 权重：1.6 万亿参数 MoE、每 token 激活约 480 亿、100 万 token 上下文，MIT 许可允许商用；官方样例部署用 194 颗华为昇腾 Atlas A2，自托管指南没有 Nvidia 配置。</b>厂商自测的 Terminal Bench v2.1 得 88.4，略低于 Claude Opus 5 的 89.1 与 DeepSeek-V4.1-Flash 的 90.6。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>超聚变创业板 IPO 过会，从受理到上会用时 174 天，拟募资 80 亿元；2024 年营收 435 亿元，2025 年上半年超过 300 亿元，国内 x86 服务器份额 12.7% 位列第二。</b>上市委问询集中在毛利率变动趋势与业绩可持续性，募资投向新一代算力产品研发。</p>
+      <p><b>美财长贝森特要求英伟达董事会在 10 天内说明是否为推动收入而默许「看似非法」的对华芯片销售，并主张下一任 CEO 从外部选聘；同日《金融时报》称黄仁勋已与亲信讨论回归。</b>国会两党也在推进收紧 AI 芯片对华出口，并要求黄仁勋到国会作证。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>Cursor 公布供应链攻击调查结果：恶意 Claude Code 扩展在扩展市场存在约 11 小时，最多波及 5000 名用户；源头是 Fireworks 泄露的访问密钥。</b>使用隐私模式的用户提示词与代码不受影响，少于 0.05% 的用户链路追踪数据泄露。</p>
+      <p><b>OpenAI 上线科学博客，首篇是物理学家 Nathaniel Craig 的客座文章：他与 GPT-6 Astra 合作，给出标准模型的候选非微扰格点定义；论文 123 页，附 Lean 形式化材料。</b>Craig 称 Astra「对这项结果是必需的」，数学家的评价是「相对 Lüscher 的温和推进」，离完整的连续极限定义仍远。</p>
     </li>
       </ol>
 
-  <section class="chapter" id="research-zh" data-c="research">
+  <section class="chapter" id="models-zh" data-c="models">
     <div class="chead">
       <span class="cnum">01</span>
-      <h2>研究与安全</h2>
-      <span class="cen">Research &amp; Safety</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/14 14:53</span>
-          <a class="src" href="https://www.ithome.com/1/027/140.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/15 18:06</span>
+          <a class="src" href="https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>谷歌 Teamwork 用 2.88 万次子智能体调用，把韦伊猜想写成 180 万行 Lean 证明</h3>
-        <p>据 IT 之家 11 月 14 日报道，谷歌披露了多智能体系统 Teamwork 的阶段性结果：它已对韦伊猜想（Weil conjectures）完成形式化证明。这组关于有限域上多项式方程解数的结论由皮埃尔·德利涅于 1974 年证明，Teamwork-LEAP 通过约 2.88 万次子智能体调用、累计生成约 180 万行 Lean 代码，把证明写成了可被内核逐行检查的形式。</p>
-        <p>同一套系统还复现了三维纳维-斯托克斯方程有限时间爆破问题的一项形式化证明，并帮助研究人员处理了库尔塔德-库马尔猜想（Courtade–Kumar conjecture）。工程结构上，多个专业智能体并行工作，每个智能体只能访问完成任务所需的文件和工具；结果由独立的质疑者与审查者检查，审查者不依赖原智能体的推理过程，以此压低长链推理里常见的错误累积。</p>
-        <p>数学之外，谷歌把 30 个专业智能体组成团队，接入融入物理知识的模拟器，从核磁共振数据推断分子结构：在复杂分子基准上 Top-1 准确率 95%、Top-3 100%。系统还把自家的 libgav1 AV1 视频解码器从 C++ 重写为约 17 万行 Rust，在覆盖面较广的测试中与原始版本输出完全一致。</p>
-        <p>目前 Teamwork 与名为 /boost 的迭代式编程工作流正通过 Antigravity 开放，谷歌计划向 1 万名学术研究人员提供 6 个月的最高额度免费访问。</p>
-        <p class="why"><b>看点</b>这件事的分量不在「AI 会做数学」，而在验证闭环被产品化：Lean 把「证明对不对」变成编译期问题，子智能体负责搜索与写代码，独立审查者负责拒绝，两者分开才让 180 万行规模可控。对做 agent 的团队，可复用的是那条分工原则——生成者与验证者不共享上下文，验证者只拿产物和规格。要打问号的是成本口径：2.88 万次调用对应多少 token、多少美元、多少机时，官方没有给；不同定理之间的成功率也没有分布。拿它做代码迁移（C++ 到 Rust）比做数学更接近日常生产，输出一致性强依赖测试覆盖，覆盖不到的地方仍是人审。<br><b>另一个视角</b>如果形式化证明的边际成本真能降到「调用几次智能体」的量级，最先被重新定价的是芯片验证、密码学协议和编译器优化——这些领域今天付给形式化方法团队的钱，本质上买的是「确信」。</p>
+        <h3>美团开源 LongCat-2.5 权重：1.6 万亿参数 MoE，样例部署跑在 194 颗昇腾上</h3>
+        <p>据 The Decoder 11 月 15 日报道，美团 LongCat 团队在模型发布一周后放出 LongCat-2.5 的权重，采用 MIT 许可，允许商用、修改与再分发。这是一个面向长程智能体任务的混合专家模型：总参数 1.6 万亿，每个 token 激活约 480 亿，支持 100 万 token 上下文、最大 12.8 万 token 输出，可处理文本、图像与视频输入，推理开关可以关闭。</p>
+        <p>训练与监督微调都在国产加速器上完成。美团在<a href="https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html" target="_blank" rel="noopener noreferrer">技术博客</a>里说，国产卡单卡显存不足 80GB，团队用 FSDP 双重分片、混合词表并行、MoonEP 动态专家复制和零拷贝通信把长序列训练压进去；长序列 SFT 的单卡吞吐比 DDP 基线高 86%。推理侧把专家权重与激活同时量化到 4 bit（W4A4），官方实测 prompt 处理吞吐提升 43.3%、生成提升 42.77%，并称精度与未量化版本相当。</p>
+        <p>官方给的样例部署是 194 颗华为昇腾 Atlas A2：2 颗做图像处理、64 颗做 prompt 摄入、128 颗做回复生成，自托管指南里没有 Nvidia GPU 的配置。评测是厂商自测：Terminal Bench v2.1 得 88.4，低于 Claude Opus 5 的 89.1 与 DeepSeek-V4.1-Flash 的 90.6，略高于 GPT-5.6 Sol 的 88.8；更难的 v4.0 得 38.5，Opus 5 为 53.9；DeepSWE 从上一代的 9.7 升到 64.6；BrowseComp 的 91.9 是美团在自己的环境里跑的。API 促销价约为每百万输入 token 0.27 欧元、每百万输出 token 1.07 欧元。</p>
+        <p>训练方法上，团队用真实 GitHub PR 造任务，沙箱断网、清掉 Git 历史与构建缓存，再用 LLM judge 检查「钻空子」，并把真实 agent 的失败轨迹改写成可复现、可验证的训练任务；强化学习用 partial rollout 异步训练，按通过率动态调整过采样率，过滤全对与全错的样本组。</p>
+        <p class="why"><b>看点</b>1.6 万亿开源权重加国产卡，真正的门槛已经从「有没有卡」变成「能不能把 194 颗卡跑稳」。三个口径要盯住：样例部署是推理不是训练，训练集群规模官方没给；榜单是厂商自测，BrowseComp 还是自建环境；W4A4 的「精度相当」只有一句结论，没有逐项任务的分差。对下游团队，MIT 是最实在的一条——可以商用、可以二次训练，但 1.6 万亿参数的显存与通信预算决定大多数团队只能走 API。<br><b>另一个视角</b>如果「国产卡 + 4bit + 长上下文」这套工程路径可复制，明年的价格战不会只发生在 API 报价上，还会发生在「每 token 需要多少卡」这张表上。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/14 18:52</span>
-          <a class="src" href="https://www.ithome.com/1/027/215.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/15 23:42</span>
+          <a class="src" href="https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>Cursor 公布供应链攻击调查：恶意 Claude Code 扩展最多波及 5000 名用户</h3>
-        <p>当地时间 11 月 13 日，Cursor 在为期两周的调查后披露了安全事件结果：绝大多数客户未受影响，最多波及 5000 名用户，公司已逐一联系受影响客户。使用隐私模式的用户，提示词和代码不受影响；未使用隐私模式的用户中，编程智能体链路追踪数据遭泄露的占比不到 0.05%。</p>
-        <p>攻击链条的起点是 Fireworks 泄露的访问密钥。攻击者用它窃取了 Cursor 共享存储桶中的部分数据，并借其中少量未脱敏凭证（受影响客户不到 0.01%）进入部分 SaaS 工具，访问了非生产代码仓库、客户支持数据和部分用户凭证。Cursor 称检测到异常后立即停用泄露密钥、轮换凭证并切断未授权访问。</p>
-        <p>更直接的一环发生在扩展市场：10 月 29 日，攻击者用窃取的内部凭证把篡改版 Anthropic Claude Code 扩展（Anthropic.claude-code 2.1.312 与 2.1.313）注入 Cursor 扩展市场，与 Anthropic 及 Open VSX 无关。恶意版本存续约 11 小时，最多影响 5000 名用户。Cursor 随后下架扩展、临时下线市场并配合关停攻击者服务器，11 月 1 日拦截最后一次攻击后确认事件受控。</p>
-        <p class="why"><b>看点</b>这不是「某家 IDE 出事」，而是 agent 工具链的信任结构问题：扩展市场、模型推理供应商、共享存储桶，三层里任何一层交出凭证，攻击者就能站到开发者机器与代码之间。值得记住的两个细节——恶意版本只活了 11 小时却装了 5000 次，说明自动更新把「发布」变成了「推送」；官方明确说仅卸载扩展无法彻底清除风险，因为凭证已经落过地。团队该做的是三件事：按版本号排查 2.1.312/2.1.313、轮换那段时间内可被扩展读到的密钥、审计扩展的 OAuth 授权范围。</p>
+        <h3>Claude Fable 5.2 用 70 万笔「画」出照片级图像：不生成像素，写 Python 模拟笔触</h3>
+        <p>据 The Decoder 11 月 15 日报道，Anthropic 的 Claude Fable 5.2 展示了一种不同的「生图」方式：模型不直接生成像素，而是写一段 1000 到 2000 行的 Python 程序，驱动一个模拟颜料、笔刷与画布质感的绘制引擎，把几十万笔一笔一笔放到虚拟画布上。Anthropic 员工 Jake Eaton 的演示里，一张停车场的写实画用了约 70 万笔。</p>
+        <p>另一段由工程师 Michael Graczyk 公开的日志里，模型画「日出时的鸟」只用了 111 笔，每一笔都给出颜色码、笔宽和若干带轻微抖动的路径点；第一笔是 #30346a、90 像素宽、五个路径点。模型没有撤销键，每一笔落下就留在画布上；它会在两遍之间「看」画布，发现鸟背太薄就补一笔更重的颜色，把边缘的杂毛变成羽毛。</p>
+        <p>这条路线把语言模型的长程规划与空间推理绑在一起。Anthropic 称 Fable 5.2 在其内部 RoboDojo Sim 基准上得 64.9%，GPT-6 Astra 为 29.8%；但在研究者 Aris Zhu 用真实机械臂画《星月夜》的对比里，Astra 画得更快，且目前只有 Astra 把多米诺骨牌立了起来。这些数字来自厂商与员工演示，没有独立复现。</p>
+        <p>Fable 5.2 于 11 月 9 日发布，与 Mythos 5.2 同底模；Anthropic 称它还在黑洞物理的两个开放问题上给出结果、与 Diode 设计了三个可用电路，并用 1000 多个子智能体在 8 天里写出一个笔记本操作系统。</p>
+        <p class="why"><b>看点</b>这条演示真正测的不是「画得像不像」，而是「能不能在几百步、几十万次离散决策里保持一致」：每一笔都是代码，错了不能回滚，只能靠后续笔触遮盖——这正是长程 agent 的典型失败模式。工程上值得抄的是反馈环：生成代码、渲染、看结果、再改；值得警惕的是成本口径，70 万笔对应多少 token、多少机时、多少美元，官方都没说。至于「照片级」，决定画质的一半是那个绘制引擎，不是模型本身。</p>
       </article>
 
     </div>
@@ -161,98 +161,63 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/13 23:49</span>
-          <a class="src" href="https://www.ithome.com/1/026/994.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/15 21:16</span>
+          <a class="src" href="https://www.ithome.com/1/027/450.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>OpenAI 上线 ChatGPT Wallet：dot 智能体代下单，每笔都要过支付令牌与身份验证</h3>
-        <p>OpenAI 推出 ChatGPT Wallet，把支付能力接进 ChatGPT。钱包由 OpenAI 与美国运通、万事达卡和 Visa 合作开发，用户使用现有信用卡付款时仍可享受原有的积分与权益保障；符合条件的用户录入一次银行卡信息后，就能让 dot 智能体帮忙找商品并完成购买。</p>
-        <p>安全设计沿用支付网络的令牌化思路：每笔交易由支付网络生成专用支付令牌，其中包含限定用途的卡号、安全码和有效期，智能体不接触用户的真实银行卡信息；每笔交易仍需通过安全验证才能完成。初期仅向美国年满 18 岁的 Pro 订阅用户开放。</p>
-        <p>商业化上，OpenAI 表示初期不对交易收取佣金，当前目标是与商家建立合作，让消费者逐渐把 ChatGPT 视为购物入口。公司同时发布了面向企业的工具和指南，其中包括如何检查网站是否误拦截了 OpenAI 的智能体。</p>
-        <p class="why"><b>看点</b>agent 支付真正的难点从来不是「能不能扣款」，而是授权粒度与责任划分：谁批准了这笔钱、限额多少、买错了谁退。令牌化解决了「卡号不外泄」，但没解决「意图被曲解」——用户说「买双跑鞋」，智能体选错型号，争议仍要回到商户的退款规则。每笔都要生物识别，短期是安全阀，长期是转化率的天花板；OpenAI 说以后会用消费限额、品类、时间窗口做预授权，那才是 agent 商务的成人礼。对商家，比接支付更要紧的是先想清楚要不要让 agent 进来：拦掉它，可能拦掉一整类新增订单。</p>
+        <h3>华为云上线 openPangu-2.1-Pro：512K 上下文，缓存命中输入每百万 token 0.016 元</h3>
+        <p>11 月 15 日，华为云 MaaS 模型即服务平台上线开源盘古模型 openPangu-2.1-Pro。官方口径是围绕 Agent 开发、AI 编码和推理优化三条线升级，场景点名深度研究、鸿蒙系统操控、鸿蒙 App 开发、昇腾算子生成与推理链路优化。</p>
+        <p>规格上，华为云<a href="https://support.huaweicloud.com/model-list-maas/model_list_0001.html" target="_blank" rel="noopener noreferrer">模型列表</a>给出上下文 512K、最大输入 500K、最大输出 384K、最大思维链 256K；支持深度思考开关、Function Call、前缀续写与前缀缓存；默认限流 TPM 200 万、RPM 100，目前预置区域只有西南-贵阳一。</p>
+        <p>价格是这次最具体的数字：输入 0.8 元/百万 token，输出 3.2 元/百万 token，缓存命中输入 0.016 元/百万 token，约为输入价的 2%。Agent 能力方面，官方称用 10 万余条专项数据优化了 Skills 触发、工具选择与调用；代码能力则集中适配鸿蒙 ArkTS 与昇腾算子。</p>
+        <p>官方没有公布参数量、权重下载地址或跑分。openPangu-2.0-Pro 与 2.0-Flash 已定于 11 月 30 日下线，仍在使用旧型号的服务需要在月底前迁完；新模型还会接入智果 AgentArts、码道 CodeArts 与果办 OfficeAce。</p>
+        <p class="why"><b>看点</b>这一定价把账单结构写得很清楚：缓存命中只有输入价的 2%，长文档反复问答会被缓存价主导；输出价是输入价的 4 倍，写代码、写报告这类长输出任务才是成本大头。真正的未知数不是价格，而是工具调用的可靠性——官方没有给成功率、可调用工具数量，也没有给参数规模，迁移前只能拿同一批任务做 2.0 与 2.1 的盲评。另一个现实约束是区域：只有贵阳一个预置区，跨区延迟与数据合规要先算进去。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/14 21:46</span>
-          <a class="src" href="https://www.ithome.com/1/027/238.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/16 06:30</span>
+          <a class="src" href="https://www.digitaltoday.co.kr/en/view/125850/korean-big-tech-joins-personal-ai-agent-race-jensen-huang-resignation-fallout" target="_blank" rel="noopener noreferrer">DigitalToday ↗</a>
         </div>
-        <h3>Meta 的 Muse 上线代打电话：能联系保险公司和餐厅，但常被当成诈骗挂断</h3>
-        <p>据 IT 之家 11 月 14 日报道，Meta 首席 AI 官汪滔 13 日凌晨在 X 上宣布，Muse 可以替用户拨打「所有不想亲自打的电话」：联系保险公司或有线电视服务商、预约美国车管部门业务，或者向餐厅订位。</p>
-        <p>Muse 用 AI 合成语音与商家工作人员交谈，但这类通话并不总能顺利完成——部分工作人员听出对面是 AI 后直接挂断，有人为了防诈骗，也有人认为这类来电只是浪费时间。Meta 此前已向早期体验用户测试数月，现向 Meta AI 最高档付费订阅用户开放，订阅价格每月 19.99 美元起。</p>
-        <p>Muse 不是第一款代打电话工具：谷歌 Gemini 的 Call for Me 支持 Pixel 11 与 Pixel 10，并使用用户本人的电话号码拨出；另一款智能体 Instinct 从 9 月起就在测试代打电话。</p>
-        <p class="why"><b>看点</b>电话是最后一个没有 API 的接口，也是 agent 落地最容易被低估的场景：它要求实时语音、打断处理、表单信息复述，以及在对方追问时临时编造不出来的「你到底是谁」。Muse 暴露的瓶颈不在模型，而在被叫方——商家没有义务配合 AI，识别与挂断是他们的风控。要跑通，至少需要三样东西：开场明确披露 AI 身份、通话记录可回溯、出错时有真人接管。官方没给接通率与任务完成率，19.99 美元买到的更像一个「愿意替你打」的承诺，而不是「一定打得通」的服务。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/14 18:06</span>
-          <a class="src" href="https://github.com/cloudflare/kitesurf" target="_blank" rel="noopener noreferrer">Cloudflare · GitHub ↗</a>
-        </div>
-        <h3>Cloudflare 开源智能体浏览器 Kitesurf：跑在 Workers 上，不要 Chromium</h3>
-        <p>据 IT 之家 11 月 14 日报道，Cloudflare 开源了面向 AI 智能体的浏览器 Kitesurf。它运行在 Cloudflare Workers 之上，不需要传统浏览器容器，就能完成 HTML 解析、CSS 应用、执行页面 JavaScript 以及网页截图渲染。</p>
-        <p>Kitesurf 支持 Chrome DevTools 协议，现有工具可以直接驱动它，底层不依赖任何 Chromium 进程或容器。官方说它没有照搬完整桌面浏览器引擎，而是聚焦智能体真正关心的指标——token 消耗、上下文窗口、可扩展性、性能与成本，同时舍弃标签页、外观主题、扩展和像素级精确渲染这些只服务人类的功能。</p>
-        <p>在网页截图、HTML 提取这类常见智能体任务中，它消耗的 CPU 与内存显著低于 Chromium，意味着同一台机器能并发更多会话，应对 AI 驱动的高并发负载。代码已放在 Cloudflare 的 GitHub 仓库。</p>
-        <p class="why"><b>看点</b>agent 基础设施正在从「驱动一个给人看的浏览器」转向「造一个给 agent 看的渲染器」。这个转向的技术含义很具体：去掉合成器与像素管线，保留 DOM、网络栈与 JS 执行，就能把单会话的内存从数百 MB 压到几十 MB，并发密度直接上一个量级。CDP 兼容是聪明的迁移设计，Playwright/Puppeteer 的脚本几乎不用改。要验证的是保真度——反爬、Canvas 指纹、复杂前端框架下，精简引擎与 Chromium 的行为差异会直接变成任务失败率；这类差异只能拿真实站点跑回归，不能看 demo。</p>
+        <h3>韩国两大平台把个人智能体做成「能下单、能付款」的入口</h3>
+        <p>据 DigitalToday 11 月 16 日报道，Naver 计划在年内推出面向个人的 AI 智能体，代用户完成购物、预订和支付，把搜索里的信息直接接到交易；公司还计划扩展到物流与线下支付，并把平台整体转向 AI。</p>
+        <p>Kakao 的路线是把 KakaoTalk 从「回答问题」改成「执行任务」：智能体在聊天窗口里替用户完成服务操作，靠广告与电商变现，目标是 2028 年让 AI 业务盈亏平衡。韩国初创公司 Pickle 已经在做购物与购票，但试用者抱怨速度慢。</p>
+        <p>报道把这些动作放在同一背景里：全球大厂都在抢「个人智能体」入口，Meta 的 Muse 已向付费用户开放代打美国商家电话；而 Naver 与 Kakao 的优势是本地支付、身份与商家关系，短板是模型能力。</p>
+        <p class="why"><b>看点</b>个人智能体的竞争点正在从「模型多强」转向「入口 + 支付 + 商家接入」三件套：谁能替用户完成最后一公里的下单，谁就拿到交易数据与佣金。Kakao 把盈亏平衡放到 2028 年，等于承认要先补贴两年；真正的成本不在推理，而在商户侧的接口改造与纠纷处理。对中国的超级 App，这是一面镜子——做 agent 的壁垒同样是支付与商家，不是榜单。</p>
       </article>
 
     </div>
   </section>
 
-  <section class="chapter" id="models-zh" data-c="models">
+  <section class="chapter" id="research-zh" data-c="research">
     <div class="chead">
       <span class="cnum">03</span>
-      <h2>模型与能力</h2>
-      <span class="cen">Models &amp; Capability</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/13 16:41</span>
-          <a class="src" href="https://www.ithome.com/1/026/825.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/16 06:00</span>
+          <a class="src" href="https://openai.com/index/step-toward-defining-the-standard-model/" target="_blank" rel="noopener noreferrer">OpenAI ↗</a>
         </div>
-        <h3>腾讯混元发布 Hy Realtime：实时语音模型补上工具调用与唱歌</h3>
-        <p>11 月 13 日，腾讯混元发布全新实时语音模型 Hy Realtime。它在语音理解、指令遵循、拟人化表达等基础对话能力之外，新增两项能力：Agentic 工具调用与唱歌。模型已在元宝语音通话、腾讯客服等产品上线，近期将上线腾讯云对外提供 API。</p>
-        <p>官方介绍，Hy Realtime 能处理口齿含糊、话说半截、中途改口等不完整输入，结合上下文还原意图；多轮指令遵循与上下文管理增强，较长连续对话中仍能稳定理解意图。工具调用方面，它会根据对话上下文判断是否需要联网搜索，把搜索决策、工具调用与回答生成统一起来。</p>
-        <p>唱歌能力由混元团队与腾讯音乐 TME 灵音 AI 团队 Co-Design：用户可按歌手、专辑、曲风、语种、发行年份和热度组合点歌，也能承接前文继续选择，例如「来首 2010 到 2020 年之间的英文民谣」。官方称在内部专家 A/B 测试中，Hy Realtime 在核心体验维度有显著优势，并在多个公开语音基准上处于领先。当前版本可在最新版元宝 App 的语音通话中选择「初语」音色体验。</p>
-        <p class="why"><b>看点</b>实时语音的竞争点已经从「像不像人」转到「能不能在对话中把事办完」。工具调用要求模型在一句话还没说完时就决定是否发起搜索，这对首包延迟和打断处理是硬约束；官方没有公布端到端延迟、打断响应时间与并发成本，这三项决定它能不能进客服生产环境。唱歌是个讨巧的演示，但它验证了韵律与情感的可控性——同一套控制力用在客服的语气、投诉安抚上，比用在点歌上更值钱。对开发者，真正的信号是「腾讯云 API 即将开放」：此前这类能力多靠第三方便宜方案，自研接入后省掉一层外部依赖。</p>
+        <h3>OpenAI 开科学博客：首篇讲 GPT-6 Astra 如何参与 123 页格点标准模型论文</h3>
+        <p>北京时间 11 月 16 日 06:00，OpenAI 上线科学博客，第一篇是加州大学圣塔芭芭拉分校物理学家 Nathaniel Craig 的客座文章：他与 GPT-6 Astra 合作，给出标准模型的候选非微扰格点定义。论文 10 月 6 日已挂在 arXiv（<a href="https://arxiv.org/abs/2610.09093" target="_blank" rel="noopener noreferrer">2610.09093</a>），正文 60+63 页、12 幅图，附数学 companion 与 Lean 形式化材料。</p>
+        <p>Craig 在文中说，Astra「对这项结果是必需的」：他提出把 Lüscher 的阿贝尔情形用 refinement 方法推广到非阿贝尔的路线，经过与 Astra 及外部专家数轮迭代，得到「由 Astra 主导的证明」；手稿由作者撰写的部分与 Astra 撰写部分的大量改写混合而成，Lean 验证也由 Astra 完成。</p>
+        <p>物理上，这件事补的是标准模型电弱部门的格点定义缺口：规范场早就有格点正则化，费米子、尤其手征费米子一直缺少令人满意的非微扰定义；Craig 沿着 Lüscher 1998 年的方案推进，覆盖包括标准模型在内的一类非阿贝尔手征规范理论。数学家 Peter Woit 的评价是「相对 Lüscher 的温和推进」，离连续极限下的完整定义仍远，也不等于能实际做电弱非微扰计算。</p>
+        <p class="why"><b>看点</b>这是「AI 当数学家合作者」的一次可核查样本：不是一句「AI 证明了定理」，而是 123 页手稿、Lean 形式化、arXiv 与 Zenodo 附件都能点开。真正值得工程团队注意的是分工——人提出策略与物理判断，模型承担长程推导与形式化，外部专家做迭代审查；这套流程比「模型跑分」更接近可复现。需要打问号的是作者自述的「必需」没有量化：Astra 写了多少页、改了多少步、错了多少次，只有手稿里的痕迹。科学博客本身也是产品：OpenAI 在为「AI 参与发现」的叙事建立一个固定版面。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/14 08:14</span>
-          <a class="src" href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">llama.cpp Releases ↗</a>
+          <span class="d">11/15 22:45</span>
+          <a class="src" href="https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>llama.cpp 与 ggml 进入 1.0.0：用主版本号标记 API 与 ABI 不兼容</h3>
-        <p>据 IT 之家 11 月 14 日报道，llama.cpp 创建者 Georgi Gerganov 于 11 月 13 日在 X 上宣布，开源推理项目 llama.cpp 与底层机器学习引擎 ggml 的库版本迈入 1.0.0。</p>
-        <p>这次更新最实质的变化是接口兼容规则：两个库今后都通过主版本号升级来明确标记 API 或 ABI 不兼容的变化，依赖它们的应用可以从版本号判断某次升级是否要求自己同步修改。这对下游打包、发行版维护和商业产品锁定版本是必要的契约——在此之前，本地推理库的接口随提交漂移，升级基本靠试。</p>
-        <p>能力面上，llama.cpp 已支持超过 150 种模型架构变体及主流推测解码方法；ggml 通过专用后端支持不同硬件，每个后端可编译为动态库、运行时按需加载。团队称正用 Hugging Face 的 HF Buckets 与 HF Jobs 扩展 CI，并在英伟达、AMD、高通、Arm、IBM、英特尔支持下增加自托管测试运行器；开发流程中会审慎使用 LLM，但把代码质量、架构控制和对实现细节的理解放在首位。</p>
-        <p class="why"><b>看点</b>1.0 对开源推理栈是一个心理阈值：它意味着作者愿意为 ABI 稳定性负责，也意味着下游可以把它当依赖而不是当实验。真正要读的是版本规则本身——主版本号一跳就代表不兼容，这对用动态库插件方式的部署影响最大：后端 .so 与主程序必须同版本发布，否则加载即崩。升级前值得做的检查很朴素：锁死版本、跑一遍目标硬件的后端矩阵、确认投机解码在你的模型上没有退化。对端侧产品，这类基础设施的稳定性比多支持十种架构更重要。</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="embodied-zh" data-c="embodied">
-    <div class="chead">
-      <span class="cnum">04</span>
-      <h2>具身智能</h2>
-      <span class="cen">Embodied AI</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/14 16:08</span>
-          <a class="src" href="https://www.qbitai.com/2026/11/509614.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
-        </div>
-        <h3>星尘智能 CoMind：两台机器人隔墙配合，靠交换关键信息把成功率从 0 提到 100%</h3>
-        <p>据量子位 11 月 14 日报道，深圳具身智能公司星尘智能发布多机协同框架 CoMind（Be My Eye）。它的两条主线是去中心化的主动信息共享，以及对任务关键信息的精选与压缩：机器人不再互发完整摄像头画面，而是按任务需要提取关键视觉特征与操作状态，接收方结合自身观测、任务指令与本体状态，送入视觉-语言-动作模型生成动作。</p>
-        <p>框架分两阶段：上下文编码器从多路摄像头观测中筛选、压缩对当前任务有用的信息，并预测未来视觉变化；两台机器人既能独立发送，也能接收队友的上下文，不再依赖同一个中心控制器。训练上还有一个「动作级反向传播」设计：队友的动作预测误差会反向传回信息编码器，让发送方学会「提供对队友动作真正有用的信息」，而不只是准确描述环境。</p>
-        <p>星尘展示了六项真机测试：隔墙拿笔、盲盒置物、纸箱组装、叠被收纳、冰箱补货与哑铃组装。两台机器人隔着挡板完全看不见对方时，任务成功率从 0% 提升到 100%；盲盒置物任务中，不共享信息的准确率为 38.9%，另一种上下文传输方案为 72.2%，CoMind 提升到 88.9%，同时通信信息量减少约 80%。</p>
-        <p class="why"><b>看点</b>多机器人协作的瓶颈通常不是单机能力，而是带宽与信息相关性：每秒产生的视觉数据里，和队友下一步动作有关的可能不到 1%。CoMind 把「说什么」变成可训练的目标，这比单纯提高通信频率更接近工程解。需要保留的疑问是泛化——六项任务都在同一套本体与实验室环境里，换机器人、换场景、换物体后的成功率没有给；另外，动作级反传要求训练时能拿到队友的误差信号，真机部署时的在线适应能力仍待验证。对做 VLA 的团队，这份工作的价值在于给出了一条可复现的对照：同样的 VLA，只改信息共享方式，成功率差 50 个百分点。</p>
+        <h3>美媒称 Megaspeed 经手近 120 亿美元英伟达对华芯片订单</h3>
+        <p>据 The Decoder 11 月 15 日转述《华尔街日报》的报道，与英伟达前 CEO 黄仁勋的前伴侣 Alice Huang 有关的公司 Megaspeed，在 2024 至 2025 年间为多家中国公司安排了近 120 亿美元的英伟达芯片订单。做空机构 Culper Research 估计，英伟达实际的中国收入占比超过 20%，远高于官方披露的 7%。</p>
+        <p>这条报道出现在黄仁勋因「与一名疑似中国间谍的关系」辞职之后。Megaspeed 11 月 15 日发声明称 Alice Huang 自 2025 年 8 月起已不在公司任职；报道认为这份声明「提出了更多问题」。</p>
+        <p>美国财政部长贝森特同日要求英伟达董事会在 10 天内回答公司是否为推动收入而默许「看似非法」的对华芯片销售，并主张下一任 CEO 从外部选聘。国会两党也在推动收紧 AI 芯片对华出口的措施，并要求黄仁勋与商务部长卢特尼克到国会作证。</p>
+        <p class="why"><b>看点</b>120 亿美元这个数字之所以重要，不是因为它大，而是因为它把「出口管制」从政策问题变成了收入确认问题：如果实际中国收入占比是 20% 而不是 7%，那么英伟达的地区收入披露、渠道库存与代理商结构都需要重新解释。对做算力采购的团队，短期影响是二手与灰色渠道的合规风险上升；对投资者，Culper 的估算只是做空机构的测算，不能当审计数字。</p>
       </article>
 
     </div>
@@ -260,7 +225,7 @@
 
   <section class="chapter" id="capital-zh" data-c="capital">
     <div class="chead">
-      <span class="cnum">05</span>
+      <span class="cnum">04</span>
       <h2>行业与资本</h2>
       <span class="cen">Industry &amp; Capital</span>
       <span class="crule"></span>
@@ -269,14 +234,26 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/15 07:38</span>
-          <a class="src" href="https://www.ithome.com/1/027/255.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/16 04:43</span>
+          <a class="src" href="https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed" target="_blank" rel="noopener noreferrer">The Verge ↗</a>
         </div>
-        <h3>超聚变创业板 IPO 过会：受理到上会 174 天，拟募资 80 亿元</h3>
-        <p>11 月 15 日，深交所上市审核委员会审议超聚变首次公开发行并在创业板上市的申请，公司过会。公开信息显示，从申报受理到上会仅用时 174 天。超聚变前身是华为 x86 服务器业务，2022 年独立运营后的第一个完整年度销售收入突破 100 亿元。</p>
-        <p>此后营收逐年抬升：2023 年超过 280 亿元，2024 年 435 亿元，2025 年上半年已超过 300 亿元，有知情人士称全年有望冲刺 600 亿元。据 IDC 报告，2025 年超聚变以 12.7% 的份额位列国内 x86 服务器整机厂商第二（浪潮 31.3%、新华三 12.5%、联想 10.7%、中兴 8.5%）；在液冷服务器细分赛道，公司 2023 至 2024 年连续两年位居中国标准液冷服务器市场份额第一，2023 年份额一度达到 43%。</p>
-        <p>上市委的问询集中在毛利率变动趋势与经营业绩可持续性，要求结合算力需求变化、下游客户资本开支、技术先进性、经营性现金流量净额、客户与供应商集中度等说明风险揭示是否充分。招股说明书（上会稿）显示，募资将重点投向新一代算力产品研发与关键核心技术攻关，公司选择人工智能、算力、数据及能源四个技术要素作为未来十年主要方向。据中国证券网报道，本次拟募资 80 亿元。</p>
-        <p class="why"><b>看点</b>这是一张「算力供应链」的上市门票，不是模型公司的故事：服务器整机的毛利由芯片采购价、客户集中度和液冷渗透率共同决定，AI 需求越旺，越考验它能不能把上游涨价转嫁出去。174 天过会是审核节奏的信号，但上市委追问现金流与客户集中度，说明监管对「增收不增利」的容忍度在下降。招股书里最该看的三组数是：前五大客户占比、经营活动现金流净额与净利润的差值、液冷产品的收入占比。对二级市场，它提供了一个可比的算力硬件估值锚；对产业，国产整机厂拿钱扩产，意味着明年的交付能力继续向头部集中。</p>
+        <h3>黄仁勋被曝与亲信讨论回归，美财长要求英伟达 10 天内说明对华销售</h3>
+        <p>据《金融时报》11 月 15 日报道，辞职仅数日的黄仁勋已与亲信讨论重返英伟达 CEO 的可能，盟友组成了一个「作战室」，游说董事会并寻求白宫支持；一份要求「让黄仁勋回来」的公开请愿已收集超过 15 万个签名，马斯克、Epic Games 的 Tim Sweeney 等公开声援。The Verge 称这些讨论仍是传闻，未有官宣。</p>
+        <p>同一天，美国财政部长贝森特说，英伟达需要「戏剧性的整顿」，下一任 CEO 应从公司外部寻找；他要求董事会在 10 天内回答公司是否为了抬高收入而推动了「看似非法」的对华芯片销售。彭博社与 CNBC 均报道了这番表态。</p>
+        <p>英伟达目前由董事会寻找继任者。此前的辞职发生在《纽约时报》10 月 29 日报道黄仁勋疑似成为中国间谍行动目标之后；路透社称他还有第三段婚外关系。国会两党也在推动收紧 AI 芯片对华出口的措施。</p>
+        <p class="why"><b>看点</b>这件事对 AI 产业的传导不在八卦，而在供应合同：黄仁勋是英伟达与各国政府、云厂商、初创公司之间那张关系网的节点，他离开后，正在谈的算力采购与投资承诺会被重新定价。贝森特的「10 天」把公司治理问题变成了出口合规问题——如果董事会承认存在「为推动销售而放宽合规」，英伟达面对的就不仅是声誉损失，还有出口管制的处罚与审计。对买方，短期最该做的是核对合同里的「出口合规保证」条款与芯片来源。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 18:45</span>
+          <a class="src" href="https://the-decoder.com/australias-central-bank-finds-ai-hitting-young-workers-first-especially-in-software-and-customer-service/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>澳央行监测系统：AI 暴露度最高的岗位，15–24 岁就业率先走弱</h3>
+        <p>据 The Decoder 11 月 15 日报道，澳大利亚储备银行（RBA）经济学家 Mike Major 建立了一套监测 AI 对劳动力市场早期影响的框架，重点看两类地方：入门级岗位，以及 AI 暴露度最高的职业（编程、文书、客服）。结论是自 2022 年底 ChatGPT 发布以来，所有群体的招聘广告都在下降，但高暴露组的降幅最大；在这一组里，15–24 岁年轻人和应届毕业生的就业率更弱、失业率更高。</p>
+        <p>报告明确说，这还不能证明因果：研究衡量的是「理论暴露度」而不是企业实际使用，商业周期与远程办公的变化也可能解释这些数字。作为对照，2025 年 8 月一项基于美国数百万工资记录的斯坦福研究显示，22–25 岁在高暴露职业中的就业相对下降 13%，年轻软件开发者接近 20%；2026 年 3 月 Anthropic 的研究也发现 22–25 岁招聘率下降约 14%，但整体失业率没有系统性上升。</p>
+        <p>也有反向证据：丹麦 2.5 万名员工的研究里，64% 的采用率没有带来工资或工时的可测变化，员工平均只节省了 2.8% 的工作时间；匹兹堡大学团队对 1060 万份 LinkedIn 档案的分析发现，高暴露职业的疲软在 2022 年初、也就是 ChatGPT 发布之前就开始了。</p>
+        <p class="why"><b>看点</b>这套监测的价值在于把「AI 抢工作」拆成了可观察的入口——不是总失业率，而是「年轻人能不能进入高暴露职业」。如果入口收窄而总失业率不动，宏观数据会看起来没事，但人才 pipeline 已经在变窄；这比任何单点预测都更值得盯。对政策，2.8% 的工时节省说明「效率红利」目前还很薄，真正被改变的是招聘结构而非在岗人数。</p>
       </article>
 
     </div>
@@ -285,9 +262,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 13 日 09:16 至 11 月 15 日 08:05（北京时间）之间发布的报道，共 9 条。检索时间 11/15 08:05。</p>
+        <p>本期收录 2026 年 11 月 15 日 08:05 至 11 月 16 日 07:41（北京时间）之间发布的报道，共 8 条。检索时间 11/16 07:41。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 020 · 47h window · Generated 2026-11-15 08:05</p>
+    <p class="sig">AI Daily · Issue 021 · 24h window · Generated 2026-11-16 07:41</p>
       </div>
     </footer>
       </div>
@@ -300,15 +277,15 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 020</span>
+          <span class="issue-tag">Issue 021</span>
         </div>
-        <h1 class="date">November 15, 2026<span class="weekday">SUN</span></h1>
-        <p class="deck">Google used a team of agents that question each other to write the Weil conjectures into roughly 1.8 million lines of Lean. The same weekend, Cursor finished accounting for a supply-chain attack: a leaked key from an inference vendor travelled through an extension marketplace and reached 5,000 developers. On the product side, OpenAI now lets an agent pay for you, Meta lets one make your phone calls, and Cloudflare built one a browser without Chromium. Capability and cost moved at both ends: Tencent put tool calls inside real-time speech, llama.cpp set a version contract for local inference with 1.0.0, and XFusion arrived at the ChiNext gate with 43.5 billion yuan in revenue. <em>After &ldquo;it can do the work&rdquo;, the next threshold is &ldquo;who answers for what it does&rdquo;.</em></p>
-        <div class="metabar"><span class="pill">Issue 020</span>
+        <h1 class="date">November 16, 2026<span class="weekday">MON</span></h1>
+        <p class="deck">In one weekend, two Chinese companies put &ldquo;domestic accelerators plus long context&rdquo; on the table: Meituan open-sourced the 1.6-trillion-parameter LongCat-2.5, with a sample deployment spread across 194 Ascend chips, while Huawei Cloud put openPangu-2.1-Pro, a 512K-context model, on MaaS with cache-hit input at 0.016 yuan per million tokens. Elsewhere, Washington turned Nvidia&rsquo;s governance crisis into an export-compliance problem, and OpenAI opened a science blog with a 123-page lattice paper. <em>Models are getting cheaper, compute is switching tracks, and regulators are tightening &mdash; all in the same week.</em></p>
+        <div class="metabar"><span class="pill">Issue 021</span>
       <span class="dot"></span>
-      <span>Window Nov 13, 09:16 – Nov 15, 08:05</span>
+      <span>Window Nov 15, 08:05 &ndash; Nov 16, 07:41</span>
       <span class="dot"></span>
-      <span>9 stories</span>
+      <span>8 stories</span>
       <span class="dot"></span>
       <span>11 min read</span></div>
       </div>
@@ -318,11 +295,10 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-en"><span class="n">00</span>At a glance</a>
-        <a href="#research-en"><span class="n">01</span>Research &amp; Safety</a>
+        <a href="#models-en"><span class="n">01</span>Models &amp; Capability</a>
         <a href="#products-en"><span class="n">02</span>Products &amp; Agents</a>
-        <a href="#models-en"><span class="n">03</span>Models &amp; Capability</a>
-        <a href="#embodied-en"><span class="n">04</span>Embodied AI</a>
-        <a href="#capital-en"><span class="n">05</span>Industry &amp; Capital</a>
+        <a href="#research-en"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#capital-en"><span class="n">04</span>Industry &amp; Capital</a>
         </div>
       </div>
     </nav>
@@ -331,50 +307,51 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>Google's Teamwork formalised the Weil conjectures using about 28,800 sub-agent calls and roughly 1.8 million lines of Lean, reproduced a formal proof of finite-time blow-up for the three-dimensional Navier–Stokes equations, and rewrote its libgav1 decoder from C++ into about 170,000 lines of Rust.</b> Each specialist agent only gets the files and tools it needs, while separate critics and reviewers check results without relying on the original agent's reasoning chain.</p>
+      <p><b>Meituan released the weights of LongCat-2.5: a 1.6-trillion-parameter MoE with about 48 billion active per token, a 1-million-token context and an MIT licence that allows commercial use; the official sample deployment runs on 194 Huawei Ascend Atlas A2 chips, and the self-hosting guide lists no Nvidia configuration.</b> On Meituan&rsquo;s own Terminal Bench v2.1 run it scores 88.4, just below Claude Opus 5 at 89.1 and DeepSeek-V4.1-Flash at 90.6.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>XFusion cleared its ChiNext IPO review 174 days after its filing was accepted and plans to raise 8 billion yuan. Revenue reached 43.5 billion yuan in 2024 and topped 30 billion in the first half of 2025, with a 12.7% share of China's x86 server market, second behind Inspur.</b> The listing committee focused its questions on gross-margin trends and the sustainability of growth; proceeds go to next-generation compute R&amp;D.</p>
+      <p><b>US Treasury Secretary Scott Bessent gave Nvidia&rsquo;s board 10 days to explain whether it tolerated &ldquo;seemingly illicit&rdquo; chip sales to China to boost revenue, and said the next CEO should come from outside the company; the same day, the Financial Times reported that Jensen Huang has discussed a return with confidants.</b> Both parties in Congress are also moving to tighten AI chip export rules and want Huang to testify.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>Cursor disclosed a supply-chain attack in which a malicious Claude Code extension sat in its marketplace for about 11 hours and reached up to 5,000 users; the entry point was a leaked Fireworks access key.</b> Privacy-mode users' prompts and code were unaffected, and fewer than 0.05% of users had agent tracing data exposed.</p>
+      <p><b>OpenAI launched a science blog; its first post is a guest essay by physicist Nathaniel Craig, who worked with GPT-6 Astra on a candidate non-perturbative lattice definition of the Standard Model. The paper runs 123 pages and ships with Lean formalisation.</b> Craig calls Astra &ldquo;essential&rdquo; to the result; mathematician Peter Woit calls it &ldquo;a modest advance over L&uuml;scher&rdquo; and far from a full continuum definition.</p>
     </li>
       </ol>
 
-  <section class="chapter" id="research-en" data-c="research">
+  <section class="chapter" id="models-en" data-c="models">
     <div class="chead">
       <span class="cnum">01</span>
-      <h2>Research &amp; Safety</h2>
-      <span class="cen">研究与安全</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/14 14:53</span>
-          <a class="src" href="https://www.ithome.com/1/027/140.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/15 18:06</span>
+          <a class="src" href="https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>Google's Teamwork writes the Weil conjectures into 1.8 million lines of Lean across 28,800 sub-agent calls</h3>
-        <p>Google has disclosed interim results from Teamwork, its multi-agent system, which has completed a formal proof of the Weil conjectures, IT之家 reported on November 14. The results, proved by Pierre Deligne in 1974, concern the number of solutions to polynomial equations over finite fields. Teamwork-LEAP generated roughly 1.8 million lines of Lean across about 28,800 sub-agent calls, turning the proof into something a kernel can check line by line.</p>
-        <p>The same system reproduced a formal proof of finite-time blow-up for the three-dimensional Navier–Stokes equations and helped researchers with the Courtade–Kumar conjecture. Architecturally, specialist agents work in parallel, each with access only to the files and tools its task requires. Independent critics and reviewers check the output without relying on the original agent's reasoning, a structure meant to suppress the error accumulation that plagues long reasoning chains.</p>
-        <p>Beyond mathematics, Google assembled 30 specialist agents with a physics-aware simulator to infer molecular structures from NMR data, reaching 95% Top-1 and 100% Top-3 accuracy on a complex-molecule benchmark. It also rewrote the company's own libgav1 AV1 video decoder from C++ into about 170,000 lines of Rust, matching the original's output exactly across a broad test suite.</p>
-        <p>Teamwork and an iterative coding workflow called /boost are being opened through Antigravity. Google plans to give 10,000 academic researchers six months of free access at the maximum tier.</p>
-        <p class="why"><b>Why it matters</b>The weight of this is not that an AI can do mathematics, but that the verification loop has become a product. Lean turns &ldquo;is this proof correct?&rdquo; into a compile-time question; sub-agents search and write code, independent reviewers reject, and separating the two is what keeps 1.8 million lines tractable. For agent builders, the reusable principle is that generator and verifier should not share context: the verifier gets the artefact and the specification, nothing else. The number to doubt is cost: Google gave no token, dollar or machine-hour figure for 28,800 calls, and no distribution of success rates across theorems. Code migration (C++ to Rust) is closer to production work than mathematics, but exact output equality depends on test coverage; where coverage stops, humans still review.<br><b>Another angle</b> If the marginal cost of a formal proof really falls to &ldquo;a few agent calls&rdquo;, the first things repriced are chip verification, cryptographic protocols and compiler optimisation — fields that currently pay formal-methods teams for certainty itself.</p>
+        <h3>Meituan opens the weights of LongCat-2.5: a 1.6T-parameter MoE that runs its sample deployment on 194 Ascend chips</h3>
+        <p>The Decoder reported on November 15 that Meituan&rsquo;s LongCat team released the weights of LongCat-2.5 a week after unveiling the model, under the MIT licence, which allows commercial use, modification and redistribution. It is a mixture-of-experts model built for long-horizon agent work: 1.6 trillion total parameters, about 48 billion active per token, a 1-million-token context, up to 128,000 output tokens, text, image and video input, and a reasoning toggle.</p>
+        <p>Training and supervised fine-tuning ran on Chinese accelerators. In its <a href="https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html" target="_blank" rel="noopener noreferrer">technical blog</a>, Meituan says each domestic card has less than 80GB of memory, so the team used dual-shard FSDP, hybrid vocabulary parallelism, MoonEP dynamic expert replication and zero-copy communication to fit long-sequence training; single-card throughput on long-sequence SFT was 86% above a DDP baseline. For inference it quantises expert weights and activations to 4 bits (W4A4), reporting 43.3% higher prompt-processing throughput and 42.77% higher generation throughput, with accuracy &ldquo;on par&rdquo; with the uncompressed model.</p>
+        <p>The official sample deployment uses 194 Huawei Ascend Atlas A2 accelerators: two for image processing, 64 for prompt ingestion and 128 for generation. The self-hosting guide contains no Nvidia GPU configuration. The benchmarks are vendor-run: 88.4 on Terminal Bench v2.1, below Claude Opus 5&rsquo;s 89.1 and DeepSeek-V4.1-Flash&rsquo;s 90.6 and slightly above GPT-5.6 Sol&rsquo;s 88.8; 38.5 on the harder v4.0, against 53.9 for Opus 5; DeepSWE rises from 9.7 to 64.6; the 91.9 on BrowseComp was measured in Meituan&rsquo;s own environment. Promotional API pricing is about &euro;0.27 per million input tokens and &euro;1.07 per million output tokens.</p>
+        <p>On training, the team built tasks from real GitHub pull requests, cut internet access, Git history and build caches in the sandbox, used an LLM judge to catch shortcuts, and turned real agent failures into reproducible, verifiable tasks. Reinforcement learning uses asynchronous partial rollouts, with the oversampling rate adjusted by pass rate and all-pass or all-fail groups filtered out.</p>
+        <p class="why"><b>Why it matters</b>The 1.6T open weights and the domestic-chip deployment shift the hard question from &ldquo;do we have accelerators&rdquo; to &ldquo;can we keep 194 of them stable&rdquo;. Three caveats matter: the sample deployment is inference, not training, and Meituan does not disclose the training cluster; the benchmarks are vendor-run, and BrowseComp was measured in-house; and &ldquo;accuracy on par&rdquo; under W4A4 comes without per-task deltas. For downstream teams the MIT licence is the concrete part &mdash; commercial use and retraining are allowed &mdash; but the memory and communication budget of a 1.6T model means most will still call an API.<br><b>Another view</b> If the &ldquo;domestic silicon + 4-bit + long context&rdquo; playbook travels, next year&rsquo;s price war will not only show up in API rates but in the table of how many chips each token costs.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/14 18:52</span>
-          <a class="src" href="https://www.ithome.com/1/027/215.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/15 23:42</span>
+          <a class="src" href="https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>Cursor's supply-chain post-mortem: a malicious Claude Code extension reached up to 5,000 users</h3>
-        <p>Cursor disclosed the results of a two-week investigation on November 13 local time: the vast majority of customers were unaffected, up to 5,000 users were reached, and every affected customer was contacted individually. Prompts and code were untouched for users in privacy mode; among users outside it, fewer than 0.05% had coding-agent tracing data exposed.</p>
-        <p>The chain began with a leaked Fireworks access key. Attackers used it to take data from Cursor's shared storage bucket, and a small set of unredacted credentials inside that data (affecting fewer than 0.01% of customers) gave them access to some SaaS tools, non-production code repositories, customer-support data and some user credentials. Cursor says it revoked the key, rotated credentials and cut off unauthorised access as soon as monitoring flagged the anomaly.</p>
-        <p>The most direct link was the extension marketplace. On October 29, attackers used stolen internal credentials to inject a tampered Anthropic Claude Code extension (Anthropic.claude-code 2.1.312 and 2.1.313) into Cursor's marketplace; Anthropic and Open VSX were not involved. The malicious build was live for about 11 hours and reached up to 5,000 users. Cursor pulled the extension, took the marketplace offline temporarily and worked with its cloud provider to shut down the attackers' server; after blocking a final attempt on November 1, it declared the incident contained.</p>
-        <p class="why"><b>Why it matters</b>This is not &ldquo;an IDE had a bad week&rdquo;; it is the trust structure of the agent toolchain. Marketplace, inference vendor, shared bucket: any one of the three handing over credentials puts an attacker between a developer's machine and their code. Two details are worth keeping. A malicious build lived 11 hours and still installed 5,000 times, because auto-update turns &ldquo;publishing&rdquo; into &ldquo;pushing&rdquo;. And Cursor says uninstalling the extension is not enough to remove the risk, because credentials already landed. Teams should check for versions 2.1.312 and 2.1.313, rotate anything the extension could read during that window, and audit the OAuth scopes extensions were granted.</p>
+        <h3>Claude Fable 5.2 &ldquo;paints&rdquo; photorealistic images in 700,000 strokes by writing Python, not pixels</h3>
+        <p>The Decoder reported on November 15 that Anthropic&rsquo;s Claude Fable 5.2 takes a different route to images: instead of generating pixels, the model writes a 1,000-to-2,000-line Python program that drives a paint engine simulating bristles, wet paint and canvas texture, placing hundreds of thousands of strokes on a virtual canvas. In a demo by Anthropic employee Jake Eaton, a photorealistic parking-garage scene took roughly 700,000 strokes.</p>
+        <p>In a log published by engineer Michael Graczyk, the model painted a bird at sunrise in just 111 strokes, each with a colour code, a brush width and several slightly wobbling waypoints; the first stroke was #30346a, 90 pixels wide, with five waypoints. There is no undo: every stroke stays. Between passes the model looks at the canvas and reacts &mdash; when the bird&rsquo;s back came out too thin, it laid a bolder stroke over it, turning stray bristle marks into ruffled feathers.</p>
+        <p>The approach ties long-horizon planning to spatial reasoning. Anthropic says Fable 5.2 scores 64.9% on its internal RoboDojo Sim benchmark against 29.8% for GPT-6 Astra; but in researcher Aris Zhu&rsquo;s test with a real robot arm painting &ldquo;The Starry Night&rdquo;, Astra painted faster and is so far the only one of the two to stand a domino on end. Those numbers come from the vendor and employee demos, with no independent reproduction.</p>
+        <p>Fable 5.2 was released on November 9 on the same base model as Mythos 5.2. Anthropic says it also produced results on two open problems in black-hole physics, designed three working circuits with Diode, and used more than 1,000 sub-agents to write a laptop operating system in eight days.</p>
+        <p class="why"><b>Why it matters</b>The demo is less about whether the painting looks real than about whether the model can stay coherent across hundreds of steps and hundreds of thousands of discrete decisions: every stroke is code, nothing can be rolled back, and mistakes can only be painted over &mdash; the classic failure mode of long-horizon agents. The loop worth copying is generate, render, look, revise. The number worth questioning is cost: how many tokens, GPU-hours and dollars 700,000 strokes took is not disclosed. And half of the &ldquo;photorealism&rdquo; belongs to the paint engine, not the model.</p>
       </article>
 
     </div>
@@ -391,98 +368,63 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/13 23:49</span>
-          <a class="src" href="https://www.ithome.com/1/026/994.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/15 21:16</span>
+          <a class="src" href="https://www.ithome.com/1/027/450.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>OpenAI launches ChatGPT Wallet: the dot agent checks out, but every purchase needs a token and a verification</h3>
-        <p>OpenAI has put payments inside ChatGPT with ChatGPT Wallet, built with American Express, Mastercard and Visa. Users keep the points and protections attached to their existing cards, enter card details once, and can then ask the dot agent to find products and complete a purchase.</p>
-        <p>The security model borrows from payment-network tokenisation. Each transaction gets a dedicated payment token carrying a limited-use card number, security code and expiry, so the agent never sees the real card; every purchase still has to clear a security verification. The wallet initially opens only to Pro subscribers in the United States aged 18 or over.</p>
-        <p>On monetisation, OpenAI says it will not take a commission at first. The goal is to build merchant partnerships and get consumers used to treating ChatGPT as a shopping entry point. It also published tools and guidance for merchants, including how to check whether a site is mistakenly blocking OpenAI's agents.</p>
-        <p class="why"><b>Why it matters</b>The hard part of agent payments was never &ldquo;can it charge the card&rdquo; but the granularity of authorisation and the allocation of liability: who approved this purchase, what was the limit, who refunds a wrong one. Tokenisation solves card-number exposure; it does not solve misread intent. A user says &ldquo;buy running shoes&rdquo;, the agent picks the wrong model, and the dispute still lands in the merchant's refund policy. Requiring biometrics on every purchase is a safety valve now and a conversion ceiling later; OpenAI says pre-authorisation by spend limit, category and time window is coming, and that is when agent commerce grows up. For merchants, the more urgent question than accepting the payment is whether to let agents in at all: blocking them may block a whole new class of orders.</p>
+        <h3>Huawei Cloud launches openPangu-2.1-Pro: 512K context and cache-hit input at 0.016 yuan per million tokens</h3>
+        <p>On November 15, Huawei Cloud added the open-source Pangu model openPangu-2.1-Pro to its MaaS platform. The company frames the upgrade around three areas &mdash; agent development, AI coding and inference optimisation &mdash; naming deep research, HarmonyOS control, HarmonyOS app development, Ascend operator generation and inference-pipeline optimisation as the target scenarios.</p>
+        <p>The <a href="https://support.huaweicloud.com/model-list-maas/model_list_0001.html" target="_blank" rel="noopener noreferrer">model list</a> gives a 512K context, 500K maximum input, 384K maximum output and a 256K maximum chain of thought. It supports a switchable deep-thinking mode, function calling, prefix continuation and prefix caching, with default limits of 2 million TPM and 100 RPM. The only preset region so far is southwest China (Guiyang).</p>
+        <p>Pricing is the most concrete number here: 0.8 yuan per million input tokens, 3.2 yuan per million output tokens and 0.016 yuan per million cache-hit input tokens, about 2% of the input rate. Huawei says more than 100,000 task-specific examples were used to improve skill triggering, tool selection and tool calling, while coding work is tailored to HarmonyOS ArkTS and Ascend operators.</p>
+        <p>Huawei has not disclosed the parameter count, a weights download or benchmark scores. openPangu-2.0-Pro and 2.0-Flash are scheduled to go offline on November 30, so services still on the old models must migrate by then; the new model will also plug into AgentArts, CodeArts and OfficeAce.</p>
+        <p class="why"><b>Why it matters</b>The pricing makes the bill structure explicit: cache hits cost 2% of the input rate, so repeated questions over long documents will be dominated by cache pricing, while output at four times the input rate is where coding and report-writing spend goes. The real unknown is tool-calling reliability, not price: there is no success rate, no count of callable tools and no parameter count, so teams can only blind-test 2.0 against 2.1 on the same tasks before migrating. The single preset region is another constraint &mdash; cross-region latency and data-compliance costs need to be priced in first.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/14 21:46</span>
-          <a class="src" href="https://www.ithome.com/1/027/238.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/16 06:30</span>
+          <a class="src" href="https://www.digitaltoday.co.kr/en/view/125850/korean-big-tech-joins-personal-ai-agent-race-jensen-huang-resignation-fallout" target="_blank" rel="noopener noreferrer">DigitalToday ↗</a>
         </div>
-        <h3>Meta's Muse makes your phone calls, and sometimes gets hung up on as a scammer</h3>
-        <p>Meta's chief AI officer, Wang Tao, announced on X in the early hours of November 13 that Muse can place &ldquo;all the calls you don't want to make yourself&rdquo;: insurers and cable providers, appointments with the US DMV, or a table at a restaurant, IT之家 reported on November 14.</p>
-        <p>Muse speaks to staff in a synthetic voice, and the calls do not always land. Some staff recognise the AI and hang up — some to guard against fraud, others because they expect the call to waste their time. Meta tested the feature with early users for several months and is now opening it to subscribers on its top Meta AI tier, from $19.99 a month.</p>
-        <p>Muse is not the first. Google's Call for Me works on the Pixel 11 and Pixel 10 and dials from the user's own number, and the agent Instinct has been testing call-making since September.</p>
-        <p class="why"><b>Why it matters</b>The phone is the last interface without an API, and the most underrated place for agents to land. It demands real-time speech, interruption handling, reciting form details, and an answer to &ldquo;who exactly are you?&rdquo; that cannot be improvised. Muse's bottleneck is not the model but the callee: businesses have no obligation to cooperate with an AI, and recognising and hanging up is their risk control. Making this work needs at least three things — disclose the AI at the start, keep a reviewable record of the call, and hand over to a human when it goes wrong. Meta published no connection or task-completion rates, so $19.99 buys a promise that it will try, not a guarantee that it will get through.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/14 18:06</span>
-          <a class="src" href="https://github.com/cloudflare/kitesurf" target="_blank" rel="noopener noreferrer">Cloudflare · GitHub ↗</a>
-        </div>
-        <h3>Cloudflare open-sources Kitesurf, a browser for agents that runs on Workers without Chromium</h3>
-        <p>Cloudflare has open-sourced Kitesurf, a browser built for AI agents, IT之家 reported on November 14. It runs on Cloudflare Workers and handles HTML parsing, CSS application, page JavaScript execution and screenshot rendering without a traditional browser container.</p>
-        <p>Kitesurf speaks the Chrome DevTools Protocol, so existing tooling can drive it directly, with no Chromium process or container underneath. Cloudflare says it did not clone a full desktop browser engine; it targets what agents actually care about — token consumption, context window, scalability, performance and cost — and drops features that only serve humans, such as tabs, themes, extensions and pixel-perfect rendering.</p>
-        <p>On common agent tasks such as screenshots and HTML extraction, it uses significantly less CPU and memory than Chromium, which means more concurrent sessions per machine and more headroom for bursty, AI-driven load. The code is on Cloudflare's GitHub.</p>
-        <p class="why"><b>Why it matters</b>Agent infrastructure is shifting from &ldquo;drive a browser built for people&rdquo; to &ldquo;build a renderer for agents&rdquo;. The technical meaning is concrete: drop the compositor and pixel pipeline, keep the DOM, network stack and JS execution, and per-session memory falls from hundreds of megabytes to tens, raising concurrency density by an order of magnitude. CDP compatibility is a smart migration choice, since Playwright and Puppeteer scripts barely change. The open question is fidelity: against anti-bot checks, canvas fingerprinting and heavy front-end frameworks, behaviour differences between a lean engine and Chromium turn directly into task failures, and that gap can only be measured with regression runs on real sites, not a demo.</p>
+        <h3>Korea&rsquo;s two biggest platforms turn personal agents into a checkout lane</h3>
+        <p>DigitalToday reported on November 16 that Naver plans to launch a consumer AI agent this year that shops, books and pays on the user&rsquo;s behalf, connecting search results directly to transactions. The company also plans to extend into logistics and offline payments and to shift its platform toward AI.</p>
+        <p>Kakao&rsquo;s route is to turn KakaoTalk from an assistant that answers questions into one that executes tasks in the chat window, monetised through advertising and commerce, with a target of breaking even on AI in 2028. Korean startup Pickle already handles shopping and ticketing, though testers complain that it is slow.</p>
+        <p>The report places both moves against a global race for the personal-agent entry point: Meta&rsquo;s Muse now calls US businesses for paying subscribers, while Naver and Kakao&rsquo;s advantage is local payments, identity and merchant relationships &mdash; and their weakness is model capability.</p>
+        <p class="why"><b>Why it matters</b>The battleground is shifting from &ldquo;whose model is stronger&rdquo; to a trio of entry point, payment and merchant integration: whoever completes the last mile of a purchase captures the transaction data and the commission. Kakao&rsquo;s 2028 break-even target is an admission that it expects to subsidise the business for two years; the real cost is not inference but merchant-side integration and dispute handling. For China&rsquo;s super apps, the mirror is clear &mdash; the moat is payments and merchants, not leaderboard positions.</p>
       </article>
 
     </div>
   </section>
 
-  <section class="chapter" id="models-en" data-c="models">
+  <section class="chapter" id="research-en" data-c="research">
     <div class="chead">
       <span class="cnum">03</span>
-      <h2>Models &amp; Capability</h2>
-      <span class="cen">模型与能力</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
       <span class="crule"></span>
     </div>
     <div class="items">
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/13 16:41</span>
-          <a class="src" href="https://www.ithome.com/1/026/825.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/16 06:00</span>
+          <a class="src" href="https://openai.com/index/step-toward-defining-the-standard-model/" target="_blank" rel="noopener noreferrer">OpenAI ↗</a>
         </div>
-        <h3>Tencent's Hunyuan releases Hy Realtime, adding tool calls and singing to real-time speech</h3>
-        <p>Tencent's Hunyuan team released Hy Realtime, a new real-time speech model, on November 13. Beyond voice understanding, instruction following and persona-driven expression, it adds agentic tool calling and singing. It is already live in Yuanbao voice calls and Tencent's customer service, with an API on Tencent Cloud due shortly.</p>
-        <p>According to Tencent, Hy Realtime handles incomplete input — mumbling, half-finished sentences, mid-sentence corrections — by reconstructing intent from context, and its multi-turn instruction following and context management hold up over longer conversations. On tool use, it decides from context whether to search the web, unifying the search decision, the tool call and the answer.</p>
-        <p>The singing capability was co-designed with Tencent Music's Lingyin AI team. Users can request songs by artist, album, genre, language, release year and popularity, and can build on earlier turns — &ldquo;a English folk song from between 2010 and 2020&rdquo;, for example. Tencent says internal expert A/B tests show a significant advantage in core experience dimensions and that the model leads several public speech benchmarks. The current build is available in the Yuanbao app's voice calls under the &ldquo;Chuyu&rdquo; voice.</p>
-        <p class="why"><b>Why it matters</b>The competition in real-time speech has moved from &ldquo;does it sound human&rdquo; to &ldquo;can it finish the job mid-conversation&rdquo;. Tool calling forces the model to decide whether to search before a sentence is even finished, which puts hard constraints on first-token latency and interruption handling. Tencent published no end-to-end latency, barge-in response time or concurrency cost, and those three decide whether this can enter production customer service. Singing is a crowd-pleasing demo, but it proves controllability of prosody and emotion — the same control is worth more in de-escalating an angry caller than in taking song requests. For developers, the real signal is the coming Tencent Cloud API: this capability previously depended on third-party providers, and in-house access removes a layer of dependency and cost.</p>
+        <h3>OpenAI opens a science blog with a 123-page lattice paper co-written with GPT-6 Astra</h3>
+        <p>At 06:00 Beijing time on November 16, OpenAI launched a science blog. Its first post is a guest essay by Nathaniel Craig, a physicist at UC Santa Barbara, who worked with GPT-6 Astra on a candidate non-perturbative lattice definition of the Standard Model. The paper went up on arXiv (<a href="https://arxiv.org/abs/2610.09093" target="_blank" rel="noopener noreferrer">2610.09093</a>) on October 6: 60+63 pages, 12 figures, with a mathematical companion and Lean formalisation materials.</p>
+        <p>Craig writes that Astra was &ldquo;essential to this result&rdquo;: he proposed extending L&uuml;scher&rsquo;s abelian construction to non-abelian cases with refinement methods, iterated with Astra and outside experts, and arrived at &ldquo;the current Astra-led proof&rdquo;. The manuscript mixes author-written sections with extensive rewrites of Astra&rsquo;s proof, and the Lean verification was carried out by Astra.</p>
+        <p>Physically, the work fills a gap in the electroweak sector: gauge fields have long had a lattice regularisation, but fermions &mdash; chiral fermions in particular &mdash; have lacked a satisfactory non-perturbative definition. Craig follows L&uuml;scher&rsquo;s 1998 programme and covers a class of non-abelian chiral gauge theories that includes the Standard Model. Mathematician Peter Woit calls it &ldquo;a modest advance over L&uuml;scher&rdquo;, still far from a full continuum-limit definition and not yet a way to do actual non-perturbative electroweak calculations.</p>
+        <p class="why"><b>Why it matters</b>This is a checkable sample of &ldquo;AI as a mathematician collaborator&rdquo;: not a claim that a model proved a theorem, but a 123-page manuscript, Lean formalisation and arXiv/Zenodo attachments anyone can open. What engineering teams should study is the division of labour &mdash; a human sets strategy and physical judgement, the model carries long derivations and formalisation, outside experts iterate and review. That workflow is closer to reproducible science than any benchmark. The caveat is that &ldquo;essential&rdquo; is unquantified: how many pages Astra wrote, how many iterations it took and how often it was wrong survive only as traces in the manuscript. The blog itself is also a product: OpenAI is building a permanent venue for the &ldquo;AI does science&rdquo; narrative.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/14 08:14</span>
-          <a class="src" href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">llama.cpp Releases ↗</a>
+          <span class="d">11/15 22:45</span>
+          <a class="src" href="https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>llama.cpp and ggml reach 1.0.0, using major versions to flag API and ABI breaks</h3>
-        <p>Georgi Gerganov, the creator of llama.cpp, announced on X on November 13 that the open-source inference project and its underlying machine-learning engine ggml have reached library version 1.0.0, IT之家 reported on November 14.</p>
-        <p>The most substantive change is the compatibility contract. Both libraries will now use major-version bumps to mark API or ABI breaks, so downstream applications can tell from a version number whether an upgrade requires matching changes on their side. That contract is overdue for packaging, distribution maintenance and commercial products that pin versions: until now, the local-inference library's interface drifted commit by commit and upgrades were largely trial and error.</p>
-        <p>On capability, llama.cpp supports more than 150 model architecture variants and mainstream speculative decoding methods. ggml supports hardware through dedicated backends, each compilable as a dynamic library and loaded at runtime. The team says it is scaling CI with Hugging Face's HF Buckets and HF Jobs, adding self-hosted test runners with support from Nvidia, AMD, Qualcomm, Arm, IBM and Intel, and using LLMs judiciously in development while keeping code quality, architectural control and understanding of implementation details first.</p>
-        <p class="why"><b>Why it matters</b>1.0 is a psychological threshold for the open-source inference stack: the authors are willing to own ABI stability, and downstream can treat it as a dependency rather than an experiment. The part worth reading is the version rule itself — a major bump means incompatibility, which matters most for dynamic-library plugin deployments: backend .so files and the main binary must ship in the same version or loading fails. The pre-upgrade checklist is unglamorous: pin the version, run the backend matrix on your target hardware, and confirm speculative decoding has not regressed on your models. For on-device products, that stability matters more than ten more supported architectures.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="embodied-en" data-c="embodied">
-    <div class="chead">
-      <span class="cnum">04</span>
-      <h2>Embodied AI</h2>
-      <span class="cen">具身智能</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/14 16:08</span>
-          <a class="src" href="https://www.qbitai.com/2026/11/509614.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
-        </div>
-        <h3>Stardust's CoMind takes two robots from 0% to 100% by sharing only what the task needs</h3>
-        <p>Stardust Intelligence, a Shenzhen embodied-AI company, released CoMind (Be My Eye), a multi-robot coordination framework, quantum-bit reported on November 14. Its two pillars are decentralised, active information sharing and the selection and compression of task-critical information: robots no longer exchange full camera frames but extract the visual features and manipulation states the task requires, and the receiver fuses them with its own observations, the instruction and its proprioceptive state before feeding a vision-language-action model.</p>
-        <p>The framework runs in two stages. A context encoder filters and compresses what matters from multiple camera streams and predicts future visual change. Each robot can both send and receive context independently, removing the need for a central controller. Training adds an &ldquo;action-level backpropagation&rdquo; trick: a teammate's action-prediction error flows back into the sender's information encoder, teaching it to supply what actually helps the teammate act rather than merely to describe the scene accurately.</p>
-        <p>Stardust demonstrated six real-robot tasks: passing a pen through a partition, placing an object in a blind box, assembling a cardboard box, folding and storing bedding, restocking a fridge, and assembling a dumbbell. With two robots unable to see each other through a barrier, success went from 0% to 100%. In the blind-box task, no sharing gave 38.9%, another context-transfer scheme reached 72.2%, and CoMind reached 88.9% while cutting communication volume by about 80%.</p>
-        <p class="why"><b>Why it matters</b>The bottleneck in multi-robot coordination is rarely single-robot capability; it is bandwidth and relevance. Of the visual data a robot generates each second, perhaps under 1% bears on a teammate's next action. CoMind turns &ldquo;what to say&rdquo; into a trainable objective, which is closer to an engineering solution than simply raising communication frequency. The open questions are generalisation — all six tasks share one body and one lab, with no numbers for new robots, scenes or objects — and online adaptation, since action-level backprop needs the teammate's error signal during training. For VLA teams, the value is a reproducible control: the same VLA, with only the information-sharing scheme changed, differs by 50 percentage points.</p>
+        <h3>Report says Megaspeed brokered nearly $12 billion in Nvidia chip orders for China</h3>
+        <p>The Decoder reported on November 15, citing The Wall Street Journal, that Megaspeed &mdash; a company linked to Alice Huang, a former partner of ex-Nvidia CEO Jensen Huang &mdash; arranged nearly $12 billion in Nvidia chip orders for Chinese companies between 2024 and 2025. Short seller Culper Research estimates Nvidia&rsquo;s actual China revenue share at more than 20%, well above the 7% the company reports.</p>
+        <p>The report follows Huang&rsquo;s resignation over a relationship with a woman suspected of being a Chinese spy. Megaspeed said in a November 15 statement that Alice Huang has not worked at the company since August 2025; the report says the statement raises more questions than it answers.</p>
+        <p>The same day, US Treasury Secretary Scott Bessent gave Nvidia&rsquo;s board 10 days to answer whether the company tolerated &ldquo;seemingly illicit&rdquo; chip sales to China to boost revenue, and said the next CEO should be hired from outside. Both parties in Congress are also pushing to tighten AI chip export rules and want Huang and Commerce Secretary Howard Lutnick to testify.</p>
+        <p class="why"><b>Why it matters</b>The $12 billion matters less for its size than for turning export control from a policy question into a revenue-recognition question: if China is really 20% of revenue rather than 7%, Nvidia&rsquo;s regional disclosures, channel inventory and distributor structure all need re-explaining. For buyers of compute, the near-term effect is higher compliance risk on second-hand and grey channels; for investors, Culper&rsquo;s figure is a short seller&rsquo;s estimate, not an audited number.</p>
       </article>
 
     </div>
@@ -490,7 +432,7 @@
 
   <section class="chapter" id="capital-en" data-c="capital">
     <div class="chead">
-      <span class="cnum">05</span>
+      <span class="cnum">04</span>
       <h2>Industry &amp; Capital</h2>
       <span class="cen">行业与资本</span>
       <span class="crule"></span>
@@ -499,14 +441,26 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/15 07:38</span>
-          <a class="src" href="https://www.ithome.com/1/027/255.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/16 04:43</span>
+          <a class="src" href="https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed" target="_blank" rel="noopener noreferrer">The Verge ↗</a>
         </div>
-        <h3>XFusion clears its ChiNext IPO review in 174 days and plans to raise 8 billion yuan</h3>
-        <p>XFusion's application to list on ChiNext passed the Shenzhen Stock Exchange's listing review committee on November 15, 174 days after its filing was accepted. The company began as Huawei's x86 server business and topped 10 billion yuan in revenue in its first full year of independent operation in 2022.</p>
-        <p>Revenue climbed from more than 28 billion yuan in 2023 to 43.5 billion in 2024, and passed 30 billion in the first half of 2025, with people familiar with the matter suggesting it could approach 60 billion for the full year. IDC puts XFusion second in China's x86 server market in 2025 with a 12.7% share, behind Inspur at 31.3% and ahead of H3C at 12.5%, Lenovo at 10.7% and ZTE at 8.5%. In liquid-cooled servers it ranked first in China by standard liquid-cooling share for two consecutive years, 2023 and 2024, hitting 43% in 2023.</p>
-        <p>The listing committee's questions focused on gross-margin trends and the sustainability of growth, asking the company to explain risk disclosure against shifts in compute demand, downstream capex, technical differentiation, operating cash flow, and customer and supplier concentration. The prospectus says proceeds will go to next-generation compute products and core technology, with AI, compute, data and energy named as the four elements of its next decade. China Securities Journal put the planned raise at 8 billion yuan.</p>
-        <p class="why"><b>Why it matters</b>This is a listing ticket for the compute supply chain, not a model-company story. Server margins are set by chip purchase prices, customer concentration and liquid-cooling penetration; the stronger AI demand gets, the more it tests whether the company can pass upstream price increases through. A 174-day review is a signal about approval pace, but the questions on cash flow and customer concentration suggest regulators are less tolerant of growth without profit. Three figures in the prospectus matter most: top-five customer share, the gap between operating cash flow and net profit, and the revenue share of liquid-cooled products. For public investors it provides a comparable valuation anchor for compute hardware; for the industry, a funded domestic OEM means delivery capacity concentrates further at the top next year.</p>
+        <h3>Huang reportedly explores a return as Bessent gives Nvidia 10 days on China sales</h3>
+        <p>The Financial Times reported on November 15 that Jensen Huang, days after resigning, has discussed returning as Nvidia&rsquo;s CEO with confidants; allies have formed a &ldquo;war room&rdquo; to lobby the board and seek White House support. A public petition calling for his reinstatement has gathered more than 150,000 signatures, with Elon Musk and Epic Games&rsquo; Tim Sweeney among those publicly backing it. The Verge notes that the talks remain reports, not an announcement.</p>
+        <p>The same day, US Treasury Secretary Scott Bessent said Nvidia needs a &ldquo;dramatic shakeup&rdquo; and should look outside the company for its next CEO. He gave the board 10 days to answer whether Nvidia pushed &ldquo;seemingly illicit&rdquo; chip sales to China to inflate revenue. Bloomberg and CNBC both reported the remarks.</p>
+        <p>Nvidia&rsquo;s board is now searching for a successor. The resignation followed an October 29 New York Times report that Huang appeared to be the target of a Chinese espionage operation; Reuters reported a third extramarital relationship. Lawmakers in both parties are also pushing to tighten AI chip exports to China.</p>
+        <p class="why"><b>Why it matters</b>The transmission channel to the AI industry is not gossip but supply contracts: Huang was the node connecting Nvidia to governments, cloud providers and startups, and the compute deals and investment commitments under negotiation get repriced when he leaves. Bessent&rsquo;s 10-day deadline turns a governance problem into an export-compliance problem &mdash; if the board admits it relaxed compliance to boost sales, Nvidia faces penalties and audits, not just reputational damage. For buyers, the immediate task is to check the export-compliance warranties and the provenance of the chips in their contracts.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 18:45</span>
+          <a class="src" href="https://the-decoder.com/australias-central-bank-finds-ai-hitting-young-workers-first-especially-in-software-and-customer-service/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Australia&rsquo;s central bank sees the first employment cracks among young workers in the most AI-exposed jobs</h3>
+        <p>The Decoder reported on November 15 that Mike Major, an economist at the Reserve Bank of Australia, has built a framework for spotting the early labour-market effects of AI by focusing on two places: entry-level roles and the most AI-exposed occupations such as programming, clerical work and customer service. Since ChatGPT launched in late 2022, job postings have fallen across all groups, but the drop is steepest in the most exposed group; within it, 15-to-24-year-olds and recent graduates have weaker employment rates and higher unemployment.</p>
+        <p>The report is explicit that this is not proof of causation: it measures theoretical exposure, not actual firm-level use, and business-cycle shifts or remote work could explain the numbers. For comparison, an August 2025 Stanford study of millions of US payroll records found employment among 22-to-25-year-olds in exposed occupations down 13% in relative terms, and nearly 20% among young software developers; a March 2026 Anthropic study found hiring rates for 22-to-25-year-olds down about 14%, with no systematic rise in overall unemployment.</p>
+        <p>There is counter-evidence too. A study of 25,000 Danish workers found no measurable change in wages or hours despite a 64% adoption rate, with employees saving an average of just 2.8% of working time. A University of Pittsburgh analysis of 10.6 million LinkedIn profiles found that weakness in exposed occupations began in early 2022, before ChatGPT launched.</p>
+        <p class="why"><b>Why it matters</b>The value of this monitoring is that it breaks &ldquo;AI takes jobs&rdquo; into an observable entry point: not the overall unemployment rate, but whether young people can get into exposed occupations at all. If the door narrows while headline unemployment stays flat, the macro data will look fine while the talent pipeline is already shrinking. On policy, the 2.8% time saving suggests the efficiency dividend is still thin; what is changing is hiring structure, not headcount.</p>
       </article>
 
     </div>
@@ -515,9 +469,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between November 13, 09:16 and November 15, 08:05 (Beijing time): 9 stories. Compiled at 11/15 08:05.</p>
+        <p>This issue covers reports published between November 15, 08:05 and November 16, 07:41 (Beijing time): 8 stories. Compiled at 11/16 07:41.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 020 · 47h window · Generated 2026-11-15 08:05</p>
+    <p class="sig">AI Daily · Issue 021 · 24h window · Generated 2026-11-16 07:41</p>
       </div>
     </footer>
       </div>
@@ -542,8 +496,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">14</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-15.html" title="谷歌 Teamwork 用 2.88 万次子智能体调用，把韦伊猜想写成 180 万行 Lean 证明">
+        <summary><span>2026 年 11 月</span><span class="am-count">15</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-16.html" title="美团开源 LongCat-2.5 权重：1.6 万亿参数 MoE，样例部署跑在 194 颗昇腾上">
+          <span class="a-date">2026.11.16 <em>MON</em></span>
+          <span class="a-head">美团开源 LongCat-2.5 权重：1.6 万亿参数 MoE，样例部署跑在 194 颗昇腾上</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-15.html" title="谷歌 Teamwork 用 2.88 万次子智能体调用，把韦伊猜想写成 180 万行 Lean 证明">
           <span class="a-date">2026.11.15 <em>SUN</em></span>
           <span class="a-head">谷歌 Teamwork 用 2.88 万次子智能体调用，把韦伊猜想写成 180 万行 Lean 证明</span>
         </a>
@@ -632,8 +590,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">14</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-15-en.html" title="Google&#39;s Teamwork writes the Weil conjectures into 1.8 million lines of Lean across 28,800 sub-agent calls">
+        <summary><span>November 2026</span><span class="am-count">15</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-16-en.html" title="Meituan opens the weights of LongCat-2.5: a 1.6T-parameter MoE that runs its sample deployment on 194 Ascend chips">
+          <span class="a-date">2026.11.16 <em>MON</em></span>
+          <span class="a-head">Meituan opens the weights of LongCat-2.5: a 1.6T-parameter MoE that runs its sample deployment on 194 Ascend chips</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-15-en.html" title="Google&#39;s Teamwork writes the Weil conjectures into 1.8 million lines of Lean across 28,800 sub-agent calls">
           <span class="a-date">2026.11.15 <em>SUN</em></span>
           <span class="a-head">Google&#39;s Teamwork writes the Weil conjectures into 1.8 million lines of Lean across 28,800 sub-agent calls</span>
         </a>

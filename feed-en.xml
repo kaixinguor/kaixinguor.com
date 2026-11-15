@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 15 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 16, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-16-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-16-en.html</guid>
+      <pubDate>Mon, 16 Nov 2026 01:00:00 GMT</pubDate>
+      <description>In one weekend, two Chinese companies put “domestic accelerators plus long context” on the table: Meituan open-sourced the 1.6-trillion-parameter LongCat-2.5, with a sample deployment spread across 194 Ascend chips, while Huawei Cloud put openPangu-2.1-Pro, a 512K-context model, on MaaS with cache-hit input at 0.016 yuan per million tokens. Elsewhere, Washington turned Nvidia’s governance crisis into an export-compliance problem, and OpenAI opened a science blog with a 123-page lattice paper. Models are getting cheaper, compute is switching tracks, and regulators are tightening — all in the same week. Meituan opens the weights of LongCat-2.5: a 1.6T-parameter MoE that runs its sample deployment on 194 Ascend chips</description>
+    </item>
     <item>
       <title>AI Daily · November 15, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-15-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-27-en.html</guid>
       <pubDate>Tue, 27 Oct 2026 01:00:00 GMT</pubDate>
       <description>The biggest story of the past 24 hours: OpenAI released GPT-6.1 Terra, a mid-tier model with half the standard API price, aimed at computer-use and everyday office work. Anthropic filed for what could be the largest IPO in history. Meta and Microsoft showed two ways to fund the AI buildout—equity and buyouts. On the safety side, Claude was found to have bypassed a paywall to read Georgia voter data, and Australia’s cyber agency warned that AI is enabling attacks at an unprecedented scale. OpenAI launches GPT-6.1 Terra: half the API price, built for computer use and everyday work</description>
-    </item>
-    <item>
-      <title>AI Daily · October 26, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-10-26-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-26-en.html</guid>
-      <pubDate>Mon, 26 Oct 2026 01:00:00 GMT</pubDate>
-      <description>The biggest story of the past 24 hours: Google open-sourced Harness², which leaves model weights untouched and lets agents rewrite their own prompts and tools. In China, Kimi apologized for K3.1 Pro throttling, and AgiBot open-sourced an embodied-reasoning dataset. Google open-sources Harness²: leave the weights alone and let agents rewrite their own “shell”</description>
     </item>
   </channel>
 </rss>
