@@ -310,6 +310,15 @@ function shell(issue, { body, cat = "", cls = "", footLeft = "", footRight = "" 
 </html>`;
 }
 
+/** 统计条里的窗口标签跟着实际窗口走：常规 24 小时窗口保持原文案，跨天补跑按小时数写。 */
+function windowLabel(issue) {
+  const start = issue.windowStart ? Date.parse(issue.windowStart) : NaN;
+  const end = issue.windowEnd ? Date.parse(issue.windowEnd) : NaN;
+  if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return "24 小时窗口";
+  const hours = Math.max(1, Math.round((end - start) / 3600000));
+  return `${hours} 小时窗口`;
+}
+
 export function renderCover(issue, stories = []) {
   const d = dateParts(issue.dateISO);
   const index = stories.length
@@ -328,7 +337,7 @@ export function renderCover(issue, stories = []) {
     <div class="cover-foot">
       <p class="cover-note">${disclaimerHtml(issue)}</p>
       <div class="cover-stats">
-        <span class="pill">24 小时窗口</span>
+        <span class="pill">${windowLabel(issue)}</span>
         <span>${escapeHtml(issue.window)}</span>
         <span class="sep">/</span>
         <span>${issue.count} 条</span>
@@ -392,7 +401,7 @@ export function renderOverview(issue) {
   const body = `
   <div class="overview-head">
     <h1>今天，<em>${issue.count}</em> 条</h1>
-    <div class="overview-sub">24 小时窗口 · ${escapeHtml(issue.window)} · 阅读约 ${issue.readMinutes} 分钟</div>
+    <div class="overview-sub">${windowLabel(issue)} · ${escapeHtml(issue.window)} · 阅读约 ${issue.readMinutes} 分钟</div>
   </div>
   <ol class="list">${rows}</ol>`;
   return shell(issue, {
