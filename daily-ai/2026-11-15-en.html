@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 15, 2026</title>
+<meta name="description" content="AI Daily, November 15, 2026, Issue 020: Google&#39;s Teamwork formalised the Weil conjectures in roughly 1.8 million lines of Lean across about 28,800 sub-agent calls, reproduced a Navier–Stokes blow-up proof and rewrote libgav1 from C++ to Rust; Cursor disclosed a supply-chain attack that reached up to 5,000 users through a malicious Claude Code extension; OpenAI launched ChatGPT Wallet; Meta&#39;s Muse can make phone calls; Cloudflare open-sourced Kitesurf; Tencent released Hy Realtime; llama.cpp and ggml hit 1.0.0; Stardust Intelligence&#39;s CoMind let two robots cooperate through a wall; XFusion cleared its ChiNext IPO review.">
+<meta property="og:title" content="AI Daily · November 15, 2026">
+<meta property="og:description" content="AI Daily, November 15, 2026, Issue 020: Google&#39;s Teamwork formalised the Weil conjectures in roughly 1.8 million lines of Lean across about 28,800 sub-agent calls, reproduced a Navier–Stokes blow-up proof and rewrote libgav1 from C++ to Rust; Cursor disclosed a supply-chain attack that reached up to 5,000 users through a malicious Claude Code extension; OpenAI launched ChatGPT Wallet; Meta&#39;s Muse can make phone calls; Cloudflare open-sourced Kitesurf; Tencent released Hy Realtime; llama.cpp and ggml hit 1.0.0; Stardust Intelligence&#39;s CoMind let two robots cooperate through a wall; XFusion cleared its ChiNext IPO review.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-15-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-13T09:16:00+08:00/2026-11-15T08:05:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-15-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-15.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-15-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI Daily</a>
+      <a href="../economy.html">Economic Daily</a>
+      <a href="../education.html">Education Daily</a>
+      <a href="../psychology.html">Psychology Daily</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-15.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 020</span>
+    </div>
+    <h1 class="date">November 15, 2026<span class="weekday">SUN</span></h1>
+    <p class="deck">Google used a team of agents that question each other to write the Weil conjectures into roughly 1.8 million lines of Lean. The same weekend, Cursor finished accounting for a supply-chain attack: a leaked key from an inference vendor travelled through an extension marketplace and reached 5,000 developers. On the product side, OpenAI now lets an agent pay for you, Meta lets one make your phone calls, and Cloudflare built one a browser without Chromium. Capability and cost moved at both ends: Tencent put tool calls inside real-time speech, llama.cpp set a version contract for local inference with 1.0.0, and XFusion arrived at the ChiNext gate with 43.5 billion yuan in revenue. <em>After &ldquo;it can do the work&rdquo;, the next threshold is &ldquo;who answers for what it does&rdquo;.</em></p>
+    <div class="metabar"><span class="pill">Issue 020</span>
+      <span class="dot"></span>
+      <span>Window Nov 13, 09:16 – Nov 15, 08:05</span>
+      <span class="dot"></span>
+      <span>9 stories</span>
+      <span class="dot"></span>
+      <span>11 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#research"><span class="n">01</span>Research &amp; Safety</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#models"><span class="n">03</span>Models &amp; Capability</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Google's Teamwork formalised the Weil conjectures using about 28,800 sub-agent calls and roughly 1.8 million lines of Lean, reproduced a formal proof of finite-time blow-up for the three-dimensional Navier–Stokes equations, and rewrote its libgav1 decoder from C++ into about 170,000 lines of Rust.</b> Each specialist agent only gets the files and tools it needs, while separate critics and reviewers check results without relying on the original agent's reasoning chain.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>XFusion cleared its ChiNext IPO review 174 days after its filing was accepted and plans to raise 8 billion yuan. Revenue reached 43.5 billion yuan in 2024 and topped 30 billion in the first half of 2025, with a 12.7% share of China's x86 server market, second behind Inspur.</b> The listing committee focused its questions on gross-margin trends and the sustainability of growth; proceeds go to next-generation compute R&amp;D.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Cursor disclosed a supply-chain attack in which a malicious Claude Code extension sat in its marketplace for about 11 hours and reached up to 5,000 users; the entry point was a leaked Fireworks access key.</b> Privacy-mode users' prompts and code were unaffected, and fewer than 0.05% of users had agent tracing data exposed.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 14:53</span>
+          <a class="src" href="https://www.ithome.com/1/027/140.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Google's Teamwork writes the Weil conjectures into 1.8 million lines of Lean across 28,800 sub-agent calls</h3>
+        <p>Google has disclosed interim results from Teamwork, its multi-agent system, which has completed a formal proof of the Weil conjectures, IT之家 reported on November 14. The results, proved by Pierre Deligne in 1974, concern the number of solutions to polynomial equations over finite fields. Teamwork-LEAP generated roughly 1.8 million lines of Lean across about 28,800 sub-agent calls, turning the proof into something a kernel can check line by line.</p>
+        <p>The same system reproduced a formal proof of finite-time blow-up for the three-dimensional Navier–Stokes equations and helped researchers with the Courtade–Kumar conjecture. Architecturally, specialist agents work in parallel, each with access only to the files and tools its task requires. Independent critics and reviewers check the output without relying on the original agent's reasoning, a structure meant to suppress the error accumulation that plagues long reasoning chains.</p>
+        <p>Beyond mathematics, Google assembled 30 specialist agents with a physics-aware simulator to infer molecular structures from NMR data, reaching 95% Top-1 and 100% Top-3 accuracy on a complex-molecule benchmark. It also rewrote the company's own libgav1 AV1 video decoder from C++ into about 170,000 lines of Rust, matching the original's output exactly across a broad test suite.</p>
+        <p>Teamwork and an iterative coding workflow called /boost are being opened through Antigravity. Google plans to give 10,000 academic researchers six months of free access at the maximum tier.</p>
+        <p class="why"><b>Why it matters</b>The weight of this is not that an AI can do mathematics, but that the verification loop has become a product. Lean turns &ldquo;is this proof correct?&rdquo; into a compile-time question; sub-agents search and write code, independent reviewers reject, and separating the two is what keeps 1.8 million lines tractable. For agent builders, the reusable principle is that generator and verifier should not share context: the verifier gets the artefact and the specification, nothing else. The number to doubt is cost: Google gave no token, dollar or machine-hour figure for 28,800 calls, and no distribution of success rates across theorems. Code migration (C++ to Rust) is closer to production work than mathematics, but exact output equality depends on test coverage; where coverage stops, humans still review.<br><b>Another angle</b> If the marginal cost of a formal proof really falls to &ldquo;a few agent calls&rdquo;, the first things repriced are chip verification, cryptographic protocols and compiler optimisation — fields that currently pay formal-methods teams for certainty itself.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 18:52</span>
+          <a class="src" href="https://www.ithome.com/1/027/215.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Cursor's supply-chain post-mortem: a malicious Claude Code extension reached up to 5,000 users</h3>
+        <p>Cursor disclosed the results of a two-week investigation on November 13 local time: the vast majority of customers were unaffected, up to 5,000 users were reached, and every affected customer was contacted individually. Prompts and code were untouched for users in privacy mode; among users outside it, fewer than 0.05% had coding-agent tracing data exposed.</p>
+        <p>The chain began with a leaked Fireworks access key. Attackers used it to take data from Cursor's shared storage bucket, and a small set of unredacted credentials inside that data (affecting fewer than 0.01% of customers) gave them access to some SaaS tools, non-production code repositories, customer-support data and some user credentials. Cursor says it revoked the key, rotated credentials and cut off unauthorised access as soon as monitoring flagged the anomaly.</p>
+        <p>The most direct link was the extension marketplace. On October 29, attackers used stolen internal credentials to inject a tampered Anthropic Claude Code extension (Anthropic.claude-code 2.1.312 and 2.1.313) into Cursor's marketplace; Anthropic and Open VSX were not involved. The malicious build was live for about 11 hours and reached up to 5,000 users. Cursor pulled the extension, took the marketplace offline temporarily and worked with its cloud provider to shut down the attackers' server; after blocking a final attempt on November 1, it declared the incident contained.</p>
+        <p class="why"><b>Why it matters</b>This is not &ldquo;an IDE had a bad week&rdquo;; it is the trust structure of the agent toolchain. Marketplace, inference vendor, shared bucket: any one of the three handing over credentials puts an attacker between a developer's machine and their code. Two details are worth keeping. A malicious build lived 11 hours and still installed 5,000 times, because auto-update turns &ldquo;publishing&rdquo; into &ldquo;pushing&rdquo;. And Cursor says uninstalling the extension is not enough to remove the risk, because credentials already landed. Teams should check for versions 2.1.312 and 2.1.313, rotate anything the extension could read during that window, and audit the OAuth scopes extensions were granted.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/13 23:49</span>
+          <a class="src" href="https://www.ithome.com/1/026/994.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>OpenAI launches ChatGPT Wallet: the dot agent checks out, but every purchase needs a token and a verification</h3>
+        <p>OpenAI has put payments inside ChatGPT with ChatGPT Wallet, built with American Express, Mastercard and Visa. Users keep the points and protections attached to their existing cards, enter card details once, and can then ask the dot agent to find products and complete a purchase.</p>
+        <p>The security model borrows from payment-network tokenisation. Each transaction gets a dedicated payment token carrying a limited-use card number, security code and expiry, so the agent never sees the real card; every purchase still has to clear a security verification. The wallet initially opens only to Pro subscribers in the United States aged 18 or over.</p>
+        <p>On monetisation, OpenAI says it will not take a commission at first. The goal is to build merchant partnerships and get consumers used to treating ChatGPT as a shopping entry point. It also published tools and guidance for merchants, including how to check whether a site is mistakenly blocking OpenAI's agents.</p>
+        <p class="why"><b>Why it matters</b>The hard part of agent payments was never &ldquo;can it charge the card&rdquo; but the granularity of authorisation and the allocation of liability: who approved this purchase, what was the limit, who refunds a wrong one. Tokenisation solves card-number exposure; it does not solve misread intent. A user says &ldquo;buy running shoes&rdquo;, the agent picks the wrong model, and the dispute still lands in the merchant's refund policy. Requiring biometrics on every purchase is a safety valve now and a conversion ceiling later; OpenAI says pre-authorisation by spend limit, category and time window is coming, and that is when agent commerce grows up. For merchants, the more urgent question than accepting the payment is whether to let agents in at all: blocking them may block a whole new class of orders.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 21:46</span>
+          <a class="src" href="https://www.ithome.com/1/027/238.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Meta's Muse makes your phone calls, and sometimes gets hung up on as a scammer</h3>
+        <p>Meta's chief AI officer, Wang Tao, announced on X in the early hours of November 13 that Muse can place &ldquo;all the calls you don't want to make yourself&rdquo;: insurers and cable providers, appointments with the US DMV, or a table at a restaurant, IT之家 reported on November 14.</p>
+        <p>Muse speaks to staff in a synthetic voice, and the calls do not always land. Some staff recognise the AI and hang up — some to guard against fraud, others because they expect the call to waste their time. Meta tested the feature with early users for several months and is now opening it to subscribers on its top Meta AI tier, from $19.99 a month.</p>
+        <p>Muse is not the first. Google's Call for Me works on the Pixel 11 and Pixel 10 and dials from the user's own number, and the agent Instinct has been testing call-making since September.</p>
+        <p class="why"><b>Why it matters</b>The phone is the last interface without an API, and the most underrated place for agents to land. It demands real-time speech, interruption handling, reciting form details, and an answer to &ldquo;who exactly are you?&rdquo; that cannot be improvised. Muse's bottleneck is not the model but the callee: businesses have no obligation to cooperate with an AI, and recognising and hanging up is their risk control. Making this work needs at least three things — disclose the AI at the start, keep a reviewable record of the call, and hand over to a human when it goes wrong. Meta published no connection or task-completion rates, so $19.99 buys a promise that it will try, not a guarantee that it will get through.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 18:06</span>
+          <a class="src" href="https://github.com/cloudflare/kitesurf" target="_blank" rel="noopener noreferrer">Cloudflare · GitHub ↗</a>
+        </div>
+        <h3>Cloudflare open-sources Kitesurf, a browser for agents that runs on Workers without Chromium</h3>
+        <p>Cloudflare has open-sourced Kitesurf, a browser built for AI agents, IT之家 reported on November 14. It runs on Cloudflare Workers and handles HTML parsing, CSS application, page JavaScript execution and screenshot rendering without a traditional browser container.</p>
+        <p>Kitesurf speaks the Chrome DevTools Protocol, so existing tooling can drive it directly, with no Chromium process or container underneath. Cloudflare says it did not clone a full desktop browser engine; it targets what agents actually care about — token consumption, context window, scalability, performance and cost — and drops features that only serve humans, such as tabs, themes, extensions and pixel-perfect rendering.</p>
+        <p>On common agent tasks such as screenshots and HTML extraction, it uses significantly less CPU and memory than Chromium, which means more concurrent sessions per machine and more headroom for bursty, AI-driven load. The code is on Cloudflare's GitHub.</p>
+        <p class="why"><b>Why it matters</b>Agent infrastructure is shifting from &ldquo;drive a browser built for people&rdquo; to &ldquo;build a renderer for agents&rdquo;. The technical meaning is concrete: drop the compositor and pixel pipeline, keep the DOM, network stack and JS execution, and per-session memory falls from hundreds of megabytes to tens, raising concurrency density by an order of magnitude. CDP compatibility is a smart migration choice, since Playwright and Puppeteer scripts barely change. The open question is fidelity: against anti-bot checks, canvas fingerprinting and heavy front-end frameworks, behaviour differences between a lean engine and Chromium turn directly into task failures, and that gap can only be measured with regression runs on real sites, not a demo.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/13 16:41</span>
+          <a class="src" href="https://www.ithome.com/1/026/825.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Tencent's Hunyuan releases Hy Realtime, adding tool calls and singing to real-time speech</h3>
+        <p>Tencent's Hunyuan team released Hy Realtime, a new real-time speech model, on November 13. Beyond voice understanding, instruction following and persona-driven expression, it adds agentic tool calling and singing. It is already live in Yuanbao voice calls and Tencent's customer service, with an API on Tencent Cloud due shortly.</p>
+        <p>According to Tencent, Hy Realtime handles incomplete input — mumbling, half-finished sentences, mid-sentence corrections — by reconstructing intent from context, and its multi-turn instruction following and context management hold up over longer conversations. On tool use, it decides from context whether to search the web, unifying the search decision, the tool call and the answer.</p>
+        <p>The singing capability was co-designed with Tencent Music's Lingyin AI team. Users can request songs by artist, album, genre, language, release year and popularity, and can build on earlier turns — &ldquo;a English folk song from between 2010 and 2020&rdquo;, for example. Tencent says internal expert A/B tests show a significant advantage in core experience dimensions and that the model leads several public speech benchmarks. The current build is available in the Yuanbao app's voice calls under the &ldquo;Chuyu&rdquo; voice.</p>
+        <p class="why"><b>Why it matters</b>The competition in real-time speech has moved from &ldquo;does it sound human&rdquo; to &ldquo;can it finish the job mid-conversation&rdquo;. Tool calling forces the model to decide whether to search before a sentence is even finished, which puts hard constraints on first-token latency and interruption handling. Tencent published no end-to-end latency, barge-in response time or concurrency cost, and those three decide whether this can enter production customer service. Singing is a crowd-pleasing demo, but it proves controllability of prosody and emotion — the same control is worth more in de-escalating an angry caller than in taking song requests. For developers, the real signal is the coming Tencent Cloud API: this capability previously depended on third-party providers, and in-house access removes a layer of dependency and cost.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 08:14</span>
+          <a class="src" href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">llama.cpp Releases ↗</a>
+        </div>
+        <h3>llama.cpp and ggml reach 1.0.0, using major versions to flag API and ABI breaks</h3>
+        <p>Georgi Gerganov, the creator of llama.cpp, announced on X on November 13 that the open-source inference project and its underlying machine-learning engine ggml have reached library version 1.0.0, IT之家 reported on November 14.</p>
+        <p>The most substantive change is the compatibility contract. Both libraries will now use major-version bumps to mark API or ABI breaks, so downstream applications can tell from a version number whether an upgrade requires matching changes on their side. That contract is overdue for packaging, distribution maintenance and commercial products that pin versions: until now, the local-inference library's interface drifted commit by commit and upgrades were largely trial and error.</p>
+        <p>On capability, llama.cpp supports more than 150 model architecture variants and mainstream speculative decoding methods. ggml supports hardware through dedicated backends, each compilable as a dynamic library and loaded at runtime. The team says it is scaling CI with Hugging Face's HF Buckets and HF Jobs, adding self-hosted test runners with support from Nvidia, AMD, Qualcomm, Arm, IBM and Intel, and using LLMs judiciously in development while keeping code quality, architectural control and understanding of implementation details first.</p>
+        <p class="why"><b>Why it matters</b>1.0 is a psychological threshold for the open-source inference stack: the authors are willing to own ABI stability, and downstream can treat it as a dependency rather than an experiment. The part worth reading is the version rule itself — a major bump means incompatibility, which matters most for dynamic-library plugin deployments: backend .so files and the main binary must ship in the same version or loading fails. The pre-upgrade checklist is unglamorous: pin the version, run the backend matrix on your target hardware, and confirm speculative decoding has not regressed on your models. For on-device products, that stability matters more than ten more supported architectures.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 16:08</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/509614.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>Stardust's CoMind takes two robots from 0% to 100% by sharing only what the task needs</h3>
+        <p>Stardust Intelligence, a Shenzhen embodied-AI company, released CoMind (Be My Eye), a multi-robot coordination framework, quantum-bit reported on November 14. Its two pillars are decentralised, active information sharing and the selection and compression of task-critical information: robots no longer exchange full camera frames but extract the visual features and manipulation states the task requires, and the receiver fuses them with its own observations, the instruction and its proprioceptive state before feeding a vision-language-action model.</p>
+        <p>The framework runs in two stages. A context encoder filters and compresses what matters from multiple camera streams and predicts future visual change. Each robot can both send and receive context independently, removing the need for a central controller. Training adds an &ldquo;action-level backpropagation&rdquo; trick: a teammate's action-prediction error flows back into the sender's information encoder, teaching it to supply what actually helps the teammate act rather than merely to describe the scene accurately.</p>
+        <p>Stardust demonstrated six real-robot tasks: passing a pen through a partition, placing an object in a blind box, assembling a cardboard box, folding and storing bedding, restocking a fridge, and assembling a dumbbell. With two robots unable to see each other through a barrier, success went from 0% to 100%. In the blind-box task, no sharing gave 38.9%, another context-transfer scheme reached 72.2%, and CoMind reached 88.9% while cutting communication volume by about 80%.</p>
+        <p class="why"><b>Why it matters</b>The bottleneck in multi-robot coordination is rarely single-robot capability; it is bandwidth and relevance. Of the visual data a robot generates each second, perhaps under 1% bears on a teammate's next action. CoMind turns &ldquo;what to say&rdquo; into a trainable objective, which is closer to an engineering solution than simply raising communication frequency. The open questions are generalisation — all six tasks share one body and one lab, with no numbers for new robots, scenes or objects — and online adaptation, since action-level backprop needs the teammate's error signal during training. For VLA teams, the value is a reproducible control: the same VLA, with only the information-sharing scheme changed, differs by 50 percentage points.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 07:38</span>
+          <a class="src" href="https://www.ithome.com/1/027/255.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>XFusion clears its ChiNext IPO review in 174 days and plans to raise 8 billion yuan</h3>
+        <p>XFusion's application to list on ChiNext passed the Shenzhen Stock Exchange's listing review committee on November 15, 174 days after its filing was accepted. The company began as Huawei's x86 server business and topped 10 billion yuan in revenue in its first full year of independent operation in 2022.</p>
+        <p>Revenue climbed from more than 28 billion yuan in 2023 to 43.5 billion in 2024, and passed 30 billion in the first half of 2025, with people familiar with the matter suggesting it could approach 60 billion for the full year. IDC puts XFusion second in China's x86 server market in 2025 with a 12.7% share, behind Inspur at 31.3% and ahead of H3C at 12.5%, Lenovo at 10.7% and ZTE at 8.5%. In liquid-cooled servers it ranked first in China by standard liquid-cooling share for two consecutive years, 2023 and 2024, hitting 43% in 2023.</p>
+        <p>The listing committee's questions focused on gross-margin trends and the sustainability of growth, asking the company to explain risk disclosure against shifts in compute demand, downstream capex, technical differentiation, operating cash flow, and customer and supplier concentration. The prospectus says proceeds will go to next-generation compute products and core technology, with AI, compute, data and energy named as the four elements of its next decade. China Securities Journal put the planned raise at 8 billion yuan.</p>
+        <p class="why"><b>Why it matters</b>This is a listing ticket for the compute supply chain, not a model-company story. Server margins are set by chip purchase prices, customer concentration and liquid-cooling penetration; the stronger AI demand gets, the more it tests whether the company can pass upstream price increases through. A 174-day review is a signal about approval pace, but the questions on cash flow and customer concentration suggest regulators are less tolerant of growth without profit. Three figures in the prospectus matter most: top-five customer share, the gap between operating cash flow and net profit, and the revenue share of liquid-cooled products. For public investors it provides a comparable valuation anchor for compute hardware; for the industry, a funded domestic OEM means delivery capacity concentrates further at the top next year.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 13, 09:16 and November 15, 08:05 (Beijing time): 9 stories. Compiled at 11/15 08:05.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 020 · 47h window · Generated 2026-11-15 08:05</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI Daily</a>
+        <a href="../economy.html">Economic Daily</a>
+        <a href="../education.html">Education Daily</a>
+        <a href="../psychology.html">Psychology Daily</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../wish.html">Wish</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>

@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 13 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 15, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-15-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-15-en.html</guid>
+      <pubDate>Sun, 15 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Google used a team of agents that question each other to write the Weil conjectures into roughly 1.8 million lines of Lean. The same weekend, Cursor finished accounting for a supply-chain attack: a leaked key from an inference vendor travelled through an extension marketplace and reached 5,000 developers. On the product side, OpenAI now lets an agent pay for you, Meta lets one make your phone calls, and Cloudflare built one a browser without Chromium. Capability and cost moved at both ends: Tencent put tool calls inside real-time speech, llama.cpp set a version contract for local inference with 1.0.0, and XFusion arrived at the ChiNext gate with 43.5 billion yuan in revenue. After “it can do the work”, the next threshold is “who answers for what it does”. Google&#39;s Teamwork writes the Weil conjectures into 1.8 million lines of Lean across 28,800 sub-agent calls</description>
+    </item>
     <item>
       <title>AI Daily · November 13, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-13-en.html</link>

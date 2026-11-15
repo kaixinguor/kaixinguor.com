@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 15 日</title>
+<meta name="description" content="2026-11-15 AI 日报第 020 期：谷歌 Teamwork 用 2.88 万次子智能体调用、约 180 万行 Lean 代码形式化韦伊猜想，并复现纳维-斯托克斯爆破证明、把 libgav1 从 C++ 重写为 Rust；Cursor 公布供应链攻击调查，恶意 Claude Code 扩展最多波及 5000 用户；OpenAI 上线 ChatGPT Wallet，dot 智能体可代下单；Meta 的 Muse 上线代打电话；Cloudflare 开源智能体浏览器 Kitesurf；腾讯混元发布实时语音模型 Hy Realtime；llama.cpp 与 ggml 进入 1.0.0；星尘智能 CoMind 让两台机器人隔墙协作；超聚变创业板 IPO 过会。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 15 日">
+<meta property="og:description" content="2026-11-15 AI 日报第 020 期：谷歌 Teamwork 用 2.88 万次子智能体调用、约 180 万行 Lean 代码形式化韦伊猜想，并复现纳维-斯托克斯爆破证明、把 libgav1 从 C++ 重写为 Rust；Cursor 公布供应链攻击调查，恶意 Claude Code 扩展最多波及 5000 用户；OpenAI 上线 ChatGPT Wallet，dot 智能体可代下单；Meta 的 Muse 上线代打电话；Cloudflare 开源智能体浏览器 Kitesurf；腾讯混元发布实时语音模型 Hy Realtime；llama.cpp 与 ggml 进入 1.0.0；星尘智能 CoMind 让两台机器人隔墙协作；超聚变创业板 IPO 过会。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-15.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-13T09:16:00+08:00/2026-11-15T08:05:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-15.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-15.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-15-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../psychology.html">心理学日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-15-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 020 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 15 日<span class="weekday">SUN</span></h1>
+    <p class="deck">谷歌用一群会互相质疑的智能体，把韦伊猜想写成约 180 万行 Lean 证明；同一天，Cursor 把供应链攻击的账算清了——一家推理平台泄露的密钥，顺着扩展市场摸到了 5000 名开发者。产品侧，OpenAI 开始让智能体替你付钱，Meta 让它替你打电话，Cloudflare 干脆给它造了个不要 Chromium 的浏览器。能力与成本两端同时在动：腾讯把工具调用塞进实时语音，llama.cpp 用 1.0.0 给本地推理立下版本契约，超聚变带着 435 亿元营收走到创业板门口。<em>「能做事」之后，下一道门槛是「谁为它做的事负责」。</em></p>
+    <div class="metabar"><span class="pill">第 020 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/13 09:16 – 11/15 08:05</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 11 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#research"><span class="n">01</span>研究与安全</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#models"><span class="n">03</span>模型与能力</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>谷歌 Teamwork 用约 2.88 万次子智能体调用、约 180 万行 Lean 代码完成韦伊猜想的形式化，并复现三维纳维-斯托克斯方程有限时间爆破的形式化证明；同一套系统还把 libgav1 解码器从 C++ 重写为约 17 万行 Rust。</b>每个专业智能体只拿到完成任务所需的文件与工具，另设独立质疑者与审查者，不依赖原智能体的推理链。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>超聚变创业板 IPO 过会，从受理到上会用时 174 天，拟募资 80 亿元；2024 年营收 435 亿元，2025 年上半年超过 300 亿元，国内 x86 服务器份额 12.7% 位列第二。</b>上市委问询集中在毛利率变动趋势与业绩可持续性，募资投向新一代算力产品研发。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Cursor 公布供应链攻击调查结果：恶意 Claude Code 扩展在扩展市场存在约 11 小时，最多波及 5000 名用户；源头是 Fireworks 泄露的访问密钥。</b>使用隐私模式的用户提示词与代码不受影响，少于 0.05% 的用户链路追踪数据泄露。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 14:53</span>
+          <a class="src" href="https://www.ithome.com/1/027/140.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>谷歌 Teamwork 用 2.88 万次子智能体调用，把韦伊猜想写成 180 万行 Lean 证明</h3>
+        <p>据 IT 之家 11 月 14 日报道，谷歌披露了多智能体系统 Teamwork 的阶段性结果：它已对韦伊猜想（Weil conjectures）完成形式化证明。这组关于有限域上多项式方程解数的结论由皮埃尔·德利涅于 1974 年证明，Teamwork-LEAP 通过约 2.88 万次子智能体调用、累计生成约 180 万行 Lean 代码，把证明写成了可被内核逐行检查的形式。</p>
+        <p>同一套系统还复现了三维纳维-斯托克斯方程有限时间爆破问题的一项形式化证明，并帮助研究人员处理了库尔塔德-库马尔猜想（Courtade–Kumar conjecture）。工程结构上，多个专业智能体并行工作，每个智能体只能访问完成任务所需的文件和工具；结果由独立的质疑者与审查者检查，审查者不依赖原智能体的推理过程，以此压低长链推理里常见的错误累积。</p>
+        <p>数学之外，谷歌把 30 个专业智能体组成团队，接入融入物理知识的模拟器，从核磁共振数据推断分子结构：在复杂分子基准上 Top-1 准确率 95%、Top-3 100%。系统还把自家的 libgav1 AV1 视频解码器从 C++ 重写为约 17 万行 Rust，在覆盖面较广的测试中与原始版本输出完全一致。</p>
+        <p>目前 Teamwork 与名为 /boost 的迭代式编程工作流正通过 Antigravity 开放，谷歌计划向 1 万名学术研究人员提供 6 个月的最高额度免费访问。</p>
+        <p class="why"><b>看点</b>这件事的分量不在「AI 会做数学」，而在验证闭环被产品化：Lean 把「证明对不对」变成编译期问题，子智能体负责搜索与写代码，独立审查者负责拒绝，两者分开才让 180 万行规模可控。对做 agent 的团队，可复用的是那条分工原则——生成者与验证者不共享上下文，验证者只拿产物和规格。要打问号的是成本口径：2.88 万次调用对应多少 token、多少美元、多少机时，官方没有给；不同定理之间的成功率也没有分布。拿它做代码迁移（C++ 到 Rust）比做数学更接近日常生产，输出一致性强依赖测试覆盖，覆盖不到的地方仍是人审。<br><b>另一个视角</b>如果形式化证明的边际成本真能降到「调用几次智能体」的量级，最先被重新定价的是芯片验证、密码学协议和编译器优化——这些领域今天付给形式化方法团队的钱，本质上买的是「确信」。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 18:52</span>
+          <a class="src" href="https://www.ithome.com/1/027/215.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Cursor 公布供应链攻击调查：恶意 Claude Code 扩展最多波及 5000 名用户</h3>
+        <p>当地时间 11 月 13 日，Cursor 在为期两周的调查后披露了安全事件结果：绝大多数客户未受影响，最多波及 5000 名用户，公司已逐一联系受影响客户。使用隐私模式的用户，提示词和代码不受影响；未使用隐私模式的用户中，编程智能体链路追踪数据遭泄露的占比不到 0.05%。</p>
+        <p>攻击链条的起点是 Fireworks 泄露的访问密钥。攻击者用它窃取了 Cursor 共享存储桶中的部分数据，并借其中少量未脱敏凭证（受影响客户不到 0.01%）进入部分 SaaS 工具，访问了非生产代码仓库、客户支持数据和部分用户凭证。Cursor 称检测到异常后立即停用泄露密钥、轮换凭证并切断未授权访问。</p>
+        <p>更直接的一环发生在扩展市场：10 月 29 日，攻击者用窃取的内部凭证把篡改版 Anthropic Claude Code 扩展（Anthropic.claude-code 2.1.312 与 2.1.313）注入 Cursor 扩展市场，与 Anthropic 及 Open VSX 无关。恶意版本存续约 11 小时，最多影响 5000 名用户。Cursor 随后下架扩展、临时下线市场并配合关停攻击者服务器，11 月 1 日拦截最后一次攻击后确认事件受控。</p>
+        <p class="why"><b>看点</b>这不是「某家 IDE 出事」，而是 agent 工具链的信任结构问题：扩展市场、模型推理供应商、共享存储桶，三层里任何一层交出凭证，攻击者就能站到开发者机器与代码之间。值得记住的两个细节——恶意版本只活了 11 小时却装了 5000 次，说明自动更新把「发布」变成了「推送」；官方明确说仅卸载扩展无法彻底清除风险，因为凭证已经落过地。团队该做的是三件事：按版本号排查 2.1.312/2.1.313、轮换那段时间内可被扩展读到的密钥、审计扩展的 OAuth 授权范围。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/13 23:49</span>
+          <a class="src" href="https://www.ithome.com/1/026/994.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>OpenAI 上线 ChatGPT Wallet：dot 智能体代下单，每笔都要过支付令牌与身份验证</h3>
+        <p>OpenAI 推出 ChatGPT Wallet，把支付能力接进 ChatGPT。钱包由 OpenAI 与美国运通、万事达卡和 Visa 合作开发，用户使用现有信用卡付款时仍可享受原有的积分与权益保障；符合条件的用户录入一次银行卡信息后，就能让 dot 智能体帮忙找商品并完成购买。</p>
+        <p>安全设计沿用支付网络的令牌化思路：每笔交易由支付网络生成专用支付令牌，其中包含限定用途的卡号、安全码和有效期，智能体不接触用户的真实银行卡信息；每笔交易仍需通过安全验证才能完成。初期仅向美国年满 18 岁的 Pro 订阅用户开放。</p>
+        <p>商业化上，OpenAI 表示初期不对交易收取佣金，当前目标是与商家建立合作，让消费者逐渐把 ChatGPT 视为购物入口。公司同时发布了面向企业的工具和指南，其中包括如何检查网站是否误拦截了 OpenAI 的智能体。</p>
+        <p class="why"><b>看点</b>agent 支付真正的难点从来不是「能不能扣款」，而是授权粒度与责任划分：谁批准了这笔钱、限额多少、买错了谁退。令牌化解决了「卡号不外泄」，但没解决「意图被曲解」——用户说「买双跑鞋」，智能体选错型号，争议仍要回到商户的退款规则。每笔都要生物识别，短期是安全阀，长期是转化率的天花板；OpenAI 说以后会用消费限额、品类、时间窗口做预授权，那才是 agent 商务的成人礼。对商家，比接支付更要紧的是先想清楚要不要让 agent 进来：拦掉它，可能拦掉一整类新增订单。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 21:46</span>
+          <a class="src" href="https://www.ithome.com/1/027/238.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Meta 的 Muse 上线代打电话：能联系保险公司和餐厅，但常被当成诈骗挂断</h3>
+        <p>据 IT 之家 11 月 14 日报道，Meta 首席 AI 官汪滔 13 日凌晨在 X 上宣布，Muse 可以替用户拨打「所有不想亲自打的电话」：联系保险公司或有线电视服务商、预约美国车管部门业务，或者向餐厅订位。</p>
+        <p>Muse 用 AI 合成语音与商家工作人员交谈，但这类通话并不总能顺利完成——部分工作人员听出对面是 AI 后直接挂断，有人为了防诈骗，也有人认为这类来电只是浪费时间。Meta 此前已向早期体验用户测试数月，现向 Meta AI 最高档付费订阅用户开放，订阅价格每月 19.99 美元起。</p>
+        <p>Muse 不是第一款代打电话工具：谷歌 Gemini 的 Call for Me 支持 Pixel 11 与 Pixel 10，并使用用户本人的电话号码拨出；另一款智能体 Instinct 从 9 月起就在测试代打电话。</p>
+        <p class="why"><b>看点</b>电话是最后一个没有 API 的接口，也是 agent 落地最容易被低估的场景：它要求实时语音、打断处理、表单信息复述，以及在对方追问时临时编造不出来的「你到底是谁」。Muse 暴露的瓶颈不在模型，而在被叫方——商家没有义务配合 AI，识别与挂断是他们的风控。要跑通，至少需要三样东西：开场明确披露 AI 身份、通话记录可回溯、出错时有真人接管。官方没给接通率与任务完成率，19.99 美元买到的更像一个「愿意替你打」的承诺，而不是「一定打得通」的服务。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 18:06</span>
+          <a class="src" href="https://github.com/cloudflare/kitesurf" target="_blank" rel="noopener noreferrer">Cloudflare · GitHub ↗</a>
+        </div>
+        <h3>Cloudflare 开源智能体浏览器 Kitesurf：跑在 Workers 上，不要 Chromium</h3>
+        <p>据 IT 之家 11 月 14 日报道，Cloudflare 开源了面向 AI 智能体的浏览器 Kitesurf。它运行在 Cloudflare Workers 之上，不需要传统浏览器容器，就能完成 HTML 解析、CSS 应用、执行页面 JavaScript 以及网页截图渲染。</p>
+        <p>Kitesurf 支持 Chrome DevTools 协议，现有工具可以直接驱动它，底层不依赖任何 Chromium 进程或容器。官方说它没有照搬完整桌面浏览器引擎，而是聚焦智能体真正关心的指标——token 消耗、上下文窗口、可扩展性、性能与成本，同时舍弃标签页、外观主题、扩展和像素级精确渲染这些只服务人类的功能。</p>
+        <p>在网页截图、HTML 提取这类常见智能体任务中，它消耗的 CPU 与内存显著低于 Chromium，意味着同一台机器能并发更多会话，应对 AI 驱动的高并发负载。代码已放在 Cloudflare 的 GitHub 仓库。</p>
+        <p class="why"><b>看点</b>agent 基础设施正在从「驱动一个给人看的浏览器」转向「造一个给 agent 看的渲染器」。这个转向的技术含义很具体：去掉合成器与像素管线，保留 DOM、网络栈与 JS 执行，就能把单会话的内存从数百 MB 压到几十 MB，并发密度直接上一个量级。CDP 兼容是聪明的迁移设计，Playwright/Puppeteer 的脚本几乎不用改。要验证的是保真度——反爬、Canvas 指纹、复杂前端框架下，精简引擎与 Chromium 的行为差异会直接变成任务失败率；这类差异只能拿真实站点跑回归，不能看 demo。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/13 16:41</span>
+          <a class="src" href="https://www.ithome.com/1/026/825.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>腾讯混元发布 Hy Realtime：实时语音模型补上工具调用与唱歌</h3>
+        <p>11 月 13 日，腾讯混元发布全新实时语音模型 Hy Realtime。它在语音理解、指令遵循、拟人化表达等基础对话能力之外，新增两项能力：Agentic 工具调用与唱歌。模型已在元宝语音通话、腾讯客服等产品上线，近期将上线腾讯云对外提供 API。</p>
+        <p>官方介绍，Hy Realtime 能处理口齿含糊、话说半截、中途改口等不完整输入，结合上下文还原意图；多轮指令遵循与上下文管理增强，较长连续对话中仍能稳定理解意图。工具调用方面，它会根据对话上下文判断是否需要联网搜索，把搜索决策、工具调用与回答生成统一起来。</p>
+        <p>唱歌能力由混元团队与腾讯音乐 TME 灵音 AI 团队 Co-Design：用户可按歌手、专辑、曲风、语种、发行年份和热度组合点歌，也能承接前文继续选择，例如「来首 2010 到 2020 年之间的英文民谣」。官方称在内部专家 A/B 测试中，Hy Realtime 在核心体验维度有显著优势，并在多个公开语音基准上处于领先。当前版本可在最新版元宝 App 的语音通话中选择「初语」音色体验。</p>
+        <p class="why"><b>看点</b>实时语音的竞争点已经从「像不像人」转到「能不能在对话中把事办完」。工具调用要求模型在一句话还没说完时就决定是否发起搜索，这对首包延迟和打断处理是硬约束；官方没有公布端到端延迟、打断响应时间与并发成本，这三项决定它能不能进客服生产环境。唱歌是个讨巧的演示，但它验证了韵律与情感的可控性——同一套控制力用在客服的语气、投诉安抚上，比用在点歌上更值钱。对开发者，真正的信号是「腾讯云 API 即将开放」：此前这类能力多靠第三方便宜方案，自研接入后省掉一层外部依赖。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 08:14</span>
+          <a class="src" href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">llama.cpp Releases ↗</a>
+        </div>
+        <h3>llama.cpp 与 ggml 进入 1.0.0：用主版本号标记 API 与 ABI 不兼容</h3>
+        <p>据 IT 之家 11 月 14 日报道，llama.cpp 创建者 Georgi Gerganov 于 11 月 13 日在 X 上宣布，开源推理项目 llama.cpp 与底层机器学习引擎 ggml 的库版本迈入 1.0.0。</p>
+        <p>这次更新最实质的变化是接口兼容规则：两个库今后都通过主版本号升级来明确标记 API 或 ABI 不兼容的变化，依赖它们的应用可以从版本号判断某次升级是否要求自己同步修改。这对下游打包、发行版维护和商业产品锁定版本是必要的契约——在此之前，本地推理库的接口随提交漂移，升级基本靠试。</p>
+        <p>能力面上，llama.cpp 已支持超过 150 种模型架构变体及主流推测解码方法；ggml 通过专用后端支持不同硬件，每个后端可编译为动态库、运行时按需加载。团队称正用 Hugging Face 的 HF Buckets 与 HF Jobs 扩展 CI，并在英伟达、AMD、高通、Arm、IBM、英特尔支持下增加自托管测试运行器；开发流程中会审慎使用 LLM，但把代码质量、架构控制和对实现细节的理解放在首位。</p>
+        <p class="why"><b>看点</b>1.0 对开源推理栈是一个心理阈值：它意味着作者愿意为 ABI 稳定性负责，也意味着下游可以把它当依赖而不是当实验。真正要读的是版本规则本身——主版本号一跳就代表不兼容，这对用动态库插件方式的部署影响最大：后端 .so 与主程序必须同版本发布，否则加载即崩。升级前值得做的检查很朴素：锁死版本、跑一遍目标硬件的后端矩阵、确认投机解码在你的模型上没有退化。对端侧产品，这类基础设施的稳定性比多支持十种架构更重要。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/14 16:08</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/509614.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>星尘智能 CoMind：两台机器人隔墙配合，靠交换关键信息把成功率从 0 提到 100%</h3>
+        <p>据量子位 11 月 14 日报道，深圳具身智能公司星尘智能发布多机协同框架 CoMind（Be My Eye）。它的两条主线是去中心化的主动信息共享，以及对任务关键信息的精选与压缩：机器人不再互发完整摄像头画面，而是按任务需要提取关键视觉特征与操作状态，接收方结合自身观测、任务指令与本体状态，送入视觉-语言-动作模型生成动作。</p>
+        <p>框架分两阶段：上下文编码器从多路摄像头观测中筛选、压缩对当前任务有用的信息，并预测未来视觉变化；两台机器人既能独立发送，也能接收队友的上下文，不再依赖同一个中心控制器。训练上还有一个「动作级反向传播」设计：队友的动作预测误差会反向传回信息编码器，让发送方学会「提供对队友动作真正有用的信息」，而不只是准确描述环境。</p>
+        <p>星尘展示了六项真机测试：隔墙拿笔、盲盒置物、纸箱组装、叠被收纳、冰箱补货与哑铃组装。两台机器人隔着挡板完全看不见对方时，任务成功率从 0% 提升到 100%；盲盒置物任务中，不共享信息的准确率为 38.9%，另一种上下文传输方案为 72.2%，CoMind 提升到 88.9%，同时通信信息量减少约 80%。</p>
+        <p class="why"><b>看点</b>多机器人协作的瓶颈通常不是单机能力，而是带宽与信息相关性：每秒产生的视觉数据里，和队友下一步动作有关的可能不到 1%。CoMind 把「说什么」变成可训练的目标，这比单纯提高通信频率更接近工程解。需要保留的疑问是泛化——六项任务都在同一套本体与实验室环境里，换机器人、换场景、换物体后的成功率没有给；另外，动作级反传要求训练时能拿到队友的误差信号，真机部署时的在线适应能力仍待验证。对做 VLA 的团队，这份工作的价值在于给出了一条可复现的对照：同样的 VLA，只改信息共享方式，成功率差 50 个百分点。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 07:38</span>
+          <a class="src" href="https://www.ithome.com/1/027/255.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>超聚变创业板 IPO 过会：受理到上会 174 天，拟募资 80 亿元</h3>
+        <p>11 月 15 日，深交所上市审核委员会审议超聚变首次公开发行并在创业板上市的申请，公司过会。公开信息显示，从申报受理到上会仅用时 174 天。超聚变前身是华为 x86 服务器业务，2022 年独立运营后的第一个完整年度销售收入突破 100 亿元。</p>
+        <p>此后营收逐年抬升：2023 年超过 280 亿元，2024 年 435 亿元，2025 年上半年已超过 300 亿元，有知情人士称全年有望冲刺 600 亿元。据 IDC 报告，2025 年超聚变以 12.7% 的份额位列国内 x86 服务器整机厂商第二（浪潮 31.3%、新华三 12.5%、联想 10.7%、中兴 8.5%）；在液冷服务器细分赛道，公司 2023 至 2024 年连续两年位居中国标准液冷服务器市场份额第一，2023 年份额一度达到 43%。</p>
+        <p>上市委的问询集中在毛利率变动趋势与经营业绩可持续性，要求结合算力需求变化、下游客户资本开支、技术先进性、经营性现金流量净额、客户与供应商集中度等说明风险揭示是否充分。招股说明书（上会稿）显示，募资将重点投向新一代算力产品研发与关键核心技术攻关，公司选择人工智能、算力、数据及能源四个技术要素作为未来十年主要方向。据中国证券网报道，本次拟募资 80 亿元。</p>
+        <p class="why"><b>看点</b>这是一张「算力供应链」的上市门票，不是模型公司的故事：服务器整机的毛利由芯片采购价、客户集中度和液冷渗透率共同决定，AI 需求越旺，越考验它能不能把上游涨价转嫁出去。174 天过会是审核节奏的信号，但上市委追问现金流与客户集中度，说明监管对「增收不增利」的容忍度在下降。招股书里最该看的三组数是：前五大客户占比、经营活动现金流净额与净利润的差值、液冷产品的收入占比。对二级市场，它提供了一个可比的算力硬件估值锚；对产业，国产整机厂拿钱扩产，意味着明年的交付能力继续向头部集中。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 13 日 09:16 至 11 月 15 日 08:05（北京时间）之间发布的报道，共 9 条。检索时间 11/15 08:05。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 020 · 47h window · Generated 2026-11-15 08:05</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../psychology.html">心理学日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>
