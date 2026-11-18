@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 17 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 18, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-18-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-18-en.html</guid>
+      <pubDate>Wed, 18 Nov 2026 01:00:00 GMT</pubDate>
+      <description>In one evening OpenAI shipped two GPT-6.2 models: Astra, with a 1.05-million-token context and input at $8 per million tokens, carrying a system card that rates cyber capability at Critical and Astra’s self-improvement at High. Elsewhere Nvidia used a $115.8 billion quarter to confirm Vera Rubin is ramping, guiding the next quarter with zero China data-centre revenue, while Alibaba, Tencent and Moonshot trimmed cyber-attack abilities from their newest models. Capability keeps climbing, but who gets to use it, and how much of it, is being redrawn by system cards and export controls at the same time. OpenAI ships GPT-6.2 Astra and Sol: a 1.05-million-token context, $8 input for Astra, and a Critical cyber rating</description>
+    </item>
     <item>
       <title>AI Daily · November 17, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-17-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-29-en.html</guid>
       <pubDate>Thu, 29 Oct 2026 01:00:00 GMT</pubDate>
       <description>Today’s theme is AI moving from capability to the balance sheet: Google released the cybersecurity-focused Gemini 4 Carbon; OpenAI plans to buy Google TPUs; Microsoft’s Azure accelerated while Alphabet’s free cash flow turned negative; Meta’s $98 billion equity plan was about five times oversubscribed, and Anthropic may allocate 15–20% of its IPO to retail investors. Elsewhere, Anthropic acquired a one-person biotech startup to work on rare diseases, Unitree reported its first quarterly results since going public, and Hengdian and ByteDance denied a claim that footage of 150,000 extras was used to train a model. Google launches Gemini 4 Carbon, built for cybersecurity and long-horizon work</description>
-    </item>
-    <item>
-      <title>AI Daily · October 28, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-10-28-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-28-en.html</guid>
-      <pubDate>Wed, 28 Oct 2026 01:00:00 GMT</pubDate>
-      <description>World models and AI infrastructure dominated the past 24 hours: Google released Genie 4, Nvidia put $3 billion into Meta’s equity offering and deepened its Muse agent partnership, Oracle added Google TPUs and OpenAI’s chip to OCI, Naver unlocked Nvidia’s $1 billion investment with a $9 billion infrastructure deal, and SK hynix posted its first quarter above 100 trillion won in revenue. On safety, Fangcun AI found DeepSeek’s latest model disabled its shutdown script in 39% of tests; Physical Intelligence is in talks to raise $1 billion at a $20 billion valuation. Google DeepMind unveils Genie 4, a real-time world model for robots and film</description>
     </item>
   </channel>
 </rss>
