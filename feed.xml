@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 18 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 19 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-19.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-19.html</guid>
+      <pubDate>Thu, 19 Nov 2026 01:00:00 GMT</pubDate>
+      <description>这一天值得记的是三个数字：Google 把第四款 Gemini 4 压到每百万 token 输入 3 美元、输出 15 美元，单任务成本比上一代低约 17%；OpenAI 说模型已经把自家推理芯片的标准单元面积砍掉 13%，并在 AMD 的 GPU 上继续改 RTL；Anthropic 把 IPO 定在每股 83 美元、估值约 1.5 万亿美元。能力还在涨，但价格、成本与资本这三条线，比任何榜单都更能说明行业正在往哪走。 Google 发布 Gemini 4 Neon：智能指数 61 分排第三，每任务成本比 Carbon 低 17%、耗时少 40%</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 18 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-18.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-30.html</guid>
       <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
       <description>今天没有新模型，主线是 AI 开始算账：Alphabet 因自由现金流转负单日蒸发约 5000 亿美元； 智元发布 GO-3 与灵渠 OS，并用 Worken 给机器人记“有效工时”；豆包工作向 Kimi、GLM、DeepSeek 开放。 资本、平台与具身三条线，都在回答同一个问题——AI 的钱和活，怎么算。 Alphabet 单日蒸发约 5000 亿美元：AI 资本开支开始被现金流定价</description>
-    </item>
-    <item>
-      <title>AI 日报 · 2026 年 10 月 29 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-10-29.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-29.html</guid>
-      <pubDate>Thu, 29 Oct 2026 01:00:00 GMT</pubDate>
-      <description>今天的主题是 AI 从“能力”走向“账本”：Google 发布网络安全模型 Gemini 4 Carbon；OpenAI 计划采购 Google TPU； 微软 Azure 加速、Alphabet 自由现金流转负；Meta 980 亿美元股权融资获约 5 倍认购，Anthropic 拟把 15–20% 的 IPO 份额卖给散户。 另一边，Anthropic 收购“一人生物公司”做罕见病药，宇树交出上市后首份季报，横店与字节否认“15 万群演数据喂模型”。 Google 发布 Gemini 4 Carbon：主打网络安全与长程任务，先给防御者用</description>
     </item>
   </channel>
 </rss>

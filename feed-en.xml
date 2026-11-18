@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 18 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 19, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-19-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-19-en.html</guid>
+      <pubDate>Thu, 19 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Three numbers define the day. Google cut its fourth Gemini 4 model to $3 of input and $15 of output per million tokens, about 17% cheaper per task than the model it replaces. OpenAI said its models have already trimmed the standard-cell area of its own inference chip by 13%, and are still rewriting RTL on AMD’s GPUs. Anthropic priced its IPO at $83 a share, a valuation near $1.5 trillion. Capability keeps rising, but price, cost and capital say more about where the industry is heading than any leaderboard. Google ships Gemini 4 Neon: 61 on the Intelligence Index, 17% cheaper per task than Carbon and 40% faster</description>
+    </item>
     <item>
       <title>AI Daily · November 18, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-18-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-30-en.html</guid>
       <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
       <description>No new frontier model landed today. The story is accountability: Alphabet lost roughly $500 billion in a single session as free cash flow turned negative; AgiBot unveiled GO-3 and Lingqu OS and proposed “Worken” to measure robot labor; Doubao Work opened its enterprise platform to Kimi, GLM and DeepSeek. Capital, platforms and embodied AI are all answering the same question — how do you account for AI’s money and work? Alphabet loses about $500 billion in a day as AI capex meets cash flow</description>
-    </item>
-    <item>
-      <title>AI Daily · October 29, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-10-29-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-29-en.html</guid>
-      <pubDate>Thu, 29 Oct 2026 01:00:00 GMT</pubDate>
-      <description>Today’s theme is AI moving from capability to the balance sheet: Google released the cybersecurity-focused Gemini 4 Carbon; OpenAI plans to buy Google TPUs; Microsoft’s Azure accelerated while Alphabet’s free cash flow turned negative; Meta’s $98 billion equity plan was about five times oversubscribed, and Anthropic may allocate 15–20% of its IPO to retail investors. Elsewhere, Anthropic acquired a one-person biotech startup to work on rare diseases, Unitree reported its first quarterly results since going public, and Hengdian and ByteDance denied a claim that footage of 150,000 extras was used to train a model. Google launches Gemini 4 Carbon, built for cybersecurity and long-horizon work</description>
     </item>
   </channel>
 </rss>
