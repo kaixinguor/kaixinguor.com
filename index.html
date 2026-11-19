@@ -73,7 +73,7 @@
           <span class="issue-tag">第 024 期</span>
         </div>
         <h1 class="date">2026 年 11 月 19 日<span class="weekday">THU</span></h1>
-        <p class="deck">这一天值得记的是三个数字：Google 把第四款 Gemini 4 压到每百万 token 输入 3 美元、输出 15 美元，单任务成本比上一代低约 17%；OpenAI 说模型已经把自家推理芯片的标准单元面积砍掉 13%，并在 AMD 的 GPU 上继续改 RTL；Anthropic 把 IPO 定在每股 83 美元、估值约 1.5 万亿美元。<em>能力还在涨，但价格、成本与资本这三条线，比任何榜单都更能说明行业正在往哪走。</em></p>
+        <p class="deck">这一天值得记的是三个数字：Google 把第四款 Gemini 4 压到每百万 token 输入 3 美元、输出 15 美元，单任务成本比上一代低约 17%；OpenAI 说模型已经把自家推理芯片的标准单元面积砍掉 13%，并把同一套方法用到 AMD 的硬件上；Anthropic 把 IPO 定在每股 83 美元、估值约 1.5 万亿美元。<em>能力还在涨，但价格、成本与资本这三条线，比任何榜单都更能说明行业正在往哪走。</em></p>
         <div class="metabar"><span class="pill">第 024 期</span>
       <span class="dot"></span>
       <span>窗口 11/18 09:26 – 11/19 07:33</span>
@@ -109,7 +109,7 @@
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>OpenAI 披露模型参与 Jalapeño 推理芯片设计的细节：向量单元标准单元面积减约 13%、矩阵单元减约 10%，已在硅片 bring-up 中验证。</b>与 AMD 的合作里，模型重写 SystemVerilog RTL 继续改善 PPA，部分模块最高 14%；下一步与 Synopsys 合作，把模型接进工程师日常使用的 EDA 工具。</p>
+      <p><b>OpenAI 披露模型参与 Jalapeño 推理芯片设计的细节：向量单元标准单元面积减约 13%、矩阵单元减约 10%，已在硅片 bring-up 中验证。</b>同一套方法正被用到 AMD 的第三方硬件上，OpenAI 说会带来显著收益；下一步与 Synopsys 合作，把模型接进工程师日常使用的 EDA 工具。</p>
     </li>
       </ol>
 
@@ -187,10 +187,10 @@
           <span class="d">11/18</span>
           <a class="src" href="https://openai.com/index/advancing-chip-design-with-our-models/" target="_blank" rel="noopener noreferrer">OpenAI · Advancing chip design with our models ↗</a>
         </div>
-        <h3>OpenAI 披露模型参与芯片设计：Jalapeño 向量单元面积减约 13%，AMD GPU 部分模块的 PPA 最高改善 14%</h3>
+        <h3>OpenAI 披露模型参与芯片设计：Jalapeño 向量单元面积减约 13%，同一套方法正用到 AMD 的硬件上</h3>
         <p>当地时间 11 月 18 日，OpenAI 发布技术报告，披露模型参与芯片设计的细节。公司从 2025 年初开始用 GPT-4o 参与首款自研推理芯片 Jalapeño 的设计：向量单元里改浮点加法器、乘法器、数据转换函数、归约逻辑与特殊函数单元，探索替代逻辑实现，也重新划分计算在流水线各段之间的分配，找共享硬件、压缩中间存储的机会；矩阵单元则在浮点加法器、乘法器与低精度点积电路上累积改进。</p>
         <p>两处单项改动能看到量级：一个乘法器重设计让综合后的标准单元面积少约 15%，同时把延迟从两个时钟周期压到 1 个；另一个加法器重设计在保持两个周期延迟的前提下，同样省了约 15% 面积。合起来，团队估计模型提议的改动让 Jalapeño 向量单元的标准单元面积减少约 13%、矩阵单元减少约 10%，这些优化在 Jalapeño 的硅片 bring-up 阶段得到了验证。</p>
-        <p>同一套方法被搬到第三方硬件上：在与 AMD 的合作中，模型通过重写 SystemVerilog RTL，在原本已高度优化的设计上继续改善功耗、性能与面积，据 The Next Web 报道，部分模块的改善幅度最高达 14%。为了衡量模型在端到端芯片设计上的能力，OpenAI 用两款开源处理器设计做了跨代评测；下一步是与 Synopsys 合作，把模型能力接进工程师日常使用的 EDA 工具里做设计验证。</p>
+        <p>同一套方法也被搬到第三方硬件上：报告引言说，正把这一做法用到与 AMD 的合作中，要在第三方硬件上取得「显著收益」。为了衡量模型在端到端芯片设计上的能力，OpenAI 还用两款开源处理器设计做了跨代评测；下一步是与 Synopsys 合作，把模型能力接进工程师日常使用的 EDA 工具里做设计验证。</p>
         <p class="why"><b>看点</b>这不是「AI 画电路」，而是模型在 RTL 与综合之间做局部搜索，验收标准是老一套 PPA——面积、延迟、功耗，最后由硅片 bring-up 说话，这也是这份报告比多数 demo 硬的地方。对做芯片的团队，可复现性问题在评测方法上：拿两款开源核做「从规格重新设计」，分数高未必等于实机占优，报告自己也提到模型可能省掉性能计数器之类的模块，评测集与生产目标之间还隔着一层。真正值得抄的是流程——把模型放进已有的 EDA 与验证回路，而不是让它单独产出设计。第三个信号是与 Synopsys 的合作：一旦模型接进商用 EDA，改动就从「研究」变成「许可采购」，EDA 三巨头的定价权会被重新谈一遍。</p>
       </article>
 
@@ -247,7 +247,7 @@
         </div>
         <h3>Anthropic 以每股 83 美元定价 IPO：估值约 1.5 万亿美元，募资至少 685 亿美元</h3>
         <p>当地时间 11 月 18 日，Anthropic 把 IPO 发行价定在每股 83 美元，高于此前 70–78 美元的区间，按约 1.5 万亿美元估值计算，将是史上第二大 IPO，仅次于 SpaceX 今年 6 月的 1.77 万亿美元。股票 11 月 19 日在纳斯达克挂牌，代码 ANT。</p>
-        <p>规模上，公司此前计划发行约 8.25 亿股，83 美元对应募资至少 685 亿美元；据彭博社报道，因需求强劲，Anthropic 同时扩大了发行规模，具体增幅未披露。七家战略伙伴（含 Google 与英伟达）同意按发行价认购 260 亿美元无投票权股份。这也是第一家纯做前沿模型的公司在美股上市——SpaceX 还做火箭，Google 与 Meta 都有搜索和社交的现金流垫底。</p>
+        <p>规模上，公司此前计划发行约 8.25 亿股，83 美元对应募资至少 685 亿美元；《财富》引述彭博社的报道称，因需求强劲，Anthropic 同时扩大了发行规模，具体增幅未披露。七家战略伙伴（含 Google 与英伟达）同意按发行价认购 260 亿美元无投票权股份。这也是第一家纯做前沿模型的公司在美股上市——SpaceX 还做火箭，Google 与 Meta 都有搜索和社交的现金流垫底。</p>
         <p>招股材料里的财务口径：截至 9 月 30 日的九个月营收 332 亿美元，去年同期为 25 亿美元；同期净亏损 1040 亿美元，其中大部分不是现金流出，而是可转换票据的会计处理所致。公司近两年最受关注的两件事——算力承诺的久期、企业客户的续约率——都还没有在二级市场经历过一次定价。</p>
         <p class="why"><b>看点</b>把 332 亿美元的九个月营收折成年，1.5 万亿美元估值对应约 34 倍市销率；放在「推理成本每年往下走」的行业里，这个倍数要求收入增速先于单价下滑。读这张表的第一步是拆开 1040 亿亏损：可转债按公允价值计量的账面损失不消耗现金，真正要看的是经营现金流与算力合同的到期分布——后者才是它未来三年的刚性支出。第二个变量是同一天的定价环境：Google 把 Gemini 4 Neon 压到每百万 token 3 美元/15 美元，闭源厂商的毛利空间在这个价格带上被重新定义。<br><b>另一个视角</b>260 亿美元的战略认购让客户与股东重叠：Google 与英伟达既是算力供应方、又是按发行价入股的股东，这类关联交易会成为上市后第一份季报的披露重点；对二级市场，它的意义是「AI 基建的钱从谁的口袋进、又回到谁的口袋」这条链条第一次被放到公开文件里。</p>
       </article>
@@ -288,7 +288,7 @@
           <span class="issue-tag">Issue 024</span>
         </div>
         <h1 class="date">November 19, 2026<span class="weekday">THU</span></h1>
-        <p class="deck">Three numbers define the day. Google cut its fourth Gemini 4 model to $3 of input and $15 of output per million tokens, about 17% cheaper per task than the model it replaces. OpenAI said its models have already trimmed the standard-cell area of its own inference chip by 13%, and are still rewriting RTL on AMD&rsquo;s GPUs. Anthropic priced its IPO at $83 a share, a valuation near $1.5 trillion. <em>Capability keeps rising, but price, cost and capital say more about where the industry is heading than any leaderboard.</em></p>
+        <p class="deck">Three numbers define the day. Google cut its fourth Gemini 4 model to $3 of input and $15 of output per million tokens, about 17% cheaper per task than the model it replaces. OpenAI said its models have already trimmed the standard-cell area of its own inference chip by 13%, and is applying the same method to AMD hardware. Anthropic priced its IPO at $83 a share, a valuation near $1.5 trillion. <em>Capability keeps rising, but price, cost and capital say more about where the industry is heading than any leaderboard.</em></p>
         <div class="metabar"><span class="pill">Issue 024</span>
       <span class="dot"></span>
       <span>Window Nov 18, 09:26 &ndash; Nov 19, 07:33</span>
@@ -324,7 +324,7 @@
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>OpenAI details how its models helped design Jalapeño, its inference chip: about 13% less standard-cell area in the vector unit and 10% in the matrix unit, confirmed at silicon bring-up.</b>With AMD, the models rewrote SystemVerilog RTL and improved PPA by up to 14% on some blocks. Next step is a Synopsys partnership to put the models inside the EDA tools engineers already use.</p>
+      <p><b>OpenAI details how its models helped design Jalapeño, its inference chip: about 13% less standard-cell area in the vector unit and 10% in the matrix unit, confirmed at silicon bring-up.</b>The same approach is being applied with AMD to deliver what OpenAI calls significant gains on third-party hardware. Next step is a Synopsys partnership to put the models inside the EDA tools engineers already use.</p>
     </li>
       </ol>
 
@@ -402,10 +402,10 @@
           <span class="d">11/18</span>
           <a class="src" href="https://openai.com/index/advancing-chip-design-with-our-models/" target="_blank" rel="noopener noreferrer">OpenAI · Advancing chip design with our models ↗</a>
         </div>
-        <h3>OpenAI says its models cut Jalapeño vector-unit area by about 13% and improved AMD GPU PPA by as much as 14%</h3>
+        <h3>OpenAI says its models cut Jalapeño vector-unit area by about 13%, and is applying the method to AMD hardware</h3>
         <p>OpenAI published a technical report on November 18 local time detailing how its models took part in chip design. The company started using GPT-4o on Jalapeño, its first custom inference chip, in early 2025. In the vector unit the models reworked floating-point adders, multipliers, conversion functions, reduction logic and the special-function unit, exploring alternative logic implementations and how to divide computation across pipeline stages to share hardware and shrink intermediate storage. In the matrix unit, gains accumulated across floating-point adders, multipliers and low-precision dot-product circuits.</p>
         <p>Two single changes show the scale. One multiplier redesign used about 15% less cell area in synthesis while cutting latency from two clock cycles to one; a separate adder redesign took about 15% off area while keeping its two-cycle latency. Across the effort, the team estimates model-proposed changes reduced standard-cell area by about 13% in the vector unit and 10% in the matrix unit, and those optimisations were proven during Jalapeño&rsquo;s silicon bring-up.</p>
-        <p>The same approach moved to third-party hardware. Working with AMD, the models rewrote SystemVerilog RTL to improve power, performance and area on designs that were already heavily optimised; The Next Web reported that some blocks improved by up to 14%. To measure end-to-end design ability, OpenAI ran successive model generations against two open-source processor designs. The next step is a partnership with Synopsys to bring the models into the EDA tools engineers already use to design and verify chips.</p>
+        <p>The same approach is being carried over to third-party hardware: the report's introduction says the team is applying it with AMD to deliver significant gains on hardware outside OpenAI's own line. To measure end-to-end design ability, OpenAI also ran successive model generations against two open-source processor designs. The next step is a partnership with Synopsys to bring the models into the EDA tools engineers already use to design and verify chips.</p>
         <p class="why"><b>Why it matters</b>This is not AI drawing circuits; it is a model doing local search between RTL and synthesis, judged by the old standard of power, performance and area, with silicon bring-up as the final arbiter &mdash; which is what makes the report harder than most demos. For chip teams the reproducibility question sits in the evaluation: redesigning a processor from a spec on two open-source cores is not the same as winning on a production target, and the report itself notes a model may drop things like performance counters. The part worth copying is the workflow &mdash; putting the model inside the existing EDA and verification loop rather than letting it emit a design alone. The third signal is Synopsys: once models sit inside commercial EDA, the change shifts from research to licensing, and the pricing power of the big three gets renegotiated.</p>
       </article>
 
@@ -462,7 +462,7 @@
         </div>
         <h3>Anthropic prices its IPO at $83 a share: a roughly $1.5 trillion valuation and at least $68.5 billion raised</h3>
         <p>Anthropic priced its initial public offering at $83 a share on November 18 local time, above the $70&ndash;78 range it had guided, valuing the company at roughly $1.5 trillion. That would make it the second-largest IPO on record, behind SpaceX&rsquo;s $1.77 trillion listing in June. The stock begins trading on Nasdaq on November 19 under the ticker ANT.</p>
-        <p>On size, the company had planned to sell about 825 million shares, which at $83 implies at least $68.5 billion raised. According to Bloomberg, it also increased the size of the offering on strong demand, without saying by how much. Seven strategic partners, including Google and Nvidia, agreed to buy $26 billion of non-voting stock at the offer price. It is also the first pure-play frontier model maker to list: SpaceX also builds rockets, and Google and Meta both have search and social cash flows underneath them.</p>
+        <p>On size, the company had planned to sell about 825 million shares, which at $83 implies at least $68.5 billion raised. Fortune, citing Bloomberg, reported that Anthropic also increased the size of the offering on strong demand, without saying by how much. Seven strategic partners, including Google and Nvidia, agreed to buy $26 billion of non-voting stock at the offer price. It is also the first pure-play frontier model maker to list: SpaceX also builds rockets, and Google and Meta both have search and social cash flows underneath them.</p>
         <p>The filing&rsquo;s numbers: revenue of $33.2 billion for the nine months to September 30, against $2.5 billion a year earlier, and a $104 billion net loss, most of it accounting for convertible notes rather than cash leaving the business. The two things investors have watched for two years &mdash; the duration of its compute commitments and enterprise renewal rates &mdash; have never been priced in a public market.</p>
         <p class="why"><b>Why it matters</b>Annualising $33.2 billion of nine-month revenue puts the $1.5 trillion valuation at roughly 34 times sales. In an industry where inference costs fall every year, that multiple requires revenue to grow faster than unit prices decline. The first step in reading the accounts is separating the $104 billion loss: fair-value losses on convertible notes do not consume cash, and what matters is operating cash flow plus the maturity schedule of compute contracts, which is the rigid spending of the next three years. The second variable is the pricing environment of the same day, with Google cutting Gemini 4 Neon to $3 and $15 per million tokens, which redefines the margin band for closed models.<br><b>The other angle</b>The $26 billion strategic purchase overlaps customers with shareholders: Google and Nvidia both supply compute and buy stock at the offer price. Those related-party deals will be a disclosure focus in the first quarterly report, and for public markets they put the loop of AI infrastructure money &mdash; whose pocket it leaves and whose it returns to &mdash; into a public filing for the first time.</p>
       </article>
