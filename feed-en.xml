@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 19 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 20, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-20-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-20-en.html</guid>
+      <pubDate>Fri, 20 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Two lines crossed in the same 24 hours. On the capital side, Anthropic raised $81.3bn and listed on Nasdaq: the stock opened up 34%, closed up 17%, and the $900.9bn table of compute commitments in its prospectus matters more than the share price. On the supply side, Alibaba lifted quarterly capex to ¥50.5bn, booked ¥61.0bn of AI cloud revenue and scheduled its Zhenwu V900 chip for Q1 2027. Yet the day&#39;s most engineering-shaped result was a paper: rewrite four harness modules and SWE-bench Lite goes from 5% to 40% — a layer of optimisable surface that neither money nor GPUs buy. Anthropic&#39;s Nasdaq debut: opens up 34%, closes up 17%, on a record $81.3bn raise</description>
+    </item>
     <item>
       <title>AI Daily · November 19, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-19-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-31-en.html</guid>
       <pubDate>Sat, 31 Oct 2026 01:00:00 GMT</pubDate>
       <description>Today’s thread is distribution. Apple puts Alibaba’s Qwen inside Siri, Writing Tools and Visual Intelligence; Baidu cuts its search API to RMB 4.9 per thousand calls; SenseTime ships a 9B looped model that argues parameter count is not the only path. The fight is moving from leaderboards to system permissions and pricing units. Apple Intelligence taps Alibaba’s Qwen, putting a third-party model behind Siri</description>
-    </item>
-    <item>
-      <title>AI Daily · October 30, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-10-30-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-30-en.html</guid>
-      <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
-      <description>No new frontier model landed today. The story is accountability: Alphabet lost roughly $500 billion in a single session as free cash flow turned negative; AgiBot unveiled GO-3 and Lingqu OS and proposed “Worken” to measure robot labor; Doubao Work opened its enterprise platform to Kimi, GLM and DeepSeek. Capital, platforms and embodied AI are all answering the same question — how do you account for AI’s money and work? Alphabet loses about $500 billion in a day as AI capex meets cash flow</description>
     </item>
   </channel>
 </rss>

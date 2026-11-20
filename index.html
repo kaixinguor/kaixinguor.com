@@ -70,17 +70,17 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 024 期</span>
+          <span class="issue-tag">第 025 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 19 日<span class="weekday">THU</span></h1>
-        <p class="deck">这一天值得记的是三个数字：Google 把第四款 Gemini 4 压到每百万 token 输入 3 美元、输出 15 美元，单任务成本比上一代低约 17%；OpenAI 说模型已经把自家推理芯片的标准单元面积砍掉 13%，并把同一套方法用到 AMD 的硬件上；Anthropic 把 IPO 定在每股 83 美元、估值约 1.5 万亿美元。<em>能力还在涨，但价格、成本与资本这三条线，比任何榜单都更能说明行业正在往哪走。</em></p>
-        <div class="metabar"><span class="pill">第 024 期</span>
+        <h1 class="date">2026 年 11 月 20 日<span class="weekday">FRI</span></h1>
+        <p class="deck">两条线在同一个 24 小时里交叉：资本端，Anthropic 以 813 亿美元公开募资在纳斯达克挂牌，开盘涨 34%、收盘只剩 17%，招股书里那张 9009 亿美元的算力采购承诺表比股价更值得读；供给端，阿里把季度资本开支加到 504.77 亿元、AI 云收入做到 609.73 亿元，自研芯片真武 V900 排到 2027 年一季度。<em>而当天最像「工程」的进展来自一篇论文：只改 harness 的四个模块，SWE-bench Lite 成功率从 5% 提到 40%，钱和算力之外，还有一层被忽视的可优化空间。</em></p>
+        <div class="metabar"><span class="pill">第 025 期</span>
       <span class="dot"></span>
-      <span>窗口 11/18 09:26 – 11/19 07:33</span>
+      <span>窗口 11/19 07:33 – 11/20 09:52</span>
       <span class="dot"></span>
       <span>8 条</span>
       <span class="dot"></span>
-      <span>阅读约 11 分钟</span></div>
+      <span>阅读约 12 分钟</span></div>
       </div>
     </header>
 
@@ -88,11 +88,11 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-zh"><span class="n">00</span>速览</a>
-        <a href="#models-zh"><span class="n">01</span>模型与能力</a>
-        <a href="#products-zh"><span class="n">02</span>产品与智能体</a>
-        <a href="#research-zh"><span class="n">03</span>研究与安全</a>
-        <a href="#embodied-zh"><span class="n">04</span>具身智能</a>
-        <a href="#capital-zh"><span class="n">05</span>行业与资本</a>
+        <a href="#capital-zh"><span class="n">01</span>行业与资本</a>
+        <a href="#models-zh"><span class="n">02</span>模型与能力</a>
+        <a href="#products-zh"><span class="n">03</span>产品与智能体</a>
+        <a href="#research-zh"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied-zh"><span class="n">05</span>具身智能</a>
         </div>
       </div>
     </nav>
@@ -101,21 +101,58 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>Google 发布 Gemini 4 Neon：Artificial Analysis 智能指数 61 分排第三，单任务成本 6.44 美元、比 Carbon 低约 17%，耗时少约 40%。</b>省钱主要来自每百万 token 输入 3 美元、输出 15 美元的价格，提速来自约 110 token/秒 的输出速度；100 万 token 上下文，四档推理强度，已通过 API 与 Gemini Enterprise Agent Platform 开放。</p>
+      <p><b>Anthropic 在纳斯达克挂牌：开盘 111.50 美元、较发行价涨 34.3%，收盘 97.17 美元、涨幅收窄至 17.1%，完全稀释估值约 1.77 万亿美元。</b>公开募资约 813 亿美元刷新 IPO 纪录，加 260 亿美元私募配售合计约 1073 亿美元；开盘半小时内股价较首笔成交价跌约 13%，是 2008 年以来大型美股 IPO 最差的半小时开局。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>Anthropic 以每股 83 美元定价 IPO，估值约 1.5 万亿美元，募资至少 685 亿美元，19 日在纳斯达克挂牌，代码 ANT。</b>此前区间为 70–78 美元；七家战略伙伴（含 Google、英伟达）按发行价认购 260 亿美元无投票权股份。截至 9 月 30 日的九个月营收 332 亿美元，净亏损 1040 亿美元，主要来自可转换票据的会计处理。</p>
+      <p><b>阿里季度资本开支 504.77 亿元、同比增 60%，AI 云与算力服务收入 609.73 亿元、同比增 53%，AI 相关产品收入 179.18 亿元、连续 13 个季度三位数增长。</b>自研 AI 芯片真武 V900 计划 2027 年一季度上市并开源软件栈平头哥 SAIL；Qwen4-Max 主干参数 2.4 万亿，带原生视觉。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>OpenAI 披露模型参与 Jalapeño 推理芯片设计的细节：向量单元标准单元面积减约 13%、矩阵单元减约 10%，已在硅片 bring-up 中验证。</b>同一套方法正被用到 AMD 的第三方硬件上，OpenAI 说会带来显著收益；下一步与 Synopsys 合作，把模型接进工程师日常使用的 EDA 工具。</p>
+      <p><b>谷歌论文《Harnesses That Improve Themselves》：142 行 harness 切成四个模块、每轮只改一个并过验证，SWE-bench Lite 成功率从 5.0% 提到 40.0%，每任务约 4.67 万 token。</b>允许整体重写成功率 42.5%，但每任务约 45.16 万 token、接近十倍；只加提示词规则反而降到 2.5%。</p>
     </li>
       </ol>
 
-  <section class="chapter" id="models-zh" data-c="models">
+  <section class="chapter" id="capital-zh" data-c="capital">
     <div class="chead">
       <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-19">
+        <div class="cmeta">
+          <span class="d">11/20 09:41</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261120A04U7X00" target="_blank" rel="noopener noreferrer">华尔街见闻 ↗</a>
+        </div>
+        <h3>Anthropic 纳斯达克首日：开盘涨 34%、收盘只剩 17%，813 亿美元募资刷新 IPO 纪录</h3>
+        <p>美东时间 11 月 19 日，Anthropic 以代码 ANT 在纳斯达克挂牌交易。开盘报 111.50 美元，较 83 美元发行价高约 34.3%；盘中最高触及 115.10 美元、涨幅约 38.7%；此后持续回落，最低 92.72 美元，收 97.17 美元、较发行价涨 17.1%。据<a href="https://news.qq.com/rain/a/20261120A04U7X00" target="_blank" rel="noopener noreferrer">华尔街见闻</a>报道，开盘后半小时内股价较首笔成交价下跌约 13%，是 2008 年以来大型美股 IPO 最差的半小时开局。</p>
+        <p>规模上，本次公开发行募资约 813 亿美元，超过 SpaceX 此前约 750 亿美元的纪录；加上约 260 亿美元的同步私募配售，交易合计约 1073 亿美元。83 美元发行价对应上市估值约 1.5 万亿美元，开盘市值一度突破 2 万亿美元，收盘按完全稀释口径约 1.77 万亿美元。雅虎财经数据显示，首笔 111.50 美元的交易涉及约 1.08 亿股、金额约 120 亿美元，第一个完整交易分钟成交约 150 亿美元。</p>
+        <p>招股书披露的基本面：截至 2026 年 10 月 31 日年化运营收入约 810 亿美元，比 9 月底增加约 100 亿美元；第三季度收入 169.56 亿美元、环比增约 47%，但当季经营亏损约 5.67 亿美元，二季度还是约 9.74 亿美元经营利润，公司把转亏归因于 50 亿美元短期算力承诺成本与 20 亿美元非现金捐赠配捐费用。三季度算力与基础设施支出约 99 亿美元，高于二季度的约 56 亿美元，前三季度合计约 188 亿美元。</p>
+        <p>最重的一张表是承诺：截至 2026 年 9 月底及之后签订的采购承诺与租赁协议总额约 9009 亿美元，其中约 4516 亿美元预计在 2030 年底前发生，其余大部分落在 2031 至 2045 年。CEO 达里奥·阿莫代伊在敲钟仪式上称，公司会根据安全评估决定模型的训练与部署节奏，「不会屈服于商业压力，也不会屈服于政治压力」。</p>
+        <p class="why"><b>看点</b>对做模型的人，招股书里比股价更有信息量的是那张采购承诺表：9009 亿美元里有 4516 亿在 2030 年前到期，它基本锁定了未来四年的算力上限和单位成本曲线的形状——训练规模的上限由合同决定，而不是由架构决定。第二个数字是三季度算力支出 99 亿美元、当季经营亏损 5.67 亿：收入按使用量计费、成本按多年最低采购承诺，两边的期限结构并不匹配，这比「估值贵不贵」更难修。第三，首日半小时回吐约 13%、收盘只剩 17% 的涨幅，说明打新资金愿意为稀缺资产付溢价，但不愿意在 2 万亿美元上方过夜。<br><b>另一个视角</b>83 美元发行价把一家成立五年多的公司定在 1.5 万亿美元，而它 2026 年前三季的算力与基础设施支出合计约 188 亿美元——资本市场在为「未来十年的算力合同」提前付钱，这与同一天阿里把季度资本开支加到 504.77 亿元，是同一件事的两面。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19</span>
+          <a class="src" href="https://www.alibabagroup.com/zh-HK/document-2060147792046718976" target="_blank" rel="noopener noreferrer">阿里巴巴集团 · 2026 年 9 月份季度业绩 ↗</a>
+        </div>
+        <h3>阿里季度资本开支 504.77 亿元、AI 云收入 609.73 亿元：真武 V900 排到 2027 年一季度</h3>
+        <p>11 月 19 日，阿里巴巴发布截至 9 月 30 日止季度业绩：收入 2715.19 亿元、同比增 10%；AI 云与算力服务收入 609.73 亿元、同比增 53%，其中外部客户收入同比增 64%、外部客户经常性收入（剔除算力设备解决方案）同比增 67%；AI 相关产品收入 179.18 亿元，连续第 13 个季度三位数同比增长。净利润 644.20 亿元、同比增 213%，公司归因于投资净收益与经营利润增加；经调整 EBITA 326.36 亿元、同比增 260%。</p>
+        <p>投入侧同样清楚：季度资本性支出 504.77 亿元、同比增 60%，公司列出的原因包括加速扩大算力规模、各类芯片组件价格上涨、预期客户持续采用 AI 智能体带动的 CPU 算力增加，以及采购周期波动；自由现金流为净流出 344.72 亿元，去年同期净流出 218.40 亿元，缺口主要来自云基础设施支出。</p>
+        <p>芯片与模型是这份财报里最像「路线图」的部分。9 月云栖大会发布的下一代训推一体 AI 芯片真武 V900，基于自研并行计算架构，计划 2027 年一季度上市，同时开源了芯片软件栈「平头哥 SAIL」；8 月推出的真武 M890 超节点实例，公司称是中国首个能支持超过两万亿参数模型推理的超节点架构。模型侧发布 Qwen4-Max，采用新的混合专家架构、2.4 万亿主干参数，带原生视觉能力，官方口径是在制造业、游戏开发、医疗与前沿科研等场景的长周期任务执行更强。</p>
+        <p class="why"><b>看点</b>把 AI 云收入 +53% 和资本开支 +60% 放在一起看，需求仍跑在折旧前面，但自由现金流转负说明这笔钱是真金白银从当期现金流里出的。对做推理的人，更关键的是组合拳：自研芯片 + 超节点 + 开源 SAIL，本质是在压每 token 的固定成本与迁移成本，而不是单纯堆卡；2.4 万亿参数的 MoE 则意味着推理账单主要落在激活参数与 KV cache，权重体积不是主要矛盾。要跟踪的三件事：V900 的实际量产与外部客户采用率、SAIL 对主流框架的兼容程度、以及下一季 capex 是否继续以 60% 的速度增长——如果是，云厂商之间的价格战还有空间。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models-zh" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
       <h2>模型与能力</h2>
       <span class="cen">Models &amp; Capability</span>
       <span class="crule"></span>
@@ -124,27 +161,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/18</span>
-          <a class="src" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener noreferrer">Google · Introducing Gemini 4 Neon ↗</a>
+          <span class="d">11/19 16:01</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/19/content_615873.html" target="_blank" rel="noopener noreferrer">科技日报 ↗</a>
         </div>
-        <h3>Google 发布 Gemini 4 Neon：智能指数 61 分排第三，每任务成本比 Carbon 低 17%、耗时少 40%</h3>
-        <p>当地时间 11 月 18 日，Google DeepMind 发布 Gemini 4 Neon。按第三方评测机构<a href="https://artificialanalysis.ai/articles/gemini-4-neon-intelligence-gain" target="_blank" rel="noopener noreferrer"> Artificial Analysis</a> 的口径，这是七周里第四款 Gemini 4 系列的模型；Neon 在 xhigh 档的 Intelligence Index 得 61 分，比 Gemini 4 Carbon（high）高 1 分，总排名第三，前面是 GPT-6.2 Astra（max）与 Claude Fable 5.2（max）。</p>
-        <p>三个数字最能说明这次换代的性质。单任务成本 6.44 美元，比 Carbon 标准价下的 7.76 美元低约 17%；单任务耗时约 21 分钟，比 Carbon 的约 36 分钟少约 40%。但 Neon 每个任务消耗的输出 token 反而多约 15%——省钱与提速都不是靠少写字：单位是每百万 token 输入 3 美元、输出 15 美元，比 Carbon 的标准价 4/20 美元低 25%；速度来自约 110 token/秒 对 57 token/秒 的输出吞吐。缓存命中的输入价 0.15 美元，折扣 95%。</p>
-        <p>编程智能体是最接近对手的一项：在 Antigravity CLI 里，Neon（xhigh）在 AA Coding Agent Index 上得 59 分，比 Carbon 高 3 分，与 Claude Fable 5.2（58）、Claude Opus 5.5（58）基本持平，但单任务成本 6.86 美元，后两者分别是 12.61 美元和 15.47 美元。视觉与交付物也有专项提升：GDP.pdf 上 Neon（high）得 33.4%，比 Carbon 高 5 个百分点；AA-Briefcase 总分 1700 Elo，其中演示质量 1771 Elo，比此前领先的 Claude Sonnet 5.5 高 45 分；Google 内部的 MKA 评测里 Climb WSR 为 56%，与领先者持平。</p>
-        <p>规格与可用性：100 万 token 上下文，支持文本、图像、视频与语音输入、文本输出，四档推理强度（low / medium / high / xhigh，xhigh 是上周 Hydrogen 引入的档位）；已通过 Google API 与 Gemini Enterprise Agent Platform 提供，Pro 与 Ultra 订阅者可在 Antigravity 和 Gemini App 里用到。</p>
-        <p class="why"><b>看点</b>对做 agent 的团队，「每任务成本」比「每百万 token 单价」更接近真账单。Neon 那 17% 的降幅里，一半来自单价、一半来自速度，含义完全不同：单价决定长上下文与重试的边际成本，速度决定同一任务要跑几轮、超时多少次才收敛。第二个要打问号的是推理档位——同一份评测里，Neon 在 GDP.pdf 的 high 档拿 33.4%，xhigh 档只有 28.0%，档位不是单调的，上线前得按自己的任务集把四档重扫一遍，不能沿用「档位越高越好」的直觉。第三，比价时别拿 Carbon 的 2 美元/10 美元 当基准，那是 11 月 30 日到期的折扣价。<br><b>另一个视角</b>同一天 Anthropic 把 IPO 定在每股 83 美元、估值约 1.5 万亿美元：模型价格表往下的同时，资本市场的定价往上，两件事都压缩了闭源厂商的比价窗口——企业采购在四季度会同时拿到更低的 token 价和更高的估值故事，谈判的主动权反而回到买方手里。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/18 12:55</span>
-          <a class="src" href="https://ishare.ifeng.com/c/s/v0069GgYeTusaPTXRiNhf-_x9tJonjd8lDAavU1W--jxDUmOd4xEImoBjnaWEqfFNoYv--W" target="_blank" rel="noopener noreferrer">凤凰网科技 ↗</a>
-        </div>
-        <h3>腾讯混元开源 Hy4 flash 三款权重：总参数 2200 亿、每 token 激活 120 亿，上下文 100 万</h3>
-        <p>11 月 18 日，腾讯混元宣布开放 Hy4 flash 系列模型权重：Hy4 flash 是指令模型，Hy4 flash-FP8 是 FP8 量化版、用于压低部署算力与显存，Hy4 flash-base 是尚未做对话指令微调的预训练基础模型。模型与部署资料已上线 GitHub、Hugging Face、ModelScope 与 GitCode，开发者可下载并本地部署；商用与微调按腾讯 Hy License。</p>
-        <p>开源资料里的口径是：总参数约 2200 亿，其中约 635 亿是 Engram 参数，每个 token 激活约 120 亿；混合专家架构，支持文本与图像输入、文本输出，上下文窗口最高 100 万 token。结构上引入混合注意力、LatentMoE 与 Engram，并内置用于推测解码的 DFly2 模块；腾讯称其解码速度可超过每秒 150 token，这个数字来自内部测试。</p>
-        <p>时间线值得记一下：Hy4 flash 于 11 月 16 日正式发布，此前主要通过腾讯云 TokenHub 与腾讯旗下部分产品对外的形式提供服务，权重是这次才放出来的。腾讯混元表示，Hy4 系列其他模型也在推进开放。</p>
-        <p class="why"><b>看点</b>2200 亿总参数、120 亿激活，是典型的「大容量、小激活」：本地部署的显存下限主要由激活规模与 KV cache 决定，权重体积则由总参数决定，两者一起决定能不能塞进一张卡。635 亿 Engram 参数约占总量 29%，这类查表式参数对每 token 的计算量影响小、对权重体积影响大，FP8 版本正好冲着这块来；但量化对长上下文召回的损伤通常先于短文本出现，得自己在 100 万窗口下测。要验证的三件事：1M 上下文的实际有效召回、DFly2 推测解码在自家任务上的真实加速比，以及 Hy License 的商用条款。对做国产卡适配的团队，开源权重比 API 更重要——它意味着可以在自己的推理栈里改调度。</p>
+        <h3>天津大学发布酶设计基座大模型「天华开物」：560 亿参数，一周给出酶设计方案</h3>
+        <p>11 月 19 日，天津大学在天津发布「天华开物」酶设计基座大模型，并与该校合成生物自动化设备结合，形成工业酶闭环迭代优化系统。据<a href="https://www.stdaily.com/web/gdxw/2026-11/19/content_615873.html" target="_blank" rel="noopener noreferrer">科技日报</a>报道，团队称这套系统支撑一周内给出酶设计方案，并让三个月内完成菌种定制化构建与目标产品制备工艺开发成为可能。</p>
+        <p>参数路线值得记一笔：研发 2021 年启动，2024 年做出 8 亿参数的酶设计基座，2025 年达到 70 亿，随后联合智谱华章扩容到 560 亿。模型是从底层架构重新构建的，方法上把「反应—序列—结构」联合建模，将「要完成什么生产任务」与「酶应该怎样构成」关联起来，而不是在通用模型上做微调。</p>
+        <p>三项能力对应三个环节：算得准，依据目标反应从头设计新酶、预测突变效应、优选改造组合；写得出，通过自动化基因合成、组装与表达把数字设计变成酶样品；验得回，把实验数据回流到模型训练，以实测结果校准模型、迭代设计，形成「设计—构建—测试—学习」的闭环。模型适配国产算力，支持本地化私有部署，企业数据可以不出厂；下一步面向科研界与产业界开放试用，并与企业共建行业酶库与应用标准。发布会现场，中石油、招商局集团、浦发银行、药明康德、诺和诺德、凯莱英、九天基因、元合成等企业代表到场交流。</p>
+        <p class="why"><b>看点</b>用 560 亿参数做一个垂直领域的基座，真正的壁垒不在参数，而在训练底座——多年积累的酶序列、结构、反应与工艺数据，其中相当一部分来自实验室与产业一线，这是通用模型拿不到的部分。工程上要问三件事：一是「一周给出方案」的口径，是候选序列清单还是可直接进湿实验的酶；二是闭环的吞吐，自动化平台一天能验证多少个设计，决定了模型迭代的真实频率；三是开放试用之后的评测基准，如果各家都报自己的成功率，这个领域会重演通用模型「榜单自测」的老问题。对做生物制造的企业，私有部署 + 数据不出厂是能否上这条船的前提。</p>
       </article>
 
     </div>
@@ -152,7 +176,7 @@
 
   <section class="chapter" id="products-zh" data-c="products">
     <div class="chead">
-      <span class="cnum">02</span>
+      <span class="cnum">03</span>
       <h2>产品与智能体</h2>
       <span class="cen">Products &amp; Agents</span>
       <span class="crule"></span>
@@ -161,13 +185,36 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/18 20:33</span>
-          <a class="src" href="https://www.ithome.com/1/029/058.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+          <span class="d">11/20 06:56</span>
+          <a class="src" href="https://m.ithome.com/html/1029750.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>DeepSeek 把服务端搜索与网页抓取并入 token 计费：11 月 18 日 12:00 起不再单独收费</h3>
-        <p>DeepSeek 官网显示，自北京时间 2026 年 11 月 18 日 12:00 起，调用模型时触发的服务端搜索、网页抓取不再计费，只按模型 token 用量计费。会触发服务端搜索的接口有三处：联网工具、Anthropic 兼容 API 的 web_search 工具、Responses API 的 web_search 工具。</p>
-        <p>对照的是一个月前的做法。10 月 17 日 DeepSeek 上线 Search / Fetch API，两个接口都跑自研搜索引擎，按请求次数计费——每 1,000 次成功请求 5 元。搜索接口按 query 返回结构化结果，抓取接口把单个网页转成带标题与正文的 Markdown。也就是说，同样一次「查一下再回答」，此前是「请求费 + token 费」两张账单，现在并成一张。</p>
-        <p class="why"><b>看点</b>这次改的是成本结构，不是价格。请求费是固定成本，跟抓回来的内容多长无关；token 费是变动成本，跟读进去多少字成正比。对多数 agent，一次搜索会带回几个长网页，token 侧的开销远大于 5 厘钱/次的请求费，并进 token 计费大概率不是涨价；但对「查得多、读得少」的场景——比如高频查汇率、查库存——原来的按次计费反而更便宜。真正变好的是预算的可预测性：token 用量在客户端就能估，请求次数估不了。做 agent 成本模型的人要重算一遍「检索预算」这一栏，并留意联网工具默认抓几页、抓多深，那才是账单的真正分子。</p>
+        <h3>苹果被曝自研系统级 AI 智能体：可跨应用操作设备，官网已挂「Agentic AI」岗位</h3>
+        <p>据彭博社马克·古尔曼报道（IT之家 11 月 20 日转述），苹果正在开发自主 AI 智能体，目标是让 AI 代替用户执行设备操控、应用操作、网页浏览与软件编程等任务。苹果官网已挂出「Agentic AI - Proactive」高级工程经理的招聘信息，称正在组建团队开发「能够代表用户执行任务」的 AI 助手。</p>
+        <p>招聘描述把能力写得很具体：像熟练的人类操作者一样使用电脑，在浏览器、文档、终端、代码编辑器与各类服务之间切换，自主选择合适的工具；不只执行单一指令，还要规划并完成跨应用、浏览器、命令行与 API 的多步任务，并协调多个分别负责不同工作的子智能体。苹果同时强调隐私：这类能运行代码、使用用户凭据、代表用户行动的智能体，需要严格的权限管理、沙盒隔离与操作透明度。</p>
+        <p>时间表仍是早期。古尔曼称苹果曾考虑最早 2027 年底推出相关服务，但安排尚未确定，苹果未回应置评请求；新任 CEO 约翰·特努斯在推动软件工程负责人克雷格·费德里吉加快 AI 开发进度。权限侧已经在动：即将推出的 macOS 27.3 测试版对第三方 AI 智能体增加权限警告，用户授予控制 Mac 的权限时需要重新确认，使 ChatGPT 用户启用第三方电脑操控工具的步骤从此前的 4 步增加到 14 步；iOS 27.3 则将为开发者提供更深的 Siri 与第三方应用集成能力。</p>
+        <p class="why"><b>看点</b>系统级智能体的胜负手不是模型，而是权限模型和系统 API 的表面。苹果把「跨应用操作」拆成招聘 JD 里的三件事——工具选择、多步规划、子智能体协调——恰恰是当前 agent 框架最难的部分；而 4 步变 14 步的权限流程，既是安全设计，也是一道对第三方的竞争壁垒。对做 agent 的团队，这条消息的实际含义是：等苹果的系统级能力之前，先把自己的权限申请、沙盒边界、失败回滚和操作审计做扎实，那才是将来能接到系统 API 上的通行证。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19 14:48</span>
+          <a class="src" href="https://tech.ifeng.com/c/8yBDkaZU0eF" target="_blank" rel="noopener noreferrer">凤凰网科技 ↗</a>
+        </div>
+        <h3>火山引擎上线豆包实时音视频通话模型 SeedRealtime 1.0 API：端到端替代 ASR+VLM+TTS 级联</h3>
+        <p>11 月 19 日，火山引擎正式上线豆包实时音视频通话模型 SeedRealtime 1.0 的 API 服务。据<a href="https://tech.ifeng.com/c/8yBDkaZU0eF" target="_blank" rel="noopener noreferrer">火山引擎介绍</a>，该模型把声音、画面、时序与表达统一到同一个端到端模型，在连续的多模态信息流上实时交互，实现「边看、边听、边说」。</p>
+        <p>与级联方案的区别在于链路长度。传统语音助手把 ASR、VLM、TTS 串起来，延迟逐级叠加，信息在模块之间损耗；SeedRealtime 1.0 不再只是等用户提问，而是持续理解场景变化，在合适时机主动开口。火山引擎称，相比级联模型，音视频对话的节奏问题减少了一半，单次对话能够完整、顺畅交流的概率明显提升，适用场景包括语音助手、智能硬件、陪伴式应用与实时客服。</p>
+        <p class="why"><b>看点</b>端到端实时多模态真正难的不是模型结构，而是系统工程：首包延迟、打断与半双工切换、回声消除、以及长会话下的上下文管理，任何一项没做好，体验都会退回到「像在对讲机里说话」。厂商给的「节奏问题减少一半」是自测口径，落地前要按自己的硬件与网络测三组数：端到端首响、打断后的恢复时间、以及连续 10 分钟会话的稳定性。另一个判断是成本——把三段式合成一次前向传播，理论上省掉的是重复编码与中间表示，但实时流的计费单位（按分钟还是按 token）会决定它能不能替代现有方案。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/20 07:41</span>
+          <a class="src" href="https://siliconangle.com/2026/11/19/google-adds-computer-use-capabilities-to-geminis-mac-app/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>谷歌给 macOS 版 Gemini 加上「电脑操控」：后台窗口跑多步任务，关键操作先审批</h3>
+        <p>当地时间 11 月 19 日，Google 发布新版 macOS Gemini 客户端，用户在提示里用「@Computer use」即可调用电脑操控能力，跨本地应用、文件和网页执行多步任务。据<a href="https://siliconangle.com/2026/11/19/google-adds-computer-use-capabilities-to-geminis-mac-app/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a>报道，助手会自己找到完成任务所需的本地应用、制定计划并逐步执行，支持包含数十个动作的任务序列，也能用上一步的产物启动下一个项目。</p>
+        <p>执行方式做了刻意的隔离：任务在独立后台窗口运行，用户的主屏幕与鼠标光标不受影响，聊天窗口里有实时预览，可随时暂停、停止，或在过程中给反馈。权限上由用户选择允许 Gemini 访问哪些应用，关键操作执行前会请求批准。Google Gemini App 产品经理 Michael Friedman 在博客中称，隐私与安全是内置的：用户能看到每一步、随时暂停、并在关键动作发生前批准。能力边界上，Gemini 不只能操作本地应用，也能读写网页服务的数据，并在本地程序与云服务之间搬运。</p>
+        <p class="why"><b>看点</b>同一天两条消息正好构成对照：Google 已经把电脑操控推给 macOS 用户，苹果还在为自研智能体招人。产品形态上，后台窗口 + 实时预览 + 关键操作审批，是目前系统级 agent 最务实的一套折中——既不接管用户的主屏幕，又保留 human-in-the-loop 的审计点。技术上要留意的是它仍走 UI 自动化，这意味着脆弱性来自界面变化而不是模型能力，回归测试的成本会随目标应用数量线性上升；「@Computer use」这个显式触发开关比默认接管更可审计，也更像是给企业采购准备的合规设计。</p>
       </article>
 
     </div>
@@ -175,7 +222,7 @@
 
   <section class="chapter" id="research-zh" data-c="research">
     <div class="chead">
-      <span class="cnum">03</span>
+      <span class="cnum">04</span>
       <h2>研究与安全</h2>
       <span class="cen">Research &amp; Safety</span>
       <span class="crule"></span>
@@ -184,25 +231,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/18</span>
-          <a class="src" href="https://openai.com/index/advancing-chip-design-with-our-models/" target="_blank" rel="noopener noreferrer">OpenAI · Advancing chip design with our models ↗</a>
+          <span class="d">11/20 07:00</span>
+          <a class="src" href="https://tech.ifeng.com/c/8yCGzVbQh18" target="_blank" rel="noopener noreferrer">凤凰网科技 ↗</a>
         </div>
-        <h3>OpenAI 披露模型参与芯片设计：Jalapeño 向量单元面积减约 13%，同一套方法正用到 AMD 的硬件上</h3>
-        <p>当地时间 11 月 18 日，OpenAI 发布技术报告，披露模型参与芯片设计的细节。公司从 2025 年初开始用 GPT-4o 参与首款自研推理芯片 Jalapeño 的设计：向量单元里改浮点加法器、乘法器、数据转换函数、归约逻辑与特殊函数单元，探索替代逻辑实现，也重新划分计算在流水线各段之间的分配，找共享硬件、压缩中间存储的机会；矩阵单元则在浮点加法器、乘法器与低精度点积电路上累积改进。</p>
-        <p>两处单项改动能看到量级：一个乘法器重设计让综合后的标准单元面积少约 15%，同时把延迟从两个时钟周期压到 1 个；另一个加法器重设计在保持两个周期延迟的前提下，同样省了约 15% 面积。合起来，团队估计模型提议的改动让 Jalapeño 向量单元的标准单元面积减少约 13%、矩阵单元减少约 10%，这些优化在 Jalapeño 的硅片 bring-up 阶段得到了验证。</p>
-        <p>同一套方法也被搬到第三方硬件上：报告引言说，正把这一做法用到与 AMD 的合作中，要在第三方硬件上取得「显著收益」。为了衡量模型在端到端芯片设计上的能力，OpenAI 还用两款开源处理器设计做了跨代评测；下一步是与 Synopsys 合作，把模型能力接进工程师日常使用的 EDA 工具里做设计验证。</p>
-        <p class="why"><b>看点</b>这不是「AI 画电路」，而是模型在 RTL 与综合之间做局部搜索，验收标准是老一套 PPA——面积、延迟、功耗，最后由硅片 bring-up 说话，这也是这份报告比多数 demo 硬的地方。对做芯片的团队，可复现性问题在评测方法上：拿两款开源核做「从规格重新设计」，分数高未必等于实机占优，报告自己也提到模型可能省掉性能计数器之类的模块，评测集与生产目标之间还隔着一层。真正值得抄的是流程——把模型放进已有的 EDA 与验证回路，而不是让它单独产出设计。第三个信号是与 Synopsys 的合作：一旦模型接进商用 EDA，改动就从「研究」变成「许可采购」，EDA 三巨头的定价权会被重新谈一遍。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/18 21:04</span>
-          <a class="src" href="https://www.stcn.com/article/detail/4342708.html" target="_blank" rel="noopener noreferrer">证券时报 · 人民财讯 ↗</a>
-        </div>
-        <h3>中国与新加坡在北京举行人工智能治理交流会议：议题含治理标准、安全与风险、国际合作</h3>
-        <p>据「网信中国」消息，11 月 18 日，中国国家互联网信息办公室与新加坡资讯通信媒体发展局（IMDA）在北京举行中国—新加坡人工智能治理交流会议。双方相关司局负责人围绕人工智能治理政策标准与实践、人工智能安全与风险、人工智能治理国际合作等议题开展交流，并就进一步深化人工智能治理领域合作达成共识。</p>
-        <p>通稿没有公布具体成果清单，也没有给出下一轮时间表。可对照的背景是两边各自的治理工具：新加坡走的是 IMDA 主导的框架与测试体系，中国走的是网信办牵头的备案、安全评估与内容治理；这次谈的三项议题，恰好是两套工具交汇的地方。</p>
-        <p class="why"><b>看点</b>AI 治理的谈判单位正在从多边往下沉到双边。多边场合（联合国、AI 安全峰会）能出原则，但落地要靠两国的备案口径、测试方法与事故通报机制能不能对接；对一个要在两地部署模型的团队，这类对话的实际价值是「同一份安全评估能不能复用到另一边」，而这个问题的答案通常写在后续的技术附件里，不在通稿里。值得跟踪的是两件事：是否形成工作组与定期会议机制、是否出现互认或联合测试的安排。缺了这两样，共识就停在表态层面。</p>
+        <h3>谷歌论文：只改 harness 的四个模块，SWE-bench Lite 成功率从 5% 提到 40%</h3>
+        <p>11 月 20 日，凤凰网科技报道了谷歌一篇题为《Harnesses That Improve Themselves》的研究论文：让优化模型直接修改智能体的运行框架（harness），而不是只调整提示词。所谓 harness，是围绕模型、负责管理上下文、调用工具、检查执行结果以及决定何时停止的那层代码。</p>
+        <p>实验设置很克制：一个只有 142 行的编程智能体 harness 被切成四个可编辑模块，每轮优化只允许改其中一个，随后在验证集上测试，并设置 token 使用上限，只有满足验证要求的修改才会保留。研究用 Gemini 3.8 Flash 在 40 道未参与优化的 SWE-bench Lite 任务上测试：初始 harness 只能解决 5.0% 的任务，经过模块化优化与验证筛选后成功率达到 40.0%，平均每项任务消耗约 4.67 万 token。</p>
+        <p>对照组更能说明问题：如果允许优化模型不受限制地整体重写 harness，成功率可以到 42.5%，只比模块化方案高 2.5 个百分点，但平均每项任务要消耗约 45.16 万 token，接近前者的十倍；而如果只用提示词规则约束智能体行为，成功率反而下降到 2.5%。论文因此强调，智能体的重要运行约束应尽量通过代码机制落实——例如每次修改自动跑测试，以成功率与 token 消耗作为是否接受修改的依据。</p>
+        <p class="why"><b>看点</b>harness 正在成为继权重、提示词之后第三个可优化的对象，而这篇论文给出的不是「AI 自己变强」的故事，而是一套可复现的工程纪律：模块化切开、单点改动、验证集把关、token 预算兜底。四个旋钮里最容易被忽视的是 token 上限——没有它，「自我改进」会退化成反复重写、成本失控。需要打折扣的地方也明确：结论来自单一模型和 40 道题，跨模型、跨任务、长期运行是否成立都还没验证；而 harness 与模型是强耦合的，为 Gemini 调好的框架迁移到另一个模型上，完全可能变成负收益。对团队的可操作结论是：先把自己的 harness 切成能被验证的模块，用成功率与 token 双指标做接受准则，再谈让模型自己改。</p>
       </article>
 
     </div>
@@ -210,7 +246,7 @@
 
   <section class="chapter" id="embodied-zh" data-c="embodied">
     <div class="chead">
-      <span class="cnum">04</span>
+      <span class="cnum">05</span>
       <h2>具身智能</h2>
       <span class="cen">Embodied AI</span>
       <span class="crule"></span>
@@ -219,49 +255,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/18 21:10</span>
-          <a class="src" href="https://jnzstatic.cs.com.cn/zzb/htmlInfo/138645.html" target="_blank" rel="noopener noreferrer">中证网 ↗</a>
+          <span class="d">11/19 18:48</span>
+          <a class="src" href="https://stcn.com/article/detail/4344296.html" target="_blank" rel="noopener noreferrer">证券时报 · 人民财讯 ↗</a>
         </div>
-        <h3>小马智行三季度营收 2.99 亿元、同比增 75.2%：Robotaxi 单季 1.19 亿元，车队 2768 辆</h3>
-        <p>11 月 18 日晚，小马智行发布 2026 年第三季度财报：当期总营收 2.99 亿元，创阶段新高，同比增长 75.2%，环比增长 23.1%，跑赢费用增幅；毛利同比提升 69.5%。公司把这轮增长归到「共建车队」模式——除了扩大车辆投放规模，还带来持续性的技术授权收入。</p>
-        <p>分业务看结构变化：Robotaxi 收入 1.19 亿元，同比增长 165.4%，占总营收 39.9%，是拉动增长的核心；Robotruck 收入 1.20 亿元，同比增长 76.3%，港口重卡与城配轻卡项目继续落地；智能解决方案收入 5940 万元。截至三季度末，Robotaxi 车队规模 2768 辆；公司计划年底在全球 20 座城市部署 3500 辆。</p>
-        <p class="why"><b>看点</b>39.9% 这条线比 75.2% 更值得看：收入结构正从「卖解决方案」往「跑运营 + 技术授权」挪，前者的毛利按项目结算、随交付波动，后者按车队规模摊薄、靠密度出利润。从 2768 辆到 3500 辆，四季度要新增 732 辆——共建车队把资本开支挪给合作方，代价是单车收入要分成，所以规模上来不等于利润同比例上来。真正决定这门生意能不能立住的是两个不披露的数：每车日均单量、远程安全员的人车比；这两个数不改善，3500 辆只是把成本放大 26%。</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="capital-zh" data-c="capital">
-    <div class="chead">
-      <span class="cnum">05</span>
-      <h2>行业与资本</h2>
-      <span class="cen">Industry &amp; Capital</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/19 06:07</span>
-          <a class="src" href="https://fortune.com/2026/11/18/anthropic-prices-ipo-83-per-share-1-5-trillion/" target="_blank" rel="noopener noreferrer">Fortune ↗</a>
-        </div>
-        <h3>Anthropic 以每股 83 美元定价 IPO：估值约 1.5 万亿美元，募资至少 685 亿美元</h3>
-        <p>当地时间 11 月 18 日，Anthropic 把 IPO 发行价定在每股 83 美元，高于此前 70–78 美元的区间，按约 1.5 万亿美元估值计算，将是史上第二大 IPO，仅次于 SpaceX 今年 6 月的 1.77 万亿美元。股票 11 月 19 日在纳斯达克挂牌，代码 ANT。</p>
-        <p>规模上，公司此前计划发行约 8.25 亿股，83 美元对应募资至少 685 亿美元；《财富》引述彭博社的报道称，因需求强劲，Anthropic 同时扩大了发行规模，具体增幅未披露。七家战略伙伴（含 Google 与英伟达）同意按发行价认购 260 亿美元无投票权股份。这也是第一家纯做前沿模型的公司在美股上市——SpaceX 还做火箭，Google 与 Meta 都有搜索和社交的现金流垫底。</p>
-        <p>招股材料里的财务口径：截至 9 月 30 日的九个月营收 332 亿美元，去年同期为 25 亿美元；同期净亏损 1040 亿美元，其中大部分不是现金流出，而是可转换票据的会计处理所致。公司近两年最受关注的两件事——算力承诺的久期、企业客户的续约率——都还没有在二级市场经历过一次定价。</p>
-        <p class="why"><b>看点</b>把 332 亿美元的九个月营收折成年，1.5 万亿美元估值对应约 34 倍市销率；放在「推理成本每年往下走」的行业里，这个倍数要求收入增速先于单价下滑。读这张表的第一步是拆开 1040 亿亏损：可转债按公允价值计量的账面损失不消耗现金，真正要看的是经营现金流与算力合同的到期分布——后者才是它未来三年的刚性支出。第二个变量是同一天的定价环境：Google 把 Gemini 4 Neon 压到每百万 token 3 美元/15 美元，闭源厂商的毛利空间在这个价格带上被重新定义。<br><b>另一个视角</b>260 亿美元的战略认购让客户与股东重叠：Google 与英伟达既是算力供应方、又是按发行价入股的股东，这类关联交易会成为上市后第一份季报的披露重点；对二级市场，它的意义是「AI 基建的钱从谁的口袋进、又回到谁的口袋」这条链条第一次被放到公开文件里。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/18 13:26</span>
-          <a class="src" href="https://www.digitaltoday.co.kr/cn/view/127539/nvidia-to-halt-h200-sales-to-china-after-jensen-huang-exit" target="_blank" rel="noopener noreferrer">DigitalToday ↗</a>
-        </div>
-        <h3>英伟达停止向中国销售 H200：临时 CEO 在财报电话会确认，董事会新设出口管制监督委员会</h3>
-        <p>据 DigitalToday 引述 TechCrunch 11 月 17 日（当地时间）的报道，英伟达已决定停止向中国销售 H200 芯片。临时 CEO Colette Kress 在财报电话会上确认了这一安排——这意味着英伟达事实上退出了一条备受争议的「例外路径」：此前 H200 对华销售沿用前 CEO 黄仁勋与特朗普政府协调后的做法，借道美国转运交付，并由美方在交易中征收 25% 关税。</p>
-        <p>同一天，英伟达宣布在董事会下新设一个委员会，负责监督国家安全政策、出口管制合规与全球贸易风险。政策侧的动作更早：美国 11 月 16 日出台新规，禁止向「为中国客户提供远程服务」的海外数据中心供应美国先进芯片，把借道境外机房供货的空间也堵上了。</p>
-        <p>影响已经在被量化：Jefferies 预计，在新规影响下，英伟达明年的数据中心营收可能减少 440 亿至 620 亿美元。Kress 的回应是需求侧仍有大量未满足订单，包括 Vera Rubin 在内的产品线预计整体营收不受影响；但东南亚市场——新加坡、马来西亚、泰国、印尼——的潜在客户流失被列为中期变量。数据显示英伟达新加坡子公司 2025 年营收达 1040 亿美元，此后公司未再披露这一数字。</p>
-        <p class="why"><b>看点</b>这条的意义不在「少卖一款芯片」，而在把中国算力供给的判断依据从「政策允许」改成「公司合规」。H200 那条借道转运、加征 25% 关税的路径，本质是把政治风险折算成一笔可计算的成本；停售之后，这笔成本不再可算，采购方只能按「拿不到」做规划——这比任何一版出口清单都更硬。对做训练集群的团队，短期影响是二手 H200 与租赁价格，中期影响是国产卡与新云（neocloud）的替代速度；对英伟达，440 亿至 620 亿美元的缺口要靠别处的订单补，而「董事会新设国家安全委员会」说明它已经把出口合规当作长期经营变量，而不是季度扰动。</p>
+        <h3>黑芝麻智能在深圳前海设具身智能总部，称已锁定多家机器人厂商量产订单</h3>
+        <p>11 月 19 日，黑芝麻智能在深圳前海成立具身智能总部，采用「前海 + 香港」双总部模式，聚焦具身智能计算平台的研发与产业生态协作；同日总部展厅落成，十多家生态伙伴入驻，覆盖人形、四足、轮式机器人与协作机械臂等形态。据<a href="https://stcn.com/article/detail/4344296.html" target="_blank" rel="noopener noreferrer">人民财讯</a>报道，公司已与美的、遨博、中远海运、均胜电子等达成战略合作，并锁定多家头部机器人厂商的量产订单，涵盖轮式机器人、人形机器人、四足机器狗、工业机械臂、移动底盘与割草机等品类。</p>
+        <p>这家公司的底子在车上：2016 年成立，围绕智能驾驶推出华山、武当系列高性能智驾芯片。2026 年上半年业绩公告显示，公司营收 4.58 亿元、同比增 81.3%，芯片整体出货 600 万片以上；其中具身智能及解决方案营收 4720 万元，公司称在手订单饱满，并把具身智能列为第二增长曲线。</p>
+        <p class="why"><b>看点</b>车规芯片公司把 IP 复用到机器人，最直接的杠杆是同一套 SoC 加工具链摊薄研发与验证成本，这也是它敢在半年报里把具身单列的原因。但「锁定订单」和「交付收入」是两件事：上半年具身营收 4720 万元、约占总营收一成，说明还在早期放量阶段。真正决定它能否吃到这波红利的，是机器人对算力档位的选择——如果主流机型停在几十 TOPS 的感知加轻量 VLA，车规 SoC 的性价比优势明显；一旦具身大模型把单机算力推到数百 TOPS，竞争区间就会直接对上英伟达与国产大算力平台。要跟踪的是量产机型清单、单机算力规格，以及这些「锁定的订单」在 2027 年能兑现多少。</p>
       </article>
 
     </div>
@@ -270,9 +270,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 18 日 09:26 至 11 月 19 日 07:33（北京时间）之间发布的报道，共 8 条。检索时间 11/19 07:33。</p>
+        <p>本期收录 2026 年 11 月 19 日 07:33 至 11 月 20 日 09:52（北京时间）之间发布的报道，共 8 条。检索时间 11/20 09:52。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 024 · 24h window · Generated 2026-11-19 07:33</p>
+    <p class="sig">AI Daily · Issue 025 · 24h window · Generated 2026-11-20 09:52</p>
       </div>
     </footer>
       </div>
@@ -285,17 +285,17 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 024</span>
+          <span class="issue-tag">Issue 025</span>
         </div>
-        <h1 class="date">November 19, 2026<span class="weekday">THU</span></h1>
-        <p class="deck">Three numbers define the day. Google cut its fourth Gemini 4 model to $3 of input and $15 of output per million tokens, about 17% cheaper per task than the model it replaces. OpenAI said its models have already trimmed the standard-cell area of its own inference chip by 13%, and is applying the same method to AMD hardware. Anthropic priced its IPO at $83 a share, a valuation near $1.5 trillion. <em>Capability keeps rising, but price, cost and capital say more about where the industry is heading than any leaderboard.</em></p>
-        <div class="metabar"><span class="pill">Issue 024</span>
+        <h1 class="date">November 20, 2026<span class="weekday">FRI</span></h1>
+        <p class="deck">Two lines crossed in the same 24 hours. On the capital side, Anthropic raised $81.3bn and listed on Nasdaq: the stock opened up 34%, closed up 17%, and the $900.9bn table of compute commitments in its prospectus matters more than the share price. On the supply side, Alibaba lifted quarterly capex to ¥50.5bn, booked ¥61.0bn of AI cloud revenue and scheduled its Zhenwu V900 chip for Q1 2027. <em>Yet the day's most engineering-shaped result was a paper: rewrite four harness modules and SWE-bench Lite goes from 5% to 40% — a layer of optimisable surface that neither money nor GPUs buy.</em></p>
+        <div class="metabar"><span class="pill">Issue 025</span>
       <span class="dot"></span>
-      <span>Window Nov 18, 09:26 &ndash; Nov 19, 07:33</span>
+      <span>Window Nov 19, 07:33 &ndash; Nov 20, 09:52</span>
       <span class="dot"></span>
       <span>8 stories</span>
       <span class="dot"></span>
-      <span>11 min read</span></div>
+      <span>12 min read</span></div>
       </div>
     </header>
 
@@ -303,11 +303,11 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-en"><span class="n">00</span>At a glance</a>
-        <a href="#models-en"><span class="n">01</span>Models &amp; Capability</a>
-        <a href="#products-en"><span class="n">02</span>Products &amp; Agents</a>
-        <a href="#research-en"><span class="n">03</span>Research &amp; Safety</a>
-        <a href="#embodied-en"><span class="n">04</span>Embodied AI</a>
-        <a href="#capital-en"><span class="n">05</span>Industry &amp; Capital</a>
+        <a href="#capital-en"><span class="n">01</span>Industry &amp; Capital</a>
+        <a href="#models-en"><span class="n">02</span>Models &amp; Capability</a>
+        <a href="#products-en"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#research-en"><span class="n">04</span>Research &amp; Safety</a>
+        <a href="#embodied-en"><span class="n">05</span>Embodied AI</a>
         </div>
       </div>
     </nav>
@@ -316,21 +316,58 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>Google releases Gemini 4 Neon: 61 on the Artificial Analysis Intelligence Index, third overall, at $6.44 per task &mdash; about 17% below Carbon and roughly 40% faster.</b>The saving comes from $3 input and $15 output per million tokens, the speed from about 110 output tokens per second. One-million-token context, four effort levels, available through the API and the Gemini Enterprise Agent Platform.</p>
+      <p><b>Anthropic listed on Nasdaq: it opened at $111.50, 34.3% above its IPO price, and closed at $97.17, still up 17.1%, for a fully diluted valuation near $1.77tn.</b>The $81.3bn public offering is the largest on record; with a $26bn concurrent private placement the deal totals roughly $107.3bn. The stock gave back about 13% in its first half hour, the worst opening half hour for a large US IPO since 2008.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>Anthropic prices its IPO at $83 a share, a valuation of roughly $1.5 trillion and a raise of at least $68.5 billion; trading starts November 19 on Nasdaq under ANT.</b>The range had been $70&ndash;78. Seven strategic partners, Google and Nvidia among them, agreed to buy $26 billion of non-voting stock at the offer price. Revenue was $33.2 billion for the nine months to September 30, against a $104 billion net loss driven mainly by accounting for convertible notes.</p>
+      <p><b>Alibaba spent ¥50.5bn of capex in the quarter, up 60% year on year, as AI cloud and compute revenue rose 53% to ¥61.0bn and AI product revenue hit ¥17.9bn — its 13th straight quarter of triple-digit growth.</b>Its in-house Zhenwu V900 AI chip is slated for Q1 2027 with an open-sourced SAIL software stack; Qwen4-Max carries a 2.4-trillion-parameter backbone and native vision.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>OpenAI details how its models helped design Jalapeño, its inference chip: about 13% less standard-cell area in the vector unit and 10% in the matrix unit, confirmed at silicon bring-up.</b>The same approach is being applied with AMD to deliver what OpenAI calls significant gains on third-party hardware. Next step is a Synopsys partnership to put the models inside the EDA tools engineers already use.</p>
+      <p><b>In Google's paper "Harnesses That Improve Themselves", a 142-line agent harness is split into four modules and edited one at a time against a validation set, lifting SWE-bench Lite from 5.0% to 40.0% at about 46.7k tokens per task.</b>Unrestricted full rewrites reach 42.5% but burn about 451.6k tokens per task, nearly ten times more; prompt rules alone drop success to 2.5%.</p>
     </li>
       </ol>
 
-  <section class="chapter" id="models-en" data-c="models">
+  <section class="chapter" id="capital-en" data-c="capital">
     <div class="chead">
       <span class="cnum">01</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-19">
+        <div class="cmeta">
+          <span class="d">11/20 09:41</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261120A04U7X00" target="_blank" rel="noopener noreferrer">Wallstreetcn ↗</a>
+        </div>
+        <h3>Anthropic's Nasdaq debut: opens up 34%, closes up 17%, on a record $81.3bn raise</h3>
+        <p>Anthropic began trading on Nasdaq under the ticker ANT on Thursday, November 19. It opened at $111.50, about 34.3% above its $83 IPO price, touched a high of $115.10 for a 38.7% gain, then faded to a low of $92.72 and closed at $97.17, up 17.1%. According to <a href="https://news.qq.com/rain/a/20261120A04U7X00" target="_blank" rel="noopener noreferrer">Wallstreetcn</a>, the stock fell about 13% from its first trade within half an hour — the worst opening half hour for a large US IPO since 2008.</p>
+        <p>The offering raised about $81.3bn, topping SpaceX's roughly $75bn record; a concurrent private placement of about $26bn brings the total deal to some $107.3bn. The $83 price implied a valuation near $1.5tn, the opening trade briefly pushed the market value past $2tn, and the fully diluted close put it near $1.77tn. Yahoo Finance data cited in the report shows the first trade of $111.50 covered about 108m shares, roughly $12bn, with about $15bn changing hands in the first full minute.</p>
+        <p>The prospectus numbers: annualised operating revenue of about $81bn as of October 31, up roughly $10bn from the end of September; third-quarter revenue of $16.956bn, up about 47% sequentially, but an operating loss of about $567m after a $974m operating profit in the second quarter, which the company attributes to a $5bn short-term compute commitment and a $2bn non-cash charitable matching charge. Compute and infrastructure spending reached about $9.9bn in the quarter, up from about $5.6bn, for roughly $18.8bn across the first three quarters of 2026.</p>
+        <p>The heaviest table is the commitment schedule: purchase obligations and leases signed through and after the end of September total about $900.9bn, of which roughly $451.6bn is expected to fall due by the end of 2030 and most of the remainder between 2031 and 2045. At the opening bell, CEO Dario Amodei said the company will set the pace of training and deployment by safety assessments, and will not yield to commercial or political pressure.</p>
+        <p class="why"><b>Why it matters</b>For anyone training models, the commitment table carries more signal than the share price: $451.6bn of the $900.9bn falls due before 2030, which effectively fixes the compute ceiling and the shape of the unit-cost curve for the next four years. The size of a training run will be set by contracts, not architecture. The second number is the $9.9bn of quarterly compute spend against a $567m operating loss: revenue is metered by usage while costs are locked into multi-year minimum commitments, and that maturity mismatch is harder to fix than an expensive multiple. Third, giving back 13% in half an hour and closing up only 17% says IPO buyers will pay a premium for a scarce asset but will not hold it above $2tn overnight.<br><b>Another angle</b>The $83 price valued a five-year-old company at $1.5tn while it spent about $18.8bn on compute and infrastructure in the first three quarters of 2026 — public markets are prepaying for a decade of compute contracts, which is the same trade as Alibaba lifting quarterly capex to ¥50.5bn on the same day, seen from the other side.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19</span>
+          <a class="src" href="https://www.alibabagroup.com/zh-HK/document-2060147792046718976" target="_blank" rel="noopener noreferrer">Alibaba Group · September quarter results ↗</a>
+        </div>
+        <h3>Alibaba: ¥50.5bn of quarterly capex, ¥61.0bn of AI cloud revenue, and the Zhenwu V900 chip in Q1 2027</h3>
+        <p>Alibaba reported results for the quarter ended September 30 on November 19: revenue of ¥271.5bn, up 10%, with AI cloud and compute services revenue of ¥61.0bn, up 53%. External customer revenue rose 64% and external recurring revenue excluding compute-equipment solutions rose 67%, while AI product revenue reached ¥17.9bn for a 13th consecutive quarter of triple-digit growth. Net income was ¥64.4bn, up 213% on investment gains and higher operating profit; adjusted EBITA rose 260% to ¥32.6bn.</p>
+        <p>On the spending side, capital expenditure for the quarter was ¥50.5bn, up 60%, which the company attributes to faster compute build-out, higher chip component prices, CPU demand expected from AI agent adoption and purchasing-cycle timing. Free cash flow was an outflow of ¥34.5bn, versus a ¥21.8bn outflow a year earlier, mostly because of cloud infrastructure spending.</p>
+        <p>Chips and models are the roadmap part of the release. The next-generation training-and-inference AI chip, Zhenwu V900, was announced at the September Yunqi conference on a homegrown parallel-computing architecture and is scheduled to ship in Q1 2027, alongside an open-sourced SAIL software stack; the Zhenwu M890 supernode instance launched in August is described as China's first supernode architecture able to serve models with more than 2 trillion parameters. On the model side, Qwen4-Max uses a new mixture-of-experts architecture with a 2.4-trillion-parameter backbone and native vision, which the company says improves long-horizon execution in manufacturing, game development, healthcare and frontier research.</p>
+        <p class="why"><b>Why it matters</b>Read together, 53% AI cloud growth and 60% capex growth say demand is still running ahead of depreciation — but negative free cash flow says the money is coming out of this year's cash, not next decade's. For inference teams the interesting part is the bundle: an in-house chip, a supernode architecture and an open-sourced SAIL stack are all aimed at fixed cost per token and switching cost, not at stacking more GPUs. A 2.4-trillion-parameter MoE also means the bill lands on active parameters and KV cache rather than weight size. Three things to watch: when V900 actually reaches volume and external customers, how well SAIL tracks mainstream frameworks, and whether capex keeps growing at 60% — if it does, the cloud price war still has room.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models-en" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
       <h2>Models &amp; Capability</h2>
       <span class="cen">模型与能力</span>
       <span class="crule"></span>
@@ -339,27 +376,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/18</span>
-          <a class="src" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener noreferrer">Google · Introducing Gemini 4 Neon ↗</a>
+          <span class="d">11/19 16:01</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/19/content_615873.html" target="_blank" rel="noopener noreferrer">Science and Technology Daily ↗</a>
         </div>
-        <h3>Google ships Gemini 4 Neon: 61 on the Intelligence Index, 17% cheaper per task than Carbon and 40% faster</h3>
-        <p>Google DeepMind released Gemini 4 Neon on November 18 local time, the fourth Gemini 4 model in seven weeks according to <a href="https://artificialanalysis.ai/articles/gemini-4-neon-intelligence-gain" target="_blank" rel="noopener noreferrer">Artificial Analysis</a>. At its xhigh setting Neon scores 61 on the firm&rsquo;s Intelligence Index, one point above Gemini 4 Carbon at high and third overall, behind GPT-6.2 Astra (max) and Claude Fable 5.2 (max).</p>
-        <p>Three numbers describe what kind of upgrade this is. Cost per task is $6.44 against $7.76 for Carbon at list price, about 17% less, and a task takes roughly 21 minutes instead of 36, about 40% shorter. Yet Neon spends about 15% more output tokens per task, so neither gain comes from writing less. The price is $3 for input and $15 for output per million tokens, 25% under Carbon&rsquo;s standard $4/$20, and the speed comes from roughly 110 output tokens per second against 57. Cached input is billed at $0.15, a 95% discount.</p>
-        <p>Coding agents are where it closes most of the gap. In the Antigravity CLI, Neon at xhigh scores 59 on the Coding Agent Index, three points above Carbon and level with Claude Fable 5.2 (58) and Claude Opus 5.5 (58), at $6.86 per task against $12.61 and $15.47 for the two Anthropic models. Visual work improved too: 33.4% on GDP.pdf at high, five points above Carbon; 1,700 Elo overall on AA-Briefcase with 1,771 for presentation quality, 45 points ahead of the previous leader, Claude Sonnet 5.5; and a Climb win rate of 56% on Google&rsquo;s internal MKA evaluation.</p>
-        <p>On specifications: a one-million-token context, text, image, video and speech input with text output, and four effort levels &mdash; low, medium, high and xhigh, the last introduced with Hydrogen last week. It is live through Google&rsquo;s API and the Gemini Enterprise Agent Platform, and Pro and Ultra subscribers get it in Antigravity and the Gemini app.</p>
-        <p class="why"><b>Why it matters</b>For anyone building agents, cost per task is closer to the real invoice than price per million tokens. Half of Neon&rsquo;s 17% gap comes from price and half from speed, and the two mean different things: price sets the marginal cost of long context and retries, while speed decides how many rounds and timeouts a task needs before it converges. The second thing to question is the effort dial. On the same suite, Neon scores 33.4% on GDP.pdf at high but only 28.0% at xhigh, so the levels are not monotonic. Sweep all four against your own tasks before shipping rather than assuming more effort is better. Third, do not benchmark against Carbon&rsquo;s $2/$10: that is a discount that expires on November 30.<br><b>The other angle</b>Anthropic priced its IPO at $83 a share the same day, near a $1.5 trillion valuation. Model prices are falling while capital-market valuations rise, and both shorten the window in which a closed model can be benchmarked on price. Buyers walk into Q4 with cheaper tokens and a bigger story, which hands negotiating leverage back to them.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/18 12:55</span>
-          <a class="src" href="https://ishare.ifeng.com/c/s/v0069GgYeTusaPTXRiNhf-_x9tJonjd8lDAavU1W--jxDUmOd4xEImoBjnaWEqfFNoYv--W" target="_blank" rel="noopener noreferrer">Phoenix Tech ↗</a>
-        </div>
-        <h3>Tencent open-weights Hy4 flash in three variants: 220B total parameters, 12B active per token, a 1M-token window</h3>
-        <p>Tencent&rsquo;s Hunyuan team opened the weights of the Hy4 flash family on November 18. Hy4 flash is the instruction-tuned model, Hy4 flash-FP8 an FP8-quantised build meant to cut the compute and memory needed to serve it, and Hy4 flash-base an un-tuned pretrained model. Weights and deployment notes are on GitHub, Hugging Face, ModelScope and GitCode for local deployment, under the Tencent Hy License.</p>
-        <p>The published figures: about 220 billion total parameters, of which roughly 63.5 billion are Engram parameters, with about 12 billion activated per token. It is a mixture-of-experts model taking text and images in and returning text, with a context window of up to one million tokens. The architecture adds hybrid attention, LatentMoE and Engram, plus a DFly2 module for speculative decoding; Tencent says decoding exceeds 150 tokens per second, a figure from internal testing.</p>
-        <p>The timeline matters: Hy4 flash launched on November 16 and until now was reachable mainly through Tencent Cloud&rsquo;s TokenHub and some Tencent products. The weights are what appeared today. Tencent says the rest of the Hy4 line is being prepared for release as well.</p>
-        <p class="why"><b>Why it matters</b>220B total with 12B active is the classic big-capacity, small-activation trade: the floor for local deployment is set by activation size and KV cache, while weight volume follows total parameters, and the two together decide whether it fits on one card. The 63.5 billion Engram parameters are about 29% of the total; table-lookup parameters like these barely touch per-token compute but weigh heavily on file size, which is exactly what the FP8 build targets. Quantisation usually damages long-context recall before it damages short prompts, so test that yourself at the full window. Three things worth verifying: real recall at one million tokens, the actual speedup from DFly2 on your own workload, and what the Hy License permits commercially. For teams adapting domestic accelerators, open weights matter more than an API, because they let you retune scheduling in your own inference stack.</p>
+        <h3>Tianjin University releases Tianhua Kaiwu, a 560B-parameter foundation model for enzyme design</h3>
+        <p>Tianjin University unveiled Tianhua Kaiwu, an enzyme-design foundation model, in Tianjin on November 19, pairing it with the university's automated synthetic-biology hardware to form a closed-loop optimisation system for industrial enzymes. According to <a href="https://www.stdaily.com/web/gdxw/2026-11/19/content_615873.html" target="_blank" rel="noopener noreferrer">Science and Technology Daily</a>, the team says the system can produce an enzyme design within a week and make it possible to build a custom strain and develop a manufacturing process for a target product within three months.</p>
+        <p>The parameter trajectory is worth noting: work began in 2021, an 800m-parameter base model landed in 2024, a 7bn-parameter version in 2025, and a joint scale-up with Zhipu AI took it to 560bn. The model was built from a new architecture rather than fine-tuned from a general one, and jointly models reaction, sequence and structure — linking the production task to be done with how the enzyme should be built.</p>
+        <p>Three capabilities map to three steps: predict (design a new enzyme from a target reaction, forecast mutation effects and pick combinations), write (turn a digital design into a physical sample through automated gene synthesis, assembly and expression), and verify (feed experimental results back into training to recalibrate the model and iterate the design). The model runs on domestic compute and supports on-premises deployment so customer data need not leave the plant; next it will open for trial to researchers and industry, with joint enzyme libraries and application standards to follow. Representatives from PetroChina, China Merchants Group, Shanghai Pudong Development Bank, WuXi AppTec, Novo Nordisk, Asymchem and others attended the launch.</p>
+        <p class="why"><b>Why it matters</b>A 560bn-parameter model for one vertical is not defended by its size but by its training base — years of enzyme sequences, structures, reactions and process data, a good part of it from labs and factory floors, which a general model cannot obtain. Three engineering questions: what "a design in a week" actually means, a list of candidate sequences or an enzyme ready for wet-lab work; how fast the loop turns, since the number of designs the automation can validate per day sets the real iteration rate; and what benchmark appears once trials open, because self-reported success rates would replay the leaderboard problem of general models. For biomanufacturing firms, on-premises deployment with data kept in-house is the precondition for getting on board.</p>
       </article>
 
     </div>
@@ -367,7 +391,7 @@
 
   <section class="chapter" id="products-en" data-c="products">
     <div class="chead">
-      <span class="cnum">02</span>
+      <span class="cnum">03</span>
       <h2>Products &amp; Agents</h2>
       <span class="cen">产品与智能体</span>
       <span class="crule"></span>
@@ -376,13 +400,36 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/18 20:33</span>
-          <a class="src" href="https://www.ithome.com/1/029/058.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+          <span class="d">11/20 06:56</span>
+          <a class="src" href="https://m.ithome.com/html/1029750.htm" target="_blank" rel="noopener noreferrer">ITHome ↗</a>
         </div>
-        <h3>DeepSeek folds server-side search and page fetching into token billing, ending the separate fee from noon on November 18</h3>
-        <p>DeepSeek&rsquo;s pricing page now says that from 12:00 Beijing time on November 18, 2026, server-side search and web fetching triggered by a model call are no longer billed separately; only token usage is charged. Three surfaces trigger that search: the web-browsing tool, the web_search tool in the Anthropic-compatible API, and the web_search tool in the Responses API.</p>
-        <p>The contrast is with last month. On October 17 DeepSeek launched Search and Fetch APIs, both running on its own search engine and billed per request at ¥5 per 1,000 successful calls. Search took a query and returned structured results; Fetch pulled a single page and returned it as Markdown with title and body. The same &ldquo;look something up, then answer&rdquo; flow that produced two bills, a request fee plus a token fee, now produces one.</p>
-        <p class="why"><b>Why it matters</b>This changes cost structure, not price. A request fee is fixed and does not care how long the page is; a token fee moves with how much text you read. For most agents a search brings back several long pages, and the token side dominates a fraction-of-a-cent request fee, so folding one into the other is probably not a price rise. For the lookup-heavy, read-light case &mdash; polling exchange rates or inventory all day &mdash; per-request billing was cheaper. What genuinely improves is predictability: token usage can be estimated client-side, request counts cannot. Anyone maintaining an agent cost model should rebuild the retrieval line, and watch how many pages the browsing tool fetches by default and how deep it crawls, because that is the real numerator of the bill.</p>
+        <h3>Apple is reported to be building a system-level AI agent, with "Agentic AI" roles already posted</h3>
+        <p>According to Bloomberg's Mark Gurman, relayed by <a href="https://m.ithome.com/html/1029750.htm" target="_blank" rel="noopener noreferrer">ITHome</a> on November 20, Apple is developing its own AI agent to let the assistant control devices, operate apps, browse the web and write software on the user's behalf. Apple's careers site already lists a senior engineering manager role titled "Agentic AI - Proactive", describing a team building an assistant that can execute tasks for the user.</p>
+        <p>The posting is specific about capability: the agent should use a computer like a skilled human operator, moving between browsers, documents, terminals, code editors and services and choosing tools on its own. It should plan and complete multi-step tasks across apps, browsers, command lines and APIs rather than follow single instructions, and coordinate several sub-agents with narrower jobs. Apple also stresses privacy: an agent that runs code, uses the user's credentials and acts on their behalf needs strict permission management, sandboxing and transparency.</p>
+        <p>The timeline is still early. Gurman reports Apple has considered launching the service as soon as late 2027, though the schedule is not fixed, and Apple did not respond to a request for comment. New CEO John Ternus has pressed software chief Craig Federighi to accelerate AI work. Permissions are already moving: the upcoming macOS 27.3 beta adds warnings for third-party AI agents, requiring users to re-confirm when granting an app control of the Mac, which takes enabling third-party computer-control tools for ChatGPT from four steps to fourteen; iOS 27.3 will give developers deeper Siri integration with third-party apps.</p>
+        <p class="why"><b>Why it matters</b>The deciding factor for system-level agents is not the model but the permission model and the surface of system APIs. Apple's job posting splits cross-app operation into tool selection, multi-step planning and sub-agent coordination — exactly the hard parts of today's agent frameworks — while the four-to-fourteen-step permission flow is both safety design and a competitive moat against third parties. For agent teams the practical takeaway: before waiting for Apple's system capability, make your permission requests, sandbox boundaries, failure rollback and action audit solid. That is the passport to the system APIs later.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19 14:48</span>
+          <a class="src" href="https://tech.ifeng.com/c/8yBDkaZU0eF" target="_blank" rel="noopener noreferrer">Phoenix Tech ↗</a>
+        </div>
+        <h3>Volcano Engine ships SeedRealtime 1.0 API, an end-to-end audio-video model that replaces ASR+VLM+TTS pipelines</h3>
+        <p>ByteDance's Volcano Engine launched the API for SeedRealtime 1.0, its Doubao realtime audio-video conversation model, on November 19. According to <a href="https://tech.ifeng.com/c/8yBDkaZU0eF" target="_blank" rel="noopener noreferrer">Volcano Engine</a>, the model folds voice, imagery, timing and expression into a single end-to-end model so it can interact in real time over a continuous multimodal stream — watching, listening and speaking at once.</p>
+        <p>The difference is the length of the chain. A conventional voice assistant strings together ASR, a VLM and TTS, so latency stacks up and information is lost between modules. SeedRealtime 1.0 does not wait to be asked: it keeps reading the scene and speaks up when the moment fits. Volcano Engine says the change halves the rhythm problems of audio-video dialogue and clearly raises the share of conversations that run start to finish, with target uses in voice assistants, smart hardware, companion apps and live customer service.</p>
+        <p class="why"><b>Why it matters</b>The hard part of realtime end-to-end multimodality is systems engineering, not architecture: time to first response, interruption and half-duplex switching, echo cancellation, and context management over long sessions. Miss any one and the experience falls back to a walkie-talkie. The "halves the rhythm problems" claim is vendor-measured, so test three numbers on your own hardware and network before committing: end-to-end first response, recovery after an interruption, and stability over a ten-minute session. The second question is billing: collapsing three stages into one forward pass should save duplicate encoding and intermediate representations, but whether the unit is per minute or per token decides whether it can replace an existing stack.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/20 07:41</span>
+          <a class="src" href="https://siliconangle.com/2026/11/19/google-adds-computer-use-capabilities-to-geminis-mac-app/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>Google adds computer use to Gemini on macOS: multi-step tasks in a background window, approvals for key actions</h3>
+        <p>Google released a new macOS Gemini client on November 19 that can work across local apps, files and web pages when a user types "@Computer use" into a prompt. According to <a href="https://siliconangle.com/2026/11/19/google-adds-computer-use-capabilities-to-geminis-mac-app/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a>, the assistant finds the local app a task needs, draws up a plan and works through it step by step, handling sequences of dozens of actions and letting the output of one workflow seed the next.</p>
+        <p>The design deliberately isolates the agent: tasks run in a separate background window so the main screen and cursor stay untouched, a preview pane in the chat window shows progress, and users can pause, stop or intervene mid-task. Users choose which apps Gemini may reach, and the agent asks for approval before key actions. Michael Friedman, group product manager for the Gemini app, wrote in a blog post that privacy and safety are built in — users decide which apps the agent can access, watch every step live, pause at any time and approve critical actions before they happen. Gemini can also read from and write to web services and move data between local programs and the cloud.</p>
+        <p class="why"><b>Why it matters</b>Two stories on the same day make a clean comparison: Google has already shipped computer use to macOS users while Apple is still hiring for its own agent. The product shape — background window, live preview, approval for key actions — is the most pragmatic compromise available for a system-level agent: it does not seize the main screen, and it keeps a human-in-the-loop audit point. Technically, note that it still drives the UI, so fragility comes from interface changes rather than model capability, and regression-testing cost grows linearly with the number of target apps. An explicit "@Computer use" switch is more auditable than default takeover, and looks like a compliance design aimed at enterprise buyers.</p>
       </article>
 
     </div>
@@ -390,7 +437,7 @@
 
   <section class="chapter" id="research-en" data-c="research">
     <div class="chead">
-      <span class="cnum">03</span>
+      <span class="cnum">04</span>
       <h2>Research &amp; Safety</h2>
       <span class="cen">研究与安全</span>
       <span class="crule"></span>
@@ -399,25 +446,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/18</span>
-          <a class="src" href="https://openai.com/index/advancing-chip-design-with-our-models/" target="_blank" rel="noopener noreferrer">OpenAI · Advancing chip design with our models ↗</a>
+          <span class="d">11/20 07:00</span>
+          <a class="src" href="https://tech.ifeng.com/c/8yCGzVbQh18" target="_blank" rel="noopener noreferrer">Phoenix Tech ↗</a>
         </div>
-        <h3>OpenAI says its models cut Jalapeño vector-unit area by about 13%, and is applying the method to AMD hardware</h3>
-        <p>OpenAI published a technical report on November 18 local time detailing how its models took part in chip design. The company started using GPT-4o on Jalapeño, its first custom inference chip, in early 2025. In the vector unit the models reworked floating-point adders, multipliers, conversion functions, reduction logic and the special-function unit, exploring alternative logic implementations and how to divide computation across pipeline stages to share hardware and shrink intermediate storage. In the matrix unit, gains accumulated across floating-point adders, multipliers and low-precision dot-product circuits.</p>
-        <p>Two single changes show the scale. One multiplier redesign used about 15% less cell area in synthesis while cutting latency from two clock cycles to one; a separate adder redesign took about 15% off area while keeping its two-cycle latency. Across the effort, the team estimates model-proposed changes reduced standard-cell area by about 13% in the vector unit and 10% in the matrix unit, and those optimisations were proven during Jalapeño&rsquo;s silicon bring-up.</p>
-        <p>The same approach is being carried over to third-party hardware: the report's introduction says the team is applying it with AMD to deliver significant gains on hardware outside OpenAI's own line. To measure end-to-end design ability, OpenAI also ran successive model generations against two open-source processor designs. The next step is a partnership with Synopsys to bring the models into the EDA tools engineers already use to design and verify chips.</p>
-        <p class="why"><b>Why it matters</b>This is not AI drawing circuits; it is a model doing local search between RTL and synthesis, judged by the old standard of power, performance and area, with silicon bring-up as the final arbiter &mdash; which is what makes the report harder than most demos. For chip teams the reproducibility question sits in the evaluation: redesigning a processor from a spec on two open-source cores is not the same as winning on a production target, and the report itself notes a model may drop things like performance counters. The part worth copying is the workflow &mdash; putting the model inside the existing EDA and verification loop rather than letting it emit a design alone. The third signal is Synopsys: once models sit inside commercial EDA, the change shifts from research to licensing, and the pricing power of the big three gets renegotiated.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/18 21:04</span>
-          <a class="src" href="https://www.stcn.com/article/detail/4342708.html" target="_blank" rel="noopener noreferrer">Securities Times · People’s Finance News ↗</a>
-        </div>
-        <h3>China and Singapore hold AI governance talks in Beijing: standards, safety and risk, international cooperation</h3>
-        <p>China&rsquo;s Cyberspace Administration and Singapore&rsquo;s Infocomm Media Development Authority (IMDA) held an AI governance exchange meeting in Beijing on November 18, according to the CAC&rsquo;s own WeChat account. Officials from the relevant departments discussed AI governance policy, standards and practice, AI safety and risk, and international cooperation on AI governance, and reached a consensus on deepening cooperation.</p>
-        <p>The readout lists no deliverables and no date for a next round. The useful background is that the two sides use different instruments: Singapore works through IMDA-led frameworks and testing regimes, China through CAC-led filing, security assessment and content governance. The three agenda items are precisely where those two toolkits meet.</p>
-        <p class="why"><b>Why it matters</b>AI governance is moving down from multilateral forums to bilateral ones. Multilateral venues produce principles, but implementation depends on whether two countries&rsquo; filing requirements, testing methods and incident-reporting channels can connect. For a team deploying models in both places, the practical value of a dialogue like this is whether one safety assessment can be reused on the other side &mdash; and that answer normally lives in technical annexes, not in a readout. Two things to watch: whether a working group and a recurring meeting are established, and whether any mutual recognition or joint testing appears. Without those, the consensus stays at the level of statements.</p>
+        <h3>Google paper: editing four harness modules lifts SWE-bench Lite from 5% to 40%</h3>
+        <p>On November 20, <a href="https://tech.ifeng.com/c/8yCGzVbQh18" target="_blank" rel="noopener noreferrer">Phoenix Tech</a> reported on a Google paper titled "Harnesses That Improve Themselves", in which an optimiser model rewrites the agent's runtime harness rather than only its prompt. The harness is the layer around the model that manages context, calls tools, checks results and decides when to stop.</p>
+        <p>The setup is deliberately restrained: a 142-line coding-agent harness is split into four editable modules, each optimisation round may touch only one of them, and every candidate is tested on a validation set under a token budget so that only changes that pass validation survive. Using Gemini 3.8 Flash on 40 held-out SWE-bench Lite tasks, the initial harness solved 5.0% of tasks; modular editing plus validation reached 40.0% at about 46,700 tokens per task.</p>
+        <p>The controls are the more interesting result. Allowing the optimiser to rewrite the whole harness without restriction reached 42.5%, only 2.5 points more, but at about 451,600 tokens per task — nearly ten times the cost. Constraining the agent with prompt rules alone dropped success to 2.5%. The paper argues that important runtime constraints should live in code, such as automatically running tests on every edit and using success rate and token spend as the acceptance criterion.</p>
+        <p class="why"><b>Why it matters</b>The harness is becoming the third object of optimisation after weights and prompts, and the paper's contribution is not "AI improves itself" but a reproducible discipline: cut into modules, change one thing at a time, gate on a validation set, cap the token budget. The most underrated knob is the token ceiling — without it, self-improvement degenerates into repeated rewrites and runaway cost. The caveats are equally clear: one model, 40 tasks, no evidence yet that it transfers across models, tasks or long-running environments, and harnesses couple tightly to their model, so a framework tuned for Gemini can easily be negative value on another model. The actionable version for a team: make your harness modular and verifiable first, accept changes only on success rate and tokens, and only then let a model edit it.</p>
       </article>
 
     </div>
@@ -425,7 +461,7 @@
 
   <section class="chapter" id="embodied-en" data-c="embodied">
     <div class="chead">
-      <span class="cnum">04</span>
+      <span class="cnum">05</span>
       <h2>Embodied AI</h2>
       <span class="cen">具身智能</span>
       <span class="crule"></span>
@@ -434,49 +470,13 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/18 21:10</span>
-          <a class="src" href="https://jnzstatic.cs.com.cn/zzb/htmlInfo/138645.html" target="_blank" rel="noopener noreferrer">China Securities Journal ↗</a>
+          <span class="d">11/19 18:48</span>
+          <a class="src" href="https://stcn.com/article/detail/4344296.html" target="_blank" rel="noopener noreferrer">Securities Times · People&#39;s Financial News ↗</a>
         </div>
-        <h3>Pony.ai posts ¥299m in third-quarter revenue, up 75.2%, as robotaxi reaches ¥119m and the fleet hits 2,768 cars</h3>
-        <p>Pony.ai reported third-quarter results on the evening of November 18: revenue of ¥299 million, a record for the period, up 75.2% year on year and 23.1% quarter on quarter, growing faster than costs. Gross profit rose 69.5% year on year. The company credits its co-built fleet model, which expands vehicle deployment while adding recurring technology-licensing revenue.</p>
-        <p>The mix is shifting. Robotaxi revenue was ¥119 million, up 165.4% and 39.9% of the total, the main growth engine. Robotruck brought in ¥120 million, up 76.3%, with port haulage and urban light-truck projects continuing to land, and smart solutions contributed ¥59.4 million. The robotaxi fleet stood at 2,768 vehicles at quarter-end, and the company aims to deploy 3,500 across 20 cities worldwide by the end of the year.</p>
-        <p class="why"><b>Why it matters</b>The 39.9% line matters more than the 75.2%. Revenue is moving from selling solutions to running operations plus licensing technology: the first is priced per project and swings with delivery, the second spreads over fleet size and earns margin from density. Going from 2,768 to 3,500 means adding 732 vehicles in one quarter. A co-built fleet pushes capital spending onto partners at the cost of sharing per-vehicle revenue, so scale does not translate one-for-one into profit. What decides whether the business stands up are two undisclosed numbers: rides per vehicle per day, and the ratio of remote safety operators to cars. If neither improves, 3,500 cars just multiplies the cost base by 26%.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="capital-en" data-c="capital">
-    <div class="chead">
-      <span class="cnum">05</span>
-      <h2>Industry &amp; Capital</h2>
-      <span class="cen">行业与资本</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/19 06:07</span>
-          <a class="src" href="https://fortune.com/2026/11/18/anthropic-prices-ipo-83-per-share-1-5-trillion/" target="_blank" rel="noopener noreferrer">Fortune ↗</a>
-        </div>
-        <h3>Anthropic prices its IPO at $83 a share: a roughly $1.5 trillion valuation and at least $68.5 billion raised</h3>
-        <p>Anthropic priced its initial public offering at $83 a share on November 18 local time, above the $70&ndash;78 range it had guided, valuing the company at roughly $1.5 trillion. That would make it the second-largest IPO on record, behind SpaceX&rsquo;s $1.77 trillion listing in June. The stock begins trading on Nasdaq on November 19 under the ticker ANT.</p>
-        <p>On size, the company had planned to sell about 825 million shares, which at $83 implies at least $68.5 billion raised. Fortune, citing Bloomberg, reported that Anthropic also increased the size of the offering on strong demand, without saying by how much. Seven strategic partners, including Google and Nvidia, agreed to buy $26 billion of non-voting stock at the offer price. It is also the first pure-play frontier model maker to list: SpaceX also builds rockets, and Google and Meta both have search and social cash flows underneath them.</p>
-        <p>The filing&rsquo;s numbers: revenue of $33.2 billion for the nine months to September 30, against $2.5 billion a year earlier, and a $104 billion net loss, most of it accounting for convertible notes rather than cash leaving the business. The two things investors have watched for two years &mdash; the duration of its compute commitments and enterprise renewal rates &mdash; have never been priced in a public market.</p>
-        <p class="why"><b>Why it matters</b>Annualising $33.2 billion of nine-month revenue puts the $1.5 trillion valuation at roughly 34 times sales. In an industry where inference costs fall every year, that multiple requires revenue to grow faster than unit prices decline. The first step in reading the accounts is separating the $104 billion loss: fair-value losses on convertible notes do not consume cash, and what matters is operating cash flow plus the maturity schedule of compute contracts, which is the rigid spending of the next three years. The second variable is the pricing environment of the same day, with Google cutting Gemini 4 Neon to $3 and $15 per million tokens, which redefines the margin band for closed models.<br><b>The other angle</b>The $26 billion strategic purchase overlaps customers with shareholders: Google and Nvidia both supply compute and buy stock at the offer price. Those related-party deals will be a disclosure focus in the first quarterly report, and for public markets they put the loop of AI infrastructure money &mdash; whose pocket it leaves and whose it returns to &mdash; into a public filing for the first time.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/18 13:26</span>
-          <a class="src" href="https://www.digitaltoday.co.kr/cn/view/127539/nvidia-to-halt-h200-sales-to-china-after-jensen-huang-exit" target="_blank" rel="noopener noreferrer">DigitalToday ↗</a>
-        </div>
-        <h3>Nvidia stops selling H200 to China, confirmed by interim CEO on the earnings call, and adds a board committee on export controls</h3>
-        <p>Nvidia has decided to stop selling H200 chips to China, according to DigitalToday citing TechCrunch on November 17 local time. Interim CEO Colette Kress confirmed the move on the earnings call, effectively ending a contested exception under which H200 sales to China ran through US transshipment, an arrangement brokered between former CEO Jensen Huang and the Trump administration with a 25% US tariff on the transactions.</p>
-        <p>The same day, Nvidia said it had created a board committee to oversee national security policy, export-control compliance and global trade risk. The policy side moved first: on November 16 Washington issued rules barring shipments of advanced US chips to overseas data centres that serve Chinese customers, closing the route through foreign facilities.</p>
-        <p>The cost is already being estimated. Jefferies expects the new rules to cut Nvidia&rsquo;s data-centre revenue by $44 billion to $62 billion next year. Kress&rsquo;s response was that demand remains unmet, including for Vera Rubin, and that overall revenue should not be affected; but potential customer losses in Southeast Asia &mdash; Singapore, Malaysia, Thailand and Indonesia &mdash; are flagged as a medium-term variable. Nvidia&rsquo;s Singapore subsidiary reported $104 billion of revenue in 2025; the company has not disclosed the figure since.</p>
-        <p class="why"><b>Why it matters</b>The point is not that one chip is withdrawn. It is that the basis for judging China&rsquo;s compute supply moves from &ldquo;policy allows it&rdquo; to &ldquo;the company&rsquo;s compliance team allows it&rdquo;. The H200 transshipment route with its 25% tariff turned political risk into a calculable cost; after the halt that cost can no longer be calculated, so buyers plan around absence &mdash; a harder constraint than any export list. For teams building training clusters, the near-term effect is second-hand H200 and rental prices, and the medium-term effect is how fast domestic accelerators and neoclouds substitute. For Nvidia, a $44&ndash;62 billion hole has to be filled elsewhere, and a board committee on national security says it now treats export compliance as a long-run operating variable rather than a quarterly disturbance.</p>
+        <h3>Black Sesame sets up an embodied-AI headquarters in Shenzhen, says volume orders from robot makers are locked in</h3>
+        <p>Black Sesame Technologies opened an embodied-AI headquarters in Qianhai, Shenzhen, on November 19 under a dual-headquarters model spanning Qianhai and Hong Kong, focused on compute platforms for embodied AI and on industry collaboration. A showroom opened the same day with more than ten ecosystem partners covering humanoid, quadruped and wheeled robots and collaborative arms. According to <a href="https://stcn.com/article/detail/4344296.html" target="_blank" rel="noopener noreferrer">People's Financial News</a>, the company has strategic agreements with Midea, AUBO, COSCO Shipping and Joyson Electronics, and has locked in volume orders from several leading robot makers across wheeled robots, humanoids, quadruped robot dogs, industrial arms, mobile bases and lawn mowers.</p>
+        <p>The company's base is automotive: founded in 2016, it built the Huashan and Wudang series of high-performance driving chips. Its first-half 2026 results showed revenue of ¥458m, up 81.3%, and more than 6m chips shipped overall; embodied-AI products and solutions brought in ¥47.2m, which the company called a well-filled order book and its second growth curve.</p>
+        <p class="why"><b>Why it matters</b>Reusing automotive IP in robots works because one SoC and toolchain can amortise development and validation across both, which is why the company now reports the segment separately. But "orders locked in" and "revenue delivered" are different things: ¥47.2m of embodied revenue is roughly a tenth of total revenue, so volume is still ahead. What decides whether it captures this wave is the compute tier robots settle on. If mainstream machines stay at tens of TOPS for perception plus a light VLA policy, automotive SoCs have an obvious price-performance edge; once embodied models push per-robot compute into the hundreds of TOPS, it collides head-on with Nvidia and domestic high-compute platforms. Watch the list of volume models, the per-robot compute spec, and how much of those locked orders actually converts in 2027.</p>
       </article>
 
     </div>
@@ -485,9 +485,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between November 18, 09:26 and November 19, 07:33 (Beijing time): 8 stories. Compiled at 11/19 07:33.</p>
+        <p>This issue covers reports published between November 19, 07:33 and November 20, 09:52 (Beijing time): 8 stories. Compiled at 11/20 09:52.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 024 · 24h window · Generated 2026-11-19 07:33</p>
+    <p class="sig">AI Daily · Issue 025 · 24h window · Generated 2026-11-20 09:52</p>
       </div>
     </footer>
       </div>
@@ -512,8 +512,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">18</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-19.html" title="Google 发布 Gemini 4 Neon：智能指数 61 分排第三，每任务成本比 Carbon 低 17%、耗时少 40%">
+        <summary><span>2026 年 11 月</span><span class="am-count">19</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-20.html" title="Anthropic 纳斯达克首日：开盘涨 34%、收盘只剩 17%，813 亿美元募资刷新 IPO 纪录">
+          <span class="a-date">2026.11.20 <em>FRI</em></span>
+          <span class="a-head">Anthropic 纳斯达克首日：开盘涨 34%、收盘只剩 17%，813 亿美元募资刷新 IPO 纪录</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-19.html" title="Google 发布 Gemini 4 Neon：智能指数 61 分排第三，每任务成本比 Carbon 低 17%、耗时少 40%">
           <span class="a-date">2026.11.19 <em>THU</em></span>
           <span class="a-head">Google 发布 Gemini 4 Neon：智能指数 61 分排第三，每任务成本比 Carbon 低 17%、耗时少 40%</span>
         </a>
@@ -618,8 +622,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">18</span></summary>
-        <a class="archive-link is-current" href="daily-ai/2026-11-19-en.html" title="Google ships Gemini 4 Neon: 61 on the Intelligence Index, 17% cheaper per task than Carbon and 40% faster">
+        <summary><span>November 2026</span><span class="am-count">19</span></summary>
+        <a class="archive-link is-current" href="daily-ai/2026-11-20-en.html" title="Anthropic&#39;s Nasdaq debut: opens up 34%, closes up 17%, on a record $81.3bn raise">
+          <span class="a-date">2026.11.20 <em>FRI</em></span>
+          <span class="a-head">Anthropic&#39;s Nasdaq debut: opens up 34%, closes up 17%, on a record $81.3bn raise</span>
+        </a>
+        <a class="archive-link" href="daily-ai/2026-11-19-en.html" title="Google ships Gemini 4 Neon: 61 on the Intelligence Index, 17% cheaper per task than Carbon and 40% faster">
           <span class="a-date">2026.11.19 <em>THU</em></span>
           <span class="a-head">Google ships Gemini 4 Neon: 61 on the Intelligence Index, 17% cheaper per task than Carbon and 40% faster</span>
         </a>

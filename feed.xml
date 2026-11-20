@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 19 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 20 日</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-20.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-20.html</guid>
+      <pubDate>Fri, 20 Nov 2026 01:00:00 GMT</pubDate>
+      <description>两条线在同一个 24 小时里交叉：资本端，Anthropic 以 813 亿美元公开募资在纳斯达克挂牌，开盘涨 34%、收盘只剩 17%，招股书里那张 9009 亿美元的算力采购承诺表比股价更值得读；供给端，阿里把季度资本开支加到 504.77 亿元、AI 云收入做到 609.73 亿元，自研芯片真武 V900 排到 2027 年一季度。而当天最像「工程」的进展来自一篇论文：只改 harness 的四个模块，SWE-bench Lite 成功率从 5% 提到 40%，钱和算力之外，还有一层被忽视的可优化空间。 Anthropic 纳斯达克首日：开盘涨 34%、收盘只剩 17%，813 亿美元募资刷新 IPO 纪录</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 19 日</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-19.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-31.html</guid>
       <pubDate>Sat, 31 Oct 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是入口。苹果把千问放进 Siri、写作工具和视觉智能，11 月 4 日开放测试；百度把搜索 API 压到 4.9 元/千次； 商汤用一个 9B 的循环模型证明参数不是唯一的路。入口之争，正从模型榜单转到系统权限与计价单位。 Apple 智能接入阿里千问：系统级入口，12 月随 iOS 27.3 落地中国</description>
-    </item>
-    <item>
-      <title>AI 日报 · 2026 年 10 月 30 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-10-30.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-30.html</guid>
-      <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
-      <description>今天没有新模型，主线是 AI 开始算账：Alphabet 因自由现金流转负单日蒸发约 5000 亿美元； 智元发布 GO-3 与灵渠 OS，并用 Worken 给机器人记“有效工时”；豆包工作向 Kimi、GLM、DeepSeek 开放。 资本、平台与具身三条线，都在回答同一个问题——AI 的钱和活，怎么算。 Alphabet 单日蒸发约 5000 亿美元：AI 资本开支开始被现金流定价</description>
     </item>
   </channel>
 </rss>

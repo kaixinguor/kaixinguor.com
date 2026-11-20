@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 20 日</title>
+<meta name="description" content="2026-11-20 AI 日报第 025 期：Anthropic 纳斯达克首日开盘涨 34%、收盘只剩 17%，813 亿美元募资刷新 IPO 纪录；阿里季度资本开支 504.77 亿元、AI 云收入 609.73 亿元，真武 V900 定在 2027 年一季度；谷歌论文称只改 harness 四个模块就能把 SWE-bench Lite 成功率从 5% 提到 40%；天津大学发布 560 亿参数酶设计基座模型天华开物；苹果被曝自研系统级 AI 智能体；火山引擎上线 SeedRealtime 1.0 API；谷歌给 macOS 版 Gemini 加上电脑操控。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 20 日">
+<meta property="og:description" content="2026-11-20 AI 日报第 025 期：Anthropic 纳斯达克首日开盘涨 34%、收盘只剩 17%，813 亿美元募资刷新 IPO 纪录；阿里季度资本开支 504.77 亿元、AI 云收入 609.73 亿元，真武 V900 定在 2027 年一季度；谷歌论文称只改 harness 四个模块就能把 SWE-bench Lite 成功率从 5% 提到 40%；天津大学发布 560 亿参数酶设计基座模型天华开物；苹果被曝自研系统级 AI 智能体；火山引擎上线 SeedRealtime 1.0 API；谷歌给 macOS 版 Gemini 加上电脑操控。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-20.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-19T07:33:00+08:00/2026-11-20T09:52:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-20.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-20.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-20-en.html">
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../feed-en.xml">
+<link rel="stylesheet" href="../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../index.html" aria-current="page">AI 日报</a>
+      <a href="../economy.html">经济日报</a>
+      <a href="../education.html">教育日报</a>
+      <a href="../psychology.html">心理学日报</a>
+      <a href="../tools.html">工具</a>
+      <a href="../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-20-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 025 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 20 日<span class="weekday">FRI</span></h1>
+    <p class="deck">两条线在同一个 24 小时里交叉：资本端，Anthropic 以 813 亿美元公开募资在纳斯达克挂牌，开盘涨 34%、收盘只剩 17%，招股书里那张 9009 亿美元的算力采购承诺表比股价更值得读；供给端，阿里把季度资本开支加到 504.77 亿元、AI 云收入做到 609.73 亿元，自研芯片真武 V900 排到 2027 年一季度。<em>而当天最像「工程」的进展来自一篇论文：只改 harness 的四个模块，SWE-bench Lite 成功率从 5% 提到 40%，钱和算力之外，还有一层被忽视的可优化空间。</em></p>
+    <div class="metabar"><span class="pill">第 025 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/19 07:33 – 11/20 09:52</span>
+      <span class="dot"></span>
+      <span>8 条</span>
+      <span class="dot"></span>
+      <span>阅读约 12 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#capital"><span class="n">01</span>行业与资本</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#products"><span class="n">03</span>产品与智能体</a>
+        <a href="#research"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied"><span class="n">05</span>具身智能</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Anthropic 在纳斯达克挂牌：开盘 111.50 美元、较发行价涨 34.3%，收盘 97.17 美元、涨幅收窄至 17.1%，完全稀释估值约 1.77 万亿美元。</b>公开募资约 813 亿美元刷新 IPO 纪录，加 260 亿美元私募配售合计约 1073 亿美元；开盘半小时内股价较首笔成交价跌约 13%，是 2008 年以来大型美股 IPO 最差的半小时开局。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>阿里季度资本开支 504.77 亿元、同比增 60%，AI 云与算力服务收入 609.73 亿元、同比增 53%，AI 相关产品收入 179.18 亿元、连续 13 个季度三位数增长。</b>自研 AI 芯片真武 V900 计划 2027 年一季度上市并开源软件栈平头哥 SAIL；Qwen4-Max 主干参数 2.4 万亿，带原生视觉。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>谷歌论文《Harnesses That Improve Themselves》：142 行 harness 切成四个模块、每轮只改一个并过验证，SWE-bench Lite 成功率从 5.0% 提到 40.0%，每任务约 4.67 万 token。</b>允许整体重写成功率 42.5%，但每任务约 45.16 万 token、接近十倍；只加提示词规则反而降到 2.5%。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-19">
+        <div class="cmeta">
+          <span class="d">11/20 09:41</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261120A04U7X00" target="_blank" rel="noopener noreferrer">华尔街见闻 ↗</a>
+        </div>
+        <h3>Anthropic 纳斯达克首日：开盘涨 34%、收盘只剩 17%，813 亿美元募资刷新 IPO 纪录</h3>
+        <p>美东时间 11 月 19 日，Anthropic 以代码 ANT 在纳斯达克挂牌交易。开盘报 111.50 美元，较 83 美元发行价高约 34.3%；盘中最高触及 115.10 美元、涨幅约 38.7%；此后持续回落，最低 92.72 美元，收 97.17 美元、较发行价涨 17.1%。据<a href="https://news.qq.com/rain/a/20261120A04U7X00" target="_blank" rel="noopener noreferrer">华尔街见闻</a>报道，开盘后半小时内股价较首笔成交价下跌约 13%，是 2008 年以来大型美股 IPO 最差的半小时开局。</p>
+        <p>规模上，本次公开发行募资约 813 亿美元，超过 SpaceX 此前约 750 亿美元的纪录；加上约 260 亿美元的同步私募配售，交易合计约 1073 亿美元。83 美元发行价对应上市估值约 1.5 万亿美元，开盘市值一度突破 2 万亿美元，收盘按完全稀释口径约 1.77 万亿美元。雅虎财经数据显示，首笔 111.50 美元的交易涉及约 1.08 亿股、金额约 120 亿美元，第一个完整交易分钟成交约 150 亿美元。</p>
+        <p>招股书披露的基本面：截至 2026 年 10 月 31 日年化运营收入约 810 亿美元，比 9 月底增加约 100 亿美元；第三季度收入 169.56 亿美元、环比增约 47%，但当季经营亏损约 5.67 亿美元，二季度还是约 9.74 亿美元经营利润，公司把转亏归因于 50 亿美元短期算力承诺成本与 20 亿美元非现金捐赠配捐费用。三季度算力与基础设施支出约 99 亿美元，高于二季度的约 56 亿美元，前三季度合计约 188 亿美元。</p>
+        <p>最重的一张表是承诺：截至 2026 年 9 月底及之后签订的采购承诺与租赁协议总额约 9009 亿美元，其中约 4516 亿美元预计在 2030 年底前发生，其余大部分落在 2031 至 2045 年。CEO 达里奥·阿莫代伊在敲钟仪式上称，公司会根据安全评估决定模型的训练与部署节奏，「不会屈服于商业压力，也不会屈服于政治压力」。</p>
+        <p class="why"><b>看点</b>对做模型的人，招股书里比股价更有信息量的是那张采购承诺表：9009 亿美元里有 4516 亿在 2030 年前到期，它基本锁定了未来四年的算力上限和单位成本曲线的形状——训练规模的上限由合同决定，而不是由架构决定。第二个数字是三季度算力支出 99 亿美元、当季经营亏损 5.67 亿：收入按使用量计费、成本按多年最低采购承诺，两边的期限结构并不匹配，这比「估值贵不贵」更难修。第三，首日半小时回吐约 13%、收盘只剩 17% 的涨幅，说明打新资金愿意为稀缺资产付溢价，但不愿意在 2 万亿美元上方过夜。<br><b>另一个视角</b>83 美元发行价把一家成立五年多的公司定在 1.5 万亿美元，而它 2026 年前三季的算力与基础设施支出合计约 188 亿美元——资本市场在为「未来十年的算力合同」提前付钱，这与同一天阿里把季度资本开支加到 504.77 亿元，是同一件事的两面。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19</span>
+          <a class="src" href="https://www.alibabagroup.com/zh-HK/document-2060147792046718976" target="_blank" rel="noopener noreferrer">阿里巴巴集团 · 2026 年 9 月份季度业绩 ↗</a>
+        </div>
+        <h3>阿里季度资本开支 504.77 亿元、AI 云收入 609.73 亿元：真武 V900 排到 2027 年一季度</h3>
+        <p>11 月 19 日，阿里巴巴发布截至 9 月 30 日止季度业绩：收入 2715.19 亿元、同比增 10%；AI 云与算力服务收入 609.73 亿元、同比增 53%，其中外部客户收入同比增 64%、外部客户经常性收入（剔除算力设备解决方案）同比增 67%；AI 相关产品收入 179.18 亿元，连续第 13 个季度三位数同比增长。净利润 644.20 亿元、同比增 213%，公司归因于投资净收益与经营利润增加；经调整 EBITA 326.36 亿元、同比增 260%。</p>
+        <p>投入侧同样清楚：季度资本性支出 504.77 亿元、同比增 60%，公司列出的原因包括加速扩大算力规模、各类芯片组件价格上涨、预期客户持续采用 AI 智能体带动的 CPU 算力增加，以及采购周期波动；自由现金流为净流出 344.72 亿元，去年同期净流出 218.40 亿元，缺口主要来自云基础设施支出。</p>
+        <p>芯片与模型是这份财报里最像「路线图」的部分。9 月云栖大会发布的下一代训推一体 AI 芯片真武 V900，基于自研并行计算架构，计划 2027 年一季度上市，同时开源了芯片软件栈「平头哥 SAIL」；8 月推出的真武 M890 超节点实例，公司称是中国首个能支持超过两万亿参数模型推理的超节点架构。模型侧发布 Qwen4-Max，采用新的混合专家架构、2.4 万亿主干参数，带原生视觉能力，官方口径是在制造业、游戏开发、医疗与前沿科研等场景的长周期任务执行更强。</p>
+        <p class="why"><b>看点</b>把 AI 云收入 +53% 和资本开支 +60% 放在一起看，需求仍跑在折旧前面，但自由现金流转负说明这笔钱是真金白银从当期现金流里出的。对做推理的人，更关键的是组合拳：自研芯片 + 超节点 + 开源 SAIL，本质是在压每 token 的固定成本与迁移成本，而不是单纯堆卡；2.4 万亿参数的 MoE 则意味着推理账单主要落在激活参数与 KV cache，权重体积不是主要矛盾。要跟踪的三件事：V900 的实际量产与外部客户采用率、SAIL 对主流框架的兼容程度、以及下一季 capex 是否继续以 60% 的速度增长——如果是，云厂商之间的价格战还有空间。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19 16:01</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/19/content_615873.html" target="_blank" rel="noopener noreferrer">科技日报 ↗</a>
+        </div>
+        <h3>天津大学发布酶设计基座大模型「天华开物」：560 亿参数，一周给出酶设计方案</h3>
+        <p>11 月 19 日，天津大学在天津发布「天华开物」酶设计基座大模型，并与该校合成生物自动化设备结合，形成工业酶闭环迭代优化系统。据<a href="https://www.stdaily.com/web/gdxw/2026-11/19/content_615873.html" target="_blank" rel="noopener noreferrer">科技日报</a>报道，团队称这套系统支撑一周内给出酶设计方案，并让三个月内完成菌种定制化构建与目标产品制备工艺开发成为可能。</p>
+        <p>参数路线值得记一笔：研发 2021 年启动，2024 年做出 8 亿参数的酶设计基座，2025 年达到 70 亿，随后联合智谱华章扩容到 560 亿。模型是从底层架构重新构建的，方法上把「反应—序列—结构」联合建模，将「要完成什么生产任务」与「酶应该怎样构成」关联起来，而不是在通用模型上做微调。</p>
+        <p>三项能力对应三个环节：算得准，依据目标反应从头设计新酶、预测突变效应、优选改造组合；写得出，通过自动化基因合成、组装与表达把数字设计变成酶样品；验得回，把实验数据回流到模型训练，以实测结果校准模型、迭代设计，形成「设计—构建—测试—学习」的闭环。模型适配国产算力，支持本地化私有部署，企业数据可以不出厂；下一步面向科研界与产业界开放试用，并与企业共建行业酶库与应用标准。发布会现场，中石油、招商局集团、浦发银行、药明康德、诺和诺德、凯莱英、九天基因、元合成等企业代表到场交流。</p>
+        <p class="why"><b>看点</b>用 560 亿参数做一个垂直领域的基座，真正的壁垒不在参数，而在训练底座——多年积累的酶序列、结构、反应与工艺数据，其中相当一部分来自实验室与产业一线，这是通用模型拿不到的部分。工程上要问三件事：一是「一周给出方案」的口径，是候选序列清单还是可直接进湿实验的酶；二是闭环的吞吐，自动化平台一天能验证多少个设计，决定了模型迭代的真实频率；三是开放试用之后的评测基准，如果各家都报自己的成功率，这个领域会重演通用模型「榜单自测」的老问题。对做生物制造的企业，私有部署 + 数据不出厂是能否上这条船的前提。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/20 06:56</span>
+          <a class="src" href="https://m.ithome.com/html/1029750.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>苹果被曝自研系统级 AI 智能体：可跨应用操作设备，官网已挂「Agentic AI」岗位</h3>
+        <p>据彭博社马克·古尔曼报道（IT之家 11 月 20 日转述），苹果正在开发自主 AI 智能体，目标是让 AI 代替用户执行设备操控、应用操作、网页浏览与软件编程等任务。苹果官网已挂出「Agentic AI - Proactive」高级工程经理的招聘信息，称正在组建团队开发「能够代表用户执行任务」的 AI 助手。</p>
+        <p>招聘描述把能力写得很具体：像熟练的人类操作者一样使用电脑，在浏览器、文档、终端、代码编辑器与各类服务之间切换，自主选择合适的工具；不只执行单一指令，还要规划并完成跨应用、浏览器、命令行与 API 的多步任务，并协调多个分别负责不同工作的子智能体。苹果同时强调隐私：这类能运行代码、使用用户凭据、代表用户行动的智能体，需要严格的权限管理、沙盒隔离与操作透明度。</p>
+        <p>时间表仍是早期。古尔曼称苹果曾考虑最早 2027 年底推出相关服务，但安排尚未确定，苹果未回应置评请求；新任 CEO 约翰·特努斯在推动软件工程负责人克雷格·费德里吉加快 AI 开发进度。权限侧已经在动：即将推出的 macOS 27.3 测试版对第三方 AI 智能体增加权限警告，用户授予控制 Mac 的权限时需要重新确认，使 ChatGPT 用户启用第三方电脑操控工具的步骤从此前的 4 步增加到 14 步；iOS 27.3 则将为开发者提供更深的 Siri 与第三方应用集成能力。</p>
+        <p class="why"><b>看点</b>系统级智能体的胜负手不是模型，而是权限模型和系统 API 的表面。苹果把「跨应用操作」拆成招聘 JD 里的三件事——工具选择、多步规划、子智能体协调——恰恰是当前 agent 框架最难的部分；而 4 步变 14 步的权限流程，既是安全设计，也是一道对第三方的竞争壁垒。对做 agent 的团队，这条消息的实际含义是：等苹果的系统级能力之前，先把自己的权限申请、沙盒边界、失败回滚和操作审计做扎实，那才是将来能接到系统 API 上的通行证。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19 14:48</span>
+          <a class="src" href="https://tech.ifeng.com/c/8yBDkaZU0eF" target="_blank" rel="noopener noreferrer">凤凰网科技 ↗</a>
+        </div>
+        <h3>火山引擎上线豆包实时音视频通话模型 SeedRealtime 1.0 API：端到端替代 ASR+VLM+TTS 级联</h3>
+        <p>11 月 19 日，火山引擎正式上线豆包实时音视频通话模型 SeedRealtime 1.0 的 API 服务。据<a href="https://tech.ifeng.com/c/8yBDkaZU0eF" target="_blank" rel="noopener noreferrer">火山引擎介绍</a>，该模型把声音、画面、时序与表达统一到同一个端到端模型，在连续的多模态信息流上实时交互，实现「边看、边听、边说」。</p>
+        <p>与级联方案的区别在于链路长度。传统语音助手把 ASR、VLM、TTS 串起来，延迟逐级叠加，信息在模块之间损耗；SeedRealtime 1.0 不再只是等用户提问，而是持续理解场景变化，在合适时机主动开口。火山引擎称，相比级联模型，音视频对话的节奏问题减少了一半，单次对话能够完整、顺畅交流的概率明显提升，适用场景包括语音助手、智能硬件、陪伴式应用与实时客服。</p>
+        <p class="why"><b>看点</b>端到端实时多模态真正难的不是模型结构，而是系统工程：首包延迟、打断与半双工切换、回声消除、以及长会话下的上下文管理，任何一项没做好，体验都会退回到「像在对讲机里说话」。厂商给的「节奏问题减少一半」是自测口径，落地前要按自己的硬件与网络测三组数：端到端首响、打断后的恢复时间、以及连续 10 分钟会话的稳定性。另一个判断是成本——把三段式合成一次前向传播，理论上省掉的是重复编码与中间表示，但实时流的计费单位（按分钟还是按 token）会决定它能不能替代现有方案。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/20 07:41</span>
+          <a class="src" href="https://siliconangle.com/2026/11/19/google-adds-computer-use-capabilities-to-geminis-mac-app/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>谷歌给 macOS 版 Gemini 加上「电脑操控」：后台窗口跑多步任务，关键操作先审批</h3>
+        <p>当地时间 11 月 19 日，Google 发布新版 macOS Gemini 客户端，用户在提示里用「@Computer use」即可调用电脑操控能力，跨本地应用、文件和网页执行多步任务。据<a href="https://siliconangle.com/2026/11/19/google-adds-computer-use-capabilities-to-geminis-mac-app/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a>报道，助手会自己找到完成任务所需的本地应用、制定计划并逐步执行，支持包含数十个动作的任务序列，也能用上一步的产物启动下一个项目。</p>
+        <p>执行方式做了刻意的隔离：任务在独立后台窗口运行，用户的主屏幕与鼠标光标不受影响，聊天窗口里有实时预览，可随时暂停、停止，或在过程中给反馈。权限上由用户选择允许 Gemini 访问哪些应用，关键操作执行前会请求批准。Google Gemini App 产品经理 Michael Friedman 在博客中称，隐私与安全是内置的：用户能看到每一步、随时暂停、并在关键动作发生前批准。能力边界上，Gemini 不只能操作本地应用，也能读写网页服务的数据，并在本地程序与云服务之间搬运。</p>
+        <p class="why"><b>看点</b>同一天两条消息正好构成对照：Google 已经把电脑操控推给 macOS 用户，苹果还在为自研智能体招人。产品形态上，后台窗口 + 实时预览 + 关键操作审批，是目前系统级 agent 最务实的一套折中——既不接管用户的主屏幕，又保留 human-in-the-loop 的审计点。技术上要留意的是它仍走 UI 自动化，这意味着脆弱性来自界面变化而不是模型能力，回归测试的成本会随目标应用数量线性上升；「@Computer use」这个显式触发开关比默认接管更可审计，也更像是给企业采购准备的合规设计。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/20 07:00</span>
+          <a class="src" href="https://tech.ifeng.com/c/8yCGzVbQh18" target="_blank" rel="noopener noreferrer">凤凰网科技 ↗</a>
+        </div>
+        <h3>谷歌论文：只改 harness 的四个模块，SWE-bench Lite 成功率从 5% 提到 40%</h3>
+        <p>11 月 20 日，凤凰网科技报道了谷歌一篇题为《Harnesses That Improve Themselves》的研究论文：让优化模型直接修改智能体的运行框架（harness），而不是只调整提示词。所谓 harness，是围绕模型、负责管理上下文、调用工具、检查执行结果以及决定何时停止的那层代码。</p>
+        <p>实验设置很克制：一个只有 142 行的编程智能体 harness 被切成四个可编辑模块，每轮优化只允许改其中一个，随后在验证集上测试，并设置 token 使用上限，只有满足验证要求的修改才会保留。研究用 Gemini 3.8 Flash 在 40 道未参与优化的 SWE-bench Lite 任务上测试：初始 harness 只能解决 5.0% 的任务，经过模块化优化与验证筛选后成功率达到 40.0%，平均每项任务消耗约 4.67 万 token。</p>
+        <p>对照组更能说明问题：如果允许优化模型不受限制地整体重写 harness，成功率可以到 42.5%，只比模块化方案高 2.5 个百分点，但平均每项任务要消耗约 45.16 万 token，接近前者的十倍；而如果只用提示词规则约束智能体行为，成功率反而下降到 2.5%。论文因此强调，智能体的重要运行约束应尽量通过代码机制落实——例如每次修改自动跑测试，以成功率与 token 消耗作为是否接受修改的依据。</p>
+        <p class="why"><b>看点</b>harness 正在成为继权重、提示词之后第三个可优化的对象，而这篇论文给出的不是「AI 自己变强」的故事，而是一套可复现的工程纪律：模块化切开、单点改动、验证集把关、token 预算兜底。四个旋钮里最容易被忽视的是 token 上限——没有它，「自我改进」会退化成反复重写、成本失控。需要打折扣的地方也明确：结论来自单一模型和 40 道题，跨模型、跨任务、长期运行是否成立都还没验证；而 harness 与模型是强耦合的，为 Gemini 调好的框架迁移到另一个模型上，完全可能变成负收益。对团队的可操作结论是：先把自己的 harness 切成能被验证的模块，用成功率与 token 双指标做接受准则，再谈让模型自己改。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19 18:48</span>
+          <a class="src" href="https://stcn.com/article/detail/4344296.html" target="_blank" rel="noopener noreferrer">证券时报 · 人民财讯 ↗</a>
+        </div>
+        <h3>黑芝麻智能在深圳前海设具身智能总部，称已锁定多家机器人厂商量产订单</h3>
+        <p>11 月 19 日，黑芝麻智能在深圳前海成立具身智能总部，采用「前海 + 香港」双总部模式，聚焦具身智能计算平台的研发与产业生态协作；同日总部展厅落成，十多家生态伙伴入驻，覆盖人形、四足、轮式机器人与协作机械臂等形态。据<a href="https://stcn.com/article/detail/4344296.html" target="_blank" rel="noopener noreferrer">人民财讯</a>报道，公司已与美的、遨博、中远海运、均胜电子等达成战略合作，并锁定多家头部机器人厂商的量产订单，涵盖轮式机器人、人形机器人、四足机器狗、工业机械臂、移动底盘与割草机等品类。</p>
+        <p>这家公司的底子在车上：2016 年成立，围绕智能驾驶推出华山、武当系列高性能智驾芯片。2026 年上半年业绩公告显示，公司营收 4.58 亿元、同比增 81.3%，芯片整体出货 600 万片以上；其中具身智能及解决方案营收 4720 万元，公司称在手订单饱满，并把具身智能列为第二增长曲线。</p>
+        <p class="why"><b>看点</b>车规芯片公司把 IP 复用到机器人，最直接的杠杆是同一套 SoC 加工具链摊薄研发与验证成本，这也是它敢在半年报里把具身单列的原因。但「锁定订单」和「交付收入」是两件事：上半年具身营收 4720 万元、约占总营收一成，说明还在早期放量阶段。真正决定它能否吃到这波红利的，是机器人对算力档位的选择——如果主流机型停在几十 TOPS 的感知加轻量 VLA，车规 SoC 的性价比优势明显；一旦具身大模型把单机算力推到数百 TOPS，竞争区间就会直接对上英伟达与国产大算力平台。要跟踪的是量产机型清单、单机算力规格，以及这些「锁定的订单」在 2027 年能兑现多少。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 19 日 07:33 至 11 月 20 日 09:52（北京时间）之间发布的报道，共 8 条。检索时间 11/20 09:52。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 025 · 24h window · Generated 2026-11-20 09:52</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../index.html">AI 日报</a>
+        <a href="../economy.html">经济日报</a>
+        <a href="../education.html">教育日报</a>
+        <a href="../psychology.html">心理学日报</a>
+        <a href="../tools.html">工具</a>
+        <a href="../wish.html">许愿</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js?v=6"></script>
+</body>
+</html>
