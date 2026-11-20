@@ -6,7 +6,14 @@
     <description>经济日报：央行与利率、增长与结构、产业与公司，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed-economy.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 19 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>经济日报 · 2026 年 11 月 20 日</title>
+      <link>https://kaixinguor.com/daily-economy/2026-11-20.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-11-20.html</guid>
+      <pubDate>Fri, 20 Nov 2026 01:00:00 GMT</pubDate>
+      <description>这一期是同一天里三套资金价格并列。中国这一端，11 月 LPR 连续第 18 个月不变，1 年期 3.0%、5 年期以上 3.5%，同日隔夜逆回购投放 3795 亿元、操作利率仍是 1.25%；财政部在香港发 20 亿美元 3 年期主权债，利率 4.821%，认购 36 倍。日本 10 月核心 CPI 涨 2.2%，掉期市场给 12 月加息 25 个基点的概率约 86%。美国这一端，上周初请失业金 20.3 万人高于预期，11 月费城联储制造业指数从 20.9 掉到 6.3。公司这一端，Anthropic 纳斯达克首日收涨 17.07%、募资约 813 亿美元；拼多多三季度营收 1083 亿元零增长而净利 295 亿元，阿里巴巴同季收入增 10%、经调整 EBITA 增 260%。政策利率不动、主权利差走阔、股权风险溢价重定价——同一笔钱在不同久期上给出不同报价，谁的资产负债表长，谁先感到疼。 11 月 LPR 连续第 18 个月不变：1 年期 3.0%、5 年期以上 3.5%，隔夜操作利率仍是 1.25%</description>
+    </item>
     <item>
       <title>经济日报 · 2026 年 11 月 19 日</title>
       <link>https://kaixinguor.com/daily-economy/2026-11-19.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-10-31.html</guid>
       <pubDate>Sat, 31 Oct 2026 01:00:00 GMT</pubDate>
       <description>央行把政策利率的锚从 7 天挪到隔夜：11 月 2 日起，每个工作日招标 1.25% 的隔夜逆回购。同一天，30 年期国债期货跌 0.94%，大洋彼岸纳指跌 2.86%、英特尔跌 28.58%； 信托新规堵住刚兑与资金池，交易所却给两家房企批了 366 亿元项目债。价格在改锚，通道在换轨，估值在重算。 央行把政策利率锚在隔夜：11 月 2 日起每日招标 1.25% 逆回购</description>
-    </item>
-    <item>
-      <title>经济日报 · 2026 年 10 月 30 日</title>
-      <link>https://kaixinguor.com/daily-economy/2026-10-30.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-10-30.html</guid>
-      <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
-      <description>今天没有大新闻，只有三本账：央行用 1 万亿隔夜工具把月末的资金缺口补上；上海的融资结构里，直接融资占比一年抬高 10 个百分点； 深市 2862 份三季报里只有 1332 家增长，光模块涨 200%，半导体设备只涨 5.10%。钱还在流动，但流向变得很窄。 月末的 1 万亿：央行用隔夜工具补缺口，而不是降准</description>
     </item>
   </channel>
 </rss>

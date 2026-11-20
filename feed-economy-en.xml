@@ -6,7 +6,14 @@
     <description>An economy daily: central banks, growth and the companies that book the profit.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 19 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · November 20, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/2026-11-20-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-11-20-en.html</guid>
+      <pubDate>Fri, 20 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Three prices for money, on one day. China left the loan prime rate unchanged for an 18th month — 3.0% at one year and 3.5% at five and above — while the central bank supplied Rmb379.5bn of overnight reverse repos at 1.25%. The finance ministry sold $2bn of three-year dollar bonds in Hong Kong at 4.821%, covered 36 times. Japan&#39;s October core inflation ran at 2.2% and swaps put an 86% chance on a December hike. In the United States, jobless claims came in at 203,000 and the Philadelphia Fed index dropped from 20.9 to 6.3. On the corporate side, Anthropic ended its first session up 17.07% after an $81.3bn IPO, Pinduoduo reported flat revenue of Rmb108.3bn with Rmb29.5bn of profit, and Alibaba grew revenue 10% with adjusted EBITA up 260%.The policy rate is frozen, the cross-currency spread is widening and equity risk is being repriced — the same money, quoted differently by duration, and the longest balance sheets feel it first. China leaves the LPR unchanged for an 18th month at 3.0% and 3.5%, with overnight repo still at 1.25%</description>
+    </item>
     <item>
       <title>Economic Daily · November 19, 2026</title>
       <link>https://kaixinguor.com/daily-economy/2026-11-19-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-10-31-en.html</guid>
       <pubDate>Sat, 31 Oct 2026 01:00:00 GMT</pubDate>
       <description>The central bank moved its policy anchor from seven days to overnight: from November 2 it will tender 1.25% overnight reverse repos every working day. The same session, 30-year T-bond futures fell 0.94% while the Nasdaq dropped 2.86% and Intel 28.58%. New trust rules shut the door on guarantees and pooled funds, while the exchange approved RMB 36.6 billion of project bonds for two developers. The price of money is being re-anchored; the channels are being switched. The PBoC re-anchors policy at overnight: 1.25% reverse repos, every working day from November 2</description>
-    </item>
-    <item>
-      <title>Economic Daily · October 30, 2026</title>
-      <link>https://kaixinguor.com/daily-economy/2026-10-30-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-10-30-en.html</guid>
-      <pubDate>Fri, 30 Oct 2026 01:00:00 GMT</pubDate>
-      <description>No single headline today, just three sets of books: the central bank plugged the month-end funding gap with RMB 1 trillion of overnight money; Shanghai&#39;s financing mix moved another 10 points toward bonds and equity; and of 2,862 Shenzhen earnings reports, fewer than half showed growth — optical modules up 200%, chipmaking equipment up 5.10%. Money is still moving, but it is moving through fewer channels. RMB 1 trillion overnight: the PBoC bridges month-end without cutting rates</description>
     </item>
   </channel>
 </rss>
