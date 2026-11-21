@@ -6,7 +6,14 @@
     <description>An economy daily: central banks, growth and the companies that book the profit.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 20 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · November 21, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/2026-11-21-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-11-21-en.html</guid>
+      <pubDate>Sat, 21 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Two price chains repriced at once. In the United States, the Nasdaq fell 5.28% and Nvidia about 14% on November 20, leaving the Dow and the S&amp;P 500 more than 10% below their recent highs — even as the 10-year Treasury yield dropped 12 basis points to 4.92% and the odds of a December hike slipped from 100% to 91.4%. The discount rate eased; the cash flows did not. In China, budget revenue for January–October rose 4.9% to Rmb19.57tn while spending rose just 1% and land-sale revenue fell 25.8%; the same day the Shanghai Composite lost 1.23%, the SSE 50 gained 0.45% and the four big state banks closed at year highs. In industry, NetEase&#39;s games revenue fell 1.7% and its Hong Kong shares dropped as much as 19%, while the Global Electronics Association warned that PCB orders rose 56.1% against 13.3% shipment growth, with shortages running at least into the first half of 2027.Risk premia, not policy rates, did the repricing: one pool of money, four prices — for equity, government debt, land and factory capacity. Nasdaq falls 5.28% and Nvidia about 14%, leaving the Dow and S&amp;P 500 more than 10% below their recent highs</description>
+    </item>
     <item>
       <title>Economic Daily · November 20, 2026</title>
       <link>https://kaixinguor.com/daily-economy/2026-11-20-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-11-01-en.html</guid>
       <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
       <description>China’s October manufacturing PMI slipped to 49.3, with output and new orders both contracting and high-tech manufacturing the lone bright spot at 51.3. The same day, 42 listed banks reported 7.79% revenue growth and 3.78% profit growth at a 1.55% net interest margin. The cycle is cooling; the accounting is being rewritten. October PMI at 49.3: output and orders both fall, while prices stay in expansion</description>
-    </item>
-    <item>
-      <title>Economic Daily · October 31, 2026</title>
-      <link>https://kaixinguor.com/daily-economy/2026-10-31-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/2026-10-31-en.html</guid>
-      <pubDate>Sat, 31 Oct 2026 01:00:00 GMT</pubDate>
-      <description>The central bank moved its policy anchor from seven days to overnight: from November 2 it will tender 1.25% overnight reverse repos every working day. The same session, 30-year T-bond futures fell 0.94% while the Nasdaq dropped 2.86% and Intel 28.58%. New trust rules shut the door on guarantees and pooled funds, while the exchange approved RMB 36.6 billion of project bonds for two developers. The price of money is being re-anchored; the channels are being switched. The PBoC re-anchors policy at overnight: 1.25% reverse repos, every working day from November 2</description>
     </item>
   </channel>
 </rss>
