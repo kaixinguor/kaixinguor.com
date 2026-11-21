@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 20 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 21, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/2026-11-21-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-21-en.html</guid>
+      <pubDate>Sat, 21 Nov 2026 01:00:00 GMT</pubDate>
+      <description>In one window, Tencent put the full 770B Hy4 weights on the public internet under Apache 2.0; Huawei turned the &quot;AI phone&quot; into a whole-device proposition with the 5,499-yuan OSTA Xingmang O1 Pro; and Cloudflare collapsed browser automation into a single API call.Money and rules moved too: Hong Kong wrote agent management into a seven-item action list, and DeepSeek&#39;s new round closed the same week — supply, product, governance and capital, all advancing on the same day. Tencent opens all Hy4 weights: 770B total, 49B active, Apache 2.0 and cleared for commercial use</description>
+    </item>
     <item>
       <title>AI Daily · November 20, 2026</title>
       <link>https://kaixinguor.com/daily-ai/2026-11-20-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-01-en.html</guid>
       <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today’s thread is letting agents out of a single session. DeepSeek published a router/worker substrate for personal agents, Anthropic scrapped the five-hour window, and Tencent and Alibaba are lining up same-generation flagships in the same week. The unit of competition is shifting from one answer to one long-running job. DeepSeek open-sources a Super-agent design: agents that file their own pull requests</description>
-    </item>
-    <item>
-      <title>AI Daily · October 31, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-10-31-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-10-31-en.html</guid>
-      <pubDate>Sat, 31 Oct 2026 01:00:00 GMT</pubDate>
-      <description>Today’s thread is distribution. Apple puts Alibaba’s Qwen inside Siri, Writing Tools and Visual Intelligence; Baidu cuts its search API to RMB 4.9 per thousand calls; SenseTime ships a 9B looped model that argues parameter count is not the only path. The fight is moving from leaderboards to system permissions and pricing units. Apple Intelligence taps Alibaba’s Qwen, putting a third-party model behind Siri</description>
     </item>
   </channel>
 </rss>
