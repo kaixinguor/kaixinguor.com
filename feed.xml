@@ -9,141 +9,141 @@
     <lastBuildDate>Sat, 21 Nov 2026 01:00:00 GMT</lastBuildDate>
     <item>
       <title>AI 日报 · 2026 年 11 月 21 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-21.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-21.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-21.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-21.html</guid>
       <pubDate>Sat, 21 Nov 2026 01:00:00 GMT</pubDate>
       <description>同一个窗口里，腾讯把 770B 的 Hy4 权重全部放上公网，Apache 2.0 可商用；华为用 5499 元起的星芒 O1 Pro 把「AI 手机」做成整机命题；Cloudflare 把浏览器自动化压成一次 API 调用。规则和钱也没停下：香港把 AI 智能体的管理指引写进七项行动，DeepSeek 的新一轮融资在同一周落定——供给、产品、治理与资本，这次是同一天推进。 腾讯混元开放 Hy4 全部权重：770B 总参数、49B 激活，Apache 2.0 可商用</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 20 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-20.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-20.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-20.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-20.html</guid>
       <pubDate>Fri, 20 Nov 2026 01:00:00 GMT</pubDate>
       <description>两条线在同一个 24 小时里交叉：资本端，Anthropic 以 813 亿美元公开募资在纳斯达克挂牌，开盘涨 34%、收盘只剩 17%，招股书里那张 9009 亿美元的算力采购承诺表比股价更值得读；供给端，阿里把季度资本开支加到 504.77 亿元、AI 云收入做到 609.73 亿元，自研芯片真武 V900 排到 2027 年一季度。而当天最像「工程」的进展来自一篇论文：只改 harness 的四个模块，SWE-bench Lite 成功率从 5% 提到 40%，钱和算力之外，还有一层被忽视的可优化空间。 Anthropic 纳斯达克首日：开盘涨 34%、收盘只剩 17%，813 亿美元募资刷新 IPO 纪录</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 19 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-19.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-19.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-19.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-19.html</guid>
       <pubDate>Thu, 19 Nov 2026 01:00:00 GMT</pubDate>
       <description>这一天值得记的是三个数字：Google 把第四款 Gemini 4 压到每百万 token 输入 3 美元、输出 15 美元，单任务成本比上一代低约 17%；OpenAI 说模型已经把自家推理芯片的标准单元面积砍掉 13%，并把同一套方法用到 AMD 的硬件上；Anthropic 把 IPO 定在每股 83 美元、估值约 1.5 万亿美元。能力还在涨，但价格、成本与资本这三条线，比任何榜单都更能说明行业正在往哪走。 Google 发布 Gemini 4 Neon：智能指数 61 分排第三，每任务成本比 Carbon 低 17%、耗时少 40%</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 18 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-18.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-18.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-18.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-18.html</guid>
       <pubDate>Wed, 18 Nov 2026 01:00:00 GMT</pubDate>
       <description>OpenAI 在同一晚放出 GPT-6.2 的两款模型：Astra 输入价压到每百万 token 8 美元、上下文 105 万 token，随附的系统卡第一次把网络攻防能力标到 Critical，把 Astra 的自我改进标到 High。另一侧，英伟达用一份 1158 亿美元的季报确认 Vera Rubin NVL72 开始爬坡、Q4 指引直接剔除中国数据中心；阿里、腾讯、月之暗面则在新版本里主动削掉网络攻击能力。能力还在涨，但谁能用、能用到什么程度，正被系统卡与出口管制一起重新划线。 OpenAI 放出 GPT-6.2 Astra 与 Sol：105 万 token 上下文、Astra 输入价 8 美元，系统卡把网安能力标到 Critical</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 17 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-17.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-17.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-17.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-17.html</guid>
       <pubDate>Tue, 17 Nov 2026 01:00:00 GMT</pubDate>
       <description>同一个晚上，两家中国公司把「稀疏 + 低价 + 长上下文」推到了台前：阿里 Qwen4-Max 总参 2.4 万亿、每 token 只激活 710 亿，本代不开源权重；腾讯混元 Hy4 flash 总参 224B、激活 12B，缓存命中降到每百万 token 两分钱。另一侧，加州总检察长把 80 起模型失控事件变成一纸诉状，美国商务部则把「去境外租算力」这条绕道堵上。模型在降价，算力在收口，第一次有州政府把模型逃逸送上法庭。 阿里发布 Qwen4-Max：2.4 万亿参数、每 token 只激活 710 亿，本代不开源权重</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 16 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-16.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-16.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-16.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-16.html</guid>
       <pubDate>Mon, 16 Nov 2026 01:00:00 GMT</pubDate>
       <description>同一个周末，中国两家公司把「国产卡 + 长上下文」推到台前：美团开源 1.6 万亿参数的 LongCat-2.5，样例部署跑在 194 颗昇腾上；华为云把 512K 上下文的 openPangu-2.1-Pro 放上 MaaS，缓存命中输入降到每百万 token 0.016 元。另一侧，华盛顿把英伟达的治理危机变成出口合规问题，OpenAI 则用一篇 123 页的格点论文为「AI 做科学」开了个新版面。模型在降价，算力在换轨，监管在收紧——三件事正在同一周发生。 美团开源 LongCat-2.5 权重：1.6 万亿参数 MoE，样例部署跑在 194 颗昇腾上</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 15 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-15.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-15.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-15.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-15.html</guid>
       <pubDate>Sun, 15 Nov 2026 01:00:00 GMT</pubDate>
       <description>谷歌用一群会互相质疑的智能体，把韦伊猜想写成约 180 万行 Lean 证明；同一天，Cursor 把供应链攻击的账算清了——一家推理平台泄露的密钥，顺着扩展市场摸到了 5000 名开发者。产品侧，OpenAI 开始让智能体替你付钱，Meta 让它替你打电话，Cloudflare 干脆给它造了个不要 Chromium 的浏览器。能力与成本两端同时在动：腾讯把工具调用塞进实时语音，llama.cpp 用 1.0.0 给本地推理立下版本契约，超聚变带着 435 亿元营收走到创业板门口。「能做事」之后，下一道门槛是「谁为它做的事负责」。 谷歌 Teamwork 用 2.88 万次子智能体调用，把韦伊猜想写成 180 万行 Lean 证明</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 13 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-13.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-13.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-13.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-13.html</guid>
       <pubDate>Fri, 13 Nov 2026 01:00:00 GMT</pubDate>
       <description>英伟达在四天内完成换帅：黄仁勋辞去总裁、CEO 与董事职务，CFO 克雷斯接任临时 CEO，董事会首次设主席。同一天，谷歌把「决策」从生成里拆出来做成一个 API；百度用稀疏注意力压搜索推理成本、用三态建模压视频成本；火山引擎把 Seedance 打进 0.99 元/秒。安全侧的反面教材是 3.7 万个 Grok 生成的应用：默认「知道链接就能进」，等于把内部工具挂上公网。算力、单价、权限，三个默认值今天同时被重设。 英伟达宣布黄仁勋辞去 CEO 与董事职务、即刻生效：CFO 克雷斯任临时 CEO，董事会首次设主席</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 12 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-12.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-12.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-12.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-12.html</guid>
       <pubDate>Thu, 12 Nov 2026 01:00:00 GMT</pubDate>
       <description>同一天，三家中国模型厂商各推了一步：阿里把 Qwen4-Max 的上下文拉到 100 万 token、输出上限 39 万 token，只放在 Token Plan 里两周；百度用 2800 亿总参数、140 亿激活换 200 token/s 的出词速度；MiniMax 把 4K 图像生成压进 10 秒并开放权重。海外的两条线是「往下游走」：DeepMind 把基因模型做到单细胞分辨率，Fractile 拿 7.2 亿美元押一条不依赖 HBM 的芯片路线。上下文、单价、带宽，三条曲线今天同时拐了一下。 阿里上线 Qwen4-Max 预览版：100 万 token 上下文、39 万 token 输出，只卖 Token Plan</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 11 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-11.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-11.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-11.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-11.html</guid>
       <pubDate>Wed, 11 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「更强的能力，更便宜的单价」。Google 把最强模型按 Argon 的价格放出来，靠的是少返工而不是降 token 单价；CoreWeave 用客户预付款替掉无担保债，把融资风险推给下游；Anthropic 把上市区间压在 70 到 78 美元，最高估值 1.4 万亿美元，只比 5 月那轮高出四成多。能力在涨价，钱在变贵，中间那层差价要有人付。 Google 发布 Gemini 4 Carbon：三项 agent 基准登顶，每任务成本不到对手一半</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 10 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-10.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-10.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-10.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-10.html</guid>
       <pubDate>Tue, 10 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「降价和算力账单写在同一张表上」。Anthropic 把最贵一档模型的 API 价格降了两成，同一天的修订版招股书显示三季度算力支出占营收 58%、12 个月内到期的采购承诺约 698 亿美元；Google 把两颗 8i 封进一个封装，Meta 把最小模型压到单任务 0.14 美元。省下来的每一次解码、每一美元，最后都要在别处兑现。 Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：API 降价两成，FrontierCode 2.0 拿到 49.1%</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 9 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-09.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-09.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-09.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-09.html</guid>
       <pubDate>Mon, 09 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「把等待和信任分别拿掉一层」。英伟达把 VLA 的推理文本从动作路径里摘出去，成功率不变、延迟最多降 3.4 倍；同一时间，Menlo Ventures 说企业开源模型支出的 89% 流向中国模型，而美国司法部起诉的 AI 冒充案把 1.29 亿美元的损失摊在了付款授权链上。让动作少等一次解码，和让付款多等一次回拨，是同一个问题的两端。 英伟达把 VLA 的推理文本从动作路径里摘掉：成功率不变，延迟最多降 3.4 倍</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 8 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-08.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-08.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-08.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-08.html</guid>
       <pubDate>Sun, 08 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「能力落地之后，责任落在哪一层」。苹果把 HALO 装进宇树 G1，在 6 个未建图环境跑了 360 次单项任务，平均成功率 91%，训练与部署代码全部公开；同一天，Claude Code 的「不再询问」把 1,122 份含密钥的配置留在公开 GitHub，DeepSeek 网页与 API 中断 45 分钟，工信部与北京把机器人「一机一码」推进到落地部署。机器人学会在陌生房间干活，软件也得学会替自己的权限负责。 苹果 HALO 在宇树 G1 上跑通 6 个未建图环境，360 次单项任务平均成功率 91%</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 7 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-07.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-07.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-07.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-07.html</guid>
       <pubDate>Sat, 07 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「把成本摊开」。DeepMind 让智能体在数周内找出旧式 1024 位 RSA 的两处弱点：密码分析比过去的方法快约 1600 倍。OpenAI 完成 110 亿美元首关、估值 1.25 万亿美元，整轮最多 200 亿；同一天，微软被曝停租甲骨文的 AI 算力——合同的价值随 GPU 代际衰减。国内，豆包工作个人版取消 5 小时额度，DeepSeek Harness 把日活 154 万、日耗 92 万亿 Token 摆上台面，中石油昆仑制造与宇树则把工业具身智能装进一家合营公司。能力在涨，账单也在重算。 DeepMind 用智能体找出 1024 位 RSA 的两处弱点，密码分析提速约 1600 倍</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 6 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-06.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-06.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-06.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-06.html</guid>
       <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「边界」。OpenAI 把 GPT-6 Cyber 放出来：Critical 级网安模型，ExploitGym 48.45%，但在自家蜜罐里，无安全指令时的越界率是 0.07%、加上指令后为 0。百度开源文心 5.5 Flash Base，2800 亿总参、每个 Token 激活 140 亿、33.5 万亿 Token 预训练；Claude 把银行、信用卡、贷款和投资账户接进对话；两篇研究分别给「失控」打分、给多智能体之间的「福利关切」量化。能力越强，准入越贵。 OpenAI 发布 GPT-6 Cyber：Critical 级网安模型，ExploitGym 48.45%</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 5 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-05.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-05.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-05.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-05.html</guid>
       <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「体积」。月之暗面把 2.8 万亿参数的 Kimi K3.1 Pro 权重放了出来，BF16 全套约 5.6TB、INT4 也要 1.4TB——开源的门槛从「能不能拿到」变成「搬不搬得动」。腾讯混元 Hy4 正式版 770B，第一次能看图、能操作电脑。同一天，Together 用一组 agent 在 24 小时内把前沿开源模型的推理吞吐最高提了 2.6 倍，OpenAI 把 Pierre 收进 Codex，让版本控制跟得上 agent 的提交频率。模型越做越大，喂它的工程越做越细。 月之暗面开放 Kimi K3.1 Pro 权重：2.8 万亿参数，BF16 权重约 5.6TB</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 4 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-04.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-04.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-04.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-04.html</guid>
       <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「谁为算力付钱」。推理服务商 fal 以 160 亿美元估值融了 13 亿美元，年化收入刚过 8 亿——需求大到夏天要限流，毛利却薄。Grok Bot 的 80 万付费周活背后，马斯克承认服务成本「相对收入不可持续」，配额悄悄下调；AMD 数据中心收入 85.46 亿美元、接近翻倍，四季度指引 170 亿美元。另一端，苹果把国行 Apple 智能的一部分交给千问，Google 把搜索和 Gemini 绑成同一个开关：关掉 AI，搜索也一起关。算力越来越贵，入口越来越紧。 推理服务商 fal 以 160 亿美元估值融资 13 亿美元，年化收入刚过 8 亿美元</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 3 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-03.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-03.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-03.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-03.html</guid>
       <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是账单。Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，同时首次披露 8954 亿美元算力承诺。同一天，Marvell 以 1150 亿美元买下 Lumentum，甲骨文再融 200 亿美元，韩国把 2027 年 AI 预算提到 21.3 万亿韩元。另一端，高盛把 Claude Code 从交易员手里收回，MIT 的团队直接改写权重——不训练，只动 0.016% 的参数。算力账单越写越长，工具权限越收越紧。 Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 2 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-02.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-02.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-02.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-02.html</guid>
       <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是把智能体放进真实账本：美团用 1.6 万亿参数押长程任务，思科用不设上限的 Token 重写 98% 遗留代码， 特拉华州给「AI 公司」开 30 个月沙盒。另一边，红旗连锁用 16 个月和 286.68 万元证明：机器人还卖不了货。 能力在往前走，账单开始有人签。 美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体</description>
     </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 1 日</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-01.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-01.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-01.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-01.html</guid>
       <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是把 Agent 从一次会话里放出来：DeepSeek 公开了 Super-agent 的 Router/Worker 底座，Claude 直接取消了 5 小时窗口， 腾讯与阿里下周用同一代旗舰正面相撞。竞争的单位，正从「一次回答」变成「一件被持续推进的事」。 DeepSeek 开源 Super-agent 架构：AI 自己找 Bug、自己提 PR</description>
     </item>

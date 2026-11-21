@@ -93,7 +93,7 @@ const num = (i) => String(i + 1).padStart(2, "0");
 function cardLink(q) {
   const card = issue.cards[q.anchorCard];
   const chapterId = chapterOf[q.anchorCard];
-  const href = `../../daily-ai/${date}.html#${chapterId}`;
+  const href = `../../daily-ai/web/${date}.html#${chapterId}`;
   return { card, chapterId, href };
 }
 
@@ -163,7 +163,7 @@ ${probes}
 
 const factRows = issue.cards.map((c, i) => {
   const chapterId = chapterOf[i];
-  return `        <li><span class="fn">${String(i + 1).padStart(2, "0")}</span><a href="../../daily-ai/${date}.html#${chapterId}">${escapeHtml(c.titleText)}</a><span class="fs">${escapeHtml(c.sourceName || "")}</span></li>`;
+  return `        <li><span class="fn">${String(i + 1).padStart(2, "0")}</span><a href="../../daily-ai/web/${date}.html#${chapterId}">${escapeHtml(c.titleText)}</a><span class="fs">${escapeHtml(c.sourceName || "")}</span></li>`;
 }).join("\n");
 
 const rejectedRows = (data.rejected || []).map((r) => `
@@ -403,7 +403,7 @@ const html = `<!DOCTYPE html>
   <div class="wrap">
     <a class="brand" href="../../index.html">kaixinguor</a>
     <nav class="top">
-      <a href="../../daily-ai/${date}.html">日报</a>
+      <a href="../../daily-ai/web/${date}.html">日报</a>
       <a href="${date}.html" aria-current="page">问题层</a>
       <a href="../../tools.html">工具</a>
       <a href="../../wish.html">许愿</a>
@@ -475,10 +475,10 @@ ${rejectedRows}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand"><b>kaixinguor</b><p>问题层 · 附于 ${escapeHtml(issue.dateDisplay)} 日报。不评分，不记录你带走了哪一问；刷新即忘。</p></div>
-      <div class="foot-meta">SOURCE · daily-ai/${date}.html</div>
+      <div class="foot-meta">SOURCE · daily-ai/web/${date}.html</div>
     </div>
     <div class="foot-links">
-      <a href="../../daily-ai/${date}.html">回到事实层</a>
+      <a href="../../daily-ai/web/${date}.html">回到事实层</a>
       <a href="../../index.html">首页</a>
       <span>判准全文：docs/问题层-判准.md</span>
     </div>
@@ -603,5 +603,5 @@ fs.mkdirSync(path.dirname(outFile), { recursive: true });
 fs.writeFileSync(outFile, html);
 
 console.log(`✓ ${path.relative(ROOT, outFile)}`);
-console.log(`  事实层 daily-ai/${date}.html（${issue.count} 条，未改动）`);
+console.log(`  事实层 daily-ai/web/${date}.html（${issue.count} 条，未改动）`);
 console.log(`  问题 ${data.questions.length} 条 · 判掉 ${(data.rejected || []).length} 条`);

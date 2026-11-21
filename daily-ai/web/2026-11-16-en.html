@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 16, 2026</title>
+<meta name="description" content="AI Daily, November 16, 2026, Issue 021: Meituan open-sourced the weights of LongCat-2.5, a 1.6-trillion-parameter MoE under MIT with a sample deployment on 194 Ascend chips; Huawei Cloud launched the 512K-context openPangu-2.1-Pro; OpenAI opened a science blog with a 123-page lattice paper co-written with GPT-6 Astra; Bessent gave Nvidia 10 days to explain China sales; Megaspeed reportedly brokered nearly $12 billion in Nvidia orders for China; Claude Fable 5.2 painted photorealistic images in 700,000 strokes; Australia&#39;s central bank saw young workers in AI-exposed jobs weakening first; Naver and Kakao joined the personal-agent race.">
+<meta property="og:title" content="AI Daily · November 16, 2026">
+<meta property="og:description" content="AI Daily, November 16, 2026, Issue 021: Meituan open-sourced the weights of LongCat-2.5, a 1.6-trillion-parameter MoE under MIT with a sample deployment on 194 Ascend chips; Huawei Cloud launched the 512K-context openPangu-2.1-Pro; OpenAI opened a science blog with a 123-page lattice paper co-written with GPT-6 Astra; Bessent gave Nvidia 10 days to explain China sales; Megaspeed reportedly brokered nearly $12 billion in Nvidia orders for China; Claude Fable 5.2 painted photorealistic images in 700,000 strokes; Australia&#39;s central bank saw young workers in AI-exposed jobs weakening first; Naver and Kakao joined the personal-agent race.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-16-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-15T08:05:00+08:00/2026-11-16T07:41:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-16-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-16.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-16-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI Daily</a>
+      <a href="../../economy.html">Economic Daily</a>
+      <a href="../../education.html">Education Daily</a>
+      <a href="../../psychology.html">Psychology Daily</a>
+      <a href="../../tools.html">Tools</a>
+      <a href="../../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-16.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 021</span>
+    </div>
+    <h1 class="date">November 16, 2026<span class="weekday">MON</span></h1>
+    <p class="deck">In one weekend, two Chinese companies put &ldquo;domestic accelerators plus long context&rdquo; on the table: Meituan open-sourced the 1.6-trillion-parameter LongCat-2.5, with a sample deployment spread across 194 Ascend chips, while Huawei Cloud put openPangu-2.1-Pro, a 512K-context model, on MaaS with cache-hit input at 0.016 yuan per million tokens. Elsewhere, Washington turned Nvidia&rsquo;s governance crisis into an export-compliance problem, and OpenAI opened a science blog with a 123-page lattice paper. <em>Models are getting cheaper, compute is switching tracks, and regulators are tightening &mdash; all in the same week.</em></p>
+    <div class="metabar"><span class="pill">Issue 021</span>
+      <span class="dot"></span>
+      <span>Window Nov 15, 08:05 &ndash; Nov 16, 07:41</span>
+      <span class="dot"></span>
+      <span>8 stories</span>
+      <span class="dot"></span>
+      <span>11 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#capital"><span class="n">04</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Meituan released the weights of LongCat-2.5: a 1.6-trillion-parameter MoE with about 48 billion active per token, a 1-million-token context and an MIT licence that allows commercial use; the official sample deployment runs on 194 Huawei Ascend Atlas A2 chips, and the self-hosting guide lists no Nvidia configuration.</b> On Meituan&rsquo;s own Terminal Bench v2.1 run it scores 88.4, just below Claude Opus 5 at 89.1 and DeepSeek-V4.1-Flash at 90.6.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>US Treasury Secretary Scott Bessent gave Nvidia&rsquo;s board 10 days to explain whether it tolerated &ldquo;seemingly illicit&rdquo; chip sales to China to boost revenue, and said the next CEO should come from outside the company; the same day, the Financial Times reported that Jensen Huang has discussed a return with confidants.</b> Both parties in Congress are also moving to tighten AI chip export rules and want Huang to testify.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>OpenAI launched a science blog; its first post is a guest essay by physicist Nathaniel Craig, who worked with GPT-6 Astra on a candidate non-perturbative lattice definition of the Standard Model. The paper runs 123 pages and ships with Lean formalisation.</b> Craig calls Astra &ldquo;essential&rdquo; to the result; mathematician Peter Woit calls it &ldquo;a modest advance over L&uuml;scher&rdquo; and far from a full continuum definition.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 18:06</span>
+          <a class="src" href="https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Meituan opens the weights of LongCat-2.5: a 1.6T-parameter MoE that runs its sample deployment on 194 Ascend chips</h3>
+        <p>The Decoder reported on November 15 that Meituan&rsquo;s LongCat team released the weights of LongCat-2.5 a week after unveiling the model, under the MIT licence, which allows commercial use, modification and redistribution. It is a mixture-of-experts model built for long-horizon agent work: 1.6 trillion total parameters, about 48 billion active per token, a 1-million-token context, up to 128,000 output tokens, text, image and video input, and a reasoning toggle.</p>
+        <p>Training and supervised fine-tuning ran on Chinese accelerators. In its <a href="https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html" target="_blank" rel="noopener noreferrer">technical blog</a>, Meituan says each domestic card has less than 80GB of memory, so the team used dual-shard FSDP, hybrid vocabulary parallelism, MoonEP dynamic expert replication and zero-copy communication to fit long-sequence training; single-card throughput on long-sequence SFT was 86% above a DDP baseline. For inference it quantises expert weights and activations to 4 bits (W4A4), reporting 43.3% higher prompt-processing throughput and 42.77% higher generation throughput, with accuracy &ldquo;on par&rdquo; with the uncompressed model.</p>
+        <p>The official sample deployment uses 194 Huawei Ascend Atlas A2 accelerators: two for image processing, 64 for prompt ingestion and 128 for generation. The self-hosting guide contains no Nvidia GPU configuration. The benchmarks are vendor-run: 88.4 on Terminal Bench v2.1, below Claude Opus 5&rsquo;s 89.1 and DeepSeek-V4.1-Flash&rsquo;s 90.6 and slightly above GPT-5.6 Sol&rsquo;s 88.8; 38.5 on the harder v4.0, against 53.9 for Opus 5; DeepSWE rises from 9.7 to 64.6; the 91.9 on BrowseComp was measured in Meituan&rsquo;s own environment. Promotional API pricing is about &euro;0.27 per million input tokens and &euro;1.07 per million output tokens.</p>
+        <p>On training, the team built tasks from real GitHub pull requests, cut internet access, Git history and build caches in the sandbox, used an LLM judge to catch shortcuts, and turned real agent failures into reproducible, verifiable tasks. Reinforcement learning uses asynchronous partial rollouts, with the oversampling rate adjusted by pass rate and all-pass or all-fail groups filtered out.</p>
+        <p class="why"><b>Why it matters</b>The 1.6T open weights and the domestic-chip deployment shift the hard question from &ldquo;do we have accelerators&rdquo; to &ldquo;can we keep 194 of them stable&rdquo;. Three caveats matter: the sample deployment is inference, not training, and Meituan does not disclose the training cluster; the benchmarks are vendor-run, and BrowseComp was measured in-house; and &ldquo;accuracy on par&rdquo; under W4A4 comes without per-task deltas. For downstream teams the MIT licence is the concrete part &mdash; commercial use and retraining are allowed &mdash; but the memory and communication budget of a 1.6T model means most will still call an API.<br><b>Another view</b> If the &ldquo;domestic silicon + 4-bit + long context&rdquo; playbook travels, next year&rsquo;s price war will not only show up in API rates but in the table of how many chips each token costs.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 23:42</span>
+          <a class="src" href="https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Claude Fable 5.2 &ldquo;paints&rdquo; photorealistic images in 700,000 strokes by writing Python, not pixels</h3>
+        <p>The Decoder reported on November 15 that Anthropic&rsquo;s Claude Fable 5.2 takes a different route to images: instead of generating pixels, the model writes a 1,000-to-2,000-line Python program that drives a paint engine simulating bristles, wet paint and canvas texture, placing hundreds of thousands of strokes on a virtual canvas. In a demo by Anthropic employee Jake Eaton, a photorealistic parking-garage scene took roughly 700,000 strokes.</p>
+        <p>In a log published by engineer Michael Graczyk, the model painted a bird at sunrise in just 111 strokes, each with a colour code, a brush width and several slightly wobbling waypoints; the first stroke was #30346a, 90 pixels wide, with five waypoints. There is no undo: every stroke stays. Between passes the model looks at the canvas and reacts &mdash; when the bird&rsquo;s back came out too thin, it laid a bolder stroke over it, turning stray bristle marks into ruffled feathers.</p>
+        <p>The approach ties long-horizon planning to spatial reasoning. Anthropic says Fable 5.2 scores 64.9% on its internal RoboDojo Sim benchmark against 29.8% for GPT-6 Astra; but in researcher Aris Zhu&rsquo;s test with a real robot arm painting &ldquo;The Starry Night&rdquo;, Astra painted faster and is so far the only one of the two to stand a domino on end. Those numbers come from the vendor and employee demos, with no independent reproduction.</p>
+        <p>Fable 5.2 was released on November 9 on the same base model as Mythos 5.2. Anthropic says it also produced results on two open problems in black-hole physics, designed three working circuits with Diode, and used more than 1,000 sub-agents to write a laptop operating system in eight days.</p>
+        <p class="why"><b>Why it matters</b>The demo is less about whether the painting looks real than about whether the model can stay coherent across hundreds of steps and hundreds of thousands of discrete decisions: every stroke is code, nothing can be rolled back, and mistakes can only be painted over &mdash; the classic failure mode of long-horizon agents. The loop worth copying is generate, render, look, revise. The number worth questioning is cost: how many tokens, GPU-hours and dollars 700,000 strokes took is not disclosed. And half of the &ldquo;photorealism&rdquo; belongs to the paint engine, not the model.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 21:16</span>
+          <a class="src" href="https://www.ithome.com/1/027/450.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Huawei Cloud launches openPangu-2.1-Pro: 512K context and cache-hit input at 0.016 yuan per million tokens</h3>
+        <p>On November 15, Huawei Cloud added the open-source Pangu model openPangu-2.1-Pro to its MaaS platform. The company frames the upgrade around three areas &mdash; agent development, AI coding and inference optimisation &mdash; naming deep research, HarmonyOS control, HarmonyOS app development, Ascend operator generation and inference-pipeline optimisation as the target scenarios.</p>
+        <p>The <a href="https://support.huaweicloud.com/model-list-maas/model_list_0001.html" target="_blank" rel="noopener noreferrer">model list</a> gives a 512K context, 500K maximum input, 384K maximum output and a 256K maximum chain of thought. It supports a switchable deep-thinking mode, function calling, prefix continuation and prefix caching, with default limits of 2 million TPM and 100 RPM. The only preset region so far is southwest China (Guiyang).</p>
+        <p>Pricing is the most concrete number here: 0.8 yuan per million input tokens, 3.2 yuan per million output tokens and 0.016 yuan per million cache-hit input tokens, about 2% of the input rate. Huawei says more than 100,000 task-specific examples were used to improve skill triggering, tool selection and tool calling, while coding work is tailored to HarmonyOS ArkTS and Ascend operators.</p>
+        <p>Huawei has not disclosed the parameter count, a weights download or benchmark scores. openPangu-2.0-Pro and 2.0-Flash are scheduled to go offline on November 30, so services still on the old models must migrate by then; the new model will also plug into AgentArts, CodeArts and OfficeAce.</p>
+        <p class="why"><b>Why it matters</b>The pricing makes the bill structure explicit: cache hits cost 2% of the input rate, so repeated questions over long documents will be dominated by cache pricing, while output at four times the input rate is where coding and report-writing spend goes. The real unknown is tool-calling reliability, not price: there is no success rate, no count of callable tools and no parameter count, so teams can only blind-test 2.0 against 2.1 on the same tasks before migrating. The single preset region is another constraint &mdash; cross-region latency and data-compliance costs need to be priced in first.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/16 06:30</span>
+          <a class="src" href="https://www.digitaltoday.co.kr/en/view/125850/korean-big-tech-joins-personal-ai-agent-race-jensen-huang-resignation-fallout" target="_blank" rel="noopener noreferrer">DigitalToday ↗</a>
+        </div>
+        <h3>Korea&rsquo;s two biggest platforms turn personal agents into a checkout lane</h3>
+        <p>DigitalToday reported on November 16 that Naver plans to launch a consumer AI agent this year that shops, books and pays on the user&rsquo;s behalf, connecting search results directly to transactions. The company also plans to extend into logistics and offline payments and to shift its platform toward AI.</p>
+        <p>Kakao&rsquo;s route is to turn KakaoTalk from an assistant that answers questions into one that executes tasks in the chat window, monetised through advertising and commerce, with a target of breaking even on AI in 2028. Korean startup Pickle already handles shopping and ticketing, though testers complain that it is slow.</p>
+        <p>The report places both moves against a global race for the personal-agent entry point: Meta&rsquo;s Muse now calls US businesses for paying subscribers, while Naver and Kakao&rsquo;s advantage is local payments, identity and merchant relationships &mdash; and their weakness is model capability.</p>
+        <p class="why"><b>Why it matters</b>The battleground is shifting from &ldquo;whose model is stronger&rdquo; to a trio of entry point, payment and merchant integration: whoever completes the last mile of a purchase captures the transaction data and the commission. Kakao&rsquo;s 2028 break-even target is an admission that it expects to subsidise the business for two years; the real cost is not inference but merchant-side integration and dispute handling. For China&rsquo;s super apps, the mirror is clear &mdash; the moat is payments and merchants, not leaderboard positions.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/16 06:00</span>
+          <a class="src" href="https://openai.com/index/step-toward-defining-the-standard-model/" target="_blank" rel="noopener noreferrer">OpenAI ↗</a>
+        </div>
+        <h3>OpenAI opens a science blog with a 123-page lattice paper co-written with GPT-6 Astra</h3>
+        <p>At 06:00 Beijing time on November 16, OpenAI launched a science blog. Its first post is a guest essay by Nathaniel Craig, a physicist at UC Santa Barbara, who worked with GPT-6 Astra on a candidate non-perturbative lattice definition of the Standard Model. The paper went up on arXiv (<a href="https://arxiv.org/abs/2610.09093" target="_blank" rel="noopener noreferrer">2610.09093</a>) on October 6: 60+63 pages, 12 figures, with a mathematical companion and Lean formalisation materials.</p>
+        <p>Craig writes that Astra was &ldquo;essential to this result&rdquo;: he proposed extending L&uuml;scher&rsquo;s abelian construction to non-abelian cases with refinement methods, iterated with Astra and outside experts, and arrived at &ldquo;the current Astra-led proof&rdquo;. The manuscript mixes author-written sections with extensive rewrites of Astra&rsquo;s proof, and the Lean verification was carried out by Astra.</p>
+        <p>Physically, the work fills a gap in the electroweak sector: gauge fields have long had a lattice regularisation, but fermions &mdash; chiral fermions in particular &mdash; have lacked a satisfactory non-perturbative definition. Craig follows L&uuml;scher&rsquo;s 1998 programme and covers a class of non-abelian chiral gauge theories that includes the Standard Model. Mathematician Peter Woit calls it &ldquo;a modest advance over L&uuml;scher&rdquo;, still far from a full continuum-limit definition and not yet a way to do actual non-perturbative electroweak calculations.</p>
+        <p class="why"><b>Why it matters</b>This is a checkable sample of &ldquo;AI as a mathematician collaborator&rdquo;: not a claim that a model proved a theorem, but a 123-page manuscript, Lean formalisation and arXiv/Zenodo attachments anyone can open. What engineering teams should study is the division of labour &mdash; a human sets strategy and physical judgement, the model carries long derivations and formalisation, outside experts iterate and review. That workflow is closer to reproducible science than any benchmark. The caveat is that &ldquo;essential&rdquo; is unquantified: how many pages Astra wrote, how many iterations it took and how often it was wrong survive only as traces in the manuscript. The blog itself is also a product: OpenAI is building a permanent venue for the &ldquo;AI does science&rdquo; narrative.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 22:45</span>
+          <a class="src" href="https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Report says Megaspeed brokered nearly $12 billion in Nvidia chip orders for China</h3>
+        <p>The Decoder reported on November 15, citing The Wall Street Journal, that Megaspeed &mdash; a company linked to Alice Huang, a former partner of ex-Nvidia CEO Jensen Huang &mdash; arranged nearly $12 billion in Nvidia chip orders for Chinese companies between 2024 and 2025. Short seller Culper Research estimates Nvidia&rsquo;s actual China revenue share at more than 20%, well above the 7% the company reports.</p>
+        <p>The report follows Huang&rsquo;s resignation over a relationship with a woman suspected of being a Chinese spy. Megaspeed said in a November 15 statement that Alice Huang has not worked at the company since August 2025; the report says the statement raises more questions than it answers.</p>
+        <p>The same day, US Treasury Secretary Scott Bessent gave Nvidia&rsquo;s board 10 days to answer whether the company tolerated &ldquo;seemingly illicit&rdquo; chip sales to China to boost revenue, and said the next CEO should be hired from outside. Both parties in Congress are also pushing to tighten AI chip export rules and want Huang and Commerce Secretary Howard Lutnick to testify.</p>
+        <p class="why"><b>Why it matters</b>The $12 billion matters less for its size than for turning export control from a policy question into a revenue-recognition question: if China is really 20% of revenue rather than 7%, Nvidia&rsquo;s regional disclosures, channel inventory and distributor structure all need re-explaining. For buyers of compute, the near-term effect is higher compliance risk on second-hand and grey channels; for investors, Culper&rsquo;s figure is a short seller&rsquo;s estimate, not an audited number.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/16 04:43</span>
+          <a class="src" href="https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed" target="_blank" rel="noopener noreferrer">The Verge ↗</a>
+        </div>
+        <h3>Huang reportedly explores a return as Bessent gives Nvidia 10 days on China sales</h3>
+        <p>The Financial Times reported on November 15 that Jensen Huang, days after resigning, has discussed returning as Nvidia&rsquo;s CEO with confidants; allies have formed a &ldquo;war room&rdquo; to lobby the board and seek White House support. A public petition calling for his reinstatement has gathered more than 150,000 signatures, with Elon Musk and Epic Games&rsquo; Tim Sweeney among those publicly backing it. The Verge notes that the talks remain reports, not an announcement.</p>
+        <p>The same day, US Treasury Secretary Scott Bessent said Nvidia needs a &ldquo;dramatic shakeup&rdquo; and should look outside the company for its next CEO. He gave the board 10 days to answer whether Nvidia pushed &ldquo;seemingly illicit&rdquo; chip sales to China to inflate revenue. Bloomberg and CNBC both reported the remarks.</p>
+        <p>Nvidia&rsquo;s board is now searching for a successor. The resignation followed an October 29 New York Times report that Huang appeared to be the target of a Chinese espionage operation; Reuters reported a third extramarital relationship. Lawmakers in both parties are also pushing to tighten AI chip exports to China.</p>
+        <p class="why"><b>Why it matters</b>The transmission channel to the AI industry is not gossip but supply contracts: Huang was the node connecting Nvidia to governments, cloud providers and startups, and the compute deals and investment commitments under negotiation get repriced when he leaves. Bessent&rsquo;s 10-day deadline turns a governance problem into an export-compliance problem &mdash; if the board admits it relaxed compliance to boost sales, Nvidia faces penalties and audits, not just reputational damage. For buyers, the immediate task is to check the export-compliance warranties and the provenance of the chips in their contracts.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/15 18:45</span>
+          <a class="src" href="https://the-decoder.com/australias-central-bank-finds-ai-hitting-young-workers-first-especially-in-software-and-customer-service/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Australia&rsquo;s central bank sees the first employment cracks among young workers in the most AI-exposed jobs</h3>
+        <p>The Decoder reported on November 15 that Mike Major, an economist at the Reserve Bank of Australia, has built a framework for spotting the early labour-market effects of AI by focusing on two places: entry-level roles and the most AI-exposed occupations such as programming, clerical work and customer service. Since ChatGPT launched in late 2022, job postings have fallen across all groups, but the drop is steepest in the most exposed group; within it, 15-to-24-year-olds and recent graduates have weaker employment rates and higher unemployment.</p>
+        <p>The report is explicit that this is not proof of causation: it measures theoretical exposure, not actual firm-level use, and business-cycle shifts or remote work could explain the numbers. For comparison, an August 2025 Stanford study of millions of US payroll records found employment among 22-to-25-year-olds in exposed occupations down 13% in relative terms, and nearly 20% among young software developers; a March 2026 Anthropic study found hiring rates for 22-to-25-year-olds down about 14%, with no systematic rise in overall unemployment.</p>
+        <p>There is counter-evidence too. A study of 25,000 Danish workers found no measurable change in wages or hours despite a 64% adoption rate, with employees saving an average of just 2.8% of working time. A University of Pittsburgh analysis of 10.6 million LinkedIn profiles found that weakness in exposed occupations began in early 2022, before ChatGPT launched.</p>
+        <p class="why"><b>Why it matters</b>The value of this monitoring is that it breaks &ldquo;AI takes jobs&rdquo; into an observable entry point: not the overall unemployment rate, but whether young people can get into exposed occupations at all. If the door narrows while headline unemployment stays flat, the macro data will look fine while the talent pipeline is already shrinking. On policy, the 2.8% time saving suggests the efficiency dividend is still thin; what is changing is hiring structure, not headcount.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 15, 08:05 and November 16, 07:41 (Beijing time): 8 stories. Compiled at 11/16 07:41.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 021 · 24h window · Generated 2026-11-16 07:41</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI Daily</a>
+        <a href="../../economy.html">Economic Daily</a>
+        <a href="../../education.html">Education Daily</a>
+        <a href="../../psychology.html">Psychology Daily</a>
+        <a href="../../tools.html">Tools</a>
+        <a href="../../wish.html">Wish</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="../../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

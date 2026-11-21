@@ -461,6 +461,7 @@ ${chapter.cards.map(renderCard).join("\n\n")}
 export const SECTIONS = {
   ai: {
     dir: "daily-ai",
+    web: "web",
     label: "AI Daily",
     kickerZh: "AI 日报",
     kickerEn: "AI DAILY",
@@ -476,6 +477,7 @@ export const SECTIONS = {
   },
   economy: {
     dir: "daily-economy",
+    web: "web",
     label: "Economy Daily",
     kickerZh: "经济日报",
     kickerEn: "ECONOMY DAILY",
@@ -491,6 +493,7 @@ export const SECTIONS = {
   },
   education: {
     dir: "daily-education",
+    web: "web",
     label: "Education Daily",
     kickerZh: "教育日报",
     kickerEn: "EDUCATION DAILY",
@@ -506,6 +509,7 @@ export const SECTIONS = {
   },
   psychology: {
     dir: "daily-psychology",
+    web: "web",
     label: "Psychology Daily",
     kickerZh: "心理学日报",
     kickerEn: "PSYCHOLOGY DAILY",
@@ -615,7 +619,7 @@ export function renderIssuePage(issue, opts = {}) {
   const section = opts.section || "ai";
   const sec = SECTIONS[section] || SECTIONS.ai;
   const suffix = lang === "en" ? "-en" : "";
-  const stem = `${sec.dir}/${issue.dateISO}${suffix}.html`;
+  const stem = `${sec.dir}/${sec.web}/${issue.dateISO}${suffix}.html`;
   const canonical = `https://kaixinguor.com/${stem}`;
   const switchHref = `${issue.dateISO}${lang === "en" ? "" : "-en"}.html`;
   const langKey = lang === "en" ? "en" : "zh";
@@ -624,13 +628,14 @@ export function renderIssuePage(issue, opts = {}) {
     TITLE: escapeHtml(issue.title),
     DESCRIPTION: escapeHtml(issue.description),
     CANONICAL: canonical,
-    ALT_ZH: `https://kaixinguor.com/${sec.dir}/${issue.dateISO}.html`,
-    ALT_EN: `https://kaixinguor.com/${sec.dir}/${issue.dateISO}-en.html`,
+    ALT_ZH: `https://kaixinguor.com/${sec.dir}/${sec.web}/${issue.dateISO}.html`,
+    ALT_EN: `https://kaixinguor.com/${sec.dir}/${sec.web}/${issue.dateISO}-en.html`,
     RSS_ZH_TITLE: escapeHtml(sec.titleZh),
     RSS_EN_TITLE: escapeHtml(sec.titleEn),
-    RSS_ZH_HREF: `../${sec.feedZh}`,
-    RSS_EN_HREF: `../${sec.feedEn}`,
-    RSS_HREF: lang === "en" ? `../${sec.feedEn}` : `../${sec.feedZh}`,
+    RSS_ZH_HREF: `../../${sec.feedZh}`,
+    RSS_EN_HREF: `../../${sec.feedEn}`,
+    RSS_HREF: lang === "en" ? `../../${sec.feedEn}` : `../../${sec.feedZh}`,
+    BASE: "../../",
     NAV_AI: loc.navAi,
     NAV_ECON: loc.navEcon,
     NAV_EDU: loc.navEdu,
@@ -719,7 +724,7 @@ ${renderChapters(issue, suffix)}
 
 export function renderArchiveSidebar(issues, lang = "zh", opts = {}) {
   const loc = LOCALES[lang] || LOCALES.zh;
-  const prefix = opts.prefix || "daily-ai/";
+  const prefix = opts.prefix || "daily-ai/web/";
   const entries = issues
     .map((issue) => ({ issue, view: lang === "en" ? issue.en : issue }))
     .filter((entry) => entry.view);
@@ -758,7 +763,7 @@ export function renderFeed(issues, lang = "zh", opts = {}) {
   const isEn = lang === "en";
   const views = isEn ? issues.filter((issue) => issue.en).map((issue) => issue.en) : issues;
   const items = views.slice(0, 20).map((issue) => {
-    const link = `${siteUrl}/${sec.dir}/${issue.dateISO}${isEn ? "-en" : ""}.html`;
+    const link = `${siteUrl}/${sec.dir}/${sec.web}/${issue.dateISO}${isEn ? "-en" : ""}.html`;
     const pub = new Date(`${issue.dateISO}T09:00:00+08:00`).toUTCString();
     const desc = [issue.deckText, issue.headline].filter(Boolean).join(" ");
     return `    <item>
@@ -814,20 +819,20 @@ export function renderSitemap(issues, opts = {}) {
   ];
   const daily = [];
   for (const issue of issues) {
-    daily.push([`/daily-ai/${issue.dateISO}.html`, "0.9", issue.dateISO]);
-    if (issue.en) daily.push([`/daily-ai/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+    daily.push([`/daily-ai/web/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily-ai/web/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
   }
   for (const issue of economy) {
-    daily.push([`/daily-economy/${issue.dateISO}.html`, "0.9", issue.dateISO]);
-    if (issue.en) daily.push([`/daily-economy/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+    daily.push([`/daily-economy/web/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily-economy/web/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
   }
   for (const issue of education) {
-    daily.push([`/daily-education/${issue.dateISO}.html`, "0.9", issue.dateISO]);
-    if (issue.en) daily.push([`/daily-education/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+    daily.push([`/daily-education/web/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily-education/web/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
   }
   for (const issue of psychology) {
-    daily.push([`/daily-psychology/${issue.dateISO}.html`, "0.9", issue.dateISO]);
-    if (issue.en) daily.push([`/daily-psychology/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
+    daily.push([`/daily-psychology/web/${issue.dateISO}.html`, "0.9", issue.dateISO]);
+    if (issue.en) daily.push([`/daily-psychology/web/${issue.dateISO}-en.html`, "0.9", issue.dateISO]);
   }
   const rows = [...staticPages, ...daily].map(([loc, priority, lastmod]) => `  <url>
     <loc>${siteUrl}${loc}</loc>

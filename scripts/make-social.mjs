@@ -15,8 +15,8 @@
    细节见 docs/社交配图规则.md。
 
    用法：
-     node scripts/make-social.mjs daily-ai/2026-10-29.html
-     node scripts/make-social.mjs daily-ai/2026-10-29.html --zip   # 需要整包发送时才打包
+     node scripts/make-social.mjs daily-ai/web/2026-10-29.html
+     node scripts/make-social.mjs daily-ai/web/2026-10-29.html --zip   # 需要整包发送时才打包
 
    依赖：Python 3 + playwright（chromium）。首次使用：
      python3 -m pip install playwright

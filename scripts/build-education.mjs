@@ -19,7 +19,7 @@ import {
 } from "./lib/issue.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const EDU_DIR = path.join(ROOT, "daily-education");
+const EDU_DIR = path.join(ROOT, "daily-education", "web");
 const PAGE = path.join(ROOT, "education.html");
 
 const KICKER = { zh: "教育日报", en: "EDUCATION DAILY" };
@@ -36,7 +36,7 @@ export function buildEducation({ check = false, quiet = false } = {}) {
 
   const latest = issues[0];
   if (!latest.en) {
-    throw new Error(`最新一期 ${latest.dateISO} 缺少英文版 daily-education/${latest.dateISO}-en.html`);
+    throw new Error(`最新一期 ${latest.dateISO} 缺少英文版 daily-education/web/${latest.dateISO}-en.html`);
   }
 
   const todayZh = block("today-lang", "zh",
@@ -44,9 +44,9 @@ export function buildEducation({ check = false, quiet = false } = {}) {
   const todayEn = block("today-lang", "en",
     renderHomeIssue(latest.en, "en", { kicker: KICKER.en, kickerEn: "Daily Education Brief" }), true);
   const sidebarZh = block("archive-lang", "zh",
-    renderArchiveSidebar(issues, "zh", { prefix: "daily-education/" }));
+    renderArchiveSidebar(issues, "zh", { prefix: "daily-education/web/" }));
   const sidebarEn = block("archive-lang", "en",
-    renderArchiveSidebar(issues, "en", { prefix: "daily-education/" }), true);
+    renderArchiveSidebar(issues, "en", { prefix: "daily-education/web/" }), true);
 
   const html = applyMarkers(fs.readFileSync(PAGE, "utf8"), {
     TODAY_ZH: todayZh,
@@ -76,7 +76,7 @@ if (isMain) {
   try {
     const out = buildEducation({ check });
     if (out.skipped) {
-      console.log("（没有 daily-education/ 目录或没有期，跳过）");
+      console.log("（没有 daily-education/web/ 目录或没有期，跳过）");
       process.exit(0);
     }
     if (check) {

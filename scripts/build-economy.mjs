@@ -19,7 +19,7 @@ import {
 } from "./lib/issue.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const ECON_DIR = path.join(ROOT, "daily-economy");
+const ECON_DIR = path.join(ROOT, "daily-economy", "web");
 const PAGE = path.join(ROOT, "economy.html");
 
 const KICKER = { zh: "经济日报", en: "ECONOMY DAILY" };
@@ -36,7 +36,7 @@ export function buildEconomy({ check = false, quiet = false } = {}) {
 
   const latest = issues[0];
   if (!latest.en) {
-    throw new Error(`最新一期 ${latest.dateISO} 缺少英文版 daily-economy/${latest.dateISO}-en.html`);
+    throw new Error(`最新一期 ${latest.dateISO} 缺少英文版 daily-economy/web/${latest.dateISO}-en.html`);
   }
 
   const todayZh = block("today-lang", "zh",
@@ -44,9 +44,9 @@ export function buildEconomy({ check = false, quiet = false } = {}) {
   const todayEn = block("today-lang", "en",
     renderHomeIssue(latest.en, "en", { kicker: KICKER.en, kickerEn: "Daily Economy Brief" }), true);
   const sidebarZh = block("archive-lang", "zh",
-    renderArchiveSidebar(issues, "zh", { prefix: "daily-economy/" }));
+    renderArchiveSidebar(issues, "zh", { prefix: "daily-economy/web/" }));
   const sidebarEn = block("archive-lang", "en",
-    renderArchiveSidebar(issues, "en", { prefix: "daily-economy/" }), true);
+    renderArchiveSidebar(issues, "en", { prefix: "daily-economy/web/" }), true);
 
   const html = applyMarkers(fs.readFileSync(PAGE, "utf8"), {
     TODAY_ZH: todayZh,
@@ -76,7 +76,7 @@ if (isMain) {
   try {
     const out = buildEconomy({ check });
     if (out.skipped) {
-      console.log("（没有 daily-economy/ 目录或没有期，跳过）");
+      console.log("（没有 daily-economy/web/ 目录或没有期，跳过）");
       process.exit(0);
     }
     if (check) {

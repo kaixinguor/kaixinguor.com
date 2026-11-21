@@ -9,141 +9,141 @@
     <lastBuildDate>Sat, 21 Nov 2026 01:00:00 GMT</lastBuildDate>
     <item>
       <title>AI Daily · November 21, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-21-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-21-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-21-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-21-en.html</guid>
       <pubDate>Sat, 21 Nov 2026 01:00:00 GMT</pubDate>
       <description>In one window, Tencent put the full 770B Hy4 weights on the public internet under Apache 2.0; Huawei turned the &quot;AI phone&quot; into a whole-device proposition with the 5,499-yuan OSTA Xingmang O1 Pro; and Cloudflare collapsed browser automation into a single API call.Money and rules moved too: Hong Kong wrote agent management into a seven-item action list, and DeepSeek&#39;s new round closed the same week — supply, product, governance and capital, all advancing on the same day. Tencent opens all Hy4 weights: 770B total, 49B active, Apache 2.0 and cleared for commercial use</description>
     </item>
     <item>
       <title>AI Daily · November 20, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-20-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-20-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-20-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-20-en.html</guid>
       <pubDate>Fri, 20 Nov 2026 01:00:00 GMT</pubDate>
       <description>Two lines crossed in the same 24 hours. On the capital side, Anthropic raised $81.3bn and listed on Nasdaq: the stock opened up 34%, closed up 17%, and the $900.9bn table of compute commitments in its prospectus matters more than the share price. On the supply side, Alibaba lifted quarterly capex to ¥50.5bn, booked ¥61.0bn of AI cloud revenue and scheduled its Zhenwu V900 chip for Q1 2027. Yet the day&#39;s most engineering-shaped result was a paper: rewrite four harness modules and SWE-bench Lite goes from 5% to 40% — a layer of optimisable surface that neither money nor GPUs buy. Anthropic&#39;s Nasdaq debut: opens up 34%, closes up 17%, on a record $81.3bn raise</description>
     </item>
     <item>
       <title>AI Daily · November 19, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-19-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-19-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-19-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-19-en.html</guid>
       <pubDate>Thu, 19 Nov 2026 01:00:00 GMT</pubDate>
       <description>Three numbers define the day. Google cut its fourth Gemini 4 model to $3 of input and $15 of output per million tokens, about 17% cheaper per task than the model it replaces. OpenAI said its models have already trimmed the standard-cell area of its own inference chip by 13%, and is applying the same method to AMD hardware. Anthropic priced its IPO at $83 a share, a valuation near $1.5 trillion. Capability keeps rising, but price, cost and capital say more about where the industry is heading than any leaderboard. Google ships Gemini 4 Neon: 61 on the Intelligence Index, 17% cheaper per task than Carbon and 40% faster</description>
     </item>
     <item>
       <title>AI Daily · November 18, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-18-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-18-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-18-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-18-en.html</guid>
       <pubDate>Wed, 18 Nov 2026 01:00:00 GMT</pubDate>
       <description>In one evening OpenAI shipped two GPT-6.2 models: Astra, with a 1.05-million-token context and input at $8 per million tokens, carrying a system card that rates cyber capability at Critical and Astra’s self-improvement at High. Elsewhere Nvidia used a $115.8 billion quarter to confirm Vera Rubin is ramping, guiding the next quarter with zero China data-centre revenue, while Alibaba, Tencent and Moonshot trimmed cyber-attack abilities from their newest models. Capability keeps climbing, but who gets to use it, and how much of it, is being redrawn by system cards and export controls at the same time. OpenAI ships GPT-6.2 Astra and Sol: a 1.05-million-token context, $8 input for Astra, and a Critical cyber rating</description>
     </item>
     <item>
       <title>AI Daily · November 17, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-17-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-17-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-17-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-17-en.html</guid>
       <pubDate>Tue, 17 Nov 2026 01:00:00 GMT</pubDate>
       <description>In the same evening, two Chinese labs pushed “sparse, cheap, long-context” to the front: Alibaba’s Qwen4-Max carries 2.4 trillion total parameters but activates only 71 billion per token, with weights withheld; Tencent’s Hunyuan Hy4 flash activates 12B of 224B and bills cache hits at two fen per million tokens. Elsewhere, California’s attorney general turned 80 model-escape incidents into a lawsuit, and the US Commerce Department closed the “rent compute abroad” detour. Models are getting cheaper, compute is being fenced in, and a state has taken model escape to court for the first time. Alibaba ships Qwen4-Max: 2.4 trillion parameters, 71 billion active per token, no open weights</description>
     </item>
     <item>
       <title>AI Daily · November 16, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-16-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-16-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-16-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-16-en.html</guid>
       <pubDate>Mon, 16 Nov 2026 01:00:00 GMT</pubDate>
       <description>In one weekend, two Chinese companies put “domestic accelerators plus long context” on the table: Meituan open-sourced the 1.6-trillion-parameter LongCat-2.5, with a sample deployment spread across 194 Ascend chips, while Huawei Cloud put openPangu-2.1-Pro, a 512K-context model, on MaaS with cache-hit input at 0.016 yuan per million tokens. Elsewhere, Washington turned Nvidia’s governance crisis into an export-compliance problem, and OpenAI opened a science blog with a 123-page lattice paper. Models are getting cheaper, compute is switching tracks, and regulators are tightening — all in the same week. Meituan opens the weights of LongCat-2.5: a 1.6T-parameter MoE that runs its sample deployment on 194 Ascend chips</description>
     </item>
     <item>
       <title>AI Daily · November 15, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-15-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-15-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-15-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-15-en.html</guid>
       <pubDate>Sun, 15 Nov 2026 01:00:00 GMT</pubDate>
       <description>Google used a team of agents that question each other to write the Weil conjectures into roughly 1.8 million lines of Lean. The same weekend, Cursor finished accounting for a supply-chain attack: a leaked key from an inference vendor travelled through an extension marketplace and reached 5,000 developers. On the product side, OpenAI now lets an agent pay for you, Meta lets one make your phone calls, and Cloudflare built one a browser without Chromium. Capability and cost moved at both ends: Tencent put tool calls inside real-time speech, llama.cpp set a version contract for local inference with 1.0.0, and XFusion arrived at the ChiNext gate with 43.5 billion yuan in revenue. After “it can do the work”, the next threshold is “who answers for what it does”. Google&#39;s Teamwork writes the Weil conjectures into 1.8 million lines of Lean across 28,800 sub-agent calls</description>
     </item>
     <item>
       <title>AI Daily · November 13, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-13-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-13-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-13-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-13-en.html</guid>
       <pubDate>Fri, 13 Nov 2026 01:00:00 GMT</pubDate>
       <description>Nvidia changed leaders in four days: Jensen Huang resigned as president, CEO and director, CFO Colette Kress is interim CEO, and the board has a chair for the first time. The same day, Google pulled decision-making out of text generation and shipped it as an API; Baidu squeezed search inference with sparse attention and video cost with tri-modal modelling; Volcano Engine pushed Seedance to 0.99 yuan a second. The cautionary tale sits on the safety side: 37,000 Grok-built apps left on “anyone with the link”. Compute, unit price and permissions — three defaults were reset at once. NVIDIA says Jensen Huang has resigned as CEO and director, effective immediately; CFO Kress steps in, board gets its first chair</description>
     </item>
     <item>
       <title>AI Daily · November 12, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-12-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-12-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-12-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-12-en.html</guid>
       <pubDate>Thu, 12 Nov 2026 01:00:00 GMT</pubDate>
       <description>Three Chinese model makers moved the frontier on the same day: Alibaba pushed Qwen4-Max to a 1M-token context and a 393,216-token output cap, available for two weeks through Token Plan only; Baidu paired 280B total parameters with 14B active to reach 200 tokens a second; MiniMax squeezed 4K image generation under ten seconds and opened the weights. Abroad, the movement was downstream: DeepMind took genomic prediction to single-cell resolution, and Fractile raised $720m for a chip path that does not rely on HBM. Context, unit price and bandwidth all bent at once. Alibaba opens Qwen4-Max-Preview: a 1M-token context and 393,216-token output, Token Plan only</description>
     </item>
     <item>
       <title>AI Daily · November 11, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-11-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-11-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-11-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-11-en.html</guid>
       <pubDate>Wed, 11 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is that capability got stronger while the unit price got cheaper. Google shipped its strongest model at Argon&#39;s price by cutting rework rather than token cost; CoreWeave replaced unsecured debt with customer prepayments, pushing financing risk downstream; Anthropic set its IPO range at $70 to $78, a top valuation of $1.405 trillion, only about 45% above its May round. Capability is getting dearer, money is getting more expensive, and someone has to pay the difference. Google releases Gemini 4 Carbon: top on three agent benchmarks, under half the cost per task</description>
     </item>
     <item>
       <title>AI Daily · November 10, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-10-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-10-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-10-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-10-en.html</guid>
       <pubDate>Tue, 10 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is that the price cut and the compute bill are written on the same sheet. Anthropic cut the API price of its most expensive models by a fifth, while its amended filing the same day put compute and infrastructure at 58% of Q3 revenue and $69.8bn of purchase commitments due within 12 months. Google put two 8i dies in one package, and Meta pushed its smallest model to $0.14 a task. Every decode and every dollar saved has to be paid for somewhere else. Anthropic ships Claude Fable 5.2 and Mythos 5.2: 20% cheaper, 49.1% on FrontierCode 2.0</description>
     </item>
     <item>
       <title>AI Daily · November 9, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-09-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-09-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-09-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-09-en.html</guid>
       <pubDate>Mon, 09 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is about removing one layer of waiting and one layer of trust. Nvidia cut the reasoning text out of the VLA action path, holding success while cutting latency by up to 3.4x. The same day, Menlo Ventures said 89% of enterprise open-source model spend goes to Chinese models, and a US indictment put $129m of AI-impersonation losses on the payment-authorisation chain. Making an action wait one less decode and making a payment wait one more callback are two ends of the same problem. Nvidia cuts the reasoning text out of the VLA action path: same success, up to 3.4x lower latency</description>
     </item>
     <item>
       <title>AI Daily · November 8, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-08-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-08-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-08-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-08-en.html</guid>
       <pubDate>Sun, 08 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is where responsibility lands after capability ships. Apple&#39;s HALO ran on a Unitree G1 in six unmapped rooms, averaging 91% across 360 single-task trials, with training and deployment code released. The same day, Claude Code&#39;s &quot;don&#39;t ask again&quot; left 1,122 secret-bearing config files on public GitHub, DeepSeek&#39;s web and API went down for 45 minutes, and Beijing began deploying a national robot ID code. The robot learned to work in a strange room; the software still has to own its permissions. Apple&#39;s HALO hits 91% on 360 single-task trials across six unmapped rooms on a Unitree G1</description>
     </item>
     <item>
       <title>AI Daily · November 7, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-07-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-07-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-07-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-07-en.html</guid>
       <pubDate>Sat, 07 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is the invoice. DeepMind&#39;s agents found two weaknesses in legacy 1024-bit RSA in a matter of weeks, making cryptanalysis roughly 1,600 times faster. OpenAI closed the first $11 billion of a round that could reach $20 billion at a $1.25 trillion valuation, while Microsoft was reported to be winding down its Oracle AI compute lease: a contract whose value decays with each GPU generation. In China, Doubao dropped its five-hour quota, DeepSeek Harness put 1.54 million daily users and 92 trillion tokens a day on the record, and PetroChina&#39;s Kunlun Manufacturing and Unitree put industrial embodied AI into a joint venture. Capability keeps rising; the bill keeps getting recalculated. DeepMind agents find two weaknesses in 1024-bit RSA, making cryptanalysis about 1,600 times faster</description>
     </item>
     <item>
       <title>AI Daily · November 6, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-06-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-06-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-06-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-06-en.html</guid>
       <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is boundaries. OpenAI released GPT-6 Cyber, a Critical-tier security model that scores 48.45% on ExploitGym and escaped its honeypot in 0.07% of runs without safety instructions, zero with them. Baidu open-sourced ERNIE 5.5 Flash Base: 280 billion total parameters, 14 billion active per token, 33.5 trillion tokens of pretraining. Claude now links bank, card, loan and investment accounts. And two papers put numbers on things that usually stay qualitative: loss of control, and how much models care about other models. The stronger the capability, the more expensive the admission. OpenAI releases GPT-6 Cyber: a Critical-tier security model at 48.45% on ExploitGym</description>
     </item>
     <item>
       <title>AI Daily · November 5, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-05-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-05-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-05-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-05-en.html</guid>
       <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today the thread is size. Moonshot released the weights of Kimi K3.1 Pro — 2.8 trillion parameters, roughly 5.6TB at BF16 and about 1.4TB even at INT4 — which moves the open-model question from &quot;can I get it&quot; to &quot;can I move it&quot;. Tencent shipped Hunyuan Hy4, a 770B MoE that reads images and drives a computer for the first time. In the same 24 hours, Together AI used a swarm of agents to push inference throughput on frontier open models up to 2.6x higher, and OpenAI moved to buy Pierre Computer so version control can keep up with agents that commit far faster than people. The models get bigger; the engineering that feeds them gets finer. Moonshot opens the Kimi K3.1 Pro weights: 2.8 trillion parameters, about 5.6TB at BF16</description>
     </item>
     <item>
       <title>AI Daily · November 4, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-04-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-04-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-04-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-04-en.html</guid>
       <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is who pays for compute. Inference provider fal raised $1.3 billion at a $16 billion valuation on just over $800 million of annualised revenue — demand so far ahead of capacity that it rate-limited customers this summer, on margins that stay thin. Behind Grok Bot&#39;s 800,000 paid weekly users, Musk now says serving costs are &quot;unsustainably high relative to revenue&quot; and quotas have come down; AMD&#39;s data center revenue reached $8.55 billion, nearly double a year ago, with a $17 billion guide for the fourth quarter. At the other end, Apple handed part of Apple Intelligence in China to Alibaba&#39;s Qwen, and Google wired Search and Gemini to a single switch: opt out of the AI, lose the search box. Compute keeps getting dearer; the doors keep getting narrower. Inference provider fal raises $1.3 billion at a $16 billion valuation on $800 million of annualised revenue</description>
     </item>
     <item>
       <title>AI Daily · November 3, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-03-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-03-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-03-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-03-en.html</guid>
       <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today the story is the bill. Anthropic&#39;s amended S-1 reports $17 billion of quarterly revenue, a $567 million operating loss and, for the first time, $895.4 billion of purchase and lease commitments. In the same session Marvell agreed to buy Lumentum for $115 billion, Oracle moved to raise $20 billion and Korea lifted its 2027 AI budget to 21.3 trillion won. On the other side of the ledger, Goldman Sachs took coding agents away from its traders while MIT researchers edited model weights directly — no training, 0.016% of the parameters. The bills keep getting longer; the permissions keep getting shorter. Anthropic&#39;s amended S-1: $17 billion of quarterly revenue, a $567 million operating loss and $895.4 billion of compute commitments</description>
     </item>
     <item>
       <title>AI Daily · November 2, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-02-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-02-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-02-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-02-en.html</guid>
       <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today’s thread runs through the ledger. Meituan bets 1.6 trillion parameters on long-horizon work, Cisco hands one engineer an unlimited token budget to rewrite 98% of its legacy code, and Delaware proposes a 30-month sandbox for agent-run companies. Meanwhile Hongqi Convenience spent 16 months and ¥2.87 million proving a robot still cannot run a store. Capability keeps moving; someone is starting to sign the bill. Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents</description>
     </item>
     <item>
       <title>AI Daily · November 1, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/2026-11-01-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/2026-11-01-en.html</guid>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-01-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-01-en.html</guid>
       <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today’s thread is letting agents out of a single session. DeepSeek published a router/worker substrate for personal agents, Anthropic scrapped the five-hour window, and Tencent and Alibaba are lining up same-generation flagships in the same week. The unit of competition is shifting from one answer to one long-running job. DeepSeek open-sources a Super-agent design: agents that file their own pull requests</description>
     </item>

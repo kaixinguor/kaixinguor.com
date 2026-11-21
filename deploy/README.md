@@ -125,7 +125,7 @@ server {
 ```bash
 curl -I https://tools.mathster.cn/            # 200
 curl -I https://tools.mathster.cn/hark/       # 200，不能是 403
-curl -I https://tools.mathster.cn/daily-ai/2026-10-26.html   # 200
+curl -I https://tools.mathster.cn/daily-ai/web/2026-10-26.html   # 200
 curl -I https://tools.mathster.cn/feed.xml    # 200，Content-Type: application/rss+xml 或 xml
 curl -I https://tools.mathster.cn/feed-en.xml # 同上，英文 RSS
 curl -I https://tools.mathster.cn/nope        # 404，且返回你自己的 404 页

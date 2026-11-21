@@ -6,10 +6,10 @@
 - 首页 / 经济日报页 / 教育日报页 / 心理学日报页 = 当天整份日报全文（报头、目录、速览、全部栏目、期脚注）
 - 最左侧贴边 ARCHIVE 抽屉 = 各自的往期（`archive.html` 只做旧链接跳转）
 - `/tools.html` = 标签式工具列表
-- `/daily-ai/YYYY-MM-DD.html`、`/daily-ai/YYYY-MM-DD-en.html` = AI 日报中英文
-- `/daily-economy/YYYY-MM-DD.html`、`/daily-economy/YYYY-MM-DD-en.html` = 经济日报中英文
-- `/daily-education/YYYY-MM-DD.html`、`/daily-education/YYYY-MM-DD-en.html` = 教育日报中英文
-- `/daily-psychology/YYYY-MM-DD.html`、`/daily-psychology/YYYY-MM-DD-en.html` = 心理学日报中英文
+- `/daily-ai/web/YYYY-MM-DD.html`、`/daily-ai/web/YYYY-MM-DD-en.html` = AI 日报中英文
+- `/daily-economy/web/YYYY-MM-DD.html`、`/daily-economy/web/YYYY-MM-DD-en.html` = 经济日报中英文
+- `/daily-education/web/YYYY-MM-DD.html`、`/daily-education/web/YYYY-MM-DD-en.html` = 教育日报中英文
+- `/daily-psychology/web/YYYY-MM-DD.html`、`/daily-psychology/web/YYYY-MM-DD-en.html` = 心理学日报中英文
 - `/feed.xml` / `/feed-en.xml` = AI 日报 RSS；`/feed-economy.xml` / `/feed-economy-en.xml` = 经济日报 RSS；`/feed-education.xml` / `/feed-education-en.xml` = 教育日报 RSS；`/feed-psychology.xml` / `/feed-psychology-en.xml` = 心理学日报 RSS
 
 视觉语言来自 `ai-daily/2026-10-26.html`，抽成了 `style.css`；日报、首页、工具、许愿共用同一套 tokens 和组件。
@@ -43,23 +43,23 @@ npm run preview        # http://127.0.0.1:8899/
 cd site
 
 # AI 日报 → daily-ai/ + index.html + feed.xml / feed-en.xml
-node scripts/publish-daily.mjs daily-ai/2026-10-26.html \
-  --en daily-ai/2026-10-26-en.html \
+node scripts/publish-daily.mjs daily-ai/web/2026-10-26.html \
+  --en daily-ai/web/2026-10-26-en.html \
   --push
 
 # 经济日报 → daily-economy/ + economy.html + feed-economy*.xml
-node scripts/publish-economy.mjs daily-economy/2026-10-30.html \
-  --en daily-economy/2026-10-30-en.html \
+node scripts/publish-economy.mjs daily-economy/web/2026-10-30.html \
+  --en daily-economy/web/2026-10-30-en.html \
   --push
 
 # 教育日报 → daily-education/ + education.html + feed-education*.xml
-node scripts/publish-education.mjs daily-education/2026-11-03.html \
-  --en daily-education/2026-11-03-en.html \
+node scripts/publish-education.mjs daily-education/web/2026-11-03.html \
+  --en daily-education/web/2026-11-03-en.html \
   --push
 
 # 心理学日报 → daily-psychology/ + psychology.html + feed-psychology*.xml
-node scripts/publish-psychology.mjs daily-psychology/2026-11-09.html \
-  --en daily-psychology/2026-11-09-en.html \
+node scripts/publish-psychology.mjs daily-psychology/web/2026-11-09.html \
+  --en daily-psychology/web/2026-11-09-en.html \
   --push
 ```
 
@@ -81,8 +81,8 @@ node scripts/publish-psychology.mjs daily-psychology/2026-11-09.html \
 
 ```bash
 cd site
-npm run social -- daily-ai/2026-10-29.html
-# 或 node scripts/make-social.mjs daily-ai/2026-10-29.html
+npm run social -- daily-ai/web/2026-10-29.html
+# 或 node scripts/make-social.mjs daily-ai/web/2026-10-29.html
 ```
 
 默认写到 `daily-ai/social/YYYY-MM-DD/`，已在 `.gitignore`，不会进 git、不会上线。经济日报自 2026-11-02 起不再生成配图，旧图保留在 `daily-economy/social/`：
@@ -114,10 +114,10 @@ site/
 ├── tools.html              工具（标签筛选）
 ├── wish.html               许愿
 ├── privacy.html / 404.html / download.html / changelog.html
-├── daily-ai/YYYY-MM-DD.html        AI 日报（中/英）
-├── daily-economy/YYYY-MM-DD.html   经济日报（中/英）
-├── daily-education/YYYY-MM-DD.html 教育日报（中/英）
-├── daily-psychology/YYYY-MM-DD.html 心理学日报（中/英）
+├── daily-ai/web/YYYY-MM-DD.html        AI 日报（中/英）
+├── daily-economy/web/YYYY-MM-DD.html   经济日报（中/英）
+├── daily-education/web/YYYY-MM-DD.html 教育日报（中/英）
+├── daily-psychology/web/YYYY-MM-DD.html 心理学日报（中/英）
 ├── hark/  snipread/        两个产品子站
 ├── style.css               全站唯一设计系统
 ├── site.js                 深浅色 / 进度条 / 目录 / 工具标签

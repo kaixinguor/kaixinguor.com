@@ -118,10 +118,10 @@ certbot 会自己往 vhost 里写 443 块和证书路径，**不要再用仓库�
 ```bash
 curl -I https://kaixinguor.com/                       # 200
 curl -I https://kaixinguor.com/hark/                  # 200，不能是 403
-curl -I https://kaixinguor.com/daily-ai/2026-10-30.html  # 200
+curl -I https://kaixinguor.com/daily-ai/web/2026-10-30.html  # 200
 curl -I https://kaixinguor.com/feed.xml               # 200，application/rss+xml
 curl -I https://kaixinguor.com/assets/hark-icon.png   # 200，Cache-Control: max-age=604800
-curl -I https://kaixinguor.com/daily/2026-10-26.html  # 301 → /daily-ai/2026-10-26.html
+curl -I https://kaixinguor.com/daily/2026-10-26.html  # 301 → /daily-ai/web/2026-10-26.html
 curl -s -o /dev/null -w '%{http_code}\n' https://kaixinguor.com/nope   # 404 且是站内 404 页
 ```
 

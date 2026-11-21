@@ -27,7 +27,7 @@ import {
 } from "./lib/issue.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DAILY_DIR = path.join(ROOT, "daily-ai");
+const DAILY_DIR = path.join(ROOT, "daily-ai", "web");
 const INDEX = path.join(ROOT, "index.html");
 const FEED = path.join(ROOT, "feed.xml");
 const FEED_EN = path.join(ROOT, "feed-en.xml");
@@ -68,20 +68,20 @@ function validate(issue) {
   return warnings;
 }
 
-if (!fs.existsSync(DAILY_DIR)) fail("找不到 daily-ai/ 目录");
+if (!fs.existsSync(DAILY_DIR)) fail("找不到 daily-ai/web/ 目录");
 
 const issues = readIssues(DAILY_DIR);
-if (!issues.length) fail("daily-ai/ 里还没有任何 YYYY-MM-DD.html");
+if (!issues.length) fail("daily-ai/web/ 里还没有任何 YYYY-MM-DD.html");
 
 const warnings = issues.flatMap(validate);
 for (const issue of issues) {
   if (issue.en) warnings.push(...validate(issue.en));
-  else if (issue !== issues[0]) warnings.push(`daily-ai/${issue.dateISO}.html: 没有对应的英文版 -en.html`);
+  else if (issue !== issues[0]) warnings.push(`daily-ai/web/${issue.dateISO}.html: 没有对应的英文版 -en.html`);
 }
 
 const latest = issues[0];
 if (!latest.en) {
-  fail(`最新一期 ${latest.dateISO} 缺少英文版 daily-ai/${latest.dateISO}-en.html；先运行 publish-daily 并带 --en。`);
+  fail(`最新一期 ${latest.dateISO} 缺少英文版 daily-ai/web/${latest.dateISO}-en.html；先运行 publish-daily 并带 --en。`);
 }
 
 /* 经济日报：先构建 economy.html，同时拿到它的期次（后面生成 RSS 和 sitemap 要用） */
@@ -117,8 +117,8 @@ ${inner}
 
 const todayZh = block("today-lang", "zh", renderHomeIssue(latest, "zh"));
 const todayEn = block("today-lang", "en", renderHomeIssue(latest.en, "en"), true);
-const sidebarZh = block("archive-lang", "zh", renderArchiveSidebar(issues, "zh"));
-const sidebarEn = block("archive-lang", "en", renderArchiveSidebar(issues, "en"), true);
+const sidebarZh = block("archive-lang", "zh", renderArchiveSidebar(issues, "zh", { prefix: "daily-ai/web/" }));
+const sidebarEn = block("archive-lang", "en", renderArchiveSidebar(issues, "en", { prefix: "daily-ai/web/" }), true);
 const feed = renderFeed(issues, "zh", { section: "ai" });
 const feedEn = renderFeed(issues, "en", { section: "ai" });
 const feedEcon = econIssues.length ? renderFeed(econIssues, "zh", { section: "economy" }) : null;

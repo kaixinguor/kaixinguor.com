@@ -3,8 +3,8 @@
    只用 Node 内置 fetch，不需要装包。
 
    用法：
-     node scripts/check-links.mjs daily-ai/2026-10-26.html
-     node scripts/check-links.mjs daily-ai/2026-10-26.html --strict
+     node scripts/check-links.mjs daily-ai/web/2026-10-26.html
+     node scripts/check-links.mjs daily-ai/web/2026-10-26.html --strict
      node scripts/check-links.mjs --latest
      node scripts/check-links.mjs --latest --section economy
      node scripts/check-links.mjs --latest --section education
@@ -23,7 +23,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const sectionIdx = args.indexOf("--section");
 const section = sectionIdx >= 0 ? (args[sectionIdx + 1] || "ai") : "ai";
-const DIRS = { ai: "daily-ai", economy: "daily-economy", education: "daily-education", psychology: "daily-psychology" };
+const DIRS = { ai: "daily-ai/web", economy: "daily-economy/web", education: "daily-education/web", psychology: "daily-psychology/web" };
 const DAILY_DIR = path.join(ROOT, DIRS[section] || "daily-ai");
 const flags = new Set(args.filter((a) => a.startsWith("--")));
 const strict = flags.has("--strict");

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 20, 2026</title>
+<meta name="description" content="AI Daily Issue 025, November 20, 2026: Anthropic opens at $111.50 on Nasdaq, up 34%, and closes 17% above its IPO price after raising $81.3bn in the largest listing on record; Alibaba lifts quarterly capex to ¥50.5bn with ¥61.0bn of AI cloud revenue and puts its Zhenwu V900 chip in Q1 2027; a Google paper takes SWE-bench Lite from 5% to 40% by rewriting four harness modules; Tianjin University releases a 560B-parameter enzyme design model; Apple is hiring for a system-level agent; ByteDance&#39;s Volcano Engine ships a realtime audio-video model API; Google adds computer use to Gemini on macOS.">
+<meta property="og:title" content="AI Daily · November 20, 2026">
+<meta property="og:description" content="AI Daily Issue 025, November 20, 2026: Anthropic opens at $111.50 on Nasdaq, up 34%, and closes 17% above its IPO price after raising $81.3bn in the largest listing on record; Alibaba lifts quarterly capex to ¥50.5bn with ¥61.0bn of AI cloud revenue and puts its Zhenwu V900 chip in Q1 2027; a Google paper takes SWE-bench Lite from 5% to 40% by rewriting four harness modules; Tianjin University releases a 560B-parameter enzyme design model; Apple is hiring for a system-level agent; ByteDance&#39;s Volcano Engine ships a realtime audio-video model API; Google adds computer use to Gemini on macOS.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/2026-11-20-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-19T07:33:00+08:00/2026-11-20T09:52:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/2026-11-20-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/2026-11-20.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/2026-11-20-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI Daily</a>
+      <a href="../../economy.html">Economic Daily</a>
+      <a href="../../education.html">Education Daily</a>
+      <a href="../../psychology.html">Psychology Daily</a>
+      <a href="../../tools.html">Tools</a>
+      <a href="../../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-20.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 025</span>
+    </div>
+    <h1 class="date">November 20, 2026<span class="weekday">FRI</span></h1>
+    <p class="deck">Two lines crossed in the same 24 hours. On the capital side, Anthropic raised $81.3bn and listed on Nasdaq: the stock opened up 34%, closed up 17%, and the $900.9bn table of compute commitments in its prospectus matters more than the share price. On the supply side, Alibaba lifted quarterly capex to ¥50.5bn, booked ¥61.0bn of AI cloud revenue and scheduled its Zhenwu V900 chip for Q1 2027. <em>Yet the day's most engineering-shaped result was a paper: rewrite four harness modules and SWE-bench Lite goes from 5% to 40% — a layer of optimisable surface that neither money nor GPUs buy.</em></p>
+    <div class="metabar"><span class="pill">Issue 025</span>
+      <span class="dot"></span>
+      <span>Window Nov 19, 07:33 &ndash; Nov 20, 09:52</span>
+      <span class="dot"></span>
+      <span>8 stories</span>
+      <span class="dot"></span>
+      <span>12 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#capital"><span class="n">01</span>Industry &amp; Capital</a>
+        <a href="#models"><span class="n">02</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">04</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">05</span>Embodied AI</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>Anthropic listed on Nasdaq: it opened at $111.50, 34.3% above its IPO price, and closed at $97.17, still up 17.1%, for a fully diluted valuation near $1.77tn.</b>The $81.3bn public offering is the largest on record; with a $26bn concurrent private placement the deal totals roughly $107.3bn. The stock gave back about 13% in its first half hour, the worst opening half hour for a large US IPO since 2008.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Alibaba spent ¥50.5bn of capex in the quarter, up 60% year on year, as AI cloud and compute revenue rose 53% to ¥61.0bn and AI product revenue hit ¥17.9bn — its 13th straight quarter of triple-digit growth.</b>Its in-house Zhenwu V900 AI chip is slated for Q1 2027 with an open-sourced SAIL software stack; Qwen4-Max carries a 2.4-trillion-parameter backbone and native vision.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>In Google's paper "Harnesses That Improve Themselves", a 142-line agent harness is split into four modules and edited one at a time against a validation set, lifting SWE-bench Lite from 5.0% to 40.0% at about 46.7k tokens per task.</b>Unrestricted full rewrites reach 42.5% but burn about 451.6k tokens per task, nearly ten times more; prompt rules alone drop success to 2.5%.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-19">
+        <div class="cmeta">
+          <span class="d">11/20 09:41</span>
+          <a class="src" href="https://news.qq.com/rain/a/20261120A04U7X00" target="_blank" rel="noopener noreferrer">Wallstreetcn ↗</a>
+        </div>
+        <h3>Anthropic's Nasdaq debut: opens up 34%, closes up 17%, on a record $81.3bn raise</h3>
+        <p>Anthropic began trading on Nasdaq under the ticker ANT on Thursday, November 19. It opened at $111.50, about 34.3% above its $83 IPO price, touched a high of $115.10 for a 38.7% gain, then faded to a low of $92.72 and closed at $97.17, up 17.1%. According to <a href="https://news.qq.com/rain/a/20261120A04U7X00" target="_blank" rel="noopener noreferrer">Wallstreetcn</a>, the stock fell about 13% from its first trade within half an hour — the worst opening half hour for a large US IPO since 2008.</p>
+        <p>The offering raised about $81.3bn, topping SpaceX's roughly $75bn record; a concurrent private placement of about $26bn brings the total deal to some $107.3bn. The $83 price implied a valuation near $1.5tn, the opening trade briefly pushed the market value past $2tn, and the fully diluted close put it near $1.77tn. Yahoo Finance data cited in the report shows the first trade of $111.50 covered about 108m shares, roughly $12bn, with about $15bn changing hands in the first full minute.</p>
+        <p>The prospectus numbers: annualised operating revenue of about $81bn as of October 31, up roughly $10bn from the end of September; third-quarter revenue of $16.956bn, up about 47% sequentially, but an operating loss of about $567m after a $974m operating profit in the second quarter, which the company attributes to a $5bn short-term compute commitment and a $2bn non-cash charitable matching charge. Compute and infrastructure spending reached about $9.9bn in the quarter, up from about $5.6bn, for roughly $18.8bn across the first three quarters of 2026.</p>
+        <p>The heaviest table is the commitment schedule: purchase obligations and leases signed through and after the end of September total about $900.9bn, of which roughly $451.6bn is expected to fall due by the end of 2030 and most of the remainder between 2031 and 2045. At the opening bell, CEO Dario Amodei said the company will set the pace of training and deployment by safety assessments, and will not yield to commercial or political pressure.</p>
+        <p class="why"><b>Why it matters</b>For anyone training models, the commitment table carries more signal than the share price: $451.6bn of the $900.9bn falls due before 2030, which effectively fixes the compute ceiling and the shape of the unit-cost curve for the next four years. The size of a training run will be set by contracts, not architecture. The second number is the $9.9bn of quarterly compute spend against a $567m operating loss: revenue is metered by usage while costs are locked into multi-year minimum commitments, and that maturity mismatch is harder to fix than an expensive multiple. Third, giving back 13% in half an hour and closing up only 17% says IPO buyers will pay a premium for a scarce asset but will not hold it above $2tn overnight.<br><b>Another angle</b>The $83 price valued a five-year-old company at $1.5tn while it spent about $18.8bn on compute and infrastructure in the first three quarters of 2026 — public markets are prepaying for a decade of compute contracts, which is the same trade as Alibaba lifting quarterly capex to ¥50.5bn on the same day, seen from the other side.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19</span>
+          <a class="src" href="https://www.alibabagroup.com/zh-HK/document-2060147792046718976" target="_blank" rel="noopener noreferrer">Alibaba Group · September quarter results ↗</a>
+        </div>
+        <h3>Alibaba: ¥50.5bn of quarterly capex, ¥61.0bn of AI cloud revenue, and the Zhenwu V900 chip in Q1 2027</h3>
+        <p>Alibaba reported results for the quarter ended September 30 on November 19: revenue of ¥271.5bn, up 10%, with AI cloud and compute services revenue of ¥61.0bn, up 53%. External customer revenue rose 64% and external recurring revenue excluding compute-equipment solutions rose 67%, while AI product revenue reached ¥17.9bn for a 13th consecutive quarter of triple-digit growth. Net income was ¥64.4bn, up 213% on investment gains and higher operating profit; adjusted EBITA rose 260% to ¥32.6bn.</p>
+        <p>On the spending side, capital expenditure for the quarter was ¥50.5bn, up 60%, which the company attributes to faster compute build-out, higher chip component prices, CPU demand expected from AI agent adoption and purchasing-cycle timing. Free cash flow was an outflow of ¥34.5bn, versus a ¥21.8bn outflow a year earlier, mostly because of cloud infrastructure spending.</p>
+        <p>Chips and models are the roadmap part of the release. The next-generation training-and-inference AI chip, Zhenwu V900, was announced at the September Yunqi conference on a homegrown parallel-computing architecture and is scheduled to ship in Q1 2027, alongside an open-sourced SAIL software stack; the Zhenwu M890 supernode instance launched in August is described as China's first supernode architecture able to serve models with more than 2 trillion parameters. On the model side, Qwen4-Max uses a new mixture-of-experts architecture with a 2.4-trillion-parameter backbone and native vision, which the company says improves long-horizon execution in manufacturing, game development, healthcare and frontier research.</p>
+        <p class="why"><b>Why it matters</b>Read together, 53% AI cloud growth and 60% capex growth say demand is still running ahead of depreciation — but negative free cash flow says the money is coming out of this year's cash, not next decade's. For inference teams the interesting part is the bundle: an in-house chip, a supernode architecture and an open-sourced SAIL stack are all aimed at fixed cost per token and switching cost, not at stacking more GPUs. A 2.4-trillion-parameter MoE also means the bill lands on active parameters and KV cache rather than weight size. Three things to watch: when V900 actually reaches volume and external customers, how well SAIL tracks mainstream frameworks, and whether capex keeps growing at 60% — if it does, the cloud price war still has room.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19 16:01</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/19/content_615873.html" target="_blank" rel="noopener noreferrer">Science and Technology Daily ↗</a>
+        </div>
+        <h3>Tianjin University releases Tianhua Kaiwu, a 560B-parameter foundation model for enzyme design</h3>
+        <p>Tianjin University unveiled Tianhua Kaiwu, an enzyme-design foundation model, in Tianjin on November 19, pairing it with the university's automated synthetic-biology hardware to form a closed-loop optimisation system for industrial enzymes. According to <a href="https://www.stdaily.com/web/gdxw/2026-11/19/content_615873.html" target="_blank" rel="noopener noreferrer">Science and Technology Daily</a>, the team says the system can produce an enzyme design within a week and make it possible to build a custom strain and develop a manufacturing process for a target product within three months.</p>
+        <p>The parameter trajectory is worth noting: work began in 2021, an 800m-parameter base model landed in 2024, a 7bn-parameter version in 2025, and a joint scale-up with Zhipu AI took it to 560bn. The model was built from a new architecture rather than fine-tuned from a general one, and jointly models reaction, sequence and structure — linking the production task to be done with how the enzyme should be built.</p>
+        <p>Three capabilities map to three steps: predict (design a new enzyme from a target reaction, forecast mutation effects and pick combinations), write (turn a digital design into a physical sample through automated gene synthesis, assembly and expression), and verify (feed experimental results back into training to recalibrate the model and iterate the design). The model runs on domestic compute and supports on-premises deployment so customer data need not leave the plant; next it will open for trial to researchers and industry, with joint enzyme libraries and application standards to follow. Representatives from PetroChina, China Merchants Group, Shanghai Pudong Development Bank, WuXi AppTec, Novo Nordisk, Asymchem and others attended the launch.</p>
+        <p class="why"><b>Why it matters</b>A 560bn-parameter model for one vertical is not defended by its size but by its training base — years of enzyme sequences, structures, reactions and process data, a good part of it from labs and factory floors, which a general model cannot obtain. Three engineering questions: what "a design in a week" actually means, a list of candidate sequences or an enzyme ready for wet-lab work; how fast the loop turns, since the number of designs the automation can validate per day sets the real iteration rate; and what benchmark appears once trials open, because self-reported success rates would replay the leaderboard problem of general models. For biomanufacturing firms, on-premises deployment with data kept in-house is the precondition for getting on board.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/20 06:56</span>
+          <a class="src" href="https://m.ithome.com/html/1029750.htm" target="_blank" rel="noopener noreferrer">ITHome ↗</a>
+        </div>
+        <h3>Apple is reported to be building a system-level AI agent, with "Agentic AI" roles already posted</h3>
+        <p>According to Bloomberg's Mark Gurman, relayed by <a href="https://m.ithome.com/html/1029750.htm" target="_blank" rel="noopener noreferrer">ITHome</a> on November 20, Apple is developing its own AI agent to let the assistant control devices, operate apps, browse the web and write software on the user's behalf. Apple's careers site already lists a senior engineering manager role titled "Agentic AI - Proactive", describing a team building an assistant that can execute tasks for the user.</p>
+        <p>The posting is specific about capability: the agent should use a computer like a skilled human operator, moving between browsers, documents, terminals, code editors and services and choosing tools on its own. It should plan and complete multi-step tasks across apps, browsers, command lines and APIs rather than follow single instructions, and coordinate several sub-agents with narrower jobs. Apple also stresses privacy: an agent that runs code, uses the user's credentials and acts on their behalf needs strict permission management, sandboxing and transparency.</p>
+        <p>The timeline is still early. Gurman reports Apple has considered launching the service as soon as late 2027, though the schedule is not fixed, and Apple did not respond to a request for comment. New CEO John Ternus has pressed software chief Craig Federighi to accelerate AI work. Permissions are already moving: the upcoming macOS 27.3 beta adds warnings for third-party AI agents, requiring users to re-confirm when granting an app control of the Mac, which takes enabling third-party computer-control tools for ChatGPT from four steps to fourteen; iOS 27.3 will give developers deeper Siri integration with third-party apps.</p>
+        <p class="why"><b>Why it matters</b>The deciding factor for system-level agents is not the model but the permission model and the surface of system APIs. Apple's job posting splits cross-app operation into tool selection, multi-step planning and sub-agent coordination — exactly the hard parts of today's agent frameworks — while the four-to-fourteen-step permission flow is both safety design and a competitive moat against third parties. For agent teams the practical takeaway: before waiting for Apple's system capability, make your permission requests, sandbox boundaries, failure rollback and action audit solid. That is the passport to the system APIs later.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19 14:48</span>
+          <a class="src" href="https://tech.ifeng.com/c/8yBDkaZU0eF" target="_blank" rel="noopener noreferrer">Phoenix Tech ↗</a>
+        </div>
+        <h3>Volcano Engine ships SeedRealtime 1.0 API, an end-to-end audio-video model that replaces ASR+VLM+TTS pipelines</h3>
+        <p>ByteDance's Volcano Engine launched the API for SeedRealtime 1.0, its Doubao realtime audio-video conversation model, on November 19. According to <a href="https://tech.ifeng.com/c/8yBDkaZU0eF" target="_blank" rel="noopener noreferrer">Volcano Engine</a>, the model folds voice, imagery, timing and expression into a single end-to-end model so it can interact in real time over a continuous multimodal stream — watching, listening and speaking at once.</p>
+        <p>The difference is the length of the chain. A conventional voice assistant strings together ASR, a VLM and TTS, so latency stacks up and information is lost between modules. SeedRealtime 1.0 does not wait to be asked: it keeps reading the scene and speaks up when the moment fits. Volcano Engine says the change halves the rhythm problems of audio-video dialogue and clearly raises the share of conversations that run start to finish, with target uses in voice assistants, smart hardware, companion apps and live customer service.</p>
+        <p class="why"><b>Why it matters</b>The hard part of realtime end-to-end multimodality is systems engineering, not architecture: time to first response, interruption and half-duplex switching, echo cancellation, and context management over long sessions. Miss any one and the experience falls back to a walkie-talkie. The "halves the rhythm problems" claim is vendor-measured, so test three numbers on your own hardware and network before committing: end-to-end first response, recovery after an interruption, and stability over a ten-minute session. The second question is billing: collapsing three stages into one forward pass should save duplicate encoding and intermediate representations, but whether the unit is per minute or per token decides whether it can replace an existing stack.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/20 07:41</span>
+          <a class="src" href="https://siliconangle.com/2026/11/19/google-adds-computer-use-capabilities-to-geminis-mac-app/" target="_blank" rel="noopener noreferrer">SiliconANGLE ↗</a>
+        </div>
+        <h3>Google adds computer use to Gemini on macOS: multi-step tasks in a background window, approvals for key actions</h3>
+        <p>Google released a new macOS Gemini client on November 19 that can work across local apps, files and web pages when a user types "@Computer use" into a prompt. According to <a href="https://siliconangle.com/2026/11/19/google-adds-computer-use-capabilities-to-geminis-mac-app/" target="_blank" rel="noopener noreferrer">SiliconANGLE</a>, the assistant finds the local app a task needs, draws up a plan and works through it step by step, handling sequences of dozens of actions and letting the output of one workflow seed the next.</p>
+        <p>The design deliberately isolates the agent: tasks run in a separate background window so the main screen and cursor stay untouched, a preview pane in the chat window shows progress, and users can pause, stop or intervene mid-task. Users choose which apps Gemini may reach, and the agent asks for approval before key actions. Michael Friedman, group product manager for the Gemini app, wrote in a blog post that privacy and safety are built in — users decide which apps the agent can access, watch every step live, pause at any time and approve critical actions before they happen. Gemini can also read from and write to web services and move data between local programs and the cloud.</p>
+        <p class="why"><b>Why it matters</b>Two stories on the same day make a clean comparison: Google has already shipped computer use to macOS users while Apple is still hiring for its own agent. The product shape — background window, live preview, approval for key actions — is the most pragmatic compromise available for a system-level agent: it does not seize the main screen, and it keeps a human-in-the-loop audit point. Technically, note that it still drives the UI, so fragility comes from interface changes rather than model capability, and regression-testing cost grows linearly with the number of target apps. An explicit "@Computer use" switch is more auditable than default takeover, and looks like a compliance design aimed at enterprise buyers.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/20 07:00</span>
+          <a class="src" href="https://tech.ifeng.com/c/8yCGzVbQh18" target="_blank" rel="noopener noreferrer">Phoenix Tech ↗</a>
+        </div>
+        <h3>Google paper: editing four harness modules lifts SWE-bench Lite from 5% to 40%</h3>
+        <p>On November 20, <a href="https://tech.ifeng.com/c/8yCGzVbQh18" target="_blank" rel="noopener noreferrer">Phoenix Tech</a> reported on a Google paper titled "Harnesses That Improve Themselves", in which an optimiser model rewrites the agent's runtime harness rather than only its prompt. The harness is the layer around the model that manages context, calls tools, checks results and decides when to stop.</p>
+        <p>The setup is deliberately restrained: a 142-line coding-agent harness is split into four editable modules, each optimisation round may touch only one of them, and every candidate is tested on a validation set under a token budget so that only changes that pass validation survive. Using Gemini 3.8 Flash on 40 held-out SWE-bench Lite tasks, the initial harness solved 5.0% of tasks; modular editing plus validation reached 40.0% at about 46,700 tokens per task.</p>
+        <p>The controls are the more interesting result. Allowing the optimiser to rewrite the whole harness without restriction reached 42.5%, only 2.5 points more, but at about 451,600 tokens per task — nearly ten times the cost. Constraining the agent with prompt rules alone dropped success to 2.5%. The paper argues that important runtime constraints should live in code, such as automatically running tests on every edit and using success rate and token spend as the acceptance criterion.</p>
+        <p class="why"><b>Why it matters</b>The harness is becoming the third object of optimisation after weights and prompts, and the paper's contribution is not "AI improves itself" but a reproducible discipline: cut into modules, change one thing at a time, gate on a validation set, cap the token budget. The most underrated knob is the token ceiling — without it, self-improvement degenerates into repeated rewrites and runaway cost. The caveats are equally clear: one model, 40 tasks, no evidence yet that it transfers across models, tasks or long-running environments, and harnesses couple tightly to their model, so a framework tuned for Gemini can easily be negative value on another model. The actionable version for a team: make your harness modular and verifiable first, accept changes only on success rate and tokens, and only then let a model edit it.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/19 18:48</span>
+          <a class="src" href="https://stcn.com/article/detail/4344296.html" target="_blank" rel="noopener noreferrer">Securities Times · People&#39;s Financial News ↗</a>
+        </div>
+        <h3>Black Sesame sets up an embodied-AI headquarters in Shenzhen, says volume orders from robot makers are locked in</h3>
+        <p>Black Sesame Technologies opened an embodied-AI headquarters in Qianhai, Shenzhen, on November 19 under a dual-headquarters model spanning Qianhai and Hong Kong, focused on compute platforms for embodied AI and on industry collaboration. A showroom opened the same day with more than ten ecosystem partners covering humanoid, quadruped and wheeled robots and collaborative arms. According to <a href="https://stcn.com/article/detail/4344296.html" target="_blank" rel="noopener noreferrer">People's Financial News</a>, the company has strategic agreements with Midea, AUBO, COSCO Shipping and Joyson Electronics, and has locked in volume orders from several leading robot makers across wheeled robots, humanoids, quadruped robot dogs, industrial arms, mobile bases and lawn mowers.</p>
+        <p>The company's base is automotive: founded in 2016, it built the Huashan and Wudang series of high-performance driving chips. Its first-half 2026 results showed revenue of ¥458m, up 81.3%, and more than 6m chips shipped overall; embodied-AI products and solutions brought in ¥47.2m, which the company called a well-filled order book and its second growth curve.</p>
+        <p class="why"><b>Why it matters</b>Reusing automotive IP in robots works because one SoC and toolchain can amortise development and validation across both, which is why the company now reports the segment separately. But "orders locked in" and "revenue delivered" are different things: ¥47.2m of embodied revenue is roughly a tenth of total revenue, so volume is still ahead. What decides whether it captures this wave is the compute tier robots settle on. If mainstream machines stay at tens of TOPS for perception plus a light VLA policy, automotive SoCs have an obvious price-performance edge; once embodied models push per-robot compute into the hundreds of TOPS, it collides head-on with Nvidia and domestic high-compute platforms. Watch the list of volume models, the per-robot compute spec, and how much of those locked orders actually converts in 2027.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 19, 07:33 and November 20, 09:52 (Beijing time): 8 stories. Compiled at 11/20 09:52.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 025 · 24h window · Generated 2026-11-20 09:52</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI Daily</a>
+        <a href="../../economy.html">Economic Daily</a>
+        <a href="../../education.html">Education Daily</a>
+        <a href="../../psychology.html">Psychology Daily</a>
+        <a href="../../tools.html">Tools</a>
+        <a href="../../wish.html">Wish</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="../../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

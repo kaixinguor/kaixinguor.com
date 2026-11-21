@@ -20,7 +20,7 @@ import {
 } from "./lib/issue.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const PSY_DIR = path.join(ROOT, "daily-psychology");
+const PSY_DIR = path.join(ROOT, "daily-psychology", "web");
 const PAGE = path.join(ROOT, "psychology.html");
 
 const KICKER = { zh: "心理学日报", en: "PSYCHOLOGY DAILY" };
@@ -37,7 +37,7 @@ export function buildPsychology({ check = false, quiet = false } = {}) {
 
   const latest = issues[0];
   if (!latest.en) {
-    throw new Error(`最新一期 ${latest.dateISO} 缺少英文版 daily-psychology/${latest.dateISO}-en.html`);
+    throw new Error(`最新一期 ${latest.dateISO} 缺少英文版 daily-psychology/web/${latest.dateISO}-en.html`);
   }
 
   const todayZh = block("today-lang", "zh",
@@ -45,9 +45,9 @@ export function buildPsychology({ check = false, quiet = false } = {}) {
   const todayEn = block("today-lang", "en",
     renderHomeIssue(latest.en, "en", { kicker: KICKER.en, kickerEn: "Daily Psychology Brief" }), true);
   const sidebarZh = block("archive-lang", "zh",
-    renderArchiveSidebar(issues, "zh", { prefix: "daily-psychology/" }));
+    renderArchiveSidebar(issues, "zh", { prefix: "daily-psychology/web/" }));
   const sidebarEn = block("archive-lang", "en",
-    renderArchiveSidebar(issues, "en", { prefix: "daily-psychology/" }), true);
+    renderArchiveSidebar(issues, "en", { prefix: "daily-psychology/web/" }), true);
 
   const html = applyMarkers(fs.readFileSync(PAGE, "utf8"), {
     TODAY_ZH: todayZh,
@@ -77,7 +77,7 @@ if (isMain) {
   try {
     const out = buildPsychology({ check });
     if (out.skipped) {
-      console.log("（没有 daily-psychology/ 目录或没有期，跳过）");
+      console.log("（没有 daily-psychology/web/ 目录或没有期，跳过）");
       process.exit(0);
     }
     if (check) {

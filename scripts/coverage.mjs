@@ -2,8 +2,8 @@
 /* 日报去重与窗口衔接工具。
 
    用法：
-     node scripts/coverage.mjs check daily-economy/2026-11-02.html
-     node scripts/coverage.mjs check daily-ai/2026-11-03.html --json
+     node scripts/coverage.mjs check daily-economy/web/2026-11-02.html
+     node scripts/coverage.mjs check daily-ai/web/2026-11-03.html --json
      node scripts/coverage.mjs window --section ai
      node scripts/coverage.mjs report
 
@@ -28,7 +28,7 @@ import {
 } from "./lib/coverage.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DIRS = { ai: "daily-ai", economy: "daily-economy", education: "daily-education", psychology: "daily-psychology" };
+const DIRS = { ai: "daily-ai/web", economy: "daily-economy/web", education: "daily-education/web", psychology: "daily-psychology/web" };
 const LABELS = { ai: "AI 日报", economy: "经济日报", education: "教育日报", psychology: "心理学日报" };
 
 const argv = process.argv.slice(2);

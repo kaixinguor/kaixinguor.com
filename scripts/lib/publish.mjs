@@ -46,7 +46,7 @@ function fail(message, hint) {
 export function publish({ section = "ai", argv = [] } = {}) {
   const sec = SECTIONS[section];
   if (!sec) fail(`未知版块：${section}`);
-  const DIR = path.join(ROOT, sec.dir);
+  const DIR = path.join(ROOT, sec.dir, sec.web);
   const HOME = HOMES[section];
   const LABEL = LABELS[section];
   const cmd = section === "ai" ? "publish-daily" : `publish-${section}`;
@@ -166,7 +166,7 @@ export function publish({ section = "ai", argv = [] } = {}) {
   console.log(`  ${issue.count} 条 / ${issue.chapters.length} 个栏目 / ${issue.links.length} 个原文链接`);
 
   if (flags.has("--dry-run")) {
-    console.log(`\n(dry-run) 会写入 ${sec.dir}/${issue.dateISO}.html、${sec.dir}/${issue.dateISO}-en.html，并重新生成首页 / 侧栏 / 两份 RSS / sitemap。`);
+    console.log(`\n(dry-run) 会写入 ${sec.dir}/web/${issue.dateISO}.html、${sec.dir}/web/${issue.dateISO}-en.html，并重新生成首页 / 侧栏 / 两份 RSS / sitemap。`);
     process.exit(0);
   }
 
