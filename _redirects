@@ -1,8 +1,6 @@
-# 2026-10-30：日报拆成两个版块，daily/ 改名 daily-ai/。
-# 旧链接（书签、已发出去的 RSS 条目、微信里转的图）永久跳过去。
-/daily/*  /daily-ai/:splat  301
-
 # 2026-11-21：期页收进 web/ 子目录；旧地址永久跳过去。
+# 注意：静态规则必须排在动态规则（带 * 的）之前，否则 Workers 构建会报错。
+
 # daily-ai
 /daily-ai/2026-10-26-en.html  /daily-ai/web/2026-10-26-en.html  301
 /daily-ai/2026-10-26.html  /daily-ai/web/2026-10-26.html  301
@@ -56,6 +54,7 @@
 /daily-ai/2026-11-20.html  /daily-ai/web/2026-11-20.html  301
 /daily-ai/2026-11-21-en.html  /daily-ai/web/2026-11-21-en.html  301
 /daily-ai/2026-11-21.html  /daily-ai/web/2026-11-21.html  301
+
 # daily-economy
 /daily-economy/2026-10-30-en.html  /daily-economy/web/2026-10-30-en.html  301
 /daily-economy/2026-10-30.html  /daily-economy/web/2026-10-30.html  301
@@ -101,6 +100,7 @@
 /daily-economy/2026-11-20.html  /daily-economy/web/2026-11-20.html  301
 /daily-economy/2026-11-21-en.html  /daily-economy/web/2026-11-21-en.html  301
 /daily-economy/2026-11-21.html  /daily-economy/web/2026-11-21.html  301
+
 # daily-education
 /daily-education/2026-11-03-en.html  /daily-education/web/2026-11-03-en.html  301
 /daily-education/2026-11-03.html  /daily-education/web/2026-11-03.html  301
@@ -138,6 +138,7 @@
 /daily-education/2026-11-20.html  /daily-education/web/2026-11-20.html  301
 /daily-education/2026-11-21-en.html  /daily-education/web/2026-11-21-en.html  301
 /daily-education/2026-11-21.html  /daily-education/web/2026-11-21.html  301
+
 # daily-psychology
 /daily-psychology/2026-11-09-en.html  /daily-psychology/web/2026-11-09-en.html  301
 /daily-psychology/2026-11-09.html  /daily-psychology/web/2026-11-09.html  301
@@ -163,3 +164,6 @@
 /daily-psychology/2026-11-20.html  /daily-psychology/web/2026-11-20.html  301
 /daily-psychology/2026-11-21-en.html  /daily-psychology/web/2026-11-21-en.html  301
 /daily-psychology/2026-11-21.html  /daily-psychology/web/2026-11-21.html  301
+
+# 2026-10-30：日报拆成两个版块，daily/ 改名 daily-ai/（动态规则放最后）。
+/daily/*  /daily-ai/:splat  301
