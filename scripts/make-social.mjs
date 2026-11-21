@@ -367,6 +367,20 @@ const publishSteps = [
   `5. 选出口：**发表**（生成公开链接，不推送、不占群发次数）或 **群发**（推送粉丝，个人订阅号 1 天 1 次）`
 ];
 
+/* ---------- 网页版存档：把中英 HTML 一起放进本期目录 ---------- */
+
+const webFiles = [];
+const relPrefix = path.relative(outDir, ROOT).split(path.sep).join("/");
+for (const suffix of ["", "-en"]) {
+  const file = path.join(path.dirname(source), `${issue.dateISO}${suffix}.html`);
+  if (!fs.existsSync(file)) continue;
+  const name = path.basename(file);
+  // 目录深了三级，把 ../ 换成相对站点根的路径，双击也能带样式打开
+  const html = fs.readFileSync(file, "utf8").replace(/(href|src)="\.\.\//g, `$1="${relPrefix}/`);
+  fs.writeFileSync(path.join(outDir, name), html, "utf8");
+  webFiles.push(name);
+}
+
 const readme = [
   `${BRAND.zh} · ${issue.dateISO} · 第 ${issue.issueNo || "—"} 期`,
   ``,
@@ -383,6 +397,8 @@ const readme = [
   `条数：${issue.count} 条 · 阅读约 ${issue.readMinutes} 分钟`,
   ``,
   `文案见同目录「公众号-图片消息.md」，可直接复制。`,
+  `网页版存档：${webFiles.join(" / ") || "（未找到）"}`,
+  `  线上：https://kaixinguor.com/${BRAND.dir}/${issue.dateISO}`,
   `说明：图片只在本地生成，不会提交到站点仓库。改版式后重跑本命令即可覆盖；需要整包发送时加 --zip。`
 ].join("\n");
 fs.writeFileSync(path.join(outDir, "README.txt"), `${readme}\n`, "utf8");
@@ -463,7 +479,8 @@ const manifest = {
     why: story.card.why ? stripTags(story.card.why.html) : ""
   })),
   files: {
-    wechat: files
+    wechat: files,
+    web: webFiles
   },
   copy: "公众号-图片消息.md",
   zips
@@ -475,4 +492,5 @@ if (!flags.has("--keep-html")) {
 }
 
 console.log(`\n✓ 成品目录：${outDir}`);
-console.log(`  README.txt / manifest.json 已写好，可直接取图。`);
+console.log(`  README.txt / manifest.json 已写好，可直接取图。`,
+  `  网页版 HTML：${webFiles.length ? webFiles.join("、") : "（未找到）"}`,);
