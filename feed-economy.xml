@@ -6,7 +6,14 @@
     <description>经济日报：央行与利率、增长与结构、产业与公司，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed-economy.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 21 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>经济日报 · 2026 年 11 月 22 日</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-22.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-22.html</guid>
+      <pubDate>Sun, 22 Nov 2026 01:00:00 GMT</pubDate>
+      <description>这一期讲的是报价与成交价之间那道缝。国际金价八个交易日失守五道关口，本周跌近 9%、较年初高点回撤约 36%，但国内品牌金饰单克只回落 600 元出头——零售端的调价黏性比金价本身更值得记账。水泥厂月内喊涨 20 至 80 元/吨，卓创的周度数据却显示全国均价还在跌；SCFI 综合指数只跌 1.9%，美西跌 5.6%、南美 20 尺跌 15.2%，分航线的差异把「抢出口结束了」写得比综合指数清楚。政策这一端，央行在香港招标 500 亿元央票给离岸人民币曲线补点，发改委开视频会议催「资金支付」与「实物工作量」，锂电消费税把 2% 与 4% 的时间表压到电芯厂与车企的谈判桌上。价格不是印在报价单上的数字，是谈判的结果：谁有议价能力，谁就把税、运费与成本推给别人。 现货黄金贴近 3500 美元、创近 14 个月新低，国内品牌金饰单克较年内高点回落超 600 元</description>
+    </item>
     <item>
       <title>经济日报 · 2026 年 11 月 21 日</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-21.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-02.html</guid>
       <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「把时间往前拨」：财政部把 2027 年部分地方债额度提前到 1 月，5.1 万亿元三季报净利里 AI 板块增 281%。 车市却在分化——零跑、小鹏创出新高，蔚来、理想同比环比双降。 政策在提前，企业在分化。 财政部提前下达 2027 年部分新增地方债限额：上限 60%，1 月即可发债</description>
-    </item>
-    <item>
-      <title>经济日报 · 2026 年 11 月 1 日</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-01.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-01.html</guid>
-      <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
-      <description>10 月制造业 PMI 掉到 49.3%，生产与新订单同时回落，只有高技术制造还在 51.3%。同一天，42 家上市银行交卷：营收增 7.79%、净利增 3.78%， 净息差 1.55%；百强房企前 10 个月卖了 25370.6 亿元，降幅收窄。景气在退，账本在换算法。 10 月 PMI 49.3%：生产与新订单同时回落，价格指数仍在扩张区间</description>
     </item>
   </channel>
 </rss>

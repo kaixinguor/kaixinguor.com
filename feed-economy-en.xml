@@ -6,7 +6,14 @@
     <description>An economy daily: central banks, growth and the companies that book the profit.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 21 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · November 22, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-22-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-22-en.html</guid>
+      <pubDate>Sun, 22 Nov 2026 01:00:00 GMT</pubDate>
+      <description>This issue is about the gap between a quoted price and a traded one. Spot gold fell to about $3,500 an ounce on November 21, a 14-month low, down nearly 9% on the week and roughly 36% from its January peak — yet Chinese jewellery brands have cut their per-gram tags by only a little over Rmb600 from the year&#39;s high. Cement makers sent out price-increase letters of Rmb20 to Rmb80 a tonne this month while the national average was still falling week on week. The SCFI slipped just 1.9%, but the US west coast fell 5.6% and South America 20-foot boxes 15.2%; the route-by-route split says the front-loading is over more clearly than the composite does. On the policy side, the PBOC will auction Rmb50bn of bills in Hong Kong to add points to the offshore renminbi curve, the NDRC is chasing both fund payments and physical work volume, and the battery consumption tax has put a 2%-to-4% timetable between cell makers and carmakers.A price is not a number printed on a quote sheet; it is the outcome of a negotiation, and whoever holds the leverage pushes the tax, the freight and the cost onto somebody else. Spot gold slides to about $3,500, a 14-month low, as Chinese jewellery tags fall just over Rmb600 a gram from the peak</description>
+    </item>
     <item>
       <title>Economic Daily · November 21, 2026</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-21-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-02-en.html</guid>
       <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today’s thread is about moving the clock forward: the Finance Ministry brings part of the 2027 local-bond quota into January, and ¥5.1 trillion of nine-month profit includes a 281% jump in AI earnings. The car market is splitting the other way — Leapmotor and Xpeng set records while Nio and Li Auto fell on both counts. Policy moves early; companies diverge. Beijing brings the 2027 local-bond quota forward: 60% cap, issuance from January</description>
-    </item>
-    <item>
-      <title>Economic Daily · November 1, 2026</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-01-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-01-en.html</guid>
-      <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
-      <description>China’s October manufacturing PMI slipped to 49.3, with output and new orders both contracting and high-tech manufacturing the lone bright spot at 51.3. The same day, 42 listed banks reported 7.79% revenue growth and 3.78% profit growth at a 1.55% net interest margin. The cycle is cooling; the accounting is being rewritten. October PMI at 49.3: output and orders both fall, while prices stay in expansion</description>
     </item>
   </channel>
 </rss>
