@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 21 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 22 日</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-22.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-22.html</guid>
+      <pubDate>Sun, 22 Nov 2026 01:00:00 GMT</pubDate>
+      <description>这一天的重心从「发了什么模型」移到「能力怎么被拿走」：OpenAI 把对抗性蒸馏的防护拆开讲，旧请求的推理提取成功率从 54.0% 压到 0.2%；Signal 干脆默认关掉截图，用系统政策的边角料挡住读屏的智能体。供给端也没停：混元团队在 Reddit 上把 Hy 小模型和 24GB 显存版本写进路线图，DeepSeek V1 作者开源了一个装在个人电脑上的 Agent，MachinePulse 则把「替 Agent 做选择题」拆成 31B 的专用模型——能力越往端上走，谁持有上下文、谁持有判断权，就越像同一个问题。 OpenAI 公布反蒸馏防护：旧请求的推理提取成功率从 54.0% 压到 0.2%</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 21 日</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-21.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-02.html</guid>
       <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是把智能体放进真实账本：美团用 1.6 万亿参数押长程任务，思科用不设上限的 Token 重写 98% 遗留代码， 特拉华州给「AI 公司」开 30 个月沙盒。另一边，红旗连锁用 16 个月和 286.68 万元证明：机器人还卖不了货。 能力在往前走，账单开始有人签。 美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体</description>
-    </item>
-    <item>
-      <title>AI 日报 · 2026 年 11 月 1 日</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-01.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-01.html</guid>
-      <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
-      <description>今天的主线是把 Agent 从一次会话里放出来：DeepSeek 公开了 Super-agent 的 Router/Worker 底座，Claude 直接取消了 5 小时窗口， 腾讯与阿里下周用同一代旗舰正面相撞。竞争的单位，正从「一次回答」变成「一件被持续推进的事」。 DeepSeek 开源 Super-agent 架构：AI 自己找 Bug、自己提 PR</description>
     </item>
   </channel>
 </rss>

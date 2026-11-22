@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 21 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 22, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-22-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-22-en.html</guid>
+      <pubDate>Sun, 22 Nov 2026 01:00:00 GMT</pubDate>
+      <description>The centre of gravity moved from what shipped to how capability gets taken: OpenAI laid out its defences against adversarial distillation, cutting reasoning-extraction success on earlier requests from 54.0% to 0.2%, while Signal simply turned screenshots off by default to keep screen-reading agents away from private chats.Supply did not pause: the Hunyuan team put small Hy models and a 24GB-VRAM build on the roadmap, the DeepSeek V1 author open-sourced an agent that lives on your own computer, and MachinePulse split &quot;letting an agent decide&quot; into a dedicated 31B model — the further capability moves onto the device, the more &quot;who holds the context&quot; and &quot;who holds the judgement&quot; become the same question. OpenAI details anti-distillation defences: extraction of earlier reasoning falls from 54.0% to 0.2%</description>
+    </item>
     <item>
       <title>AI Daily · November 21, 2026</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-21-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-02-en.html</guid>
       <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today’s thread runs through the ledger. Meituan bets 1.6 trillion parameters on long-horizon work, Cisco hands one engineer an unlimited token budget to rewrite 98% of its legacy code, and Delaware proposes a 30-month sandbox for agent-run companies. Meanwhile Hongqi Convenience spent 16 months and ¥2.87 million proving a robot still cannot run a store. Capability keeps moving; someone is starting to sign the bill. Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents</description>
-    </item>
-    <item>
-      <title>AI Daily · November 1, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-01-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-01-en.html</guid>
-      <pubDate>Sun, 01 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Today’s thread is letting agents out of a single session. DeepSeek published a router/worker substrate for personal agents, Anthropic scrapped the five-hour window, and Tencent and Alibaba are lining up same-generation flagships in the same week. The unit of competition is shifting from one answer to one long-running job. DeepSeek open-sources a Super-agent design: agents that file their own pull requests</description>
     </item>
   </channel>
 </rss>

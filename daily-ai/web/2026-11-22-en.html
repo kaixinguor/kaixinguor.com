@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 22, 2026</title>
+<meta name="description" content="AI Daily Issue 027, November 22, 2026: OpenAI details its adversarial-distillation defences, cutting reasoning-extraction success on earlier requests from 54.0% to 0.2%; Signal blocks screenshots by default to keep screen-reading agents out of private chats; the Hunyuan team puts small Hy models and a 24GB-VRAM build on its roadmap; the DeepSeek V1 author open-sources a personal agent called Linger; MachinePulse releases Karpo Decision 31B; XDOF measures GPT-6.2 Astra on robot manipulation with success doubling to 41.2%; HUST and Alibaba open a joint AI security centre; Reuters reports an SEC probe into Nvidia&#39;s accounting; China&#39;s data agency plans standards for token metering and billing.">
+<meta property="og:title" content="AI Daily · November 22, 2026">
+<meta property="og:description" content="AI Daily Issue 027, November 22, 2026: OpenAI details its adversarial-distillation defences, cutting reasoning-extraction success on earlier requests from 54.0% to 0.2%; Signal blocks screenshots by default to keep screen-reading agents out of private chats; the Hunyuan team puts small Hy models and a 24GB-VRAM build on its roadmap; the DeepSeek V1 author open-sources a personal agent called Linger; MachinePulse releases Karpo Decision 31B; XDOF measures GPT-6.2 Astra on robot manipulation with success doubling to 41.2%; HUST and Alibaba open a joint AI security centre; Reuters reports an SEC probe into Nvidia&#39;s accounting; China&#39;s data agency plans standards for token metering and billing.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-22-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-21T07:58:00+08:00/2026-11-22T08:01:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-22-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-22.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-22-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI Daily</a>
+      <a href="../../economy.html">Economic Daily</a>
+      <a href="../../education.html">Education Daily</a>
+      <a href="../../psychology.html">Psychology Daily</a>
+      <a href="../../tools.html">Tools</a>
+      <a href="../../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-22.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 027</span>
+    </div>
+    <h1 class="date">November 22, 2026<span class="weekday">SUN</span></h1>
+    <p class="deck">The centre of gravity moved from what shipped to how capability gets taken: OpenAI laid out its defences against adversarial distillation, cutting reasoning-extraction success on earlier requests from 54.0% to 0.2%, while Signal simply turned screenshots off by default to keep screen-reading agents away from private chats.<em>Supply did not pause: the Hunyuan team put small Hy models and a 24GB-VRAM build on the roadmap, the DeepSeek V1 author open-sourced an agent that lives on your own computer, and MachinePulse split "letting an agent decide" into a dedicated 31B model — the further capability moves onto the device, the more "who holds the context" and "who holds the judgement" become the same question.</em></p>
+    <div class="metabar"><span class="pill">Issue 027</span>
+      <span class="dot"></span>
+      <span>Window Nov 21, 07:58 – Nov 22, 08:01</span>
+      <span class="dot"></span>
+      <span>9 stories</span>
+      <span class="dot"></span>
+      <span>13 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#research"><span class="n">01</span>Research &amp; Safety</a>
+        <a href="#models"><span class="n">02</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>OpenAI published its defences against adversarial distillation: in an internal adaptive black-box red-team test, the average success rate of recovering protected reasoning from an earlier request fell from 54.0% against GPT-6 Astra to 0.2% against GPT-6.2 Astra, while extraction against the current request dropped from 22.9% to 0.9%.</b> The figures aggregate six attack models. The stack combines adversarial training, input and output classifiers, and API rules that stop reasoning being reused across sessions, models and organisations; OpenAI says it has been acting against accounts involved in unauthorised distillation every week this year, at a scale from thousands to tens of thousands.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Reuters reported that the US Securities and Exchange Commission is investigating potential accounting issues at Nvidia, with two people familiar saying SEC enforcement staff are reviewing the books; both the agency and the company declined to comment.</b> Nvidia fell more than 14% that day to $125.5, roughly 48% below its October peak of $243.4 — the third governance shock for the same company in a week, after the CEO&#39;s resignation and the halt of H200 sales to China.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>XDOF, a robotics-infrastructure company, measured GPT-6.2 Astra on its Ember-0 benchmark: the weighted success rate across 16 dual-arm manipulation tasks rose from 19.6% for GPT-6 Astra two months ago to 41.2%, and the model completed two tasks no model had finished before — tying a knot with rope and unfolding a T-shirt.</b> The protocol used six YAM workstations in parallel, 30 repeats per task, and human annotation of sub-steps and failures; the largest single jump was "pick up bread with tongs", from 10% to 90%.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 09:45</span>
+          <a class="src" href="https://www.ithome.com/1/030/319.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>OpenAI details anti-distillation defences: extraction of earlier reasoning falls from 54.0% to 0.2%</h3>
+        <p>On November 20 local time, OpenAI published "Combatting adversarial distillation", explaining how it detects and disrupts the practice of training another model on a frontier model's outputs so that the copy inherits the capability without the safeguards. According to <a href="https://www.ithome.com/1/030/319.htm" target="_blank" rel="noopener noreferrer">IT之家</a>, the focus is on "protected reasoning" — the chain of thought a model generates internally while working towards an answer.</p>
+        <p>The headline numbers come from an internal adaptive black-box red-team evaluation aggregated across six attack models. Attackers tried to recover protected reasoning from prompts the model had already answered; average success stood at 54.0% against GPT-6 Astra with its original safeguards and fell to 0.2% against GPT-6.2 Astra. Extraction against the current request dropped from 22.9% to 0.9%. In the <a href="https://openai.com/index/combatting-adversarial-distillation/" target="_blank" rel="noopener noreferrer">original post</a>, the defences are layered: adversarial training so the model recognises and refuses extraction requests, input and output classifiers that flag attacks and leaks, API restrictions on reusing reasoning across sessions, models and organisations, and investigations into coordinated extraction networks.</p>
+        <p>The API detail is worth recording on its own. GPT-6.2 Astra and GPT-6.2 Sol tie protected reasoning to the conversation history that produced it: if an earlier message is edited, the API discards reasoning generated from that message, and older, less-protected models cannot read reasoning from the two new ones. On enforcement, OpenAI says it has acted every week this year against accounts involved in unauthorised distillation, from thousands to tens of thousands at a time, with a clear increase since the summer, and that it shares attack indicators with other model providers.</p>
+        <p>A second internal experiment explains why the reasoning trace matters more than the answer. Starting from what users already see — final responses, reasoning summaries and tool interactions — as the baseline, students fine-tuned on a teacher's exact reasoning traces transferred more cybersecurity capability. After a light reinforcement-learning round, the exact-trace student still scored higher at the largest inference budget tested, while the summary-trained student was ahead at lower budgets.</p>
+        <p class="why"><b>看点</b>Read 54.0% as a single data point, not a verdict: this is the vendor's own adaptive red team, with six attack models, measuring recovery of protected reasoning from earlier requests — not whether a model can be distilled at all. The same post shows students still learning plenty from visible outputs. What is reusable is the engineering shape: bind reasoning to conversation history, forbid reuse across sessions, isolate permissions between old and new models. Once those become API defaults, caching, session recovery and cross-model migration all have to be rewritten, and the cost moves to the caller. For teams auditing agents, copy the layering rather than the percentage — request-level extraction defence, account-level campaign detection and model-level adversarial training fail in completely different ways.<br><b>另一个视角</b>The post moves the debate from intellectual property to national security, and a weekly enforcement scale of thousands to tens of thousands of accounts treats model capability as an asset that needs export-style controls; the same day's SEC accounting report on Nvidia is another page in the same ledger.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 17:57</span>
+          <a class="src" href="https://www.ithome.com/1/030/423.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>HUST and Alibaba open a joint AI security centre with nine initial projects</h3>
+        <p>On November 21, <a href="https://www.ithome.com/1/030/423.htm" target="_blank" rel="noopener noreferrer">IT之家</a> reported that Huazhong University of Science and Technology and Alibaba signed a cooperation agreement on November 18 to build a joint research centre for "intelligent attack and defence and frontier security", starting with nine projects across four directions: large-model attack and defence, agent and endpoint security, security of intelligent systems and software, and data collaboration and privacy protection.</p>
+        <p>Two of the disclosed projects point at concrete risks that appear once agents act on a user's behalf. "Image adversarial samples and endpoint threat assessment" targets the case where the screen an agent reads is forged or its actions are maliciously steered; "privacy-preserving relationship graphs" uses confidential computing so that data can move between shopping, maps and delivery apps under a "usable but invisible, collaborative but not passed through" rule.</p>
+        <p>The arrangement is a standard university-industry split — the university brings attack methods and evaluation, the company brings real systems and scenarios. What is notable is that "agent and endpoint security" is a standalone direction and that the first batch already names adversarial samples and confidential computing. That marks a shift in the research agenda from "will the model say the wrong thing" to "when the model operates a device for you, how are the screen, the inputs and cross-app data protected".</p>
+        <p class="why"><b>看点</b>An agent's attack surface is not the same as a model's: it reads the screen, taps, and moves data between apps, so an attacker can forge what it sees or plant instructions in what it reads — neither shows up in text-safety benchmarks. Putting endpoint threat assessment and privacy-preserving graphs in the same batch concedes that defence has to cover both the perception layer (is what it sees real?) and the data layer (what can be taken during collaboration). For teams building on-device agents, the two project titles work as an acceptance checklist: first show that screen understanding detects forgery and occlusion, then show that cross-app data flows still complete the task under confidential computing. Discount the timeline — the agreement was signed on November 18 and all nine projects are just starting, so no reusable tools or datasets will appear soon.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-21">
+        <div class="cmeta">
+          <span class="d">11/21 14:30</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511757.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>Hunyuan team on Reddit: small Hy models are on the roadmap, a 24GB-VRAM build is planned</h3>
+        <p>In the early hours of November 21, Tencent's Hunyuan team and Yao Shunyu held an AMA on Reddit about Hy4 and Hy4 flash. According to <a href="https://www.qbitai.com/2026/11/511757.html" target="_blank" rel="noopener noreferrer">量子位</a>, the team confirmed two things not previously public: small-parameter Hy models are already on the roadmap, and a version aimed at 24GB-VRAM devices is planned.</p>
+        <p>Local deployment drew the most detailed questions. Asked whether a machine with 96GB of VRAM and 128GB of RAM could run Hy4 flash, the team said yes: the main weights stay on the GPU while some expert layers and the Engram lookup tables can be moved into system memory. llama.cpp support is in progress with no date attached. That closes the loop on last week's Apache 2.0 weight release — publishing weights is only step one; whether they run on consumer hardware depends on the inference stack.</p>
+        <p>Training details came with checkable numbers. Hy4 flash is distilled from the flagship Hy4 first, then reinforcement learning shortens the reasoning chain, addressing the flagship's tendency to over-think. Asked which post-training behaviour is hardest to fix, the team answered with one word: overthinking. On cost, the team folded typical WorkBuddy tasks — fixing spreadsheets, editing documents, building slide decks — into an internal benchmark called WorkIndex, and says Hy4 flash averages about one-twentieth the per-task cost of the flagship on that mix.</p>
+        <p class="why"><b>看点</b>The value of this AMA is not another open release but three engineering constraints: a product path to 24GB of VRAM, a layering strategy that pushes expert layers and Engram tables into system memory, and llama.cpp support that is not finished. The first decides whether the model can reach consumer cards and mini-PCs; the second shows the MoE design still leaves room to split weights by memory budget; the third is the real gate — open weights do not mean an inference engine can run them, and until llama.cpp lands, local use still means heavy deployment via something like vLLM. Watch the WorkIndex number: one-twentieth is arithmetic on the team's own workload, and the advantage shifts with sequence length and concurrency elsewhere.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 19:24</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511791.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>MachinePulse open-sources Karpo Decision 31B: one forward pass scores a whole option set in 94ms median</h3>
+        <p>On November 21, <a href="https://www.qbitai.com/2026/11/511791.html" target="_blank" rel="noopener noreferrer">量子位</a> reported that MachinePulse AI open-sourced Karpo Decision 31B, a model built for the high-frequency decisions an agent makes. Instead of generating text token by token, it runs a single forward pass and returns probabilities over an entire candidate set. Across more than 140,000 requests on a public set, median response time was 94ms on a single RTX PRO 6000.</p>
+        <p>The evaluation mixes vendor and third-party numbers. On the Decision Index leaderboard, which aggregates 300 models, it took first place with a Full score of 73.9, can score up to 255 candidate options per question, and reports 2.3% calibration error. In a 36-question "city scanner" test, picking 10 outings from 36 events under a $50 budget and 5km radius took 2.6 seconds, against 14.96 seconds for Gemini 3.5 Flash, with no filter conditions dropped on either side.</p>
+        <p>The same release includes karpo-browser, a browser-operation framework, a Karpo Decision 27B Act model trained for web action decisions, and a companion benchmark called KBB. On the 102 core tasks of Browserbase Benchmark v2, the combination reports 89% average success, 201 seconds average time and $0.096 model cost per task — about 1.9× faster and roughly one-thirteenth the model cost of the top entry, Claude Fable 5.2 with Claude Code. One caveat: Karpo's self-test ran the full 102 tasks three times and averaged, while most leaderboard entries ran 38 tasks once.</p>
+        <p class="why"><b>看点</b>This category got hot for a plain reason: every agent step involves choosing a tool, judging whether a task is done, or filtering results, and asking a general model to generate an answer token by token is both slow and expensive. Decision models split judgement out of generation, returning only probabilities, which moves latency from seconds to hundreds of milliseconds — at the price of needing a new benchmark, which is what KBB is for. The practical conclusion for agent teams is layering: route high-frequency, closed-set decisions to a small dedicated model and leave open-ended planning and explanation to the large model, then calibrate the two separately. A 2.3% calibration error only says the probabilities are right on the vendor's question bank; on your tool set and action space, you have to relabel. Check the licence and training-data provenance — they decide whether this can go into a commercial product.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 14:32</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511570.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>DeepSeek V1 author open-sources Linger, a personal agent that runs on your own PC</h3>
+        <p>On November 21, Tony Zhang — an author of DeepSeek V1 and the lead of the DeepSeek-VL project — unveiled Linger, his new startup's product, and open-sourced it immediately. According to <a href="https://www.qbitai.com/2026/11/511570.html" target="_blank" rel="noopener noreferrer">量子位</a>, unlike peers building phone apps, Linger targets the desktop first: it drives the browser, mailbox and calendar already logged in on the machine, so there are no credentials to re-enter, and the user can take over whenever it gets stuck.</p>
+        <p>Architecturally it is a middle layer that can call third-party models and is specifically tuned for local LLMs: a 12GB RTX 3060 can run a 125B-parameter Qwen3.8-Flash-Next at 45.5 tokens per second. Its core is an agent system called "Another Me" that every night turns the inbox, calendar, chat logs and meetings into a local wiki any agent can query; on LoCoMo, a long-conversation memory benchmark, it reports 95% accuracy, which the report places above memory-augmented systems such as Mem0 and MemOS.</p>
+        <p>Proactivity and learning are the other selling point. It watches the information stream and weighs urgency: a Monday email asking for a quote by Friday does not trigger an immediate interruption, but a meeting time change does. Feedback ("I got that last week, you should have told me then") becomes a rule, and ignoring a class of reminder twice teaches it to stay quiet. It can also assemble multiple agents to work together.</p>
+        <p class="why"><b>看点</b>Choosing the desktop over an app is an informative decision: on phones an agent must operate across apps under system permissions and sandboxes, while the desktop can reuse logged-in browser sessions and local files — a far higher ceiling, at the cost of moving the security boundary from "app authorisation" to "the whole machine". Read the 12GB/125B figure as 4-bit quantisation plus sparse activation, and 45.5 tokens per second as generation speed rather than first-token latency; the felt experience depends on context length. LoCoMo's 95% is a memory-retrieval benchmark, not long-horizon task completion. Watch the permission model: a local agent that reads mail, calendar and browser sessions needs an auditable action log and a least-privilege allowlist, otherwise "open source" simply hands the risk to the user.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 07:28</span>
+          <a class="src" href="https://www.ithome.com/1/030/517.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Signal blocks screenshots by default to keep Siri AI and Gemini from reading the screen</h3>
+        <p>On November 22, <a href="https://www.ithome.com/1/030/517.htm" target="_blank" rel="noopener noreferrer">IT之家</a> reported that Signal, the open-source end-to-end encrypted messenger, shipped iOS and Android updates that disable in-app screenshots by default, blocking system-level agents such as Siri AI and Gemini from reading private messages. In Signal 8.37 (on iOS 27) a "block Siri AI" setting is on by default, so screenshots and screen recordings inside Signal are unavailable; users can turn it off for 10 minutes or permanently.</p>
+        <p>Android works differently: from Signal 8.35.1, when the app detects an AI assistant attempting to capture the screen, it switches on a "screen security" policy. The team acknowledges detection cannot run reliably on every device because Android implementations vary. The macOS build cannot offer equivalent protection for lack of the necessary developer tools; the official advice is to put Signal on the system's Siri exclusion list.</p>
+        <p>Signal president Meredith Whittaker's argument is that system-level agents are expanding their reach and can access private conversations without the user's knowledge, weakening Signal's ability to guarantee privacy on its own. The backdrop is that on-device agents increasingly use screen reading as their main input: once screen access is a system privilege, an encrypted app's security assumptions are bypassed from outside — messages are ciphertext inside the app and plain text on the display.</p>
+        <p class="why"><b>看点</b>This is the first head-on collision between on-device agents and encrypted apps, and it has no clean technical fix: Signal can only set a system-level anti-capture flag on its own window, which depends on the OS both providing the hook and honouring it. Android's heuristic detection shows the harder half — if the system will not cooperate, the app can only guess. For anyone building on-device agents, the story is a constraint list: screen access must be explicitly refusable by apps, auditable, and must distinguish user-initiated actions from background scanning. For privacy products the conclusion is colder: encryption protects transport and storage, the screen is a new leak surface, and for now the operating system decides that surface unilaterally.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 14:35</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511779.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>XDOF measures GPT-6.2 Astra on robot manipulation: 41.2% success, first clean knot and T-shirt unfolding</h3>
+        <p>On November 21, <a href="https://www.qbitai.com/2026/11/511779.html" target="_blank" rel="noopener noreferrer">量子位</a> reported that XDOF, a robotics-infrastructure company, tested GPT-6.2 Astra driving a dual-arm robot on its Ember-0 benchmark: the composite success rate across 16 manipulation tasks rose from 19.6% for GPT-6 Astra two months earlier to 41.2%, a gain of 21.6 percentage points. Ember-0 covers spatial reasoning, grasping, dual-arm coordination, tool use, dexterity and deformable-object handling, with 30 repeats per task.</p>
+        <p>The methodology is the part worth recording. XDOF ran six YAM workstations in parallel, completing up to 480 trials a day, with humans annotating sub-steps, grasp failures and collisions to filter out hardware bias and random disturbance. Two tasks no model had completed were solved — tying a knot with rope and unfolding a T-shirt, the latter after 143 valid attempts on Ember-0 without a single success. The largest single-task gain was picking up bread with tongs, from 10% to 90%.</p>
+        <p>Why those two are hard: a deformable object changes shape with every contact, grasp and pull, so the model must continuously infer corners, folds and overall form from wrist and overhead cameras. On hardware without tactile feedback, there are ten to twenty-plus seconds of inference latency between action chunks, during which the arm cannot make real-time corrections, making every contact decision and failure recovery expensive. XDOF itself notes that Ember-0 may soon be saturated by model progress.</p>
+        <p class="why"><b>看点</b>The weight of 41.2% lies in how it was measured: six robots in parallel, 30 trials per task, human annotation of sub-steps — far more credible than a single demo. But it is still a vendor test on a vendor benchmark, with the task set and hardware (dual-arm YAM, no tactile sensing) chosen by XDOF, so it does not transfer directly to other bodies. For VLA teams the useful signal is the failure structure: a fine force-control task jumping from 10% to 90% says the bottleneck was contact control, while deformable objects going from zero to done says long-horizon planning and shape tracking are now usable in a general model. The real engineering limit is that 20-second latency — it turns real-time closed loop into segmented open loop, and whoever shortens the gap between action chunks gets the continuous-manipulation tasks.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 07:07</span>
+          <a class="src" href="https://www.ithome.com/1/030/514.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Reuters: SEC is investigating Nvidia&#39;s accounting; shares 48% below the October peak</h3>
+        <p>On November 22, <a href="https://www.ithome.com/1/030/514.htm" target="_blank" rel="noopener noreferrer">IT之家</a>, citing a Reuters report from November 20, said two people familiar with the matter confirmed that the US Securities and Exchange Commission is investigating potential accounting issues at Nvidia, with enforcement staff reviewing the relevant books. The Wall Street Journal had earlier reported an SEC investigation without being able to establish its focus. Both the SEC and Nvidia declined to comment.</p>
+        <p>The market reaction was severe: Nvidia fell more than 14% that day to $125.5, down more than 48% from its October peak of $243.4. It is the third governance shock for the company in a week, after CEO Jensen Huang's resignation and the halt of H200 sales to China, and after the board created an export-control oversight committee.</p>
+        <p>The accounting probe and export controls are separate threads: one asks whether revenue recognition and disclosure were compliant, the other asks who the company may sell to. There is no visible effect on compute supply yet, but for buyers the picture differs — when the largest GPU supplier sits in simultaneous governance and regulatory uncertainty, the counterparty risk in long-term contracts, prepayments and capacity reservations has to be repriced.</p>
+        <p class="why"><b>看点</b>An AI desk cares about this not because of the drawdown but because it changes the credit terms of compute contracts. For two years, long-term GPU contracts have been treated as insurance for locked-in capacity; once a supplier's accounting is under regulatory review, the same contract carries an extra layer of counterparty and disclosure risk. The actionable adjustment for anyone planning a training cluster is to shorten commitment periods, write delivery milestones into the terms, and keep a migration path to a second supplier — none of that is about model choice, yet it decides whether the GPUs arrive on time next year. Note also that the probe remains at the "reported" stage: neither the SEC nor the company has confirmed its scope, and treating it as settled would misread the story.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 16:51</span>
+          <a class="src" href="https://www.ithome.com/1/030/418.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>China&#39;s data agency wants standards for token metering, billing and quality assessment</h3>
+        <p>On November 21, <a href="https://www.ithome.com/1/030/418.htm" target="_blank" rel="noopener noreferrer">IT之家</a> reported that Liu Liehong, head of China's National Data Administration, told the opening of the 2026 World Computing Conference in Changsha on November 20 that tokens now connect the value chain between compute, models and data, and have become the anchor of the digital economy and a visible carrier of data value.</p>
+        <p>He made three points: token ecosystems around production, circulation and consumption are forming quickly; "token factories" are turning compute rental, model supply and data capability into token production, a new form of industrial organisation; and tokens enable a new delivery model in which curated industry datasets become measurable, deliverable intelligent services priced by token and invocation.</p>
+        <p>The next steps are specific: the administration will expand token service scenarios, improve standards for token metering and billing and for quality assessment, guide orderly industry development, and "resolutely avoid low-quality duplicated construction" while building a digital economy in which data is the key factor.</p>
+        <p class="why"><b>看点</b>Putting tokens into policy language as a unit of account means billing conventions must move from each vendor's private scheme towards a comparable public standard — good for buyers, who can finally compare prices, and a new constraint for vendors, who can no longer define how cached hits, reasoning tokens and output tokens convert. The quality-assessment part deserves more attention: once there is an official yardstick, cheap-and-weak models cannot compete on unit price alone, and "avoid low-quality duplicated construction" may affect approvals for local compute projects. Watch the timetable and the scope — whether this covers public procurement only or the whole market makes a large difference in compliance cost.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 21, 07:58 and November 22, 08:01 (Beijing time): 9 stories. Compiled at 11/22 08:01.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 027 · 24h window · Generated 2026-11-22 08:01</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI Daily</a>
+        <a href="../../economy.html">Economic Daily</a>
+        <a href="../../education.html">Education Daily</a>
+        <a href="../../psychology.html">Psychology Daily</a>
+        <a href="../../tools.html">Tools</a>
+        <a href="../../wish.html">Wish</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="../../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 22 日</title>
+<meta name="description" content="2026-11-22 AI 日报第 027 期：OpenAI 公布反蒸馏防护，旧请求推理提取成功率从 54.0% 降到 0.2%；Signal 默认屏蔽截图，挡住读屏的系统级智能体；混元团队在 Reddit 答网友，Hy 小模型与 24GB 显存版本进了路线图；DeepSeek V1 作者开源个人智能体 Linger；MachinePulse 开源决策模型 Karpo Decision 31B；XDOF 实测 GPT-6.2 Astra 操作成功率翻倍；华科与阿里共建 AI 前沿安全研究中心；SEC 据报调查英伟达会计问题；国家数据局要给词元定计量计费标准。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 22 日">
+<meta property="og:description" content="2026-11-22 AI 日报第 027 期：OpenAI 公布反蒸馏防护，旧请求推理提取成功率从 54.0% 降到 0.2%；Signal 默认屏蔽截图，挡住读屏的系统级智能体；混元团队在 Reddit 答网友，Hy 小模型与 24GB 显存版本进了路线图；DeepSeek V1 作者开源个人智能体 Linger；MachinePulse 开源决策模型 Karpo Decision 31B；XDOF 实测 GPT-6.2 Astra 操作成功率翻倍；华科与阿里共建 AI 前沿安全研究中心；SEC 据报调查英伟达会计问题；国家数据局要给词元定计量计费标准。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-22.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-21T07:58:00+08:00/2026-11-22T08:01:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-22.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-22.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-22-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI 日报</a>
+      <a href="../../economy.html">经济日报</a>
+      <a href="../../education.html">教育日报</a>
+      <a href="../../psychology.html">心理学日报</a>
+      <a href="../../tools.html">工具</a>
+      <a href="../../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-22-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 027 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 22 日<span class="weekday">SUN</span></h1>
+    <p class="deck">这一天的重心从「发了什么模型」移到「能力怎么被拿走」：OpenAI 把对抗性蒸馏的防护拆开讲，旧请求的推理提取成功率从 54.0% 压到 0.2%；Signal 干脆默认关掉截图，用系统政策的边角料挡住读屏的智能体。<em>供给端也没停：混元团队在 Reddit 上把 Hy 小模型和 24GB 显存版本写进路线图，DeepSeek V1 作者开源了一个装在个人电脑上的 Agent，MachinePulse 则把「替 Agent 做选择题」拆成 31B 的专用模型——能力越往端上走，谁持有上下文、谁持有判断权，就越像同一个问题。</em></p>
+    <div class="metabar"><span class="pill">第 027 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/21 07:58 – 11/22 08:01</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 13 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#research"><span class="n">01</span>研究与安全</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#products"><span class="n">03</span>产品与智能体</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>OpenAI 公布对抗性蒸馏的防护进展：在内部自适应黑盒红队测试中，攻击者从旧请求里捞回受保护推理的平均成功率，从 GPT-6 Astra 的 54.0% 降到 GPT-6.2 Astra 的 0.2%；针对当前请求的提取成功率从 22.9% 降到 0.9%。</b>OpenAI 用 6 个攻击模型汇总这组数字，防护手段包括对抗训练、输入与输出分类器、以及 API 层面禁止跨会话与跨组织复用推理内容；公司称今年以来每周都会处置涉及未授权蒸馏的账号，规模从数千到数万个。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>路透社报道美国证券交易委员会正在调查英伟达潜在的会计问题，两名知情人士称 SEC 执法部门在审阅相关账目；英伟达与 SEC 均拒绝置评。</b>英伟达股价当日跌超 14%、收 125.5 美元，较 10 月高点的 243.4 美元跌去 48% 以上——这是继 CEO 离职、出口管制之后，同一家公司一周内在治理层面遇到的第三重不确定性。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>机器人基础设施公司 XDOF 用 Ember-0 基准给 GPT-6.2 Astra 做实测：16 项双臂操作任务的加权成功率从两个月前 GPT-6 Astra 的 19.6% 升到 41.2%，「给绳子打结」和「展开 T 恤」两项此前无模型通关的任务首次由它完成。</b>测试用六台 YAM 工作站并行、每项任务重复 30 次、人工标注子步骤与失误；「用夹子夹起面包」一项从 10% 跳到 90%。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 09:45</span>
+          <a class="src" href="https://www.ithome.com/1/030/319.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>OpenAI 公布反蒸馏防护：旧请求的推理提取成功率从 54.0% 压到 0.2%</h3>
+        <p>当地时间 11 月 20 日，OpenAI 发布公告《Combatting adversarial distillation》，说明它如何检测与阻断「对抗性蒸馏」——未经授权用前沿模型的输出训练另一个模型，让后者拿到相似能力、却不带原来的安全防护。据<a href="https://www.ithome.com/1/030/319.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，这次防护重点落在「受保护的推理内容」上，也就是模型作答时在内部生成的思维链。</p>
+        <p>核心数字来自一场内部自适应黑盒红队测试，由 6 个攻击模型汇总：攻击者尝试从模型此前回答过的请求里捞回受保护推理，平均成功率在 GPT-6 Astra 原有防护下是 54.0%，换到更新防护的 GPT-6.2 Astra 后降到 0.2%；针对当前请求的提取成功率则从 22.9% 降到 0.9%。OpenAI 在<a href="https://openai.com/index/combatting-adversarial-distillation/" target="_blank" rel="noopener noreferrer">原文</a>里把手段拆成四层：对抗训练让模型识别并拒绝提取请求、输入与输出分类器检测攻击与泄露、API 限制不同会话/模型/组织之间复用推理内容、以及对协调式提取的账号网络做调查。</p>
+        <p>API 层的细节值得单独记：GPT-6.2 Astra 与 GPT-6.2 Sol 会把受保护推理与生成它的对话历史绑定，如果之前的消息被改动，API 就丢弃基于那条消息生成的后续推理；防护较弱的旧版模型也读不到这两个新模型的推理内容。执法方面，OpenAI 称今年以来每周都在处置涉未授权蒸馏的账号，规模数千到数万个，夏季之后明显增加，并会把攻击指标分享给其他模型提供方。</p>
+        <p>公告还用一次内部实验解释「为什么要护推理而不只是护答案」：以用户本就能看到的最终回答、推理摘要和工具交互记录为基线，让学生模型额外拿到教师的完整推理轨迹做监督微调，其网络安全能力迁移明显更好；再做一轮轻量强化学习后，在最大推理预算下「完整轨迹」学生仍更高，但在低预算区间则是「摘要」学生更高。</p>
+        <p class="why"><b>看点</b>把「54.0%」当结论看会误读：它是厂商自己的自适应红队，攻击模型只有 6 个，衡量的是「捞回旧请求的受保护推理」，不等于模型不会被蒸馏——同一份公告里，学生模型照样能从可见输出里学到东西。真正可复用的是那套工程结构：推理内容与对话历史强绑定、跨会话禁止复用、新旧模型之间做权限隔离。这三条一旦成为 API 的默认行为，缓存、会话恢复、跨模型迁移这些常见用法都得重写，成本会转移到调用方。对做 agent 审计的团队，更该抄的是「按攻击面分层」而不是某个百分比：请求级防提取、账号级查协同、模型级做对抗训练，三层的失败模式完全不同。<br><b>另一个视角</b>公告把议题从「知识产权」推向「国家安全」，配合每周数千到数万个账号的处置规模，等于把「模型能力」当成需要出口管制的资产来记账；同一天 SEC 对英伟达会计问题的调查传闻，也是同一张账本上的另一页。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 17:57</span>
+          <a class="src" href="https://www.ithome.com/1/030/423.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>华中科技大学与阿里巴巴共建 AI 前沿安全研究中心，首批启动 9 个课题</h3>
+        <p>11 月 21 日，<a href="https://www.ithome.com/1/030/423.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，华中科技大学与阿里巴巴集团于 11 月 18 日签署合作协议，共建「智能攻防与前沿安全联合研究中心」，首批启动 9 个课题，覆盖大模型安全攻防、智能体与终端安全、智能化系统与软件安全、数据协同与隐私保护四个方向。</p>
+        <p>公开的两个课题案例都指向智能体落地后的具体风险：一是「图像对抗样本与终端威胁研判」，针对智能体替用户操作手机时屏幕画面被伪造、操作过程被恶意诱导；二是「隐私保护关系图谱」，用密态计算在购物、地图、外卖等多应用协同场景里做到数据「可用不可见、协同不透传」。</p>
+        <p>合作形式是校企联合：高校出攻防方法与评测，企业出真实系统与场景。这种安排在国内外都不新鲜，但把「智能体与终端安全」单列为一个方向、并在首批课题里就给出对抗样本与密态计算两个抓手，说明研究议程已经从「模型会不会说错话」转向「模型替人操作设备时，屏幕、输入和跨应用数据怎么被保护」。</p>
+        <p class="why"><b>看点</b>智能体的攻击面与传统模型评测不同：它读屏、点按、跨应用搬数据，攻击者可以伪造它看到的画面，也可以在它读取的输入里埋指令，而这两种攻击都不体现在文本安全基准上。把「终端威胁研判」和「隐私保护关系图谱」放进同一批课题，等于承认防御要同时覆盖感知层（看到的是不是真的）与数据层（协同时能拿走什么）。对做终端 agent 的团队，这两个课题名可以直接当验收清单：先证明你的屏幕理解能识别伪造与遮挡，再证明跨应用数据流在密态条件下仍能完成任务。需要打折的是时间——11 月 18 日刚签约，9 个课题都还在起步，短期内不会有可复用的工具或数据集。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-21">
+        <div class="cmeta">
+          <span class="d">11/21 14:30</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511757.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>混元团队在 Reddit 答网友：Hy 小模型进了路线图，24GB 显存版本在计划里</h3>
+        <p>11 月 21 日凌晨，腾讯混元团队与姚顺雨在 Reddit 做了一场围绕 Hy4 与 Hy4 flash 的 AMA（Ask Me Anything）。据<a href="https://www.qbitai.com/2026/11/511757.html" target="_blank" rel="noopener noreferrer">量子位</a>报道，团队在回帖里确认了两件此前没有公开的事：面向小参数量的 Hy 小模型已经在路线图上，面向 24GB 显存设备的版本也在计划之中。</p>
+        <p>本地部署的问题被问得最细。有网友报出 96GB 显存加 128GB 内存的配置，问能不能跑 Hy4 flash，团队回答可以：主要权重留在 GPU 上，部分专家层与 Engram 查表模块可以挪到系统内存。llama.cpp 的适配正在做，尚未给出时间表。这与此前「Apache 2.0 开放权重」形成闭环——权重放出来只是第一步，能不能在消费级硬件上跑起来取决于推理栈。</p>
+        <p>训练侧也给了几个可验证的口径：Hy4 flash 先从旗舰 Hy4 蒸馏，再用强化学习把推理链压短，以解决旗舰「推理链偏长」的问题；团队把后训练里最难改的行为概括成一个词——overthinking，即过度思考。成本方面，团队把 WorkBuddy 里修表、改文档、做 PPT 等典型任务纳入内部评测 WorkIndex，按这套口径，Hy4 flash 的平均单任务成本约为旗舰 Hy4 的二十分之一。</p>
+        <p class="why"><b>看点</b>这场 AMA 的信息量不在「又开源了什么」，而在三个工程约束：24GB 显存的产品化路线、专家层与 Engram 可以下沉到系统内存的分层策略、以及 llama.cpp 适配尚未完成。第一条决定了它能不能进消费级显卡与迷你主机；第二条说明 MoE 的稀疏设计还留了「按显存预算拆权重」的空间；第三条是实际门槛——权重公开不等于推理引擎能跑，llama.cpp 适配之前，本地跑通仍要靠 vLLM 一类的重部署。要跟的是 WorkIndex 的口径：单任务成本 1/20 是自家工作负载的算术，换成别的任务分布，优势会随调用长度与并行度变化。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 19:24</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511791.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>MachinePulse 开源 Karpo Decision 31B：一次前向算完整组选项概率，中位响应 94 毫秒</h3>
+        <p>11 月 21 日，据<a href="https://www.qbitai.com/2026/11/511791.html" target="_blank" rel="noopener noreferrer">量子位</a>报道，MachinePulse AI 开源了专为 Agent 提供高频决策的 Karpo Decision 31B：不需要逐字生成，只跑一次前向推理就能给出整组候选选项的概率。在公开集 14 万多次请求上，中位响应时间 94 毫秒，一张 RTX PRO 6000 即可部署。</p>
+        <p>评测口径是厂商与第三方混合的：在汇集 300 个模型的 Decision Index 总榜上，它拿到 73.9 的 Full 分排第一，单题最多可同时判断 255 个候选选项，校准误差 2.3%。在一场 36 题的《城市扫描仪》实测里，它从 36 场活动中筛出 10 个符合「人均 50 美元内、通勤 5 公里内」的去处用了 2.6 秒，Gemini 3.5 Flash 用了 14.96 秒，两边的筛选条件都没有遗漏。</p>
+        <p>同批开源的还有浏览器操作框架 karpo-browser、网页动作决策模型 Karpo Decision 27B Act，以及配套评测集 KBB。按 Browserbase Benchmark v2 的 102 道核心任务，这套组合的平均成功率 89%、平均耗时 201 秒、单任务模型成本 0.096 美元；对比榜首的 Claude Fable 5.2 加 Claude Code，速度约快 1.9 倍、模型成本约为十三分之一。需要说明的是，Karpo 自测用 102 道全集题跑 3 次取平均，榜单其他模型多为 38 题跑 1 次，两种口径不能直接横比。</p>
+        <p class="why"><b>看点</b>这条赛道今年突然热起来，原因很朴素：agent 每一步都要「选工具、判断任务是否完成、筛结果」，让通用大模型逐字生成答案既慢又贵。决策模型把「判断」从生成里拆出来，只输出概率，延迟从秒级压到百毫秒级，代价是必须另建评测集（KBB 就是干这个的）。对做 agent 的团队，可操作结论是分层：高频、封闭选项的判断交给专用小模型，开放的规划与解释仍留给大模型，两层的校准要分开测——2.3% 的校准误差只说明它在自家题库上概率是准的，换到你的工具集与操作空间，需要自己重标。要留意的是开源许可证与训练数据来源，这决定了它能不能直接进商业产品。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 14:32</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511570.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>DeepSeek V1 作者开源个人智能体 Linger：装在个人电脑上，12GB 显卡跑 125B 模型</h3>
+        <p>11 月 21 日，前 DeepSeek V1 作者、DeepSeek-VL 项目负责人 Tony Zhang 公布新创业项目 Linger，并直接开源。据<a href="https://www.qbitai.com/2026/11/511570.html" target="_blank" rel="noopener noreferrer">量子位</a>报道，与多数做手机 App 的同行不同，Linger 优先做电脑端：它操作电脑上已经登录的网页、邮箱与日历，不需要重新配置一堆登录凭据，卡住时用户可以随时接管。</p>
+        <p>架构上，Linger 是中间层，支持接入各家第三方模型，并专门为本地 LLM 做了优化：一块 12GB 显存的 RTX 3060 就能跑起 125B 参数的 Qwen3.8-Flash-Next，生成速度 45.5 tokens/秒。核心是一个名为「Another Me」的 Agent 系统，每晚把收件箱、日历、聊天记录与会议整理成本地个人知识库（Wiki）供所有 Agent 查询；在衡量长期对话记忆的 LoCoMo 基准上准确率 95%，报道称高于 Mem0、MemOS 等记忆增强系统。</p>
+        <p>主动性与学习是另一个卖点：它观察信息流，按事件的紧急程度决定何时提醒——周一收到「周五前报价」的邮件不会立刻打扰，会议时间变更则立即通知；用户的反馈（「上周就收到了，应该当时就告诉我」）会沉淀成规则，连续两次忽略某类提醒则会学会保持沉默。此外它支持组建多个 Agent 协作。</p>
+        <p class="why"><b>看点</b>「优先做电脑而不是 App」是个有信息量的选择：手机上的智能体要跨 App 操作，受系统权限与沙箱限制；桌面端能直接复用已登录的浏览器会话与本地文件，能力上限高得多，代价是把安全边界从「应用授权」变成了「整台机器」。12GB 显卡跑 125B 这个数字要看清是 4bit 量化加稀疏激活的结果，45.5 tokens/秒是生成速度，不是首 token 延迟，真实体感取决于上下文长度。LoCoMo 95% 也是记忆检索类基准，不等于长期任务完成率。要跟的是它的权限模型：能读邮件、日历与浏览器会话的本地 Agent，必须有可审计的操作日志与最小权限白名单，否则「开源」只是把风险交给用户。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 07:28</span>
+          <a class="src" href="https://www.ithome.com/1/030/517.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Signal 默认屏蔽截图：用系统接口挡住 Siri AI 与 Gemini 读屏</h3>
+        <p>11 月 22 日，据<a href="https://www.ithome.com/1/030/517.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，开源端到端加密聊天应用 Signal 推出 iOS 与 Android 更新，默认关闭应用内截图功能，以阻止 Siri AI、Gemini 等系统级智能体读取用户私人消息。Signal 8.37（对应 iOS 27）中默认启用「阻止 Siri AI」设置，用户在 Signal 内无法截图或录屏，可以选择关闭 10 分钟或永久禁用。</p>
+        <p>Android 侧的做法不同：Signal 8.35.1 及以上版本在检测到 AI 助手试图截图读取消息时，自动启用「屏幕安全」策略阻止截屏。官方承认这项检测无法在所有设备上稳定运行，因为各家安卓实现方式不同。macOS 版则受限于缺少必要开发工具，无法实现同类防护，官方建议用户把 Signal 加入系统的「Siri 排除列表」。</p>
+        <p>Signal 总裁 Meredith Whittaker 的说法是，系统级智能体的影响力正在扩大，它们可能在用户不知情的情况下访问私人对话，这削弱了 Signal 独立保证隐私的能力。这件事的背景是端侧智能体开始以「读屏」作为主要输入：一旦读屏成为系统特权，加密应用的安全假设就被从外部绕过——消息在应用内是加密的，在屏幕上却是明文。</p>
+        <p class="why"><b>看点</b>这是「端侧智能体」与「加密应用」的第一次正面冲突，而它没有技术上的干净解法：Signal 能做的是在自己的窗口上开启系统级防截屏标志，这依赖 OS 提供接口，也依赖 OS 尊重它。Android 端的启发式检测说明更麻烦的一面——如果系统不配合，应用只能猜。对做端侧 agent 的人，这条新闻是一份约束清单：读屏权限必须可被应用显式拒绝、必须可审计、必须区分「用户主动触发」与「后台扫描」。对做隐私产品的人，结论更冷：加密只保护传输与存储，屏幕是新的泄露面，而这一层目前由操作系统单方面决定。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 14:35</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511779.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>XDOF 实测 GPT-6.2 Astra 操作机器人：16 项任务成功率 41.2%，打结与展开 T 恤首次通关</h3>
+        <p>11 月 21 日，据<a href="https://www.qbitai.com/2026/11/511779.html" target="_blank" rel="noopener noreferrer">量子位</a>报道，机器人基础设施公司 XDOF 在 Ember-0 基准上实测 GPT-6.2 Astra 操控双臂机器人的表现：16 项操作任务的综合成功率从两个月前 GPT-6 Astra 的 19.6% 升到 41.2%，提高 21.6 个百分点。Ember-0 覆盖空间推理、物体抓取、双臂协作、工具使用、精细操作与柔性物体处理，每项任务按 30 次重复的协议执行。</p>
+        <p>评测方法是这次值得记的部分：XDOF 用六台 YAM 工作站并行试验，单日可完成 480 场实测，由人工标注子步骤、抓取失误与碰撞，以滤除硬件偏差与随机扰动。两项此前没有模型完成过的任务这次被拿下——「给绳子打结」与「展开 T 恤」；后者在 Ember-0 上累计做过 143 次有效测试，此前无一成功。单项提升最明显的是「用夹子夹起面包」，从 10% 升到 90%。</p>
+        <p>为什么这两项难：柔性物体的形态会随机械臂每一次接触、抓取、拉扯而变化，模型要从腕部与顶部摄像头持续判断衣物的角点、褶皱与整体形态；在没有触觉反馈的硬件上，输出动作块之间还有十余秒到二十余秒的推理延迟，机械臂在等待期间无法实时微调，每一次接触控制与失败恢复的成本都很高。XDOF 自己也说，Ember-0 可能不久后就会被模型能力饱和。</p>
+        <p class="why"><b>看点</b>41.2% 这个数字的含金量在「怎么测」：六台机器并行、每项 30 次、人工标注子步骤，比单次演示可信得多；但它是厂商基准上的厂商实测，任务集与硬件（YAM 双臂、无触觉）都是 XDOF 选的，换到别的本体上不能直接外推。对做 VLA 的人，最有用的是失败结构：夹面包这类精细力控任务从 10% 到 90%，说明瓶颈在接触控制；柔性物体从 0 到能完成，说明长程规划与形变追踪在通用模型上开始可用。真正的工程限制是那 20 秒的推理延迟——它把「实时闭环」变成了「分段开环」，谁把动作块之间的延迟压下来，谁才拿得到连续操作的任务。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 07:07</span>
+          <a class="src" href="https://www.ithome.com/1/030/514.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>路透社：SEC 正调查英伟达潜在会计问题，股价较 10 月高点跌去 48%</h3>
+        <p>11 月 22 日，据<a href="https://www.ithome.com/1/030/514.htm" target="_blank" rel="noopener noreferrer">IT之家</a>援引路透社 11 月 20 日报道，两名知情人士称美国证券交易委员会（SEC）正在调查英伟达潜在的会计问题，SEC 执法部门工作人员正在审阅相关账目。此前《华尔街日报》已报道 SEC 对英伟达展开调查，但未能确定调查重点。SEC 与英伟达均拒绝置评。</p>
+        <p>市场反应剧烈：英伟达当日股价跌超 14%、报 125.5 美元，较 10 月高点的 243.4 美元跌去 48% 以上。这是同一家公司一周内在治理层面遇到的第三重不确定性——此前 CEO 黄仁勋辞职、公司停止向中国销售 H200，董事会还新设了出口管制监督委员会。</p>
+        <p>会计问题调查与出口管制是两条线：前者问的是收入确认与披露是否合规，后者问的是能卖给谁。对算力供给的直接影响目前还看不到，但对采购方是另一回事——当最大的 GPU 供应商同时处在治理与监管的不确定中，长约、预付与产能预订的对手方风险需要重新定价。</p>
+        <p class="why"><b>看点</b>AI 日报关心这条，不是因为它跌了多少，而是因为它改变了算力合同的信用条件。过去两年，GPU 长约被当成「锁定产能」的保险；一旦供应商的会计口径被监管审阅，同样的合同就要多算一层对手方与披露风险。对做训练集群规划的人，可操作的调整是缩短承诺周期、把交付里程碑写进条款、并准备第二供应商的迁移路径——这些动作与技术选型无关，却直接决定明年能不能按时拿到卡。需要说明的是，调查本身仍处「据报」阶段，SEC 与公司都没有确认范围，把它当成已定论会读错。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/21 16:51</span>
+          <a class="src" href="https://www.ithome.com/1/030/418.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>国家数据局：要给「词元」定计量计费与质量测评标准，避免低质量重复建设</h3>
+        <p>11 月 21 日，据<a href="https://www.ithome.com/1/030/418.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，国家数据局党组书记、局长刘烈宏在 11 月 20 日于长沙举行的 2026 世界计算大会开幕式上表示，词元打通了算力、模型、数据之间的价值传导链路，成为数智经济的价值锚点与数据价值的显性化载体。</p>
+        <p>他给出三个判断：词元发展初步起势，围绕生产、流通、消费的产业生态在加速构建；「词元工厂」快速兴起，把算力租赁、模型供给、数据能力升级为词元生产服务，成为产业组织新形态；词元催生服务交付新模式，行业高质量数据集经模型训练推理转化为可计量、可交付的智能服务，形成以词元计量、按调用计价的交付方式。</p>
+        <p>下一步的动作写得很具体：国家数据局将拓展词元服务应用场景，健全词元计量计费、质量测评等标准规范，引导行业规范发展，坚决避免低质量重复建设，加快构建以数据为关键要素的数字经济。</p>
+        <p class="why"><b>看点</b>「词元」被当成计价单位写进政策语言，意味着计费口径要从各家 API 的私有约定，走向可比较的公共标准——这对采购方是好事（终于能横向比价），对供应商是新约束（缓存命中、推理 token 与输出 token 怎么折算，不能各家自说自话）。「质量测评」更值得盯：一旦有官方口径，低价低质的模型很难只靠单价竞争，「避免低质量重复建设」这句话也可能影响地方算力项目的审批。要跟的是标准落地的时间表与适用范围——是针对公共服务采购，还是覆盖整个市场，两者的合规成本差很远。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 21 日 07:58 至 11 月 22 日 08:01（北京时间）之间发布的报道，共 9 条。检索时间 11/22 08:01。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 027 · 24h window · Generated 2026-11-22 08:01</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI 日报</a>
+        <a href="../../economy.html">经济日报</a>
+        <a href="../../education.html">教育日报</a>
+        <a href="../../psychology.html">心理学日报</a>
+        <a href="../../tools.html">工具</a>
+        <a href="../../wish.html">许愿</a>
+        <a href="../../privacy.html">隐私</a>
+        <a href="../../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>
