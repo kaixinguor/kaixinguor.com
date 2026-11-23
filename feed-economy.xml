@@ -6,7 +6,14 @@
     <description>经济日报：央行与利率、增长与结构、产业与公司，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed-economy.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 22 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>经济日报 · 2026 年 11 月 23 日</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-23.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-23.html</guid>
+      <pubDate>Mon, 23 Nov 2026 01:00:00 GMT</pubDate>
+      <description>这一期讲的是「谁给流动性定价」。周日晚间，沪深北交易所把融资保证金比例下限从 100% 调回 80%，同一笔保证金能撑起的名义头寸多了 25%；同一天还有创业板做市商征求意见与 27.58 亿元降费。三件事都不是印钱，而是把交易与杠杆的价格调低。首尔的剧本更直接：KOSPI 单日跌逾 5% 之后，政府启动 5150 亿韩元平准基金的激活准备、放宽回购申报限额、收紧卖空监控——用行政买方替代正在退场的私人买方。银行三季报给出了这套操作的代价：净息差 1.41% 靠存款重定价守住，不良率却升了 0.02 个百分点。铜的流向把「关税预期」写成了库存地图：94% 的 LME 与 COMEX 库存留在美国，洋山溢价被推到每吨 500 美元。流动性从来不是免费的：它要么由价格支付，要么由某张资产负债表垫付。 融资保证金比例下限调回 80%、11 月 30 日施行，同日创业板做市商征求意见、沪深交易所新增降费 27.58 亿元</description>
+    </item>
     <item>
       <title>经济日报 · 2026 年 11 月 22 日</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-22.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-03.html</guid>
       <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「收水」与「重定价」：央行把外汇存款准备金率从 4% 提到 6%，又把股票回购增持再贷款利率降到 1%、转为长期制度。海外是另一套剧本——美联储 10 比 2 按住利率，市场仍给 12 月加息 85% 的概率；油价一夜跌 7.36%，苹果把毛利率指引降到 45%–46%。钱的价格，两边都在重算。 央行上调外汇存款准备金率 2 个百分点：4% 到 6%，11 月 15 日起实施</description>
-    </item>
-    <item>
-      <title>经济日报 · 2026 年 11 月 2 日</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-02.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-02.html</guid>
-      <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
-      <description>今天的主线是「把时间往前拨」：财政部把 2027 年部分地方债额度提前到 1 月，5.1 万亿元三季报净利里 AI 板块增 281%。 车市却在分化——零跑、小鹏创出新高，蔚来、理想同比环比双降。 政策在提前，企业在分化。 财政部提前下达 2027 年部分新增地方债限额：上限 60%，1 月即可发债</description>
     </item>
   </channel>
 </rss>

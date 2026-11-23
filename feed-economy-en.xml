@@ -6,7 +6,14 @@
     <description>An economy daily: central banks, growth and the companies that book the profit.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 22 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · November 23, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-23-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-23-en.html</guid>
+      <pubDate>Mon, 23 Nov 2026 01:00:00 GMT</pubDate>
+      <description>This issue is about who sets the price of liquidity. On Sunday evening the exchanges cut the minimum margin ratio back to 80% from 100%, so the same collateral now carries 25% more position, and paired that with ChiNext market-maker rules and Rmb2.758bn of fee reductions. None of it prints money; all of it lowers the price of trading and leverage. Seoul wrote the same story in a harder key: after KOSPI fell more than 5% in a session, the government put its KRW515bn stabilisation fund on deployment standby, eased buyback filing limits and tightened short-selling surveillance — administrative buyers standing in for private ones who are leaving. The bank data show the bill: a 1.41% net interest margin held up by deposit repricing, and an NPL ratio that rose 2bp. Copper turns tariff expectations into a map of inventories, with 94% of exchange stocks sitting in the US and the Yangshan premium at a record $500 a tonne.Liquidity is never free: it is paid for either by a price or by somebody&#39;s balance sheet. Margin ratio cut back to 80% from November 30, with ChiNext market makers floated and Rmb2.758bn of new fee cuts</description>
+    </item>
     <item>
       <title>Economic Daily · November 22, 2026</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-22-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-03-en.html</guid>
       <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
       <description>Two directions in the same session: the PBOC drained foreign-currency liquidity by lifting the FX deposit reserve ratio from 4% to 6%, then cut the rate on buyback relending to 1% and made the facility permanent. Abroad the script runs the other way — the Fed held rates on a 10-2 vote while markets still price an 85% chance of a December hike, oil fell 7.36% in a night, and Apple guided gross margin down to 45–46%. Both sides are repricing money. The PBOC lifts the FX deposit reserve ratio to 6% from 4%, effective November 15</description>
-    </item>
-    <item>
-      <title>Economic Daily · November 2, 2026</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-02-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-02-en.html</guid>
-      <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Today’s thread is about moving the clock forward: the Finance Ministry brings part of the 2027 local-bond quota into January, and ¥5.1 trillion of nine-month profit includes a 281% jump in AI earnings. The car market is splitting the other way — Leapmotor and Xpeng set records while Nio and Li Auto fell on both counts. Policy moves early; companies diverge. Beijing brings the 2027 local-bond quota forward: 60% cap, issuance from January</description>
     </item>
   </channel>
 </rss>
