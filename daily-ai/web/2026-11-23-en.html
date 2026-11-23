@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 23, 2026</title>
+<meta name="description" content="AI Daily Issue 028, November 23, 2026: OpenAI&#39;s chief scientist proposes industry-wide development limits keyed to perplexity and publishes GPT-3.5 at 0.99 and GPT-4 at 0.91; an Anthropic mathematician and an NYU professor claim a 79-page proof of finite-time blow-up for 3D Navier–Stokes with Lean code; MiniMax says its internal model turns theoretical cipher attacks into seconds-long breaks; Nadella concedes Claude Code displaced VS Code in six months; Bilibili asks users how to govern AI agent accounts; Guangzhui Interaction unveils an 84-DOF bionic robot face with tactile skin; Oracle says OpenAI funding is fully raised; AI servers repriced up to 45% before delivery; Ming-Chi Kuo says Google cut 2027 TPU 8i orders by about a million units.">
+<meta property="og:title" content="AI Daily · November 23, 2026">
+<meta property="og:description" content="AI Daily Issue 028, November 23, 2026: OpenAI&#39;s chief scientist proposes industry-wide development limits keyed to perplexity and publishes GPT-3.5 at 0.99 and GPT-4 at 0.91; an Anthropic mathematician and an NYU professor claim a 79-page proof of finite-time blow-up for 3D Navier–Stokes with Lean code; MiniMax says its internal model turns theoretical cipher attacks into seconds-long breaks; Nadella concedes Claude Code displaced VS Code in six months; Bilibili asks users how to govern AI agent accounts; Guangzhui Interaction unveils an 84-DOF bionic robot face with tactile skin; Oracle says OpenAI funding is fully raised; AI servers repriced up to 45% before delivery; Ming-Chi Kuo says Google cut 2027 TPU 8i orders by about a million units.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-23-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-22T08:01:00+08:00/2026-11-23T09:03:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-23-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-23.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-23-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI Daily</a>
+      <a href="../../economy.html">Economic Daily</a>
+      <a href="../../education.html">Education Daily</a>
+      <a href="../../psychology.html">Psychology Daily</a>
+      <a href="../../tools.html">Tools</a>
+      <a href="../../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-23.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 028</span>
+    </div>
+    <h1 class="date">November 23, 2026<span class="weekday">MON</span></h1>
+    <p class="deck">OpenAI's chief scientist has turned "when to brake" into a measurable quantity: a shared development limit keyed to perplexity, published alongside his own lab's numbers — GPT-3.5 at about 0.99, GPT-4 at about 0.91.<em>The same day, an Anthropic mathematician pushed a second Millennium Problem into "submitted, awaiting verification", MiniMax said its internal model now finds construction flaws in ciphers on its own, and Nadella conceded that Claude Code made VS Code lose its default status in six months — capability, verification and tooling rewriting each other's scorecards in the same week.</em></p>
+    <div class="metabar"><span class="pill">Issue 028</span>
+      <span class="dot"></span>
+      <span>Window Nov 22, 08:01 – Nov 23, 09:03</span>
+      <span class="dot"></span>
+      <span>9 stories</span>
+      <span class="dot"></span>
+      <span>13 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#research"><span class="n">01</span>Research &amp; Safety</a>
+        <a href="#models"><span class="n">02</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>OpenAI chief scientist Jakub Pachocki proposes that the industry set common development limits keyed to perplexity, committed not to cross them until model understanding and monitoring reach a concrete milestone such as a successor to chain-of-thought monitors — and publishes his lab's own log-perplexity: about 0.99 for GPT-3.5 and 0.91 for GPT-4.</b> He gives three empirical markers: below 0.8, new capabilities appear in cybersecurity and mathematics; around 0.76, the model starts producing results on open maths problems; in the 0.68–0.7 window he expects further transformative capabilities without knowing what they will be — and warns that pretraining progress could accelerate as early as 2027 while alignment and monitoring lag.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Dell, HPE, Lenovo and Supermicro have raised prices on AI servers after contracts were signed, by as much as 45% before delivery, according to the Financial Times; JPMorgan research attributes the increases to memory costs, up more than 400% since early 2024.</b> Buyers are firms building their own data centres, including large financial services and trading companies; one person described a "huge gap" between the reference price agreed months earlier and the final invoice.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Anthropic mathematician Levent Alpöge and NYU professor Tristan Buckmaster published a 79-page paper on November 20 claiming a finite-time blow-up for the 3D Navier–Stokes equations without forcing but with viscosity, releasing Lean formalisation code alongside it.</b> The paper's AI disclosure says Claude was used throughout and no other model was; they formalised first and generated the paper from the proof. Terence Tao says the strategy is broadly clear but needs a proper written proof; independent verification is still pending.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23 06:50</span>
+          <a class="src" href="https://www.ithome.com/1/030/720.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>OpenAI&#39;s chief scientist wants shared development limits set by perplexity: new capabilities below 0.8, more to come at 0.68–0.7</h3>
+        <p>On November 22 local time, OpenAI chief scientist Jakub Pachocki published "Perplexity and Intelligence", arguing that perplexity — equivalently, cross-entropy loss — should become a metric comparable across developers and a basis for shared safety standards. According to <a href="https://www.ithome.com/1/030/720.htm" target="_blank" rel="noopener noreferrer">IT之家</a>, he also disclosed OpenAI's internal log-perplexity: about 0.99 for GPT-3.5 and 0.91 for GPT-4.</p>
+        <p>Three thresholds are the hardest part of the <a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener noreferrer">original post</a>. Once loss fell below 0.8, OpenAI observed transformative capabilities in cybersecurity and mathematics; around 0.76, the model began resolving long-open problems in mathematics one after another; in the 0.68–0.7 range he expects further capabilities, while saying plainly that he does not know what they are and that today's evaluations may not cover them.</p>
+        <p>The institutional proposal: frontier developers should jointly establish evaluation, transparency and red-teaming standards, complete safety assessment before first use, and adopt a first development limit measured by something trackable across labs — with an explicit commitment not to cross it until understanding and monitoring reach a concrete milestone, such as a successor to chain-of-thought monitors. He also lists three limitations: different datasets make numbers hard to compare; perplexity does not map to any specific task; and progress outside pretraining, notably chain-of-thought reasoning, does not show up in it. OpenAI CEO Sam Altman called the post one of the company's most important pieces in some time.</p>
+        <p>The policy backdrop is shifting. AP reported on November 22 that Democratic senators are discussing AI regulation for the next Congress: John Hickenlooper proposed a dedicated Senate AI committee, Chris Van Hollen backed the idea, and the party plans to make AI a priority after taking a majority in January 2027, covering data-centre oversight, safety standards and third-party evaluation.</p>
+        <p class="why"><b>看点</b>The value here is not "0.8 is dangerous" but the swap from predicting capability to measuring pretraining progress: perplexity is cheap, reproducible and needs no downstream suite, which is exactly what makes it a cross-lab dashboard. A dashboard is not a brake, though. It measures compression, not dangerous capability; the 0.8 and 0.76 markers are retrospective observations, not causal thresholds, and reading 0.68 as a countdown misreads them. What is actionable is the mechanism design: a limit needs a checklist of what must be delivered before crossing it (a successor to CoT monitoring, for instance), otherwise "common limits" is a voluntary pledge. For model teams, the practical step is to keep your own log-perplexity curve aligned with capability events — it flags change earlier than any single benchmark and is easier to agree on internally.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 14:03</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511870.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>A second Millennium Problem submitted: 79-page paper claims finite-time blow-up for 3D Navier–Stokes, with Lean code</h3>
+        <p>On November 22, <a href="https://www.qbitai.com/2026/11/511870.html" target="_blank" rel="noopener noreferrer">量子位</a> reported that Anthropic mathematician Levent Alpöge and NYU professor Tristan Buckmaster released a 79-page paper on November 20 claiming a finite-time blow-up for the three-dimensional Navier–Stokes equations with viscosity but without external forcing — a flow that starts smooth and develops a singularity in finite time. The claim covers both ordinary three-dimensional space and the periodic setting.</p>
+        <p>Why the problem matters: to refute "every admissible flow stays smooth forever", a single rigorous counterexample is enough. The pair are not new to this — in September they published a blow-up result for the 3D Euler equations with smooth forcing. This time the forcing is removed and viscosity kept, and viscosity brings friction and energy dissipation, so the obstacles in the proof are different in kind.</p>
+        <p>AI use is in the paper's disclosure: Claude was used throughout this Navier–Stokes work and no other model was; it took part in proof generation, organising the Lean formalisation and rewriting the paper. They formalised first, generated a draft from the proof, then replaced lengthy arguments with known standard results. The draft also used Scott Armstrong's tool for turning Lean proofs into natural-language papers. Tao's summary of the route: find an approximate flow with a self-similar structure numerically, then use rigorous perturbation theory to show that a genuine solution exists nearby. He adds that the broad strategy is clear but still needs to be written up as a proper proof.</p>
+        <p>The same week came the counterpoint: on the same day, mathematician Alessandro Maria Masullo released a Riemann hypothesis proof draft he had worked on for nearly 12 years, and AMS president Ravi Vakil stressed that this draft used no AI.</p>
+        <p class="why"><b>看点</b>Split "AI in mathematics" into three layers: formalisation (Lean code, machine-checkable), the natural-language paper (which humans must read), and the claim itself (which needs independent verification). All three are present, but only the first is machine-decidable — Lean guarantees that the code says what it says, not that the right statement was chosen or that the formalisation matches the paper. Verification cost therefore moves to reading 79 pages and aligning them with the formal statements, which is what Tao means by needing a proper write-up. For AI-for-math teams, the operational lesson is to build the formal-versus-prose consistency check into the workflow instead of waiting for review. For evaluators, it is a reminder that "the model proved it" and "the community accepted it" are months to years apart.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 21:23</span>
+          <a class="src" href="https://www.ithome.com/1/030/711.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>MiniMax says its internal model finds cipher construction flaws on its own, cutting theoretical attacks to seconds</h3>
+        <p>On November 22, <a href="https://www.ithome.com/1/030/711.htm" target="_blank" rel="noopener noreferrer">IT之家</a> reported that MiniMax ran a systematic automated cryptanalysis of modern cipher schemes with its latest internal model, finding several previously unknown construction flaws and pushing multiple attacks that had stayed theoretical in papers into executable breaks measured in seconds to minutes.</p>
+        <p>The results fall into three groups. Against past NIST cryptographic standardisation competitions, the model broke, for the first time in practice, several candidate algorithms that had "no known practical attack". Against schemes published at top cryptography venues and competition winners, it achieved efficient ciphertext forgery or key recovery and set a new record for the highest number of rounds broken on a modern block cipher. On classical hard mathematical problems underpinning public-key cryptography, it combined "mining hidden algebraic structure" with system-level engineering to solve dozens of high-order challenge instances that previously had no public solution, with measured speedups of hundreds to tens of thousands of times over the best current algorithms.</p>
+        <p>The company drew a boundary: the work targets frontier academic schemes, historical competition candidates and public parameter challenges, and the findings do not affect the security of deployed mainstream standards such as AES, RSA and SHA-256.</p>
+        <p class="why"><b>看点</b>Cryptanalysis is one of the few AI capability claims a third party can falsify in minutes: publish the attack scripts and parameters and anyone can rerun them, which is harder evidence than any self-reported leaderboard. That also means reading this carefully: distinguish breaking competition candidates from breaking deployed standards (the company says the latter are unaffected), distinguish faster search from a new construction (the hundreds-to-tens-of-thousands factor needs a stated baseline), and ask whether attack artefacts are public — a record without artefacts is still a claim. For security evaluation teams, the transferable recipe is the pipeline: treat "find construction flaws" as a search problem, let the model propose candidate structures, then use engineering optimisation to turn theoretical attacks into executable ones. The same pipeline applies to protocol implementations, fuzzing and side-channel analysis.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23 08:10</span>
+          <a class="src" href="https://www.ithome.com/1/030/733.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Nadella concedes Claude Code displaced VS Code in six months: the next IDE is where you write the Markdown spec</h3>
+        <p>On November 23, <a href="https://www.ithome.com/1/030/733.htm" target="_blank" rel="noopener noreferrer">IT之家</a>, citing Windows Latest, reported that Microsoft CEO Satya Nadella acknowledged developers who say they have not opened VS Code for months: after Anthropic shipped Claude Code, traditional editors and IDEs lost their default status in roughly six months.</p>
+        <p>His post-mortem has two parts. On form factor: for more than a decade Microsoft worked to make VS Code the developer's default workbench, but Claude Code got developers to accept the command line — writing software shifted from input to output. Cursor built an agent mode on a VS Code fork and Microsoft followed quickly, but this time it could not keep up on model capability. His lesson: do not fall in love with what you built.</p>
+        <p>On what comes next: he thinks a new generation of decision models could revive the IDE, but its core will no longer be hand-writing code — it will be "writing a real Markdown spec". The adjustment is already visible in releases: VS Code 1.146 on November 11 added an agent inbox and model comparison, and 1.147 a week later added model routing, scheduled agent requests and browser integration.</p>
+        <p class="why"><b>看点</b>The real signal is not "VS Code is dying" but a shift in the abstraction layer: once a model can read the repo, edit files and run tests from a terminal, an editor's value moves from editing buffers to organising intent and reviewing results. "Write the Markdown spec" says it plainly — the specification becomes the source, code becomes the artefact, and review happens between the diff and the rationale. For developer-tool builders, the operational read is to move investment from better completion to better constraints and verification: turning requirements into executable specs, making every agent step revertible, and putting tests and type checks in front as gates. Those three outlive model generations; completion quality does not.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 19:44</span>
+          <a class="src" href="https://www.ithome.com/1/030/702.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Bilibili asks users how to govern a wave of AI agent accounts posting as characters</h3>
+        <p>On November 22, <a href="https://www.ithome.com/1/030/702.htm" target="_blank" rel="noopener noreferrer">IT之家</a> reported that Bilibili has seen a surge of AI agent accounts set up by enthusiasts — mostly named after characters such as "Big Fat Fish" and "Little Flying Whale", using DeepSeek mascot art as avatars — active across comment sections. The platform's official community account opened a consultation titled "What do you think of AI Big Fat Fish?" on November 20, collecting user views on AI accounts and related behaviour, and said it would act on the feedback.</p>
+        <p>The trend traces to an account called "Miss Claude is running this", whose topics, video production and daily operation are all handled by AI. After it drew attention, similar accounts appeared, including "DeepSeek Whale Girl is running this", whose first video passed 3 million views.</p>
+        <p>The platform chose consultation over an immediate ban, and the order is worth noting: AI persona accounts raise three separate questions at once — whether AI operation must be disclosed, whether comment-section interaction is authentic, and whether the avatar or IP is licensed. The first two are platform rules; the third can land in copyright and trademark.</p>
+        <p class="why"><b>看点</b>This is harder than "label AI-generated content": the content may be original, and the problem is who is speaking. When an account answers comments in a persona, users assume a human is on the other end; once a model replies, the deception happens at the interaction layer, not the content layer, where existing labelling rules do not reach. For platforms, the levers are disclosure and rate — require AI-run accounts to declare themselves, limit high-frequency automated replies in comment sections, and distinguish accounts impersonating real users. For agent product teams, the same story is a reminder to build "AI is speaking for you" into the interaction itself rather than hiding it in a bio.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 22:45</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/22/content_617358.html" target="_blank" rel="noopener noreferrer">科技日报 ↗</a>
+        </div>
+        <h3>Guangzhui Interaction unveils "Xiaowei": an 84-DOF bionic face with silicone electronic skin that feels touch</h3>
+        <p>On November 22, <a href="https://www.stdaily.com/web/gdxw/2026-11/22/content_617358.html" target="_blank" rel="noopener noreferrer">科技日报</a> reported that Huairou Science City hosted an embodied-AI ecosystem conference on November 21, where Beijing Guangzhui Interaction Technology launched "Xiaowei", a touch-interactive bionic emotional robot, along with a silicone electronic skin. The robot targets interaction within one metre.</p>
+        <p>Hardware: a hybrid drive scheme, cable-driven as the main mode with electric drive as auxiliary, and 84 degrees of freedom in the upper body. It reproduces lip opening, eversion and protrusion, and times body movement to speech. Touch is the focus — the team built flexible electrodes so the sensing layer conforms to irregular surfaces such as the face and shoulders without changing the silicone's softness or ability to deform. Wang Zhonglin, director of the Beijing Institute of Nanoenergy and Systems at the Chinese Academy of Sciences, said this is the first application of triboelectric nanogenerator (TENG) technology to a high-fidelity bionic face robot.</p>
+        <p>The team comes from institutions including the Chinese Academy of Sciences and Peking University, and used Huairou's resources to move from lab prototype to product. At the event the company signed strategic cooperation agreements with six firms including CSDN, Chaoneng Robotics and Lingda Intelligence, covering bionic interaction, software, communications and deployment scenarios.</p>
+        <p class="why"><b>看点</b>"Within one metre" is a smart cut: it sidesteps mobility and manipulation — the engineering-heavy, regulation-heavy parts — and puts resources into expression and touch for reception, companionship and display, where the context is predictable. The technically interesting part is the pairing of flexible electrodes with TENG: making a silicone face that expresses and feels is hard not because of the sensor but because the electrodes must stretch and spring back with the skin without changing its feel, which is what lets it be touched and squeezed without failing. Discount the claims accordingly: 84 degrees of freedom is mechanical capability, not interaction capability, and "emotion" on stage is scripted; in the field it depends on joint judgement across voice, vision and touch, for which no metrics were published. Watch three things: skin lifetime and consistency, heat and noise under continuous interaction, and whether any of the six partners brings real orders.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 22:00</span>
+          <a class="src" href="https://www.ithome.com/1/030/713.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>AI servers repriced by up to 45% before delivery as memory costs rise more than 400%</h3>
+        <p>On November 22, <a href="https://www.ithome.com/1/030/713.htm" target="_blank" rel="noopener noreferrer">IT之家</a>, citing the Financial Times, reported that as AI infrastructure costs pass downstream, data-centre equipment vendors have sharply raised prices on Nvidia-based AI servers months after contracts were signed, with Dell, HPE, Lenovo and Supermicro involved and increases reaching 45%.</p>
+        <p>Deals are typically struck long before delivery, but people familiar say vendors demanded far more than the agreed amount once the equipment was ready to ship. "When you are dealing with 25%, 30% or even 45% increases, it is unsettling," one person said, adding that there is a "huge gap" between the price fixed months earlier and what companies ultimately pay.</p>
+        <p>The cause is identified as memory: according to JPMorgan research, vendors are passing on memory costs that have risen more than 400% since early 2024. Among buyers, large financial services and trading firms are second only to hyperscalers in volume, and in a market where supply cannot keep up they have little choice but to accept vendor pricing.</p>
+        <p class="why"><b>看点</b>This matters more than "GPUs got expensive" because it changes the contract: buying servers used to be a fixed price plus a delivery window, and is becoming a reference price settled at delivery, shifting component-price risk to the buyer. For cluster budgets, three adjustments follow — put price-adjustment clauses (caps, index linkage, triggers) into contracts, tie payment milestones to acceptance criteria, and hedge or pre-buy memory separately. A procurement sheet that tracks GPU unit prices alone no longer works. The other side of the story: with GPUs and memory both rising and delivery slots tight, pricing power sits with the seller, and whoever secures delivery timing secures capacity.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 22:24</span>
+          <a class="src" href="https://www.ithome.com/1/030/715.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Oracle says OpenAI funding is fully raised: Abilene is already training GPT-6 Astra</h3>
+        <p>On November 22, <a href="https://www.ithome.com/1/030/715.htm" target="_blank" rel="noopener noreferrer">IT之家</a> reported that Oracle said on November 20 local time that it had raised all the funding needed to fulfil its deal with OpenAI earlier in the month, and that any further private discussions with suppliers are supplementary options only.</p>
+        <p>Project progress came with it: the campus in Abilene, Texas, is already training GPT-6 Astra and is close to completion; the next gigawatt-scale project, Shackelford, has all permits; Nvidia Vera Rubin racks are arriving on schedule and should be complete within weeks. Financially, Oracle still expects positive free cash flow in the second half of fiscal 2028 and targets more than $30 billion in fiscal 2029, after which it expects to fund growth from its own cash.</p>
+        <p>The wording is pointed at a specific worry: where the money for OpenAI's data centres comes from and whether delivery can stay on schedule. The answer is layered — financing secured, delivery on track, cash-flow inflection in FY2028 H2.</p>
+        <p class="why"><b>看点</b>The bottleneck in AI infrastructure is moving from "are there chips" to "who fronts the money for long-term contracts". Oracle separates three risks: financing (raised), delivery (racks on schedule, permits in hand) and return (more than $30 billion of free cash flow in FY2029). The third deserves the most scrutiny — it requires these campuses to run at high utilisation within two years, while GPU depreciation, power prices and utilisation all compress that number. For buyers, Abilene already training GPT-6 Astra is a useful signal that the largest training cluster is running real workloads rather than being a plan on paper; for investors, the test is whether the FY2028 H2 free-cash-flow promise lands.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 19:20</span>
+          <a class="src" href="https://www.ithome.com/1/030/698.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Ming-Chi Kuo: Google cuts about a million Broadcom-designed TPU 8i units for 2027, shifts to MediaTek 8t</h3>
+        <p>On November 22, <a href="https://www.ithome.com/1/030/698.htm" target="_blank" rel="noopener noreferrer">IT之家</a> reported that TF International analyst Ming-Chi Kuo said on X that his latest supply-chain survey shows Google cut about a million units from its 2027 Broadcom-designed TPU 8i line, mostly the higher-priced 8i Max (Whalefish), equal to roughly 20% of the series' 2027 shipments, while planning to increase MediaTek-designed TPU 8t volume, with details not yet fixed.</p>
+        <p>He attributes the shift to supply-chain tightness and data-centre power constraints: Google has stressed for months that frontier model development gets compute priority, and reweighting 8t versus 8i is an allocation made under those limits. Separately, South Korea's Chosun Biz reported that Google is separating AI chip design from memory procurement — no longer handing design, packaging and HBM purchasing entirely to Broadcom, but splitting some design work to MediaTek and buying HBM directly.</p>
+        <p>Both point the same way: with power and HBM scarce, the design–fabrication–memory chain is being re-cut so each segment can be negotiated and scheduled separately.</p>
+        <p class="why"><b>看点</b>For training planners, the lesson is that supply elasticity comes from supply-chain structure, not from one fab's capacity: within a single TPU family the 8t/8i mix can be reweighted, which means Google is managing power and memory constraints through product mix, while direct HBM purchasing turns the scarcest component from a bundled purchase into something it controls. The operational conclusion is to keep room for heterogeneous, multi-vendor capacity — a cluster planned around a single chip model concentrates delivery risk in whichever link is tightest. Note the sourcing: this is an analyst's survey, not a Google announcement, so the million units and 20% should be read as estimates.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 22, 08:01 and November 23, 09:03 (Beijing time): 9 stories. Compiled at 11/23 09:03.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 028 · 24h window · Generated 2026-11-23 09:03</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI Daily</a>
+        <a href="../../economy.html">Economic Daily</a>
+        <a href="../../education.html">Education Daily</a>
+        <a href="../../psychology.html">Psychology Daily</a>
+        <a href="../../tools.html">Tools</a>
+        <a href="../../wish.html">Wish</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="../../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

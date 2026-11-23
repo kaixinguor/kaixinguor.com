@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 22 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 23, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-23-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-23-en.html</guid>
+      <pubDate>Mon, 23 Nov 2026 01:00:00 GMT</pubDate>
+      <description>OpenAI&#39;s chief scientist has turned &quot;when to brake&quot; into a measurable quantity: a shared development limit keyed to perplexity, published alongside his own lab&#39;s numbers — GPT-3.5 at about 0.99, GPT-4 at about 0.91.The same day, an Anthropic mathematician pushed a second Millennium Problem into &quot;submitted, awaiting verification&quot;, MiniMax said its internal model now finds construction flaws in ciphers on its own, and Nadella conceded that Claude Code made VS Code lose its default status in six months — capability, verification and tooling rewriting each other&#39;s scorecards in the same week. OpenAI&#39;s chief scientist wants shared development limits set by perplexity: new capabilities below 0.8, more to come at 0.68–0.7</description>
+    </item>
     <item>
       <title>AI Daily · November 22, 2026</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-22-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-03-en.html</guid>
       <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today the story is the bill. Anthropic&#39;s amended S-1 reports $17 billion of quarterly revenue, a $567 million operating loss and, for the first time, $895.4 billion of purchase and lease commitments. In the same session Marvell agreed to buy Lumentum for $115 billion, Oracle moved to raise $20 billion and Korea lifted its 2027 AI budget to 21.3 trillion won. On the other side of the ledger, Goldman Sachs took coding agents away from its traders while MIT researchers edited model weights directly — no training, 0.016% of the parameters. The bills keep getting longer; the permissions keep getting shorter. Anthropic&#39;s amended S-1: $17 billion of quarterly revenue, a $567 million operating loss and $895.4 billion of compute commitments</description>
-    </item>
-    <item>
-      <title>AI Daily · November 2, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-02-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-02-en.html</guid>
-      <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Today’s thread runs through the ledger. Meituan bets 1.6 trillion parameters on long-horizon work, Cisco hands one engineer an unlimited token budget to rewrite 98% of its legacy code, and Delaware proposes a 30-month sandbox for agent-run companies. Meanwhile Hongqi Convenience spent 16 months and ¥2.87 million proving a robot still cannot run a store. Capability keeps moving; someone is starting to sign the bill. Meituan’s LongCat-2.5 packs 1.6T parameters for long-horizon agents</description>
     </item>
   </channel>
 </rss>

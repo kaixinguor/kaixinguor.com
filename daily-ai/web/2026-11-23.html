@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 23 日</title>
+<meta name="description" content="2026-11-23 AI 日报第 028 期：OpenAI 首席科学家提议按困惑度设行业共同开发门槛，公布 GPT-3.5 的 0.99 与 GPT-4 的 0.91；Anthropic 数学家与 NYU 教授声称证明三维 Navier–Stokes 有限时间爆破，79 页论文配 Lean 代码；MiniMax 称内部模型把多项理论攻击推到秒级；纳德拉承认 Claude Code 半年动摇 VS Code；B站就 AI 智能体账号征询治理意见；光锥交互发布 84 自由度仿生情感机器人「小唯」；Oracle 称已筹齐履行 OpenAI 合同所需资金；AI 服务器交付前涨价最高 45%；郭明錤称谷歌削减 2027 年 TPU 8i 约 100 万颗。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 23 日">
+<meta property="og:description" content="2026-11-23 AI 日报第 028 期：OpenAI 首席科学家提议按困惑度设行业共同开发门槛，公布 GPT-3.5 的 0.99 与 GPT-4 的 0.91；Anthropic 数学家与 NYU 教授声称证明三维 Navier–Stokes 有限时间爆破，79 页论文配 Lean 代码；MiniMax 称内部模型把多项理论攻击推到秒级；纳德拉承认 Claude Code 半年动摇 VS Code；B站就 AI 智能体账号征询治理意见；光锥交互发布 84 自由度仿生情感机器人「小唯」；Oracle 称已筹齐履行 OpenAI 合同所需资金；AI 服务器交付前涨价最高 45%；郭明錤称谷歌削减 2027 年 TPU 8i 约 100 万颗。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-23.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-22T08:01:00+08:00/2026-11-23T09:03:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-23.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-23.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-23-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI 日报</a>
+      <a href="../../economy.html">经济日报</a>
+      <a href="../../education.html">教育日报</a>
+      <a href="../../psychology.html">心理学日报</a>
+      <a href="../../tools.html">工具</a>
+      <a href="../../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-23-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 028 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 23 日<span class="weekday">MON</span></h1>
+    <p class="deck">OpenAI 的首席科学家把「何时该踩刹车」写成了一个可测量的指标：用困惑度给全行业划一道共同开发门槛，并且顺手公开了自家 GPT-3.5 的 0.99 与 GPT-4 的 0.91。<em>同一天，Anthropic 的数学家把第二道千禧难题推向「已提交待核验」，MiniMax 说内部模型已经能自动找出密码方案的构造缺陷，而纳德拉承认 Claude Code 只用半年就让 VS Code 失去了存在感——能力、验证与工具链，正在同一周里互相改写着对方的评分标准。</em></p>
+    <div class="metabar"><span class="pill">第 028 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/22 08:01 – 11/23 09:03</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 13 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#research"><span class="n">01</span>研究与安全</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#products"><span class="n">03</span>产品与智能体</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>OpenAI 首席科学家 Jakub Pachocki 提议全行业用困惑度设定共同开发门槛：在模型行为理解与监控达到具体里程碑（例如出现思维链监控器的后继者）之前，不突破约定阈值，并首次公开自家对数困惑度——GPT-3.5 约 0.99、GPT-4 约 0.91。</b>他给出三段经验值：低于 0.8 时出现网络安全与数学的新能力，约 0.76 时开始在开放数学问题上出成果，0.68 至 0.7 区间「预计还会有变革性能力，但不知道是什么」；并警告最早 2027 年可能出现预训练进展的加速，而对齐与监控跟不上。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>据金融时报报道，戴尔、慧与、联想、超微等服务器厂商在交付前把已签合同的价格上调，涨幅最高达 45%；摩根大通研究把原因指向内存成本——自 2024 年初以来上涨超过 400%。</b>买家是自建数据中心的企业，包括大型金融机构与交易公司；一位知情人士形容，签约时的参考价与最终支付额之间「存在巨大落差」。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>Anthropic 数学家 Levent Alpöge 与纽约大学教授 Tristan Buckmaster 于 11 月 20 日公布 79 页论文，声称构造出三维 Navier–Stokes 方程在无外力、保留黏性条件下的有限时间爆破反例，同时公开 Lean 形式化证明代码。</b>论文的 AI 声明写的是全程使用 Claude、未用其他模型，写作顺序是先有 Lean 证明再生成论文；陶哲轩认为大体策略已经清楚，但仍需整理成规范证明文本，独立核验尚未完成。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23 06:50</span>
+          <a class="src" href="https://www.ithome.com/1/030/720.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>OpenAI 首席科学家提议按困惑度设行业共同开发门槛：0.8 出现新能力，0.68–0.7 还有变革</h3>
+        <p>当地时间 11 月 22 日，OpenAI 首席科学家 Jakub Pachocki 发表《Perplexity and Intelligence》，主张把困惑度（或等价的交叉熵损失）确立为跨开发者可比的指标，并据此建立共享的安全标准。据<a href="https://www.ithome.com/1/030/720.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，他同时公开了 OpenAI 内部的对数困惑度：GPT-3.5 约 0.99、GPT-4 约 0.91。</p>
+        <p>三个阈值是他这篇<a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener noreferrer">原文</a>里最硬的部分：当损失降到 0.8 以下，OpenAI 观察到网络安全与数学领域出现「变革性能力」；约 0.76 时，模型开始在长期悬而未决的开放数学问题上接连给出成果；他预计进入 0.68 至 0.7 区间还会出现新能力，但明确说不知道是什么、今天的评测也未必覆盖。</p>
+        <p>制度设想是：前沿开发者共同建立评测、透明度与红队标准，在模型首次投入使用前完成安全评估；并以困惑度等可跨实验室追踪的指标设第一道开发门槛——在理解与监控能力达到具体里程碑（例如开发出思维链监控器的后继者）之前，承诺不越线。他也写了三条局限：各家数据集不同、数值难直接比较；困惑度不对应具体任务；思维链等预训练之外的进步不体现在这个指标上。OpenAI CEO 萨姆·奥尔特曼称这是公司一段时间以来最重要的内容之一。</p>
+        <p>政策环境正在变化：据美联社 11 月 22 日报道，民主党参议员约翰·希肯卢珀提议成立参议院 AI 特别委员会，克里斯·范霍伦表示支持；民主党计划在 2027 年 1 月取得国会多数后把 AI 列为优先议题，讨论数据中心监管、安全标准与第三方评估。</p>
+        <p class="why"><b>看点</b>这篇的价值不在「0.8 很危险」，而在它把「能力预测」换成了「预训练进度测量」：困惑度便宜、可复现、不需要跑一整套下游评测，所以能做成跨实验室的仪表盘。但仪表盘不等于刹车——它衡量的是压缩能力，不是危险能力；文中的 0.8／0.76 是回溯性的观察，不是因果阈值，把 0.68 当成倒计时会误读。真正可执行的是那句机制设计：门槛要配一个「越过之前必须交付什么」的清单（例如 CoT 监控的后继者），否则「共同限制」只是自愿承诺。对做模型的人，最实用的是自建一条对数困惑度曲线并与能力事件对齐——这条曲线比任何单一 benchmark 都更早给出信号，也更容易在团队内部达成一致。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 14:03</span>
+          <a class="src" href="https://www.qbitai.com/2026/11/511870.html" target="_blank" rel="noopener noreferrer">量子位 ↗</a>
+        </div>
+        <h3>第二道千禧难题被提交：79 页论文声称三维 Navier–Stokes 存在有限时间爆破，配 Lean 代码</h3>
+        <p>11 月 22 日，据<a href="https://www.qbitai.com/2026/11/511870.html" target="_blank" rel="noopener noreferrer">量子位</a>报道，Anthropic 数学家 Levent Alpöge 与纽约大学教授 Tristan Buckmaster 于 11 月 20 日公布一篇 79 页论文，声称证明了三维 Navier–Stokes 方程在无外力、保留黏性条件下的有限时间爆破，即存在一开始光滑、之后在有限时间内出现奇点的流动；结论同时覆盖普通三维空间与周期空间两种情形。</p>
+        <p>问题的分量在于：要否定「所有符合条件的流动都能永远保持光滑」，找到一个严格成立的反例就够了。两人并非首次做这类工作——今年 9 月他们已公布过有光滑外力的三维 Euler 方程爆破结果；这次的改动是去掉外力、保留黏性，而黏性会带来摩擦与能量耗散，证明要跨过的障碍因此完全不同。</p>
+        <p>AI 的使用被写进了论文声明：这项 NS 工作全程使用 Anthropic 的 Claude、未使用其他模型，Claude 参与了证明生成、Lean 形式化内容整理与论文重写；写作顺序是先有 Lean 形式化证明，再据此生成论文初稿，之后用已有标准结果替换冗长证明。初稿还用了 Scott Armstrong 的 Lean 转自然语言工具。陶哲轩给出的路线是：先用数值方法找到具自相似结构的近似流动，再用严格扰动理论证明附近存在真正满足方程的解。他同时表示，大体策略已经清楚，但仍需整理成规范、专业的证明文本。</p>
+        <p>同一个星期里还有反向的一幕：同日，数学家 Alessandro Maria Masullo 公布了一份花了近 12 年的黎曼猜想证明草稿，美国数学学会主席 Ravi Vakil 特别说明这份草稿没有使用 AI。</p>
+        <p class="why"><b>看点</b>把「AI 参与数学」拆成三层看更清楚：形式化（Lean 代码可机检）、自然语言论文（需要人读）、以及主张本身（需要独立核验）。这次三层都有，但只有第一层是机器可判定的——Lean 只保证「代码说的是它说的」，不保证命题选对了、也不保证形式化与论文的陈述一致。所以真正的验证成本转移到了「读那 79 页并对齐形式化陈述」上，这正是陶哲轩说的「还需规范文本」。对做 AI for math 的团队，可操作的结论是：把形式化与论文陈述的对照检查做成流程，而不是等审稿；对做评测的人，这件事提醒「模型能证明」与「社区接受证明」之间隔着几个月到几年。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 21:23</span>
+          <a class="src" href="https://www.ithome.com/1/030/711.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>MiniMax 称内部模型自动找出多处密码构造缺陷：理论攻击被推进到秒级，刷新分组密码破解轮数</h3>
+        <p>11 月 22 日，据<a href="https://www.ithome.com/1/030/711.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，MiniMax 宣布其研究团队用最新内部模型对现代密码方案做了系统性的自动化密码分析，发掘出多处此前未知的算法构造缺陷，并把多项原本停留在论文理论层面的攻击推进到秒级至分钟级的可执行破解。</p>
+        <p>成果分三块：针对历届 NIST 国际密码标准化竞赛，模型首次实际攻破多个此前「尚无已知实际攻击」的候选算法；针对近年发表于密码学顶会、顶刊的论文与竞赛优胜方案，实现了高效的密文伪造或密钥恢复，并刷新新型分组密码的最高破解轮数纪录；在求解公钥密码所依赖的经典数学困难问题时，把「挖掘隐含代数结构」与「系统级工程优化」结合，在国际公开挑战赛中首次攻克数十个尚无公开解的高阶实例，相比当前最优算法有数百至数万倍的实测加速。</p>
+        <p>官方同时划了边界：本次研究聚焦学术前沿方案、历史竞赛候选设计与公开参数挑战，相关发现不影响现行主流密码标准（AES、RSA、SHA-256 等）的安全性。</p>
+        <p class="why"><b>看点</b>密码分析是少数「结论可被第三方在几分钟内证伪」的 AI 能力展示：给出攻击脚本与参数，别人跑一遍就知道真假，这比任何自评榜单都硬。也正因如此，读这条要分清三件事——攻破的是竞赛候选还是已部署标准（官方说后者不受影响）、加速的是搜索还是构造（数百到数万倍的差距需要看基线）、以及结果是否公开可复现（没有攻击产物的「刷新纪录」只能算主张）。对做安全评测的人，这件事的意义是给出一条可复制的流程：把「找构造缺陷」当成搜索问题，用模型生成候选结构、再用工程优化把理论攻击压到可执行，这条流水线可以搬到协议实现、模糊测试和侧信道分析上。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23 08:10</span>
+          <a class="src" href="https://www.ithome.com/1/030/733.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>纳德拉承认 Claude Code 半年动摇 VS Code：未来 IDE 的核心是写 MD 说明文档</h3>
+        <p>11 月 23 日，据<a href="https://www.ithome.com/1/030/733.htm" target="_blank" rel="noopener noreferrer">IT之家</a>援引 Windows Latest 报道，微软 CEO 萨提亚·纳德拉在谈到开发者「已经好几个月没打开过 VS Code」时说，他完全了解这一现象：Anthropic 推出 Claude Code 后，VS Code 等传统代码编辑器与 IDE 大概六个月就失去了存在感。</p>
+        <p>他的复盘集中在两点。一是产品形态：过去十多年微软努力把 VS Code 做成开发者的默认工作台，而 Claude Code 让开发者真正接受了命令行形态——写程序从「输入」变成「输出」；Cursor 基于 VS Code 分支做出智能体模式后微软迅速跟进，但这次没能在模型能力上跟上。他给出的教训是「不要迷恋自己打造的东西」。</p>
+        <p>二是下一步：他认为随着微软推出新一代决策模型，IDE 有可能迎来一次复兴，但核心不再是手写程序，而是「写出真正的 MD 说明文档」。微软的调整已体现在版本里：11 月 11 日的 VS Code 1.146 加入智能体收件箱与模型对比，一周后的 1.147 加入模型路由、定时提交智能体请求与浏览器集成。</p>
+        <p class="why"><b>看点</b>这段话真正的信息不是「VS Code 要死」，而是界面抽象层的迁移：当模型能在终端里读仓库、改文件、跑测试，编辑器的价值就从「编辑缓冲区」变成「组织意图与审阅结果」。所谓「写 MD 说明文档」就是把这个变化说白——规格成为源文件，代码成为产物，评审发生在 diff 与说明之间。对做开发者工具的人，可操作的判断是：投资方向该从「更好的补全」转向「更好的约束与验证」——如何把需求写成模型可执行的规格、如何让 agent 的每一步可回滚、如何把测试与类型检查前置成门禁。这三件事不随模型换代而过时，而补全的质量会。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 19:44</span>
+          <a class="src" href="https://www.ithome.com/1/030/702.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>B站就「AI 大肥鱼」智能体账号泛滥发布问卷征集治理意见</h3>
+        <p>11 月 22 日，据<a href="https://www.ithome.com/1/030/702.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，B站近期出现大量由爱好者设置的 AI 智能体账号，以「大肥鱼」「小飞鲸」等昵称为主，使用 DeepSeek 鲸鱼娘等形象作头像，在评论区广泛活跃。B站官方账号「哔哩哔哩社区小管家」于 11 月 20 日发布《关于 AI「大肥鱼」你怎么看？》治理意见征询，向用户征集对 AI 账号及相关行为的意见，并表示将根据反馈推进后续治理。</p>
+        <p>这股风潮的起点是一个名为「Claude 大小姐在运营」的账号：选题、视频制作与日常运营均由 AI 完成；在引发关注后，平台陆续出现「DeepSeek 鲸鱼娘在运营」等同类账号，后者首条视频播放量超过 300 万次。</p>
+        <p>平台没有直接封禁，而是先做意见征询，这个顺序本身值得记：AI 人格账号同时涉及「是否披露由 AI 运营」「评论区互动的真实性」「头像与 IP 形象的使用授权」三类问题，前两类是平台规则，第三类可能落到著作权与商标。</p>
+        <p class="why"><b>看点</b>这是一个比「AI 生成内容要不要打标」更难的治理问题：内容本身可能是原创的，问题在于「谁在说话」。当账号以人格化口吻回复评论，用户默认的对话对象是人；一旦由模型代答，误导发生在交互层而不是内容层，现有的打标规则覆盖不到。对平台，可操作的抓手是披露与频次——要求 AI 运营账号显式声明、限制其在评论区的高频自动回复、并对冒充真实用户的账号做区分；对做智能体产品的团队，这条也是提醒：把「AI 在替你说话」的标识做进交互，而不是藏在简介里。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 22:45</span>
+          <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/22/content_617358.html" target="_blank" rel="noopener noreferrer">科技日报 ↗</a>
+        </div>
+        <h3>光锥交互发布仿生情感机器人「小唯」：84 个自由度，硅胶电子皮肤能感知触碰</h3>
+        <p>11 月 22 日，据<a href="https://www.stdaily.com/web/gdxw/2026-11/22/content_617358.html" target="_blank" rel="noopener noreferrer">科技日报</a>报道，11 月 21 日怀柔科学城举办具身智能创新发展研讨会暨光锥交互生态大会，北京光锥交互科技发布触觉交互型仿生情感机器人「小唯」及配套硅胶电子皮肤。该机器人聚焦「一米之内」的近距离人机交互。</p>
+        <p>硬件参数：采用线驱为主、电驱为辅的混合驱动方案，半身共 84 个运动自由度，可复刻唇部开合、外翻、前伸等表情，并同步语音节奏生成肢体动作。触觉是这次的重点——团队制备柔性电极，让传感层贴合面部、肩部等不规则曲面时不影响硅胶的柔软度与形变能力。中国科学院北京纳米能源与系统研究所所长王中林院士称，这实现了摩擦纳米发电（TENG）技术在高仿生人脸机器人上的首次应用。</p>
+        <p>团队来自中国科学院、北京大学等院校，依托怀柔科学城的资源完成从实验室原型到产品的迭代；会上光锥交互与 CSDN、超能机器人、灵嗒智能等六家企业签署战略合作协议，方向包括仿生交互、软件开发、通信服务与机器人应用场景。</p>
+        <p class="why"><b>看点</b>「一米之内」是个聪明的切口：它绕开了移动与操作这些工程难、监管重的部分，把资源压在表情与触觉上，做的是接待、陪伴、展示这类高确定性场景。技术上值得记的是柔性电极与 TENG 的组合——让一张会做表情的硅胶脸同时具备触觉，难点不在传感器本身，而在电极要跟着面皮反复拉伸回弹、还不能改变硅胶手感；这决定了它能被摸、被捏而不失效。要打折的是验证口径：84 个自由度是机械能力，不是交互能力；「情感」在演示里由脚本编排，真实场景里靠的是语音、视觉与触觉的联合判断，这部分没有公开指标。要跟的是三点：电子皮肤的寿命与一致性、连续交互下的发热与噪声、以及六家合作方里有没有真正的场景订单。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 22:00</span>
+          <a class="src" href="https://www.ithome.com/1/030/713.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>AI 服务器在交付前被提价，最高 45%：内存成本自 2024 年初涨超 400%</h3>
+        <p>11 月 22 日，据<a href="https://www.ithome.com/1/030/713.htm" target="_blank" rel="noopener noreferrer">IT之家</a>援引金融时报报道，随着 AI 基础设施成本向下游传导，销售数据中心设备的科技公司在合同签署数月后大幅上调搭载英伟达芯片的 AI 服务器价格，涉及戴尔、慧与、联想与超微电脑，涨幅最高达 45%。</p>
+        <p>这些交易通常在交付前很久就已达成，但据知情人士透露，当设备准备交付时，厂商要求的价格远高于最初商定的金额。一位知情人士说：「当你遇到 25%、30% 甚至 45% 的涨价时，确实令人不安。」他补充，提前数月敲定的初始价格与最终支付额之间「存在巨大落差」。</p>
+        <p>原因被指向内存：据摩根大通研究，此轮涨价主要是科技公司转嫁飙升的内存成本，自 2024 年初以来内存成本上涨超过 400%。买方中，大型金融服务与交易公司是仅次于超大规模云厂商的采购大户，在供不应求的当下也只能接受供应商的定价。</p>
+        <p class="why"><b>看点</b>这条比「GPU 涨价」更要紧，因为它改的是合同结构：过去买服务器是一口价加交付期，现在变成「参考价 + 交付时结算」，等于把组件价格波动转移给买方。对做集群预算的人，可操作的调整有三条——把价格调整条款（上限、指数挂钩、触发条件）写进合同，把交付里程碑与验收标准绑定，并为内存单独做一份对冲或提前锁量；只盯 GPU 单价的采购表已经不够用了。也要看到另一面：这轮涨价里 GPU 与内存在涨，而厂商的交付能力在紧，议价权在卖方，谁拿到交付时点谁就拿到产能。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 22:24</span>
+          <a class="src" href="https://www.ithome.com/1/030/715.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>Oracle 称已筹齐履行 OpenAI 合同所需资金：Abilene 园区已用于训练 GPT-6 Astra</h3>
+        <p>11 月 22 日，据<a href="https://www.ithome.com/1/030/715.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，Oracle 当地时间 11 月 20 日表示，企业已在本月初筹集到履行与 OpenAI 交易的全部所需资金，与供应商的进一步私下讨论仅为补充选项。</p>
+        <p>项目进度也一并披露：位于得克萨斯州 Abilene 的园区已用于 GPT-6 Astra 的训练，整体接近完工；下一个 GW 级项目 Shackelford 已获得所有许可；NVIDIA Vera Rubin 机架的交付正按计划进行，预计未来几周内完成。财务侧，Oracle 仍预计在 FY2028 下半年实现正自由现金流，目标是在 FY2029 实现超过 300 亿美元自由现金流，并预计从那时起能依靠自有资金支持增长。</p>
+        <p>这段表述的针对性很强：此前市场担心的是「Oracle 为 OpenAI 建的数据中心，钱从哪来、能不能按时交付」。公司这次给的答案分三层——融资已到位、交付在轨、现金流拐点在 FY2028 下半年。</p>
+        <p class="why"><b>看点</b>AI 基建的瓶颈正在从「有没有芯片」转到「谁为长期合同垫资」。Oracle 的回应把三个风险拆开：融资风险（已筹齐）、交付风险（机架按计划、许可到位）、回报风险（FY2029 超 300 亿美元自由现金流）。第三条最值得盯——它要求这批园区在两年后满负荷产生现金流，而 GPU 的折旧周期、电价与利用率都会压缩这个数。对采购方，Abilene 已用于训练 GPT-6 Astra 是个有用的信号：最大规模的训练集群已经在真实负载下运行，而不是纸面规划；对投资者，真正的检验点是 FY2028 下半年那个正现金流的承诺能不能兑现。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/22 19:20</span>
+          <a class="src" href="https://www.ithome.com/1/030/698.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>郭明錤：谷歌削减 2027 年博通设计的 TPU 8i 约 100 万颗，转向联发科 8t</h3>
+        <p>11 月 22 日，据<a href="https://www.ithome.com/1/030/698.htm" target="_blank" rel="noopener noreferrer">IT之家</a>报道，天风国际证券分析师郭明錤在 X 上称，最新产业调查显示谷歌削减了 2027 年由博通设计的 TPU 8i 系列共约 100 万颗，以单价较高的 8i Max（Whalefish）为主，约占该系列 2027 年出货量的 20%；同时预计增加由联发科设计的 TPU 8t 系列出货，但细节未定。</p>
+        <p>他把这次调整归因于供应链紧张与数据中心供电受限：谷歌近几个月反复强调前沿模型研发优先获得算力，8t 与 8i 出货比重的改变正是在这一约束下做的调配。另据韩国媒体 Chosun Biz，谷歌正把自研 AI 芯片的设计与内存采购拆开，不再把设计、封装与 HBM 采购全部交给博通，部分改由联发科分工设计，并直接采购 HBM。</p>
+        <p>两件事指向同一个方向：在电力与 HBM 都紧张的情况下，芯片的「设计—制造—内存」三段正在被重新切分，以便分别议价与调度。</p>
+        <p class="why"><b>看点</b>对做训练规划的人，这条的意义是「算力供给的弹性来自供应链结构，而不是单点产能」：同一个 TPU 家族里，8t 与 8i 的配比可以调，意味着谷歌在用产品组合应对供电与内存约束；直接采购 HBM 则意味着它把最紧缺的组件从「打包采购」变成「自己控货」。可操作结论是给训练计划留出「异构 + 多供应商」的余地：如果明年的集群按单一芯片型号做容量规划，交付风险会集中在最紧的那一环。需要说明的是，这是分析师调查而非谷歌公告，100 万颗与 20% 都应视为估算。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 22 日 08:01 至 11 月 23 日 09:03（北京时间）之间发布的报道，共 9 条。检索时间 11/23 09:03。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 028 · 24h window · Generated 2026-11-23 09:03</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI 日报</a>
+        <a href="../../economy.html">经济日报</a>
+        <a href="../../education.html">教育日报</a>
+        <a href="../../psychology.html">心理学日报</a>
+        <a href="../../tools.html">工具</a>
+        <a href="../../wish.html">许愿</a>
+        <a href="../../privacy.html">隐私</a>
+        <a href="../../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 22 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 23 日</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-23.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-23.html</guid>
+      <pubDate>Mon, 23 Nov 2026 01:00:00 GMT</pubDate>
+      <description>OpenAI 的首席科学家把「何时该踩刹车」写成了一个可测量的指标：用困惑度给全行业划一道共同开发门槛，并且顺手公开了自家 GPT-3.5 的 0.99 与 GPT-4 的 0.91。同一天，Anthropic 的数学家把第二道千禧难题推向「已提交待核验」，MiniMax 说内部模型已经能自动找出密码方案的构造缺陷，而纳德拉承认 Claude Code 只用半年就让 VS Code 失去了存在感——能力、验证与工具链，正在同一周里互相改写着对方的评分标准。 OpenAI 首席科学家提议按困惑度设行业共同开发门槛：0.8 出现新能力，0.68–0.7 还有变革</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 22 日</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-22.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-03.html</guid>
       <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是账单。Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，同时首次披露 8954 亿美元算力承诺。同一天，Marvell 以 1150 亿美元买下 Lumentum，甲骨文再融 200 亿美元，韩国把 2027 年 AI 预算提到 21.3 万亿韩元。另一端，高盛把 Claude Code 从交易员手里收回，MIT 的团队直接改写权重——不训练，只动 0.016% 的参数。算力账单越写越长，工具权限越收越紧。 Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元</description>
-    </item>
-    <item>
-      <title>AI 日报 · 2026 年 11 月 2 日</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-02.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-02.html</guid>
-      <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
-      <description>今天的主线是把智能体放进真实账本：美团用 1.6 万亿参数押长程任务，思科用不设上限的 Token 重写 98% 遗留代码， 特拉华州给「AI 公司」开 30 个月沙盒。另一边，红旗连锁用 16 个月和 286.68 万元证明：机器人还卖不了货。 能力在往前走，账单开始有人签。 美团龙猫发布 LongCat-2.5：1.6 万亿参数，主打长程智能体</description>
     </item>
   </channel>
 </rss>
