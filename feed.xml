@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 23 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 24 日</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-24.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-24.html</guid>
+      <pubDate>Tue, 24 Nov 2026 01:00:00 GMT</pubDate>
+      <description>智谱把「更深」换成了「更久」：GLM-5.4 让一组共享权重的网络层循环执行，在约 7500 亿参数的基座上宣称跑出 2 万亿至 3 万亿参数级的效果，而权重和 API 都还没放出来。同一天，商汤把「自我修正」塞进 8B 开源模型，Google 把钱包和云盘接进搜索，Anthropic 把企业数据的存储权交还给客户，OpenAI 与思科用一层运行时盾牌替掉「等补丁」的时间——而在市场那一侧，黄仁勋的回归一天就换回了 9520 亿美元市值。 智谱发布 GLM-5.4：共享权重层循环执行，7500 亿参数基座宣称达到 2 万亿至 3 万亿参数级</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 23 日</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-23.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-04.html</guid>
       <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「谁为算力付钱」。推理服务商 fal 以 160 亿美元估值融了 13 亿美元，年化收入刚过 8 亿——需求大到夏天要限流，毛利却薄。Grok Bot 的 80 万付费周活背后，马斯克承认服务成本「相对收入不可持续」，配额悄悄下调；AMD 数据中心收入 85.46 亿美元、接近翻倍，四季度指引 170 亿美元。另一端，苹果把国行 Apple 智能的一部分交给千问，Google 把搜索和 Gemini 绑成同一个开关：关掉 AI，搜索也一起关。算力越来越贵，入口越来越紧。 推理服务商 fal 以 160 亿美元估值融资 13 亿美元，年化收入刚过 8 亿美元</description>
-    </item>
-    <item>
-      <title>AI 日报 · 2026 年 11 月 3 日</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-03.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-03.html</guid>
-      <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
-      <description>今天的主线是账单。Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，同时首次披露 8954 亿美元算力承诺。同一天，Marvell 以 1150 亿美元买下 Lumentum，甲骨文再融 200 亿美元，韩国把 2027 年 AI 预算提到 21.3 万亿韩元。另一端，高盛把 Claude Code 从交易员手里收回，MIT 的团队直接改写权重——不训练，只动 0.016% 的参数。算力账单越写越长，工具权限越收越紧。 Anthropic 修订招股书：三季度营收 170 亿美元，经营亏损 5.67 亿美元，算力承诺 8954 亿美元</description>
     </item>
   </channel>
 </rss>

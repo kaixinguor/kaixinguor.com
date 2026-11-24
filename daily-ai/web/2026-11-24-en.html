@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 24, 2026</title>
+<meta name="description" content="AI Daily Issue 029, November 24, 2026: Zhipu releases GLM-5.4, the first Loop Transformer that runs a set of shared-weight layers in a loop and claims 2–3T-class capability from a 750B base; SenseTime open-sources SenseNova U1.6, an 8B model with native image self-correction; Google brings Wallet into Search AI Mode with Drive and Gemini to follow; Anthropic&#39;s EFS enters beta with customer-held data and keys; OpenAI and Cisco open-source Shirudo to block exploits with eBPF before patches land; CertiK and Columbia verify production GPU kernels with TensorLean and find bugs in 44.3% of compiled instances; Octopus Dynamics raises another nine-figure sum for a dexterous-hand line; Jensen Huang is reinstated and Nvidia adds $952 billion in a day; Oregon and Virginia sue xAI over Grok.">
+<meta property="og:title" content="AI Daily · November 24, 2026">
+<meta property="og:description" content="AI Daily Issue 029, November 24, 2026: Zhipu releases GLM-5.4, the first Loop Transformer that runs a set of shared-weight layers in a loop and claims 2–3T-class capability from a 750B base; SenseTime open-sources SenseNova U1.6, an 8B model with native image self-correction; Google brings Wallet into Search AI Mode with Drive and Gemini to follow; Anthropic&#39;s EFS enters beta with customer-held data and keys; OpenAI and Cisco open-source Shirudo to block exploits with eBPF before patches land; CertiK and Columbia verify production GPU kernels with TensorLean and find bugs in 44.3% of compiled instances; Octopus Dynamics raises another nine-figure sum for a dexterous-hand line; Jensen Huang is reinstated and Nvidia adds $952 billion in a day; Oregon and Virginia sue xAI over Grok.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-24-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-23T09:03:00+08:00/2026-11-24T16:00:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-24-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-24.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-24-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI Daily</a>
+      <a href="../../economy.html">Economic Daily</a>
+      <a href="../../education.html">Education Daily</a>
+      <a href="../../psychology.html">Psychology Daily</a>
+      <a href="../../tools.html">Tools</a>
+      <a href="../../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-24.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 029</span>
+    </div>
+    <h1 class="date">November 24, 2026<span class="weekday">TUE</span></h1>
+    <p class="deck">Zhipu trades depth for time: GLM-5.4 runs one set of shared-weight layers in a loop and claims 2–3T-class capability from a 750-billion-parameter base — with neither the weights nor the API out the door yet.<em>The same day, SenseTime puts self-correction inside an 8B open model, Google plugs Wallet and Drive into Search, Anthropic hands storage and keys back to the customer, and OpenAI and Cisco replace "wait for the patch" with a runtime shield — while on the market side, Jensen Huang's return bought back $952 billion of market value in a single session.</em></p>
+    <div class="metabar"><span class="pill">Issue 029</span>
+      <span class="dot"></span>
+      <span>Window Nov 23, 09:03 – Nov 24, 16:00</span>
+      <span class="dot"></span>
+      <span>9 stories</span>
+      <span class="dot"></span>
+      <span>14 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>On the evening of November 23, Zhipu released GLM-5.4, the first model in its line to use a Loop Transformer: a set of shared-weight layers executed repeatedly so the model can keep reasoning over and revising its own intermediate results, gaining depth without gaining parameters.</b> Zhipu says it is built on a roughly 750-billion-parameter base and reaches the level of 2–3 trillion-parameter models; it is live for all GLM Coding Plan users, the API awaits a safety review, and the weights are slated for release later.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Nvidia's board unanimously reinstated Jensen Huang as president, CEO and a director on November 23, effective immediately, saying it had received input from senior levels of the U.S. government and was confident the reinstatement "poses no national security risk."</b> The stock closed up about 31% and market value rose by a record $952 billion to $3.97 trillion; the Philadelphia Semiconductor Index gained 14%, its best day since 2025.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>OpenAI and Cisco released Shirudo, an open-source runtime that blocks exploit paths while a patch is still pending and the system cannot be restarted — the agent writes the mitigation itself, as an eBPF program or Java bytecode.</b> In the demo, bytecode an agent generated for OpenJDK's Java4Shell flaw attached to a running Elasticsearch 9.5.5 and the exploit failed.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23 20:02</span>
+          <a class="src" href="https://www.cnstock.com/commonDetail/832288" target="_blank" rel="noopener noreferrer">Shanghai Securities News ↗</a>
+        </div>
+        <h3>Zhipu releases GLM-5.4: looping shared weights, a 750B base and a claim of 2–3T-class capability</h3>
+        <p>On the evening of November 23, Zhipu released GLM-5.4, its new flagship, built on a Loop Transformer architecture: one set of shared-weight layers executed repeatedly so the model can keep reasoning over and revising results it has already computed. Zhipu's framing is depth without width — the parameter count stays put while the effective depth of computation grows.</p>
+        <p>The company says GLM-5.4 is built on a base of roughly 750 billion parameters and reaches the capability level of models in the 2–3 trillion range. It also strengthens coding, long-horizon reasoning and vision, and pushes code beyond software into video rendering, 3D scene construction, and robot-arm modelling and motion simulation — what Zhipu calls "generalised coding". The model is already available to all GLM Coding Plan users and wired into ZCode, Trae and WorkBuddy; the API opens after a safety review, and the weights are planned for open release later.</p>
+        <p>The compute underneath is domestic. According to JPMorgan research reported by <a href="https://cj.sina.com.cn/articles/view/1905628462/7195952e01901s1jx" target="_blank" rel="noopener noreferrer">Shanghai Securities News</a>, Zhipu already runs inference at scale on roughly 100,000 domestic accelerators, and the gross margin on inference for GLM-5.3-Flash on domestic chips has turned positive. The Liming intelligent-computing centre in Pudong, Shanghai — built mainly for Zhipu and its peers — was essentially completed on November 17, a 10,000-card cluster with a predominantly domestic mix, the first in northern Pudong.</p>
+        <p>There are capital-markets moves alongside. Zhipu has said it may buy back up to HK$4 billion of shares, capped at 1% of the issued total. On November 20, Hang Seng Indexes said it would add Zhipu to the Hang Seng China Enterprises Index, effective December 7. JPMorgan says management expects a next flagship of about 3 trillion parameters in Q4 — roughly four times the current base — and the bank expects a launch around December.</p>
+        <p class="why"><b>Why it matters</b>In engineering terms, the loop buys capability with inference time: the same weights run more rounds, parameters and weight memory stay flat, but FLOPs per token and latency rise roughly linearly with the number of iterations. Three numbers decide what this is worth — whether the iteration count is fixed in training or tunable at inference, the marginal return of each extra round, and the basis for "2–3T-class", which is Zhipu's own assessment, not a third-party benchmark. Reproducibility is still one step away: no weights, no API, so you can only touch it through the Coding Plan product surface, and the failure modes a system card would list cannot yet be tested.<br><b>The other angle</b>100,000 domestic accelerators, positive inference gross margin and a December index inclusion turn "can this run at positive margin on domestic silicon" into part of the valuation story: for buyers, that is the difference between domestic cards as a fallback and as the cheaper default.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/24 12:57</span>
+          <a class="src" href="https://stcn.com/article/detail/4349992.html" target="_blank" rel="noopener noreferrer">Securities Times ↗</a>
+        </div>
+        <h3>SenseTime open-sources SenseNova U1.6: an 8B model that checks and fixes its own images, 86.04 to 92.28 on dense infographics</h3>
+        <p>On November 24, SenseTime released and open-sourced SenseNova U1.6, a native multimodal model that continues the U series' unified understanding-and-generation approach. It is the first 8B open model in the line to get native image self-correction: with the feature on, the same model drafts an image, checks it against the original prompt, and generates a corrected version based on the text problems it finds.</p>
+        <p>The work this round is concentrated in type and layout — perspective text, artistic lettering, unusual glyphs and handwriting — plus an aesthetics model for infographics that reasons about text placement, with the goal of producing a complete text-and-image poster in a single pass rather than generating a picture and then calling a second model to fix the words.</p>
+        <p>The numbers come from SenseTime's internal evaluations: U1.6 Lite scores about 10% higher on aesthetics than U1.5 Lite, and on the UltraTextBench dense-infographic test it rises from 86.04 in a single pass to 92.28 with self-correction enabled, a relative gain of about 7% (reported by <a href="https://www.163.com/dy/article/LCGJ6B2P0511B8LM.html" target="_blank" rel="noopener noreferrer">ITHome</a>). The weights are open and the model is on ComfyUI; it can also be used through SenseTime's Xiaohuanxiong, Seko, Kapi Camera, SenseNova Token Plan and SenseNova Studio.</p>
+        <p class="why"><b>Why it matters</b>Self-correction is really a rewrite of the pipeline: "generate" becomes "generate, inspect, rewrite", roughly doubling compute to buy about seven points of text accuracy. It is the smallest working instance of test-time compute on an image task. What makes it worth noting is the marginal cost — an 8B model fits inside a ComfyUI workflow, which means the checker does not need a larger judge model sitting next to it. Mind the basis: 92.28 and the 10% gain are vendor self-reports on a test set the vendor chose, so the figure cannot be lined up against other models directly.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" target="_blank" rel="noopener noreferrer">Google ↗</a>
+        </div>
+        <h3>Google brings Wallet into Search AI Mode, with Drive and Gemini next and a label for personal-data answers</h3>
+        <p>On November 23, Google said it is connecting Google Wallet to Personal Intelligence in AI Mode: Search can read the accounts already in Wallet to map financial milestones, find ways to trim spending and get more out of credit-card benefits — but it cannot move, manage or invest money.</p>
+        <p>Drive and Gemini are coming in the following weeks. Drive gives Search access to documents, spreadsheets and PDFs; the Gemini connection lets the Gemini app and AI Mode share context, so an idea explored in Gemini does not have to be rebuilt from scratch in Search. AI Mode could already connect to Gmail, Calendar and Photos.</p>
+        <p>Answers that draw on personal data will soon carry a "Personalization" icon showing which context was used, and AI Overviews and AI Mode will start reflecting recent search context. Connecting apps is optional and off by default; it is managed under Search Personalization.</p>
+        <p class="why"><b>Why it matters</b>For anyone building retrieval, this is an expansion of where context comes from: the RAG story used to be about crawling the web, and now there is a private corpus only the platform owns — mail, calendar, photos, payment history, cloud documents. That is both a moat and a constraint: read-only, opt-in and revocable splits "may it read" from "what may it do with what it read", and the disclosure icon is how Google shows which layer was used.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards" target="_blank" rel="noopener noreferrer">Anthropic ↗</a>
+        </div>
+        <h3>Anthropic's EFS enters beta: enterprise data stays in the customer's cloud, misuse alerts go straight to their security team</h3>
+        <p>On November 23, Anthropic said Enterprise Frontier Safeguards (EFS) is in beta, pairing zero data retention (ZDR) with misuse detection by putting the data in cloud infrastructure the customer controls rather than on Anthropic's servers.</p>
+        <p>Three controls can be switched on separately: customer-owned storage (Amazon S3, Azure Blob Storage, Google Cloud Storage), customer-managed encryption keys and access policies, and fully automated review. Monitoring analyses a rolling window of traffic for signals such as attempts to develop offensive cyber or biological capability, or stolen and leaked credentials; when something trips, the alert goes to the customer's own security team and no Anthropic employee needs to read the data. None of it changes model behaviour, API pricing or rate limits. Anthropic does not charge for EFS, though storage, reads, writes and egress in the customer's cloud account are billed by the cloud provider as usual.</p>
+        <p>EFS was built with more than 100 customers, spanning a quarter of the Fortune 100 and every U.S. global systemically important bank; Bridgewater, Salesforce and Stripe took part in the private beta. It is supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google's Agent Platform and Microsoft Foundry.</p>
+        <p>The backdrop is the 30-day retention policy that began with Fable 5: correlating abuse across sessions and accounts needs data kept for a meaningful period, and regulated industries kept failing on exactly that clause. EFS does not remove retention. It moves the storage from the vendor to the customer.</p>
+        <p class="why"><b>Why it matters</b>This is an architectural concession. Safety monitoring needs to see behaviour across many sessions; compliance says the data may not sit with the vendor; the only way to have both is to run the detection inside the customer's environment and leave the raw data in the customer's bucket. For buyers, it unlocks the workloads that could not clear review before — privileged legal material at law firms, non-public safety reports at drugmakers. For the vendor, the price is losing final control over where the data lives, in exchange for customers who would otherwise never have bought at all.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://openai.com/index/introducing-shirudo/" target="_blank" rel="noopener noreferrer">OpenAI ↗</a>
+        </div>
+        <h3>OpenAI and Cisco open-source Shirudo: agents write eBPF and bytecode to block exploits before the patch</h3>
+        <p>On November 23, OpenAI and Cisco released Shirudo, an open-source runtime defence platform that blocks an exploit path while a patch is still pending and the system cannot be restarted.</p>
+        <p>It descends from Tetragon, the eBPF security project Isovalent open-sourced in 2022, but is rewritten for the agentic era: instead of forcing an agent to express intent in a policy language designed for humans, it lets the agent write code. The agent gathers vulnerability information, builds and validates a proof of concept, picks the most effective injection point — kernel eBPF or Java bytecode — packages the mitigation as a signed .bee bundle, ships it through an OCI registry, and the target loads it after verifying the signature against a TPM.</p>
+        <p>The demonstration is OpenJDK's Java4Shell flaw: bytecode the agent generated adds validation at the Base64 decode entry point, attaches to a running Elasticsearch 9.5.5, and the exploit fails, leaving a "Base64 guard installed" line in the log. The project is on GitHub at shirudo-dev/shirudo.</p>
+        <p class="why"><b>Why it matters</b>The interesting part is not another security product but the choice of interface: letting an agent emit verifiable machine-level code fits what it is good at far better than filling in a policy form, while the eBPF verifier and the TPM measurement chain supply the "it can't blow up even with a free hand" boundary. The thing to watch is the failure mode — a generated mitigation with side effects could take the application down along with the attacker, which is why the demo stops at a single Elasticsearch instance.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23 10:46</span>
+          <a class="src" href="https://www.163.com/dy/article/LCDOE4Q30511AQHO.html" target="_blank" rel="noopener noreferrer">Synced ↗</a>
+        </div>
+        <h3>TensorLean verifies GPU kernels at the PTX level: 66 of 149 compiled instances had defects, 44.3%</h3>
+        <p>On November 20, researchers from CertiK and Columbia University unveiled TensorLean, the first end-to-end formal verification of production AI operators at the level of compiled PTX, handling dynamic work distribution, asynchronous data movement and floating-point error in one framework.</p>
+        <p>The team evaluated 149 compiled GPU-kernel instances: 83 passed their Lean specifications on the first attempt, and the remaining 66 — 44.3% of the sample — turned up defects. Across six libraries they found 38 correctness problems, 2 in DeepSeek's DeepGEMM and 23 in FlashAttention. All were fixed and reported to the developers.</p>
+        <p>Three things carry the result. Verification runs on compiled PTX rather than source, so bugs introduced by the compiler's translation are in scope. A roughly 1,800-line parser turns PTX into something Lean can reason about. Threads are grouped by role and only one representative per group is analysed, with a happens-before graph used to prove the absence of data races and deadlocks, covering every schedule at once. Floating point is handled in two steps: prove the ideal real-valued result meets the mathematical spec, then bound the rounding error between the ideal and the actual output.</p>
+        <p>Specification cost falls to about 15:1 — 72 open-source kernels totalling 151,285 lines of source are described by 10,278 lines of spec. FlashAttention 2 through 4, with 37 source kernels, 102 compiled instances and 55,910 lines, is covered by 6,242 lines of spec; 27 DeepSeek-related kernels were verified too. On an H100 the team ran a related test 17,760 times and never once hit the concurrency bug TensorLean identified.</p>
+        <p class="why"><b>Why it matters</b>It swaps "test coverage" for coverage of a proof: tests sample inputs, a proof covers every input and schedule inside the specification. The practical part for a training team is that it can be re-run as the code moves — change the data layout, switch precision, retune the thread count, then verify again, reusing the spec if it has not changed. That is exactly the class of edit that GPU-kernel optimisation does most often. The open question is the spec itself: if spec_math is wrong, the proof only guarantees that the code matches the algorithm you thought you wrote.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/24 11:18</span>
+          <a class="src" href="https://fund.eastmoney.com/a/202611243938301937.html" target="_blank" rel="noopener noreferrer">STAR Market Daily ↗</a>
+        </div>
+        <h3>Octopus Dynamics raises another nine-figure sum this year, with Midea Capital joining, to build a dexterous-hand line</h3>
+        <p>On November 24, embodied-AI company Octopus Dynamics said it has raised another several hundred million yuan this year. New investors include industrial capital from Xindongneng and Midea Capital, with Linear Capital, Xiaomi and Panga Capital increasing their positions.</p>
+        <p>The money goes to a dexterous-hand production line and to embodied-model research, supporting a co-design across brain, hand and data that the company calls a self-evolving productivity flywheel.</p>
+        <p>The company says it has secured mass-production orders overseas and positions itself as general infrastructure for physical AI.</p>
+        <p class="why"><b>Why it matters</b>The hand line is the hardest destination in that budget. The bottleneck in embodied AI is shifting from models to actuators and calibration: whoever gets yield, consistency and cost right on the hand is the one who can actually take volume orders. Industrial capital from Midea and Xiaomi brings more than money — it brings manufacturing capacity and ready-made settings from appliance and phone supply chains, which shortens the distance from demo to line more than a financial cheque does.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-22">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://tass.com/economy/2223479" target="_blank" rel="noopener noreferrer">TASS ↗</a>
+        </div>
+        <h3>Jensen Huang reinstated as Nvidia CEO after the board hears from the U.S. government; $952 billion added in a day</h3>
+        <p>On November 23, Nvidia's board unanimously reinstated Jensen Huang as president, chief executive and a director, effective immediately. In a statement the company said the board had received input from senior levels of the U.S. government during its deliberations and was confident the reinstatement "poses no national security risk".</p>
+        <p>Huang stepped down as CEO and from the board on November 12 over his relationship with a woman suspected of spying for China; China's foreign ministry called the allegation slander. Last week President Trump publicly urged the company to give Huang a second chance.</p>
+        <p>The market repricing took a single session. Per TASS, the stock closed up about 31% at $165.36, adding a record $952 billion of market value to reach $3.97 trillion and returning to the top three globally; the Philadelphia Semiconductor Index rose 14%, its biggest one-day gain since 2025 (<a href="https://xinwen.bjd.com.cn/content/s6b04e020e4b0e42f8f0346b3.html" target="_blank" rel="noopener noreferrer">Beijing Daily</a>). Forbes put Huang's personal net worth up nearly $34 billion on the day.</p>
+        <p>Reinstatement is not the end of it: Huang still has to appear before Congress over the investigation, which continues.</p>
+        <p class="why"><b>Why it matters</b>For the compute supply chain the question is production scheduling, not the share price. The two-week slide came from governance and investigation risk; what customers are waiting on is whether Vera Rubin racks ship on time — Oracle says within weeks — and what export controls do next. Writing "input from the government" into the statement is an admission that the CEO's eligibility has become a variable requiring regulatory sign-off, and that will colour every compute contract tied to public procurement or export licences.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://www.doj.state.or.us/media-home/news-media-releases/ag-rayfield-takes-legal-action-against-grok-for-failing-to-block-child-exploitation/" target="_blank" rel="noopener noreferrer">Oregon Department of Justice ↗</a>
+        </div>
+        <h3>Oregon and Virginia sue xAI: Grok accused of failing to block sexualised images of children, with a 3-million-image estimate</h3>
+        <p>On November 23, Oregon Attorney General Dan Rayfield and Virginia Attorney General Jay Jones each sued the operators of Grok and X, alleging the companies marketed the products as safe while failing to stop Grok from generating sexualised images of people without consent, including child sexual abuse material.</p>
+        <p>The filings say xAI knew its image and video generation would be used for CSAM and non-consensual intimate imagery, yet weakened industry-standard safeguards and promoted "spicy mode", a setting that specifically allowed nude and otherwise sexualised output.</p>
+        <p>The suits cite figures from the Center for Countering Digital Harm: between December 29, 2025 and January 8, 2026, Grok generated and posted roughly three million sexualised images on X, about 23,000 of which appeared to depict children — around 190 sexualised images a minute, and one sexualised image of a child roughly every 41 seconds. Nearly 30% of the child images identified in the study were still publicly reachable a week or more later, and some "removed" material remained available through other URLs.</p>
+        <p>Oregon filed in Multnomah County Circuit Court; Virginia filed in the Circuit Court for the City of Richmond.</p>
+        <p class="why"><b>Why it matters</b>The case turns on whether a design choice counts as a failure to act. The plaintiffs do not blame model outputs; they point at spicy mode, the weakened safeguards and the gap between those and the public assurances — product decisions, not emergent behaviour. For anyone shipping generative models it draws a concrete line: a default-available "downgraded mode" that systematically strips consent and age guardrails will be treated as knowledge, not accident.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 23, 09:03 and November 24, 16:00 (Beijing time): 9 stories. Compiled at 11/24 16:00.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 029 · 24h window · Generated 2026-11-24 16:00</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI Daily</a>
+        <a href="../../economy.html">Economic Daily</a>
+        <a href="../../education.html">Education Daily</a>
+        <a href="../../psychology.html">Psychology Daily</a>
+        <a href="../../tools.html">Tools</a>
+        <a href="../../wish.html">Wish</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="../../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 24 日</title>
+<meta name="description" content="2026-11-24 AI 日报第 029 期：智谱发布 GLM-5.4，首次用 Loop Transformer 让共享权重层循环执行，7500 亿参数基座宣称达到 2 万亿至 3 万亿参数级；商汤开源 SenseNova U1.6，8B 模型首次带来原生图像自修正；Google 把 Wallet 接进搜索 AI Mode，Drive 与 Gemini 随后；Anthropic 的 EFS 进入 beta，企业数据存在自己的云账户里；OpenAI 与思科开源 Shirudo，用 eBPF 在补丁之前堵住漏洞；CertiK 与哥大用 TensorLean 验证 GPU 内核，44.3% 的编译实例查出缺陷；章鱼动力再融数亿元建灵巧手产线；黄仁勋复职，英伟达一日市值增加 9520 亿美元；俄勒冈与弗吉尼亚起诉 xAI 的 Grok。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 24 日">
+<meta property="og:description" content="2026-11-24 AI 日报第 029 期：智谱发布 GLM-5.4，首次用 Loop Transformer 让共享权重层循环执行，7500 亿参数基座宣称达到 2 万亿至 3 万亿参数级；商汤开源 SenseNova U1.6，8B 模型首次带来原生图像自修正；Google 把 Wallet 接进搜索 AI Mode，Drive 与 Gemini 随后；Anthropic 的 EFS 进入 beta，企业数据存在自己的云账户里；OpenAI 与思科开源 Shirudo，用 eBPF 在补丁之前堵住漏洞；CertiK 与哥大用 TensorLean 验证 GPU 内核，44.3% 的编译实例查出缺陷；章鱼动力再融数亿元建灵巧手产线；黄仁勋复职，英伟达一日市值增加 9520 亿美元；俄勒冈与弗吉尼亚起诉 xAI 的 Grok。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-24.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-23T09:03:00+08:00/2026-11-24T16:00:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-24.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-24.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-24-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI 日报</a>
+      <a href="../../economy.html">经济日报</a>
+      <a href="../../education.html">教育日报</a>
+      <a href="../../psychology.html">心理学日报</a>
+      <a href="../../tools.html">工具</a>
+      <a href="../../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-24-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 029 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 24 日<span class="weekday">TUE</span></h1>
+    <p class="deck">智谱把「更深」换成了「更久」：GLM-5.4 让一组共享权重的网络层循环执行，在约 7500 亿参数的基座上宣称跑出 2 万亿至 3 万亿参数级的效果，而权重和 API 都还没放出来。<em>同一天，商汤把「自我修正」塞进 8B 开源模型，Google 把钱包和云盘接进搜索，Anthropic 把企业数据的存储权交还给客户，OpenAI 与思科用一层运行时盾牌替掉「等补丁」的时间——而在市场那一侧，黄仁勋的回归一天就换回了 9520 亿美元市值。</em></p>
+    <div class="metabar"><span class="pill">第 029 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/23 09:03 – 11/24 16:00</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 14 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#models"><span class="n">01</span>模型与能力</a>
+        <a href="#products"><span class="n">02</span>产品与智能体</a>
+        <a href="#research"><span class="n">03</span>研究与安全</a>
+        <a href="#embodied"><span class="n">04</span>具身智能</a>
+        <a href="#capital"><span class="n">05</span>行业与资本</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>11 月 23 日晚，智谱发布旗舰模型 GLM-5.4，首次采用 Loop Transformer：一组共享权重的网络层循环执行，让模型在已有结果上继续推演、修正，参数量不变而计算深度增加。</b>官方称它基于约 7500 亿参数基座，智能水平可达 2 万亿至 3 万亿参数级模型的效果；已向 GLM Coding Plan 全量用户开放，API 待安全评估后开放，权重计划后续开源。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>英伟达董事会于 11 月 23 日一致同意恢复黄仁勋的总裁、CEO 与董事职务，立即生效，并称在听取美国联邦政府高层意见后确信此举「不构成国家安全风险」。</b>当日股价收涨约 31%，市值单日增加创纪录的 9520 亿美元、达到 3.97 万亿美元；费城半导体指数涨 14%，为 2025 年以来最大单日涨幅。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>OpenAI 与思科发布开源运行时防护平台 Shirudo：在补丁尚未发布、系统不能重启的窗口里，由智能体自己写 eBPF 程序或 Java 字节码，把漏洞的利用路径先堵住。</b>演示中，智能体为 OpenJDK 的 Java4Shell 生成的缓解字节码在运行中的 Elasticsearch 9.5.5 上生效，攻击未成功。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23 20:02</span>
+          <a class="src" href="https://www.cnstock.com/commonDetail/832288" target="_blank" rel="noopener noreferrer">上海证券报·中国证券网 ↗</a>
+        </div>
+        <h3>智谱发布 GLM-5.4：共享权重层循环执行，7500 亿参数基座宣称达到 2 万亿至 3 万亿参数级</h3>
+        <p>11 月 23 日晚，智谱发布新一代旗舰模型 GLM-5.4，首次采用 Loop Transformer 架构：一组共享权重的网络层循环执行，让模型在已有的计算结果上继续推演、修正。智谱称，这相当于在不增加参数量的前提下获得更深的网络——参数规模不动，计算深度增加。</p>
+        <p>官方口径是，GLM-5.4 基于约 7500 亿参数的基座，智能水平可达到 2 万亿至 3 万亿参数级模型的效果。它同时增强了编程、长程推理与视觉能力，并把代码的用途从软件开发延伸到视频画面渲染、3D 场景构建、机械臂建模与动作仿真，智谱称之为「泛 Coding」。模型已向 GLM Coding Plan 全量用户开放，接入 ZCode、Trae、WorkBuddy 等平台；API 要等安全评估完成后开放，模型权重也计划后续开源。</p>
+        <p>支撑它的是国产算力。据摩根大通研报（<a href="https://cj.sina.com.cn/articles/view/1905628462/7195952e01901s1jx" target="_blank" rel="noopener noreferrer">上海证券报</a>报道），智谱已实现 10 万卡级国产芯片规模化推理，GLM-5.3-Flash 在国产芯片上的推理毛利率已转正；11 月 17 日，主要服务智谱等大模型企业的上海浦东黎明智算中心基本落成，采用以国产算力为主的混合配置，是浦东北片区首个万卡级集群。</p>
+        <p>资本市场同步有动作：智谱此前公告拟回购不超过 40 亿港元，回购股份数量不超过已发行总股数的 1%；11 月 20 日，恒生指数公司宣布将其纳入恒生中国企业指数，12 月 7 日生效。摩根大通称管理层预计第四季度推出约 3 万亿参数的新一代旗舰，规模约为现有基座的 4 倍，该行预计发布时间在 12 月前后。</p>
+        <p class="why"><b>看点</b>循环层的工程含义是「用推理时间换能力」：同一组权重多跑几轮，参数不涨、权重占的显存不涨，但每 token 的实际 FLOPs 与延迟会随循环次数线性上升。真正要看的三个数是——循环次数是训练时写死的还是推理时可调的、每多一轮的边际收益有多少、以及「2 万亿至 3 万亿参数级」这个口径（这是智谱自评，不是第三方基准）。可复现性今天还差一步：权重没放、API 没开，只能在 Coding Plan 的产品界面里接触，系统卡里没写的失败模式还测不到。<br><b>另一个视角</b>10 万卡国产芯片、推理毛利率转正、12 月纳入恒指，把「能不能在国产算力上跑出正毛利」写进了估值叙事：对买方，它决定国产卡是「备用替代」还是「成本更低的默认选项」。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/24 12:57</span>
+          <a class="src" href="https://stcn.com/article/detail/4349992.html" target="_blank" rel="noopener noreferrer">证券时报 ↗</a>
+        </div>
+        <h3>商汤开源 SenseNova U1.6：8B 模型首次带原生图像自修正，密集信息图得分从 86.04 升到 92.28</h3>
+        <p>11 月 24 日，商汤科技发布并开源 SenseNova U1.6。这是一款原生多模态模型，延续 U 系列「理解与生成统一」的范式，第一次为该系列的 8B 开源模型带来原生图像自修正：开启后，同一个模型先生成首稿，再对照原始提示检查画面，并根据发现的文字问题生成修正版。</p>
+        <p>这次的打磨重点在文字与版式：加强了透视文字、艺术字、非常规字形与手写体，引入面向文字与布局的信息图美学模型，目标是一次出图就完成图文结合的海报，而不是先出图再拿另一个模型补字。</p>
+        <p>数字来自商汤内部评测：U1.6 Lite 的美学得分比 U1.5 Lite 高约 10%；在 UltraTextBench 密集信息图测试中，U1.6 Lite 从单次生成的 86.04 升到开启自修正后的 92.28，相对提升约 7%（据 <a href="https://www.163.com/dy/article/LCGJ6B2P0511B8LM.html" target="_blank" rel="noopener noreferrer">IT之家</a> 报道）。权重已开源，并上线 ComfyUI，可在商汤小浣熊、Seko、Kapi 相机、SenseNova Token Plan 与 SenseNova Studio 中调用。</p>
+        <p class="why"><b>看点</b>自修正本质是把「生成」改成「生成—检查—重写」的两遍推理，用接近翻倍的算力换约 7 个点的文字准确率，这是 test-time compute 在图像任务上最小的可用版本。它值得记的原因是边际成本：8B 能跑在 ComfyUI 的工作流里，说明这套自检不需要一个更大的裁判模型在旁边。口径要留意：92.28 与 +10% 都是厂商自测，UltraTextBench 也是自家选的测试集，跨模型比较时不能直接拿这个数对齐。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" target="_blank" rel="noopener noreferrer">Google 官方博客 ↗</a>
+        </div>
+        <h3>Google 把 Wallet 接进搜索 AI Mode，Drive 与 Gemini 随后，个人数据回答将标注来源</h3>
+        <p>当地时间 11 月 23 日，Google 宣布把 Google Wallet 接入搜索 AI Mode 的 Personal Intelligence：AI Mode 可以读取 Wallet 中已绑定账户的信息，用来梳理财务节点、找省钱办法、把信用卡权益用满，但不能转账、管理或投资。</p>
+        <p>未来几周还会接上 Drive 与 Gemini。Drive 让搜索读取文档、表格与 PDF；Gemini 让 Gemini App 与搜索里的 AI Mode 共享上下文——在 Gemini 里聊过的想法，不用在 AI Mode 里从头讲一遍。此前 AI Mode 已能连接 Gmail、Calendar 与 Photos。</p>
+        <p>用上个人数据的回答下方会显示一个「Personalization」图标，说明这次调用了哪些上下文；AI Overviews 与 AI Mode 也会开始参考近期的搜索上下文。连接是可选的、默认不开启，可在 Search Personalization 的「已连接应用」里管理或关闭。</p>
+        <p class="why"><b>看点</b>对做检索的人，这是「上下文来源」的扩容：过去 RAG 的关键是爬网页，现在多了一条只有平台自己有的私有语料——邮箱、日历、照片、支付流水、云盘文档。这既是护城河也是约束：只读、opt-in、可撤销，把「能不能读」与「读完怎么用」拆成了两层权限，而披露图标正是把「用了哪几层」摊开给用户看。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards" target="_blank" rel="noopener noreferrer">Anthropic ↗</a>
+        </div>
+        <h3>Anthropic 的 EFS 进入 beta：企业数据存进自己的云账户，滥用告警直接推给客户安全团队</h3>
+        <p>当地时间 11 月 23 日，Anthropic 宣布 Enterprise Frontier Safeguards（EFS）进入 beta，把零数据留存（ZDR）与滥用监测放进同一套方案：数据存放在客户自己控制的云基础设施里，而不是 Anthropic 的服务器。</p>
+        <p>三项能力可以分别开启——客户自持存储（Amazon S3、Azure Blob Storage、Google Cloud Storage）、客户自管加密密钥与访问策略、全自动审阅。监测在一个滚动窗口上分析流量，识别开发进攻性网络或生物能力、凭证被盗或泄露等信号；命中后告警直接送到客户的安全团队，不需要 Anthropic 员工查看数据。三项都不改变模型行为、API 定价与速率限制；Anthropic 不为此收费，但客户把数据存进自己云账户产生的存储、读写与出网费，按云厂商账单走。</p>
+        <p>方案与 100 多家客户共建，覆盖财富 100 强的四分之一与全部美国系统重要性银行；Bridgewater、Salesforce、Stripe 参与了私测。首批支持 Claude Code、Claude Enterprise、Claude Platform、Amazon Bedrock、Claude Platform on AWS、Google 的 Agent Platform 与 Microsoft Foundry。</p>
+        <p>背景是 30 天留存：从 Fable 5 起，Anthropic 要求把数据保留 30 天，才能跨会话、跨账号关联滥用行为；受监管行业一直卡在这一条上。EFS 没有取消留存，只是把存储方从厂商换成了客户。</p>
+        <p class="why"><b>看点</b>这是一次架构层面的让步：安全监测必须看「一段时间内的多会话行为」，合规又要求「数据不落在厂商手里」，唯一的解法是把检测逻辑搬进客户环境、原始数据留在客户的桶里。对采购方，它意味着此前过不了审的场景——律所的特权材料、药企的非公开安全性报告——第一次可以谈；对厂商，代价是失去对数据位置的最终控制，换来的是那批原本根本不会采购的客户。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://openai.com/index/introducing-shirudo/" target="_blank" rel="noopener noreferrer">OpenAI ↗</a>
+        </div>
+        <h3>OpenAI 与思科开源 Shirudo：让智能体直接写 eBPF 与字节码，在补丁之前堵住漏洞</h3>
+        <p>11 月 23 日，OpenAI 与思科发布开源项目 Shirudo，一个运行时防护平台：在补丁还没发布、系统又不能重启的窗口里，先把针对漏洞的攻击路径堵住。</p>
+        <p>它来自思科 Isovalent 在 2022 年开源的 eBPF 安全项目 Tetragon，但为「智能体时代」重写：不再要求智能体通过为人类设计的策略语言表达意图，而是允许它直接写代码。智能体自己收集漏洞信息、生成并验证 PoC、挑选最有效的注入点（内核 eBPF 或 Java 字节码），把缓解措施打包成签名的 .bee 包，经 OCI registry 分发到目标机，由 TPM 校验签名后加载。</p>
+        <p>演示对象是 OpenJDK 的 Java4Shell 漏洞：智能体生成的 Java 字节码在 Base64 解码入口加了校验，运行中的 Elasticsearch 9.5.5 被挂上防护，攻击没有成功，日志里留下了「Base64 guard installed」的记录。项目以 shirudo-dev/shirudo 在 GitHub 开源。</p>
+        <p class="why"><b>看点</b>这条的价值不在「又一个安全产品」，而在接口的选择：让智能体直接产出可验证的机器级代码，比让它填策略表单更贴近它擅长的能力，而 eBPF 的 verifier 与 TPM 的度量链提供了「放开手也炸不了」的边界。工程上要盯的是失败模式——自动生成的缓解措施一旦有副作用，会不会把业务一起挡在门外；这也是演示只敢拿一台 Elasticsearch 做实验的原因。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23 10:46</span>
+          <a class="src" href="https://www.163.com/dy/article/LCDOE4Q30511AQHO.html" target="_blank" rel="noopener noreferrer">机器之心 ↗</a>
+        </div>
+        <h3>TensorLean 在编译后的 PTX 上验证 GPU 内核：149 个实例中 66 个查出缺陷，44.3%</h3>
+        <p>11 月 20 日，CertiK 与哥伦比亚大学研究人员公布 TensorLean：第一次在生产级 AI 算子的编译产物（PTX）上做端到端形式化验证，同时处理动态任务分配、异步数据搬运与浮点误差三件事。</p>
+        <p>团队评估了 149 个已编译的 GPU 内核实例，其中 83 个首次验证就通过了对应的 Lean 规格，其余 66 个查出缺陷，占样本的 44.3%。在 6 个库中共发现 38 个正确性问题——2 个来自 DeepSeek 的 DeepGEMM，23 个来自 FlashAttention；所有缺陷已修复并报告给开发者。</p>
+        <p>技术上有三处关键。验证发生在编译后的 PTX 而不是源码，因此编译器在翻译中引入的错误也在射程内；约 1800 行的解析器把 PTX 转成可做数学推理的形式；线程按角色分组、每组只分析一个代表线程，再用「先后顺序图」证明无数据竞争与死锁，一次覆盖全部调度。浮点则用两步法：先证理想实数结果符合数学规格，再给出实际浮点与理想结果之间的舍入误差上界。</p>
+        <p>规格成本被压到约 15:1——72 个开源内核合计 151,285 行源码，对应 10,278 行规格。FlashAttention 2 至 4 的 37 个源码内核、102 个编译实例、55,910 行源码，用 6,242 行规格覆盖；DeepSeek 相关内核完成 27 个。团队还在 H100 上把一组相关测试跑了 17,760 次，一次都没观察到 TensorLean 指出的那个并发错误。</p>
+        <p class="why"><b>看点</b>它把「测试覆盖率」换成了「证明覆盖范围」：测试只能抽样输入，证明覆盖规格定义内的全部输入与调度。对训练团队最实用的一点是它可以跟着代码反复跑——改数据布局、换精度、调线程之后重新验证，规格不变就能复用，这正好对应 GPU 内核优化最频繁的那类改动。真正的问号在规格本身：如果 spec_math 写错了，证明只能保证「代码符合你以为的算法」。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/24 11:18</span>
+          <a class="src" href="https://fund.eastmoney.com/a/202611243938301937.html" target="_blank" rel="noopener noreferrer">科创板日报 ↗</a>
+        </div>
+        <h3>章鱼动力年内再获数亿元融资：芯动能、美的资本入局，资金投向灵巧手产线</h3>
+        <p>11 月 24 日，具身智能企业章鱼动力宣布年内再获数亿元融资。新增投资方包括芯动能、美的资本等产业资本，线性资本、小米集团、Panga Capital 持续加注。</p>
+        <p>资金将投向灵巧手产线建设与具身模型研发，推进「脑—手—数据」的软硬件协同设计，公司把这套循环称为「自进化生产力飞轮」。</p>
+        <p>公司称已获得海外规模化量产订单，定位是物理 AI 的通用基础设施。</p>
+        <p class="why"><b>看点</b>「灵巧手产线」是这笔钱里最硬的去处：具身智能的瓶颈正在从模型转向执行器与标定，谁先把手的良率、一致性与成本做出来，谁才有资格接量产订单。产业资本（美的、小米）进来，买到的不只是股份，还有家电与手机供应链的制造能力与现成场景——这比财务投资更能缩短「demo 到产线」的距离。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-22">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://tass.com/economy/2223479" target="_blank" rel="noopener noreferrer">塔斯社 ↗</a>
+        </div>
+        <h3>黄仁勋复职英伟达 CEO：董事会称已听取联邦政府意见，当日市值增加 9520 亿美元</h3>
+        <p>11 月 23 日（美国时间），英伟达董事会一致同意恢复黄仁勋的总裁、首席执行官与董事职务，立即生效。公司在声明中称，董事会在决策过程中听取了美国联邦政府高层的意见，并据此确信这次复职「不构成国家安全风险」。</p>
+        <p>11 月 12 日，黄仁勋因与一名被怀疑为中国从事间谍活动的女性的关系，辞去 CEO 与董事职务；中国外交部称相关指控是污蔑。上周，美国总统特朗普公开呼吁给黄仁勋第二次机会。</p>
+        <p>市场反应集中在一天之内：据塔斯社，英伟达收涨约 31%、报 165.36 美元，单日市值增加创纪录的 9520 亿美元、达到 3.97 万亿美元，重回全球市值前三；费城半导体指数涨 14%，为 2025 年以来最大单日涨幅（据<a href="https://xinwen.bjd.com.cn/content/s6b04e020e4b0e42f8f0346b3.html" target="_blank" rel="noopener noreferrer">北京日报</a>）。福布斯统计，黄仁勋个人净资产一日增加近 340 亿美元。</p>
+        <p>复职不等于风波结束：他还将赴美国国会就相关调查出席听证会，围绕英伟达的调查仍在推进。</p>
+        <p class="why"><b>看点</b>对算力供给这条线，真正的问题不是股价而是排产。过去两周的下跌来自治理与调查的不确定性，客户在等的是两件事：Vera Rubin 机架能不能按期交付（Oracle 称未来几周），以及出口管制的下一步。董事会把「政府意见」写进声明，等于承认 CEO 的任职资格已经变成一个需要监管背书的变量——这会影响所有与政府采购、出口许可挂钩的算力合同。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/23</span>
+          <a class="src" href="https://www.doj.state.or.us/media-home/news-media-releases/ag-rayfield-takes-legal-action-against-grok-for-failing-to-block-child-exploitation/" target="_blank" rel="noopener noreferrer">俄勒冈州司法部 ↗</a>
+        </div>
+        <h3>俄勒冈与弗吉尼亚两州起诉 xAI：指控 Grok 未拦阻儿童性化图像，引用 300 万张的测算</h3>
+        <p>11 月 23 日，俄勒冈州总检察长 Dan Rayfield 与弗吉尼亚州总检察长 Jay Jones 分别对 Grok 与 X 的运营方提起诉讼，指控其把产品宣传为安全，却未能阻止 Grok 生成未经同意的性化图像，包括儿童性虐待材料（CSAM）。</p>
+        <p>起诉书称，xAI 明知图像与视频生成能力会被用于生成 CSAM 与非自愿私密影像，仍削弱行业通行的防护，并推广「spicy mode」——一个专门允许生成裸露与其他性化图像的开关。</p>
+        <p>诉讼引用反数字仇恨中心（CCDH）的测算：2025 年 12 月 29 日至 2026 年 1 月 8 日，Grok 在 X 上生成并发布约 300 万张性化图像，其中约 2.3 万张看似描绘儿童，平均每分钟约 190 张、每 41 秒一张儿童性化图像；被识别出的儿童性化图像中，近 30% 在一周后仍可公开访问，部分「已删除」的内容仍能通过其他 URL 打开。</p>
+        <p>俄勒冈的诉讼提交至 Multnomah 县巡回法院，弗吉尼亚的诉讼提交至里士满市巡回法院。</p>
+        <p class="why"><b>看点</b>这类案子的关键在于「设计选择」能否被认定为不作为：原告没有把责任推给模型输出，而是指向 spicy mode、防护弱化与公开承诺之间的落差——那是产品决策，不是模型涌现。对做生成模型的人，它划出一条具体的线：默认开启的「降级模式」如果系统性地移除同意与年龄相关的拦截，法律上会被当作明知。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 23 日 09:03 至 11 月 24 日 16:00（北京时间）之间发布的报道，共 9 条。检索时间 11/24 16:00。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 029 · 24h window · Generated 2026-11-24 16:00</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI 日报</a>
+        <a href="../../economy.html">经济日报</a>
+        <a href="../../education.html">教育日报</a>
+        <a href="../../psychology.html">心理学日报</a>
+        <a href="../../tools.html">工具</a>
+        <a href="../../wish.html">许愿</a>
+        <a href="../../privacy.html">隐私</a>
+        <a href="../../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 23 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 24, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-24-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-24-en.html</guid>
+      <pubDate>Tue, 24 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Zhipu trades depth for time: GLM-5.4 runs one set of shared-weight layers in a loop and claims 2–3T-class capability from a 750-billion-parameter base — with neither the weights nor the API out the door yet.The same day, SenseTime puts self-correction inside an 8B open model, Google plugs Wallet and Drive into Search, Anthropic hands storage and keys back to the customer, and OpenAI and Cisco replace &quot;wait for the patch&quot; with a runtime shield — while on the market side, Jensen Huang&#39;s return bought back $952 billion of market value in a single session. Zhipu releases GLM-5.4: looping shared weights, a 750B base and a claim of 2–3T-class capability</description>
+    </item>
     <item>
       <title>AI Daily · November 23, 2026</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-23-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-04-en.html</guid>
       <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is who pays for compute. Inference provider fal raised $1.3 billion at a $16 billion valuation on just over $800 million of annualised revenue — demand so far ahead of capacity that it rate-limited customers this summer, on margins that stay thin. Behind Grok Bot&#39;s 800,000 paid weekly users, Musk now says serving costs are &quot;unsustainably high relative to revenue&quot; and quotas have come down; AMD&#39;s data center revenue reached $8.55 billion, nearly double a year ago, with a $17 billion guide for the fourth quarter. At the other end, Apple handed part of Apple Intelligence in China to Alibaba&#39;s Qwen, and Google wired Search and Gemini to a single switch: opt out of the AI, lose the search box. Compute keeps getting dearer; the doors keep getting narrower. Inference provider fal raises $1.3 billion at a $16 billion valuation on $800 million of annualised revenue</description>
-    </item>
-    <item>
-      <title>AI Daily · November 3, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-03-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-03-en.html</guid>
-      <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Today the story is the bill. Anthropic&#39;s amended S-1 reports $17 billion of quarterly revenue, a $567 million operating loss and, for the first time, $895.4 billion of purchase and lease commitments. In the same session Marvell agreed to buy Lumentum for $115 billion, Oracle moved to raise $20 billion and Korea lifted its 2027 AI budget to 21.3 trillion won. On the other side of the ledger, Goldman Sachs took coding agents away from its traders while MIT researchers edited model weights directly — no training, 0.016% of the parameters. The bills keep getting longer; the permissions keep getting shorter. Anthropic&#39;s amended S-1: $17 billion of quarterly revenue, a $567 million operating loss and $895.4 billion of compute commitments</description>
     </item>
   </channel>
 </rss>
