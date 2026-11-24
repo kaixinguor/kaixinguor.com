@@ -6,7 +6,14 @@
     <description>An economy daily: central banks, growth and the companies that book the profit.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 23 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · November 24, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-24-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-24-en.html</guid>
+      <pubDate>Tue, 24 Nov 2026 01:00:00 GMT</pubDate>
+      <description>This issue is about whose balance sheet ends up holding the assets. Insurers finished the third quarter with Rmb41.63tn of investable assets, of which Rmb20.73tn — 51.5% of invested assets — sat in bonds, more than Rmb800bn added in the quarter alone, alongside Rmb146.5bn of net equity buying. The marginal buyer of ultra-long paper is an insurance liability, not a trading desk. On the fiscal side Rmb4.13tn of this year&#39;s special-purpose bonds are already away, 93% of the quota, and the 2027 limit may be pre-allocated at the full 60% ceiling: next year&#39;s money sold in this year&#39;s fourth quarter. Offshore, the PBOC sold Rmb50bn of bills in Hong Kong at 1.32% for three months and 1.41% for a year, putting a price floor under offshore renminbi. The two ends of the price spectrum then did the same thing by different means: supply was rationed by decree — Congo (DRC) suspends all cobalt exports from November 30 and Chinese electronic cobalt jumped 11.95% — while a balance sheet absorbed the shock, with Nvidia adding $952bn of market value in a day, a record.Market value is not money and a quota is not output: keep the two apart and you can see who actually paid. Insurers&#39; investable assets reach Rmb41.63tn, with bonds at 51.5% and a Rmb800bn quarterly build</description>
+    </item>
     <item>
       <title>Economic Daily · November 23, 2026</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-23-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-04-en.html</guid>
       <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
       <description>The last mile of inflation is the story. Australia’s central bank lifted its cash rate for the fifth time this year, to 4.85%, on a 6-3 vote and marked its inflation peak up to 4.5% — the cost of money stays higher for longer. Beijing’s ledger reads differently: the State Council’s financial work report showed 33 trillion yuan of new social financing over twelve months, while the PBOC ran a 100 billion yuan swap facility for non-banks at a 10bp fee. After the US close, AMD guided fourth-quarter revenue to $17 billion and Aramco’s cash flow improved on refining spreads. Price and duration, repriced on the same day. RBA raises the cash rate to 4.85% on a 6-3 vote and lifts its inflation peak to 4.5%</description>
-    </item>
-    <item>
-      <title>Economic Daily · November 3, 2026</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-03-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-03-en.html</guid>
-      <pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Two directions in the same session: the PBOC drained foreign-currency liquidity by lifting the FX deposit reserve ratio from 4% to 6%, then cut the rate on buyback relending to 1% and made the facility permanent. Abroad the script runs the other way — the Fed held rates on a 10-2 vote while markets still price an 85% chance of a December hike, oil fell 7.36% in a night, and Apple guided gross margin down to 45–46%. Both sides are repricing money. The PBOC lifts the FX deposit reserve ratio to 6% from 4%, effective November 15</description>
     </item>
   </channel>
 </rss>
