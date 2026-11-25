@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 24 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 25 日</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-25.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-25.html</guid>
+      <pubDate>Wed, 25 Nov 2026 01:00:00 GMT</pubDate>
+      <description>小鹏把「一种机器人一套系统」改成了「一套系统多种本体」：WorldGPT 用云端 teacher model 从汽车、机械臂到无人机之间蒸馏通用动作直觉，再让每种本体用少量数据做特化。同一段时间里，混元把第三代翻译模型压到 1.8B 的开源权重，智元的机器人智能体平台一年攒下 3 万个智能体，英国 NCSC 说 AI 辅助攻击已从「可能」变成「正在发生」——而在研究那一侧，一份 1737 万行的机器证明，正被全球开发者接力压到人类能读的厚度。 小鹏发布图灵世界模型 WorldGPT：一个云端 teacher model 覆盖水陆空六类本体，先规划动作再预演世界</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 24 日</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-24.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-05.html</guid>
       <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「体积」。月之暗面把 2.8 万亿参数的 Kimi K3.1 Pro 权重放了出来，BF16 全套约 5.6TB、INT4 也要 1.4TB——开源的门槛从「能不能拿到」变成「搬不搬得动」。腾讯混元 Hy4 正式版 770B，第一次能看图、能操作电脑。同一天，Together 用一组 agent 在 24 小时内把前沿开源模型的推理吞吐最高提了 2.6 倍，OpenAI 把 Pierre 收进 Codex，让版本控制跟得上 agent 的提交频率。模型越做越大，喂它的工程越做越细。 月之暗面开放 Kimi K3.1 Pro 权重：2.8 万亿参数，BF16 权重约 5.6TB</description>
-    </item>
-    <item>
-      <title>AI 日报 · 2026 年 11 月 4 日</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-04.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-04.html</guid>
-      <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
-      <description>今天的主线是「谁为算力付钱」。推理服务商 fal 以 160 亿美元估值融了 13 亿美元，年化收入刚过 8 亿——需求大到夏天要限流，毛利却薄。Grok Bot 的 80 万付费周活背后，马斯克承认服务成本「相对收入不可持续」，配额悄悄下调；AMD 数据中心收入 85.46 亿美元、接近翻倍，四季度指引 170 亿美元。另一端，苹果把国行 Apple 智能的一部分交给千问，Google 把搜索和 Gemini 绑成同一个开关：关掉 AI，搜索也一起关。算力越来越贵，入口越来越紧。 推理服务商 fal 以 160 亿美元估值融资 13 亿美元，年化收入刚过 8 亿美元</description>
     </item>
   </channel>
 </rss>

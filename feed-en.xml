@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 24 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 25, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-25-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-25-en.html</guid>
+      <pubDate>Wed, 25 Nov 2026 01:00:00 GMT</pubDate>
+      <description>XPENG replaces &quot;one robot, one stack&quot; with &quot;one stack, many bodies&quot;: WorldGPT is a cloud teacher model that distils shared action intuition out of cars, arms and drones, leaving each body to specialise with a little of its own data.In the same window, Hunyuan pushes a third-generation translation model down to 1.8B of open weights, AGIBOT&#39;s robot-agent platform tallies 30,000 agents in a year, and the UK&#39;s NCSC moves AI-assisted attacks from &quot;possible&quot; to &quot;happening&quot; — while on the research side a 17.37-million-line machine proof is being thinned, in public, to a thickness humans can read. XPENG unveils WorldGPT: one cloud teacher model covers six bodies on land, water and air, planning the action before rolling the world forward</description>
+    </item>
     <item>
       <title>AI Daily · November 24, 2026</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-24-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-05-en.html</guid>
       <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today the thread is size. Moonshot released the weights of Kimi K3.1 Pro — 2.8 trillion parameters, roughly 5.6TB at BF16 and about 1.4TB even at INT4 — which moves the open-model question from &quot;can I get it&quot; to &quot;can I move it&quot;. Tencent shipped Hunyuan Hy4, a 770B MoE that reads images and drives a computer for the first time. In the same 24 hours, Together AI used a swarm of agents to push inference throughput on frontier open models up to 2.6x higher, and OpenAI moved to buy Pierre Computer so version control can keep up with agents that commit far faster than people. The models get bigger; the engineering that feeds them gets finer. Moonshot opens the Kimi K3.1 Pro weights: 2.8 trillion parameters, about 5.6TB at BF16</description>
-    </item>
-    <item>
-      <title>AI Daily · November 4, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-04-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-04-en.html</guid>
-      <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Today&#39;s thread is who pays for compute. Inference provider fal raised $1.3 billion at a $16 billion valuation on just over $800 million of annualised revenue — demand so far ahead of capacity that it rate-limited customers this summer, on margins that stay thin. Behind Grok Bot&#39;s 800,000 paid weekly users, Musk now says serving costs are &quot;unsustainably high relative to revenue&quot; and quotas have come down; AMD&#39;s data center revenue reached $8.55 billion, nearly double a year ago, with a $17 billion guide for the fourth quarter. At the other end, Apple handed part of Apple Intelligence in China to Alibaba&#39;s Qwen, and Google wired Search and Gemini to a single switch: opt out of the AI, lose the search box. Compute keeps getting dearer; the doors keep getting narrower. Inference provider fal raises $1.3 billion at a $16 billion valuation on $800 million of annualised revenue</description>
     </item>
   </channel>
 </rss>
