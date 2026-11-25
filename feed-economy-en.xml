@@ -6,7 +6,14 @@
     <description>An economy daily: central banks, growth and the companies that book the profit.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 24 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · November 25, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-25-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-25-en.html</guid>
+      <pubDate>Wed, 25 Nov 2026 01:00:00 GMT</pubDate>
+      <description>This issue is about the price of money and where it goes. November 25 is a reserve-requirement settlement day, the week&#39;s peak for net government-bond payments, and the day Rmb1tn of MLF and Rmb80bn of treasury cash deposits mature. The central bank meets the short end with Rmb500bn of seven-day reverse repos and the long end with Rmb800bn of MLF against that Rmb1tn — a net Rmb200bn drain of one-year money. Quantity at seven days, shrinkage at one year: one operation re-pairs the maturity of the banking system&#39;s funding. On policy, Brussels will impose provisional safeguard measures on imported hybrid cars from December 1, having opened the case on October 30, and MOFCOM reserves the right to WTO dispute settlement and trade compensation; the National Data Administration writes 12.5% of GDP for core digital industries by 2030 into a five-year plan; MIIT hands a 6G pilot to eight provinces and municipalities. In industry, China Mobile tenders 20,480 AI accelerator cards and one integrator takes 2,048 of them at a Rmb11.666bn bid, while Wall Street reprices AI hardware with a 7.88% one-day fall in the Philadelphia semiconductor index.A reverse repo is a liability, a safeguard is a gate, a tender share is an order: none of the three touches this quarter&#39;s income statement, and all three set next year&#39;s cash flow. PBOC to inject Rmb500bn of seven-day repos and Rmb800bn of MLF on November 25, draining Rmb200bn of long-term liquidity</description>
+    </item>
     <item>
       <title>Economic Daily · November 24, 2026</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-24-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-05-en.html</guid>
       <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
       <description>Regime change, a war premium unwinding and a liquidity drain arrived on the same day. Democrats won both chambers of Congress; oil gave back its war premium, with Brent settling 8.67% lower at $94.62. In China, the PBOC’s 30 billion yuan three-month outright reverse repo runs against 50 billion yuan maturing — a net withdrawal of 20 billion, even as DR001 fell to 1.2591%. Politics flipped, risk premium loosened, liquidity tightened. Democrats win both chambers of Congress: 258 House seats projected, at least seven Senate seats flipped</description>
-    </item>
-    <item>
-      <title>Economic Daily · November 4, 2026</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-04-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-04-en.html</guid>
-      <pubDate>Wed, 04 Nov 2026 01:00:00 GMT</pubDate>
-      <description>The last mile of inflation is the story. Australia’s central bank lifted its cash rate for the fifth time this year, to 4.85%, on a 6-3 vote and marked its inflation peak up to 4.5% — the cost of money stays higher for longer. Beijing’s ledger reads differently: the State Council’s financial work report showed 33 trillion yuan of new social financing over twelve months, while the PBOC ran a 100 billion yuan swap facility for non-banks at a 10bp fee. After the US close, AMD guided fourth-quarter revenue to $17 billion and Aramco’s cash flow improved on refining spreads. Price and duration, repriced on the same day. RBA raises the cash rate to 4.85% on a 6-3 vote and lifts its inflation peak to 4.5%</description>
     </item>
   </channel>
 </rss>
