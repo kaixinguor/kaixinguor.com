@@ -83,18 +83,30 @@ MIN=$(( DUR / 60 ))
 echo "==> ${LABEL} ${DATE} 结束 rc=${RC} 用时 ${MIN} 分" | tee -a "$LOG"
 
 if [ "$RC" -eq 0 ]; then
-  # agent 可能已经 push 过，也可能因为网络没推上去；这里兜一层
+  # 提交 + 推送由这里做：agent 只负责写稿和 publish，不碰 git。
+  # 这台机器到 GitHub 实测三成到一半的连接会超时，所以重试多次；
+  # 推不上去也不算当天失败——站点已经通过 sync-site 上线，提交会在下一轮或人工补推。
+  ISSUE="$(grep -o "第 [0-9]\+ 期" "$SITE_DIR/$URL_PART/web/${DATE}.html" 2>/dev/null | head -1)"
+  if [ -n "$(git status --porcelain)" ]; then
+    git add -A >>"$LOG" 2>&1 || true
+    if ! git -c user.name="kaixinguor daily" -c user.email="daily@kaixinguor.com" \
+         commit --quiet -m "${URL_PART}: ${DATE} ${ISSUE:-日报}（服务器自动）" >>"$LOG" 2>&1; then
+      echo "==> 警告：本地提交失败，见日志" | tee -a "$LOG"
+      "$NOTIFY" failure "${LABEL} ${DATE} 已上线但本地提交失败，见 $LOG" || true
+    fi
+  fi
+
   AHEAD="$(git rev-list --count "@{u}..HEAD" 2>/dev/null || echo 0)"
   if [ "${AHEAD:-0}" -gt 0 ]; then
     PUSH_OK=0
-    for attempt in 1 2 3; do
+    for attempt in 1 2 3 4 5 6; do
       if PUSH_OUT="$(git push --quiet origin HEAD 2>&1)"; then PUSH_OK=1; break; fi
-      echo "==> git push 第 ${attempt} 次失败：$PUSH_OUT" | tee -a "$LOG"
+      echo "==> git push 第 ${attempt} 次失败：$(printf '%s' "$PUSH_OUT" | tail -1)" | tee -a "$LOG"
       sleep $((attempt * 15))
     done
     if [ "$PUSH_OK" -ne 1 ]; then
-      "$NOTIFY" failure "${LABEL} ${DATE} 发布后推送 GitHub 失败（${AHEAD} 个提交未推），见 $LOG" || true
-      exit 6
+      echo "==> 警告：${AHEAD} 个提交暂时推不上去，下一轮会重试" | tee -a "$LOG"
+      "$NOTIFY" failure "${LABEL} ${DATE} 已上线，但 ${AHEAD} 个提交未推到 GitHub（网络），下轮自动重试" || true
     fi
   fi
 
