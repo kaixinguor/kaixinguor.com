@@ -11,3 +11,4 @@ __pycache__/
 # 实验目录：只留壳，内容不入库
 lab/*
 !lab/.gitkeep
+.dsh/
