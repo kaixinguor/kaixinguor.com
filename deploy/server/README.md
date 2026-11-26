@@ -4,29 +4,30 @@
 
 - 两个站点 = 两个独立 vhost，nginx 按 Host / SNI 分流，互不影响。
 - 站点根目录 `/home/project/kaixinguor.com`，与 `/home/project/aiseum` 平级。
-- Cloudflare Pages 保持不动，作为回滚方案。
+- Cloudflare 侧只保留 `kaixinguor.ling-wang-nj.workers.dev` 作回滚入口。
 
 ---
 
-## 0. 备案状态（决定现在能不能切 DNS）
+## 0. 切换状态：已完成（2026-11-26）
 
-**当前（2026-11-09）：`kaixinguor.com` 备案已通过，尚未切换 —— 按 [切换当天.md](切换当天.md) 逐条执行。**
+| 项 | 现状 |
+| --- | --- |
+| DNS | `kaixinguor.com` / `www` → `39.107.233.27`，Cloudflare **灰云（仅 DNS）** |
+| vhost | `/etc/nginx/sites-available/kaixinguor.com`，与 `mathster.cn` 并存 |
+| 证书 | Let's Encrypt，`/etc/letsencrypt/live/kaixinguor.com/`，certbot.timer 自动续期 |
+| 备案号 | `京ICP备2025109256号-2`，已挂在全部页面页脚并链接工信部 |
+| 回滚 | 把 A 记录改回橙云 / 重新绑定 Worker 自定义域名；或直接用 workers.dev 地址 |
 
-> 切换前核对过：服务器 443 对 `kaixinguor.com` 仍只吐 `mathster.cn` 的证书，
-> 说明下面第 1～3 步还没做完（或 vhost 未启用）。
+**切换时踩到的坑（重要）：** apex 原先不是普通 A 记录，而是
+**Worker 的自定义域名**（DNS 记录由 Workers 托管，Cloudflare API 报
+`A DNS record managed by Workers already exists on that host`，在 DNS 列表里也看不到）。
+必须先到 Workers & Pages → 该项目 → Domains → **Remove** 解绑，才能建普通 A 记录。
+`www` 一直是普通 A 记录，可直接 PATCH。
+
+> 现在服务器上的 vhost 已由 certbot 改成「443 + 80 跳转」的结构，
+> **不要再用仓库里的 80 模板覆盖它**（会退回没有 443 的状态）。
 
 这台是**华北 2（北京）** ECS，未备案域名解析过来会被拦截 80/443。
-
-> ⚠️ 审核期间**不要**把 `kaixinguor.com` 的 A 记录指到 `39.107.233.27`。
-> 阿里云对未备案域名的拦截有时并非只拦该域名，而是**封整机 80 端口直到整改**——
-> 那会连累正在提供服务的 `mathster.cn`。等备案号下来再切，只差几分钟。
-
-- **审核中（现在）** → 只做第 1～3 步：传文件、配 80 的 vhost、在服务器本机验证。
-  全程不碰 DNS，线上继续走 Cloudflare Pages，两边互不影响。
-- **备案通过** → 按第 9 节的切换清单操作。
-
-需要外部预览（手机、别人看）时，可以临时加 `kg.mathster.cn`：`mathster.cn` 已备案，
-子域名随主域、不用单独备案。
 
 ---
 

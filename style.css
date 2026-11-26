@@ -288,6 +288,16 @@ footer.site .foot-grid > div:first-child > p {
 footer.site p { margin: 0; }
 footer.site a { color: var(--muted); }
 footer.site a:hover { color: var(--ink); }
+footer.site .beian {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: .02em;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+footer.site .beian:hover { color: var(--ink); }
 
 .foot-links {
   display: flex;
