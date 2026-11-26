@@ -41,6 +41,13 @@ fi
 
 TASK="$(sed "s/__DATE__/${DATE}/g" "$PROMPT_FILE")"
 
+# 没配 key 就别跑：省得四份都跑一遍才在第一次模型调用上失败
+if [ -z "${DEEPSEEK_API_KEY:-}" ] || [ "${DEEPSEEK_API_KEY}" = "sk-REPLACE_ME" ]; then
+  echo "DEEPSEEK_API_KEY 未配置（/etc/kaixinguor/dsh.env）" >&2
+  "$NOTIFY" failure "${LABEL} ${DATE} 未启动：DEEPSEEK_API_KEY 未配置" || true
+  exit 4
+fi
+
 cd "$SITE_DIR" || exit 2
 
 echo "==> ${LABEL} ${DATE} 开始 $(date '+%F %T %Z')" | tee -a "$LOG"
