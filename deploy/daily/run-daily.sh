@@ -54,6 +54,16 @@ echo "==> ${LABEL} ${DATE} 开始 $(date '+%F %T %Z')" | tee -a "$LOG"
 
 # 先同步仓库：Mac 上改过的文档/模板要能被这一轮用上；
 # 上一轮 push 失败留下的本地提交也在这里被发现。
+# 先补推昨天遗留的提交，避免拉取时出现分叉
+PENDING="$(git rev-list --count "@{u}..HEAD" 2>/dev/null || echo 0)"
+if [ "${PENDING:-0}" -gt 0 ]; then
+  for attempt in 1 2 3; do
+    git push --quiet origin HEAD >>"$LOG" 2>&1 && break
+    echo "==> 补推遗留提交第 ${attempt} 次失败" | tee -a "$LOG"
+    sleep $((attempt * 10))
+  done
+fi
+
 # GitHub 从国内拉偶尔 TLS 断连 / 443 超时（实测过），重试三次；
 # 仍失败就带着当前工作树继续——上次成功时的树是自洽的，比整天不发强，但要在日志里留痕。
 PULL_OK=0
