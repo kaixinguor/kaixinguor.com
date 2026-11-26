@@ -21,8 +21,16 @@ MARKER="$STATE_DIR/watchdog-$TODAY"
 
 mkdir -p "$STATE_DIR"
 
+# 日报实际落在 <section>/web/ 下（publish-* 的产物），老版本目录结构是 <section>/ 平铺；
+# 两种都认，否则 watchdog 会天天误报"四份都没生成"。
 present() {
-  [ -s "$SITE_DIR/$1/$TODAY.html" ] && [ -s "$SITE_DIR/$1/$TODAY-en.html" ]
+  local sec="$1" dir
+  for dir in "$SITE_DIR/$sec/web" "$SITE_DIR/$sec"; do
+    if [ -s "$dir/$TODAY.html" ] && [ -s "$dir/$TODAY-en.html" ]; then
+      return 0
+    fi
+  done
+  return 1
 }
 
 # 今天还缺哪些版块，用「、」分隔；都齐了返回空串
