@@ -3,7 +3,8 @@
 工作目录 /opt/kaixinguor/site。先读 docs/每日四报统一规则.md 和 docs/每日生成任务-经济日报.md，并使用 .dsh/skills/kaixinguor-daily 技能；窗口、检索、核验、双语写作、自检全部按这两份文档执行。
 
 硬性要求：
-1. 窗口终点用现在的时间，起点接上一期 daily-economy 的 windowEnd；只收窗口内的报道，境外来源先换算北京时间。
+1. 工作目录就是 /opt/kaixinguor/site，技能里出现 Mac 的绝对路径（/Users/or/...）一律换成本目录。
+   窗口先跑 `node scripts/coverage.mjs window --section economy`：当天文件已存在就沿用打印的 start/end，不存在则起点接上一期 windowEnd、终点用现在。只收窗口内的报道，境外来源先换算北京时间。
 2. 每条候选都要打开原文核对标题、发布时间、正文首段；打不开就换源或删条。
 3. 先看一眼今天的 AI 日报（daily-ai/web/__DATE__.html）写了什么，避免头条和角度撞车。
 4. 中英双稿成对：daily-economy/web/__DATE__.html 与 __DATE__-en.html，期号 +1。

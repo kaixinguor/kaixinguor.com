@@ -31,6 +31,13 @@ for f in "$ROOT"/deploy/daily/prompts/*.txt; do
   install -m 644 -o "$USER_NAME" -g "$USER_NAME" "$f" "$PROMPTS/$(basename "$f")"
 done
 
+echo "==> 安装技能到 $WORKSPACE/.dsh/skills"
+WORKSPACE="${WORKSPACE:-/opt/kaixinguor/site}"
+install -d -o "$USER_NAME" -g "$USER_NAME" "$WORKSPACE/.dsh/skills/kaixinguor-daily"
+install -m 644 -o "$USER_NAME" -g "$USER_NAME" \
+  "$ROOT/deploy/daily/skills/kaixinguor-daily/SKILL.md" \
+  "$WORKSPACE/.dsh/skills/kaixinguor-daily/SKILL.md"
+
 echo "==> 安装 systemd 单元"
 install -m 644 "$ROOT/deploy/daily/kaixinguor-daily@.service" /etc/systemd/system/
 install -m 644 "$ROOT"/deploy/daily/kaixinguor-daily@*.timer /etc/systemd/system/
