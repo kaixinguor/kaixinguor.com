@@ -48,7 +48,8 @@ function copyFile(from, to) {
 function copyDir(from, to) {
   fs.mkdirSync(to, { recursive: true });
   for (const entry of fs.readdirSync(from, { withFileTypes: true })) {
-    if (entry.name === ".DS_Store") continue;
+    // 公众号配图等本地产物，已在 .gitignore 里，不能部署上线
+    if (entry.name === ".DS_Store" || entry.name === "social") continue;
     const source = path.join(from, entry.name);
     const target = path.join(to, entry.name);
     if (entry.isDirectory()) copyDir(source, target);
