@@ -1,0 +1,20 @@
+[Unit]
+Description=Kaixinguor daily chain (AI -> Economy -> Education -> Psychology, serial)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=kaixinguor
+Group=kaixinguor
+WorkingDirectory=/opt/kaixinguor/site
+Environment=HOME=/home/kaixinguor
+Environment=DSH_HOME=/var/lib/kaixinguor/.dsh
+Environment=DSH_PERMISSION_MODE=danger-full-access
+Environment=TZ=Asia/Shanghai
+EnvironmentFile=/etc/kaixinguor/dsh.env
+EnvironmentFile=-/etc/kaixinguor/notify.env
+ExecStart=/opt/kaixinguor/bin/run-chain.sh ai
+# 每份自己有 3 小时上限，四份最坏 12 小时；这里再兜一层
+TimeoutStartSec=45000
+Nice=10

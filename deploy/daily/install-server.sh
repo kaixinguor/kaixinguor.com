@@ -22,7 +22,7 @@ PROMPTS=/opt/kaixinguor/prompts
 
 echo "==> 安装脚本到 $BIN"
 install -d -o "$USER_NAME" -g "$USER_NAME" "$BIN" "$PROMPTS" /var/log/kaixinguor
-for f in notify.sh watchdog.sh sync-site.sh run-daily.sh; do
+for f in notify.sh watchdog.sh sync-site.sh run-daily.sh run-chain.sh; do
   install -m 755 -o "$USER_NAME" -g "$USER_NAME" "$ROOT/deploy/daily/$f" "$BIN/$f"
 done
 
@@ -40,15 +40,23 @@ install -m 644 -o "$USER_NAME" -g "$USER_NAME" \
 
 echo "==> 安装 systemd 单元"
 install -m 644 "$ROOT/deploy/daily/kaixinguor-daily@.service" /etc/systemd/system/
-install -m 644 "$ROOT"/deploy/daily/kaixinguor-daily@*.timer /etc/systemd/system/
+install -m 644 "$ROOT/deploy/daily/kaixinguor-daily-chain.service" /etc/systemd/system/
+install -m 644 "$ROOT/deploy/daily/kaixinguor-daily-chain.timer" /etc/systemd/system/
+
+# 串行链路取代了四份各自的 timer；逐份的 service 保留，用来手动补跑某一份
+for s in ai economy education psychology; do
+  systemctl disable --now "kaixinguor-daily@${s}.timer" 2>/dev/null || true
+done
+rm -f /etc/systemd/system/kaixinguor-daily@ai.timer \
+      /etc/systemd/system/kaixinguor-daily@economy.timer \
+      /etc/systemd/system/kaixinguor-daily@education.timer \
+      /etc/systemd/system/kaixinguor-daily@psychology.timer
 install -m 644 "$ROOT/deploy/daily/kaixinguor-dsh.service" /etc/systemd/system/
 install -m 644 "$ROOT/deploy/daily/kaixinguor-watchdog.service" /etc/systemd/system/
 install -m 644 "$ROOT/deploy/daily/kaixinguor-watchdog.timer" /etc/systemd/system/
 
 systemctl daemon-reload
-systemctl enable --now kaixinguor-daily@ai.timer kaixinguor-daily@economy.timer \
-  kaixinguor-daily@education.timer kaixinguor-daily@psychology.timer \
-  kaixinguor-watchdog.timer
+systemctl enable --now kaixinguor-daily-chain.timer kaixinguor-watchdog.timer
 
 echo "==> 下次运行时间"
 systemctl list-timers 'kaixinguor-*' --no-pager || true
