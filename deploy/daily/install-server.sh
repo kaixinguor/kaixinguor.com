@@ -21,7 +21,7 @@ PROMPTS=/opt/kaixinguor/prompts
 [ "$(id -u)" -eq 0 ] || { echo "需要 root：sudo bash deploy/daily/install-server.sh" >&2; exit 1; }
 
 echo "==> 安装脚本到 $BIN"
-install -d -o "$USER_NAME" -g "$USER_NAME" "$BIN" "$PROMPTS"
+install -d -o "$USER_NAME" -g "$USER_NAME" "$BIN" "$PROMPTS" /var/log/kaixinguor
 for f in notify.sh watchdog.sh sync-site.sh run-daily.sh; do
   install -m 755 -o "$USER_NAME" -g "$USER_NAME" "$ROOT/deploy/daily/$f" "$BIN/$f"
 done

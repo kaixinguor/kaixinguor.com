@@ -44,6 +44,15 @@ TASK="$(sed "s/__DATE__/${DATE}/g" "$PROMPT_FILE")"
 cd "$SITE_DIR" || exit 2
 
 echo "==> ${LABEL} ${DATE} 开始 $(date '+%F %T %Z')" | tee -a "$LOG"
+
+# 先同步仓库：Mac 上改过的文档/模板要能被这一轮用上；
+# 上一轮 push 失败留下的本地提交也在这里被发现。
+if ! PULL_OUT="$(git pull --ff-only --quiet 2>&1)"; then
+  echo "==> git pull 失败：$PULL_OUT" | tee -a "$LOG"
+  "$NOTIFY" failure "${LABEL} ${DATE} 未启动：git pull --ff-only 失败，请先处理服务器仓库分叉" || true
+  exit 3
+fi
+
 START=$(date +%s)
 
 # dsh headless 会把最终答复写到 stdout；--json 不用，日志可读性优先
