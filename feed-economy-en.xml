@@ -6,7 +6,14 @@
     <description>An economy daily: central banks, growth and the companies that book the profit.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 25 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · November 26, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-26-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-26-en.html</guid>
+      <pubDate>Thu, 26 Nov 2026 01:00:00 GMT</pubDate>
+      <description>This issue is about duration. US core PCE inflation rose to 3.3% in October, the highest since November 2023, with headline at 3.8%; the same morning BEA revised third-quarter GDP growth up to a 4.3% annual rate, and markets now treat a 25bp hike on December 8-9 as settled — with a pause off the table, every long-duration asset has to be repriced. The same day, the European Parliament passed the last annual budget of the EU&#39;s 2021-2027 framework: €199.7bn in commitments against €211.5bn in payments, the €11.8bn gap being earlier promises coming due. In corporate finance, the five biggest US cloud providers spent $556.9bn on capex in nine months, more than their $542.9bn of operating cash flow, and funded the difference with debt; S&amp;P put Nvidia&#39;s AA rating on CreditWatch Negative while five-year protection on CoreWeave debt briefly cost 15.34 percentage points a year; and the spot price of compute is falling — SpaceX cut Blackwell cluster rents by 20% to 35%, and the 50,000 H200s Anthropic declined to renew are being marketed about 23% below market. In China, listed public REITs reached 100 with Rmb264.27bn raised as the first private-developer retail REIT listed; Poly Developments took up to Rmb20bn of 10-year unsecured bonds to its board, first use repaying interest-bearing debt; and five ministries wired aid-fund performance grades into next year&#39;s allocation formula.The interest rate is the denominator: whoever lengthens duration pays interest on every year that follows. US core PCE rises to 3.3% in October, a near three-year high, as markets price a December hike</description>
+    </item>
     <item>
       <title>Economic Daily · November 25, 2026</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-25-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-06-en.html</guid>
       <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is the discount rate. US stocks crashed on November 5: the Nasdaq fell 5.52%, the Dow lost 1,833 points and tech dropped 7.30%. The Bank of England raised Bank Rate 25bp to 4% on an 8-1 vote, with energy doing the pushing. A-shares followed on November 6, ChiNext down 3.96% on shrinking turnover, while the PBOC fully satisfied 226 billion yuan of overnight reverse repos. Politics changed the discount rate, not this quarter&#39;s earnings. US stocks crash on November 5: Nasdaq down 5.52%, Dow down 1,833 points</description>
-    </item>
-    <item>
-      <title>Economic Daily · November 5, 2026</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-05-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-05-en.html</guid>
-      <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Regime change, a war premium unwinding and a liquidity drain arrived on the same day. Democrats won both chambers of Congress; oil gave back its war premium, with Brent settling 8.67% lower at $94.62. In China, the PBOC’s 30 billion yuan three-month outright reverse repo runs against 50 billion yuan maturing — a net withdrawal of 20 billion, even as DR001 fell to 1.2591%. Politics flipped, risk premium loosened, liquidity tightened. Democrats win both chambers of Congress: 258 House seats projected, at least seven Senate seats flipped</description>
     </item>
   </channel>
 </rss>

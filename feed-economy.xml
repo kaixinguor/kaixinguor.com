@@ -6,7 +6,14 @@
     <description>经济日报：央行与利率、增长与结构、产业与公司，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed-economy.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 25 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>经济日报 · 2026 年 11 月 26 日</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-26.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-26.html</guid>
+      <pubDate>Thu, 26 Nov 2026 01:00:00 GMT</pubDate>
+      <description>这一期的主线是久期。美国 10 月核心 PCE 同比升到 3.3%、创 2023 年 11 月以来新高，整体 3.8%；同一天三季度 GDP 环比折年率上修到 4.3%，市场把 12 月 8—9 日加息 25 个基点几乎买成了既定事实——利率不下来，所有长久期资产的定价都要重算。同一天，欧盟通过 2021—2027 框架下最后一份年度预算：承诺拨款 1997 亿欧元，支付拨款 2115 亿欧元，支付比承诺多出的 118 亿是往年承诺的到期。企业这头，美国五大云厂商前 9 个月资本开支 5569 亿美元、已超过同期经营现金流 5429 亿美元，缺口靠债务补；标普把英伟达的 AA 评级列入负面观察，CoreWeave 的五年期违约保护成本一度冲到每年 15.34 个百分点；而算力的现货价格在往下走——SpaceX 把 Blackwell 集群租金下调 20% 至 35%，Anthropic 退掉的 5 万块 H200 正以低于市价约 23% 的价格找新租户。国内这头，公募 REITs 站上 100 只、2642.70 亿元，民营房企第一次把两座商场装进去；保利发展把不超过 200 亿元、期限不超过 10 年的无担保债摆上董事会，第一用途是偿还有息债务；五部门把帮扶资金的绩效评价结果直接接进下一年度的分配公式。利率是分母：谁把久期拉长，谁就在为未来的每一年付利息。 美国 10 月核心 PCE 同比 3.3%、创 2023 年 11 月以来新高，市场把 12 月加息买成定局</description>
+    </item>
     <item>
       <title>经济日报 · 2026 年 11 月 25 日</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-25.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-06.html</guid>
       <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「折现率」。美股 11 月 5 日暴跌，纳指跌 5.52%、道指跌 1833 点，科技板块跌 7.30%；英国央行在能源冲击下加息 25 个基点至 4%，8 比 1 通过；A 股 11 月 6 日跟跌，创业板指跌 3.96%，成交缩量 4602 亿元；央行 2260 亿元隔夜逆回购全额满足。政治改变的是折现率，不是当期盈利。 美股 11 月 5 日暴跌：纳指跌 5.52%，道指跌 1833 点</description>
-    </item>
-    <item>
-      <title>经济日报 · 2026 年 11 月 5 日</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-05.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-05.html</guid>
-      <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
-      <description>今天的主线是「翻盘」与「收量」：民主党夺回美国参众两院，NBC 预测众议院 258 席、参议院夺下 7 个共和党席位；市场押注伊朗战争收尾，布伦特收跌 8.67% 至 94.62 美元。国内，央行 3000 亿元 3 个月买断式逆回购对应 5000 亿元到期，净回笼 2000 亿元——公告写「开展」，资产负债表写「缩量」。政治翻盘，风险溢价回吐，流动性收量。 民主党夺回参众两院：NBC 预测众议院 258 席，参议院夺下 7 个共和党席位</description>
     </item>
   </channel>
 </rss>
