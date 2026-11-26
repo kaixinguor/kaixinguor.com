@@ -12,3 +12,5 @@
 7. 只改本版块的文件（daily-ai/、templates/、必要的 scripts/）。不要动 docs/、deploy/、其它三份日报，不要 git push --force，不要 --allow-bad-links 硬发。
 
 任何一步失败就停下，把卡住的命令和原因写进最后一段输出，不要假装成功。
+
+网络注意：这台服务器实测访问 www.nytimes.com、www.reuters.com 会超时（12 秒无响应），选源时避开这两个域名，改用同事件的官方公告、一级源或能打开的等价媒体，不要因为打不开就凭标题补写。
