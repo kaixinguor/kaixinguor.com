@@ -8,6 +8,7 @@
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs --check",
     "check:links": "node scripts/check-links.mjs --latest",
+    "style": "node scripts/style-lint.mjs",
     "publish": "node scripts/publish-daily.mjs",
     "stage": "node scripts/stage.mjs",
     "preview": "python3 -m http.server 8899",
