@@ -43,13 +43,37 @@ for s in "${ALL[@]}"; do
   [ "$REACHED" -eq 1 ] && QUEUE+=("$s")
 done
 
+# 四份都成功后再统一推送：优先保证站点可用，推送失败也不影响当天上线
+push_pending() {
+  local ahead out attempt
+  ahead="$(git -C "$SITE_DIR" rev-list --count "@{u}..HEAD" 2>/dev/null || echo 0)"
+  if [ "${ahead:-0}" -eq 0 ]; then
+    echo "==> 没有待推送的提交" | tee -a "$CHAIN_LOG"
+    "$NOTIFY" success "四份日报已全部上线（${MIN_TOTAL:-?} 分）；GitHub 无待推送提交" || true
+    return 0
+  fi
+  for attempt in 1 2 3 4 5 6 7 8; do
+    if out="$(git -C "$SITE_DIR" push --quiet origin HEAD 2>&1)"; then
+      echo "==> 推送成功（${ahead} 个提交）" | tee -a "$CHAIN_LOG"
+      "$NOTIFY" success "四份日报已全部上线（${MIN_TOTAL:-?} 分）；GitHub 推送成功（${ahead} 个提交）" || true
+      return 0
+    fi
+    echo "==> git push 第 ${attempt} 次失败：$(printf '%s' "$out" | tail -1)" | tee -a "$CHAIN_LOG"
+    sleep $((attempt * 15))
+  done
+  echo "==> 推送失败：站点已更新，提交留在本地" | tee -a "$CHAIN_LOG"
+  "$NOTIFY" failure "四份日报已全部上线，但 GitHub 推送失败（${ahead} 个提交待推）。
+修好网络后手动补推：sudo -u kaixinguor git -C ${SITE_DIR} push origin main" || true
+  return 1
+}
+
 TOTAL_START=$(date +%s)
 echo "==> 链路开始 ${DATE} $(date '+%T')，队列：${QUEUE[*]}" | tee -a "$CHAIN_LOG"
 
 for s in "${QUEUE[@]}"; do
   L="$(label_of "$s")"
   echo "==> 链路：开始 ${L}" | tee -a "$CHAIN_LOG"
-  "$RUN_ONE" "$s"
+  DEFER_PUSH=1 "$RUN_ONE" "$s"
   RC=$?
   if [ "$RC" -ne 0 ]; then
     echo "==> 链路：${L} 失败 rc=${RC}，后面的不跑了" | tee -a "$CHAIN_LOG"
@@ -60,6 +84,8 @@ for s in "${QUEUE[@]}"; do
   fi
 done
 
-MIN=$(( ($(date +%s) - TOTAL_START) / 60 ))
-echo "==> 链路完成 ${DATE} $(date '+%T')，总用时 ${MIN} 分" | tee -a "$CHAIN_LOG"
-"$NOTIFY" success "四份日报全部发布完成（${MIN} 分） https://kaixinguor.com/" || true
+MIN_TOTAL=$(( ($(date +%s) - TOTAL_START) / 60 ))
+export MIN_TOTAL
+echo "==> 链路完成 ${DATE} $(date '+%T')，总用时 ${MIN_TOTAL} 分，开始推送" | tee -a "$CHAIN_LOG"
+push_pending
+echo "==> 全部结束 $(date '+%T')" | tee -a "$CHAIN_LOG"

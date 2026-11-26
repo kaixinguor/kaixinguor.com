@@ -97,7 +97,9 @@ if [ "$RC" -eq 0 ]; then
   fi
 
   AHEAD="$(git rev-list --count "@{u}..HEAD" 2>/dev/null || echo 0)"
-  if [ "${AHEAD:-0}" -gt 0 ]; then
+  if [ "${DEFER_PUSH:-0}" = "1" ]; then
+    [ "${AHEAD:-0}" -gt 0 ] && echo "==> 留了 ${AHEAD} 个提交给链路末尾统一推送" | tee -a "$LOG"
+  elif [ "${AHEAD:-0}" -gt 0 ]; then
     PUSH_OK=0
     for attempt in 1 2 3 4 5 6; do
       if PUSH_OUT="$(git push --quiet origin HEAD 2>&1)"; then PUSH_OK=1; break; fi

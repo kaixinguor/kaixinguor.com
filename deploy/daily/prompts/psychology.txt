@@ -9,9 +9,9 @@
 3. 先看今天已发的 AI / 经济 / 教育三份，避免「AI 陪伴」「青少年心理健康」「心理健康支付」这类角度重复。
 4. 中英双稿成对：daily-psychology/web/__DATE__.html 与 __DATE__-en.html，期号 +1。
 5. 自检：parseIssue、node scripts/coverage.mjs check、node scripts/check-links.mjs、npm run style。
-6. 发布：node scripts/publish-psychology.mjs daily-psychology/web/__DATE__.html --en daily-psychology/web/__DATE__-en.html --push
+6. 发布：node scripts/publish-psychology.mjs daily-psychology/web/__DATE__.html --en daily-psychology/web/__DATE__-en.html
 7. 发布成功后：/opt/kaixinguor/bin/sync-site.sh --no-build
-8. 只改本版块的文件。不要动 docs/、deploy/、其它三份日报，不要 --allow-bad-links 硬发。
+8. 只改本版块的文件。不要动 docs/、deploy/、其它三份日报。**不要执行 git push / git commit**（推送由外层 run-daily.sh 重试完成），不要 --allow-bad-links 硬发。
 
 任何一步失败就停下，把卡住的命令和原因写进最后一段输出。
 

@@ -11,9 +11,9 @@
 2. 每条候选都要打开原文核对标题、发布时间、正文首段；403、登录墙、软 404、只有搜索摘要的一律换源或删条，不许凭标题补写。
 3. 中英双稿成对产出：daily-ai/web/__DATE__.html 与 daily-ai/web/__DATE__-en.html，期号 +1，四份共用同一窗口终点。
 4. 发布前自检全绿：parseIssue、node scripts/coverage.mjs check、node scripts/check-links.mjs、npm run style。
-5. 发布：node scripts/publish-daily.mjs daily-ai/web/__DATE__.html --en daily-ai/web/__DATE__-en.html --push
+5. 发布：node scripts/publish-daily.mjs daily-ai/web/__DATE__.html --en daily-ai/web/__DATE__-en.html
 6. 发布成功后同步到线上：/opt/kaixinguor/bin/sync-site.sh --no-build
-7. 只改本版块的文件（daily-ai/、templates/、必要的 scripts/）。不要动 docs/、deploy/、其它三份日报，不要 git push --force，不要 --allow-bad-links 硬发。
+7. 只改本版块的文件（daily-ai/、templates/、必要的 scripts/）。不要动 docs/、deploy/、其它三份日报。**不要执行 git push / git commit**（推送由外层 run-daily.sh 重试完成），不要 --allow-bad-links 硬发。
 
 任何一步失败就停下，把卡住的命令和原因写进最后一段输出，不要假装成功。
 
