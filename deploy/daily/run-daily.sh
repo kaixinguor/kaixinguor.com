@@ -71,6 +71,31 @@ MIN=$(( DUR / 60 ))
 echo "==> ${LABEL} ${DATE} 结束 rc=${RC} 用时 ${MIN} 分" | tee -a "$LOG"
 
 if [ "$RC" -eq 0 ]; then
+  # 不信 agent 的自述：文件在不在、线上是不是 200，自己验
+  ZH="$SITE_DIR/$URL_PART/web/${DATE}.html"
+  EN="$SITE_DIR/$URL_PART/web/${DATE}-en.html"
+  PROBLEM=""
+  [ -s "$ZH" ] || PROBLEM="缺中文稿 $(basename "$ZH")"
+  [ -s "$EN" ] || PROBLEM="${PROBLEM:+$PROBLEM；}缺英文稿 $(basename "$EN")"
+
+  if [ -z "$PROBLEM" ]; then
+    for u in "https://kaixinguor.com/${URL_PART}/web/${DATE}.html" "https://kaixinguor.com/${URL_PART}/web/${DATE}-en.html"; do
+      CODE=""
+      for attempt in 1 2 3; do
+        CODE="$(curl -sL --max-time 20 -o /dev/null -w '%{http_code}' "$u" || true)"
+        [ "$CODE" = "200" ] && break
+        sleep 5
+      done
+      echo "  验收 $u -> ${CODE:-fail}" | tee -a "$LOG"
+      [ "$CODE" = "200" ] || PROBLEM="${PROBLEM:+$PROBLEM；}线上未 200：$u -> ${CODE:-fail}"
+    done
+  fi
+
+  if [ -n "$PROBLEM" ]; then
+    "$NOTIFY" failure "${LABEL} ${DATE} 跑完但验收没过：${PROBLEM}（见 $LOG）" || true
+    exit 5
+  fi
+
   "$NOTIFY" success "${LABEL} ${DATE} 已发布（${MIN} 分） https://kaixinguor.com/${URL_PART}/${DATE}" || true
 elif [ "$RC" -eq 124 ] || [ "$RC" -eq 137 ]; then
   "$NOTIFY" failure "${LABEL} ${DATE} 超时 ${MIN} 分被终止，见 $LOG" || true
