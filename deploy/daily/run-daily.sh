@@ -54,9 +54,15 @@ echo "==> ${LABEL} ${DATE} 开始 $(date '+%F %T %Z')" | tee -a "$LOG"
 
 # 先同步仓库：Mac 上改过的文档/模板要能被这一轮用上；
 # 上一轮 push 失败留下的本地提交也在这里被发现。
-if ! PULL_OUT="$(git pull --ff-only --quiet 2>&1)"; then
-  echo "==> git pull 失败：$PULL_OUT" | tee -a "$LOG"
-  "$NOTIFY" failure "${LABEL} ${DATE} 未启动：git pull --ff-only 失败，请先处理服务器仓库分叉" || true
+# GitHub 从国内拉偶尔会 TLS 断掉，重试三次再判定失败
+PULL_OK=0
+for attempt in 1 2 3; do
+  if PULL_OUT="$(git pull --ff-only --quiet 2>&1)"; then PULL_OK=1; break; fi
+  echo "==> git pull 第 ${attempt} 次失败：$PULL_OUT" | tee -a "$LOG"
+  sleep 10
+done
+if [ "$PULL_OK" -ne 1 ]; then
+  "$NOTIFY" failure "${LABEL} ${DATE} 未启动：git pull --ff-only 连续失败（网络或仓库分叉），见 $LOG" || true
   exit 3
 fi
 
