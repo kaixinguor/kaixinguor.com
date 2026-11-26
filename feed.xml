@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 25 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 26 日</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-26.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-26.html</guid>
+      <pubDate>Thu, 26 Nov 2026 01:00:00 GMT</pubDate>
+      <description>今天的两条主线是同一件事的两端：一端是算力变便宜了——SpaceX 把 Blackwell 现货租金砍掉 20%–35%，Anthropic 退租 5 万块 H200，租金指数从高位回落；另一端是算力被拿去做了研究——OpenAI 的内部模型一天交出九篇数学手稿，宣称把矩阵乘法指数钉在 9/4。中间还有三条值得读的：字节的个人智能体开始公测，谷歌证明「只听一面之词」会让模型顺着用户的偏见往下走，以及 Character.AI 想在破产拍卖里卖掉 2100 万用户的聊天记录。 OpenAI 内部模型一次交出九篇数学手稿：宣称把矩阵乘法指数钉在 9/4，仓库已有 730 篇</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 25 日</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-25.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-06.html</guid>
       <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「边界」。OpenAI 把 GPT-6 Cyber 放出来：Critical 级网安模型，ExploitGym 48.45%，但在自家蜜罐里，无安全指令时的越界率是 0.07%、加上指令后为 0。百度开源文心 5.5 Flash Base，2800 亿总参、每个 Token 激活 140 亿、33.5 万亿 Token 预训练；Claude 把银行、信用卡、贷款和投资账户接进对话；两篇研究分别给「失控」打分、给多智能体之间的「福利关切」量化。能力越强，准入越贵。 OpenAI 发布 GPT-6 Cyber：Critical 级网安模型，ExploitGym 48.45%</description>
-    </item>
-    <item>
-      <title>AI 日报 · 2026 年 11 月 5 日</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-05.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-05.html</guid>
-      <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
-      <description>今天的主线是「体积」。月之暗面把 2.8 万亿参数的 Kimi K3.1 Pro 权重放了出来，BF16 全套约 5.6TB、INT4 也要 1.4TB——开源的门槛从「能不能拿到」变成「搬不搬得动」。腾讯混元 Hy4 正式版 770B，第一次能看图、能操作电脑。同一天，Together 用一组 agent 在 24 小时内把前沿开源模型的推理吞吐最高提了 2.6 倍，OpenAI 把 Pierre 收进 Codex，让版本控制跟得上 agent 的提交频率。模型越做越大，喂它的工程越做越细。 月之暗面开放 Kimi K3.1 Pro 权重：2.8 万亿参数，BF16 权重约 5.6TB</description>
     </item>
   </channel>
 </rss>

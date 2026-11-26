@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 26, 2026</title>
+<meta name="description" content="AI Daily Issue 031, November 26, 2026: an unreleased OpenAI model files nine math manuscripts in a day, claiming a 9/4 matrix multiplication exponent; SpaceX cuts Blackwell spot rent 20%–35% as Anthropic drops a 50,000-GPU H200 cluster; ByteDance&#39;s Xiaodou personal agent opens its beta; Google finds models amplify a user&#39;s bias when they hear only one side; Character.AI&#39;s bankruptcy auction of 21 million users&#39; chats draws 42 state attorneys general; tactile-model startup Lute raises $20 million; thousands of B300s flood the resale market.">
+<meta property="og:title" content="AI Daily · November 26, 2026">
+<meta property="og:description" content="AI Daily Issue 031, November 26, 2026: an unreleased OpenAI model files nine math manuscripts in a day, claiming a 9/4 matrix multiplication exponent; SpaceX cuts Blackwell spot rent 20%–35% as Anthropic drops a 50,000-GPU H200 cluster; ByteDance&#39;s Xiaodou personal agent opens its beta; Google finds models amplify a user&#39;s bias when they hear only one side; Character.AI&#39;s bankruptcy auction of 21 million users&#39; chats draws 42 state attorneys general; tactile-model startup Lute raises $20 million; thousands of B300s flood the resale market.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-26-en.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-25T09:13:00+08:00/2026-11-26T10:00:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-26-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-26.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-26-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=9">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI Daily</a>
+      <a href="../../economy.html">Economic Daily</a>
+      <a href="../../education.html">Education Daily</a>
+      <a href="../../psychology.html">Psychology Daily</a>
+      <a href="../../tools.html">Tools</a>
+      <a href="../../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-26.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 031</span>
+    </div>
+    <h1 class="date">November 26, 2026<span class="weekday">THU</span></h1>
+    <p class="deck">Today&#39;s two threads are two ends of one argument: compute got cheaper — SpaceX cut Blackwell spot rent by 20%–35%, Anthropic dropped a 50,000-GPU H200 cluster, and the rent index fell from its highs — and compute got pointed at research — an unreleased OpenAI model filed nine math manuscripts in a day, claiming the matrix multiplication exponent is exactly 9/4.<em>In between: ByteDance&#39;s personal agent opens its beta, Google shows that hearing one side of a story makes models follow the bias, and Character.AI wants to auction 21 million users&#39; chats out of bankruptcy.</em></p>
+    <div class="metabar"><span class="pill">Issue 031</span>
+      <span class="dot"></span>
+      <span>Window Nov 25, 09:13 – Nov 26, 10:00</span>
+      <span class="dot"></span>
+      <span>8 stories</span>
+      <span class="dot"></span>
+      <span>14 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#models"><span class="n">01</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">02</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">03</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">04</span>Embodied AI</a>
+        <a href="#capital"><span class="n">05</span>Industry &amp; Capital</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>On the evening of November 25, ifeng Tech reported that OpenAI&#39;s public math repository gained nine manuscripts on November 24, one of which claims to pin the matrix multiplication exponent at exactly 9/4: researchers already had the upper bound, and this paper claims the matching lower bound.</b> OpenAI says the manuscripts were mostly produced by an unreleased internal model as raw material from an evaluation on open research problems, and should be read as research data rather than finished papers; the repository now holds 730 manuscripts across 375 research series, with about 42% of top-level results formalised.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>On November 25, a SemiAnalysis note to institutional clients showed SpaceX cutting spot rent for small Blackwell clusters from roughly $15–15.5 to $10–12 per GPU-hour, a 20%–35% drop that puts retail at the bulk price it charges Anthropic and Google.</b> In the same note, Anthropic declined to renew a roughly 50,000-GPU H200 cluster; SpaceX is re-letting it for early 2027 at about $5 per GPU-hour, some 23% below the $6.53 that Ornn recorded as the H200&#39;s actual traded price.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>On November 26, Google Research published a study on the social reasoning of large language models and open-sourced a multi-agent evaluation harness plus a dataset of more than 20,000 samples; across 12 models, judging intent from one side&#39;s account sharply cut accuracy and could reinforce the user&#39;s own bias.</b> The sharper finding is that more turns do not fix it: models drift toward consistency with what they already said, so a bad first read can harden instead of correct.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/25 21:12</span>
+          <a class="src" href="https://ishare.ifeng.com/c/s/8yLcoPh2TNS" target="_blank" rel="noopener noreferrer">ifeng Tech ↗</a>
+        </div>
+        <h3>An unreleased OpenAI model filed nine math manuscripts in one day, claiming the matrix multiplication exponent is exactly 9/4 — with 730 papers in the repository</h3>
+        <p>On the evening of November 25, ifeng Tech reported that the math repository OpenAI maintains on GitHub gained nine manuscripts on November 24. One, titled &#34;The matrix multiplication exponent is nine fourths,&#34; claims that under the arithmetic circuit model it studies, the exponent for square matrix multiplication is exactly 9/4 — 2.25.</p>
+        <p>The number is ω, which describes how the number of arithmetic operations grows with matrix size; the naive method needs about n³, and a smaller exponent means a theoretically faster algorithm. Researchers had already established 9/4 as an upper bound, proving a method that reaches it; this manuscript claims the matching lower bound: for every n≥2, a formal arithmetic circuit needs at least ⌈n^(9/4)/2⌉ non-scalar multiplication or division gates.</p>
+        <p>OpenAI is explicit about what the material is. The manuscripts were mostly generated by an unreleased internal model while evaluating model capability on open research problems, and are better treated as &#34;raw research data&#34; than as finished academic papers. The repository now holds 730 manuscripts across 375 research series, and about 42% of top-level results have been formalised.</p>
+        <p>The cost side was disclosed too: each selected result consumed roughly three hours of ChatGPT Pro thinking compute on average, and the model received about 4,000 research questions over the whole evaluation. Two caveats matter: 9/4 is a bound in a theoretical model, not a runtime on real silicon, and it will not make today&#39;s GPUs faster; the manuscripts have not been peer-reviewed.</p>
+        <p class="why"><b>Take</b>The useful part of this story is not 2.25 but three numbers you can check: a 42% formalisation rate, about three hours of thinking compute per result, and a denominator of 4,000 questions. The first decides whether a claim can be machine-checked line by line in Lean or Coq; the other two set the unit cost of doing mathematics with a model. Whether such a repository is actually valuable shows up as the slope of formalisation coverage over time, not as the most eye-catching theorem in a single drop.<br><b>Another angle</b>4,000 questions at roughly three hours each is about 12,000 hours of inference — a research expense for a lab, and a shift for mathematicians: posing a good question is becoming scarcer than grinding out the proof, so the division of labour moves upstream.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26</span>
+          <a class="src" href="https://www.tokendh.com/news/34b53068e5" target="_blank" rel="noopener noreferrer">ifeng Tech ↗</a>
+        </div>
+        <h3>OpenAI folds ChatGPT&#39;s chat and work modes into one surface — and one shared quota, so heavy users will hit the wall sooner</h3>
+        <p>On November 26, ifeng Tech reported, citing TechCrunch, that OpenAI has begun rolling out a unified chat and work experience to some ChatGPT users. Product lead Thibault Sottiaux said on X that the update went first to a small slice of Pro subscribers; OpenAI had emailed users about the merge in early November.</p>
+        <p>An OpenAI spokesperson confirmed to TechCrunch that the two modes now draw on one usage allowance: most users are not expected to hit limits more often, but a minority of heavy users may run out earlier than before. Conversations on the Instant model remain unlimited and do not consume the shared quota, so subscribers can keep going after it is exhausted.</p>
+        <p>Some paying users have complained on social media and in OpenAI&#39;s community forums that, for the same subscription, they may get fewer turns on the stronger reasoning models. OpenAI says it keeps improving efficiency and plans a wider rollout of shared quotas in December. Rival Anthropic made a comparable move in September, merging its Claude chat service and its work-oriented Cowork into one interface.</p>
+        <p class="why"><b>Take</b>Merging the interface is a product decision; merging the allowance is a cost decision. Quotas that used to be split by feature are now split by compute, which quietly rewrites &#34;how many products you bought&#34; as &#34;how many tokens you bought.&#34; For heavy users that is a price increase in disguise; for OpenAI it is a way to move scarce inference capacity from idle chat allowance to the much more expensive agent tasks. The number to watch is the rate at which Pro users hit limits after the December rollout — if many burn through in a month, the merge will be read as a price rise.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26</span>
+          <a class="src" href="https://www.tokendh.com/news/611ba09614" target="_blank" rel="noopener noreferrer">ifeng Tech ↗</a>
+        </div>
+        <h3>ByteDance&#39;s &#34;Xiaodou&#34; personal agent opens its beta: it books restaurants, hails rides and chases colleagues for edits — within a firm ecosystem</h3>
+        <p>On November 24, ByteDance&#39;s personal agent Xiaodou launched a public beta on the App Store and major Android stores, with invite codes circulating on social media. On November 25, ifeng Tech published a hands-on test that mapped where it works and where it stops.</p>
+        <p>The design leans on a shared brain: Xiaodou reuses Doubao&#39;s conversation context and the user&#39;s preferences across three features — recommendations, follow-ups and a profile of the user. After the user authorises Douyin, it can pick products from purchase history, and it pops a confirmation card when a size or similar detail matters. In the test it also filtered restaurants by live location and called the venue to verify a booking, and completed an entire ride-hailing flow on a fresh account, walking through registration, permissions and the order.</p>
+        <p>For work it connects to Feishu, WeCom, DingTalk, Baidu Netdisk, Apple Reminders and Health, Amap ride-hailing, and flight and rail assistants. In one test it noticed a Feishu document still had not been revised according to the previous day&#39;s comments, raised a prompt and offered to message the colleague. Payments and phone numbers always trigger a confirmation card first.</p>
+        <p>The limits are just as visible: shopping only covers the Douyin store, and coupons and address changes are still manual; Baidu Netdisk does not support phone-plus-code login; WeCom has no push entry yet. ByteDance says the capabilities will gradually arrive in the Doubao app.</p>
+        <p class="why"><b>Take</b>The bottleneck for a personal agent stopped being the model and became accounts and permissions: can it get OAuth, can it pay on your behalf, and who is liable when it gets something wrong. Xiaodou&#39;s demo is really about completion rate across apps, and its moat is turning authorisation inside ByteDance&#39;s own products — Douyin, Feishu, Jimeng — into standard parts; every third-party integration adds cost and compliance risk roughly linearly. The metrics that matter are the number of third-party apps and what happens when a task fails halfway, not how many demos ran end to end.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26</span>
+          <a class="src" href="https://www.tokendh.com/news/14b4a73ec8" target="_blank" rel="noopener noreferrer">ifeng Tech ↗</a>
+        </div>
+        <h3>Google study: hearing only one side, LLMs follow the bias downhill — and more turns make it worse</h3>
+        <p>On November 26, Google Research published a study of social reasoning in large language models, along with an open-source multi-agent evaluation harness and a dataset of more than 20,000 samples; the team tested 12 models.</p>
+        <p>The design is worth remembering. Researchers gave a virtual character a hidden motive, then let it interact with a user character and others; a user-side agent then recounted what happened to the model under test, which had to infer the target&#39;s real motive. Because the motive was fixed in advance, correctness could be scored objectively, and the researchers could vary the virtual user&#39;s personality — more confident or more insecure — to see how cognitive bias shifted the model&#39;s judgment.</p>
+        <p>Three findings. When the model could observe the full episode directly, its accuracy was clearly higher than when it only heard a retelling. When the retelling carried a clear bias, accuracy fell further, and in some cases the model endorsed and amplified a suspicion that had no factual basis. Models also tended to need more detail than humans before reaching a correct read.</p>
+        <p>The least intuitive result: adding turns does not necessarily help. Multi-turn dialogue should give a model room to ask and verify, but models lean toward consistency with their earlier statements, so a wrong first judgment can harden over the conversation. Google says it is using the framework and dataset to guide its own model development.</p>
+        <p class="why"><b>Take</b>This is an attempt to turn sycophancy into measurable variables: the input is a one-sided account, ground truth comes from a preset motive, and bias is adjustable, so &#34;telling the user what they want to hear&#34; stops being a feeling and becomes an accuracy gap. The reusable part is the apparatus — hidden motive, retelling, checkable ground truth — which any team building companion, counselling or support agents can copy to build a regression suite. It also settles something practical: multi-turn conversation is not free error correction; the longer the context, the harder it is for a model to overturn what it already said.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26</span>
+          <a class="src" href="https://www.tokendh.com/news/a166dc9e49" target="_blank" rel="noopener noreferrer">ifeng Tech ↗</a>
+        </div>
+        <h3>Character.AI wants to auction 21 million users&#39; chats out of bankruptcy; 42 state attorneys general want it stopped</h3>
+        <p>On November 26, ifeng Tech reported, citing TechCrunch, that Character.AI — which filed for Chapter 11 protection in October — plans to auction its users&#39; private chat logs and other personal data. Attorneys general from 42 states and territories have entered the bankruptcy case to try to block the sale.</p>
+        <p>The dataset on offer covers more than 21 million US user accounts, more than 2.1 million of them belonging to minors, and includes IP addresses alongside conversation content. The only publicly disclosed bidder is an opaque entity called Smirks and Pangs Acquisition LLC, incorporated in Delaware on November 13, 2026 and chosen as the stalking-horse bidder one day later. The auction is set for December 1.</p>
+        <p>The attorneys general argue that Character.AI promised consumers it would not sell their personal information, and that its own blog assured users their data would stay under its privacy policy. Once sold, they say, a buyer could dispose of the data as it likes, even resell it, without being bound by that policy. They also contend the company disclosed less about the security and legal risks of the deal to the bankruptcy court than to bidders.</p>
+        <p>California attorney general Rob Bonta and Connecticut attorney general William Tong both spoke out. A separate $20 million intellectual-property licensing deal with Disney, which does not involve user chats, has also drawn objections from multiple states and has not been approved by the court.</p>
+        <p class="why"><b>Take</b>Bankruptcy turns a privacy promise into an asset question: the promise lives in a policy document, the data lives on the estate&#39;s asset schedule, and when the two collide the court reads the second one first. For teams shipping conversational products the operational lesson is that control over user data has to be built into the architecture — who can export it, who can decrypt it, whose cloud account holds it — rather than only written into the policy; in a bankruptcy, the policy is the first document to stop binding.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26</span>
+          <a class="src" href="https://ventureburn.com/lute-raises-20-million-pre-seed-seed-physical-ai/" target="_blank" rel="noopener noreferrer">VentureBurn ↗</a>
+        </div>
+        <h3>Touch-model startup Lute raises $20 million ten months after founding, giving robots a sense of how hard they are gripping</h3>
+        <p>On November 26, VentureBurn reported that Lute, which builds tactile foundation models for robots, raised $20 million across pre-seed and seed rounds. The seed was co-led by OTB Ventures and FORWARD.one, the pre-seed by Credo Ventures and Seedcamp, with Inovo VC, Borusan Ventures and Naval Ravikant participating.</p>
+        <p>The company was founded in January 2026 and works out of San Francisco and Warsaw. Chief executive Paweł Budzianowski holds a PhD in machine learning from Cambridge and previously headed AI at PolyAI; CTO Krzysztof Walas led a physical-interaction robotics group in Poland.</p>
+        <p>The approach folds touch into vision. Lute-0 takes wrist-camera video, a task instruction and tactile data, predicts what will happen next and picks the next move. The tactile sensors are soft, skin-like devices co-developed with a partner, and the team built a portable rig for collecting touch data — which is the point, since touch has historically only been captured at whatever workstation the robot happens to occupy.</p>
+        <p>Early results are the company&#39;s own: on grasping deformable snack bags it reports 98% success against 70% for a competitor, at roughly half the latency. Deployments include Europe&#39;s largest automotive parts distributor, a business with about $6 billion in annual revenue, and hospital corridors. The software watches each task, pauses and hands control to a remote operator when something goes wrong, and turns every human repair into training data.</p>
+        <p class="why"><b>Take</b>The hard part of touch is not the sensor but whether the data travels: camera data can be scraped, tactile data only exists at the moment of contact. Making the capture rig portable drops the cost of collecting it from &#34;retrofit the line&#34; to &#34;carry a box to the customer site,&#34; which is why a ten-month-old company is already in live aisles. But 98% against 70% is a self-reported number on snack bags; the test of whether it generalises is what survives on transparent, soft and reflective objects, where vision alone gives out.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 07:42</span>
+          <a class="src" href="https://www.eet-china.com/mp/a541992.html" target="_blank" rel="noopener noreferrer">STAR Market Daily ↗</a>
+        </div>
+        <h3>GPU rents cool for the first time: SpaceX cuts Blackwell spot prices 20%–35% and Anthropic drops a 50,000-GPU H200 cluster</h3>
+        <p>On November 26, STAR Market Daily reported that SemiAnalysis disclosed two shifts in a note to institutional clients this week: SpaceX cut rent on small Blackwell GPU clusters, and AI model developer Anthropic decided not to renew a batch of H200s rented from SpaceX.</p>
+        <p>On price, SpaceX lowered rent for small Blackwell clusters from roughly $15 to $15.5 per GPU-hour to $10 to $12, a 20%–35% cut that puts it roughly level with the bulk rates it charges large customers such as Anthropic and Google. In other words, the scarcity premium small customers used to pay has largely disappeared.</p>
+        <p>Anthropic is giving up a cluster of about 50,000 H200s. SpaceX has begun hunting for new tenants, with delivery set for early 2027 at about $5 per GPU-hour; Ornn, which tracks actual transaction prices, put the H200 at $6.53 on Monday, making SpaceX&#39;s ask roughly 23% cheaper.</p>
+        <p>Ornn&#39;s transaction-based index shows rents falling from their highs: B200 down 8.8% from a November 8 peak to $9.07 per hour, H200 down 16% from a November 11 peak to $6.53, and B300 down 24% from a mid-October peak to $10.87. Tokens got cheaper faster: since late August the B200 rent index is still up 48%, while Anthropic&#39;s token price fell from $1.46 to $0.75 per million.</p>
+        <p>Demand-side evidence comes from Ramp, the corporate spend platform: token spending by its customers jumped 42% in July, grew only 1.5% across August and September combined, and 1.65% in October. In the week to November 15 it was up 12% on a month earlier, with usage up 27.2% and the blended price down 11.2% to $0.45 per million tokens. Goldman Sachs&#39;s TMT desk notes CoreWeave bonds are at record lows, and HPE&#39;s financing arm says it will not lend to capital-hungry AI cloud startups.</p>
+        <p class="why"><b>Take</b>This is the first time the Jevons argument is being questioned on two curves at once: rents are falling, token prices are falling faster, and corporate usage did not fill the gap — spending grew just 1.5% across August and September, so cheaper prices bought limited new demand. For anyone running inference, short-term leases loosening before long-term contracts is a useful signal: the spot premium is gone, which means supply is rising, and renewals can be negotiated down. Mind the framing — SemiAnalysis itself still sees decent returns in new Blackwell projects and reads the cut as a landlord move ahead of new capacity and short leases, not a market-wide crash.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 08:21</span>
+          <a class="src" href="https://www.digitaltoday.co.kr/cn/view/131004/us-chip-curbs-flood-nvidia-gpu-resale-market-b300-units-offered" target="_blank" rel="noopener noreferrer">DigitalToday (via CNBC) ↗</a>
+        </div>
+        <h3>After the remote-access rule took effect, thousands of B300s hit the resale market — inventory built for Chinese customers is looking for new buyers</h3>
+        <p>On November 26, DigitalToday reported, citing CNBC, that listings of Nvidia GPUs rose sharply after Washington issued a new round of controls on November 16. The rules restrict not only direct sales of advanced chips to Chinese firms but also the model of renting high-performance GPUs in third-country data centres and calling them remotely.</p>
+        <p>Specifically, the Commerce Department&#39;s Bureau of Industry and Security issued an interim final rule meant to close routes around export controls, effective November 19. That means Chinese companies remotely using Nvidia GPUs hosted in data centres in Southeast Asia and elsewhere are now covered.</p>
+        <p>Jack Duhamel of GPU marketplace GPU Mart said the surge in supply is directly tied to the new rule, with one seller explicitly linking an offer to the latest regulatory requirements. Two people with knowledge of the matter said the inventory now flowing to market was mainly stockpiled for Chinese customers&#39; overseas data-centre leases; Nvidia&#39;s next-generation B300 is among it, with offers covering thousands of units appearing after the rule was published.</p>
+        <p>US Trade Representative Jamie Greer said on CNBC&#39;s Squawk Box that the point of the rule is to shut the bypass routes, including transshipment through Southeast Asia and remote access via third-country data centres. Nvidia declined to comment; CFO Colette Kress said on the November 17 earnings call that the company is assessing the impact and still expects solid results given demand far exceeding supply. A remote-access security bill has passed the House and awaits Senate action.</p>
+        <p class="why"><b>Take</b>This is a case study in how a rule becomes inventory: chips ordered for a specific customer and a specific lease turned from capacity under construction into assets for disposal within 72 hours of the rule changing, with the price set by whoever takes the other side last. For buyers that means discounted supply; for sellers it means the asset&#39;s duration was shortened by policy rather than by depreciation. Two numbers to watch: the actual discount on B300 deals, and which jurisdiction the racks end up in — that is where the next round of controls will draw its line.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 25, 09:13 and November 26, 10:00 (Beijing time): 8 stories. Compiled at 11/26 10:00.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 031 · 24h window · Generated 2026-11-26 10:00</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI Daily</a>
+        <a href="../../economy.html">Economic Daily</a>
+        <a href="../../education.html">Education Daily</a>
+        <a href="../../psychology.html">Psychology Daily</a>
+        <a href="../../tools.html">Tools</a>
+        <a href="../../wish.html">Wish</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="../../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

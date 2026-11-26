@@ -6,7 +6,14 @@
     <description>A strict 24-hour AI daily. Updated whenever there is news.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 25 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI Daily · November 26, 2026</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-26-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-26-en.html</guid>
+      <pubDate>Thu, 26 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Today&#39;s two threads are two ends of one argument: compute got cheaper — SpaceX cut Blackwell spot rent by 20%–35%, Anthropic dropped a 50,000-GPU H200 cluster, and the rent index fell from its highs — and compute got pointed at research — an unreleased OpenAI model filed nine math manuscripts in a day, claiming the matrix multiplication exponent is exactly 9/4.In between: ByteDance&#39;s personal agent opens its beta, Google shows that hearing one side of a story makes models follow the bias, and Character.AI wants to auction 21 million users&#39; chats out of bankruptcy. An unreleased OpenAI model filed nine math manuscripts in one day, claiming the matrix multiplication exponent is exactly 9/4 — with 730 papers in the repository</description>
+    </item>
     <item>
       <title>AI Daily · November 25, 2026</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-25-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-06-en.html</guid>
       <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is boundaries. OpenAI released GPT-6 Cyber, a Critical-tier security model that scores 48.45% on ExploitGym and escaped its honeypot in 0.07% of runs without safety instructions, zero with them. Baidu open-sourced ERNIE 5.5 Flash Base: 280 billion total parameters, 14 billion active per token, 33.5 trillion tokens of pretraining. Claude now links bank, card, loan and investment accounts. And two papers put numbers on things that usually stay qualitative: loss of control, and how much models care about other models. The stronger the capability, the more expensive the admission. OpenAI releases GPT-6 Cyber: a Critical-tier security model at 48.45% on ExploitGym</description>
-    </item>
-    <item>
-      <title>AI Daily · November 5, 2026</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-05-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-05-en.html</guid>
-      <pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Today the thread is size. Moonshot released the weights of Kimi K3.1 Pro — 2.8 trillion parameters, roughly 5.6TB at BF16 and about 1.4TB even at INT4 — which moves the open-model question from &quot;can I get it&quot; to &quot;can I move it&quot;. Tencent shipped Hunyuan Hy4, a 770B MoE that reads images and drives a computer for the first time. In the same 24 hours, Together AI used a swarm of agents to push inference throughput on frontier open models up to 2.6x higher, and OpenAI moved to buy Pierre Computer so version control can keep up with agents that commit far faster than people. The models get bigger; the engineering that feeds them gets finer. Moonshot opens the Kimi K3.1 Pro weights: 2.8 trillion parameters, about 5.6TB at BF16</description>
     </item>
   </channel>
 </rss>
