@@ -1,0 +1,22 @@
+[Unit]
+Description=Kaixinguor daily report (%i)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=kaixinguor
+Group=kaixinguor
+WorkingDirectory=/opt/kaixinguor/site
+Environment=HOME=/home/kaixinguor
+Environment=DSH_HOME=/var/lib/kaixinguor/.dsh
+# 无人值守：沙箱放开到 danger-full-access（approval 自动变成 never），
+# 进程本身只跑在 kaixinguor 这个普通用户下。
+Environment=DSH_PERMISSION_MODE=danger-full-access
+Environment=TZ=Asia/Shanghai
+EnvironmentFile=/etc/kaixinguor/dsh.env
+EnvironmentFile=-/etc/kaixinguor/notify.env
+ExecStart=/opt/kaixinguor/bin/run-daily.sh %i
+TimeoutStartSec=11400
+Nice=10
+# 一次跑完就退出；失败时 systemd 记录在 journal，通知由 run-daily.sh 发

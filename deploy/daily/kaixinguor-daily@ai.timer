@@ -1,0 +1,11 @@
+[Unit]
+Description=Kaixinguor AI日报 timer (08:00 Asia/Shanghai)
+
+[Timer]
+OnCalendar=*-*-* 08:00:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=kaixinguor-daily@ai.service
+
+[Install]
+WantedBy=timers.target

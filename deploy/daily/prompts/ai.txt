@@ -1,0 +1,14 @@
+执行今天的 AI 日报（__DATE__，北京时间）。
+
+工作目录 /opt/kaixinguor/site。先读 docs/每日四报统一规则.md 和 docs/每日生成任务.md，并使用 .dsh/skills/kaixinguor-daily 技能；窗口、检索、核验、双语写作、自检全部按这两份文档执行，不要凭印象简化。
+
+硬性要求：
+1. 窗口终点用现在的时间，起点接上一期 daily-ai 的 windowEnd；只收发布时间落在窗口内的报道，境外来源先换算成北京时间。
+2. 每条候选都要打开原文核对标题、发布时间、正文首段；403、登录墙、软 404、只有搜索摘要的一律换源或删条，不许凭标题补写。
+3. 中英双稿成对产出：daily-ai/web/__DATE__.html 与 daily-ai/web/__DATE__-en.html，期号 +1，四份共用同一窗口终点。
+4. 发布前自检全绿：parseIssue、node scripts/coverage.mjs check、node scripts/check-links.mjs、npm run style。
+5. 发布：node scripts/publish-daily.mjs daily-ai/web/__DATE__.html --en daily-ai/web/__DATE__-en.html --push
+6. 发布成功后同步到线上：/opt/kaixinguor/bin/sync-site.sh --no-build
+7. 只改本版块的文件（daily-ai/、templates/、必要的 scripts/）。不要动 docs/、deploy/、其它三份日报，不要 git push --force，不要 --allow-bad-links 硬发。
+
+任何一步失败就停下，把卡住的命令和原因写进最后一段输出，不要假装成功。

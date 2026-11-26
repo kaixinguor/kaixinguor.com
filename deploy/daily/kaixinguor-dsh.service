@@ -1,6 +1,6 @@
 [Unit]
 Description=Kaixinguor DSH Web (AI Daily scheduler)
-Documentation=file:///opt/kaixinguor/site/docs/%E6%AF%8F%E6%97%A5%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1.md
+Documentation=file:/opt/kaixinguor/site/docs/每日定时任务.md
 After=network-online.target
 Wants=network-online.target
 
