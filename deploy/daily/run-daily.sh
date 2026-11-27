@@ -166,7 +166,10 @@ if [ "$RC" -eq 0 ]; then
   fi
 
   SOCIAL=""
-  [ -d "$SITE_DIR/$URL_PART/social/${DATE}/wechat" ] && SOCIAL="\n配图已提交：${URL_PART}/social/${DATE}/"
+  if [ -d "$SITE_DIR/$URL_PART/social/${DATE}/wechat" ] && [ -r /etc/kaixinguor/social-token ]; then
+    TOKEN="$(tr -d '[:space:]' < /etc/kaixinguor/social-token)"
+    SOCIAL="\n配图（手机点开长按存图）：https://kaixinguor.com/ks-${TOKEN}/${DATE}/"
+  fi
   "$NOTIFY" success "${LABEL} ${DATE} 已发布（${MIN} 分） https://kaixinguor.com/${URL_PART}/${DATE}${SOCIAL}" || true
 elif [ "$RC" -eq 124 ] || [ "$RC" -eq 137 ]; then
   "$NOTIFY" failure "${LABEL} ${DATE} 超时 ${MIN} 分被终止，见 $LOG" || true
