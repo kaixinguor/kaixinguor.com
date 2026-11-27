@@ -1,5 +1,6 @@
 /* 公众号「图片消息」成品图的 HTML 模板。
-   设计语言与站点 style.css 同源：暖纸、墨色、朱红、衬线标题、等宽元信息、发丝线。
+   设计语言与站点 style.css 同源：深色纸、米白墨色、朱红、衬线标题、等宽元信息、发丝线。
+   站点默认深色，配图也固定用深色方案（与网页 [data-theme="dark"] 的 tokens 对齐）。
    画布固定 1242×1656（3:4），截图时缩放到 1080×1440 输出。 */
 
 import { escapeHtml, stripTags } from "../lib/issue.mjs";
@@ -8,11 +9,11 @@ export const CANVAS = { width: 1242, height: 1656 };
 export const WECHAT_SCALE = 1080 / 1242;
 
 export const CHAPTER_COLORS = {
-  model: "#a83a1e",
-  product: "#2f5d8a",
-  research: "#2e6b5e",
-  robot: "#7a4553",
-  capital: "#8a6a1f"
+  model: "#e8805f",
+  product: "#7fb0db",
+  research: "#79c1ad",
+  robot: "#cf8fa0",
+  capital: "#d9b665"
 };
 
 const WEEKDAY_ZH = {
@@ -116,14 +117,14 @@ function weekdayZh(issue) {
 }
 
 function chapterColor(card) {
-  return CHAPTER_COLORS[card.cat] || "#b23a1e";
+  return CHAPTER_COLORS[card.cat] || "#e8805f";
 }
 
 const CSS = `
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --paper:#f7f3ed;--paper-2:#fffdf9;--ink:#16120e;--ink-2:#413a33;--muted:#7d7368;
-  --line:#ddd2c2;--line-soft:#e9e1d4;--accent:#b23a1e;
+  --paper:#14110f;--paper-2:#1c1815;--ink:#f2ece3;--ink-2:#cfc5b6;--muted:#948a7d;
+  --line:#302922;--line-soft:#262019;--accent:#e8805f;
   --serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC","Noto Serif SC",Georgia,serif;
   --sans:"PingFang SC","Noto Sans CJK SC","Source Han Sans SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   --mono:"SF Mono",ui-monospace,Menlo,Consolas,"Liberation Mono",monospace;
@@ -140,8 +141,8 @@ body{
 .page::before{
   content:"";position:absolute;inset:0;pointer-events:none;
   background:
-    radial-gradient(900px 620px at 88% -6%, rgba(178,58,30,.05), transparent 62%),
-    radial-gradient(700px 520px at -10% 104%, rgba(47,93,138,.035), transparent 64%);
+    radial-gradient(900px 620px at 88% -6%, rgba(232,128,95,.10), transparent 62%),
+    radial-gradient(700px 520px at -10% 104%, rgba(127,176,219,.06), transparent 64%);
 }
 .top{
   position:relative;z-index:3;display:flex;align-items:flex-end;justify-content:space-between;
@@ -195,7 +196,7 @@ body{
   font-family:var(--mono);font-size:16px;letter-spacing:.07em;color:var(--muted);
   padding-bottom:16px;
 }
-.cover-stats .pill{border:1px solid var(--line);background:rgba(255,253,249,.6);padding:8px 13px;border-radius:2px}
+.cover-stats .pill{border:1px solid var(--line);background:rgba(255,255,255,.045);padding:8px 13px;border-radius:2px}
 .cover-stats .sep{opacity:.5}
 .cover-index{margin-top:36px;border-top:3px solid var(--ink);padding-top:18px;flex:none}
 .cover-index .ci-h{font-family:var(--mono);font-size:15px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:6px}
@@ -208,7 +209,7 @@ body{
 }
 .watermark{
   position:absolute;z-index:0;right:-30px;bottom:88px;font-family:var(--serif);font-weight:700;
-  font-size:430px;line-height:.8;letter-spacing:-.07em;color:rgba(178,58,30,.055);white-space:nowrap;
+  font-size:430px;line-height:.8;letter-spacing:-.07em;color:rgba(232,128,95,.07);white-space:nowrap;
 }
 
 /* ---------- 重点新闻 ---------- */
@@ -218,7 +219,7 @@ body{
 }
 .chap{display:flex;align-items:center;gap:18px;min-width:0}
 .chap .no{
-  font-family:var(--mono);font-size:17px;letter-spacing:.08em;color:#fff;background:var(--c);
+  font-family:var(--mono);font-size:17px;letter-spacing:.08em;color:#14110f;background:var(--c);
   padding:8px 10px;border-radius:2px;line-height:1;flex:none;
 }
 .chap .name{font-family:var(--serif);font-size:40px;font-weight:700;line-height:1;white-space:nowrap}
@@ -239,7 +240,7 @@ body{
   text-wrap:pretty;
 }
 .why{
-  margin-top:34px;background:rgba(255,253,249,.78);border-left:5px solid var(--c);
+  margin-top:34px;background:rgba(255,255,255,.045);border-left:5px solid var(--c);
   padding:26px 30px 28px;border-radius:2px;
 }
 .why .lab{font-family:var(--mono);font-size:15px;letter-spacing:.2em;color:var(--c);font-weight:700;margin-bottom:10px}
@@ -250,7 +251,7 @@ body{
 }
 .story-wm{
   position:absolute;z-index:0;right:-18px;bottom:118px;font-family:var(--serif);font-weight:700;
-  font-size:520px;line-height:.78;letter-spacing:-.08em;color:rgba(22,18,14,.045);white-space:nowrap;
+  font-size:520px;line-height:.78;letter-spacing:-.08em;color:rgba(242,236,227,.05);white-space:nowrap;
 }
 
 /* ---------- 速览 ---------- */
@@ -286,7 +287,7 @@ function disclaimerHtml(issue) {
 }
 
 function shell(issue, { body, cat = "", cls = "", footLeft = "", footRight = "" }) {
-  const color = CHAPTER_COLORS[cat] || "#b23a1e";
+  const color = CHAPTER_COLORS[cat] || "#e8805f";
   const brandZh = issue.brandZh || "AI 日报";
   const brandEn = issue.brandEn || "Daily AI Brief";
   const foot = footLeft || footRight

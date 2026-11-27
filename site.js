@@ -1,5 +1,5 @@
 /* kaixinguor · 全站共用的小脚本
-   1. 深浅色切换（跟随系统 + localStorage）
+   1. 深浅色切换（默认深色，用户手动选过才记 localStorage）
    2. 日报阅读进度条
    3. 目录锚点兜底滚动
    4. 工具页标签筛选
@@ -9,19 +9,8 @@
 
   var root = document.documentElement;
   var THEME_KEY = "kaixinguor.theme";
-  var mql = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
   /* ---------- 1. 深浅色 ---------- */
-  function storedTheme() {
-    try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
-  }
-
-  function preferredTheme() {
-    var saved = storedTheme();
-    if (saved === "dark" || saved === "light") return saved;
-    return mql && mql.matches ? "dark" : "light";
-  }
-
   function paintTheme(mode) {
     if (mode === "dark") root.setAttribute("data-theme", "dark");
     else root.removeAttribute("data-theme");
@@ -60,14 +49,6 @@
     var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
     setTheme(next, true);
   });
-
-  if (mql) {
-    var onChange = function () {
-      if (!storedTheme()) setTheme(mql.matches ? "dark" : "light", false);
-    };
-    if (mql.addEventListener) mql.addEventListener("change", onChange);
-    else if (mql.addListener) mql.addListener(onChange);
-  }
 
   window.addEventListener("storage", function (e) {
     if (e.key === THEME_KEY) paintTheme(e.newValue === "dark" ? "dark" : "light");

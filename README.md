@@ -12,11 +12,13 @@
 - `/daily-psychology/web/YYYY-MM-DD.html`、`/daily-psychology/web/YYYY-MM-DD-en.html` = 心理学日报中英文
 - `/feed.xml` / `/feed-en.xml` = AI 日报 RSS；`/feed-economy.xml` / `/feed-economy-en.xml` = 经济日报 RSS；`/feed-education.xml` / `/feed-education-en.xml` = 教育日报 RSS；`/feed-psychology.xml` / `/feed-psychology-en.xml` = 心理学日报 RSS
 
-视觉语言来自 `ai-daily/2026-10-26.html`，抽成了 `style.css`；日报、首页、工具、许愿共用同一套 tokens 和组件。
+视觉语言来自 `ai-daily/2026-10-26.html`，抽成了 `style.css`；日报、首页、工具、许愿共用同一套 tokens 和组件。站点**默认深色**（`#14110f` 纸色 + `#f2ece3` 墨色 + `#e8805f` 朱红），右上角 ◐ 可切到日间。
 
 日报每期都有中文和英文两个页面；首页直接显示整份日报，并根据站点语言只显示中文或英文其中一版，不会上下堆叠。往期抽屉也同步切换。
 
 站点**首次访问默认英文**：`localStorage` 里没有 `kaixinguor.lang` 时按英文渲染，右上角的「中文 / EN」按钮切换后会把选择存下来。改默认语言要同时改两处——页面 `<head>` 里的预渲染脚本和 `lang.js` 里的 `const saved`。
+
+站点**首次访问默认深色**：没有存过 `kaixinguor.theme` 时一律按 `data-theme="dark"` 渲染；只有手动点过切换才会写入 `light`。改默认主题要同时改三处——页面 `<head>` 的内联脚本（现为 `t = "dark"`）、`site.js`、以及 `templates/issue.html`。公众号配图（`scripts/social/template.mjs`）也固定使用同一套深色 tokens。
 
 ---
 
@@ -186,6 +188,6 @@ npm run stage          # dist/site/
 - **工具页用标签**：全部 / 听课 / 阅读 / 许愿，标签只列已经有内容的分类；计数从卡片自动算，加工具时只加一张卡。
 - **全站一套视觉**：日报的纸张色、墨色、朱红、衬线/等宽三层字体、发丝线、栏目色条，全部收进 `style.css`；产品子站也换上了同一套页头和页脚。
 - **日报双语**：每期同时生成中文页和英文页；英文不是逐字直译，按标准英语重写标题、导语、摘要和「看点」。首页、往期抽屉、RSS 都按语言分开。
-- **页脚**：`源泉混混，不舍昼夜，盈科而后进，放乎四海。——《孟子·离娄下》`；英文用对应译文。
+- **页脚**：`源泉混混，不舍昼夜，盈科而后进，放乎四海。——《孟子·离娄下》`；英文用对应译文。页脚同时放 ICP 备案和公安联网备案：图标 `assets/gongan-beian.png`，链接 `京公网安备11010502064434号`，新页面别漏。
 - **日报脚注**：固定声明（与配图封面底部、公众号文案里的一字不差）——本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。
 - **更新链路**：生成 → `publish-daily.mjs` → GitHub → Cloudflare Pages。RSS 兜底，不依赖任何推送服务。
