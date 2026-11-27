@@ -99,6 +99,10 @@ if [ "$RC" -eq 0 ]; then
   ISSUE="$(grep -o "第 [0-9]\+ 期" "$SITE_DIR/$URL_PART/web/${DATE}.html" 2>/dev/null | head -1)"
   if [ -n "$(git status --porcelain)" ]; then
     git add -A >>"$LOG" 2>&1 || true
+    # 配图目录在 .gitignore 里（避免把历史几十天一起塞进仓库），只强制加当天那一份
+    if [ -d "$SITE_DIR/daily-ai/social/${DATE}" ]; then
+      git add -f "daily-ai/social/${DATE}" >>"$LOG" 2>&1 || true
+    fi
     if ! git -c user.name="kaixinguor daily" -c user.email="daily@kaixinguor.com" \
          commit --quiet -m "${URL_PART}: ${DATE} ${ISSUE:-日报}（服务器自动）" >>"$LOG" 2>&1; then
       echo "==> 警告：本地提交失败，见日志" | tee -a "$LOG"
