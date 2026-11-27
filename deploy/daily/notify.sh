@@ -32,10 +32,17 @@ json_escape() {
   if command -v jq >/dev/null 2>&1; then
     jq -nc --arg t "$TITLE" --arg b "$MESSAGE" '{title:$t,body:$b}'
   else
-    # 没有 jq 时至少保证 JSON 字符串合法；只用于 Bark 通道。
-    local t b
-    t=$(printf '%s' "$TITLE" | sed 's/\\/\\\\/g; s/"/\\"/g')
-    b=$(printf '%s' "$MESSAGE" | sed 's/\\/\\\\/g; s/"/\\"/g')
+    # 没有 jq 时至少保证 JSON 字符串合法（含换行）；只用于 Bark 通道。
+    local t b esc
+    esc() {
+      if command -v perl >/dev/null 2>&1; then
+        perl -0777 -pe 's/\\/\\\\/g; s/"/\\"/g; s/\r//g; s/\n/\\n/g'
+      else
+        sed 's/\\/\\\\/g; s/"/\\"/g' | awk 'BEGIN{ORS=""} NR>1{print "\\n"} {print}'
+      fi
+    }
+    t=$(printf '%s' "$TITLE" | esc)
+    b=$(printf '%s' "$MESSAGE" | esc)
     printf '{"title":"%s","body":"%s"}' "$t" "$b"
   fi
 }
