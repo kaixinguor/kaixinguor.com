@@ -76,6 +76,17 @@ for (const name of dirs) {
   if (fs.existsSync(source)) copyDir(source, path.join(DIST, name));
 }
 
+// 统一读权限：写文件工具常把源文件落成 600，rsync 保持 600 后 nginx 会 403
+function fixPerms(dir) {
+  fs.chmodSync(dir, 0o755);
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const target = path.join(dir, entry.name);
+    if (entry.isDirectory()) fixPerms(target);
+    else if (entry.isFile()) fs.chmodSync(target, 0o644);
+  }
+}
+fixPerms(DIST);
+
 // GitHub Pages / 某些静态托管会跳过下划线开头的文件，放个标记
 fs.writeFileSync(path.join(DIST, ".nojekyll"), "");
 
