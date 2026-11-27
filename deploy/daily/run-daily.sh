@@ -147,7 +147,9 @@ if [ "$RC" -eq 0 ]; then
     exit 5
   fi
 
-  "$NOTIFY" success "${LABEL} ${DATE} 已发布（${MIN} 分） https://kaixinguor.com/${URL_PART}/${DATE}" || true
+  SOCIAL=""
+  [ -d "$SITE_DIR/$URL_PART/social/${DATE}/wechat" ] && SOCIAL="\n配图：https://kaixinguor.com/social/${DATE}/"
+  "$NOTIFY" success "${LABEL} ${DATE} 已发布（${MIN} 分） https://kaixinguor.com/${URL_PART}/${DATE}${SOCIAL}" || true
 elif [ "$RC" -eq 124 ] || [ "$RC" -eq 137 ]; then
   "$NOTIFY" failure "${LABEL} ${DATE} 超时 ${MIN} 分被终止，见 $LOG" || true
 else

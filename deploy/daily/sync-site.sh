@@ -45,6 +45,18 @@ fi
 echo "==> 生成 dist/site/"
 node scripts/stage.mjs
 
+# 公众号配图不进 git（.gitignore），但每天要能取到：只把"当天"那一份放进站点，
+# 旧的由下面的 rsync --delete 自动清掉，站点不会越滚越大。
+TODAY="$(TZ=Asia/Shanghai date +%F)"
+for sec in daily-ai daily-economy daily-education daily-psychology; do
+  SRC="$SITE_DIR/$sec/social/$TODAY"
+  [ -d "$SRC" ] || continue
+  mkdir -p "dist/site/social/$TODAY"
+  cp -R "$SRC/wechat" "dist/site/social/$TODAY/" 2>/dev/null || true
+  [ -f "$SRC/公众号-图片消息.md" ] && cp "$SRC/公众号-图片消息.md" "dist/site/social/$TODAY/" || true
+  echo "==> 配图打点：/social/$TODAY/（$sec）"
+done
+
 echo "==> 同步到 $TARGET_DIR"
 rsync -a --delete \
   --exclude '_headers' \
