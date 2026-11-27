@@ -2,7 +2,6 @@
 dist/
 node_modules/
 *.log
-daily-ai/social/
 daily-economy/social/
 __pycache__/
 *.pyc
