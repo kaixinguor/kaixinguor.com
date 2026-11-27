@@ -45,6 +45,11 @@ fi
 echo "==> 生成 dist/site/"
 node scripts/stage.mjs
 
+# agent 用写文件工具新建的 HTML 常是 600，nginx（www-data）读不到 → 新一期直接 403。
+# 今天真踩过：发布后新页 403、旧页 200。统一放开读权限再同步。
+find dist/site -type d -exec chmod 755 {} + 2>/dev/null || true
+find dist/site -type f -exec chmod 644 {} + 2>/dev/null || true
+
 echo "==> 同步到 $TARGET_DIR"
 rsync -a --delete \
   --exclude '_headers' \
