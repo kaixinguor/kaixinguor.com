@@ -1,7 +1,7 @@
 // 极简双语：中文写在 HTML 里，英文放这张表。
 // <span data-i18n="key">中文</span> → 切换时替换成英文。
 // 表里缺的键会保持中文（说明那段还没翻）。
-// 首次访问默认英文（localStorage 里没有选择时）；用户切过就记住选择。
+// 首次访问默认中文（localStorage 里没有选择时）；用户切过就记住选择。
 // 日报正文不走这张表：首页的整份日报按 data-lang 分成中英两块，切换时整块显示/隐藏。
 
 const I18N = {
@@ -113,7 +113,7 @@ const I18N = {
   const titleZh = document.title;
   const titleEn = document.documentElement.getAttribute("data-title-en") || "";
 
-  // 存了偏好就用偏好；存储被禁用（无痕模式、站点数据被拦）时按默认英文走，不让整页脚本挂掉。
+  // 存了偏好就用偏好；存储被禁用（无痕模式、站点数据被拦）时按默认中文走，不让整页脚本挂掉。
   function readLang() {
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
   }
@@ -160,15 +160,15 @@ const I18N = {
 
   window.toggleLang = function () {
     // 以当前渲染出来的语言为准，而不是 localStorage：首次访问没有存值，
-    // 但页面可能已经是默认的英文，按存值判断会点了没反应。
+    // 但页面可能已经是默认的中文，按存值判断会点了没反应。
     const current = document.documentElement.lang === "en" ? "en" : "zh";
     const next = current === "en" ? "zh" : "en";
     writeLang(next);
     apply(next);
   };
 
-  // 首次访问默认英文；用户点过切换后以 localStorage 里的选择为准。
-  const saved = readLang() || "en";
+  // 首次访问默认中文；用户点过切换后以 localStorage 里的选择为准。
+  const saved = readLang() || "zh";
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () { apply(saved); });
   } else {

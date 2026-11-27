@@ -16,7 +16,7 @@
 
 日报每期都有中文和英文两个页面；首页直接显示整份日报，并根据站点语言只显示中文或英文其中一版，不会上下堆叠。往期抽屉也同步切换。
 
-站点**首次访问默认英文**：`localStorage` 里没有 `kaixinguor.lang` 时按英文渲染，右上角的「中文 / EN」按钮切换后会把选择存下来。改默认语言要同时改两处——页面 `<head>` 里的预渲染脚本和 `lang.js` 里的 `const saved`。
+站点**首次访问默认中文**：`localStorage` 里没有 `kaixinguor.lang` 时按中文渲染，右上角的「中文 / EN」按钮切换后会把选择存下来。改默认语言要同时改两处——页面 `<head>` 里的预渲染脚本和 `lang.js` 里的 `const saved`。
 
 站点**首次访问默认深色**：没有存过 `kaixinguor.theme` 时一律按 `data-theme="dark"` 渲染；只有手动点过切换才会写入 `light`。改默认主题要同时改三处——页面 `<head>` 的内联脚本（现为 `t = "dark"`）、`site.js`、以及 `templates/issue.html`。公众号配图（`scripts/social/template.mjs`）也固定使用同一套深色 tokens。
 
