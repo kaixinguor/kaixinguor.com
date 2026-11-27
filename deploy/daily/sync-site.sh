@@ -56,8 +56,11 @@ if [ -r "$TOKEN_FILE" ] && [ -d "$SITE_DIR/daily-ai/social/$TODAY/wechat" ]; the
   DEST="dist/site/ks-${TOKEN}/${TODAY}"
   mkdir -p "$DEST/wechat"
   cp -R "$SITE_DIR/daily-ai/social/$TODAY/wechat/." "$DEST/wechat/"
-  [ -f "$SITE_DIR/daily-ai/social/$TODAY/公众号-图片消息.md" ] && \
+  if [ -f "$SITE_DIR/daily-ai/social/$TODAY/公众号-图片消息.md" ]; then
     cp "$SITE_DIR/daily-ai/social/$TODAY/公众号-图片消息.md" "$DEST/"
+    # .md 在手机上往往会触发下载，另存一份纯文本，Safari 直接显示、方便长按复制
+    cp "$SITE_DIR/daily-ai/social/$TODAY/公众号-图片消息.md" "$DEST/文案.txt"
+  fi
   {
     printf '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
     printf '<meta name="viewport" content="width=device-width,initial-scale=1">'
