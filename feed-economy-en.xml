@@ -6,7 +6,14 @@
     <description>An economy daily: central banks, growth and the companies that book the profit.</description>
     <language>en</language>
     <atom:link href="https://kaixinguor.com/feed-economy-en.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 26 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Economic Daily · November 27, 2026</title>
+      <link>https://kaixinguor.com/daily-economy/web/2026-11-27-en.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-27-en.html</guid>
+      <pubDate>Fri, 27 Nov 2026 01:00:00 GMT</pubDate>
+      <description>This issue starts with two balance sheets. The Bank of England cut bank capital requirements by another 30 basis points on November 26, taking system-wide Tier 1 requirements to 12.8% from 13.1% and saying the package could free about £100bn of lending capacity. Its Financial Stability Report also warned that AI-related financing has become complex, circular and opaque, with hyperscaler bond issuance set to exceed $305bn in 2026, or 8% of global investment-grade supply. Across the Atlantic, the US proposed Section 301 tariffs on 14 economies on November 25, with a stacked 20% on China that could rise to 40% and an earliest effective date of January 2027. At home, two price lines moved: fuel prices fell Rmb440 and Rmb425 a tonne from midnight, the seventh cut this year, and the new services-trade plan split producer and consumer services into two tracks, with 25 tasks. In industry, an attack on Saudi Arabia&#39;s Jizan refinery lifted Brent by 2.07% to $96.57; Kelai Mechatronics got an exchange letter after five limit-ups; and China Merchants Shekou moved Rmb19bn of its own cash into Nanyou.Capital rules, tariffs and oil: three balance sheets repriced on the same day. Bank of England cuts bank capital requirements by 30bp and says it can free about £100bn for lending</description>
+    </item>
     <item>
       <title>Economic Daily · November 26, 2026</title>
       <link>https://kaixinguor.com/daily-economy/web/2026-11-26-en.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-07-en.html</guid>
       <pubDate>Sat, 07 Nov 2026 01:00:00 GMT</pubDate>
       <description>Today&#39;s thread is who pays for a higher rate. US payrolls added 165,000 jobs in October and unemployment fell to 4.1%, with upward revisions of 84,000 and December hike odds at 76.8%. Beijing answered with cash flow: the State Council told ministries to get policy funds to grassroots and firms on time and to formalise the market-stabilisation mechanism, while October reserves rose $4.9 billion to $3.4052 trillion. Hong Kong fell 1.27%, excavator sales growth slowed to 11.8%, and CNOOC signed $13.6 billion of CIIE purchase deals. Data sets the rate; balance sheets absorb the bill. US payrolls add 165,000 in October, unemployment falls to 4.1% and December hike odds reach 76.8%</description>
-    </item>
-    <item>
-      <title>Economic Daily · November 6, 2026</title>
-      <link>https://kaixinguor.com/daily-economy/web/2026-11-06-en.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-economy/web/2026-11-06-en.html</guid>
-      <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
-      <description>Today&#39;s thread is the discount rate. US stocks crashed on November 5: the Nasdaq fell 5.52%, the Dow lost 1,833 points and tech dropped 7.30%. The Bank of England raised Bank Rate 25bp to 4% on an 8-1 vote, with energy doing the pushing. A-shares followed on November 6, ChiNext down 3.96% on shrinking turnover, while the PBOC fully satisfied 226 billion yuan of overnight reverse repos. Politics changed the discount rate, not this quarter&#39;s earnings. US stocks crash on November 5: Nasdaq down 5.52%, Dow down 1,833 points</description>
     </item>
   </channel>
 </rss>
