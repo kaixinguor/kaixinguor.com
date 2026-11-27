@@ -70,17 +70,17 @@
           <span class="zh">AI 日报</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">第 031 期</span>
+          <span class="issue-tag">第 032 期</span>
         </div>
-        <h1 class="date">2026 年 11 月 26 日<span class="weekday">THU</span></h1>
-        <p class="deck">今天最值得对照的是两件事：一边是模型在数学上给出可形式化检查的结果，另一边是算力现货价格开始松动。中间还有三条产品与安全新闻：ChatGPT 合并额度、字节小豆公测、Character.AI 拍卖用户聊天记录被 42 位总检察长拦下。<em>这四条放在一起看，能力、成本、权限三条线各自往前走了一步。</em></p>
-        <div class="metabar"><span class="pill">第 031 期</span>
+        <h1 class="date">2026 年 11 月 27 日<span class="weekday">FRI</span></h1>
+        <p class="deck">出口管制从芯片买卖延伸到服务器交付和云端租用。英伟达暂停向东南亚四国发货，90 天许可窗口开始计时；同一天，腾讯把长文本解码提速 3.2 倍，瑞士则确认四起 AI 智能体入侵。算力、成本、安全三条线都在收紧。</p>
+        <div class="metabar"><span class="pill">第 032 期</span>
       <span class="dot"></span>
-      <span>窗口 11/25 09:13 – 11/26 10:00</span>
+      <span>窗口 11/26 10:00 – 11/27 08:00</span>
       <span class="dot"></span>
-      <span>8 条</span>
+      <span>9 条</span>
       <span class="dot"></span>
-      <span>阅读约 13 分钟</span></div>
+      <span>阅读约 14 分钟</span></div>
       </div>
     </header>
 
@@ -88,11 +88,11 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-zh"><span class="n">00</span>速览</a>
-        <a href="#models-zh"><span class="n">01</span>模型与能力</a>
-        <a href="#products-zh"><span class="n">02</span>产品与智能体</a>
-        <a href="#research-zh"><span class="n">03</span>研究与安全</a>
-        <a href="#embodied-zh"><span class="n">04</span>具身智能</a>
-        <a href="#capital-zh"><span class="n">05</span>行业与资本</a>
+        <a href="#capital-zh"><span class="n">01</span>行业与资本</a>
+        <a href="#models-zh"><span class="n">02</span>模型与能力</a>
+        <a href="#products-zh"><span class="n">03</span>产品与智能体</a>
+        <a href="#research-zh"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied-zh"><span class="n">05</span>具身智能</a>
         </div>
       </div>
     </nav>
@@ -101,21 +101,59 @@
       <ol class="tldr" id="tldr-zh">
     <li>
       <span class="idx">01</span>
-      <p><b>OpenAI 的内部模型一天交出了九篇数学手稿，其中一篇宣称把矩阵乘法指数精确钉在 9/4，也就是 2.25。</b>此前学界已经证明 9/4 是上界，这份手稿称补上了匹配的下界。OpenAI 说这些材料主要由一个尚未公开的内部模型生成，是评估能力时留下的原始研究数据；仓库现有 730 篇手稿、375 个研究系列，约 42% 的顶层结果完成形式化。</p>
+      <p><b>英伟达暂停向马来西亚、新加坡、泰国、印尼交付服务器。</b>美国商务部堵住远程租算力通道后，东南亚云商有 90 天申请许可，并要证明终端客户不受限。据 Institute for Progress 估算，这类远程数据中心曾供给中国约 24% 的 AI 算力。</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>SpaceX 把小规模 Blackwell 集群的现货租金从每 GPU 每小时约 15 至 15.5 美元下调到 10 至 12 美元，降幅 20%–35%。</b>同一份 SemiAnalysis 报告里，Anthropic 不再续租约 5 万块 H200 组成的集群，SpaceX 正以每小时约 5 美元重新招租，比 Ornn 记录的 H200 成交价低约 23%。</p>
+      <p><b>中国“星算”计划的 Libra 卫星搭载 Qwen3-32B，在轨连续训练 45 分 33 秒。</b>中国信通院称，国星宇航的液冷和辐射散热翼带走了 10 千瓦级 AI 计算机的热量。另一边，SpaceX 获 FCC 批准最多 100 万颗 Starmind 卫星，2033 年前发射首颗。</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>谷歌研究团队用多智能体模拟测试了 12 款大模型：只听用户单方面转述，模型判断对方真实动机的准确率明显下降，还可能强化用户原有的偏见。</b>团队开源了评估框架和超过 2 万条样本的数据集；更反直觉的是，增加对话轮数不一定有用，模型会维持前后一致，把最初的误判越推越远。</p>
+      <p><b>瑞士联邦网络安全局通报五起 AI 智能体攻击，四起得手。</b>据瑞士公共广播公司 SRF 报道，三家关键基础设施运营方分别属于电力、供水、通信行业。BACS 没有披露幕后主体，也没有公布攻击技术细节。</p>
     </li>
       </ol>
 
-  <section class="chapter" id="models-zh" data-c="models">
+  <section class="chapter" id="capital-zh" data-c="capital">
     <div class="chead">
       <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-26">
+        <div class="cmeta">
+          <span class="d">11/26 19:21</span>
+          <a class="src" href="https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>英伟达暂停向新马泰印尼发服务器，东南亚云商 90 天内要证明客户不受限</h3>
+        <p>英伟达已要求戴尔、超微等制造伙伴暂停向马来西亚、新加坡、泰国、印度尼西亚交付服务器。据《金融时报》报道，暂停没有给出期限，公司要评估当地伙伴是否满足美国的出口要求。</p>
+        <p>这条命令紧跟在商务部收紧远程算力通道之后。过去中国企业通过上述国家的数据中心远程租用英伟达芯片，美国商务部本月把这条路纳入许可管理。现在云服务商有 90 天申请许可，并要证明终端客户里没有受限企业。一位云厂商高管对《金融时报》说，目前没有申请指引，局面“混乱”。</p>
+        <p>智库 Institute for Progress 估算，这类远程数据中心曾供给中国约 24% 的 AI 算力。TechCrunch 报道了这个数字。金融侧已经开始收缩。银行暂停了向新加坡云商 Aolani 发放的约 5 亿美元贷款，这笔钱原计划用于向字节跳动出租算力。字节跳动可能退出交易。</p>
+        <p>转售市场也在动。CNBC 报道，新规公布后，交易商挂牌的英伟达 GPU 明显增多，其中包含数千块 B300。</p>
+        <p class="why"><b>看点</b>管制对象从芯片变成服务器交付和云端租用，等于把监管点前移到机房门口。对要续租东南亚算力的团队，90 天许可就是硬截止；先确认终端客户是否在限制名单，再谈价格。<br><b>另一个视角</b>：5 亿美元贷款被按下暂停键，说明政策风险已经写进银行授信。算力资产的久期，现在由许可证而不是折旧率决定。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 06:12</span>
+          <a class="src" href="https://en.sedaily.com/world/2026/11/27/china-joins-space-data-center-race-challenging-musk" target="_blank" rel="noopener noreferrer">Seoul Economic Daily ↗</a>
+        </div>
+        <h3>中国把 Qwen3-32B 送上天训练 45 分钟，SpaceX 拿到 100 万颗卫星批文</h3>
+        <p>中国信通院完成了 10 月发射的一组算力卫星的性能验证。其中一颗卫星名为 Libra，搭载阿里 Qwen3-32B。它在绕地飞行时连续训练 45 分 33 秒，完成了“做题、分析错题、改进”的完整训练循环。</p>
+        <p>在轨训练最难的是散热。中国信通院称，国星宇航（ADA Space）的液冷系统和加大的辐射散热翼在轨正常工作。它们带走了 10 千瓦级 AI 计算机的热量。作为对照，谷歌用于轨道的 TPU 原型每次约运行 15 分钟。</p>
+        <p>“星算”计划由国星宇航牵头，目标部署 2800 颗卫星。2025 年 5 月发射第一批，今年 10 月发射第二批；目前在轨算力约 50 POPS。</p>
+        <p>另一条消息是，美国 FCC 批准 SpaceX 部署最多 100 万颗 Starmind 卫星，用于轨道数据中心。SpaceX 须在 2033 年 11 月前发射首颗，2035 年前部署 10 万颗。2038 年前部署 50 万颗，2040 年完成全部部署。亚马逊等公司的反对被驳回。</p>
+        <p class="why"><b>看点</b>轨道数据中心拿发射和散热换土地和电力。45 分钟比 15 分钟长，是热管理的进步，不是成本优势；50 POPS 放在地面只是一个中型集群。今天能不能用，取决于每 token 成本、下行带宽和故障率。先看星算下一批卫星是否继续搭载大模型训练，而不是只做推理。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models-zh" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
       <h2>模型与能力</h2>
       <span class="cen">Models &amp; Capability</span>
       <span class="crule"></span>
@@ -124,15 +162,27 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/25 21:12</span>
-          <a class="src" href="https://ishare.ifeng.com/c/s/8yLcoPh2TNS" target="_blank" rel="noopener noreferrer">凤凰网科技 ↗</a>
+          <span class="d">11/26 15:07</span>
+          <a class="src" href="https://github.com/Tencent/AngelSpec" target="_blank" rel="noopener noreferrer">腾讯混元 AngelSpec ↗</a>
         </div>
-        <h3>OpenAI 内部模型一天写了九篇数学手稿，宣称把矩阵乘法指数钉在 9/4</h3>
-        <p>OpenAI 的内部模型一天交出了九篇数学手稿。其中一篇题为《矩阵乘法指数是 9/4》，宣称在其设定的算术计算模型下，方阵乘法的指数正好是 2.25。</p>
-        <p>这个指数通常写作 ω，衡量矩阵变大时运算量的增速。朴素算法约为 n³。此前学界已经证明 9/4 是上界，也就是存在达到这一速度的方法；这份手稿称补上了匹配的下界。</p>
-        <p>手稿给出的下界是：对每个 n≥2 的方阵乘法，形式算术电路至少需要 ⌈n^(9/4)/2⌉ 个非标量乘法或除法门。它针对理论模型，不代表真实芯片上的运行时间。</p>
-        <p>OpenAI 说，这些手稿主要由一个尚未公开的内部模型生成，是评估模型能力时留下的原始研究数据，不是成熟论文。仓库现有 730 篇手稿、375 个研究系列，约 42% 的顶层结果完成形式化。每项入选结果平均用掉约三小时 ChatGPT Pro 的思考算力，整个评估共接收约 4000 个问题。</p>
-        <p class="why"><b>看点</b>三个数比 2.25 更有用。42% 的形式化比例决定结论能否被 Lean 逐行检查；三小时和 4000 个问题决定这类研究的单位成本。要看仓库是否真有价值，盯形式化覆盖率随时间的变化，而非一次发布里最抓眼的定理。<br><b>另一个视角</b>：4000 个问题乘以三小时，是一次约 1.2 万小时的推理评测。对实验室是研究支出；对数学家，是「提出好问题」的位置更靠前了。</p>
+        <h3>腾讯混元开源 DFly2，Hy4 flash 长文本生成快 3.2 倍</h3>
+        <p>腾讯混元 11 月 26 日开源草稿模型 DFly2。它不替换 Hy4 flash，也不改权重和输出。它在旁边做投机采样：先由小模型生成候选词元，再交给目标模型集中验证。</p>
+        <p>DFly2 只适配 DSA 类稀疏注意力模型。它直接读取目标模型已缓存的 KV，以及索引器为每个查询选出的最多 2048 个位置。这样草稿层不用自己维护缓存，注意力开销不随上下文长度增长，也不参与 prefill。</p>
+        <p>腾讯在 19 个公开评测集上对比了 DFlash 和 DSpark。长文本加速约 3.2 倍，单个 AgentLongBench 任务最高 4.2 倍，四项 Agent 任务平均约 3.2 倍。接收长度相对 DSpark 的优势，从短文本的约 4% 扩大到 128K 上下文的约 18%。Agent 任务最高提升 68.5%。</p>
+        <p>权重、训练代码和技术报告已全部开放。除 Hy4 和 Hy4 flash，DFly2 现在也支持 DeepSeek-V4.1-Flash 和 GLM-5.3-Flash。对应的 MoE 草稿模型已放出，训练框架 AngelSpec 支持最高 256K 上下文。</p>
+        <p class="why"><b>看点</b>投机采样是当下最便宜的延迟杠杆，DFly2 的真正优势是零额外 KV 缓存。对推理服务，显存省下来就能多跑并发；对 PD 分离部署，只传一个末层隐状态也省带宽。4.2 倍是单项最好成绩，平均 3.2 倍，且是厂商自测。上线前用自己的流量测接收长度，别只看发布会数字。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 12:02</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6782276.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>上海 AI Lab 开源 9B 全双工模型 Sage，打断后 1.29 秒接回话头</h3>
+        <p>上海人工智能实验室支持的 InternLM 团队在 11 月 25 日开源 Sage-Interaction，次日对外披露。这是一个 9B 参数的全双工全模态模型，基于 MiniCPM-o 4.5 构建。</p>
+        <p>它能一边接收流式音频和视频，一边生成语音。用户打断、短暂应答或背景噪声出现时，对话不会断。和“听完再回答”的语音助手不同，它把实时对话前端和后台智能体分开。前端继续陪聊，复杂推理、工具调用和长任务交给后台，结果回来后再接进当前对话。</p>
+        <p>项目方称，Sage-Interaction 在 FD-Bench v1.5 上得 80.73 分。FD-Bench v1 的轮次切换延迟为 1.29 秒。权重和代码已在 Hugging Face 与 GitHub 开放。</p>
+        <p class="why"><b>看点</b>全双工的门槛不在参数量，在调度。1.29 秒接近人类接话的节奏，但真正的难点是后台任务返回时，前端能不能不抢话、不重复。项目方给的分数是自测；要判断能不能用，得在真实麦克风、噪声和工具延迟下测。下一步看有没有人把它接进电话客服或陪伴产品。</p>
       </article>
 
     </div>
@@ -140,7 +190,7 @@
 
   <section class="chapter" id="products-zh" data-c="products">
     <div class="chead">
-      <span class="cnum">02</span>
+      <span class="cnum">03</span>
       <h2>产品与智能体</h2>
       <span class="cen">Products &amp; Agents</span>
       <span class="crule"></span>
@@ -149,28 +199,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 04:03</span>
-          <a class="src" href="https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
+          <span class="d">11/27 01:28</span>
+          <a class="src" href="https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>ChatGPT 把聊天和工作并成一个额度表，重度 Pro 用户会更早触限</h3>
-        <p>OpenAI 开始向一小批 Pro 订阅用户推送统一的 Chat 与 Work 体验。产品负责人 Thibault Sottiaux 周二在 X 上说了这次更新。更早之前，OpenAI 已通过邮件通知用户要合并。</p>
-        <p>合并后，两种模式共用一套使用额度。用 Instant 模型的对话仍然不限次数，也不计入共享额度；额度用完后，Instant 还能继续用。</p>
-        <p>OpenAI 发言人告诉 TechCrunch，多数用户不会更频繁地触限，但少数最重度的用户可能比过去更早用完。OpenAI 计划在 12 月把共享额度推给更多人。</p>
-        <p>部分付费用户已在社区和社交媒体表达担心：订阅费不变，能用的高级推理次数可能变少。Anthropic 在 9 月已把 Claude 和 Cowork 放进同一个界面。</p>
-        <p class="why"><b>看点</b>合并入口是产品动作，合并额度是成本动作。过去按功能切配额，现在按算力切，等于把「买了几个产品」换成「买了多少 token」。对重度用户，这是一次隐性调价。12 月全面推开后，先看 Pro 用户的触限率，再看 OpenAI 是否调高上限。</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/25 19:53</span>
-          <a class="src" href="https://tech.ifeng.com/c/8yL1QzQwZMt" target="_blank" rel="noopener noreferrer">凤凰网科技 ↗</a>
-        </div>
-        <h3>字节「小豆」公测：能打电话订餐厅、跨城叫车，购物仍锁在抖音商城</h3>
-        <p>字节的个人智能体「小豆」在 11 月 24 日开启邀请制公测，独立于豆包 App。它与豆包共用对话上下文和用户偏好，做出「猜你想要」「帮你跟进」「关于你」三个入口。</p>
-        <p>凤凰网科技的实测里，小豆按实时位置筛出符合条件的餐厅，再致电商家确认包间和团购。用从未用过的高德打车新账号，它也能跑通注册、授权、下单的跨城打车链路。</p>
-        <p>办公侧接入了飞书、企微、钉钉、百度网盘、Apple 提醒事项等。飞书文档没按前一天的批注修改时，小豆会主动弹出提示，并可直接发消息追问。支付、手机号这类操作都会先弹确认卡片。</p>
-        <p>边界也很清楚。购物只能在抖音商城选品，领券和改地址仍要手动。百度网盘不支持手机号验证码登录，企微暂时没有主动推送入口。</p>
-        <p class="why"><b>看点</b>个人智能体的瓶颈不在模型，在账号和权限。能不能拿到 OAuth、能不能代付、出错后谁回滚，决定了任务完成率。小豆真正的优势，是把抖音、飞书、即梦这些自有应用的授权做成标准件。第三方每多接一个，适配和合规成本都线性上升。要看的指标是第三方应用数量，以及失败后的回滚机制。</p>
+        <h3>OpenAI 修掉 GPT-6.2 计费错误，Astra 额度消耗快 40%</h3>
+        <p>OpenAI Codex 工程师 Thibault Sottiaux 在 X 上说明了原因。GPT-6.2 上线时的计费错误让多数用户拿到了错误折扣。错误已经修复，代价是 Astra 的额度消耗比上周快 40%，Sol 快 25%。</p>
+        <p>他补充，修复后的额度仍比 GPT-6 Astra 和 GPT-6.1 Sol 耐用。其他模型不受影响，OpenAI 不会追收差价。作为补偿，Go、Plus、Pro、Business 用户各多一次已保存的重置。Business 用户到年底可免费使用 Fast Mode。</p>
+        <p>同一时间，OpenAI 正在一小批 Pro 用户里测试把 Chat 和 Work 合并。Work 更偏智能体，token 成本更高，速度更慢。合并后所有对话跑在同一个云环境里，由模型决定直接回答还是启动完整的智能体流程。</p>
+        <p class="why"><b>看点</b>这是价格修正，不是能力变化。同样一次任务，Astra 的有效成本涨了 40%，Sol 涨了 25%；订阅价没变，变的是能跑多少次。对团队，重新按任务测成本，比看价目表有用。12 月合并额度全面推开后，先看 Pro 用户的触限率，再看多给的一次重置够不够补。</p>
       </article>
 
     </div>
@@ -178,7 +214,7 @@
 
   <section class="chapter" id="research-zh" data-c="research">
     <div class="chead">
-      <span class="cnum">03</span>
+      <span class="cnum">04</span>
       <h2>研究与安全</h2>
       <span class="cen">Research &amp; Safety</span>
       <span class="crule"></span>
@@ -187,27 +223,27 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 01:10</span>
-          <a class="src" href="https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/" target="_blank" rel="noopener noreferrer">Google Research ↗</a>
+          <span class="d">11/26 19:30</span>
+          <a class="src" href="https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>谷歌让 12 款模型只听用户转述：判断更差，多聊几轮还会加固偏见</h3>
-        <p>谷歌研究团队搭了一套多智能体模拟，用来测模型在「只听用户一面之词」时还能不能判断对方的真实动机。每个场景先给目标角色一个隐藏动机，再让代表用户的角色把经过转述给被测模型；动机由框架设定，对错可以客观判定。</p>
-        <p>他们用这套框架测了 12 款大模型，并开源了框架和超过 2 万条样本的数据集。结果显示，模型直接观察完整事件时，判断准确率明显高于只和用户对话。</p>
-        <p>用户带偏见时，差距会扩大。部分案例里，用户的怀疑没有事实依据，模型仍会认同并强化这些猜测。模型还需要比人类更多的细节才敢下判断；增加对话轮数也不一定有用，模型会维持前后一致，把最初的误判越推越远。</p>
-        <p class="why"><b>看点</b>这套装置可以搬进工程。隐藏动机、单方转述、可判定真值，三个部件拼起来就是一个可回归的测试集。做陪伴、咨询、客服 agent 的团队都能用。它同时提醒一件事：多轮对话不是免费的纠错手段。上下文越长，模型越难推翻自己前面说过的话。</p>
+        <h3>微软拆解 ARTEX：多智能体把渗透测试跑成流水线，5 分钟偷到云密钥</h3>
+        <p>微软威胁情报发布分析，拆解了 AI 渗透测试框架 ARTEX。这个框架 2026 年 7 月由一个 GitHub 用户公开，10 月源码被删除，但副本仍在流传。中国安全公司 ThreatBook 还在卖商业 Pro 版。</p>
+        <p>ARTEX 不发明新漏洞，它把 Nmap、Sqlmap、Metasploit 和无头浏览器交给多个智能体操作。系统里，一个 goal 模型把指令拆成可验证的子目标。规划智能体查看知识图谱并派发短任务，执行智能体去跑命令，最后汇总报告。</p>
+        <p>它支持接入任意大模型，包括去掉安全限制的版本。内置的池化功能在报错或额度用尽时自动切换模型或 API key，让单一模型供应商难以追踪。</p>
+        <p>微软记录了两个速度样本。一个智能体用 5 分钟在 GitHub 找到泄露凭据，并从 Azure Key Vault 拉走数据。Storm-0940 的一次行动中，自动化密码猜测超过 15.1 万次，峰值每分钟 2900 次。微软建议用蜜罐、焦油坑和“假胜利”信号欺骗智能体。</p>
+        <p class="why"><b>看点</b>这套东西的威胁不在新漏洞，在把现有工具串成一条自动流水线，并在失败时换模型继续。防守方的固定 IP、固定 UA 规则很容易被绕开；蜜罐和假胜利之所以有效，是因为目标模型需要可验证的成功证据。这个优势有保质期：一旦攻击者学会放慢节奏、识别诱饵，基于流量的防线会再次失效。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 01:35</span>
-          <a class="src" href="https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
+          <span class="d">11/26 23:24</span>
+          <a class="src" href="https://it.ithome.com/archiver/1/033/131.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
         </div>
-        <h3>Character.AI 破产后要拍卖 2100 万用户聊天记录，42 位总检察长申请阻止</h3>
-        <p>Character.AI 在 10 月申请第 11 章破产保护后，计划拍卖用户数据。据 TechCrunch 报道，州总检察长在新闻稿中称，待售数据集包含超过 2100 万个美国账户的聊天记录。其中超过 210 万个属于未成年人，数据还包括 IP 地址等个人信息。</p>
-        <p>目前只披露了一个竞标方：Smirks and Pangs Acquisition LLC。这家公司 11 月 13 日在特拉华州注册，第二天就被选为拍卖的基准竞标方。拍卖定在 12 月 1 日。</p>
-        <p>42 位州级辖区的总检察长介入破产程序，要求阻止交易，其中包括哥伦比亚特区。他们给出三条理由。第一，Character.AI 曾向消费者承诺不会出售个人信息。第二，买家不受原隐私政策约束，可以自行处置甚至转售。第三，公司向法院披露的安全与法律风险，少于向竞标者披露的内容。</p>
-        <p>加州总检察长 Rob Bonta 和康涅狄格州总检察长 William Tong 分别发声。此前拟以 2000 万美元把知识产权授权给迪士尼的交易，也遭到多州反对，目前尚未获法院批准。</p>
-        <p class="why"><b>看点</b>破产把隐私承诺变成资产问题。承诺写在隐私政策里，数据写在破产财产清单里，冲突时法院先看后者。对做对话产品的团队，实操含义是：数据的处置权要写进架构。谁能导出、谁能解密、托管在谁账户，都要有答案。只写在政策文本里，进入破产程序后最先失效。</p>
+        <h3>瑞士通报五起 AI 智能体攻击，四起得手，电力供水通信各一家</h3>
+        <p>瑞士联邦网络安全局（BACS）周四通报，过去几天瑞士发生五起网络攻击。攻击者使用 AI 智能体，针对企业和关键基础设施运营方发起入侵。五起里有四起得手，系统被攻破。</p>
+        <p>据瑞士公共广播公司 SRF 报道，被攻击的三家关键基础设施运营方分别属于电力、供水、通信行业。BACS 没有披露幕后主体，只建议企业落实防护手段，包括定期做网络安全检测。</p>
+        <p>路透社在 11 月 26 日报道了这份通报。BACS 没有说明攻击者用了哪种智能体、攻破了哪些系统，也没有给出技术细节。</p>
+        <p class="why"><b>看点</b>五起里四起成功，样本很小，不能当成通用成功率。但目标很具体：电力、供水、通信各一家。智能体把侦察、尝试、横向移动的成本压低了，防守方要假设对手能以机器速度试错。现在缺的是攻击手法；在 BACS 公布细节前，能做的只有隔离 OT 网络、限制凭据、加快告警。</p>
       </article>
 
     </div>
@@ -215,7 +251,7 @@
 
   <section class="chapter" id="embodied-zh" data-c="embodied">
     <div class="chead">
-      <span class="cnum">04</span>
+      <span class="cnum">05</span>
       <h2>具身智能</h2>
       <span class="cen">Embodied AI</span>
       <span class="crule"></span>
@@ -224,53 +260,26 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 03:52</span>
-          <a class="src" href="https://theroboticsmedia.com/article/lute-raises-20m-tactile-foundation-models-robots" target="_blank" rel="noopener noreferrer">The Robotics Media ↗</a>
+          <span class="d">11/26 13:59</span>
+          <a class="src" href="http://bj.people.com.cn/n2/2026/1126/c14540-41761755.html" target="_blank" rel="noopener noreferrer">人民网北京频道 ↗</a>
         </div>
-        <h3>Lute 用二十分之一的训练数据追平 Pi0.5，触觉采集箱能背着走</h3>
-        <p>做机器人触觉基础模型的 Lute 完成 2000 万美元的 pre-seed 与种子轮融资，11 月 25 日公布。这轮融资由 OTB Ventures 和 FORWARD.one 共同领投。参投方包括 Seedcamp、Credo Ventures、Naval Ravikant、Inovo VC。ff Venture Capital 和 Borusan Ventures 也在名单里。</p>
-        <p>公司 2026 年 1 月成立，团队 16 人，分布在华沙和湾区。创始人 Paweł Budzianowski 此前负责 PolyAI 的机器学习团队。联合创始人 Krzysztof Walas 曾任波兹南理工大学副教授。</p>
-        <p>Lute 的做法是把皮肤式触觉传感器装进可携带的采集装置，再把采到的触觉数据用于训练 Lute-0。公司称，Lute-0 在灵巧操作任务上追平了开源模型 Pi0.5，预训练数据只用了后者的约二十分之一。</p>
-        <p>它已在欧洲最大的汽车零售分销商部署，该公司年营收约 60 亿美元；医院走廊和大型零售门店还有试点。以上数据和客户名单均为公司口径。</p>
-        <p class="why"><b>看点</b>触觉数据只能在接触发生的那一刻采，过去设备装在工位上，换一个客户就要重装。Lute 把采集箱做成能背走的，等于把采数据的成本从改造产线降到背着盒子去现场。二十分之一的训练数据是公司自测，要推广还得看透明物体、软体和反光表面上的成功率。</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="capital-zh" data-c="capital">
-    <div class="chead">
-      <span class="cnum">05</span>
-      <h2>行业与资本</h2>
-      <span class="cen">Industry &amp; Capital</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/26 02:49</span>
-          <a class="src" href="https://cj.sina.com.cn/articles/view/2868676035/aafc85c30200204fi" target="_blank" rel="noopener noreferrer">财联社 ↗</a>
-        </div>
-        <h3>GPU 现货溢价消失：小客户拿到批发价，续租算力有了压价窗口</h3>
-        <p>SpaceX 把小规模 Blackwell 集群的现货租金下调了。价格从每 GPU 每小时约 15 至 15.5 美元，降到 10 至 12 美元，降幅 20%–35%。这个价格已接近它给 Anthropic、谷歌等大客户的大批量价。</p>
-        <p>同一份 SemiAnalysis 报告里，Anthropic 不再续租约 5 万块 H200 组成的集群。SpaceX 正为这批算力找新租户，交付时间在 2027 年初，报价约每小时 5 美元。Ornn 的数据显示，H200 本周一成交价为 6.53 美元，SpaceX 的报价低约 23%。</p>
-        <p>Ornn 的成交指数显示租金在回落。B200 较 11 月 8 日高点跌 8.8%，至 9.07 美元。H200 较 11 月 11 日高点跌 16%，至 6.53 美元。B300 较 10 月中旬高点跌 24%，至 10.87 美元。</p>
-        <p>需求侧，Ramp 的数据显示企业 token 支出 7 月增长 42%。8 月和 9 月合计只增 1.5%，10 月增 1.65%。截至 11 月 15 日当周，支出较一个月前增 12%。用量增 27.2%，混合均价降 11.2% 至每百万 token 0.45 美元。</p>
-        <p class="why"><b>看点</b>现货溢价消失，说明供给在增加。对要续租算力的团队，短期租约先于长约松动，是一个可以拿去压价的信号。但 SemiAnalysis 自己仍认为新建 Blackwell 项目有可观回报。这轮降价更像房东在为新算力腾位置，不等于全市场价格普跌。</p>
+        <h3>北京亦庄把具身智能的缺口摊开：千余数据集、近 50 亿元场景订单</h3>
+        <p>11 月 25 日，E-Bot Day 2026 人形机器人开发者大会在北京亦庄举办。亦庄目前聚集了 300 多家机器人及具身智能企业，产业链规模超过 200 亿元。</p>
+        <p>会上发布《北京亦庄“未来机域”具身智能国际开源社区建设计划》。计划开放数据采集场所，汇聚千余个开源数据集。它还要建设“机因工场”和开源物料清单库，支持快速打样和供应链协同。在九大标杆场景“揭榜挂帅”，释放近 50 亿元应用需求。</p>
+        <p>大会还发布了《人形机器人与具身智能训练场高质量发展倡议》和“2026 具身智能十大年度开发者成果”。十余家单位共同作出了“具身向善”责任创新承诺。嘉年华设 45 个展位，33 个参展项目、12 个高校社团。</p>
+        <p class="why"><b>看点</b>具身智能缺的是能直接训练的数据和愿意付费的场景，演示反而不缺。千余个数据集和近 50 亿元需求，是两份可以验收的清单。对开发者，先看数据集能不能下载、真机验证排期多长；对投资人，看 50 亿元里有多少变成订单而不是意向。开源物料清单如果真能缩短打样周期，比多放几个演示有用。</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 08:21</span>
-          <a class="src" href="https://www.digitaltoday.co.kr/en/view/130946/us-chip-curbs-flood-nvidia-gpu-resale-market-b300-units-offered" target="_blank" rel="noopener noreferrer">DigitalToday（据 CNBC） ↗</a>
+          <span class="d">11/26 19:09</span>
+          <a class="src" href="https://www.chinastarmarket.cn/detail/2545724" target="_blank" rel="noopener noreferrer">科创板日报 ↗</a>
         </div>
-        <h3>远程访问新规生效后，数千块 B300 出现在转售市场</h3>
-        <p>美国商务部工业与安全局在 11 月 16 日发布临时最终规则，11 月 19 日生效。新规不只限制中国企业直接买芯片，也把「在第三国数据中心租 GPU、再远程调用」纳入监管。</p>
-        <p>CNBC 在 11 月 25 日报道，新规公布后，英伟达 GPU 的挂牌量明显上升。GPU 交易平台 GPU Mart 的 Jack Duhamel 说，有卖方明确提到，交易与最新监管要求有关。</p>
-        <p>两名不愿具名的知情人士称，流入市场的货源主要来自原本为中国企业海外数据中心租赁需求准备的备货。新规发布后，市场出现了涉及数千块 B300 的出售要约。</p>
-        <p>美国贸易代表 Jamieson Greer 在 CNBC 的《Squawk Box》上说明了新规目标。他要堵住规避出口管制的通道，包括经东南亚转运，以及借第三国数据中心远程使用。英伟达拒绝置评；CFO Colette Kress 在 11 月 17 日的业绩电话会上说正在评估影响。国会推进的远程访问安全法案已过众议院，正等参议院表决。</p>
-        <p class="why"><b>看点</b>一条规则把「在建产能」变成「待处置库存」，资产久期由政策而不是折旧率决定。对买方，短期是折价货源；对卖方，是找新机房的倒计时。要盯两个数：B300 的实际成交折价率，以及这批货最终落在哪个司法辖区，那会决定下一轮管制的边界。</p>
+        <h3>三星在半导体工厂设机器人团队，目标 2028 年接管换件与维护</h3>
+        <p>三星电子半导体板块 DS 部已在其全球制造与基础设施总部下设立“机器人团队”，推进机器人在半导体工厂的落地。韩国媒体 ETNEWS 在 11 月 26 日报道了这条消息。</p>
+        <p>业内数据显示，半导体工厂的前端自动化程度已达 90%，后端达 80%。但零件和耗材更换、设备维护等工序仍要人来完成，这些正是机器人团队的目标。</p>
+        <p>三星计划年内遴选合作伙伴，明年做技术评估，2028 年开始实际部署。</p>
+        <p class="why"><b>看点</b>晶圆厂是机器人最难的环境：洁净室、微振动、24 小时不停机，容错率极低。三星先做维护而不是生产，顺序是对的。2028 年这个时间表说明它知道难点在可靠性和力控，不在机械臂本身。接下来看两件事：合作方是移动操作臂还是固定机械臂，以及第一次部署选在前端还是后端。</p>
       </article>
 
     </div>
@@ -279,9 +288,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>本期收录 2026 年 11 月 25 日 09:13 至 11 月 26 日 10:00（北京时间）之间发布的报道，共 8 条。检索时间 11/26 10:00。</p>
+        <p>本期收录 2026 年 11 月 26 日 10:00 至 11 月 27 日 08:00（北京时间）之间发布的报道，共 9 条。检索时间 11/27 08:00。</p>
     <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
-    <p class="sig">AI Daily · Issue 031 · 24h window · Generated 2026-11-26 10:00</p>
+    <p class="sig">AI Daily · Issue 032 · 24h window · Generated 2026-11-27 08:00</p>
       </div>
     </footer>
       </div>
@@ -294,17 +303,17 @@
           <span class="zh">AI DAILY</span>
           <span class="sep"></span>
           <span>Daily AI Brief</span>
-          <span class="issue-tag">Issue 031</span>
+          <span class="issue-tag">Issue 032</span>
         </div>
-        <h1 class="date">November 26, 2026<span class="weekday">THU</span></h1>
-        <p class="deck">Two things moved in opposite directions today. An unreleased OpenAI model produced nine math manuscripts in a day, one claiming to pin the matrix-multiplication exponent at 9/4; at the same time, the spot price of Blackwell compute fell by as much as 35%. In between: ChatGPT merges its chat and work quotas, ByteDance's Xiaodou agent opens a beta, and 42 attorneys general try to stop Character.AI from auctioning user chats.</p>
-        <div class="metabar"><span class="pill">Issue 031</span>
+        <h1 class="date">November 27, 2026<span class="weekday">FRI</span></h1>
+        <p class="deck">Export controls now reach server deliveries and rented cloud capacity. Nvidia has paused shipments to four Southeast Asian countries, starting a 90-day licence clock; Tencent cut long-context decoding time, and Switzerland confirmed four successful AI-agent intrusions. Compute, cost and security all tightened on the same day.</p>
+        <div class="metabar"><span class="pill">Issue 032</span>
       <span class="dot"></span>
-      <span>Window Nov 25, 09:13 – Nov 26, 10:00</span>
+      <span>Window Nov 26, 10:00 – Nov 27, 08:00</span>
       <span class="dot"></span>
-      <span>8 stories</span>
+      <span>9 stories</span>
       <span class="dot"></span>
-      <span>13 min read</span></div>
+      <span>14 min read</span></div>
       </div>
     </header>
 
@@ -312,11 +321,11 @@
       <div class="wrap">
         <div class="toc-inner">
           <a href="#tldr-en"><span class="n">00</span>At a glance</a>
-        <a href="#models-en"><span class="n">01</span>Models &amp; Capability</a>
-        <a href="#products-en"><span class="n">02</span>Products &amp; Agents</a>
-        <a href="#research-en"><span class="n">03</span>Research &amp; Safety</a>
-        <a href="#embodied-en"><span class="n">04</span>Embodied AI</a>
-        <a href="#capital-en"><span class="n">05</span>Industry &amp; Capital</a>
+        <a href="#capital-en"><span class="n">01</span>Industry &amp; Capital</a>
+        <a href="#models-en"><span class="n">02</span>Models &amp; Capability</a>
+        <a href="#products-en"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#research-en"><span class="n">04</span>Research &amp; Safety</a>
+        <a href="#embodied-en"><span class="n">05</span>Embodied AI</a>
         </div>
       </div>
     </nav>
@@ -325,21 +334,59 @@
       <ol class="tldr" id="tldr-en">
     <li>
       <span class="idx">01</span>
-      <p><b>OpenAI's internal model produced nine mathematics manuscripts in a single day, one of them claiming to pin the matrix-multiplication exponent at exactly 9/4, or 2.25.</b> Researchers had already proved 9/4 as an upper bound; the manuscript claims a matching lower bound. OpenAI says an unreleased internal model produced most of the material as raw research data from an evaluation, and the repository now holds 730 manuscripts across 375 research families, with about 42% of top-level results formalised.</p>
+      <p><b>Nvidia has paused server shipments to Malaysia, Singapore, Thailand and Indonesia.</b> After Washington closed the remote-compute route, cloud providers in those countries have 90 days to apply for a licence and show that no end customer is restricted. The Institute for Progress estimates such remote data centres supplied about 24% of China's AI compute.</p>
     </li>
     <li>
       <span class="idx">02</span>
-      <p><b>SpaceX cut spot rent for small Blackwell clusters from about $15–15.5 to $10–12 per GPU-hour, a 20%–35% drop.</b> In the same SemiAnalysis note, Anthropic declined to renew a cluster of about 50,000 H200s; SpaceX is re-letting it at roughly $5 per GPU-hour, some 23% below the $6.53 that Ornn recorded as the H200's traded price.</p>
+      <p><b>China's Star Compute satellite Libra carried Qwen3-32B and trained for 45 minutes 33 seconds in orbit.</b> CAICT said liquid cooling and enlarged radiator wings from ADA Space carried away heat from a 10-kilowatt-class AI computer. Separately, the FCC cleared SpaceX to deploy up to 1 million Starmind satellites, with the first launch due by 2033.</p>
     </li>
     <li>
       <span class="idx">03</span>
-      <p><b>Google Research tested 12 large language models in a multi-agent simulation: when the model heard the story only through one user's account, accuracy at reading the other side's motive fell sharply, and the model could reinforce the user's bias.</b> The team open-sourced the framework and a dataset of more than 20,000 examples. More turns did not reliably help: models stayed consistent with their earlier reading and hardened the first mistake.</p>
+      <p><b>Switzerland's Federal Office for Cybersecurity reported five AI-agent attacks, four of which succeeded.</b> Swiss public broadcaster SRF said three of the targets were critical-infrastructure operators in power, water and telecom. BACS did not name the attackers or publish technical details.</p>
     </li>
       </ol>
 
-  <section class="chapter" id="models-en" data-c="models">
+  <section class="chapter" id="capital-en" data-c="capital">
     <div class="chead">
       <span class="cnum">01</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-26">
+        <div class="cmeta">
+          <span class="d">11/26 19:21</span>
+          <a class="src" href="https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>Nvidia pauses server shipments to four Southeast Asian countries, starting a 90-day licence clock</h3>
+        <p>Nvidia has told manufacturing partners including Dell and Supermicro to pause server shipments to Malaysia, Singapore, Thailand and Indonesia. The Financial Times reported the halt without a deadline, citing three people; Nvidia is assessing whether its regional partners meet US export requirements.</p>
+        <p>The order follows the Commerce Department's move to close the remote-computing route. Chinese firms had been renting Nvidia chips in those countries' data centres; this month Washington put that access under licence. Cloud providers now have 90 days to apply and show that no restricted company is among their end users. One executive told the FT there was no guidance on how to apply, describing "chaos".</p>
+        <p>TechCrunch reported that the Institute for Progress estimates such remote data centres supplied about 24% of China's AI compute. Financing is already pulling back: banks have halted about $500 million in loans to Singapore-based Aolani, which planned to rent capacity to ByteDance. ByteDance could walk away.</p>
+        <p>The resale market moved too. CNBC reported an unusually large number of Nvidia GPUs listed for sale after the rule, including thousands of B300s.</p>
+        <p class="why"><b>Why it matters</b>The control now covers server deliveries and rented cloud capacity, not just chip sales. For a team renewing capacity in Southeast Asia, the 90-day licence is a hard deadline: check whether the end customer is restricted before negotiating price.<br><b>Another view</b>: the $500 million loan pause shows policy risk is now priced into bank credit. The duration of a compute asset is set by a licence, not by a depreciation schedule.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 06:12</span>
+          <a class="src" href="https://en.sedaily.com/world/2026/11/27/china-joins-space-data-center-race-challenging-musk" target="_blank" rel="noopener noreferrer">Seoul Economic Daily ↗</a>
+        </div>
+        <h3>China trains Qwen3-32B in orbit for 45 minutes as SpaceX wins approval for 1 million satellites</h3>
+        <p>China's Academy of Information and Communications Technology has finished performance checks on a satellite cluster launched in October. One satellite, Libra, carried Alibaba's Qwen3-32B and trained for 45 minutes 33 seconds without interruption while orbiting, completing a full cycle of solving problems, analysing errors and improving.</p>
+        <p>Heat is the hard part in orbit. CAICT said liquid cooling and enlarged radiative wings from ADA Space, also known as Guoxing Aerospace, carried away heat from a 10-kilowatt-class AI computer. Google's orbital TPU prototype runs for about 15 minutes per session, according to the report.</p>
+        <p>The Star Compute project aims to deploy 2,800 satellites. The first cluster went up in May 2025 and the second in October; the satellites in orbit now provide about 50 POPS.</p>
+        <p>Separately, the US FCC approved SpaceX's Starmind constellation of up to 1 million satellites for orbital data centres. SpaceX must launch the first by November 2033, deploy 100,000 by 2035 and 500,000 by 2038, and finish by 2040. Objections from Amazon and others were dismissed.</p>
+        <p class="why"><b>Why it matters</b>Orbital data centres trade launch costs and radiator mass for land and grid power. Forty-five minutes beats 15, but that is a thermal milestone, not a cost advantage; 50 POPS is a mid-sized cluster on the ground. What matters is cost per token, downlink bandwidth and failure rates. Watch whether the next Star Compute batch trains models rather than only running inference.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models-en" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
       <h2>Models &amp; Capability</h2>
       <span class="cen">模型与能力</span>
       <span class="crule"></span>
@@ -348,15 +395,27 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/25 21:12</span>
-          <a class="src" href="https://ishare.ifeng.com/c/s/8yLcoPh2TNS" target="_blank" rel="noopener noreferrer">ifeng Tech ↗</a>
+          <span class="d">11/26 15:07</span>
+          <a class="src" href="https://github.com/Tencent/AngelSpec" target="_blank" rel="noopener noreferrer">Tencent Hunyuan AngelSpec ↗</a>
         </div>
-        <h3>An unreleased OpenAI model wrote nine math papers in a day, claiming the matrix-multiplication exponent is 9/4</h3>
-        <p>OpenAI's internal model produced nine mathematics manuscripts in a single day. One of them, titled "The Matrix Multiplication Exponent Is 9/4", claims that under the arithmetic circuit model it studies, the exponent for square matrix multiplication is exactly 2.25.</p>
-        <p>That exponent is usually written as omega. It measures how the cost of multiplying matrices grows with their size; the naive algorithm runs in about n cubed. Researchers had already proved 9/4 as an upper bound, meaning a method exists at that speed. The manuscript claims a matching lower bound.</p>
-        <p>The lower bound is stated as follows: for every n of at least 2, any formal arithmetic circuit for square matrix multiplication needs at least ceiling(n^(9/4)/2) non-scalar multiplication or division gates. It is a statement about a theoretical model, not about wall-clock time on a GPU.</p>
-        <p>OpenAI says an unreleased internal model produced most of the manuscripts as raw research data during an evaluation on open problems, not as finished papers. The repository now holds 730 manuscripts across 375 research families, and about 42% of top-level results have been formalised. Each selected result used about three hours of ChatGPT Pro thinking compute; the whole evaluation took in roughly 4,000 research questions.</p>
-        <p class="why"><b>Why it matters</b>The useful numbers are 42%, three hours and 4,000. The formalisation rate decides whether a claim can be checked line by line in Lean; the other two decide the unit cost of this kind of research. Watch whether the formalisation share climbs over time, not the flashiest theorem in a single release. Another view: 4,000 questions at three hours each is roughly 12,000 hours of inference, a research expense for the lab and a shift in scarce labour toward asking the right question.</p>
+        <h3>Tencent open-sources DFly2, speeding long-context generation on Hy4 flash by 3.2x</h3>
+        <p>Tencent Hunyuan open-sourced DFly2, a draft model, on November 26. It does not replace Hy4 flash or change its weights and output. It sits beside the target model and runs speculative decoding: a smaller model proposes tokens, and the target verifies them in a batch.</p>
+        <p>DFly2 is built for DSA-style sparse-attention models. It reads the target's cached KV and the positions its indexer selects, at most 2,048 per query. The draft layers keep no cache of their own, their attention cost does not grow with context, and they do not take part in prefill.</p>
+        <p>Tencent compared it with DFlash and DSpark on 19 public benchmarks. Long-context generation is about 3.2x faster; one AgentLongBench task reaches 4.2x, and four agent tasks average about 3.2x. Its accepted-length advantage over DSpark grows from about 4% on short text to about 18% at 128K context; on agent tasks it rises by as much as 68.5%.</p>
+        <p>The weights, training code and technical report are all open. Beyond Hy4 and Hy4 flash, DFly2 now also trains on DeepSeek-V4.1-Flash and GLM-5.3-Flash, with new MoE drafters released for Hy4 flash, DeepSeek-V4.1-Flash and GLM-5.3-Flash. The AngelSpec training framework supports context up to 256K.</p>
+        <p class="why"><b>Why it matters</b>Speculative decoding is the cheapest latency lever available, and DFly2's real gain is zero extra KV cache. For serving, saved memory means more concurrent users; for prefill-decode separation, passing only one last-layer hidden state saves bandwidth. The 4.2x is a single best case; the average is 3.2x, and the numbers are vendor-run. Measure accepted length on your own traffic before trusting the launch chart.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 12:02</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6782276.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>InternLM open-sources Sage, a 9B full-duplex model that rejoins a conversation in 1.29 seconds</h3>
+        <p>The InternLM team, supported by Shanghai AI Lab, open-sourced Sage-Interaction on November 25 and disclosed it on November 26. It is a 9B-parameter full-duplex omni model built on MiniCPM-o 4.5.</p>
+        <p>It takes streaming audio and video while generating speech. A user can interrupt, backchannel or talk over background noise without breaking the conversation. Unlike assistants that wait for the user to finish, it splits a real-time front end from a backend agent: the front end keeps talking while complex reasoning, tool calls and long tasks go to the backend, whose results are folded back into the conversation.</p>
+        <p>The project says Sage-Interaction scores 80.73 on FD-Bench v1.5 and has a turn-switch latency of 1.29 seconds on FD-Bench v1. The weights and code are on Hugging Face and GitHub.</p>
+        <p class="why"><b>Why it matters</b>The hard part of full duplex is scheduling, not parameter count. A 1.29-second switch is close to human turn-taking, but the real test is whether the front end can avoid talking over the backend when a result arrives. The scores are the project's own. To judge fitness, test real microphones, noise and tool latency. The next signal is whether anyone puts it into phone support or a companion product.</p>
       </article>
 
     </div>
@@ -364,7 +423,7 @@
 
   <section class="chapter" id="products-en" data-c="products">
     <div class="chead">
-      <span class="cnum">02</span>
+      <span class="cnum">03</span>
       <h2>Products &amp; Agents</h2>
       <span class="cen">产品与智能体</span>
       <span class="crule"></span>
@@ -373,28 +432,14 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 04:03</span>
-          <a class="src" href="https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
+          <span class="d">11/27 01:28</span>
+          <a class="src" href="https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>ChatGPT folds chat and work into one quota, and heavy Pro users will hit the wall sooner</h3>
-        <p>OpenAI has begun rolling out a unified Chat and Work experience to a small group of Pro subscribers. Product lead Thibault Sottiaux announced the update on X on Tuesday, after OpenAI had emailed users about the merger earlier.</p>
-        <p>The two modes now share one usage meter across ChatGPT. Conversations on the Instant model stay unlimited and do not count against the shared allowance; users can keep using Instant after the allowance runs out.</p>
-        <p>An OpenAI spokesperson told TechCrunch that most users should not hit limits more often, but a small fraction of the heaviest users may run out sooner. OpenAI plans to bring the shared limits to more users in December.</p>
-        <p>Some paying users have complained on social media and OpenAI's community forum that the same subscription may buy fewer runs on advanced reasoning models. Anthropic merged Claude and its work product Cowork into one interface in September.</p>
-        <p class="why"><b>Why it matters</b>Merging the entrance is a product call; merging the quota is a cost call. Quotas used to be split by feature. Now they are split by compute, which turns "how many products did I buy" into "how many tokens did I buy". For heavy users that is a quiet price increase. The number to watch after the December rollout is the share of Pro users who hit the ceiling, and whether OpenAI raises it.</p>
-      </article>
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/25 19:53</span>
-          <a class="src" href="https://tech.ifeng.com/c/8yL1QzQwZMt" target="_blank" rel="noopener noreferrer">ifeng Tech ↗</a>
-        </div>
-        <h3>ByteDance's Xiaodou books restaurants and hails rides, but shopping stays inside Douyin</h3>
-        <p>ByteDance opened an invite-only beta of Xiaodou, its personal agent, on November 24. It is a standalone app, not a tab inside Doubao, and it shares conversation context and user preferences with Doubao through three entry points: suggestions, follow-ups and a profile of the user.</p>
-        <p>In a hands-on test by ifeng Tech, Xiaodou filtered restaurants by live location and called a candidate to confirm a private room and a group coupon. On a fresh Amap account it also completed a cross-city ride: registration, permissions, order and payment confirmation, with the app handling the steps in between.</p>
-        <p>At work it connects to Feishu, WeCom, DingTalk, Baidu Netdisk and Apple Reminders. When a Feishu document had not been revised after the previous day's comments, Xiaodou surfaced the gap and offered to message the colleague. Payments and phone numbers require a confirmation card.</p>
-        <p>The boundaries are just as visible. Shopping is limited to Douyin Mall; coupons and address changes are still manual. Baidu Netdisk does not support SMS-code login, and WeCom has no proactive push channel yet.</p>
-        <p class="why"><b>Why it matters</b>The bottleneck for a personal agent is no longer the model. It is accounts and permissions: who grants OAuth, who authorises payment, and who rolls back when a task fails. Xiaodou's advantage is that Douyin, Feishu and Jimeng are its own apps, so their authorisations can be productised. Every third-party integration adds linear adaptation and compliance work. Watch the number of outside apps and the rollback path, not the demo.</p>
+        <h3>OpenAI fixes a GPT-6.2 billing error, and Astra quotas now run out 40% faster</h3>
+        <p>A billing error during the GPT-6.2 rollout gave most users the wrong discounts on GPT-6.2 Astra and Sol, OpenAI Codex engineer Thibault Sottiaux said on X. The bug is fixed. The cost is that Astra quotas now run out 40% faster than last week, and Sol 25% faster.</p>
+        <p>Sottiaux said the fixed quotas still last longer than they did on GPT-6 Astra and GPT-6.1 Sol. Other models were not affected, and OpenAI will not retroactively charge the difference. As compensation, Go, Plus, Pro and Business subscribers each get one extra saved reset; Business users get Fast Mode free through the end of the year.</p>
+        <p>At the same time, OpenAI is testing a merger of Chat and Work with a small group of Pro users. Work is more agentic, slower and more token-hungry. After the merger, all conversations run in one cloud environment, and the model decides whether to answer directly or start a full agentic workflow.</p>
+        <p class="why"><b>Why it matters</b>This is a price correction, not a capability change. The same task now uses 40% more of an Astra quota, or 25% more of a Sol quota; the subscription price is unchanged, but the number of runs is not. Teams should re-measure cost per task rather than reading the price sheet. After the merged quota reaches more users in December, watch the share of Pro users who hit the ceiling, and whether one extra reset covers the gap.</p>
       </article>
 
     </div>
@@ -402,7 +447,7 @@
 
   <section class="chapter" id="research-en" data-c="research">
     <div class="chead">
-      <span class="cnum">03</span>
+      <span class="cnum">04</span>
       <h2>Research &amp; Safety</h2>
       <span class="cen">研究与安全</span>
       <span class="crule"></span>
@@ -411,27 +456,27 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 01:10</span>
-          <a class="src" href="https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/" target="_blank" rel="noopener noreferrer">Google Research ↗</a>
+          <span class="d">11/26 19:30</span>
+          <a class="src" href="https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
         </div>
-        <h3>Google tested 12 models on one-sided accounts: accuracy fell, and more turns hardened the bias</h3>
-        <p>Google Research built a multi-agent simulation to test whether a model can infer what someone really wants when it hears the story only through the user. Each scenario gives a target character a hidden motive; a user character then recounts the events to the model under test. Because the motive is set by the framework, the correct answer is verifiable.</p>
-        <p>The team tested 12 large language models and open-sourced the framework plus a dataset of more than 20,000 examples. Models were significantly more accurate when they could observe the full event directly than when they talked only to the user.</p>
-        <p>Explicit bias in the user widened the gap. In some cases the user's suspicion had no factual basis, and the model still validated it. Models also needed more detail than humans before committing to a judgement. More turns did not reliably help: models preserved conversational coherence and anchored to their earlier reading, hardening the first mistake.</p>
-        <p class="why"><b>Why it matters</b>The harness is reusable. A hidden motive, a one-sided account and a checkable ground truth add up to a regression suite that any team building a companion, advice or support agent can copy. It also carries a warning: multi-turn conversation is not a free error-correction mechanism. The longer the context, the harder it is for the model to overturn what it has already said.</p>
+        <h3>Microsoft dissects ARTEX, a multi-agent pipeline that stole cloud keys in five minutes</h3>
+        <p>Microsoft Threat Intelligence has published an analysis of ARTEX, an AI penetration-testing framework. A GitHub user released it in July 2026; the source was deleted in October, but copies still circulate, and the Chinese security firm ThreatBook sells a commercial Pro version.</p>
+        <p>ARTEX does not invent new exploits. It drives existing tools such as Nmap, Sqlmap, Metasploit and headless browsers through specialised agents. A goal model breaks an instruction into verifiable subgoals; a planning agent reads a knowledge graph and assigns short tasks; worker agents run the commands; a reporting agent writes up the findings.</p>
+        <p>It can connect to any large language model, including versions with safety guardrails removed. A built-in pooling feature switches models or API keys on errors or usage limits, making the activity hard for any single model provider to track.</p>
+        <p>Microsoft logged two speed samples: one agent took five minutes to find leaked credentials on GitHub and pull data from Azure Key Vault; in one Storm-0940 campaign, automated password guessing exceeded 151,000 attempts, peaking at 2,900 per minute. Microsoft recommends honeypots, tarpits and fake success signals to deceive the agents.</p>
+        <p class="why"><b>Why it matters</b>The threat is not a new exploit but a closed loop around existing tools that switches models when one fails. Fixed IP and user-agent rules are easy to route around. Honeypots and fake wins work because the goal model needs verifiable proof of success. That advantage has a shelf life: once attackers learn to slow down and spot decoys, traffic-based defences will weaken again.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 01:35</span>
-          <a class="src" href="https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/" target="_blank" rel="noopener noreferrer">TechCrunch ↗</a>
+          <span class="d">11/26 23:24</span>
+          <a class="src" href="https://it.ithome.com/archiver/1/033/131.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
         </div>
-        <h3>Character.AI wants to auction 21 million users' chats; 42 attorneys general move to block it</h3>
-        <p>Character.AI filed for Chapter 11 protection in October and now plans to auction user data. According to state attorneys general, the dataset includes chat histories from more than 21 million US accounts, more than 2.1 million of them belonging to minors, plus personal data such as IP addresses.</p>
-        <p>Only one bidder has been disclosed: Smirks and Pangs Acquisition LLC. The company was registered in Delaware on November 13 and was picked as the base bid the next day. The auction is scheduled for December 1.</p>
-        <p>A coalition of 42 attorneys general, including the District of Columbia's, has intervened to stop the sale. They argue that Character.AI promised consumers their personal information would not be sold; that a buyer would not be bound by the old privacy policy and could resell the data; and that the company has told the court less about safety and legal risks than it has told bidders.</p>
-        <p>California's Rob Bonta and Connecticut's William Tong both spoke out. A separate plan to license Character.AI's intellectual property to Disney for $20 million, which does not include user chats, has also drawn multi-state opposition and has not received final court approval.</p>
-        <p class="why"><b>Why it matters</b>Bankruptcy turns a privacy promise into an asset question. The promise sits in a privacy policy; the data sits on the estate's asset list. When the two collide, the court looks at the second. For anyone building a chat product, the practical lesson is to put data custody into the architecture: who can export it, who can decrypt it, whose cloud account holds it. A policy document is the first thing to fail in a bankruptcy.</p>
+        <h3>Switzerland reports five AI-agent attacks; four succeeded, hitting power, water and telecom</h3>
+        <p>Switzerland's Federal Office for Cybersecurity (BACS) said on Thursday that five cyberattacks in recent days used AI agents against companies and critical-infrastructure operators. Four of the five succeeded and systems were breached.</p>
+        <p>Swiss public broadcaster SRF reported that three of the targets were critical-infrastructure operators in power, water and telecommunications. BACS did not name the attackers. It recommended that companies put protective measures in place, including regular security checks.</p>
+        <p>Reuters reported the notice on November 26. BACS did not say which agents were used, which systems were breached, or how the attacks were carried out.</p>
+        <p class="why"><b>Why it matters</b>Four successes out of five is a tiny sample, not a general success rate. The target set is the point: one each in power, water and telecom. Agents lower the cost of reconnaissance, attempts and lateral movement, so defenders should assume machine-speed trial and error. The missing piece is TTPs. Until BACS publishes them, the practical steps are segmenting OT networks, limiting credentials and shortening alert times.</p>
       </article>
 
     </div>
@@ -439,7 +484,7 @@
 
   <section class="chapter" id="embodied-en" data-c="embodied">
     <div class="chead">
-      <span class="cnum">04</span>
+      <span class="cnum">05</span>
       <h2>Embodied AI</h2>
       <span class="cen">具身智能</span>
       <span class="crule"></span>
@@ -448,53 +493,26 @@
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 03:52</span>
-          <a class="src" href="https://theroboticsmedia.com/article/lute-raises-20m-tactile-foundation-models-robots" target="_blank" rel="noopener noreferrer">The Robotics Media ↗</a>
+          <span class="d">11/26 13:59</span>
+          <a class="src" href="http://bj.people.com.cn/n2/2026/1126/c14540-41761755.html" target="_blank" rel="noopener noreferrer">People&#39;s Daily Beijing ↗</a>
         </div>
-        <h3>Lute matches Pi0.5 with one-twentieth of the training data, using a tactile kit you can carry</h3>
-        <p>Lute, a startup building tactile foundation models for robots, raised $20 million in combined pre-seed and seed funding, announced on November 25. OTB Ventures and FORWARD.one co-led the round, with Seedcamp, Credo Ventures, Naval Ravikant, Inovo VC, ff Venture Capital and Borusan Ventures participating.</p>
-        <p>The company was founded in January 2026 and has 16 people split between Warsaw and the Bay Area. Pawel Budzianowski, who previously led machine learning at PolyAI, is the founder; Krzysztof Walas, a former associate professor at Poznan University of Technology, is a co-founder.</p>
-        <p>Lute puts skin-like tactile sensors into a portable data-collection kit, then trains its Lute-0 model on what the kit records. The company says Lute-0 matched the open-source Pi0.5 model on dexterous manipulation while using about one-twentieth of the pre-training data.</p>
-        <p>The system is deployed at what Lute describes as Europe's largest automotive retail distributor, a company with roughly $6 billion in annual revenue, and is in pilots in hospital corridors and large retail stores. Those figures and customers are the company's own account.</p>
-        <p class="why"><b>Why it matters</b>Tactile data only exists at the moment of contact. The old collection rig lived on a work cell, so every new customer meant rebuilding it. Lute's carry-on kit lowers the cost of collecting data from "retrofit the line" to "bring the box to the site". The one-twentieth claim is the company's own. The test is whether it holds on transparent, soft and reflective objects, where vision alone fails.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="chapter" id="capital-en" data-c="capital">
-    <div class="chead">
-      <span class="cnum">05</span>
-      <h2>Industry &amp; Capital</h2>
-      <span class="cen">行业与资本</span>
-      <span class="crule"></span>
-    </div>
-    <div class="items">
-
-      <article class="card">
-        <div class="cmeta">
-          <span class="d">11/26 02:49</span>
-          <a class="src" href="https://cj.sina.com.cn/articles/view/2868676035/aafc85c30200204fi" target="_blank" rel="noopener noreferrer">Cailianshe ↗</a>
-        </div>
-        <h3>The GPU spot premium is gone: small buyers get bulk pricing, and renewals have room to bargain</h3>
-        <p>SpaceX cut the spot rent for small Blackwell clusters from about $15–15.5 per GPU-hour to $10–12, a drop of 20%–35%. That is roughly the bulk price it charges large customers such as Anthropic and Google.</p>
-        <p>In the same SemiAnalysis note, Anthropic declined to renew a cluster of about 50,000 H200s. SpaceX is looking for new tenants, with delivery in early 2027 at about $5 per GPU-hour. Ornn's data puts the H200's actual traded price at $6.53 on Monday, so SpaceX's offer is about 23% below it.</p>
-        <p>Ornn's transaction index shows rents cooling: B200 is down 8.8% from its November 8 high to $9.07, H200 is down 16% from its November 11 high to $6.53, and B300 is down 24% from its mid-October high to $10.87.</p>
-        <p>On the demand side, Ramp's data shows enterprise token spending rose 42% in July, only 1.5% across August and September, and 1.65% in October. In the week to November 15, spending was up 12% from a month earlier: usage rose 27.2% while the blended price fell 11.2% to $0.45 per million tokens.</p>
-        <p class="why"><b>Why it matters</b>The spot premium is gone, which means supply is loosening. For a team about to renew a compute contract, short-term leases softening before long-term ones is a signal worth taking into the negotiation. The caveat is in the same note: SemiAnalysis still sees healthy returns for new Blackwell projects. This looks more like a landlord clearing space for new capacity than a market-wide collapse.</p>
+        <h3>Beijing's Yizhuang district offers 1,000-plus datasets and RMB 5 billion in robot scenarios</h3>
+        <p>The E-Bot Day 2026 humanoid-robot developer conference was held in Beijing's Yizhuang district on November 25. The district is home to more than 300 robotics and embodied-AI companies, with an industrial chain worth more than RMB 20 billion.</p>
+        <p>Yizhuang released a plan for an international open-source community called Future Machine Domain. It promises open data-collection sites and more than 1,000 open datasets; a "machine gene factory" and an open bill-of-materials library for rapid prototyping and supply-chain coordination; and nine benchmark scenarios with nearly RMB 5 billion in application demand.</p>
+        <p>The conference also issued a training-ground quality initiative, a list of ten developer achievements for 2026, and a responsible-innovation pledge signed by more than ten organisations. The carnival had 45 booths, 33 projects and 12 university clubs.</p>
+        <p class="why"><b>Why it matters</b>Embodied AI does not lack demos; it lacks trainable data and paying scenarios. The 1,000 datasets and RMB 5 billion demand are two lists that can be audited. For developers, check whether the datasets are downloadable and how long real-robot validation takes. For investors, check how much of the RMB 5 billion becomes orders rather than intentions. If the open BOM really shortens prototyping, it will matter more than another stage demo.</p>
       </article>
 
       <article class="card">
         <div class="cmeta">
-          <span class="d">11/26 08:21</span>
-          <a class="src" href="https://www.digitaltoday.co.kr/en/view/130946/us-chip-curbs-flood-nvidia-gpu-resale-market-b300-units-offered" target="_blank" rel="noopener noreferrer">DigitalToday (via CNBC) ↗</a>
+          <span class="d">11/26 19:09</span>
+          <a class="src" href="https://www.chinastarmarket.cn/detail/2545724" target="_blank" rel="noopener noreferrer">STAR Market Daily ↗</a>
         </div>
-        <h3>After the remote-access rule took effect, thousands of B300s hit the resale market</h3>
-        <p>The US Commerce Department's Bureau of Industry and Security issued an interim final rule on November 16, effective November 19. It restricts not only direct chip purchases by Chinese firms but also renting GPUs in third-country data centres and using them remotely.</p>
-        <p>CNBC reported on November 25 that Nvidia GPU listings had risen unusually since the rule was announced. Jack Duhamel of GPU marketplace GPU Mart said one seller explicitly linked the decision to sell to the new restrictions.</p>
-        <p>Two people, who asked not to be identified, said the supply came mainly from inventory built for Chinese demand for rented overseas data-centre capacity. Since the announcement, offers involving thousands of B300 GPUs have appeared on the market.</p>
-        <p>US Trade Representative Jamieson Greer told CNBC's Squawk Box that the rule is meant to close routes around export controls, including transshipment through Southeast Asia and remote use via third-country data centres. Nvidia declined to comment. CFO Colette Kress said on the November 17 earnings call that the company was assessing the impact. A remote-access security bill has passed the House and awaits a Senate vote.</p>
-        <p class="why"><b>Why it matters</b>One rule turned work-in-progress capacity into inventory looking for a buyer. The asset's duration is now set by policy rather than depreciation. For buyers, that means a short-term discount; for sellers, a clock to find a new data centre. Watch two numbers: the actual discount on B300 deals, and the jurisdiction where the chips end up. That will shape the next round of controls.</p>
+        <h3>Samsung forms a fab robot team, targeting parts changes and maintenance by 2028</h3>
+        <p>Samsung Electronics' Device Solutions (DS) division has set up a robot team under its global manufacturing and infrastructure headquarters to put robots to work in semiconductor fabs. The Korean outlet ETNEWS reported the move on November 26.</p>
+        <p>Industry figures put front-end automation in fabs at about 90% and back-end automation at 80%. Humans still replace parts and consumables and maintain equipment, and those are the tasks the robot team is aimed at.</p>
+        <p>Samsung plans to pick partners this year, run technical evaluations next year and begin deployment in 2028.</p>
+        <p class="why"><b>Why it matters</b>A wafer fab is one of the hardest environments for a robot: cleanroom conditions, micro-vibration and 24-hour uptime with very little tolerance for error. Samsung is starting with maintenance rather than production, which is the right order. The 2028 date suggests it knows the difficulty is reliability and force control, not the arm itself. Watch two things: whether the partners build mobile manipulators or fixed arms, and whether the first deployment lands in the front end or the back end.</p>
       </article>
 
     </div>
@@ -503,9 +521,9 @@
 
     <footer class="issue-footer">
       <div class="wrap">
-        <p>This issue covers reports published between November 25, 09:13 and November 26, 10:00 (Beijing time): 8 stories. Compiled at 11/26 10:00.</p>
+        <p>This issue covers reports published between November 26, 10:00 and November 27, 08:00 (Beijing time): 9 stories. Compiled at 11/27 08:00.</p>
     <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
-    <p class="sig">AI Daily · Issue 031 · 24h window · Generated 2026-11-26 10:00</p>
+    <p class="sig">AI Daily · Issue 032 · 24h window · Generated 2026-11-27 08:00</p>
       </div>
     </footer>
       </div>
@@ -530,8 +548,12 @@
       <!-- ARCHIVE_SIDEBAR_ZH:START -->
       <div class="archive-lang" data-lang="zh">
       <details class="archive-month" open>
-        <summary><span>2026 年 11 月</span><span class="am-count">25</span></summary>
-        <a class="archive-link is-current" href="daily-ai/web/2026-11-26.html" title="OpenAI 内部模型一天写了九篇数学手稿，宣称把矩阵乘法指数钉在 9/4">
+        <summary><span>2026 年 11 月</span><span class="am-count">26</span></summary>
+        <a class="archive-link is-current" href="daily-ai/web/2026-11-27.html" title="英伟达暂停向新马泰印尼发服务器，东南亚云商 90 天内要证明客户不受限">
+          <span class="a-date">2026.11.27 <em>FRI</em></span>
+          <span class="a-head">英伟达暂停向新马泰印尼发服务器，东南亚云商 90 天内要证明客户不受限</span>
+        </a>
+        <a class="archive-link" href="daily-ai/web/2026-11-26.html" title="OpenAI 内部模型一天写了九篇数学手稿，宣称把矩阵乘法指数钉在 9/4">
           <span class="a-date">2026.11.26 <em>THU</em></span>
           <span class="a-head">OpenAI 内部模型一天写了九篇数学手稿，宣称把矩阵乘法指数钉在 9/4</span>
         </a>
@@ -664,8 +686,12 @@
       <!-- ARCHIVE_SIDEBAR_EN:START -->
       <div class="archive-lang" data-lang="en" hidden>
       <details class="archive-month" open>
-        <summary><span>November 2026</span><span class="am-count">25</span></summary>
-        <a class="archive-link is-current" href="daily-ai/web/2026-11-26-en.html" title="An unreleased OpenAI model wrote nine math papers in a day, claiming the matrix-multiplication exponent is 9/4">
+        <summary><span>November 2026</span><span class="am-count">26</span></summary>
+        <a class="archive-link is-current" href="daily-ai/web/2026-11-27-en.html" title="Nvidia pauses server shipments to four Southeast Asian countries, starting a 90-day licence clock">
+          <span class="a-date">2026.11.27 <em>FRI</em></span>
+          <span class="a-head">Nvidia pauses server shipments to four Southeast Asian countries, starting a 90-day licence clock</span>
+        </a>
+        <a class="archive-link" href="daily-ai/web/2026-11-26-en.html" title="An unreleased OpenAI model wrote nine math papers in a day, claiming the matrix-multiplication exponent is 9/4">
           <span class="a-date">2026.11.26 <em>THU</em></span>
           <span class="a-head">An unreleased OpenAI model wrote nine math papers in a day, claiming the matrix-multiplication exponent is 9/4</span>
         </a>

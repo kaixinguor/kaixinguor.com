@@ -36,7 +36,7 @@ export function tightenLatin(text = "") {
 
 /** 给常用多字词加 word joiner，避免 "现金流 / 资本开 / 支" 这种断法。 */
 const CJK_TERMS = [
-  "自由现金流", "资本开支", "基础设施", "人工智能", "具身智能", "网络安全", "智能体", "大模型",
+  "自由现金流", "资本开支", "基础设施", "人工智能", "具身智能", "网络安全", "智能体", "大模型", "送上天", "分钟",
   "现金流", "机器人", "芯片", "模型", "收入", "利润", "融资", "投资", "数据",
   "安全", "能力", "市场", "财报", "股价", "发布", "计划", "采购", "收购",
   "转负", "营收", "增速", "净利"
@@ -44,7 +44,9 @@ const CJK_TERMS = [
 const CJK_RE = new RegExp(CJK_TERMS.join("|"), "g");
 
 export function protectCjk(text = "") {
-  return String(text).replace(CJK_RE, (match) => Array.from(match).join("\u2060"));
+  const withTerms = String(text).replace(CJK_RE, (match) => Array.from(match).join("\u2060"));
+  /* 数字和中文单位之间不要断行，避免 "45 / 分钟" 这种悬空。 */
+  return withTerms.replace(/(\d+(?:\.\d+)?)\s+(分钟|小时|天|年|月|日|秒|千瓦|亿元|万颗|条|期|倍|分)/g, "$1\u00a0$2");
 }
 
 /** 统一的截断省略号：中文用六点，避免“…”像句号又像没写完。 */

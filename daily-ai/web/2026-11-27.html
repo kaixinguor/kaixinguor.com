@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 27 日</title>
+<meta name="description" content="2026-11-27 AI 日报第 032 期：英伟达暂停向新马泰印尼交付服务器，东南亚云商 90 天内申请许可；腾讯开源 DFly2，Hy4 flash 长文本生成快 3.2 倍；上海 AI Lab 开源 9B 全双工模型 Sage；OpenAI 修掉 GPT-6.2 计费错误，Astra 额度消耗快 40%；瑞士通报五起 AI 智能体攻击；微软拆解 ARTEX；北京亦庄发布千余数据集与近 50 亿元场景需求；三星设半导体工厂机器人团队；中国在轨训练 Qwen3-32B 45 分钟，SpaceX 获 100 万颗卫星批文。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 27 日">
+<meta property="og:description" content="2026-11-27 AI 日报第 032 期：英伟达暂停向新马泰印尼交付服务器，东南亚云商 90 天内申请许可；腾讯开源 DFly2，Hy4 flash 长文本生成快 3.2 倍；上海 AI Lab 开源 9B 全双工模型 Sage；OpenAI 修掉 GPT-6.2 计费错误，Astra 额度消耗快 40%；瑞士通报五起 AI 智能体攻击；微软拆解 ARTEX；北京亦庄发布千余数据集与近 50 亿元场景需求；三星设半导体工厂机器人团队；中国在轨训练 Qwen3-32B 45 分钟，SpaceX 获 100 万颗卫星批文。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-27.html">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="issue-window" content="2026-11-26T10:00:00+08:00/2026-11-27T08:00:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-27.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-27.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-27-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=10">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI 日报</a>
+      <a href="../../economy.html">经济日报</a>
+      <a href="../../education.html">教育日报</a>
+      <a href="../../psychology.html">心理学日报</a>
+      <a href="../../tools.html">工具</a>
+      <a href="../../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-27-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 032 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 27 日<span class="weekday">FRI</span></h1>
+    <p class="deck">出口管制从芯片买卖延伸到服务器交付和云端租用。英伟达暂停向东南亚四国发货，90 天许可窗口开始计时；同一天，腾讯把长文本解码提速 3.2 倍，瑞士则确认四起 AI 智能体入侵。算力、成本、安全三条线都在收紧。</p>
+    <div class="metabar"><span class="pill">第 032 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/26 10:00 – 11/27 08:00</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 14 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#capital"><span class="n">01</span>行业与资本</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#products"><span class="n">03</span>产品与智能体</a>
+        <a href="#research"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied"><span class="n">05</span>具身智能</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>英伟达暂停向马来西亚、新加坡、泰国、印尼交付服务器。</b>美国商务部堵住远程租算力通道后，东南亚云商有 90 天申请许可，并要证明终端客户不受限。据 Institute for Progress 估算，这类远程数据中心曾供给中国约 24% 的 AI 算力。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>中国“星算”计划的 Libra 卫星搭载 Qwen3-32B，在轨连续训练 45 分 33 秒。</b>中国信通院称，国星宇航的液冷和辐射散热翼带走了 10 千瓦级 AI 计算机的热量。另一边，SpaceX 获 FCC 批准最多 100 万颗 Starmind 卫星，2033 年前发射首颗。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>瑞士联邦网络安全局通报五起 AI 智能体攻击，四起得手。</b>据瑞士公共广播公司 SRF 报道，三家关键基础设施运营方分别属于电力、供水、通信行业。BACS 没有披露幕后主体，也没有公布攻击技术细节。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card" data-followup="2026-11-26">
+        <div class="cmeta">
+          <span class="d">11/26 19:21</span>
+          <a class="src" href="https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>英伟达暂停向新马泰印尼发服务器，东南亚云商 90 天内要证明客户不受限</h3>
+        <p>英伟达已要求戴尔、超微等制造伙伴暂停向马来西亚、新加坡、泰国、印度尼西亚交付服务器。据《金融时报》报道，暂停没有给出期限，公司要评估当地伙伴是否满足美国的出口要求。</p>
+        <p>这条命令紧跟在商务部收紧远程算力通道之后。过去中国企业通过上述国家的数据中心远程租用英伟达芯片，美国商务部本月把这条路纳入许可管理。现在云服务商有 90 天申请许可，并要证明终端客户里没有受限企业。一位云厂商高管对《金融时报》说，目前没有申请指引，局面“混乱”。</p>
+        <p>智库 Institute for Progress 估算，这类远程数据中心曾供给中国约 24% 的 AI 算力。TechCrunch 报道了这个数字。金融侧已经开始收缩。银行暂停了向新加坡云商 Aolani 发放的约 5 亿美元贷款，这笔钱原计划用于向字节跳动出租算力。字节跳动可能退出交易。</p>
+        <p>转售市场也在动。CNBC 报道，新规公布后，交易商挂牌的英伟达 GPU 明显增多，其中包含数千块 B300。</p>
+        <p class="why"><b>看点</b>管制对象从芯片变成服务器交付和云端租用，等于把监管点前移到机房门口。对要续租东南亚算力的团队，90 天许可就是硬截止；先确认终端客户是否在限制名单，再谈价格。<br><b>另一个视角</b>：5 亿美元贷款被按下暂停键，说明政策风险已经写进银行授信。算力资产的久期，现在由许可证而不是折旧率决定。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 06:12</span>
+          <a class="src" href="https://en.sedaily.com/world/2026/11/27/china-joins-space-data-center-race-challenging-musk" target="_blank" rel="noopener noreferrer">Seoul Economic Daily ↗</a>
+        </div>
+        <h3>中国把 Qwen3-32B 送上天训练 45 分钟，SpaceX 拿到 100 万颗卫星批文</h3>
+        <p>中国信通院完成了 10 月发射的一组算力卫星的性能验证。其中一颗卫星名为 Libra，搭载阿里 Qwen3-32B。它在绕地飞行时连续训练 45 分 33 秒，完成了“做题、分析错题、改进”的完整训练循环。</p>
+        <p>在轨训练最难的是散热。中国信通院称，国星宇航（ADA Space）的液冷系统和加大的辐射散热翼在轨正常工作。它们带走了 10 千瓦级 AI 计算机的热量。作为对照，谷歌用于轨道的 TPU 原型每次约运行 15 分钟。</p>
+        <p>“星算”计划由国星宇航牵头，目标部署 2800 颗卫星。2025 年 5 月发射第一批，今年 10 月发射第二批；目前在轨算力约 50 POPS。</p>
+        <p>另一条消息是，美国 FCC 批准 SpaceX 部署最多 100 万颗 Starmind 卫星，用于轨道数据中心。SpaceX 须在 2033 年 11 月前发射首颗，2035 年前部署 10 万颗。2038 年前部署 50 万颗，2040 年完成全部部署。亚马逊等公司的反对被驳回。</p>
+        <p class="why"><b>看点</b>轨道数据中心拿发射和散热换土地和电力。45 分钟比 15 分钟长，是热管理的进步，不是成本优势；50 POPS 放在地面只是一个中型集群。今天能不能用，取决于每 token 成本、下行带宽和故障率。先看星算下一批卫星是否继续搭载大模型训练，而不是只做推理。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 15:07</span>
+          <a class="src" href="https://github.com/Tencent/AngelSpec" target="_blank" rel="noopener noreferrer">腾讯混元 AngelSpec ↗</a>
+        </div>
+        <h3>腾讯混元开源 DFly2，Hy4 flash 长文本生成快 3.2 倍</h3>
+        <p>腾讯混元 11 月 26 日开源草稿模型 DFly2。它不替换 Hy4 flash，也不改权重和输出。它在旁边做投机采样：先由小模型生成候选词元，再交给目标模型集中验证。</p>
+        <p>DFly2 只适配 DSA 类稀疏注意力模型。它直接读取目标模型已缓存的 KV，以及索引器为每个查询选出的最多 2048 个位置。这样草稿层不用自己维护缓存，注意力开销不随上下文长度增长，也不参与 prefill。</p>
+        <p>腾讯在 19 个公开评测集上对比了 DFlash 和 DSpark。长文本加速约 3.2 倍，单个 AgentLongBench 任务最高 4.2 倍，四项 Agent 任务平均约 3.2 倍。接收长度相对 DSpark 的优势，从短文本的约 4% 扩大到 128K 上下文的约 18%。Agent 任务最高提升 68.5%。</p>
+        <p>权重、训练代码和技术报告已全部开放。除 Hy4 和 Hy4 flash，DFly2 现在也支持 DeepSeek-V4.1-Flash 和 GLM-5.3-Flash。对应的 MoE 草稿模型已放出，训练框架 AngelSpec 支持最高 256K 上下文。</p>
+        <p class="why"><b>看点</b>投机采样是当下最便宜的延迟杠杆，DFly2 的真正优势是零额外 KV 缓存。对推理服务，显存省下来就能多跑并发；对 PD 分离部署，只传一个末层隐状态也省带宽。4.2 倍是单项最好成绩，平均 3.2 倍，且是厂商自测。上线前用自己的流量测接收长度，别只看发布会数字。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 12:02</span>
+          <a class="src" href="https://www.donews.com/news/detail/1/6782276.html" target="_blank" rel="noopener noreferrer">DoNews ↗</a>
+        </div>
+        <h3>上海 AI Lab 开源 9B 全双工模型 Sage，打断后 1.29 秒接回话头</h3>
+        <p>上海人工智能实验室支持的 InternLM 团队在 11 月 25 日开源 Sage-Interaction，次日对外披露。这是一个 9B 参数的全双工全模态模型，基于 MiniCPM-o 4.5 构建。</p>
+        <p>它能一边接收流式音频和视频，一边生成语音。用户打断、短暂应答或背景噪声出现时，对话不会断。和“听完再回答”的语音助手不同，它把实时对话前端和后台智能体分开。前端继续陪聊，复杂推理、工具调用和长任务交给后台，结果回来后再接进当前对话。</p>
+        <p>项目方称，Sage-Interaction 在 FD-Bench v1.5 上得 80.73 分。FD-Bench v1 的轮次切换延迟为 1.29 秒。权重和代码已在 Hugging Face 与 GitHub 开放。</p>
+        <p class="why"><b>看点</b>全双工的门槛不在参数量，在调度。1.29 秒接近人类接话的节奏，但真正的难点是后台任务返回时，前端能不能不抢话、不重复。项目方给的分数是自测；要判断能不能用，得在真实麦克风、噪声和工具延迟下测。下一步看有没有人把它接进电话客服或陪伴产品。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 01:28</span>
+          <a class="src" href="https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>OpenAI 修掉 GPT-6.2 计费错误，Astra 额度消耗快 40%</h3>
+        <p>OpenAI Codex 工程师 Thibault Sottiaux 在 X 上说明了原因。GPT-6.2 上线时的计费错误让多数用户拿到了错误折扣。错误已经修复，代价是 Astra 的额度消耗比上周快 40%，Sol 快 25%。</p>
+        <p>他补充，修复后的额度仍比 GPT-6 Astra 和 GPT-6.1 Sol 耐用。其他模型不受影响，OpenAI 不会追收差价。作为补偿，Go、Plus、Pro、Business 用户各多一次已保存的重置。Business 用户到年底可免费使用 Fast Mode。</p>
+        <p>同一时间，OpenAI 正在一小批 Pro 用户里测试把 Chat 和 Work 合并。Work 更偏智能体，token 成本更高，速度更慢。合并后所有对话跑在同一个云环境里，由模型决定直接回答还是启动完整的智能体流程。</p>
+        <p class="why"><b>看点</b>这是价格修正，不是能力变化。同样一次任务，Astra 的有效成本涨了 40%，Sol 涨了 25%；订阅价没变，变的是能跑多少次。对团队，重新按任务测成本，比看价目表有用。12 月合并额度全面推开后，先看 Pro 用户的触限率，再看多给的一次重置够不够补。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 19:30</span>
+          <a class="src" href="https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks/" target="_blank" rel="noopener noreferrer">The Decoder ↗</a>
+        </div>
+        <h3>微软拆解 ARTEX：多智能体把渗透测试跑成流水线，5 分钟偷到云密钥</h3>
+        <p>微软威胁情报发布分析，拆解了 AI 渗透测试框架 ARTEX。这个框架 2026 年 7 月由一个 GitHub 用户公开，10 月源码被删除，但副本仍在流传。中国安全公司 ThreatBook 还在卖商业 Pro 版。</p>
+        <p>ARTEX 不发明新漏洞，它把 Nmap、Sqlmap、Metasploit 和无头浏览器交给多个智能体操作。系统里，一个 goal 模型把指令拆成可验证的子目标。规划智能体查看知识图谱并派发短任务，执行智能体去跑命令，最后汇总报告。</p>
+        <p>它支持接入任意大模型，包括去掉安全限制的版本。内置的池化功能在报错或额度用尽时自动切换模型或 API key，让单一模型供应商难以追踪。</p>
+        <p>微软记录了两个速度样本。一个智能体用 5 分钟在 GitHub 找到泄露凭据，并从 Azure Key Vault 拉走数据。Storm-0940 的一次行动中，自动化密码猜测超过 15.1 万次，峰值每分钟 2900 次。微软建议用蜜罐、焦油坑和“假胜利”信号欺骗智能体。</p>
+        <p class="why"><b>看点</b>这套东西的威胁不在新漏洞，在把现有工具串成一条自动流水线，并在失败时换模型继续。防守方的固定 IP、固定 UA 规则很容易被绕开；蜜罐和假胜利之所以有效，是因为目标模型需要可验证的成功证据。这个优势有保质期：一旦攻击者学会放慢节奏、识别诱饵，基于流量的防线会再次失效。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 23:24</span>
+          <a class="src" href="https://it.ithome.com/archiver/1/033/131.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>瑞士通报五起 AI 智能体攻击，四起得手，电力供水通信各一家</h3>
+        <p>瑞士联邦网络安全局（BACS）周四通报，过去几天瑞士发生五起网络攻击。攻击者使用 AI 智能体，针对企业和关键基础设施运营方发起入侵。五起里有四起得手，系统被攻破。</p>
+        <p>据瑞士公共广播公司 SRF 报道，被攻击的三家关键基础设施运营方分别属于电力、供水、通信行业。BACS 没有披露幕后主体，只建议企业落实防护手段，包括定期做网络安全检测。</p>
+        <p>路透社在 11 月 26 日报道了这份通报。BACS 没有说明攻击者用了哪种智能体、攻破了哪些系统，也没有给出技术细节。</p>
+        <p class="why"><b>看点</b>五起里四起成功，样本很小，不能当成通用成功率。但目标很具体：电力、供水、通信各一家。智能体把侦察、尝试、横向移动的成本压低了，防守方要假设对手能以机器速度试错。现在缺的是攻击手法；在 BACS 公布细节前，能做的只有隔离 OT 网络、限制凭据、加快告警。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 13:59</span>
+          <a class="src" href="http://bj.people.com.cn/n2/2026/1126/c14540-41761755.html" target="_blank" rel="noopener noreferrer">人民网北京频道 ↗</a>
+        </div>
+        <h3>北京亦庄把具身智能的缺口摊开：千余数据集、近 50 亿元场景订单</h3>
+        <p>11 月 25 日，E-Bot Day 2026 人形机器人开发者大会在北京亦庄举办。亦庄目前聚集了 300 多家机器人及具身智能企业，产业链规模超过 200 亿元。</p>
+        <p>会上发布《北京亦庄“未来机域”具身智能国际开源社区建设计划》。计划开放数据采集场所，汇聚千余个开源数据集。它还要建设“机因工场”和开源物料清单库，支持快速打样和供应链协同。在九大标杆场景“揭榜挂帅”，释放近 50 亿元应用需求。</p>
+        <p>大会还发布了《人形机器人与具身智能训练场高质量发展倡议》和“2026 具身智能十大年度开发者成果”。十余家单位共同作出了“具身向善”责任创新承诺。嘉年华设 45 个展位，33 个参展项目、12 个高校社团。</p>
+        <p class="why"><b>看点</b>具身智能缺的是能直接训练的数据和愿意付费的场景，演示反而不缺。千余个数据集和近 50 亿元需求，是两份可以验收的清单。对开发者，先看数据集能不能下载、真机验证排期多长；对投资人，看 50 亿元里有多少变成订单而不是意向。开源物料清单如果真能缩短打样周期，比多放几个演示有用。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/26 19:09</span>
+          <a class="src" href="https://www.chinastarmarket.cn/detail/2545724" target="_blank" rel="noopener noreferrer">科创板日报 ↗</a>
+        </div>
+        <h3>三星在半导体工厂设机器人团队，目标 2028 年接管换件与维护</h3>
+        <p>三星电子半导体板块 DS 部已在其全球制造与基础设施总部下设立“机器人团队”，推进机器人在半导体工厂的落地。韩国媒体 ETNEWS 在 11 月 26 日报道了这条消息。</p>
+        <p>业内数据显示，半导体工厂的前端自动化程度已达 90%，后端达 80%。但零件和耗材更换、设备维护等工序仍要人来完成，这些正是机器人团队的目标。</p>
+        <p>三星计划年内遴选合作伙伴，明年做技术评估，2028 年开始实际部署。</p>
+        <p class="why"><b>看点</b>晶圆厂是机器人最难的环境：洁净室、微振动、24 小时不停机，容错率极低。三星先做维护而不是生产，顺序是对的。2028 年这个时间表说明它知道难点在可靠性和力控，不在机械臂本身。接下来看两件事：合作方是移动操作臂还是固定机械臂，以及第一次部署选在前端还是后端。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 26 日 10:00 至 11 月 27 日 08:00（北京时间）之间发布的报道，共 9 条。检索时间 11/27 08:00。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 032 · 24h window · Generated 2026-11-27 08:00</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI 日报</a>
+        <a href="../../economy.html">经济日报</a>
+        <a href="../../education.html">教育日报</a>
+        <a href="../../psychology.html">心理学日报</a>
+        <a href="../../tools.html">工具</a>
+        <a href="../../wish.html">许愿</a>
+        <a href="../../privacy.html">隐私</a>
+        <a href="../../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新<br><a class="beian" href="https://www.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2025109256号-2</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=6"></script>
+</body>
+</html>

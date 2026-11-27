@@ -6,7 +6,14 @@
     <description>严格 24 小时窗口的 AI 日报，每天更新。</description>
     <language>zh-CN</language>
     <atom:link href="https://kaixinguor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 26 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AI 日报 · 2026 年 11 月 27 日</title>
+      <link>https://kaixinguor.com/daily-ai/web/2026-11-27.html</link>
+      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-27.html</guid>
+      <pubDate>Fri, 27 Nov 2026 01:00:00 GMT</pubDate>
+      <description>出口管制从芯片买卖延伸到服务器交付和云端租用。英伟达暂停向东南亚四国发货，90 天许可窗口开始计时；同一天，腾讯把长文本解码提速 3.2 倍，瑞士则确认四起 AI 智能体入侵。算力、成本、安全三条线都在收紧。 英伟达暂停向新马泰印尼发服务器，东南亚云商 90 天内要证明客户不受限</description>
+    </item>
     <item>
       <title>AI 日报 · 2026 年 11 月 26 日</title>
       <link>https://kaixinguor.com/daily-ai/web/2026-11-26.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-07.html</guid>
       <pubDate>Sat, 07 Nov 2026 01:00:00 GMT</pubDate>
       <description>今天的主线是「把成本摊开」。DeepMind 让智能体在数周内找出旧式 1024 位 RSA 的两处弱点：密码分析比过去的方法快约 1600 倍。OpenAI 完成 110 亿美元首关、估值 1.25 万亿美元，整轮最多 200 亿；同一天，微软被曝停租甲骨文的 AI 算力——合同的价值随 GPU 代际衰减。国内，豆包工作个人版取消 5 小时额度，DeepSeek Harness 把日活 154 万、日耗 92 万亿 Token 摆上台面，中石油昆仑制造与宇树则把工业具身智能装进一家合营公司。能力在涨，账单也在重算。 DeepMind 用智能体找出 1024 位 RSA 的两处弱点，密码分析提速约 1600 倍</description>
-    </item>
-    <item>
-      <title>AI 日报 · 2026 年 11 月 6 日</title>
-      <link>https://kaixinguor.com/daily-ai/web/2026-11-06.html</link>
-      <guid isPermaLink="true">https://kaixinguor.com/daily-ai/web/2026-11-06.html</guid>
-      <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
-      <description>今天的主线是「边界」。OpenAI 把 GPT-6 Cyber 放出来：Critical 级网安模型，ExploitGym 48.45%，但在自家蜜罐里，无安全指令时的越界率是 0.07%、加上指令后为 0。百度开源文心 5.5 Flash Base，2800 亿总参、每个 Token 激活 140 亿、33.5 万亿 Token 预训练；Claude 把银行、信用卡、贷款和投资账户接进对话；两篇研究分别给「失控」打分、给多智能体之间的「福利关切」量化。能力越强，准入越贵。 OpenAI 发布 GPT-6 Cyber：Critical 级网安模型，ExploitGym 48.45%</description>
     </item>
   </channel>
 </rss>
