@@ -52,6 +52,20 @@ cd "$SITE_DIR" || exit 2
 
 echo "==> ${LABEL} ${DATE} 开始 $(date '+%F %T %Z')" | tee -a "$LOG"
 
+# 配图只在仓库里保留"当天"这一份：开工前把之前已跟踪的删掉（删除会随本次提交一起推走）。
+# 历史可在 git 里找回，页面本身也能用 make-social 从 HTML 重新出图。
+if [ "$SECTION" = "ai" ] && [ -d "$SITE_DIR/daily-ai/social" ]; then
+  for d in "$SITE_DIR"/daily-ai/social/*/; do
+    [ -d "$d" ] || continue
+    name="$(basename "$d")"
+    [ "$name" = "$DATE" ] && continue
+    if git -C "$SITE_DIR" ls-files --error-unmatch "daily-ai/social/$name" >/dev/null 2>&1; then
+      git -C "$SITE_DIR" rm -r -q "daily-ai/social/$name" \
+        && echo "==> 清理旧配图 daily-ai/social/$name" | tee -a "$LOG"
+    fi
+  done
+fi
+
 # 先同步仓库：Mac 上改过的文档/模板要能被这一轮用上；
 # 上一轮 push 失败留下的本地提交也在这里被发现。
 # 先补推昨天遗留的提交，避免拉取时出现分叉
