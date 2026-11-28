@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 日报 · 2026 年 11 月 28 日</title>
+<meta name="description" content="2026-11-28 AI 日报第 033 期：OpenAI 反诉苹果，称离职员工被设局；东京电力计划九年投 10.2 万亿日元建 AI 电力设施；微盟花 4.3 亿元买约 5000 张推理 GPU；国家数据局就 AI 用数规则征求意见；腾讯混元发布 Hy3D 3.6；豆包工作接入剪映插件；日本拟对前沿 AI 企业设安全义务和罚则；中国发布地球大模型引擎 SUICE；智元精灵 G2 进入精密装配。">
+<meta property="og:title" content="AI 日报 · 2026 年 11 月 28 日">
+<meta property="og:description" content="2026-11-28 AI 日报第 033 期：OpenAI 反诉苹果，称离职员工被设局；东京电力计划九年投 10.2 万亿日元建 AI 电力设施；微盟花 4.3 亿元买约 5000 张推理 GPU；国家数据局就 AI 用数规则征求意见；腾讯混元发布 Hy3D 3.6；豆包工作接入剪映插件；日本拟对前沿 AI 企业设安全义务和罚则；中国发布地球大模型引擎 SUICE；智元精灵 G2 进入精密装配。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-28.html">
+<meta name="theme-color" content="#14110f">
+<meta name="issue-window" content="2026-11-27T08:00:00+08:00/2026-11-28T08:02:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-28.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-28.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-28-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=11">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = "dark";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "zh"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI 日报</a>
+      <a href="../../economy.html">经济日报</a>
+      <a href="../../education.html">教育日报</a>
+      <a href="../../psychology.html">心理学日报</a>
+      <a href="../../tools.html">工具</a>
+      <a href="../../wish.html">许愿</a>
+      <a class="lang-btn" href="2026-11-28-en.html" hreflang="en">EN</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI 日报</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">第 033 期</span>
+    </div>
+    <h1 class="date">2026 年 11 月 28 日<span class="weekday">SAT</span></h1>
+    <p class="deck">OpenAI 把苹果告上法庭，争的是离职员工能带走什么。日本则把前沿 AI 的安全义务写进修正案，违反命令要受罚。腾讯的 3D 模型开始生成 PBR 贴图，中国把遥感专家模块接进通用大模型。能力、数据与责任正在被重新划线。</p>
+    <div class="metabar"><span class="pill">第 033 期</span>
+      <span class="dot"></span>
+      <span>窗口 11/27 08:00 – 11/28 08:02</span>
+      <span class="dot"></span>
+      <span>9 条</span>
+      <span class="dot"></span>
+      <span>阅读约 14 分钟</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="栏目">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>速览</a>
+        <a href="#capital"><span class="n">01</span>行业与资本</a>
+        <a href="#models"><span class="n">02</span>模型与能力</a>
+        <a href="#products"><span class="n">03</span>产品与智能体</a>
+        <a href="#research"><span class="n">04</span>研究与安全</a>
+        <a href="#embodied"><span class="n">05</span>具身智能</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>OpenAI 反诉苹果，称苹果的雇佣制度把离职员工置于几乎可以被指控窃密的位置。</b>苹果 6 月起诉 OpenAI 及两名前员工，称他们窃取未发布产品机密；苹果回应称反诉是转移视线。</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>东京电力计划到 2035 财年投资 10.2 万亿日元建 AI 电力设施，其中 4.9 万亿用于电网。</b>它想把数据中心建在电厂旁，以表后供电绕开并网排队；JERA 已与 Anthropic、Meta 洽谈。</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>日本政府确定 AI 法修正案概要，要求高性能 AI 企业履行安全义务并报告重大事故。</b>不遵守劝告和命令的企业将面临罚则。政府计划明年向通常国会提交法案。</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>行业与资本</h2>
+      <span class="cen">Industry &amp; Capital</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/28 05:18</span>
+          <a class="src" href="https://www.cbsnews.com/news/openai-countersues-apple-trade-secrets-lawsuit/" target="_blank" rel="noopener noreferrer">CBS News ↗</a>
+        </div>
+        <h3>OpenAI 反诉苹果，称离职员工被设局</h3>
+        <p>OpenAI 于 11 月 27 日在加州北区联邦法院反诉苹果。它指控苹果的雇佣制度把离职员工置于一个几乎可以被指控窃密的位置。诉状称，苹果制造了“几乎可以指控任何离职员工及其新雇主窃取商业机密”的局面。</p>
+        <p>苹果今年 6 月起诉 OpenAI 及两名员工，首席硬件官 Tang Tan 和技术人员 Chang Liu。苹果称他们窃取未发布产品的机密，帮助 OpenAI 开发硬件。两人都曾在苹果任职。</p>
+        <p>苹果发言人回应 CBS News，称案件核心是 OpenAI 员工故意窃取、访问和使用苹果未发布技术的机密，而非无意保留信息。苹果称反诉是“转移视线的尝试”，并称法院已命令 OpenAI 停止使用苹果机密信息。</p>
+        <p>OpenAI 在反诉中称，苹果的雇佣做法是给离职员工及其未来雇主设下的“陷阱”，只要苹果想拖慢潜在竞争者，就能启动。CBS 提到，OpenAI 在 2025 年 7 月收购了前苹果设计师 Jony Ive 的 AI 设备公司 io Products。</p>
+        <p class="why"><b>看点</b>这场诉讼的直接影响在人才流动，不在模型能力。苹果把“离职员工脑子里的未发布产品信息”当成可诉讼资产，OpenAI 则把保密协议描述成拖慢对手的工具。对做硬件和端侧 AI 的团队，招聘前要做的不是背调清单，而是把哪些信息不能带走、哪些经验可以复用写清楚。<br><b>另一个视角</b>：如果法院收紧禁令，OpenAI 的硬件团队会更难从苹果挖人，产品节奏也会被拖慢。案件在加州北区法院推进，下一次听证和禁令范围会决定两家公司能挖多快的人。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 16:27</span>
+          <a class="src" href="https://www.163.com/dy/article/LCOM7FP705198CJN.html" target="_blank" rel="noopener noreferrer">财联社 ↗</a>
+        </div>
+        <h3>东京电力计划九年投 10.2 万亿日元，把 AI 数据中心拉到电厂旁边</h3>
+        <p>东京电力控股向潜在资本合作方展示了长期增长战略。截至 2035 财年的九年间，公司计划投资 10.2 万亿日元。其中 4.9 万亿用于电网，2.5 万亿用于核电设施。到 2040 财年，累计投资预计超过 15 万亿日元。</p>
+        <p>它想把数据中心直接建在电厂附近，以“表后”方式供电，绕开最长可达十年的电网接入排队。面向数据中心的售电量，以 2027 财年计划的 43 亿千瓦时为基数，2035 财年增至约 8 倍，2040 财年接近 16 倍。</p>
+        <p>资金来源不只靠自身现金流。软银、日本产业合作伙伴（JIP）、KKR、黑石和全球基础设施合伙公司（GIP）五方正在参与资本合作谈判。东京电力每年还要为福岛第一核电站退役和赔偿支出约 5000 亿日元。</p>
+        <p>它参股的 JERA 已与 Anthropic、Meta 洽谈，也在与亚马逊、微软和谷歌讨论。JERA 与戴尔、英国数据中心运营商 Rhaelm 计划在千叶火电厂建一座 400 兆瓦数据中心，2028 年投运。</p>
+        <p class="why"><b>看点</b>电力正在变成 AI 扩张的硬约束，东京电力的方案是把发电、并网和机房打包。表后供电能缩短交付，但把风险从电网转到机组可用性：计划以四台核电机组运行为前提，其中三台还没提交重启审查。对算力采购方，2028 年的 400 兆瓦是一个可观察的交付节点；对投资者，1.44 万亿日元的 EBITDA 目标取决于核电重启，不是数据中心需求。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 10:43</span>
+          <a class="src" href="https://finance.sina.cn/2026-11-27/detail-inkacvhk7869816.d.html?vt=4" target="_blank" rel="noopener noreferrer">中国新闻网 ↗</a>
+        </div>
+        <h3>国家数据局就 AI 用数规则征求意见，训练数据可以付费买</h3>
+        <p>国家数据局 11 月 27 日就完善数据规则、支持人工智能创新发展的若干意见公开征求意见，截止到 12 月 6 日。文件共 12 条，核心是让合法获取的数据能用于 AI 训练和推理。</p>
+        <p>征求意见稿明确，企业可以通过采集生成、衍生创造、受让取得、授权许可等渠道获得数据，并取得持有权、使用权、经营权。在不违反法律和合同、不侵犯他人权益的前提下，企业可以把数据用于训练和推理。数据经营权人也可以把数据提供给他人用于训练和推理。</p>
+        <p>文件还提出，支持企业为高质量数据付费。企业可以通过合法采集、协议购买、以数换数、模型换数据等方式获得语料。文件还要求建立数据质量评价机制，用数据产权登记凭证认定流通责任，并建立数据纠纷调解和仲裁机制。</p>
+        <p>在责任端，文件要求 AI 企业建立风险防控和应急处置机制，不得生成违法内容、侵害隐私、商业秘密或著作权。已落实法律规定并采取合理必要措施的，可以作为减轻或免除法律责任的事实依据。</p>
+        <p class="why"><b>看点</b>这份文件把“能不能拿数据训练”从原则争论变成可操作的产权和合同问题。对模型团队，最直接的变化是采购数据时要看产权登记和用途约定，不能再默认“公开可见就能训练”。对数据持有方，以数换数和模型换数据被写进文件，意味着非现金交易有了合规路径。12 月 6 日前是意见窗口，正式稿的措辞会决定衍生数据和受托处理数据的边界。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 09:11</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202611273941457496.html" target="_blank" rel="noopener noreferrer">界面新闻 ↗</a>
+        </div>
+        <h3>微盟花 4.3 亿元买约 5000 张推理 GPU</h3>
+        <p>微盟集团旗下全资附属公司微盟智算在 11 月 26 日签署协议，合作方是英迈电子和上海赋欣。协议内容是采购并部署约 5000 张高性能合规 AI 推理芯片。界面新闻标注的型号为 NVIDIA RTX 5500 GPU，总金额约 4.3 亿元人民币。</p>
+        <p>微盟称，这批算力用于支撑 AI 业务增长，以及内容生成等多模态应用。公司此前主要做 SaaS 和营销服务，这笔采购把算力基础设施纳入自建范围。</p>
+        <p class="why"><b>看点</b>按 4.3 亿元、5000 张计算，单卡折合约 8.6 万元，这个价格更接近整机加集成，不是裸卡。对做营销内容生成的团队，自建推理集群能把边际成本压到电费和折旧，但也会把利用率风险留在表内。接下来看两件事：这批卡是租给内部业务还是对外售卖，以及上架后的实际利用率。如果只为自家峰值备货，低谷期的闲置会吃掉省下的毛利。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>模型与能力</h2>
+      <span class="cen">Models &amp; Capability</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 20:57</span>
+          <a class="src" href="https://tech.cnr.cn/techgd/20261127/t20261127_527885591.shtml" target="_blank" rel="noopener noreferrer">央广网 ↗</a>
+        </div>
+        <h3>腾讯混元发布 Hy3D 3.6，3D 高模开始带 PBR 贴图</h3>
+        <p>腾讯混元 11 月 27 日发布 3D 大模型 Hy3D 3.6，重点优化高模和 PBR 材质贴图生成。模型已上线腾讯云 Token Hub 提供 API。腾讯 AI 创意智能体 Miora、游戏资产平台 LAP、影视 AI 平台 WorkRally 已接入。</p>
+        <p>Hy3D 3.6 是原生 3D 生成模型。它用 VAE 把几何和纹理压成统一的稀疏潜在表示，再用 DiT 从参考图生成几何和纹理。后训练阶段用多专家生产偏好候选，结合 SFT 和 DPO 调整输出。</p>
+        <p>腾讯组织了数百位专业 3D 美术和建模师做盲测，称新版本在几何整体质量、纹理整体质量和可用性上显著优于同类模型。这个结论来自厂商自测，样本和评分标准没有公开。</p>
+        <p>混元 3D 从 2024 年 11 月开源首代模型，官方称社区下载量已超过 653 万。团队把路线分成两条：高模资产和符合专业美术规范的低模资产。</p>
+        <p class="why"><b>看点</b>3D 生成的价值不在单张图好看，在能不能进入重拓扑、UV 和烘焙流程。Hy3D 3.6 把 PBR 贴图和分件结构一起生成，等于把资产底稿往前推了一步。但“数百位美术盲测”是厂商自测，缺少拓扑合格率、UV 可利用率和返工时间这些生产指标。今天能不能用，取决于导入 Blender 或 UE 后要改多少；先拿一个角色和一个硬表面道具试，别用整条产线验收。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>产品与智能体</h2>
+      <span class="cen">Products &amp; Agents</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 10:33</span>
+          <a class="src" href="https://m.ithome.com/html/1033208.htm" target="_blank" rel="noopener noreferrer">IT之家 ↗</a>
+        </div>
+        <h3>豆包工作接入剪映插件，一句话剪完口播视频</h3>
+        <p>豆包 11 月 27 日上午宣布，豆包工作独家接入剪映官方插件。用户在电脑端侧栏插件里搜索“剪映”，就能在对话中调用剪辑能力。</p>
+        <p>功能包括一句话剪辑和多轨编辑。用户把素材交给豆包工作，描述要删掉重复、处理口误、加字幕、调字体字号，插件会调用剪映完成。生成后可以继续用对话修改，也可以打开多轨草稿细调。</p>
+        <p>它还能调用剪映 Hub，把文稿、代码、脚本或商品图转成科普动画、知识短视频、短漫剧或营销短片。官方要求使用从剪映官网下载的最新版剪映。</p>
+        <p class="why"><b>看点</b>这是智能体从“给建议”走到“操作生产工具”的一步。剪辑的难点不在生成文案，在时间轴、轨道和素材对齐；豆包把意图解析留给自己，把渲染和工程文件交给剪映，边界清楚。对内容团队，先测三类任务：口播去重、字幕对齐、多轨修改。如果每次修改都要重跑整段，省下的时间会被返工吃回去。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>研究与安全</h2>
+      <span class="cen">Research &amp; Safety</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 22:12</span>
+          <a class="src" href="https://www.47news.jp/15296962.html" target="_blank" rel="noopener noreferrer">共同社 ↗</a>
+        </div>
+        <h3>日本确定 AI 法修正案概要，高性能 AI 企业要担安全义务</h3>
+        <p>日本政府 11 月 27 日确定了《AI 法》修正案概要。修正案要求提供高性能 AI 的企业履行安全确保义务，并在发生重大事故时报告；不遵守劝告和命令的企业将面临罚则。</p>
+        <p>适用对象是在日本国内有一定数量用户、可能引发重大事故的高性能 AI 提供者，不包括 AI 使用者。具体门槛今后敲定。共同社称，Anthropic 和 OpenAI 等美国公司可能被纳入。</p>
+        <p>安全措施包括：拒绝回答用户关于网络攻击手法、生物武器制造等恐怖主义风险的提问；防止模型在无意中侵入其他公司的服务器。政府判断措施不足时，先发劝告，再发命令，仍不遵守才处罚。</p>
+        <p>政府计划在明年的通常国会提交修正案。</p>
+        <p class="why"><b>看点</b>日本从“促进为主”转向“义务加罚则”，执法链条是劝告、命令、处罚三段。对企业，最现实的变化是安全措施要能被检查：拒答清单、事故报告、越权访问防护都要留下记录。适用门槛看“国内用户数量”和“重大事故风险”，这会决定中小模型服务商是否被纳入。法案还没提交，罚则幅度和门槛会在国会审议中变化。</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 17:55</span>
+          <a class="src" href="https://www.news.cn/tech/20261127/3bf5b749829a488b941255e83b38132d/c.html" target="_blank" rel="noopener noreferrer">新华网 ↗</a>
+        </div>
+        <h3>中国发布地球大模型引擎 SUICE，遥感能力旁路接入通用大模型</h3>
+        <p>11 月 27 日，地球大模型引擎 SUICE V0.1 在北京发布，太空数据中心在轨技术试验平台同步上线。SUICE 面向遥感表征学习，用旁路式架构把遥感认知能力以模块化专家形式注入通用大模型。</p>
+        <p>北京星辰未来空间技术研究院院长张善从介绍，这种接法保留了通用大模型的语言推理能力。它同时让模型具备地物分割、目标识别、变化分析等遥感理解能力。用户可以用自然语言查询卫星影像、做遥感测绘和时空变化监测。</p>
+        <p>SUICE V0.1 已在多个遥感评测集的十余类任务上测试，项目方称达到同类方法领先水平。它可以内嵌进各类通用大模型，也能为城乡治理、自然资源监管提供研判支持。</p>
+        <p>同步上线的在轨平台依托辰光一号 01 星。它验证了 270 伏高压母线、25000 TOPS 国产抗辐照算力和石墨烯柔性散热。多款大模型已完成在轨推理验证。</p>
+        <p class="why"><b>看点</b>把遥感专家模块挂到通用大模型旁边，比从头训练一个遥感大模型便宜，也更容易换底座。难点在接口和置信度：模型要能判断一张卫星图里哪些结论可靠、哪些需要人工复核。25000 TOPS 的在轨算力是一个重要数字，但抗辐照器件的实际吞吐和功耗没有公布。下一步看 SUICE 是否开放权重或 API，以及在真实监管场景里的误报率。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>具身智能</h2>
+      <span class="cen">Embodied AI</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 20:32</span>
+          <a class="src" href="https://stcn.com/article/detail/4357866.html" target="_blank" rel="noopener noreferrer">证券时报 ↗</a>
+        </div>
+        <h3>智元精灵 G2 在龙旗产线装上喇叭 BOX，机器人从搬运走到精密装配</h3>
+        <p>智元 11 月 27 日宣布，旗下机器人精灵 G2 在龙旗科技产线的部署有新进展。它在此前质检上下料并线稳定运行的基础上，进入精密装配环节，承担喇叭 BOX 安装并实现并线生产。</p>
+        <p>智元称，机器人由此从搬运型作业延伸到精密操作型作业。同一台机器人不需要定制改造，就能胜任不同工序。</p>
+        <p class="why"><b>看点</b>精密装配比搬运难在力控和容错：喇叭 BOX 的卡扣、线束和安装角度都要一次对位，失败一次就可能伤件。智元把“无需定制改造”作为卖点，真正要验证的是换型时间、良率和节拍。如果同一台机器人在两条工序间切换要重新示教几个小时，柔性就只是演示词。下一步看龙旗产线的连续运行数据和良率，而不是单次并线视频。</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>本期收录 2026 年 11 月 27 日 08:00 至 11 月 28 日 08:02（北京时间）之间发布的报道，共 9 条。检索时间 11/28 08:02。</p>
+    <p class="disclaimer"><b>声明</b> 本期内容由 AI Agent 搜索、整理并总结，所有条目均链接原文；事实与数字以原文为准，仅供参考。标题与点评由 AI 生成，不代表任何来源立场。</p>
+    <p class="sig">AI Daily · Issue 033 · 24h window · Generated 2026-11-28 08:02</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>源泉混混，不舍昼夜，盈科而后进，放乎四海。<span class="foot-src">——《孟子·离娄下》</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI 日报</a>
+        <a href="../../economy.html">经济日报</a>
+        <a href="../../education.html">教育日报</a>
+        <a href="../../psychology.html">心理学日报</a>
+        <a href="../../tools.html">工具</a>
+        <a href="../../wish.html">许愿</a>
+        <a href="../../privacy.html">隐私</a>
+        <a href="../../feed.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI 日报 · 每天更新<br><a class="beian" href="https://www.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2025109256号-2</a><br><a class="beian beian-police" href="https://beian.mps.gov.cn/#/query/webSearch?code=11010502064434" rel="noreferrer" target="_blank"><img src="../../assets/gongan-beian.png" alt="公安备案图标" width="16" height="18">京公网安备11010502064434号</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=7"></script>
+</body>
+</html>

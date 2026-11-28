@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily · November 28, 2026</title>
+<meta name="description" content="AI Daily Issue 033, November 28, 2026: OpenAI countersues Apple over departing employees; Tokyo Electric plans a 10.2 trillion yen AI power build-out; Weimob buys about 5,000 inference GPUs for RMB 430 million; China drafts AI data rules; Tencent releases Hy3D 3.6; Doubao Work adds a Jianying plugin; Japan moves to impose AI safety duties and penalties; China launches the SUICE earth-model engine; Agibot&#39;s G2 moves into precision assembly.">
+<meta property="og:title" content="AI Daily · November 28, 2026">
+<meta property="og:description" content="AI Daily Issue 033, November 28, 2026: OpenAI countersues Apple over departing employees; Tokyo Electric plans a 10.2 trillion yen AI power build-out; Weimob buys about 5,000 inference GPUs for RMB 430 million; China drafts AI data rules; Tencent releases Hy3D 3.6; Doubao Work adds a Jianying plugin; Japan moves to impose AI safety duties and penalties; China launches the SUICE earth-model engine; Agibot&#39;s G2 moves into precision assembly.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaixinguor.com/daily-ai/web/2026-11-28-en.html">
+<meta name="theme-color" content="#14110f">
+<meta name="issue-window" content="2026-11-27T08:00:00+08:00/2026-11-28T08:02:00+08:00">
+<link rel="canonical" href="https://kaixinguor.com/daily-ai/web/2026-11-28-en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://kaixinguor.com/daily-ai/web/2026-11-28.html">
+<link rel="alternate" hreflang="en" href="https://kaixinguor.com/daily-ai/web/2026-11-28-en.html">
+<link rel="icon" href="../../favicon.svg?v=2" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="AI 日报 · kaixinguor" hreflang="zh-CN" href="../../feed.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Daily · kaixinguor" hreflang="en" href="../../feed-en.xml">
+<link rel="stylesheet" href="../../style.css?v=11">
+<script>
+/* 在渲染前定好深浅色，避免闪白 */
+(function () {
+  try {
+    var t = localStorage.getItem("kaixinguor.theme");
+    if (t !== "dark" && t !== "light") {
+      t = "dark";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<script>
+/* 让站点语言跟当前日报语言一致，返回首页时不会突然换语言 */
+try { localStorage.setItem("kaixinguor.lang", "en"); } catch (e) {}
+</script>
+</head>
+<body class="daily-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">kaixinguor</a>
+    <nav class="top">
+      <a href="../../index.html" aria-current="page">AI Daily</a>
+      <a href="../../economy.html">Economic Daily</a>
+      <a href="../../education.html">Education Daily</a>
+      <a href="../../psychology.html">Psychology Daily</a>
+      <a href="../../tools.html">Tools</a>
+      <a href="../../wish.html">Wish</a>
+      <a class="lang-btn" href="2026-11-28.html" hreflang="zh-CN">中文</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="zh">AI DAILY</span>
+      <span class="sep"></span>
+      <span>Daily AI Brief</span>
+      <span class="issue-tag">Issue 033</span>
+    </div>
+    <h1 class="date">November 28, 2026<span class="weekday">SAT</span></h1>
+    <p class="deck">OpenAI countersued Apple over what departing employees can take with them. Japan moved to attach penalties to AI safety duties. Tencent's new 3D model generates PBR textures, and China wired remote-sensing experts into a general LLM. Capability, data and liability are being redrawn at the same time.</p>
+    <div class="metabar"><span class="pill">Issue 033</span>
+      <span class="dot"></span>
+      <span>Window Nov 27, 08:00 – Nov 28, 08:02</span>
+      <span class="dot"></span>
+      <span>9 stories</span>
+      <span class="dot"></span>
+      <span>14 min read</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc-inner">
+      <a href="#tldr"><span class="n">00</span>At a glance</a>
+        <a href="#capital"><span class="n">01</span>Industry &amp; Capital</a>
+        <a href="#models"><span class="n">02</span>Models &amp; Capability</a>
+        <a href="#products"><span class="n">03</span>Products &amp; Agents</a>
+        <a href="#research"><span class="n">04</span>Research &amp; Safety</a>
+        <a href="#embodied"><span class="n">05</span>Embodied AI</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <ol class="tldr" id="tldr">
+    <li>
+      <span class="idx">01</span>
+      <p><b>OpenAI countersued Apple, saying Apple's employment practices leave departing employees exposed to theft accusations.</b> Apple sued OpenAI and two former employees in June over confidential information about unreleased products; Apple called the counterclaims a distraction.</p>
+    </li>
+    <li>
+      <span class="idx">02</span>
+      <p><b>Tokyo Electric plans to invest 10.2 trillion yen through fiscal 2035 in power infrastructure for AI, including 4.9 trillion yen for the grid.</b> It wants data centres next to power plants, supplied behind the meter; JERA is already talking to Anthropic and Meta.</p>
+    </li>
+    <li>
+      <span class="idx">03</span>
+      <p><b>The Japanese government finalised an outline to require high-performance AI providers to ensure safety and report major accidents.</b> Companies that ignore recommendations and orders would face penalties. A bill is due next year.</p>
+    </li>
+  </ol>
+
+  <section class="chapter" id="capital" data-c="capital">
+    <div class="chead">
+      <span class="cnum">01</span>
+      <h2>Industry &amp; Capital</h2>
+      <span class="cen">行业与资本</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/28 05:18</span>
+          <a class="src" href="https://www.cbsnews.com/news/openai-countersues-apple-trade-secrets-lawsuit/" target="_blank" rel="noopener noreferrer">CBS News ↗</a>
+        </div>
+        <h3>OpenAI countersues Apple, saying departing employees are set up</h3>
+        <p>OpenAI countersued Apple in the Northern District of California on November 27. It alleged that Apple's employment practices put departing employees in a position where they can be accused of stealing secrets. The suit says Apple created "a situation in which it can accuse virtually any departing employee, and their new employer, of stealing purported Apple trade secrets."</p>
+        <p>Apple sued OpenAI and two employees in June: Chief Hardware Officer Tang Tan and technical staffer Chang Liu. Apple said they took confidential information about unreleased products to help OpenAI build hardware. Both had worked at Apple.</p>
+        <p>An Apple spokesperson told CBS News that the case is about employees "deliberately stealing, accessing, and using" confidential information about unreleased technology, "not about inadvertent retention." Apple called the counterclaims "a transparent attempt to distract" and said a court had already ordered OpenAI to stop using its confidential information.</p>
+        <p>OpenAI says Apple's practices are a trap "that can be sprung whenever Apple sees an opportunity to slow down a potential competitor." CBS noted that OpenAI bought io Products, the AI device startup of former Apple designer Jony Ive, in July 2025.</p>
+        <p class="why"><b>Why it matters</b>The immediate stakes are talent mobility, not model quality. Apple is treating information about unreleased products as a litigable asset; OpenAI is describing confidentiality practices as a way to slow a rival. For teams building hardware or on-device AI, the lesson is to define what a new hire cannot bring and what experience can be reused.<br><b>Another view</b>: a tighter injunction would make it harder for OpenAI's hardware team to hire from Apple and could slow its product schedule. The case is in the Northern District of California. The next hearing and the scope of any injunction will shape how fast both companies can hire.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 16:27</span>
+          <a class="src" href="https://www.163.com/dy/article/LCOM7FP705198CJN.html" target="_blank" rel="noopener noreferrer">Cailianshe ↗</a>
+        </div>
+        <h3>Tokyo Electric plans a 10.2 trillion yen bet on power for AI data centres</h3>
+        <p>Tokyo Electric Power Holdings has shown potential capital partners a nine-year plan to invest 10.2 trillion yen through fiscal 2035. Of that, 4.9 trillion yen goes to the grid and 2.5 trillion to nuclear facilities. Cumulative investment is expected to exceed 15 trillion yen by fiscal 2040.</p>
+        <p>The utility wants data centres next to power plants, supplied behind the meter. That avoids a grid connection queue that can run up to ten years. It expects data-centre electricity sales to rise about eightfold by fiscal 2035 from 4.3 billion kWh planned for fiscal 2027, and nearly sixteenfold by fiscal 2040.</p>
+        <p>The money is not all its own. SoftBank, Japan Industrial Partners, KKR, Blackstone and Global Infrastructure Partners are in talks over capital cooperation. Tokyo Electric also spends about 500 billion yen a year on decommissioning and compensation at Fukushima Daiichi.</p>
+        <p>JERA, in which Tokyo Electric owns a stake, is talking to Anthropic and Meta, as well as Amazon, Microsoft and Google. JERA, Dell and UK data-centre operator Rhaelm plan a 400 MW data centre at the Chiba thermal plant, due in 2028.</p>
+        <p class="why"><b>Why it matters</b>Power is becoming the binding constraint on AI expansion, and Tokyo Electric is selling generation, grid access and the building as one package. Behind-the-meter supply can shorten delivery, but it moves risk from the grid to the plant. The plan assumes four nuclear units will run; three have not applied for restart review. For compute buyers, the 400 MW Chiba project is a concrete 2028 checkpoint. For investors, the 1.44 trillion yen EBITDA target depends more on restarts than on data-centre demand.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 10:43</span>
+          <a class="src" href="https://finance.sina.cn/2026-11-27/detail-inkacvhk7869816.d.html?vt=4" target="_blank" rel="noopener noreferrer">China News Service ↗</a>
+        </div>
+        <h3>China drafts rules to let AI firms buy and use training data</h3>
+        <p>The National Data Administration published a draft on AI data rules on November 27 and opened comments until December 6. The 12-point document is meant to let legally obtained data flow into AI training and inference.</p>
+        <p>Companies that acquire data through collection, derivation, transfer or licensing, and hold the relevant rights, could use it for training and inference as long as they respect laws, contracts and third-party rights. Holders of data operating rights could also supply it to others for the same purpose.</p>
+        <p>The draft supports paying for high-quality data through purchase, data-for-data swaps or model-for-data deals. It also proposes quality assessments, registration certificates for data property rights, and mediation and arbitration for data disputes.</p>
+        <p>On liability, AI companies would have to set up risk controls and complaint channels, and must not generate illegal content or infringe privacy, trade secrets or copyright. Taking reasonable measures could be a factor in reducing or exempting liability.</p>
+        <p class="why"><b>Why it matters</b>The draft turns a principle argument into contracts and property records. Model teams would need to check registration and permitted use when buying data, instead of assuming that public visibility means a right to train. Data holders get a compliance path for non-cash deals such as data-for-model swaps. The comment window runs to December 6. The final wording on derived data and entrusted processing will decide how much of the current web corpus can stay in training pipelines.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 09:11</span>
+          <a class="src" href="https://finance.eastmoney.com/a/202611273941457496.html" target="_blank" rel="noopener noreferrer">Jiemian News ↗</a>
+        </div>
+        <h3>Weimob buys about 5,000 inference GPUs for RMB 430 million</h3>
+        <p>Weimob's wholly owned subsidiary Weimob Smart Compute signed an agreement with Ingram Micro and Shanghai Fuxin on November 26 to buy and deploy about 5,000 high-performance, compliant AI inference chips. Jiemian News identified them as Nvidia RTX 5500 GPUs. The total is about RMB 430 million.</p>
+        <p>Weimob said the compute will support its AI business, including content generation and other multimodal applications. The company is mainly a SaaS and marketing services provider; the purchase brings compute infrastructure in-house.</p>
+        <p class="why"><b>Why it matters</b>At about RMB 430 million for 5,000 cards, the deal works out to roughly RMB 86,000 per card, which looks like systems and integration rather than bare boards. Building its own inference cluster can push marginal cost down to power and depreciation, but it puts utilisation risk on the balance sheet. Watch two things: whether the capacity serves internal products or outside customers, and how full it runs after deployment. If it is sized for peak demand, idle capacity will eat the margin it saves.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="models" data-c="models">
+    <div class="chead">
+      <span class="cnum">02</span>
+      <h2>Models &amp; Capability</h2>
+      <span class="cen">模型与能力</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 20:57</span>
+          <a class="src" href="https://tech.cnr.cn/techgd/20261127/t20261127_527885591.shtml" target="_blank" rel="noopener noreferrer">CNR ↗</a>
+        </div>
+        <h3>Tencent's Hy3D 3.6 generates high-poly 3D assets with PBR textures</h3>
+        <p>Tencent Hunyuan released Hy3D 3.6 on November 27, with a focus on high-poly geometry and PBR texture generation. The model is available through Tencent Cloud's Token Hub API, and is already used in Miora, the game asset platform LAP and the film AI platform WorkRally.</p>
+        <p>Hy3D 3.6 is a native 3D generative model. A VAE compresses geometry and texture into a unified sparse latent representation, and a DiT generates both from a reference image. Post-training uses preference candidates from multiple experts, followed by SFT and DPO.</p>
+        <p>Tencent ran a blind test with hundreds of professional 3D artists and modellers and says the new version is significantly better than comparable models in geometry, texture and usability. That is a vendor claim; the sample and scoring rubric are not public.</p>
+        <p>Hunyuan 3D has been open-sourced since November 2024. Tencent says community downloads have passed 6.53 million. The team now runs two lines: high-poly assets and low-poly assets that follow professional art standards.</p>
+        <p class="why"><b>Why it matters</b>The test for 3D generation is not a pretty render; it is whether the asset survives retopology, UV work and baking. Hy3D 3.6 generates PBR maps and part structure together, which moves the starting point closer to production. But the blind test is vendor-run and does not report topology pass rates, UV usability or rework time. Try one character and one hard-surface prop in Blender or Unreal before judging a pipeline. The number that matters is how much an artist has to change.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="products" data-c="products">
+    <div class="chead">
+      <span class="cnum">03</span>
+      <h2>Products &amp; Agents</h2>
+      <span class="cen">产品与智能体</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 10:33</span>
+          <a class="src" href="https://m.ithome.com/html/1033208.htm" target="_blank" rel="noopener noreferrer">IT Home ↗</a>
+        </div>
+        <h3>Doubao Work adds Jianying plugin for one-sentence video editing</h3>
+        <p>Doubao announced on the morning of November 27 that Doubao Work has exclusive access to Jianying's official plugin. Users can find Jianying in the desktop sidebar and call editing tools from a chat.</p>
+        <p>The plugin handles one-sentence edits and multi-track work. A user can ask it to cut repeats, fix flubbed lines, add subtitles and adjust fonts; the plugin executes the edit in Jianying. After the first pass, the user can keep revising by chat or open the multi-track draft.</p>
+        <p>It can also call Jianying Hub to turn scripts, code, product images or documents into explainer animations, knowledge shorts, short comics or marketing videos. Doubao says users need the latest Jianying build from its official site.</p>
+        <p class="why"><b>Why it matters</b>This is an agent moving from advice to operating a production tool. The hard part of editing is not generating copy; it is the timeline, tracks and alignment. Doubao keeps intent parsing and lets Jianying handle rendering and project files, which is a sensible boundary. Content teams should test three tasks first: removing repeats from a talking-head video, aligning subtitles, and revising a multi-track sequence. If every change reruns the whole edit, the time saved will come back as rework.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="research" data-c="research">
+    <div class="chead">
+      <span class="cnum">04</span>
+      <h2>Research &amp; Safety</h2>
+      <span class="cen">研究与安全</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 22:12</span>
+          <a class="src" href="https://www.47news.jp/15296962.html" target="_blank" rel="noopener noreferrer">Kyodo News ↗</a>
+        </div>
+        <h3>Japan finalises outline for AI law with safety duties and penalties</h3>
+        <p>The Japanese government finalised an outline for amending Japan's AI law on November 27. It would require providers of high-performance AI to ensure safety and report major accidents, with penalties for companies that ignore recommendations and orders.</p>
+        <p>The rules would cover providers with a certain number of users in Japan whose models could cause major accidents. AI users are excluded. The detailed threshold will be decided later. Kyodo News said US companies such as Anthropic and OpenAI are likely to be covered.</p>
+        <p>Safety measures include refusing to answer questions about cyberattack methods or the production of biological weapons, and preventing models from entering other companies' servers without intent. The government would first issue a recommendation, then an order, and only then a penalty.</p>
+        <p>The government aims to submit the amendment to the ordinary Diet session next year.</p>
+        <p class="why"><b>Why it matters</b>Japan is moving from promotion to duties and penalties, with a three-step enforcement chain: recommendation, order, penalty. For companies, the practical change is that safety measures must be auditable: refusal lists, incident reports and intrusion controls need records. The threshold depends on domestic user numbers and the risk of a major accident, which will decide whether smaller model providers are covered. The bill is not filed yet, so the penalty size and threshold will change in the Diet.</p>
+      </article>
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 17:55</span>
+          <a class="src" href="https://www.news.cn/tech/20261127/3bf5b749829a488b941255e83b38132d/c.html" target="_blank" rel="noopener noreferrer">Xinhua ↗</a>
+        </div>
+        <h3>China's SUICE V0.1 plugs remote-sensing experts into general LLMs</h3>
+        <p>China released SUICE V0.1, an earth large-model engine, in Beijing on November 27. An in-orbit test platform for a space data centre went online at the same time. SUICE handles remote-sensing representation learning and uses a bypass architecture to inject remote-sensing expertise into a general LLM as modular experts.</p>
+        <p>Zhang Shancong, head of the Beijing Starfuture Space Technology Research Institute, said the design keeps the language model's reasoning while adding land-cover segmentation, object recognition and change analysis. Users can query satellite images, map terrain and monitor change in natural language.</p>
+        <p>The developers say SUICE V0.1 has been tested on more than ten task types across several remote-sensing benchmarks and is ahead of comparable methods. It can be embedded in general LLMs and used for urban-rural governance and natural-resource supervision.</p>
+        <p>The in-orbit platform is built on the Chenguang-1 01 satellite. It validated a 270-volt bus, 25,000 TOPS of domestically produced radiation-tolerant compute and graphene flexible cooling. Several models have completed in-orbit inference tests.</p>
+        <p class="why"><b>Why it matters</b>Attaching remote-sensing modules to a general LLM is cheaper than training a remote-sensing model from scratch, and easier to move to a new base model. The hard part is the interface and confidence: the system needs to say which conclusions from an image are reliable and which need a human. The 25,000 TOPS figure is notable, but the actual throughput and power draw of radiation-tolerant hardware are not public. Next, watch whether SUICE releases weights or an API, and what false-positive rate it reaches in real regulatory work.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="chapter" id="embodied" data-c="embodied">
+    <div class="chead">
+      <span class="cnum">05</span>
+      <h2>Embodied AI</h2>
+      <span class="cen">具身智能</span>
+      <span class="crule"></span>
+    </div>
+    <div class="items">
+
+      <article class="card">
+        <div class="cmeta">
+          <span class="d">11/27 20:32</span>
+          <a class="src" href="https://stcn.com/article/detail/4357866.html" target="_blank" rel="noopener noreferrer">Securities Times ↗</a>
+        </div>
+        <h3>Agibot's G2 moves from handling to precision assembly at Longcheer</h3>
+        <p>Agibot said on November 27 that its G2 robot has taken on a new task on Longcheer Technology's production line. After running stably in quality-inspection loading and unloading, it moved into precision assembly and now installs speaker boxes in parallel production.</p>
+        <p>Agibot says the robot has extended from handling work to precision operations. The same unit can handle different processes without custom modification.</p>
+        <p class="why"><b>Why it matters</b>Precision assembly is harder than handling because of force control and tolerance: clips, wiring harnesses and insertion angles have to line up on the first try, or the part is damaged. Agibot's claim of no custom modification needs to be tested against changeover time, yield and cycle time. If switching between two processes requires hours of reteaching, flexibility is a demo word. The next data point should be continuous runtime and yield at Longcheer, not another clip of a single successful line integration.</p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="issue-footer">
+  <div class="wrap">
+    <p>This issue covers reports published between November 27, 08:00 and November 28, 08:02 (Beijing time): 9 stories. Compiled at 11/28 08:02.</p>
+    <p class="disclaimer"><b>Note</b> This issue was searched, assembled and summarised by an AI agent, and every item links to its original source. Facts and figures follow the originals and are for reference only. Headlines and commentary are AI-generated and do not represent the position of any source.</p>
+    <p class="sig">AI Daily · Issue 033 · 24h window · Generated 2026-11-28 08:02</p>
+  </div>
+</footer>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">kaixinguor</div>
+        <p>A spring wells up and never stops, day or night; it fills the hollows, then moves on, until it reaches the four seas.<span class="foot-src">— Mencius, Li Lou II</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="../../index.html">AI Daily</a>
+        <a href="../../economy.html">Economic Daily</a>
+        <a href="../../education.html">Education Daily</a>
+        <a href="../../psychology.html">Psychology Daily</a>
+        <a href="../../tools.html">Tools</a>
+        <a href="../../wish.html">Wish</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="../../feed-en.xml">RSS</a>
+      </div>
+      <div class="foot-meta">© 2026 kaixinguor<br>AI Daily · updated whenever there is news<br><a class="beian" href="https://www.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2025109256号-2</a><br><a class="beian beian-police" href="https://beian.mps.gov.cn/#/query/webSearch?code=11010502064434" rel="noreferrer" target="_blank"><img src="../../assets/gongan-beian.png" alt="公安备案图标" width="16" height="18">京公网安备11010502064434号</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js?v=7"></script>
+</body>
+</html>
