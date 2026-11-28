@@ -22,7 +22,7 @@ PROMPTS=/opt/kaixinguor/prompts
 
 echo "==> 安装脚本到 $BIN"
 install -d -o "$USER_NAME" -g "$USER_NAME" "$BIN" "$PROMPTS" /var/log/kaixinguor
-for f in notify.sh watchdog.sh sync-site.sh run-daily.sh run-chain.sh; do
+for f in notify.sh notify-published.sh watchdog.sh sync-site.sh run-daily.sh run-chain.sh; do
   install -m 755 -o "$USER_NAME" -g "$USER_NAME" "$ROOT/deploy/daily/$f" "$BIN/$f"
 done
 

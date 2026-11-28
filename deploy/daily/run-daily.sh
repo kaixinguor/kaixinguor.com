@@ -156,7 +156,7 @@ if [ "$RC" -eq 0 ]; then
   EN="$SITE_DIR/$URL_PART/web/${DATE}-en.html"
   PROBLEM=""
   [ -s "$ZH" ] || PROBLEM="缺中文稿 $(basename "$ZH")"
-  [ -s "$EN" ] || PROBLEM="${PROBLEM:+$PROBLEM；}缺英文稿 $(basename "$EN")"
+  [ -s "$EN" ] || PROBLEM="${PROBLEM:+${PROBLEM}；}缺英文稿 $(basename "$EN")"
 
   if [ -z "$PROBLEM" ]; then
     for u in "https://kaixinguor.com/${URL_PART}/web/${DATE}.html" "https://kaixinguor.com/${URL_PART}/web/${DATE}-en.html"; do
@@ -167,7 +167,7 @@ if [ "$RC" -eq 0 ]; then
         sleep 5
       done
       echo "  验收 $u -> ${CODE:-fail}" | tee -a "$LOG"
-      [ "$CODE" = "200" ] || PROBLEM="${PROBLEM:+$PROBLEM；}线上未 200：$u -> ${CODE:-fail}"
+      [ "$CODE" = "200" ] || PROBLEM="${PROBLEM:+${PROBLEM}；}线上未 200：$u -> ${CODE:-fail}"
     done
   fi
 
