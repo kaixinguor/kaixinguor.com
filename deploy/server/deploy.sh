@@ -51,6 +51,16 @@ fi
 
 "${RSYNC[@]}" dist/site/ "$TARGET"
 
+# rsync -a 以 root 接收时会保留 Mac 的 uid（501:staff），服务器上的日报任务用户
+# kaixinguor 就写不进这个目录了：08:00 的日报照样生成，却卡在 sync-site 上不去线。
+# 每次手动部署后把属主改回来（幂等，几百毫秒）。
+if [ "$DRY_RUN" -eq 0 ]; then
+  HOST="${TARGET%%:*}"
+  DEST="${TARGET#*:}"
+  echo "==> 修正属主为 kaixinguor（避免日报任务写不进 $DEST）"
+  ssh "$HOST" "chown -R kaixinguor:kaixinguor '$DEST'"
+fi
+
 if [ "$DRY_RUN" -eq 0 ]; then
   cat <<EOF
 

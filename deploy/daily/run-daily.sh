@@ -48,23 +48,18 @@ if [ -z "${DEEPSEEK_API_KEY:-}" ] || [ "${DEEPSEEK_API_KEY}" = "sk-REPLACE_ME" ]
   exit 4
 fi
 
+# 线上目录必须由服务用户可写。从 Mac 手动 rsync -a 部署过一次，属主就会变成 501:staff
+# （rsync 以 root 接收时保留发送端 uid），之后每份日报跑完都卡在 sync-site，白等十几分钟。
+TARGET_DIR="${TARGET_DIR:-/home/project/kaixinguor.com}"
+if [ ! -d "$TARGET_DIR" ] || [ ! -w "$TARGET_DIR" ]; then
+  echo "线上目录不可写：$TARGET_DIR（属主 $(stat -c '%U:%G' "$TARGET_DIR" 2>/dev/null || echo 未知)）" >&2
+  "$NOTIFY" failure "${LABEL} ${DATE} 未启动：线上目录不可写，先执行 sudo chown -R kaixinguor:kaixinguor $TARGET_DIR" || true
+  exit 6
+fi
+
 cd "$SITE_DIR" || exit 2
 
 echo "==> ${LABEL} ${DATE} 开始 $(date '+%F %T %Z')" | tee -a "$LOG"
-
-# 配图只在仓库里保留"当天"这一份：开工前把之前已跟踪的删掉（删除会随本次提交一起推走）。
-# 历史可在 git 里找回，页面本身也能用 make-social 从 HTML 重新出图。
-if [ "$SECTION" = "ai" ] && [ -d "$SITE_DIR/daily-ai/social" ]; then
-  for d in "$SITE_DIR"/daily-ai/social/*/; do
-    [ -d "$d" ] || continue
-    name="$(basename "$d")"
-    [ "$name" = "$DATE" ] && continue
-    if git -C "$SITE_DIR" ls-files --error-unmatch "daily-ai/social/$name" >/dev/null 2>&1; then
-      git -C "$SITE_DIR" rm -r -q "daily-ai/social/$name" \
-        && echo "==> 清理旧配图 daily-ai/social/$name" | tee -a "$LOG"
-    fi
-  done
-fi
 
 # 先同步仓库：Mac 上改过的文档/模板要能被这一轮用上；
 # 上一轮 push 失败留下的本地提交也在这里被发现。
@@ -94,6 +89,22 @@ if [ "$PULL_OK" -ne 1 ]; then
     exit 3
   fi
   echo "==> 警告：拉取失败，按当前工作树继续（可能少用一次 Mac 侧的更新）" | tee -a "$LOG"
+fi
+
+# 配图只在仓库里保留"当天"这一份：把之前已跟踪的删掉（删除会随本次提交一起推走）。
+# 放在 pull 之后：先删再 pull 时，如果远端恰好也改过这些图片，git 会以
+# "local changes would be overwritten" 拒绝合并，整轮就只能用旧树跑。
+# 历史可在 git 里找回，页面本身也能用 make-social 从 HTML 重新出图。
+if [ "$SECTION" = "ai" ] && [ -d "$SITE_DIR/daily-ai/social" ]; then
+  for d in "$SITE_DIR"/daily-ai/social/*/; do
+    [ -d "$d" ] || continue
+    name="$(basename "$d")"
+    [ "$name" = "$DATE" ] && continue
+    if git -C "$SITE_DIR" ls-files --error-unmatch "daily-ai/social/$name" >/dev/null 2>&1; then
+      git -C "$SITE_DIR" rm -r -q "daily-ai/social/$name" \
+        && echo "==> 清理旧配图 daily-ai/social/$name" | tee -a "$LOG"
+    fi
+  done
 fi
 
 START=$(date +%s)
